@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemProductVariantImportDraftImpl implements LineItemProductVariantImportDraft, ModelBase {
 
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
@@ -45,36 +45,36 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.product</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     */
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
         return this.productVariant;
     }
 
     /**
-    *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
+     */
     public String getSku() {
         return this.sku;
     }
 
     /**
-    *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
-    */
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     */
     public java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> getPrices() {
         return this.prices;
     }
 
     /**
-    *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
-    */
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     */
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
     }
 
     /**
-    *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     */
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
         return this.images;
     }

@@ -6,7 +6,18 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TypeChangeLocalizedEnumValueOrderAction typeChangeLocalizedEnumValueOrderAction = TypeChangeLocalizedEnumValueOrderAction.builder()
+           .fieldName("{fieldName}")
+           .plusKeys(keysBuilder -> keysBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeLocalizedEnumValueOrderActionBuilder
         implements Builder<TypeChangeLocalizedEnumValueOrderAction> {
 
@@ -15,8 +26,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
     private java.util.List<String> keys;
 
     /**
-    *  <p><code>name</code> of the Field Definition to update.</p>
-    */
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
@@ -24,8 +35,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-    *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
-    */
+     *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final String... keys) {
         this.keys = new ArrayList<>(Arrays.asList(keys));
@@ -33,8 +44,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-    *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
-    */
+     *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final java.util.List<String> keys) {
         this.keys = keys;
@@ -42,8 +53,8 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-    *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
-    */
+     *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder plusKeys(final String... keys) {
         if (this.keys == null) {

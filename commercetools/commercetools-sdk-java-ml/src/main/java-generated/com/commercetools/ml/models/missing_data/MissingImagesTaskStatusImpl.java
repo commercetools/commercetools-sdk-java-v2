@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingImagesTaskStatusImpl implements MissingImagesTaskStatus, ModelBase {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
@@ -43,15 +43,15 @@ public class MissingImagesTaskStatusImpl implements MissingImagesTaskStatus, Mod
     }
 
     /**
-    *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
-    */
+     *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
+     */
     public java.time.ZonedDateTime getExpires() {
         return this.expires;
     }
 
     /**
-    *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
-    */
+     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+     */
     public com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult getResult() {
         return this.result;
     }

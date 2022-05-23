@@ -6,7 +6,18 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TypeChangeInputHintAction typeChangeInputHintAction = TypeChangeInputHintAction.builder()
+           .fieldName("{fieldName}")
+           .inputHint(TypeTextInputHint.SINGLE_LINE)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInputHintAction> {
 
     private String fieldName;
@@ -14,8 +25,8 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
     private com.commercetools.api.models.type.TypeTextInputHint inputHint;
 
     /**
-    *  <p><code>name</code> of the Field Definition to update.</p>
-    */
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     */
 
     public TypeChangeInputHintActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
@@ -23,8 +34,8 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public TypeChangeInputHintActionBuilder inputHint(
             final com.commercetools.api.models.type.TypeTextInputHint inputHint) {

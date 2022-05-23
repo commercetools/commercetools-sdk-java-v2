@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StandalonePriceChangeValueAction standalonePriceChangeValueAction = StandalonePriceChangeValueAction.builder()
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceChangeValueActionBuilder implements Builder<StandalonePriceChangeValueAction> {
 
     private com.commercetools.api.models.common.Money value;
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public StandalonePriceChangeValueActionBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -23,8 +33,8 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public StandalonePriceChangeValueActionBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;

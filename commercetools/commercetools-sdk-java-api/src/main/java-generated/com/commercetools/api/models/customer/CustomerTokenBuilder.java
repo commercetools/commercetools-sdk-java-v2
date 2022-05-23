@@ -8,7 +8,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerToken customerToken = CustomerToken.builder()
+           .id("{id}")
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .customerId("{customerId}")
+           .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .value("{value}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     private String id;
@@ -25,8 +39,8 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     private String value;
 
     /**
-    *  <p>Platform-generated unique identifier of the CustomerToken.</p>
-    */
+     *  <p>Platform-generated unique identifier of the CustomerToken.</p>
+     */
 
     public CustomerTokenBuilder id(final String id) {
         this.id = id;

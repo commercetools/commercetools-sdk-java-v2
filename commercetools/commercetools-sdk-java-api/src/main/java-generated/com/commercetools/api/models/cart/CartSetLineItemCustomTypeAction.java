@@ -15,7 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartSetLineItemCustomTypeAction cartSetLineItemCustomTypeAction = CartSetLineItemCustomTypeAction.builder()
+           .lineItemId("{lineItemId}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetLineItemCustomTypeActionImpl.class)
 public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
 
@@ -26,15 +36,15 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
     public String getLineItemId();
 
     /**
-    *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
-    */
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the Custom Fields fields for the LineItem.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();

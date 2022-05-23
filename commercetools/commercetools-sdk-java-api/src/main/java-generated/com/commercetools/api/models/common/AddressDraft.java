@@ -13,27 +13,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AddressDraft addressDraft = AddressDraft.builder()
+           .country("{country}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddressDraftImpl.class)
 public interface AddressDraft extends BaseAddress, com.commercetools.api.models.CustomizableDraft<AddressDraft> {
 
     /**
-    *  <p>Custom Fields defined for the Address.</p>
-    */
+     *  <p>Custom Fields defined for the Address.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-    *  <p>Unique identifier for the Address. Not recommended to set it manually since the Platform overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field to let the Platform generate the ID for the Address.</p>
-    */
+     *  <p>Unique identifier for the Address. Not recommended to set it manually since the Platform overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field to let the Platform generate the ID for the Address.</p>
+     */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>User-defined unique identifier for the Address.</p>
-    */
+     *  <p>User-defined unique identifier for the Address.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

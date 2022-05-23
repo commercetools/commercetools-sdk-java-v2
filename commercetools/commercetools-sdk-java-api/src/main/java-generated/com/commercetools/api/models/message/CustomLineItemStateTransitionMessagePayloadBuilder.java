@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomLineItemStateTransitionMessagePayload customLineItemStateTransitionMessagePayload = CustomLineItemStateTransitionMessagePayload.builder()
+           .customLineItemId("{customLineItemId}")
+           .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .quantity(0.3)
+           .fromState(fromStateBuilder -> fromStateBuilder)
+           .toState(toStateBuilder -> toStateBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemStateTransitionMessagePayloadBuilder
         implements Builder<CustomLineItemStateTransitionMessagePayload> {
 
@@ -38,8 +52,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-    *  <p>Reference to a State.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
@@ -48,8 +62,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-    *  <p>Reference to a State.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
             final com.commercetools.api.models.state.StateReference fromState) {
@@ -58,8 +72,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-    *  <p>Reference to a State.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
@@ -68,8 +82,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-    *  <p>Reference to a State.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(
             final com.commercetools.api.models.state.StateReference toState) {

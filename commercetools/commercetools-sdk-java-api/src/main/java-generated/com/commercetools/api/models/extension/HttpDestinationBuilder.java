@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   HttpDestination httpDestination = HttpDestination.builder()
+           .url("{url}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HttpDestinationBuilder implements Builder<HttpDestination> {
 
     private String url;
@@ -18,8 +28,8 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     private com.commercetools.api.models.extension.HttpDestinationAuthentication authentication;
 
     /**
-    *  <p>URL to the target destination.</p>
-    */
+     *  <p>URL to the target destination.</p>
+     */
 
     public HttpDestinationBuilder url(final String url) {
         this.url = url;
@@ -27,8 +37,8 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     }
 
     /**
-    *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
-    */
+     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     */
 
     public HttpDestinationBuilder authentication(
             @Nullable final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication) {
@@ -37,8 +47,8 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     }
 
     /**
-    *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
-    */
+     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     */
 
     public HttpDestinationBuilder authentication(
             Function<com.commercetools.api.models.extension.HttpDestinationAuthenticationBuilder, Builder<? extends com.commercetools.api.models.extension.HttpDestinationAuthentication>> builder) {

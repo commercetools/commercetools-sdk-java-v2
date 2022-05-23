@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ExtensionDraft extensionDraft = ExtensionDraft.builder()
+           .destination(destinationBuilder -> destinationBuilder)
+           .plusTriggers(triggersBuilder -> triggersBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
 
     @Nullable
@@ -23,8 +34,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     private Integer timeoutInMs;
 
     /**
-    *  <p>User-defined unique identifier for the Extension.</p>
-    */
+     *  <p>User-defined unique identifier for the Extension.</p>
+     */
 
     public ExtensionDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -32,8 +43,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-    *  <p>Defines where the Extension can be reached.</p>
-    */
+     *  <p>Defines where the Extension can be reached.</p>
+     */
 
     public ExtensionDraftBuilder destination(
             final com.commercetools.api.models.extension.ExtensionDestination destination) {
@@ -42,8 +53,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-    *  <p>Defines where the Extension can be reached.</p>
-    */
+     *  <p>Defines where the Extension can be reached.</p>
+     */
 
     public ExtensionDraftBuilder destination(
             Function<com.commercetools.api.models.extension.ExtensionDestinationBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionDestination>> builder) {
@@ -53,8 +64,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-    *  <p>Describes what triggers the Extension.</p>
-    */
+     *  <p>Describes what triggers the Extension.</p>
+     */
 
     public ExtensionDraftBuilder triggers(final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
         this.triggers = new ArrayList<>(Arrays.asList(triggers));
@@ -62,8 +73,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-    *  <p>Describes what triggers the Extension.</p>
-    */
+     *  <p>Describes what triggers the Extension.</p>
+     */
 
     public ExtensionDraftBuilder triggers(
             final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
@@ -72,8 +83,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-    *  <p>Describes what triggers the Extension.</p>
-    */
+     *  <p>Describes what triggers the Extension.</p>
+     */
 
     public ExtensionDraftBuilder plusTriggers(
             final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
@@ -85,8 +96,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-    *  <p>Describes what triggers the Extension.</p>
-    */
+     *  <p>Describes what triggers the Extension.</p>
+     */
 
     public ExtensionDraftBuilder plusTriggers(
             Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
@@ -98,8 +109,8 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-    *  <p>Describes what triggers the Extension.</p>
-    */
+     *  <p>Describes what triggers the Extension.</p>
+     */
 
     public ExtensionDraftBuilder withTriggers(
             Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
@@ -109,9 +120,9 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
-    *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-    *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the support portal and provide the Region, Project key, and use case.</p>
-    */
+     *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the support portal and provide the Region, Project key, and use case.</p>
+     */
 
     public ExtensionDraftBuilder timeoutInMs(@Nullable final Integer timeoutInMs) {
         this.timeoutInMs = timeoutInMs;

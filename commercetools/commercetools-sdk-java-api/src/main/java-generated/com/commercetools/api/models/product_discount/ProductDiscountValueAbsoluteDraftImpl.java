@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Discounts the Product Price by a fixed amount, defined by the <code>money</code> field.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Discounts the Product Price by a fixed amount, defined by the <code>money</code> field.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountValueAbsoluteDraft, ModelBase {
 
     private String type;
@@ -40,8 +40,8 @@ public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountVal
     }
 
     /**
-    *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10€ and 15$, the matching € price will be decreased by 10€ and the matching $ price will be decreased by 15$.</p>
-    */
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     */
     public java.util.List<com.commercetools.api.models.common.CentPrecisionMoneyDraft> getMoney() {
         return this.money;
     }

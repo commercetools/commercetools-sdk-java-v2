@@ -8,7 +8,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Location location = Location.builder()
+           .country("{country}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocationBuilder implements Builder<Location> {
 
     private String country;
@@ -17,8 +27,8 @@ public class LocationBuilder implements Builder<Location> {
     private String state;
 
     /**
-    *  <p>Country code of the geographic location.</p>
-    */
+     *  <p>Country code of the geographic location.</p>
+     */
 
     public LocationBuilder country(final String country) {
         this.country = country;
@@ -26,8 +36,8 @@ public class LocationBuilder implements Builder<Location> {
     }
 
     /**
-    *  <p>State within the country.</p>
-    */
+     *  <p>State within the country.</p>
+     */
 
     public LocationBuilder state(@Nullable final String state) {
         this.state = state;

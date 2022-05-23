@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A field with a money set value.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A field with a money set value.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneySetFieldImpl implements MoneySetField, ModelBase {
 
     private String type;
@@ -36,8 +36,8 @@ public class MoneySetFieldImpl implements MoneySetField, ModelBase {
     }
 
     /**
-    *  <p>The type of this field.</p>
-    */
+     *  <p>The type of this field.</p>
+     */
     public String getType() {
         return this.type;
     }

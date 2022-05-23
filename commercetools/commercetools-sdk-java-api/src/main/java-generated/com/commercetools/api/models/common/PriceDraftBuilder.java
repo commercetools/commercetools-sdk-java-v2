@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PriceDraft priceDraft = PriceDraft.builder()
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     private com.commercetools.api.models.common.Money value;
@@ -39,8 +49,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-    *  <p>Money value of this Price.</p>
-    */
+     *  <p>Money value of this Price.</p>
+     */
 
     public PriceDraftBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -49,8 +59,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Money value of this Price.</p>
-    */
+     *  <p>Money value of this Price.</p>
+     */
 
     public PriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
@@ -58,8 +68,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field if this Price is only valid for the specified country.</p>
-    */
+     *  <p>Set this field if this Price is only valid for the specified country.</p>
+     */
 
     public PriceDraftBuilder country(@Nullable final String country) {
         this.country = country;
@@ -67,8 +77,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
-    */
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     */
 
     public PriceDraftBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
@@ -79,8 +89,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
-    */
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     */
 
     public PriceDraftBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
@@ -89,8 +99,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
-    */
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     */
 
     public PriceDraftBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -100,8 +110,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
-    */
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     */
 
     public PriceDraftBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
@@ -110,8 +120,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field if this Price is valid only valid from the specified date and time.</p>
-    */
+     *  <p>Set this field if this Price is valid only valid from the specified date and time.</p>
+     */
 
     public PriceDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
@@ -119,8 +129,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field if this Price is valid only valid until the specified date and time.</p>
-    */
+     *  <p>Set this field if this Price is valid only valid until the specified date and time.</p>
+     */
 
     public PriceDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
@@ -128,14 +138,14 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field to add a DiscountedPrice from an external service.</p>
-    *  <p>The commercetools Platform sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
-    *  <ul>
-    *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-    *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-    *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
-    *  </ul>
-    */
+     *  <p>Set this field to add a DiscountedPrice from an external service.</p>
+     *  <p>The commercetools Platform sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <ul>
+     *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
+     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *  </ul>
+     */
 
     public PriceDraftBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
@@ -144,14 +154,14 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field to add a DiscountedPrice from an external service.</p>
-    *  <p>The commercetools Platform sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
-    *  <ul>
-    *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-    *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-    *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
-    *  </ul>
-    */
+     *  <p>Set this field to add a DiscountedPrice from an external service.</p>
+     *  <p>The commercetools Platform sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <ul>
+     *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
+     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *  </ul>
+     */
 
     public PriceDraftBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
@@ -160,8 +170,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
-    */
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     */
 
     public PriceDraftBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
@@ -169,8 +179,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
-    */
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     */
 
     public PriceDraftBuilder tiers(
             @Nullable final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
@@ -179,8 +189,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
-    */
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     */
 
     public PriceDraftBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
         if (this.tiers == null) {
@@ -191,8 +201,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
-    */
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     */
 
     public PriceDraftBuilder plusTiers(
             Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
@@ -204,8 +214,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
-    */
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     */
 
     public PriceDraftBuilder withTiers(
             Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
@@ -215,8 +225,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the Price.</p>
-    */
+     *  <p>Custom Fields for the Price.</p>
+     */
 
     public PriceDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -225,8 +235,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the Price.</p>
-    */
+     *  <p>Custom Fields for the Price.</p>
+     */
 
     public PriceDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;

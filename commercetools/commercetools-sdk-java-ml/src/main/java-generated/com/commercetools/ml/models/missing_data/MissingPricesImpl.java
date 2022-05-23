@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesImpl implements MissingPrices, ModelBase {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -36,8 +36,8 @@ public class MissingPricesImpl implements MissingPrices, ModelBase {
     }
 
     /**
-    *  <p>Id of the <code>ProductVariant</code>.</p>
-    */
+     *  <p>Id of the <code>ProductVariant</code>.</p>
+     */
     public Long getVariantId() {
         return this.variantId;
     }

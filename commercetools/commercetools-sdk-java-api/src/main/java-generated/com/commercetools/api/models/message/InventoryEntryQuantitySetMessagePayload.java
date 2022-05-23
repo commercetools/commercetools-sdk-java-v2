@@ -14,7 +14,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InventoryEntryQuantitySetMessagePayload inventoryEntryQuantitySetMessagePayload = InventoryEntryQuantitySetMessagePayload.builder()
+           .oldQuantityOnStock(0.3)
+           .newQuantityOnStock(0.3)
+           .oldAvailableQuantity(0.3)
+           .newAvailableQuantity(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryQuantitySetMessagePayloadImpl.class)
 public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload {
 
@@ -37,8 +50,8 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
     public Long getNewAvailableQuantity();
 
     /**
-    *  <p>Reference to a Channel.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();

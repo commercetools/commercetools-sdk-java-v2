@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderField orderField = OrderField.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderFieldBuilder implements Builder<OrderField> {
 
     @Nullable
@@ -40,8 +49,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     private java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> setParcelItems;
 
     /**
-    *  <p>Maps to <code>Order.returnInfo</code></p>
-    */
+     *  <p>Maps to <code>Order.returnInfo</code></p>
+     */
 
     public OrderFieldBuilder addReturnInfo(
             Function<com.commercetools.importapi.models.order_patches.ReturnInfoBuilder, com.commercetools.importapi.models.order_patches.ReturnInfoBuilder> builder) {
@@ -51,8 +60,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.returnInfo</code></p>
-    */
+     *  <p>Maps to <code>Order.returnInfo</code></p>
+     */
 
     public OrderFieldBuilder addReturnInfo(
             @Nullable final com.commercetools.importapi.models.order_patches.ReturnInfo addReturnInfo) {
@@ -61,8 +70,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.delivery</code></p>
-    */
+     *  <p>Maps to <code>Order.delivery</code></p>
+     */
 
     public OrderFieldBuilder addParcelToDelivery(
             Function<com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder, com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder> builder) {
@@ -73,8 +82,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.delivery</code></p>
-    */
+     *  <p>Maps to <code>Order.delivery</code></p>
+     */
 
     public OrderFieldBuilder addParcelToDelivery(
             @Nullable final com.commercetools.importapi.models.order_patches.DeliveryParcel addParcelToDelivery) {
@@ -83,8 +92,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.delivery</code></p>
-    */
+     *  <p>Maps to <code>Order.delivery</code></p>
+     */
 
     public OrderFieldBuilder addDeliveries(
             @Nullable final com.commercetools.importapi.models.order_patches.DeliveryDraft... addDeliveries) {
@@ -93,8 +102,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.delivery</code></p>
-    */
+     *  <p>Maps to <code>Order.delivery</code></p>
+     */
 
     public OrderFieldBuilder addDeliveries(
             @Nullable final java.util.List<com.commercetools.importapi.models.order_patches.DeliveryDraft> addDeliveries) {
@@ -103,8 +112,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.delivery</code></p>
-    */
+     *  <p>Maps to <code>Order.delivery</code></p>
+     */
 
     public OrderFieldBuilder plusAddDeliveries(
             @Nullable final com.commercetools.importapi.models.order_patches.DeliveryDraft... addDeliveries) {
@@ -116,8 +125,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.delivery</code></p>
-    */
+     *  <p>Maps to <code>Order.delivery</code></p>
+     */
 
     public OrderFieldBuilder plusAddDeliveries(
             Function<com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder> builder) {
@@ -130,8 +139,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.delivery</code></p>
-    */
+     *  <p>Maps to <code>Order.delivery</code></p>
+     */
 
     public OrderFieldBuilder withAddDeliveries(
             Function<com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder> builder) {
@@ -142,8 +151,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.removeDelivery</code></p>
-    */
+     *  <p>Maps to <code>Order.removeDelivery</code></p>
+     */
 
     public OrderFieldBuilder removeDelivery(
             Function<com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder> builder) {
@@ -154,8 +163,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.removeDelivery</code></p>
-    */
+     *  <p>Maps to <code>Order.removeDelivery</code></p>
+     */
 
     public OrderFieldBuilder removeDelivery(
             @Nullable final com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft removeDelivery) {
@@ -164,8 +173,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
-    */
+     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     */
 
     public OrderFieldBuilder removeParcelFromDelivery(
             Function<com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder> builder) {
@@ -176,8 +185,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
-    */
+     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     */
 
     public OrderFieldBuilder removeParcelFromDelivery(
             @Nullable final com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft removeParcelFromDelivery) {
@@ -186,8 +195,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.addressDraft</code></p>
-    */
+     *  <p>Maps to <code>Order.addressDraft</code></p>
+     */
 
     public OrderFieldBuilder setDeliveryAddress(
             Function<com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder> builder) {
@@ -198,8 +207,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.addressDraft</code></p>
-    */
+     *  <p>Maps to <code>Order.addressDraft</code></p>
+     */
 
     public OrderFieldBuilder setDeliveryAddress(
             @Nullable final com.commercetools.importapi.models.order_patches.DeliveryAddressDraft setDeliveryAddress) {
@@ -208,8 +217,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelMeasurements</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     */
 
     public OrderFieldBuilder setParcelMeasurements(
             Function<com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder, com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder> builder) {
@@ -220,8 +229,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelMeasurements</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     */
 
     public OrderFieldBuilder setParcelMeasurements(
             @Nullable final com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft setParcelMeasurements) {
@@ -230,8 +239,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelTrackingData</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     */
 
     public OrderFieldBuilder setParcelTrackingData(
             Function<com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder, com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder> builder) {
@@ -242,8 +251,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelTrackingData</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     */
 
     public OrderFieldBuilder setParcelTrackingData(
             @Nullable final com.commercetools.importapi.models.order_patches.ParcelTrackingData setParcelTrackingData) {
@@ -252,8 +261,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelItems</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     */
 
     public OrderFieldBuilder setParcelItems(
             @Nullable final com.commercetools.importapi.models.order_patches.ParcelItems... setParcelItems) {
@@ -262,8 +271,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelItems</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     */
 
     public OrderFieldBuilder setParcelItems(
             @Nullable final java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> setParcelItems) {
@@ -272,8 +281,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelItems</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     */
 
     public OrderFieldBuilder plusSetParcelItems(
             @Nullable final com.commercetools.importapi.models.order_patches.ParcelItems... setParcelItems) {
@@ -285,8 +294,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelItems</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     */
 
     public OrderFieldBuilder plusSetParcelItems(
             Function<com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItemsBuilder> builder) {
@@ -299,8 +308,8 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-    *  <p>Maps to <code>Order.parcelItems</code></p>
-    */
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     */
 
     public OrderFieldBuilder withSetParcelItems(
             Function<com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItemsBuilder> builder) {

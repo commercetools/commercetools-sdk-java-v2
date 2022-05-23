@@ -14,9 +14,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This endpoint can be used to simulate which Product Discounts would be applied if a specified Product Variant had a specified Price. Given Product and Product Variant IDs and a Price, this endpoint will return the ProductDiscount that would have been applied to that Price.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>This endpoint can be used to simulate which Product Discounts would be applied if a specified Product Variant had a specified Price. Given Product and Product Variant IDs and a Price, this endpoint will return the ProductDiscount that would have been applied to that Price.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .productDiscounts()
+           .matching()
+           .post(null)
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductDiscountsMatchingPost extends
         BodyApiMethod<ByProjectKeyProductDiscountsMatchingPost, com.commercetools.api.models.product_discount.ProductDiscount, com.commercetools.api.models.product_discount.ProductDiscountMatchQuery>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsMatchingPost> {

@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The data representation for a ProductType to be imported that is persisted as a ProductType in the Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The data representation for a ProductType to be imported that is persisted as a ProductType in the Project.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
 
     private String key;
@@ -46,22 +46,22 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>ProductType.name</code>.</p>
-    */
+     *  <p>Maps to <code>ProductType.name</code>.</p>
+     */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Maps to <code>ProductType.description</code>.</p>
-    */
+     *  <p>Maps to <code>ProductType.description</code>.</p>
+     */
     public String getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>The <code>attributes</code> of ProductType.</p>
-    */
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     */
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {
         return this.attributes;
     }

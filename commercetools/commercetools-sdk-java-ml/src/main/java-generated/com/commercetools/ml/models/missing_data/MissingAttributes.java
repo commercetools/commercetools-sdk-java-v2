@@ -15,7 +15,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MissingAttributes missingAttributes = MissingAttributes.builder()
+           .product(productBuilder -> productBuilder)
+           .productType(productTypeBuilder -> productTypeBuilder)
+           .variantId(0.3)
+           .plusMissingAttributeValues(missingAttributeValuesBuilder -> missingAttributeValuesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingAttributesImpl.class)
 public interface MissingAttributes {
 
@@ -30,22 +43,22 @@ public interface MissingAttributes {
     public ProductTypeReference getProductType();
 
     /**
-    *  <p>ID of a ProductVariant.</p>
-    */
+     *  <p>ID of a ProductVariant.</p>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
     @NotNull
     @JsonProperty("missingAttributeValues")
     public List<String> getMissingAttributeValues();
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
 
     @JsonProperty("missingAttributeNames")
     public List<String> getMissingAttributeNames();

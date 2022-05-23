@@ -6,7 +6,19 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MissingAttributesDetails missingAttributesDetails = MissingAttributesDetails.builder()
+           .total(0.3)
+           .missingAttributeNames(0.3)
+           .missingAttributeValues(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesDetailsBuilder implements Builder<MissingAttributesDetails> {
 
     private Integer total;
@@ -16,8 +28,8 @@ public class MissingAttributesDetailsBuilder implements Builder<MissingAttribute
     private Integer missingAttributeValues;
 
     /**
-    *  <p>Number of products scanned.</p>
-    */
+     *  <p>Number of products scanned.</p>
+     */
 
     public MissingAttributesDetailsBuilder total(final Integer total) {
         this.total = total;
@@ -25,8 +37,8 @@ public class MissingAttributesDetailsBuilder implements Builder<MissingAttribute
     }
 
     /**
-    *  <p>Number of products missing attribute names.</p>
-    */
+     *  <p>Number of products missing attribute names.</p>
+     */
 
     public MissingAttributesDetailsBuilder missingAttributeNames(final Integer missingAttributeNames) {
         this.missingAttributeNames = missingAttributeNames;
@@ -34,8 +46,8 @@ public class MissingAttributesDetailsBuilder implements Builder<MissingAttribute
     }
 
     /**
-    *  <p>Number of products missing attribute values.</p>
-    */
+     *  <p>Number of products missing attribute values.</p>
+     */
 
     public MissingAttributesDetailsBuilder missingAttributeValues(final Integer missingAttributeValues) {
         this.missingAttributeValues = missingAttributeValues;

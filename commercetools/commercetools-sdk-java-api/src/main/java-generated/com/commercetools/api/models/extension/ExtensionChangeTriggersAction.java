@@ -13,15 +13,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ExtensionChangeTriggersAction extensionChangeTriggersAction = ExtensionChangeTriggersAction.builder()
+           .plusTriggers(triggersBuilder -> triggersBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionChangeTriggersActionImpl.class)
 public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
 
     String CHANGE_TRIGGERS = "changeTriggers";
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("triggers")

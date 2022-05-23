@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DiscountCodeDraft discountCodeDraft = DiscountCodeDraft.builder()
+           .code("{code}")
+           .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     @Nullable
@@ -47,8 +58,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     private java.time.ZonedDateTime validUntil;
 
     /**
-    *  <p>Name of the DiscountCode.</p>
-    */
+     *  <p>Name of the DiscountCode.</p>
+     */
 
     public DiscountCodeDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -57,8 +68,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Name of the DiscountCode.</p>
-    */
+     *  <p>Name of the DiscountCode.</p>
+     */
 
     public DiscountCodeDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -66,8 +77,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Description of the DiscountCode.</p>
-    */
+     *  <p>Description of the DiscountCode.</p>
+     */
 
     public DiscountCodeDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -76,8 +87,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Description of the DiscountCode.</p>
-    */
+     *  <p>Description of the DiscountCode.</p>
+     */
 
     public DiscountCodeDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -86,8 +97,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
-    */
+     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     */
 
     public DiscountCodeDraftBuilder code(final String code) {
         this.code = code;
@@ -95,8 +106,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
-    */
+     *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+     */
 
     public DiscountCodeDraftBuilder cartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
@@ -105,8 +116,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
-    */
+     *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+     */
 
     public DiscountCodeDraftBuilder cartDiscounts(
             final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
@@ -115,8 +126,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
-    */
+     *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+     */
 
     public DiscountCodeDraftBuilder plusCartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
@@ -128,8 +139,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
-    */
+     *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+     */
 
     public DiscountCodeDraftBuilder plusCartDiscounts(
             Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
@@ -143,8 +154,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
-    */
+     *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+     */
 
     public DiscountCodeDraftBuilder withCartDiscounts(
             Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
@@ -156,8 +167,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
-    */
+     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     */
 
     public DiscountCodeDraftBuilder cartPredicate(@Nullable final String cartPredicate) {
         this.cartPredicate = cartPredicate;
@@ -165,8 +176,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Only active DiscountCodes can be applied to the Cart.</p>
-    */
+     *  <p>Only active DiscountCodes can be applied to the Cart.</p>
+     */
 
     public DiscountCodeDraftBuilder isActive(@Nullable final Boolean isActive) {
         this.isActive = isActive;
@@ -174,8 +185,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Number of times the DiscountCode can be applied.</p>
-    */
+     *  <p>Number of times the DiscountCode can be applied.</p>
+     */
 
     public DiscountCodeDraftBuilder maxApplications(@Nullable final Long maxApplications) {
         this.maxApplications = maxApplications;
@@ -183,8 +194,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Number of times the DiscountCode can be applied per Customer.</p>
-    */
+     *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     */
 
     public DiscountCodeDraftBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
         this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
@@ -192,8 +203,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the DiscountCode.</p>
-    */
+     *  <p>Custom Fields for the DiscountCode.</p>
+     */
 
     public DiscountCodeDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -202,8 +213,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the DiscountCode.</p>
-    */
+     *  <p>Custom Fields for the DiscountCode.</p>
+     */
 
     public DiscountCodeDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -211,8 +222,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Groups to which the DiscountCode will belong to.</p>
-    */
+     *  <p>Groups to which the DiscountCode will belong to.</p>
+     */
 
     public DiscountCodeDraftBuilder groups(@Nullable final String... groups) {
         this.groups = new ArrayList<>(Arrays.asList(groups));
@@ -220,8 +231,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Groups to which the DiscountCode will belong to.</p>
-    */
+     *  <p>Groups to which the DiscountCode will belong to.</p>
+     */
 
     public DiscountCodeDraftBuilder groups(@Nullable final java.util.List<String> groups) {
         this.groups = groups;
@@ -229,8 +240,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Groups to which the DiscountCode will belong to.</p>
-    */
+     *  <p>Groups to which the DiscountCode will belong to.</p>
+     */
 
     public DiscountCodeDraftBuilder plusGroups(@Nullable final String... groups) {
         if (this.groups == null) {
@@ -241,8 +252,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
-    */
+     *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
+     */
 
     public DiscountCodeDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
@@ -250,8 +261,8 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-    *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
-    */
+     *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
+     */
 
     public DiscountCodeDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;

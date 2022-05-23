@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -68,8 +68,8 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
@@ -79,8 +79,8 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-    *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
-    */
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     */
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
@@ -90,8 +90,8 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the ShoppingList.</p>
-    */
+     *  <p>User-defined unique identifier for the ShoppingList.</p>
+     */
     public String getKey() {
         return this.key;
     }
@@ -105,8 +105,8 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
-    */
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
@@ -116,8 +116,8 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-    *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
     public String getAnonymousId() {
         return this.anonymousId;
     }

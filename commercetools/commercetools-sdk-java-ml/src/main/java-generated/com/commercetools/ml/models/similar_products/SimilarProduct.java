@@ -14,29 +14,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>One part of a SimilarProductPair. Refers to a specific ProductVariant.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>One part of a SimilarProductPair. Refers to a specific ProductVariant.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SimilarProduct similarProduct = SimilarProduct.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SimilarProductImpl.class)
 public interface SimilarProduct {
 
     /**
-    *  <p>Reference to Product</p>
-    */
+     *  <p>Reference to Product</p>
+     */
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
 
     /**
-    *  <p>ID of the ProductVariant that was compared.</p>
-    */
+     *  <p>ID of the ProductVariant that was compared.</p>
+     */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-    *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
-    */
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     */
     @Valid
     @JsonProperty("meta")
     public SimilarProductMeta getMeta();

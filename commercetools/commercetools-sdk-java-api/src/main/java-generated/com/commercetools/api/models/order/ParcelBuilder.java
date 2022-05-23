@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Parcel parcel = Parcel.builder()
+           .id("{id}")
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelBuilder implements Builder<Parcel> {
 
     private String id;
@@ -29,8 +40,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-    *  <p>Platform-generated unique identifier of the Parcel.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Parcel.</p>
+     */
 
     public ParcelBuilder id(final String id) {
         this.id = id;
@@ -66,8 +77,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-    *  <p>The delivery items contained in this parcel.</p>
-    */
+     *  <p>The delivery items contained in this parcel.</p>
+     */
 
     public ParcelBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
@@ -75,8 +86,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-    *  <p>The delivery items contained in this parcel.</p>
-    */
+     *  <p>The delivery items contained in this parcel.</p>
+     */
 
     public ParcelBuilder items(@Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
@@ -84,8 +95,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-    *  <p>The delivery items contained in this parcel.</p>
-    */
+     *  <p>The delivery items contained in this parcel.</p>
+     */
 
     public ParcelBuilder plusItems(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         if (this.items == null) {
@@ -96,8 +107,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-    *  <p>The delivery items contained in this parcel.</p>
-    */
+     *  <p>The delivery items contained in this parcel.</p>
+     */
 
     public ParcelBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
@@ -109,8 +120,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-    *  <p>The delivery items contained in this parcel.</p>
-    */
+     *  <p>The delivery items contained in this parcel.</p>
+     */
 
     public ParcelBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
@@ -120,8 +131,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-    *  <p>Custom Fields of this parcel.</p>
-    */
+     *  <p>Custom Fields of this parcel.</p>
+     */
 
     public ParcelBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -130,8 +141,8 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-    *  <p>Custom Fields of this parcel.</p>
-    */
+     *  <p>Custom Fields of this parcel.</p>
+     */
 
     public ParcelBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

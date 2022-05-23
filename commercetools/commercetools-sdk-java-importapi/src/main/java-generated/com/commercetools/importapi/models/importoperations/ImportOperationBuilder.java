@@ -9,7 +9,24 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportOperation importOperation = ImportOperation.builder()
+           .version(1)
+           .importContainerKey("{importContainerKey}")
+           .resourceKey("{resourceKey}")
+           .id("{id}")
+           .state(ProcessingState.PROCESSING)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationBuilder implements Builder<ImportOperation> {
 
     private Long version;
@@ -38,8 +55,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     private java.time.ZonedDateTime expiresAt;
 
     /**
-    *  <p>The version of the ImportOperation.</p>
-    */
+     *  <p>The version of the ImportOperation.</p>
+     */
 
     public ImportOperationBuilder version(final Long version) {
         this.version = version;
@@ -47,8 +64,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>The key of the importContainer.</p>
-    */
+     *  <p>The key of the importContainer.</p>
+     */
 
     public ImportOperationBuilder importContainerKey(final String importContainerKey) {
         this.importContainerKey = importContainerKey;
@@ -56,8 +73,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>The key of the resource.</p>
-    */
+     *  <p>The key of the resource.</p>
+     */
 
     public ImportOperationBuilder resourceKey(final String resourceKey) {
         this.resourceKey = resourceKey;
@@ -65,8 +82,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>The ID of the ImportOperation.</p>
-    */
+     *  <p>The ID of the ImportOperation.</p>
+     */
 
     public ImportOperationBuilder id(final String id) {
         this.id = id;
@@ -74,8 +91,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
-    */
+     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
+     */
 
     public ImportOperationBuilder state(final com.commercetools.importapi.models.common.ProcessingState state) {
         this.state = state;
@@ -83,8 +100,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>The version of the impmorted resource when the import was successful.</p>
-    */
+     *  <p>The version of the impmorted resource when the import was successful.</p>
+     */
 
     public ImportOperationBuilder resourceVersion(@Nullable final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
@@ -92,8 +109,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
-    */
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     */
 
     public ImportOperationBuilder errors(
             @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
@@ -102,8 +119,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
-    */
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     */
 
     public ImportOperationBuilder errors(
             @Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
@@ -112,8 +129,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
-    */
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     */
 
     public ImportOperationBuilder plusErrors(
             @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
@@ -125,8 +142,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
-    */
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     */
 
     public ImportOperationBuilder plusErrors(
             Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
@@ -138,8 +155,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
-    */
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     */
 
     public ImportOperationBuilder withErrors(
             Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
@@ -149,8 +166,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>In case of unresolved status this array will show the unresolved references</p>
-    */
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     */
 
     public ImportOperationBuilder unresolvedReferences(
             @Nullable final com.commercetools.importapi.models.common.UnresolvedReferences... unresolvedReferences) {
@@ -159,8 +176,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>In case of unresolved status this array will show the unresolved references</p>
-    */
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     */
 
     public ImportOperationBuilder unresolvedReferences(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> unresolvedReferences) {
@@ -169,8 +186,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>In case of unresolved status this array will show the unresolved references</p>
-    */
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     */
 
     public ImportOperationBuilder plusUnresolvedReferences(
             @Nullable final com.commercetools.importapi.models.common.UnresolvedReferences... unresolvedReferences) {
@@ -182,8 +199,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>In case of unresolved status this array will show the unresolved references</p>
-    */
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     */
 
     public ImportOperationBuilder plusUnresolvedReferences(
             Function<com.commercetools.importapi.models.common.UnresolvedReferencesBuilder, com.commercetools.importapi.models.common.UnresolvedReferencesBuilder> builder) {
@@ -196,8 +213,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>In case of unresolved status this array will show the unresolved references</p>
-    */
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     */
 
     public ImportOperationBuilder withUnresolvedReferences(
             Function<com.commercetools.importapi.models.common.UnresolvedReferencesBuilder, com.commercetools.importapi.models.common.UnresolvedReferencesBuilder> builder) {
@@ -208,8 +225,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>The time when the ImportOperation was created.</p>
-    */
+     *  <p>The time when the ImportOperation was created.</p>
+     */
 
     public ImportOperationBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
@@ -217,8 +234,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>The last time When the ImportOperation was modified.</p>
-    */
+     *  <p>The last time When the ImportOperation was modified.</p>
+     */
 
     public ImportOperationBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -226,8 +243,8 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-    *  <p>The expiration time of the ImportOperation.</p>
-    */
+     *  <p>The expiration time of the ImportOperation.</p>
+     */
 
     public ImportOperationBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {
         this.expiresAt = expiresAt;

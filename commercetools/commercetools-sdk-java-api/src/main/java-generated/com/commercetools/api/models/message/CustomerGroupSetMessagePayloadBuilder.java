@@ -9,15 +9,24 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerGroupSetMessagePayload customerGroupSetMessagePayload = CustomerGroupSetMessagePayload.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGroupSetMessagePayload> {
 
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -28,8 +37,8 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {

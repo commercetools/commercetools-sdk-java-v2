@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Field type for Reference values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Field type for Reference values.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, ModelBase {
 
     private String name;
@@ -40,8 +40,8 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
     }
 
     /**
-    *  <p>Resource type the Custom Field can reference.</p>
-    */
+     *  <p>Resource type the Custom Field can reference.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldReferenceValue getReferenceTypeId() {
         return this.referenceTypeId;
     }

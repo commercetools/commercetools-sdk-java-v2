@@ -13,7 +13,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CategorySetAssetCustomTypeAction categorySetAssetCustomTypeAction = CategorySetAssetCustomTypeAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetAssetCustomTypeActionImpl.class)
 public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
@@ -26,15 +35,15 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     public String getAssetKey();
 
     /**
-    *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
-    */
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the Custom Fields fields for the Asset.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     */
     @Valid
     @JsonProperty("fields")
     public Object getFields();

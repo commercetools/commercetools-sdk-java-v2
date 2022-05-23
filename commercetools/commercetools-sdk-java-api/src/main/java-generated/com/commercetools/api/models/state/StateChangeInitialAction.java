@@ -12,15 +12,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StateChangeInitialAction stateChangeInitialAction = StateChangeInitialAction.builder()
+           .initial(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateChangeInitialActionImpl.class)
 public interface StateChangeInitialAction extends StateUpdateAction {
 
     String CHANGE_INITIAL = "changeInitial";
 
     /**
-    *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
-    */
+     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
+     */
     @NotNull
     @JsonProperty("initial")
     public Boolean getInitial();

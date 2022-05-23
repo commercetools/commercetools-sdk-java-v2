@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectChangeCartsConfigurationAction projectChangeCartsConfigurationAction = ProjectChangeCartsConfigurationAction.builder()
+           .cartsConfiguration(cartsConfigurationBuilder -> cartsConfigurationBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeCartsConfigurationActionBuilder implements Builder<ProjectChangeCartsConfigurationAction> {
 
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
 
     /**
-    *  <p>Configuration for the Carts feature.</p>
-    */
+     *  <p>Configuration for the Carts feature.</p>
+     */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
             Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder> builder) {
@@ -24,8 +34,8 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     }
 
     /**
-    *  <p>Configuration for the Carts feature.</p>
-    */
+     *  <p>Configuration for the Carts feature.</p>
+     */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
             final com.commercetools.api.models.project.CartsConfiguration cartsConfiguration) {

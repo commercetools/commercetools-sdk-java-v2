@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingMethodDraft shippingMethodDraft = ShippingMethodDraft.builder()
+           .name("{name}")
+           .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
+           .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
+           .isDefault(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> {
 
     @Nullable
@@ -39,8 +52,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-    *  <p>User-defined unique identifier for the ShippingMethod.</p>
-    */
+     *  <p>User-defined unique identifier for the ShippingMethod.</p>
+     */
 
     public ShippingMethodDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -136,8 +149,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-    *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
-    */
+     *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
+     */
 
     public ShippingMethodDraftBuilder isDefault(final Boolean isDefault) {
         this.isDefault = isDefault;
@@ -145,8 +158,8 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-    *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
-    */
+     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     */
 
     public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {
         this.predicate = predicate;

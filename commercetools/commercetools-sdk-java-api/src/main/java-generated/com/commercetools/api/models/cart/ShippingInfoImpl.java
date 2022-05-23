@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoImpl implements ShippingInfo, ModelBase {
 
     private String shippingMethodName;
@@ -68,29 +68,29 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-    *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
-    */
+     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     */
     public com.commercetools.api.models.common.TypedMoney getPrice() {
         return this.price;
     }
 
     /**
-    *  <p>The shipping rate used to determine the price.</p>
-    */
+     *  <p>The shipping rate used to determine the price.</p>
+     */
     public com.commercetools.api.models.shipping_method.ShippingRate getShippingRate() {
         return this.shippingRate;
     }
 
     /**
-    *  <p>Set once the <code>taxRate</code> is set.</p>
-    */
+     *  <p>Set once the <code>taxRate</code> is set.</p>
+     */
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
     /**
-    *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
-    */
+     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     */
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
     }
@@ -100,15 +100,15 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-    *  <p>Not set if custom shipping method is used.</p>
-    */
+     *  <p>Not set if custom shipping method is used.</p>
+     */
     public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {
         return this.shippingMethod;
     }
 
     /**
-    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
-    */
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     */
     public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
         return this.deliveries;
     }
@@ -118,8 +118,8 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-    *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
-    */
+     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
+     */
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {
         return this.shippingMethodState;
     }

@@ -8,7 +8,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreResourceIdentifier storeResourceIdentifier = StoreResourceIdentifier.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIdentifier> {
 
     @Nullable
@@ -18,8 +27,8 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     private String key;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     */
 
     public StoreResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
@@ -27,8 +36,8 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     }
 
     /**
-    *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
-    */
+     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     */
 
     public StoreResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

@@ -13,22 +13,31 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Location location = Location.builder()
+           .country("{country}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocationImpl.class)
 public interface Location {
 
     /**
-    *  <p>Country code of the geographic location.</p>
-    */
+     *  <p>Country code of the geographic location.</p>
+     */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-    *  <p>State within the country.</p>
-    */
+     *  <p>State within the country.</p>
+     */
 
     @JsonProperty("state")
     public String getState();

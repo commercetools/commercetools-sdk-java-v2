@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetShippingMethodTaxRateChange setShippingMethodTaxRateChange = SetShippingMethodTaxRateChange.builder()
+           .change("{change}")
+           .taxMode(TaxMode.PLATFORM)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippingMethodTaxRateChange> {
 
     private String change;
@@ -19,8 +32,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     private com.commercetools.history.models.common.TaxRate previousValue;
 
     /**
-    *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
-    */
+     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
+     */
 
     public SetShippingMethodTaxRateChangeBuilder change(final String change) {
         this.change = change;
@@ -34,8 +47,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public SetShippingMethodTaxRateChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
@@ -44,8 +57,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public SetShippingMethodTaxRateChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxRate nextValue) {
@@ -54,8 +67,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public SetShippingMethodTaxRateChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
@@ -64,8 +77,8 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public SetShippingMethodTaxRateChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxRate previousValue) {

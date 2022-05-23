@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderPagedSearchResponse orderPagedSearchResponse = OrderPagedSearchResponse.builder()
+           .total(0.3)
+           .plusHits(hitsBuilder -> hitsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearchResponse> {
 
     private Long total;
@@ -23,8 +34,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     private java.util.List<com.commercetools.api.models.order.Hit> hits;
 
     /**
-    *  <p>Total number of results matching the query.</p>
-    */
+     *  <p>Total number of results matching the query.</p>
+     */
 
     public OrderPagedSearchResponseBuilder total(final Long total) {
         this.total = total;
@@ -32,8 +43,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public OrderPagedSearchResponseBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
@@ -41,8 +52,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public OrderPagedSearchResponseBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
@@ -50,8 +61,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-    *  <p>Actual results.</p>
-    */
+     *  <p>Actual results.</p>
+     */
 
     public OrderPagedSearchResponseBuilder hits(final com.commercetools.api.models.order.Hit... hits) {
         this.hits = new ArrayList<>(Arrays.asList(hits));
@@ -59,8 +70,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-    *  <p>Actual results.</p>
-    */
+     *  <p>Actual results.</p>
+     */
 
     public OrderPagedSearchResponseBuilder hits(final java.util.List<com.commercetools.api.models.order.Hit> hits) {
         this.hits = hits;
@@ -68,8 +79,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-    *  <p>Actual results.</p>
-    */
+     *  <p>Actual results.</p>
+     */
 
     public OrderPagedSearchResponseBuilder plusHits(final com.commercetools.api.models.order.Hit... hits) {
         if (this.hits == null) {
@@ -80,8 +91,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-    *  <p>Actual results.</p>
-    */
+     *  <p>Actual results.</p>
+     */
 
     public OrderPagedSearchResponseBuilder plusHits(
             Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.HitBuilder> builder) {
@@ -93,8 +104,8 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-    *  <p>Actual results.</p>
-    */
+     *  <p>Actual results.</p>
+     */
 
     public OrderPagedSearchResponseBuilder withHits(
             Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.HitBuilder> builder) {

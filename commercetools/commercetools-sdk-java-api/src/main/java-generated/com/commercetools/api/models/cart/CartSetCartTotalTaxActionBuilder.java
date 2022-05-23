@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartSetCartTotalTaxAction cartSetCartTotalTaxAction = CartSetCartTotalTaxAction.builder()
+           .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTotalTaxAction> {
 
     private com.commercetools.api.models.common.Money externalTotalGross;
@@ -18,8 +28,8 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
     /**
-    *  <p>The total gross amount of the cart (totalNet + taxes).</p>
-    */
+     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -28,8 +38,8 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-    *  <p>The total gross amount of the cart (totalNet + taxes).</p>
-    */
+     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
             final com.commercetools.api.models.common.Money externalTotalGross) {

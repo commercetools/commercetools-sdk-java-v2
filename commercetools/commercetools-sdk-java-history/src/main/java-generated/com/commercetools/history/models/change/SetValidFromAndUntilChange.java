@@ -14,7 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetValidFromAndUntilChange setValidFromAndUntilChange = SetValidFromAndUntilChange.builder()
+           .change("{change}")
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetValidFromAndUntilChangeImpl.class)
 public interface SetValidFromAndUntilChange extends Change {
 
@@ -29,16 +41,16 @@ public interface SetValidFromAndUntilChange extends Change {
     public String getChange();
 
     /**
-    *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
-    */
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public ValidFromAndUntilValue getPreviousValue();
 
     /**
-    *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
-    */
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

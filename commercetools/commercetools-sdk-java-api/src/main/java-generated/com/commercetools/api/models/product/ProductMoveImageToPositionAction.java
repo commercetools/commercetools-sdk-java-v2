@@ -12,7 +12,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductMoveImageToPositionAction productMoveImageToPositionAction = ProductMoveImageToPositionAction.builder()
+           .imageUrl("{imageUrl}")
+           .position(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductMoveImageToPositionActionImpl.class)
 public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
@@ -25,8 +36,8 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-    *  <p>The URL of the image</p>
-    */
+     *  <p>The URL of the image</p>
+     */
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();

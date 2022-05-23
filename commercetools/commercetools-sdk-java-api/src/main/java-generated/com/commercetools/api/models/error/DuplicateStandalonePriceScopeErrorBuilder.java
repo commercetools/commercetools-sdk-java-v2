@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DuplicateStandalonePriceScopeError duplicateStandalonePriceScopeError = DuplicateStandalonePriceScopeError.builder()
+           .message("{message}")
+           .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
+           .sku("{sku}")
+           .currency("{currency}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<DuplicateStandalonePriceScopeError> {
 
     private String message;
@@ -56,8 +69,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-    *  <p>Reference to a StandalonePrice.</p>
-    */
+     *  <p>Reference to a StandalonePrice.</p>
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder conflictingStandalonePrice(
             Function<com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder> builder) {
@@ -68,8 +81,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-    *  <p>Reference to a StandalonePrice.</p>
-    */
+     *  <p>Reference to a StandalonePrice.</p>
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder conflictingStandalonePrice(
             final com.commercetools.api.models.standalone_price.StandalonePriceReference conflictingStandalonePrice) {
@@ -93,8 +106,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-    *  <p>ResourceIdentifier to a CustomerGroup.</p>
-    */
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
@@ -105,8 +118,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-    *  <p>ResourceIdentifier to a CustomerGroup.</p>
-    */
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
@@ -115,8 +128,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -126,8 +139,8 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {

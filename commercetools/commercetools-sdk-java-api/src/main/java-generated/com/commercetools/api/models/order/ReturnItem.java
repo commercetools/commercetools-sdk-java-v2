@@ -15,17 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReturnItem returnItem = ReturnItem.customLineItemReturnItemBuilder()
+           id("{id}")
+           quantity(0.3)
+           shipmentState(ReturnShipmentState.ADVISED)
+           paymentState(ReturnPaymentState.NON_REFUNDABLE)
+           lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           customLineItemId("{customLineItemId}")
+           .build()
+ </code></pre>
+ </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.CustomLineItemReturnItemImpl.class, name = CustomLineItemReturnItem.CUSTOM_LINE_ITEM_RETURN_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.LineItemReturnItemImpl.class, name = LineItemReturnItem.LINE_ITEM_RETURN_ITEM) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ReturnItemImpl.class, visible = true)
 @JsonDeserialize(as = ReturnItemImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReturnItem extends com.commercetools.api.models.Customizable<ReturnItem> {
 
     /**
-    *  <p>Platform-generated unique identifier of the ReturnItem.</p>
-    */
+     *  <p>Platform-generated unique identifier of the ReturnItem.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
@@ -50,8 +66,8 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public ReturnPaymentState getPaymentState();
 
     /**
-    *  <p>Custom Fields of this return item.</p>
-    */
+     *  <p>Custom Fields of this return item.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryUpdateImpl implements TaxCategoryUpdate, ModelBase {
 
     private Long version;
@@ -32,15 +32,15 @@ public class TaxCategoryUpdateImpl implements TaxCategoryUpdate, ModelBase {
     }
 
     /**
-    *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-    */
+     *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Update actions to be performed on the TaxCategory.</p>
-    */
+     *  <p>Update actions to be performed on the TaxCategory.</p>
+     */
     public java.util.List<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction> getActions() {
         return this.actions;
     }

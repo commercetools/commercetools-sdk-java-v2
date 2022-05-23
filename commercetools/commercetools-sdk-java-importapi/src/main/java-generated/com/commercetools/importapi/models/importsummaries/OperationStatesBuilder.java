@@ -6,7 +6,22 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OperationStates operationStates = OperationStates.builder()
+           .processing(1)
+           .validationFailed(1)
+           .unresolved(1)
+           .waitForMasterVariant(1)
+           .imported(1)
+           .rejected(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OperationStatesBuilder implements Builder<OperationStates> {
 
     private Long processing;
@@ -22,8 +37,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     private Long rejected;
 
     /**
-    *  <p>The number of resources in the <code>processing</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>processing</code> state.</p>
+     */
 
     public OperationStatesBuilder processing(final Long processing) {
         this.processing = processing;
@@ -31,8 +46,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-    *  <p>The number of resources in the <code>validationFailed</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     */
 
     public OperationStatesBuilder validationFailed(final Long validationFailed) {
         this.validationFailed = validationFailed;
@@ -40,8 +55,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-    *  <p>The number of resources in the <code>unresolved</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     */
 
     public OperationStatesBuilder unresolved(final Long unresolved) {
         this.unresolved = unresolved;
@@ -49,8 +64,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-    *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     */
 
     public OperationStatesBuilder waitForMasterVariant(final Long waitForMasterVariant) {
         this.waitForMasterVariant = waitForMasterVariant;
@@ -58,8 +73,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-    *  <p>The number of resources in the <code>imported</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>imported</code> state.</p>
+     */
 
     public OperationStatesBuilder imported(final Long imported) {
         this.imported = imported;
@@ -67,8 +82,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-    *  <p>The number of resources in the <code>rejected</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     */
 
     public OperationStatesBuilder rejected(final Long rejected) {
         this.rejected = rejected;

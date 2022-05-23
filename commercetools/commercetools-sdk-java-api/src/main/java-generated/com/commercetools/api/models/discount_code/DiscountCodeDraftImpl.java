@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -71,85 +71,85 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
     }
 
     /**
-    *  <p>Name of the DiscountCode.</p>
-    */
+     *  <p>Name of the DiscountCode.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Description of the DiscountCode.</p>
-    */
+     *  <p>Description of the DiscountCode.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
-    */
+     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     */
     public String getCode() {
         return this.code;
     }
 
     /**
-    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
-    */
+     *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+     */
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts() {
         return this.cartDiscounts;
     }
 
     /**
-    *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
-    */
+     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     */
     public String getCartPredicate() {
         return this.cartPredicate;
     }
 
     /**
-    *  <p>Only active DiscountCodes can be applied to the Cart.</p>
-    */
+     *  <p>Only active DiscountCodes can be applied to the Cart.</p>
+     */
     public Boolean getIsActive() {
         return this.isActive;
     }
 
     /**
-    *  <p>Number of times the DiscountCode can be applied.</p>
-    */
+     *  <p>Number of times the DiscountCode can be applied.</p>
+     */
     public Long getMaxApplications() {
         return this.maxApplications;
     }
 
     /**
-    *  <p>Number of times the DiscountCode can be applied per Customer.</p>
-    */
+     *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     */
     public Long getMaxApplicationsPerCustomer() {
         return this.maxApplicationsPerCustomer;
     }
 
     /**
-    *  <p>Custom Fields for the DiscountCode.</p>
-    */
+     *  <p>Custom Fields for the DiscountCode.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>Groups to which the DiscountCode will belong to.</p>
-    */
+     *  <p>Groups to which the DiscountCode will belong to.</p>
+     */
     public java.util.List<String> getGroups() {
         return this.groups;
     }
 
     /**
-    *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
-    */
+     *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
+     */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
-    */
+     *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
+     */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }

@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreChangeProductSelectionAction storeChangeProductSelectionAction = StoreChangeProductSelectionAction.builder()
+           .productSelection(productSelectionBuilder -> productSelectionBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreChangeProductSelectionActionBuilder implements Builder<StoreChangeProductSelectionAction> {
 
     private com.commercetools.api.models.common.ResourceIdentifier productSelection;
@@ -18,8 +28,8 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     private Boolean active;
 
     /**
-    *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
-    */
+     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+     */
 
     public StoreChangeProductSelectionActionBuilder productSelection(
             final com.commercetools.api.models.common.ResourceIdentifier productSelection) {
@@ -28,8 +38,8 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     }
 
     /**
-    *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
-    */
+     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+     */
 
     public StoreChangeProductSelectionActionBuilder productSelection(
             Function<com.commercetools.api.models.common.ResourceIdentifierBuilder, Builder<? extends com.commercetools.api.models.common.ResourceIdentifier>> builder) {
@@ -39,8 +49,8 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     }
 
     /**
-    *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
-    */
+     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
+     */
 
     public StoreChangeProductSelectionActionBuilder active(@Nullable final Boolean active) {
         this.active = active;

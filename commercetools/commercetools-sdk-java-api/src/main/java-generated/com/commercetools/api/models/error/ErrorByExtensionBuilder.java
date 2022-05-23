@@ -8,7 +8,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ErrorByExtension errorByExtension = ErrorByExtension.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
 
     private String id;
@@ -17,8 +27,8 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
     private String key;
 
     /**
-    *  <p>Platform-generated unique identifier of the Extension.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Extension.</p>
+     */
 
     public ErrorByExtensionBuilder id(final String id) {
         this.id = id;
@@ -26,8 +36,8 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Extension.</p>
-    */
+     *  <p>User-defined unique identifier of the Extension.</p>
+     */
 
     public ErrorByExtensionBuilder key(@Nullable final String key) {
         this.key = key;

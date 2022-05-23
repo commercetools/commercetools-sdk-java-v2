@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeChangeIsActiveAction, ModelBase {
 
     private String action;
@@ -36,8 +36,8 @@ public class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeChangeI
     }
 
     /**
-    *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
-    */
+     *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
+     */
     public Boolean getIsActive() {
         return this.isActive;
     }

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
@@ -53,8 +53,8 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Subscription.</p>
-    */
+     *  <p>User-defined unique identifier for the Subscription.</p>
+     */
     public String getKey() {
         return this.key;
     }

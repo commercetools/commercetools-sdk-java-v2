@@ -13,7 +13,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MissingPricesPagedQueryResult missingPricesPagedQueryResult = MissingPricesPagedQueryResult.builder()
+           .count(0.3)
+           .total(0.3)
+           .offset(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .meta(metaBuilder -> metaBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingPricesPagedQueryResultImpl.class)
 public interface MissingPricesPagedQueryResult {
 
@@ -26,8 +40,8 @@ public interface MissingPricesPagedQueryResult {
     public Long getTotal();
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();

@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ZoneUpdate zoneUpdate = ZoneUpdate.builder()
+           .version(0.3)
+           .plusActions(actionsBuilder -> actionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     private Long version;
@@ -15,8 +26,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
 
     /**
-    *  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-    */
+     *  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
 
     public ZoneUpdateBuilder version(final Long version) {
         this.version = version;
@@ -24,8 +35,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Zone.</p>
-    */
+     *  <p>Update actions to be performed on the Zone.</p>
+     */
 
     public ZoneUpdateBuilder actions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
@@ -33,8 +44,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Zone.</p>
-    */
+     *  <p>Update actions to be performed on the Zone.</p>
+     */
 
     public ZoneUpdateBuilder actions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
         this.actions = actions;
@@ -42,8 +53,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Zone.</p>
-    */
+     *  <p>Update actions to be performed on the Zone.</p>
+     */
 
     public ZoneUpdateBuilder plusActions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
         if (this.actions == null) {
@@ -54,8 +65,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Zone.</p>
-    */
+     *  <p>Update actions to be performed on the Zone.</p>
+     */
 
     public ZoneUpdateBuilder plusActions(
             Function<com.commercetools.api.models.zone.ZoneUpdateActionBuilder, Builder<? extends com.commercetools.api.models.zone.ZoneUpdateAction>> builder) {
@@ -67,8 +78,8 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Zone.</p>
-    */
+     *  <p>Update actions to be performed on the Zone.</p>
+     */
 
     public ZoneUpdateBuilder withActions(
             Function<com.commercetools.api.models.zone.ZoneUpdateActionBuilder, Builder<? extends com.commercetools.api.models.zone.ZoneUpdateAction>> builder) {

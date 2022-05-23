@@ -14,17 +14,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Field type for localized enum values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Field type for localized enum values.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomFieldLocalizedEnumType customFieldLocalizedEnumType = CustomFieldLocalizedEnumType.builder()
+           .plusValues(valuesBuilder -> valuesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldLocalizedEnumTypeImpl.class)
 public interface CustomFieldLocalizedEnumType extends FieldType {
 
     String LOCALIZED_ENUM = "LocalizedEnum";
 
     /**
-    *  <p>Allowed values.</p>
-    */
+     *  <p>Allowed values.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("values")

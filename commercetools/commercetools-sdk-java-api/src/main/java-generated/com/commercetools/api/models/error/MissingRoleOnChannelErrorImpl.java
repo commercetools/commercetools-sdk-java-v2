@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError, ModelBase {
 
     private String code;
@@ -56,15 +56,15 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
     /**
-    *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
-    */
+     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+     */
     public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole() {
         return this.missingRole;
     }

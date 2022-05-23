@@ -6,7 +6,18 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetPropertyChange setPropertyChange = SetPropertyChange.builder()
+           .change("{change}")
+           .path("{path}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     private String change;
@@ -18,8 +29,8 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     private java.lang.Object previousValue;
 
     /**
-    *  <p>Update action for <code>setProperty</code> on custom objects</p>
-    */
+     *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     */
 
     public SetPropertyChangeBuilder change(final String change) {
         this.change = change;
@@ -27,8 +38,8 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
-    *  <p>Value path to the property that was changed</p>
-    */
+     *  <p>Value path to the property that was changed</p>
+     */
 
     public SetPropertyChangeBuilder path(final String path) {
         this.path = path;

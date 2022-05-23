@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerSignInResult customerSignInResult = CustomerSignInResult.builder()
+           .customer(customerBuilder -> customerBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult> {
 
     private com.commercetools.api.models.customer.Customer customer;
@@ -29,8 +39,8 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-    *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
-    */
+     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     */
 
     public CustomerSignInResultBuilder cart(
             Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
@@ -39,8 +49,8 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-    *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
-    */
+     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     */
 
     public CustomerSignInResultBuilder cart(@Nullable final com.commercetools.api.models.cart.Cart cart) {
         this.cart = cart;

@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SimilarProduct similarProduct = SimilarProduct.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     @Nullable
@@ -22,8 +31,8 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
 
     /**
-    *  <p>Reference to Product</p>
-    */
+     *  <p>Reference to Product</p>
+     */
 
     public SimilarProductBuilder product(
             Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
@@ -32,8 +41,8 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     }
 
     /**
-    *  <p>Reference to Product</p>
-    */
+     *  <p>Reference to Product</p>
+     */
 
     public SimilarProductBuilder product(@Nullable final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
@@ -41,8 +50,8 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     }
 
     /**
-    *  <p>ID of the ProductVariant that was compared.</p>
-    */
+     *  <p>ID of the ProductVariant that was compared.</p>
+     */
 
     public SimilarProductBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
@@ -50,8 +59,8 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     }
 
     /**
-    *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
-    */
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     */
 
     public SimilarProductBuilder meta(
             Function<com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder> builder) {
@@ -60,8 +69,8 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     }
 
     /**
-    *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
-    */
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     */
 
     public SimilarProductBuilder meta(
             @Nullable final com.commercetools.ml.models.similar_products.SimilarProductMeta meta) {

@@ -18,9 +18,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingInfoImportDraft shippingInfoImportDraft = ShippingInfoImportDraft.builder()
+           .shippingMethodName("{shippingMethodName}")
+           .price(priceBuilder -> priceBuilder)
+           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingInfoImportDraftImpl.class)
 public interface ShippingInfoImportDraft {
 
@@ -43,22 +54,22 @@ public interface ShippingInfoImportDraft {
     public TaxRate getTaxRate();
 
     /**
-    *  <p>References a tax category by key.</p>
-    */
+     *  <p>References a tax category by key.</p>
+     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-    *  <p>References a shipping method by key.</p>
-    */
+     *  <p>References a shipping method by key.</p>
+     */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodKeyReference getShippingMethod();
 
     /**
-    *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
-    */
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     */
     @Valid
     @JsonProperty("deliveries")
     public List<Delivery> getDeliveries();

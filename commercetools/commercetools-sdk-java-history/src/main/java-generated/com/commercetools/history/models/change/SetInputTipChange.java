@@ -14,7 +14,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetInputTipChange setInputTipChange = SetInputTipChange.builder()
+           .change("{change}")
+           .attributeName("{attributeName}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetInputTipChangeImpl.class)
 public interface SetInputTipChange extends Change {
 
@@ -25,15 +38,15 @@ public interface SetInputTipChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for <code>setInputTip</code> on product types</p>
-    */
+     *  <p>Update action for <code>setInputTip</code> on product types</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>The name of the updated attribute.</p>
-    */
+     *  <p>The name of the updated attribute.</p>
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

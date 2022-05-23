@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSelectionPagedQueryResponse productSelectionPagedQueryResponse = ProductSelectionPagedQueryResponse.builder()
+           .limit(0.3)
+           .offset(0.3)
+           .count(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionPagedQueryResponseBuilder implements Builder<ProductSelectionPagedQueryResponse> {
 
     private Long limit;
@@ -24,8 +37,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     private java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
@@ -33,8 +46,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
@@ -42,8 +55,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
@@ -51,8 +64,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -60,8 +73,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-    *  <p>ProductSelections matching the query.</p>
-    */
+     *  <p>ProductSelections matching the query.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder results(
             final com.commercetools.api.models.product_selection.ProductSelection... results) {
@@ -70,8 +83,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-    *  <p>ProductSelections matching the query.</p>
-    */
+     *  <p>ProductSelections matching the query.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results) {
@@ -80,8 +93,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-    *  <p>ProductSelections matching the query.</p>
-    */
+     *  <p>ProductSelections matching the query.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.product_selection.ProductSelection... results) {
@@ -93,8 +106,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-    *  <p>ProductSelections matching the query.</p>
-    */
+     *  <p>ProductSelections matching the query.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
@@ -107,8 +120,8 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-    *  <p>ProductSelections matching the query.</p>
-    */
+     *  <p>ProductSelections matching the query.</p>
+     */
 
     public ProductSelectionPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {

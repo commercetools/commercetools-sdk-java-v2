@@ -20,7 +20,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingMethod shippingMethod = ShippingMethod.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .name("{name}")
+           .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
+           .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
+           .isDefault(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodImpl.class)
 public interface ShippingMethod extends BaseResource, com.commercetools.api.models.DomainResource<ShippingMethod>,
         com.commercetools.api.models.Referencable<ShippingMethod>,
@@ -28,15 +45,15 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
         com.commercetools.api.models.Customizable<ShippingMethod> {
 
     /**
-    *  <p>Platform-generated unique identifier of the ShippingMethod.</p>
-    */
+     *  <p>Platform-generated unique identifier of the ShippingMethod.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the shipping method.</p>
-    */
+     *  <p>The current version of the shipping method.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
@@ -50,22 +67,22 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier of the ShippingMethod.</p>
-    */
+     *  <p>User-defined unique identifier of the ShippingMethod.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
@@ -96,15 +113,15 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     public List<ZoneRate> getZoneRates();
 
     /**
-    *  <p>One shipping method in a project can be default.</p>
-    */
+     *  <p>One shipping method in a project can be default.</p>
+     */
     @NotNull
     @JsonProperty("isDefault")
     public Boolean getIsDefault();
 
     /**
-    *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
-    */
+     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     */
 
     @JsonProperty("predicate")
     public String getPredicate();

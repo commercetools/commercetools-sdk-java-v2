@@ -14,9 +14,22 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Shape of the value for cart discounts multiBuyCustomLineItems target.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Shape of the value for cart discounts multiBuyCustomLineItems target.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeTargetMultiBuyCustomLineItemsChangeValue changeTargetMultiBuyCustomLineItemsChangeValue = ChangeTargetMultiBuyCustomLineItemsChangeValue.builder()
+           .predicate("{predicate}")
+           .triggerQuantity(1)
+           .discountedQuantity(1)
+           .maxOccurrence(1)
+           .selectionMode(SelectionMode.CHEAPEST)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTargetMultiBuyCustomLineItemsChangeValueImpl.class)
 public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTargetChangeValue {
 
@@ -31,22 +44,22 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public String getPredicate();
 
     /**
-    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
-    */
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     */
     @NotNull
     @JsonProperty("triggerQuantity")
     public Integer getTriggerQuantity();
 
     /**
-    *  <p>Quantity of line items that are discounted per application of this discount.</p>
-    */
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     */
     @NotNull
     @JsonProperty("discountedQuantity")
     public Integer getDiscountedQuantity();
 
     /**
-    *  <p>Maximum number of applications of this discount.</p>
-    */
+     *  <p>Maximum number of applications of this discount.</p>
+     */
     @NotNull
     @JsonProperty("maxOccurrence")
     public Integer getMaxOccurrence();

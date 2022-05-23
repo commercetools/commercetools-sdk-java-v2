@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductSearchRequestImpl implements SimilarProductSearchRequest, ModelBase {
 
     private Long limit;
@@ -54,43 +54,43 @@ public class SimilarProductSearchRequestImpl implements SimilarProductSearchRequ
     }
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>language tag used to prioritize language for text comparisons.</p>
-    */
+     *  <p>language tag used to prioritize language for text comparisons.</p>
+     */
     public String getLanguage() {
         return this.language;
     }
 
     /**
-    *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
-    */
+     *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
+     */
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
     /**
-    *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
-    */
+     *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     */
     public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures() {
         return this.similarityMeasures;
     }
 
     /**
-    *  <p>Array of length 2 of ProductSetSelector</p>
-    */
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     */
     public java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> getProductSetSelectors() {
         return this.productSetSelectors;
     }

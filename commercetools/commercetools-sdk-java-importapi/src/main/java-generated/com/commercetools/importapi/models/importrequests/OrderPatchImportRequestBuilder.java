@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderPatchImportRequest orderPatchImportRequest = OrderPatchImportRequest.builder()
+           .plusPatches(patchesBuilder -> patchesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches;
 
     /**
-    *  <p>The order patches of this request</p>
-    */
+     *  <p>The order patches of this request</p>
+     */
 
     public OrderPatchImportRequestBuilder patches(
             final com.commercetools.importapi.models.order_patches.OrderPatchImport... patches) {
@@ -23,8 +33,8 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     }
 
     /**
-    *  <p>The order patches of this request</p>
-    */
+     *  <p>The order patches of this request</p>
+     */
 
     public OrderPatchImportRequestBuilder patches(
             final java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches) {
@@ -33,8 +43,8 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     }
 
     /**
-    *  <p>The order patches of this request</p>
-    */
+     *  <p>The order patches of this request</p>
+     */
 
     public OrderPatchImportRequestBuilder plusPatches(
             final com.commercetools.importapi.models.order_patches.OrderPatchImport... patches) {
@@ -46,8 +56,8 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     }
 
     /**
-    *  <p>The order patches of this request</p>
-    */
+     *  <p>The order patches of this request</p>
+     */
 
     public OrderPatchImportRequestBuilder plusPatches(
             Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
@@ -60,8 +70,8 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     }
 
     /**
-    *  <p>The order patches of this request</p>
-    */
+     *  <p>The order patches of this request</p>
+     */
 
     public OrderPatchImportRequestBuilder withPatches(
             Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {

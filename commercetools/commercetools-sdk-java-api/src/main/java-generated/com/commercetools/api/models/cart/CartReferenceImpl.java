@@ -16,9 +16,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Reference to a Cart.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a Cart.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartReferenceImpl implements CartReference, ModelBase {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
@@ -40,22 +40,22 @@ public class CartReferenceImpl implements CartReference, ModelBase {
     }
 
     /**
-    *  <p>Type of referenced resource.</p>
-    */
+     *  <p>Type of referenced resource.</p>
+     */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced Cart.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced Cart.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
-    */
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     */
     public com.commercetools.api.models.cart.Cart getObj() {
         return this.obj;
     }

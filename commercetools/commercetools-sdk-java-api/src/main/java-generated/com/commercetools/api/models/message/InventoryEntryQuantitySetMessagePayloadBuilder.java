@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InventoryEntryQuantitySetMessagePayload inventoryEntryQuantitySetMessagePayload = InventoryEntryQuantitySetMessagePayload.builder()
+           .oldQuantityOnStock(0.3)
+           .newQuantityOnStock(0.3)
+           .oldAvailableQuantity(0.3)
+           .newAvailableQuantity(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryQuantitySetMessagePayloadBuilder
         implements Builder<InventoryEntryQuantitySetMessagePayload> {
 
@@ -45,8 +58,8 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-    *  <p>Reference to a Channel.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -55,8 +68,8 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-    *  <p>Reference to a Channel.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {

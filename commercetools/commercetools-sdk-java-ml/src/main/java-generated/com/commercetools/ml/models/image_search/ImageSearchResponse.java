@@ -14,36 +14,48 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Response format from image search endpoint.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Response format from image search endpoint.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImageSearchResponse imageSearchResponse = ImageSearchResponse.builder()
+           .count(0.3)
+           .offset(0.3)
+           .total(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImageSearchResponseImpl.class)
 public interface ImageSearchResponse {
 
     /**
-    *  <p>The maximum number of results to return from a query.</p>
-    */
+     *  <p>The maximum number of results to return from a query.</p>
+     */
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     @NotNull
     @JsonProperty("offset")
     public Double getOffset();
 
     /**
-    *  <p>The total number of product images that were have been analyzed.</p>
-    */
+     *  <p>The total number of product images that were have been analyzed.</p>
+     */
     @NotNull
     @JsonProperty("total")
     public Integer getTotal();
 
     /**
-    *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
-    */
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("results")

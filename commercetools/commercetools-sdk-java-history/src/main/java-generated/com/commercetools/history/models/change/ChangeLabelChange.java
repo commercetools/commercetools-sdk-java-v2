@@ -14,7 +14,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeLabelChange changeLabelChange = ChangeLabelChange.builder()
+           .change("{change}")
+           .fieldName("{fieldName}")
+           .attributeName("{attributeName}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeLabelChangeImpl.class)
 public interface ChangeLabelChange extends Change {
 
@@ -25,22 +39,22 @@ public interface ChangeLabelChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for <code>changeLabel</code> on product types and types</p>
-    */
+     *  <p>Update action for <code>changeLabel</code> on product types and types</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>The name of the field definition to update (types).</p>
-    */
+     *  <p>The name of the field definition to update (types).</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>The name of the attribute definition to update (product-type).</p>
-    */
+     *  <p>The name of the attribute definition to update (product-type).</p>
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

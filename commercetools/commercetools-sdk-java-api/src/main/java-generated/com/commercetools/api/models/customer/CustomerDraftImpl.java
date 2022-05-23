@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     private String customerNumber;
@@ -128,22 +128,22 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-    *  <p>String that uniquely identifies a customer. It can be used to create more human-readable (in contrast to ID) identifier for the customer. It should be <strong>unique</strong> across a project. Once it's set it cannot be changed.</p>
-    */
+     *  <p>String that uniquely identifies a customer. It can be used to create more human-readable (in contrast to ID) identifier for the customer. It should be <strong>unique</strong> across a project. Once it's set it cannot be changed.</p>
+     */
     public String getCustomerNumber() {
         return this.customerNumber;
     }
 
     /**
-    *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive. For more information, see Email uniquenes.</p>
-    */
+     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive. For more information, see Email uniquenes.</p>
+     */
     public String getEmail() {
         return this.email;
     }
 
     /**
-    *  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>
-    */
+     *  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>
+     */
     public String getPassword() {
         return this.password;
     }
@@ -165,23 +165,23 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-    *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
-    */
+     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
+     */
     @Deprecated
     public String getAnonymousCartId() {
         return this.anonymousCartId;
     }
 
     /**
-    *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
-    */
+     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
+     */
     public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
         return this.anonymousCart;
     }
 
     /**
-    *  <p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p>
-    */
+     *  <p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p>
+     */
     public String getAnonymousId() {
         return this.anonymousId;
     }
@@ -199,36 +199,36 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
-    */
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+     */
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
         return this.addresses;
     }
 
     /**
-    *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
-    */
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     */
     public Integer getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
 
     /**
-    *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>
-    */
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>
+     */
     public java.util.List<Integer> getShippingAddresses() {
         return this.shippingAddresses;
     }
 
     /**
-    *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
-    */
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     */
     public Integer getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
 
     /**
-    *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
-    */
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     */
     public java.util.List<Integer> getBillingAddresses() {
         return this.billingAddresses;
     }
@@ -246,15 +246,15 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>Must be one of the languages supported for this project</p>
-    */
+     *  <p>Must be one of the languages supported for this project</p>
+     */
     public String getLocale() {
         return this.locale;
     }
@@ -264,22 +264,22 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Customer.</p>
-    */
+     *  <p>User-defined unique identifier for the Customer.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
-    */
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     */
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
         return this.stores;
     }
 
     /**
-    *  <p>Defines whether a password is required for the Customer that is used for platform-internal authentication.</p>
-    */
+     *  <p>Defines whether a password is required for the Customer that is used for platform-internal authentication.</p>
+     */
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
         return this.authenticationMode;
     }

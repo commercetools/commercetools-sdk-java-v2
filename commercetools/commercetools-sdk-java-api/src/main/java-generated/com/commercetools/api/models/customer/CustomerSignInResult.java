@@ -14,7 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerSignInResult customerSignInResult = CustomerSignInResult.builder()
+           .customer(customerBuilder -> customerBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSignInResultImpl.class)
 public interface CustomerSignInResult {
 
@@ -24,8 +34,8 @@ public interface CustomerSignInResult {
     public Customer getCustomer();
 
     /**
-    *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
-    */
+     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     */
     @Valid
     @JsonProperty("cart")
     public Cart getCart();

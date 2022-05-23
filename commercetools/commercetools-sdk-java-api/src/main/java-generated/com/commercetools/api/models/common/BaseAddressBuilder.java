@@ -8,7 +8,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   BaseAddress baseAddress = BaseAddress.builder()
+           .country("{country}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     @Nullable
@@ -86,8 +96,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     private String externalId;
 
     /**
-    *  <p>Platform-generated unique identifier of the Address.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Address.</p>
+     */
 
     public BaseAddressBuilder id(@Nullable final String id) {
         this.id = id;
@@ -95,8 +105,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Address.</p>
-    */
+     *  <p>User-defined unique identifier of the Address.</p>
+     */
 
     public BaseAddressBuilder key(@Nullable final String key) {
         this.key = key;
@@ -104,8 +114,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public BaseAddressBuilder country(final String country) {
         this.country = country;
@@ -113,8 +123,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Title of the contact, for example 'Dr.'</p>
-    */
+     *  <p>Title of the contact, for example 'Dr.'</p>
+     */
 
     public BaseAddressBuilder title(@Nullable final String title) {
         this.title = title;
@@ -122,8 +132,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
-    */
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     */
 
     public BaseAddressBuilder salutation(@Nullable final String salutation) {
         this.salutation = salutation;
@@ -131,8 +141,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Given name (first name) of the contact.</p>
-    */
+     *  <p>Given name (first name) of the contact.</p>
+     */
 
     public BaseAddressBuilder firstName(@Nullable final String firstName) {
         this.firstName = firstName;
@@ -140,8 +150,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Family name (last name) of the contact.</p>
-    */
+     *  <p>Family name (last name) of the contact.</p>
+     */
 
     public BaseAddressBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
@@ -149,8 +159,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Name of the street.</p>
-    */
+     *  <p>Name of the street.</p>
+     */
 
     public BaseAddressBuilder streetName(@Nullable final String streetName) {
         this.streetName = streetName;
@@ -158,8 +168,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Street number.</p>
-    */
+     *  <p>Street number.</p>
+     */
 
     public BaseAddressBuilder streetNumber(@Nullable final String streetNumber) {
         this.streetNumber = streetNumber;
@@ -167,8 +177,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Further information on the street address.</p>
-    */
+     *  <p>Further information on the street address.</p>
+     */
 
     public BaseAddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
         this.additionalStreetInfo = additionalStreetInfo;
@@ -176,8 +186,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Postal code.</p>
-    */
+     *  <p>Postal code.</p>
+     */
 
     public BaseAddressBuilder postalCode(@Nullable final String postalCode) {
         this.postalCode = postalCode;
@@ -185,8 +195,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Name of the city.</p>
-    */
+     *  <p>Name of the city.</p>
+     */
 
     public BaseAddressBuilder city(@Nullable final String city) {
         this.city = city;
@@ -194,8 +204,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Name of the region.</p>
-    */
+     *  <p>Name of the region.</p>
+     */
 
     public BaseAddressBuilder region(@Nullable final String region) {
         this.region = region;
@@ -203,8 +213,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Name of the state, for example, Colorado.</p>
-    */
+     *  <p>Name of the state, for example, Colorado.</p>
+     */
 
     public BaseAddressBuilder state(@Nullable final String state) {
         this.state = state;
@@ -212,8 +222,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Name of the company.</p>
-    */
+     *  <p>Name of the company.</p>
+     */
 
     public BaseAddressBuilder company(@Nullable final String company) {
         this.company = company;
@@ -221,8 +231,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Name of the department.</p>
-    */
+     *  <p>Name of the department.</p>
+     */
 
     public BaseAddressBuilder department(@Nullable final String department) {
         this.department = department;
@@ -230,8 +240,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Number or name of the building.</p>
-    */
+     *  <p>Number or name of the building.</p>
+     */
 
     public BaseAddressBuilder building(@Nullable final String building) {
         this.building = building;
@@ -239,8 +249,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Number or name of the apartment.</p>
-    */
+     *  <p>Number or name of the apartment.</p>
+     */
 
     public BaseAddressBuilder apartment(@Nullable final String apartment) {
         this.apartment = apartment;
@@ -248,8 +258,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Post office box number.</p>
-    */
+     *  <p>Post office box number.</p>
+     */
 
     public BaseAddressBuilder pOBox(@Nullable final String pOBox) {
         this.pOBox = pOBox;
@@ -257,8 +267,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Phone number of the contact.</p>
-    */
+     *  <p>Phone number of the contact.</p>
+     */
 
     public BaseAddressBuilder phone(@Nullable final String phone) {
         this.phone = phone;
@@ -266,8 +276,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Mobile phone number of the contact.</p>
-    */
+     *  <p>Mobile phone number of the contact.</p>
+     */
 
     public BaseAddressBuilder mobile(@Nullable final String mobile) {
         this.mobile = mobile;
@@ -275,8 +285,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Email address of the contact.</p>
-    */
+     *  <p>Email address of the contact.</p>
+     */
 
     public BaseAddressBuilder email(@Nullable final String email) {
         this.email = email;
@@ -284,8 +294,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Fax number of the contact.</p>
-    */
+     *  <p>Fax number of the contact.</p>
+     */
 
     public BaseAddressBuilder fax(@Nullable final String fax) {
         this.fax = fax;
@@ -293,8 +303,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>Further information on the Address.</p>
-    */
+     *  <p>Further information on the Address.</p>
+     */
 
     public BaseAddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
         this.additionalAddressInfo = additionalAddressInfo;
@@ -302,8 +312,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     }
 
     /**
-    *  <p>ID for the contact used in an external system.</p>
-    */
+     *  <p>ID for the contact used in an external system.</p>
+     */
 
     public BaseAddressBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;

@@ -13,22 +13,31 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderCustomerGroupSetMessagePayload orderCustomerGroupSetMessagePayload = OrderCustomerGroupSetMessagePayload.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerGroupSetMessagePayloadImpl.class)
 public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload {
 
     String ORDER_CUSTOMER_GROUP_SET = "OrderCustomerGroupSet";
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("oldCustomerGroup")
     public CustomerGroupReference getOldCustomerGroup();

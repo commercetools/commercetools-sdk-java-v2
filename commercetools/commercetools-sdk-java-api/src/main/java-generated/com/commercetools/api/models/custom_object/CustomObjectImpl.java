@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectImpl implements CustomObject, ModelBase {
 
     private String id;
@@ -58,64 +58,64 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the CustomObject.</p>
-    */
+     *  <p>Platform-generated unique identifier of the CustomObject.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the CustomObject.</p>
-    */
+     *  <p>Current version of the CustomObject.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the CustomObject was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the CustomObject was initially created.</p>
+     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the CustomObject was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the CustomObject was last updated.</p>
+     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>Namespace to group CustomObjects.</p>
-    */
+     *  <p>Namespace to group CustomObjects.</p>
+     */
     public String getContainer() {
         return this.container;
     }
 
     /**
-    *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
-    */
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
-    */
+     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     */
     public java.lang.Object getValue() {
         return this.value;
     }

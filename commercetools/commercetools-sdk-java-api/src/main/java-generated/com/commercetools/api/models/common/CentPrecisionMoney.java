@@ -13,17 +13,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Object that stores cent amounts in a specific currency.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Object that stores cent amounts in a specific currency.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CentPrecisionMoney centPrecisionMoney = CentPrecisionMoney.builder()
+           .centAmount(0.3)
+           .currencyCode("{currencyCode}")
+           .fractionDigits(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CentPrecisionMoneyImpl.class)
 public interface CentPrecisionMoney extends TypedMoney {
 
     String CENT_PRECISION = "centPrecision";
 
     /**
-    *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
-    */
+     *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
+     */
     @NotNull
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();

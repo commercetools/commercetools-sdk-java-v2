@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateImpl implements ShippingRate, ModelBase {
 
     private com.commercetools.api.models.common.TypedMoney price;
@@ -44,22 +44,22 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-    *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
-    */
+     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
+     */
     public com.commercetools.api.models.common.TypedMoney getFreeAbove() {
         return this.freeAbove;
     }
 
     /**
-    *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
-    */
+     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
+     */
     public Boolean getIsMatching() {
         return this.isMatching;
     }
 
     /**
-    *  <p>A list of shipping rate price tiers.</p>
-    */
+     *  <p>A list of shipping rate price tiers.</p>
+     */
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers() {
         return this.tiers;
     }

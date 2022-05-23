@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingMethodPagedQueryResponse shippingMethodPagedQueryResponse = ShippingMethodPagedQueryResponse.builder()
+           .count(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodPagedQueryResponseBuilder implements Builder<ShippingMethodPagedQueryResponse> {
 
     @Nullable
@@ -26,8 +37,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public ShippingMethodPagedQueryResponseBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
@@ -45,8 +56,8 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public ShippingMethodPagedQueryResponseBuilder offset(@Nullable final Long offset) {
         this.offset = offset;

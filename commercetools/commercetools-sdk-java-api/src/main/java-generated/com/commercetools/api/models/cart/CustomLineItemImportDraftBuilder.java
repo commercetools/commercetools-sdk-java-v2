@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomLineItemImportDraft customLineItemImportDraft = CustomLineItemImportDraft.builder()
+           .name(nameBuilder -> nameBuilder)
+           .quantity(0.3)
+           .money(moneyBuilder -> moneyBuilder)
+           .slug("{slug}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemImportDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -47,8 +60,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     */
 
     public CustomLineItemImportDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
@@ -56,8 +69,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-    *  <p>The cost to add to the cart. The amount can be negative.</p>
-    */
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     */
 
     public CustomLineItemImportDraftBuilder money(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -66,8 +79,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-    *  <p>The cost to add to the cart. The amount can be negative.</p>
-    */
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     */
 
     public CustomLineItemImportDraftBuilder money(final com.commercetools.api.models.common.Money money) {
         this.money = money;
@@ -143,8 +156,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public CustomLineItemImportDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -153,8 +166,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public CustomLineItemImportDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

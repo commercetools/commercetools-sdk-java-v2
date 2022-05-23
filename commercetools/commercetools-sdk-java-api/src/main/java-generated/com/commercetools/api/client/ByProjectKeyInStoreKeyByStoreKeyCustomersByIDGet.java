@@ -17,9 +17,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Returns a customer by its ID from a specific Store. It also considers customers that do not have the stores field. If the customer exists in the commercetools project but the stores field references different stores, this method returns a ResourceNotFound error.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Returns a customer by its ID from a specific Store. It also considers customers that do not have the stores field. If the customer exists in the commercetools project but the stores field references different stores, this method returns a ResourceNotFound error.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .inStoreKeyWithStoreKeyValue("{storeKey}")
+           .customers()
+           .withId("{ID}")
+           .get()
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet>,

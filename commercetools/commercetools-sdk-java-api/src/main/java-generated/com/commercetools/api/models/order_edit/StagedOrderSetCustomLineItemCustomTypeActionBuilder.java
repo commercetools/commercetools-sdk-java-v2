@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StagedOrderSetCustomLineItemCustomTypeAction stagedOrderSetCustomLineItemCustomTypeAction = StagedOrderSetCustomLineItemCustomTypeAction.builder()
+           .customLineItemId("{customLineItemId}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
         implements Builder<StagedOrderSetCustomLineItemCustomTypeAction> {
 
@@ -27,8 +37,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-    *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
-    */
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
@@ -37,8 +47,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-    *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
-    */
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -47,8 +57,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
@@ -57,8 +67,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

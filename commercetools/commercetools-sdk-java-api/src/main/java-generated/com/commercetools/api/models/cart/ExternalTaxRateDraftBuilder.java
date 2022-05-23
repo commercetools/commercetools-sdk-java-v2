@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ExternalTaxRateDraft externalTaxRateDraft = ExternalTaxRateDraft.builder()
+           .name("{name}")
+           .country("{country}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft> {
 
     private String name;
@@ -34,8 +45,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
-    */
+     *  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
+     */
 
     public ExternalTaxRateDraftBuilder amount(@Nullable final Double amount) {
         this.amount = amount;
@@ -43,8 +54,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public ExternalTaxRateDraftBuilder country(final String country) {
         this.country = country;
@@ -52,8 +63,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>The state in the country</p>
-    */
+     *  <p>The state in the country</p>
+     */
 
     public ExternalTaxRateDraftBuilder state(@Nullable final String state) {
         this.state = state;
@@ -61,8 +72,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
-    */
+     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     */
 
     public ExternalTaxRateDraftBuilder subRates(
             @Nullable final com.commercetools.api.models.tax_category.SubRate... subRates) {
@@ -71,8 +82,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
-    */
+     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     */
 
     public ExternalTaxRateDraftBuilder subRates(
             @Nullable final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
@@ -81,8 +92,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
-    */
+     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
             @Nullable final com.commercetools.api.models.tax_category.SubRate... subRates) {
@@ -94,8 +105,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
-    */
+     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
             Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
@@ -107,8 +118,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
-    */
+     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     */
 
     public ExternalTaxRateDraftBuilder withSubRates(
             Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
@@ -118,8 +129,8 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-    *  <p>The default value for <code>includedInPrice</code> is FALSE.</p>
-    */
+     *  <p>The default value for <code>includedInPrice</code> is FALSE.</p>
+     */
 
     public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;

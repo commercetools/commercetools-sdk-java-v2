@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PaymentMethodInfo paymentMethodInfo = PaymentMethodInfo.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     @Nullable
@@ -22,8 +31,8 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-    *  <p>The interface that handles the payment (usually a PSP). Cannot be changed once it has been set. The combination of Payment<code>interfaceId</code> and this field must be unique.</p>
-    */
+     *  <p>The interface that handles the payment (usually a PSP). Cannot be changed once it has been set. The combination of Payment<code>interfaceId</code> and this field must be unique.</p>
+     */
 
     public PaymentMethodInfoBuilder paymentInterface(@Nullable final String paymentInterface) {
         this.paymentInterface = paymentInterface;
@@ -31,8 +40,8 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-    *  <p>The payment method that is used, e.g. e.g. a conventional string representing Credit Card, Cash Advance etc.</p>
-    */
+     *  <p>The payment method that is used, e.g. e.g. a conventional string representing Credit Card, Cash Advance etc.</p>
+     */
 
     public PaymentMethodInfoBuilder method(@Nullable final String method) {
         this.method = method;
@@ -40,8 +49,8 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-    *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
-    */
+     *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
+     */
 
     public PaymentMethodInfoBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -50,8 +59,8 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-    *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
-    */
+     *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
+     */
 
     public PaymentMethodInfoBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

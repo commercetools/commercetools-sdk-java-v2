@@ -14,23 +14,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSlugChangedMessagePayload productSlugChangedMessagePayload = ProductSlugChangedMessagePayload.builder()
+           .slug(slugBuilder -> slugBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSlugChangedMessagePayloadImpl.class)
 public interface ProductSlugChangedMessagePayload extends MessagePayload {
 
     String PRODUCT_SLUG_CHANGED = "ProductSlugChanged";
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     @Valid
     @JsonProperty("oldSlug")
     public LocalizedString getOldSlug();

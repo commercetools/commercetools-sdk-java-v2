@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionImpl implements Extension, ModelBase {
 
     private String id;
@@ -63,71 +63,71 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Extension.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Extension.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the Extension.</p>
-    */
+     *  <p>Current version of the Extension.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the Extension was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the Extension was initially created.</p>
+     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the Extension was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the Extension was last updated.</p>
+     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Extension.</p>
-    */
+     *  <p>User-defined unique identifier of the Extension.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Information necessary for the commercetools Platform to call the Extension.</p>
-    */
+     *  <p>Information necessary for the commercetools Platform to call the Extension.</p>
+     */
     public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
         return this.destination;
     }
 
     /**
-    *  <p>Describes what triggers the Extension.</p>
-    */
+     *  <p>Describes what triggers the Extension.</p>
+     */
     public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
         return this.triggers;
     }
 
     /**
-    *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-    */
+     *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     */
     public Integer getTimeoutInMs() {
         return this.timeoutInMs;
     }

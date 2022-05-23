@@ -15,29 +15,40 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The data representation for a ProductType to be imported that is persisted as a ProductType in the Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>The data representation for a ProductType to be imported that is persisted as a ProductType in the Project.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductTypeImport productTypeImport = ProductTypeImport.builder()
+           .key("{key}")
+           .name("{name}")
+           .description("{description}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeImportImpl.class)
 public interface ProductTypeImport extends ImportResource {
 
     /**
-    *  <p>Maps to <code>ProductType.name</code>.</p>
-    */
+     *  <p>Maps to <code>ProductType.name</code>.</p>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>Maps to <code>ProductType.description</code>.</p>
-    */
+     *  <p>Maps to <code>ProductType.description</code>.</p>
+     */
     @NotNull
     @JsonProperty("description")
     public String getDescription();
 
     /**
-    *  <p>The <code>attributes</code> of ProductType.</p>
-    */
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     */
     @Valid
     @JsonProperty("attributes")
     public List<AttributeDefinition> getAttributes();

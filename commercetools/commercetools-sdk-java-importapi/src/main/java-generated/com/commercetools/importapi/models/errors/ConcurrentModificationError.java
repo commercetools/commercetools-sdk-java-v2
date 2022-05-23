@@ -13,31 +13,41 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The request conflicts with the current state of the involved resources. This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it. The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>The request conflicts with the current state of the involved resources. This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it. The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ConcurrentModificationError concurrentModificationError = ConcurrentModificationError.builder()
+           .message("{message}")
+           .currentVersion(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
 public interface ConcurrentModificationError extends ErrorObject {
 
     String CONCURRENT_MODIFICATION = "ConcurrentModification";
 
     /**
-    *  <p>The version specified in the failed request.</p>
-    */
+     *  <p>The version specified in the failed request.</p>
+     */
 
     @JsonProperty("specifiedVersion")
     public Long getSpecifiedVersion();
 
     /**
-    *  <p>The current version of the resource.</p>
-    */
+     *  <p>The current version of the resource.</p>
+     */
     @NotNull
     @JsonProperty("currentVersion")
     public Long getCurrentVersion();
 
     /**
-    *  <p>The resource in conflict.</p>
-    */
+     *  <p>The resource in conflict.</p>
+     */
 
     @JsonProperty("conflictedResource")
     public Object getConflictedResource();

@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StagedOrderSetParcelCustomFieldAction stagedOrderSetParcelCustomFieldAction = StagedOrderSetParcelCustomFieldAction.builder()
+           .parcelId("{parcelId}")
+           .name("{name}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<StagedOrderSetParcelCustomFieldAction> {
 
     private String parcelId;
@@ -24,8 +35,8 @@ public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<Sta
     }
 
     /**
-    *  <p>Name of the Custom Field.</p>
-    */
+     *  <p>Name of the Custom Field.</p>
+     */
 
     public StagedOrderSetParcelCustomFieldActionBuilder name(final String name) {
         this.name = name;
@@ -33,8 +44,8 @@ public class StagedOrderSetParcelCustomFieldActionBuilder implements Builder<Sta
     }
 
     /**
-    *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-    */
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     */
 
     public StagedOrderSetParcelCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;

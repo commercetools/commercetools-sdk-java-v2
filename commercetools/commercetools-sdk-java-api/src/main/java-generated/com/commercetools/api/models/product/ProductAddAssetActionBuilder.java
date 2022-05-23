@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductAddAssetAction productAddAssetAction = ProductAddAssetAction.builder()
+           .asset(assetBuilder -> assetBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetAction> {
 
     @Nullable
@@ -53,8 +63,8 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     }
 
     /**
-    *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
-    */
+     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+     */
 
     public ProductAddAssetActionBuilder position(@Nullable final Integer position) {
         this.position = position;

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListImpl implements ShoppingList, ModelBase {
 
     private String id;
@@ -91,15 +91,15 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the ShoppingList.</p>
-    */
+     *  <p>Platform-generated unique identifier of the ShoppingList.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the shopping list.</p>
-    */
+     *  <p>The current version of the shopping list.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
@@ -113,15 +113,15 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
@@ -135,8 +135,8 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
-    */
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     */
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
@@ -146,8 +146,8 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier of the ShoppingList.</p>
-    */
+     *  <p>User-defined unique identifier of the ShoppingList.</p>
+     */
     public String getKey() {
         return this.key;
     }
@@ -161,8 +161,8 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
-    */
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
@@ -172,8 +172,8 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
     public String getAnonymousId() {
         return this.anonymousId;
     }

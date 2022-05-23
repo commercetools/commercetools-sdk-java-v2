@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentImpl implements MyPayment, ModelBase {
 
     private String id;
@@ -55,8 +55,8 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the MyPayment.</p>
-    */
+     *  <p>Platform-generated unique identifier of the MyPayment.</p>
+     */
     public String getId() {
         return this.id;
     }
@@ -66,22 +66,22 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-    *  <p>A reference to the customer this payment belongs to.</p>
-    */
+     *  <p>A reference to the customer this payment belongs to.</p>
+     */
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
     /**
-    *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
     /**
-    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
-    */
+     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     */
     public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
         return this.amountPlanned;
     }
@@ -91,8 +91,8 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
-    */
+     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     */
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
         return this.transactions;
     }

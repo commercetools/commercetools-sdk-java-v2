@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   FieldDefinition fieldDefinition = FieldDefinition.builder()
+           .type(typeBuilder -> typeBuilder)
+           .name("{name}")
+           .label(labelBuilder -> labelBuilder)
+           .inputHint(TextInputHint.SINGLE_LINE)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     private com.commercetools.history.models.common.FieldType type;
@@ -30,8 +43,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-    *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
-    */
+     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     */
 
     public FieldDefinitionBuilder name(final String name) {
         this.name = name;

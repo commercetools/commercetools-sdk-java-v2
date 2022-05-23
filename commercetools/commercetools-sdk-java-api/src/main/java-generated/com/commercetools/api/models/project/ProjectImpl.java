@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectImpl implements Project, ModelBase {
 
     private Long version;
@@ -78,99 +78,99 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-    *  <p>Current version of the Project.</p>
-    */
+     *  <p>Current version of the Project.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Project.</p>
-    */
+     *  <p>User-defined unique identifier of the Project.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Name of the Project.</p>
-    */
+     *  <p>Name of the Project.</p>
+     */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Country code of the geographic location.</p>
-    */
+     *  <p>Country code of the geographic location.</p>
+     */
     public java.util.List<String> getCountries() {
         return this.countries;
     }
 
     /**
-    *  <p>Currency code of the country. A Project must have at least one currency.</p>
-    */
+     *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     */
     public java.util.List<String> getCurrencies() {
         return this.currencies;
     }
 
     /**
-    *  <p>Language of the country. A Project must have at least one language.</p>
-    */
+     *  <p>Language of the country. A Project must have at least one language.</p>
+     */
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
     /**
-    *  <p>Date and time (UTC) the Project was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the Project was initially created.</p>
+     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
-    */
+     *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
+     */
     public String getTrialUntil() {
         return this.trialUntil;
     }
 
     /**
-    *  <p>Holds the configuration for the Messages Query feature.</p>
-    */
+     *  <p>Holds the configuration for the Messages Query feature.</p>
+     */
     public com.commercetools.api.models.message.MessagesConfiguration getMessages() {
         return this.messages;
     }
 
     /**
-    *  <p>Holds the configuration for the Carts feature.</p>
-    */
+     *  <p>Holds the configuration for the Carts feature.</p>
+     */
     public com.commercetools.api.models.project.CartsConfiguration getCarts() {
         return this.carts;
     }
 
     /**
-    *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
-    */
+     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     */
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
         return this.shoppingLists;
     }
 
     /**
-    *  <p>Holds the configuration for the tiered shipping rates feature.</p>
-    */
+     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     */
     public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
         return this.shippingRateInputType;
     }
 
     /**
-    *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
-    */
+     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     */
     public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
         return this.externalOAuth;
     }
 
     /**
-    *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
-    */
+     *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     */
     public com.commercetools.api.models.project.SearchIndexingConfiguration getSearchIndexing() {
         return this.searchIndexing;
     }

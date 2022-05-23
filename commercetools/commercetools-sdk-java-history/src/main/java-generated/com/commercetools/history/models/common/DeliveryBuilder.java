@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Delivery delivery = Delivery.builder()
+           .id("{id}")
+           .createdAt("{createdAt}")
+           .plusItems(itemsBuilder -> itemsBuilder)
+           .plusParcels(parcelsBuilder -> parcelsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryBuilder implements Builder<Delivery> {
 
     private String id;
@@ -116,8 +129,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
 
     public DeliveryBuilder custom(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
@@ -126,8 +139,8 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
 
     public DeliveryBuilder custom(@Nullable final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;

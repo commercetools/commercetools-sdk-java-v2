@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartDraft cartDraft = CartDraft.builder()
+           .currency("{currency}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDraftBuilder implements Builder<CartDraft> {
 
     private String currency;
@@ -87,8 +97,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     private java.util.List<String> discountCodes;
 
     /**
-    *  <p>A three-digit currency code as per ISO 4217.</p>
-    */
+     *  <p>A three-digit currency code as per ISO 4217.</p>
+     */
 
     public CartDraftBuilder currency(final String currency) {
         this.currency = currency;
@@ -96,8 +106,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Cart.</p>
-    */
+     *  <p>User-defined unique identifier for the Cart.</p>
+     */
 
     public CartDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -105,8 +115,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Id of an existing Customer.</p>
-    */
+     *  <p>Id of an existing Customer.</p>
+     */
 
     public CartDraftBuilder customerId(@Nullable final String customerId) {
         this.customerId = customerId;
@@ -119,8 +129,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>
-    */
+     *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>
+     */
 
     public CartDraftBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
@@ -131,8 +141,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>
-    */
+     *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>
+     */
 
     public CartDraftBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
@@ -141,8 +151,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Assigns the new cart to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Assigns the new cart to an anonymous session (the customer has not signed up/in yet).</p>
+     */
 
     public CartDraftBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
@@ -150,8 +160,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
-    */
+     *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
+     */
 
     public CartDraftBuilder store(
             Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
@@ -160,8 +170,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
-    */
+     *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
+     */
 
     public CartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
@@ -169,8 +179,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public CartDraftBuilder country(@Nullable final String country) {
         this.country = country;
@@ -178,8 +188,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Default inventory mode is <code>None</code>.</p>
-    */
+     *  <p>Default inventory mode is <code>None</code>.</p>
+     */
 
     public CartDraftBuilder inventoryMode(
             @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
@@ -188,8 +198,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The default tax mode is <code>Platform</code>.</p>
-    */
+     *  <p>The default tax mode is <code>Platform</code>.</p>
+     */
 
     public CartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
@@ -197,8 +207,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The default tax rounding mode is <code>HalfEven</code>.</p>
-    */
+     *  <p>The default tax rounding mode is <code>HalfEven</code>.</p>
+     */
 
     public CartDraftBuilder taxRoundingMode(
             @Nullable final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
@@ -207,8 +217,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The default tax calculation mode is <code>LineItemLevel</code>.</p>
-    */
+     *  <p>The default tax calculation mode is <code>LineItemLevel</code>.</p>
+     */
 
     public CartDraftBuilder taxCalculationMode(
             @Nullable final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
@@ -292,8 +302,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
-    */
+     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
+     */
 
     public CartDraftBuilder shippingAddress(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
@@ -302,8 +312,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
-    */
+     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
+     */
 
     public CartDraftBuilder shippingAddress(
             @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {
@@ -338,8 +348,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
-    */
+     *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
+     */
 
     public CartDraftBuilder externalTaxRateForShippingMethod(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
@@ -350,8 +360,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
-    */
+     *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
+     */
 
     public CartDraftBuilder externalTaxRateForShippingMethod(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod) {
@@ -360,8 +370,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public CartDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -370,8 +380,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public CartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -379,8 +389,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Must be one of the languages supported for this project</p>
-    */
+     *  <p>Must be one of the languages supported for this project</p>
+     */
 
     public CartDraftBuilder locale(@Nullable final String locale) {
         this.locale = locale;
@@ -388,8 +398,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
-    */
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+     */
 
     public CartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
@@ -397,8 +407,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The default origin is <code>Customer</code>.</p>
-    */
+     *  <p>The default origin is <code>Customer</code>.</p>
+     */
 
     public CartDraftBuilder origin(@Nullable final com.commercetools.api.models.cart.CartOrigin origin) {
         this.origin = origin;
@@ -406,8 +416,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
-    */
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+     */
 
     public CartDraftBuilder shippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
@@ -416,8 +426,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
-    */
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+     */
 
     public CartDraftBuilder shippingRateInput(
             Function<com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInputDraft>> builder) {
@@ -427,8 +437,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
-    */
+     *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     */
 
     public CartDraftBuilder itemShippingAddresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
@@ -437,8 +447,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
-    */
+     *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     */
 
     public CartDraftBuilder itemShippingAddresses(
             @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses) {
@@ -447,8 +457,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
-    */
+     *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     */
 
     public CartDraftBuilder plusItemShippingAddresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
@@ -460,8 +470,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
-    */
+     *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     */
 
     public CartDraftBuilder plusItemShippingAddresses(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
@@ -474,8 +484,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
-    */
+     *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     */
 
     public CartDraftBuilder withItemShippingAddresses(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
@@ -486,8 +496,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The code of existing DiscountCodes.</p>
-    */
+     *  <p>The code of existing DiscountCodes.</p>
+     */
 
     public CartDraftBuilder discountCodes(@Nullable final String... discountCodes) {
         this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
@@ -495,8 +505,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The code of existing DiscountCodes.</p>
-    */
+     *  <p>The code of existing DiscountCodes.</p>
+     */
 
     public CartDraftBuilder discountCodes(@Nullable final java.util.List<String> discountCodes) {
         this.discountCodes = discountCodes;
@@ -504,8 +514,8 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-    *  <p>The code of existing DiscountCodes.</p>
-    */
+     *  <p>The code of existing DiscountCodes.</p>
+     */
 
     public CartDraftBuilder plusDiscountCodes(@Nullable final String... discountCodes) {
         if (this.discountCodes == null) {

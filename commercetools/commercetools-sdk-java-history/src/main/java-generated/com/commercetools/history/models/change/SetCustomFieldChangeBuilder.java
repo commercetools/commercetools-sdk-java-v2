@@ -6,7 +6,19 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetCustomFieldChange setCustomFieldChange = SetCustomFieldChange.builder()
+           .change("{change}")
+           .name("{name}")
+           .customTypeId("{customTypeId}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange> {
 
     private String change;
@@ -20,8 +32,8 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     private java.lang.Object previousValue;
 
     /**
-    *  <p>Update action for setting a custom field</p>
-    */
+     *  <p>Update action for setting a custom field</p>
+     */
 
     public SetCustomFieldChangeBuilder change(final String change) {
         this.change = change;
@@ -29,8 +41,8 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     }
 
     /**
-    *  <p>Custom field name</p>
-    */
+     *  <p>Custom field name</p>
+     */
 
     public SetCustomFieldChangeBuilder name(final String name) {
         this.name = name;

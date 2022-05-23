@@ -6,7 +6,18 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
+           .addressKey("{addressKey}")
+           .quantity(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     private String addressKey;
@@ -14,8 +25,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     private Integer quantity;
 
     /**
-    *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
-    */
+     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     */
 
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
         this.addressKey = addressKey;
@@ -23,8 +34,8 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-    *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
-    */
+     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     */
 
     public ItemShippingTargetBuilder quantity(final Integer quantity) {
         this.quantity = quantity;

@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderCustomerSetMessagePayload orderCustomerSetMessagePayload = OrderCustomerSetMessagePayload.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCustomerSetMessagePayload> {
 
     @Nullable
@@ -25,8 +34,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     /**
-    *  <p>Reference to a Customer.</p>
-    */
+     *  <p>Reference to a Customer.</p>
+     */
 
     public OrderCustomerSetMessagePayloadBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
@@ -35,8 +44,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-    *  <p>Reference to a Customer.</p>
-    */
+     *  <p>Reference to a Customer.</p>
+     */
 
     public OrderCustomerSetMessagePayloadBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -45,8 +54,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public OrderCustomerSetMessagePayloadBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -57,8 +66,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public OrderCustomerSetMessagePayloadBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
@@ -67,8 +76,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-    *  <p>Reference to a Customer.</p>
-    */
+     *  <p>Reference to a Customer.</p>
+     */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
@@ -77,8 +86,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-    *  <p>Reference to a Customer.</p>
-    */
+     *  <p>Reference to a Customer.</p>
+     */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
             @Nullable final com.commercetools.api.models.customer.CustomerReference oldCustomer) {
@@ -87,8 +96,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -99,8 +108,8 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {

@@ -15,7 +15,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetShippingMethodTaxRateChange setShippingMethodTaxRateChange = SetShippingMethodTaxRateChange.builder()
+           .change("{change}")
+           .taxMode(TaxMode.PLATFORM)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetShippingMethodTaxRateChangeImpl.class)
 public interface SetShippingMethodTaxRateChange extends Change {
 
@@ -26,8 +39,8 @@ public interface SetShippingMethodTaxRateChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
-    */
+     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
@@ -37,16 +50,16 @@ public interface SetShippingMethodTaxRateChange extends Change {
     public TaxMode getTaxMode();
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public TaxRate getNextValue();
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

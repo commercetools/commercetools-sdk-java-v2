@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase {
 
     private String type;
@@ -51,15 +51,15 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-    *  <p>Update action for setting a custom field</p>
-    */
+     *  <p>Update action for setting a custom field</p>
+     */
     public String getChange() {
         return this.change;
     }
 
     /**
-    *  <p>Custom field name</p>
-    */
+     *  <p>Custom field name</p>
+     */
     public String getName() {
         return this.name;
     }

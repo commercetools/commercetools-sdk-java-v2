@@ -14,23 +14,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreChangeProductSelectionAction storeChangeProductSelectionAction = StoreChangeProductSelectionAction.builder()
+           .productSelection(productSelectionBuilder -> productSelectionBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreChangeProductSelectionActionImpl.class)
 public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
 
     String CHANGE_PRODUCT_SELECTION_ACTIVE = "changeProductSelectionActive";
 
     /**
-    *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
-    */
+     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
     public ResourceIdentifier getProductSelection();
 
     /**
-    *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
-    */
+     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
+     */
 
     @JsonProperty("active")
     public Boolean getActive();

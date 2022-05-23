@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, ModelBase {
 
     private String shippingMethodName;
@@ -68,8 +68,8 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-    *  <p>The shipping rate used to determine the price.</p>
-    */
+     *  <p>The shipping rate used to determine the price.</p>
+     */
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
@@ -83,15 +83,15 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-    *  <p>Not set if custom shipping method is used.</p>
-    */
+     *  <p>Not set if custom shipping method is used.</p>
+     */
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
 
     /**
-    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
-    */
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     */
     public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
         return this.deliveries;
     }
@@ -101,8 +101,8 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-    *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
-    */
+     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     */
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {
         return this.shippingMethodState;
     }

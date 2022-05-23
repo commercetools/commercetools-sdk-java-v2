@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftLineItem, ModelBase {
 
     private String type;
@@ -49,8 +49,8 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
     }
 
     /**
-    *  <p>Reference to a Product.</p>
-    */
+     *  <p>Reference to a Product.</p>
+     */
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
@@ -60,15 +60,15 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
     }
 
     /**
-    *  <p>The channel must have the role <code>InventorySupply</code></p>
-    */
+     *  <p>The channel must have the role <code>InventorySupply</code></p>
+     */
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-    *  <p>The channel must have the role <code>ProductDistribution</code></p>
-    */
+     *  <p>The channel must have the role <code>ProductDistribution</code></p>
+     */
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {
         return this.distributionChannel;
     }

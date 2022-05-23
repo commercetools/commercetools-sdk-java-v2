@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>It is used to calculate the taxPortions field in a Cart or Order.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>It is used to calculate the taxPortions field in a Cart or Order.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubRateImpl implements SubRate, ModelBase {
 
     private String name;
@@ -34,8 +34,8 @@ public class SubRateImpl implements SubRate, ModelBase {
     }
 
     /**
-    *  <p>Name of the SubRate.</p>
-    */
+     *  <p>Name of the SubRate.</p>
+     */
     public String getName() {
         return this.name;
     }

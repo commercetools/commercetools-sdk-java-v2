@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The <code>Unique</code> Attribute Constraint was violated.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The <code>Unique</code> Attribute Constraint was violated.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValueError, ModelBase {
 
     private String code;
@@ -47,8 +47,8 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
     }
 
     /**
-    *  <p>The attribute in conflict.</p>
-    */
+     *  <p>The attribute in conflict.</p>
+     */
     public com.commercetools.importapi.models.productvariants.Attribute getAttribute() {
         return this.attribute;
     }

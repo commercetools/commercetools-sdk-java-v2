@@ -14,7 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingRate shippingRate = ShippingRate.builder()
+           .price(priceBuilder -> priceBuilder)
+           .plusTiers(tiersBuilder -> tiersBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingRateImpl.class)
 public interface ShippingRate {
 
@@ -24,22 +35,22 @@ public interface ShippingRate {
     public TypedMoney getPrice();
 
     /**
-    *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
-    */
+     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
+     */
     @Valid
     @JsonProperty("freeAbove")
     public TypedMoney getFreeAbove();
 
     /**
-    *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
-    */
+     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
+     */
 
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
     /**
-    *  <p>A list of shipping rate price tiers.</p>
-    */
+     *  <p>A list of shipping rate price tiers.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("tiers")

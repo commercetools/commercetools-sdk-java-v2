@@ -14,28 +14,40 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectCategoryRecommendation projectCategoryRecommendation = ProjectCategoryRecommendation.builder()
+           .category(categoryBuilder -> categoryBuilder)
+           .confidence(0.3)
+           .path("{path}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectCategoryRecommendationImpl.class)
 public interface ProjectCategoryRecommendation {
 
     /**
-    *  <p>A category that is recommended for a product.</p>
-    */
+     *  <p>A category that is recommended for a product.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("category")
     public CategoryReference getCategory();
 
     /**
-    *  <p>Probability score for the category recommendation.</p>
-    */
+     *  <p>Probability score for the category recommendation.</p>
+     */
     @NotNull
     @JsonProperty("confidence")
     public Double getConfidence();
 
     /**
-    *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
-    */
+     *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
+     */
     @NotNull
     @JsonProperty("path")
     public String getPath();

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountSetDescriptionActionImpl implements CartDiscountSetDescriptionAction, ModelBase {
 
     private String action;
@@ -37,8 +37,8 @@ public class CartDiscountSetDescriptionActionImpl implements CartDiscountSetDesc
     }
 
     /**
-    *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
-    */
+     *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }

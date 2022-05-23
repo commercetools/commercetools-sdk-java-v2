@@ -8,7 +8,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductDiscountSetValidFromAndUntilAction productDiscountSetValidFromAndUntilAction = ProductDiscountSetValidFromAndUntilAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountSetValidFromAndUntilActionBuilder
         implements Builder<ProductDiscountSetValidFromAndUntilAction> {
 
@@ -19,8 +28,8 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
     private java.time.ZonedDateTime validUntil;
 
     /**
-    *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
-    */
+     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     */
 
     public ProductDiscountSetValidFromAndUntilActionBuilder validFrom(
             @Nullable final java.time.ZonedDateTime validFrom) {
@@ -29,8 +38,8 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
     }
 
     /**
-    *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
-    */
+     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     */
 
     public ProductDiscountSetValidFromAndUntilActionBuilder validUntil(
             @Nullable final java.time.ZonedDateTime validUntil) {

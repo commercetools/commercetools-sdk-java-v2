@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValueLabelChange, ModelBase {
 
     private String type;
@@ -51,22 +51,22 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-    *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
-    */
+     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     */
     public String getChange() {
         return this.change;
     }
 
     /**
-    *  <p>The name of the attribute updated.</p>
-    */
+     *  <p>The name of the attribute updated.</p>
+     */
     public String getAttributeName() {
         return this.attributeName;
     }
 
     /**
-    *  <p>Key of the values that was updated</p>
-    */
+     *  <p>Key of the values that was updated</p>
+     */
     public String getValueKey() {
         return this.valueKey;
     }

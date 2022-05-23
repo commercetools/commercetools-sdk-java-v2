@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TaxCategory taxCategory = TaxCategory.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .name("{name}")
+           .plusRates(ratesBuilder -> ratesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     private String id;
@@ -37,8 +52,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     private String key;
 
     /**
-    *  <p>Platform-generated unique identifier of the TaxCategory.</p>
-    */
+     *  <p>Platform-generated unique identifier of the TaxCategory.</p>
+     */
 
     public TaxCategoryBuilder id(final String id) {
         this.id = id;
@@ -46,8 +61,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Current version of the TaxCategory.</p>
-    */
+     *  <p>Current version of the TaxCategory.</p>
+     */
 
     public TaxCategoryBuilder version(final Long version) {
         this.version = version;
@@ -55,8 +70,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
+     */
 
     public TaxCategoryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
@@ -64,8 +79,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
+     */
 
     public TaxCategoryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -73,8 +88,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public TaxCategoryBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -83,8 +98,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public TaxCategoryBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -93,8 +108,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public TaxCategoryBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -103,8 +118,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public TaxCategoryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -112,8 +127,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Name of the TaxCategory.</p>
-    */
+     *  <p>Name of the TaxCategory.</p>
+     */
 
     public TaxCategoryBuilder name(final String name) {
         this.name = name;
@@ -121,8 +136,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Description of the TaxCategory.</p>
-    */
+     *  <p>Description of the TaxCategory.</p>
+     */
 
     public TaxCategoryBuilder description(@Nullable final String description) {
         this.description = description;
@@ -130,8 +145,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
-    */
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
+     */
 
     public TaxCategoryBuilder rates(final com.commercetools.api.models.tax_category.TaxRate... rates) {
         this.rates = new ArrayList<>(Arrays.asList(rates));
@@ -139,8 +154,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
-    */
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
+     */
 
     public TaxCategoryBuilder rates(final java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates) {
         this.rates = rates;
@@ -148,8 +163,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
-    */
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
+     */
 
     public TaxCategoryBuilder plusRates(final com.commercetools.api.models.tax_category.TaxRate... rates) {
         if (this.rates == null) {
@@ -160,8 +175,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
-    */
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
+     */
 
     public TaxCategoryBuilder plusRates(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
@@ -173,8 +188,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
-    */
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
+     */
 
     public TaxCategoryBuilder withRates(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
@@ -184,8 +199,8 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the TaxCategory.</p>
-    */
+     *  <p>User-defined unique identifier of the TaxCategory.</p>
+     */
 
     public TaxCategoryBuilder key(@Nullable final String key) {
         this.key = key;

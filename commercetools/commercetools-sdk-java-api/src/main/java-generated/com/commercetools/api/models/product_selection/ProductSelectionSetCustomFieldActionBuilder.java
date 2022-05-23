@@ -8,7 +8,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSelectionSetCustomFieldAction productSelectionSetCustomFieldAction = ProductSelectionSetCustomFieldAction.builder()
+           .name("{name}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionSetCustomFieldActionBuilder implements Builder<ProductSelectionSetCustomFieldAction> {
 
     private String name;
@@ -17,8 +27,8 @@ public class ProductSelectionSetCustomFieldActionBuilder implements Builder<Prod
     private java.lang.Object value;
 
     /**
-    *  <p>Name of the Custom Field.</p>
-    */
+     *  <p>Name of the Custom Field.</p>
+     */
 
     public ProductSelectionSetCustomFieldActionBuilder name(final String name) {
         this.name = name;
@@ -26,8 +36,8 @@ public class ProductSelectionSetCustomFieldActionBuilder implements Builder<Prod
     }
 
     /**
-    *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-    */
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     */
 
     public ProductSelectionSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;

@@ -9,7 +9,25 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Project project = Project.builder()
+           .version(0.3)
+           .key("{key}")
+           .name("{name}")
+           .plusCountries(countriesBuilder -> countriesBuilder)
+           .plusCurrencies(currenciesBuilder -> currenciesBuilder)
+           .plusLanguages(languagesBuilder -> languagesBuilder)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .messages(messagesBuilder -> messagesBuilder)
+           .carts(cartsBuilder -> cartsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectBuilder implements Builder<Project> {
 
     private Long version;
@@ -46,8 +64,8 @@ public class ProjectBuilder implements Builder<Project> {
     private com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing;
 
     /**
-    *  <p>Current version of the Project.</p>
-    */
+     *  <p>Current version of the Project.</p>
+     */
 
     public ProjectBuilder version(final Long version) {
         this.version = version;
@@ -55,8 +73,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Project.</p>
-    */
+     *  <p>User-defined unique identifier of the Project.</p>
+     */
 
     public ProjectBuilder key(final String key) {
         this.key = key;
@@ -64,8 +82,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Name of the Project.</p>
-    */
+     *  <p>Name of the Project.</p>
+     */
 
     public ProjectBuilder name(final String name) {
         this.name = name;
@@ -73,8 +91,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Country code of the geographic location.</p>
-    */
+     *  <p>Country code of the geographic location.</p>
+     */
 
     public ProjectBuilder countries(final String... countries) {
         this.countries = new ArrayList<>(Arrays.asList(countries));
@@ -82,8 +100,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Country code of the geographic location.</p>
-    */
+     *  <p>Country code of the geographic location.</p>
+     */
 
     public ProjectBuilder countries(final java.util.List<String> countries) {
         this.countries = countries;
@@ -91,8 +109,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Country code of the geographic location.</p>
-    */
+     *  <p>Country code of the geographic location.</p>
+     */
 
     public ProjectBuilder plusCountries(final String... countries) {
         if (this.countries == null) {
@@ -103,8 +121,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Currency code of the country. A Project must have at least one currency.</p>
-    */
+     *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     */
 
     public ProjectBuilder currencies(final String... currencies) {
         this.currencies = new ArrayList<>(Arrays.asList(currencies));
@@ -112,8 +130,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Currency code of the country. A Project must have at least one currency.</p>
-    */
+     *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     */
 
     public ProjectBuilder currencies(final java.util.List<String> currencies) {
         this.currencies = currencies;
@@ -121,8 +139,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Currency code of the country. A Project must have at least one currency.</p>
-    */
+     *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     */
 
     public ProjectBuilder plusCurrencies(final String... currencies) {
         if (this.currencies == null) {
@@ -133,8 +151,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Language of the country. A Project must have at least one language.</p>
-    */
+     *  <p>Language of the country. A Project must have at least one language.</p>
+     */
 
     public ProjectBuilder languages(final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
@@ -142,8 +160,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Language of the country. A Project must have at least one language.</p>
-    */
+     *  <p>Language of the country. A Project must have at least one language.</p>
+     */
 
     public ProjectBuilder languages(final java.util.List<String> languages) {
         this.languages = languages;
@@ -151,8 +169,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Language of the country. A Project must have at least one language.</p>
-    */
+     *  <p>Language of the country. A Project must have at least one language.</p>
+     */
 
     public ProjectBuilder plusLanguages(final String... languages) {
         if (this.languages == null) {
@@ -163,8 +181,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Date and time (UTC) the Project was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the Project was initially created.</p>
+     */
 
     public ProjectBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
@@ -172,8 +190,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
-    */
+     *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
+     */
 
     public ProjectBuilder trialUntil(@Nullable final String trialUntil) {
         this.trialUntil = trialUntil;
@@ -181,8 +199,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Holds the configuration for the Messages Query feature.</p>
-    */
+     *  <p>Holds the configuration for the Messages Query feature.</p>
+     */
 
     public ProjectBuilder messages(
             Function<com.commercetools.api.models.message.MessagesConfigurationBuilder, com.commercetools.api.models.message.MessagesConfigurationBuilder> builder) {
@@ -191,8 +209,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Holds the configuration for the Messages Query feature.</p>
-    */
+     *  <p>Holds the configuration for the Messages Query feature.</p>
+     */
 
     public ProjectBuilder messages(final com.commercetools.api.models.message.MessagesConfiguration messages) {
         this.messages = messages;
@@ -200,8 +218,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Holds the configuration for the Carts feature.</p>
-    */
+     *  <p>Holds the configuration for the Carts feature.</p>
+     */
 
     public ProjectBuilder carts(
             Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder> builder) {
@@ -210,8 +228,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Holds the configuration for the Carts feature.</p>
-    */
+     *  <p>Holds the configuration for the Carts feature.</p>
+     */
 
     public ProjectBuilder carts(final com.commercetools.api.models.project.CartsConfiguration carts) {
         this.carts = carts;
@@ -219,8 +237,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
-    */
+     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     */
 
     public ProjectBuilder shoppingLists(
             Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
@@ -230,8 +248,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
-    */
+     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     */
 
     public ProjectBuilder shoppingLists(
             @Nullable final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
@@ -240,8 +258,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Holds the configuration for the tiered shipping rates feature.</p>
-    */
+     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     */
 
     public ProjectBuilder shippingRateInputType(
             @Nullable final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
@@ -250,8 +268,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Holds the configuration for the tiered shipping rates feature.</p>
-    */
+     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     */
 
     public ProjectBuilder shippingRateInputType(
             Function<com.commercetools.api.models.project.ShippingRateInputTypeBuilder, Builder<? extends com.commercetools.api.models.project.ShippingRateInputType>> builder) {
@@ -262,8 +280,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
-    */
+     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     */
 
     public ProjectBuilder externalOAuth(
             Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuthBuilder> builder) {
@@ -272,8 +290,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
-    */
+     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     */
 
     public ProjectBuilder externalOAuth(
             @Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
@@ -282,8 +300,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
-    */
+     *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     */
 
     public ProjectBuilder searchIndexing(
             Function<com.commercetools.api.models.project.SearchIndexingConfigurationBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationBuilder> builder) {
@@ -294,8 +312,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-    *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
-    */
+     *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     */
 
     public ProjectBuilder searchIndexing(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {

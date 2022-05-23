@@ -8,7 +8,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TrackingData trackingData = TrackingData.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TrackingDataBuilder implements Builder<TrackingData> {
 
     @Nullable
@@ -27,8 +36,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     private Boolean isReturn;
 
     /**
-    *  <p>The ID to track one parcel.</p>
-    */
+     *  <p>The ID to track one parcel.</p>
+     */
 
     public TrackingDataBuilder trackingId(@Nullable final String trackingId) {
         this.trackingId = trackingId;
@@ -36,8 +45,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-    *  <p>The carrier that delivers the parcel.</p>
-    */
+     *  <p>The carrier that delivers the parcel.</p>
+     */
 
     public TrackingDataBuilder carrier(@Nullable final String carrier) {
         this.carrier = carrier;
@@ -55,8 +64,8 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-    *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
-    */
+     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     */
 
     public TrackingDataBuilder isReturn(@Nullable final Boolean isReturn) {
         this.isReturn = isReturn;

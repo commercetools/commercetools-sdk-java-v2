@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MatchingPriceNotFoundError matchingPriceNotFoundError = MatchingPriceNotFoundError.builder()
+           .message("{message}")
+           .productId("{productId}")
+           .variantId(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceNotFoundError> {
 
     private String message;
@@ -71,8 +83,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -83,8 +95,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
@@ -93,8 +105,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-    *  <p>Reference to a Channel.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
 
     public MatchingPriceNotFoundErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -103,8 +115,8 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-    *  <p>Reference to a Channel.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
 
     public MatchingPriceNotFoundErrorBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference channel) {

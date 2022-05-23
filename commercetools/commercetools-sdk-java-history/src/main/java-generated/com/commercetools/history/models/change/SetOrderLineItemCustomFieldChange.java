@@ -14,7 +14,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetOrderLineItemCustomFieldChange setOrderLineItemCustomFieldChange = SetOrderLineItemCustomFieldChange.builder()
+           .change("{change}")
+           .customTypeId("{customTypeId}")
+           .name("{name}")
+           .variant("{variant}")
+           .lineItem(lineItemBuilder -> lineItemBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetOrderLineItemCustomFieldChangeImpl.class)
 public interface SetOrderLineItemCustomFieldChange extends Change {
 
@@ -25,8 +39,8 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for <code>setLineItemCustomField</code></p>
-    */
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

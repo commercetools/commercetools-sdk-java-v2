@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   UserProvidedIdentifiers userProvidedIdentifiers = UserProvidedIdentifiers.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdentifiers> {
 
     @Nullable
@@ -34,8 +43,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     private com.commercetools.api.models.message.ContainerAndKey containerAndKey;
 
     /**
-    *  <p>User-provided unique identifier of the resource.</p>
-    */
+     *  <p>User-provided unique identifier of the resource.</p>
+     */
 
     public UserProvidedIdentifiersBuilder key(@Nullable final String key) {
         this.key = key;
@@ -63,8 +72,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public UserProvidedIdentifiersBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -73,8 +82,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public UserProvidedIdentifiersBuilder slug(
             @Nullable final com.commercetools.api.models.common.LocalizedString slug) {
@@ -83,8 +92,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-    *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
-    */
+     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     */
 
     public UserProvidedIdentifiersBuilder containerAndKey(
             Function<com.commercetools.api.models.message.ContainerAndKeyBuilder, com.commercetools.api.models.message.ContainerAndKeyBuilder> builder) {
@@ -93,8 +102,8 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-    *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
-    */
+     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     */
 
     public UserProvidedIdentifiersBuilder containerAndKey(
             @Nullable final com.commercetools.api.models.message.ContainerAndKey containerAndKey) {

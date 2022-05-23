@@ -7,7 +7,19 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeSlugChange changeSlugChange = ChangeSlugChange.builder()
+           .change("{change}")
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
 
     private String change;
@@ -17,8 +29,8 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-    *  <p>Shape of the action for <code>changeSlug</code></p>
-    */
+     *  <p>Shape of the action for <code>changeSlug</code></p>
+     */
 
     public ChangeSlugChangeBuilder change(final String change) {
         this.change = change;

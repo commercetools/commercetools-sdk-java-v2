@@ -6,7 +6,18 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MissingImagesVariantLevel missingImagesVariantLevel = MissingImagesVariantLevel.builder()
+           .missingImages(0.3)
+           .total(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingImagesVariantLevelBuilder implements Builder<MissingImagesVariantLevel> {
 
     private Long missingImages;
@@ -14,8 +25,8 @@ public class MissingImagesVariantLevelBuilder implements Builder<MissingImagesVa
     private Long total;
 
     /**
-    *  <p>Number of product variants missing images.</p>
-    */
+     *  <p>Number of product variants missing images.</p>
+     */
 
     public MissingImagesVariantLevelBuilder missingImages(final Long missingImages) {
         this.missingImages = missingImages;
@@ -23,8 +34,8 @@ public class MissingImagesVariantLevelBuilder implements Builder<MissingImagesVa
     }
 
     /**
-    *  <p>Number of products scanned.</p>
-    */
+     *  <p>Number of products scanned.</p>
+     */
 
     public MissingImagesVariantLevelBuilder total(final Long total) {
         this.total = total;

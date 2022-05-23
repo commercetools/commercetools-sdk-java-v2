@@ -14,22 +14,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A price tier is selected instead of the default price when a certain quantity of the ProductVariant is added to a cart and ordered.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>A price tier is selected instead of the default price when a certain quantity of the ProductVariant is added to a cart and ordered.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PriceTier priceTier = PriceTier.builder()
+           .minimumQuantity(0.3)
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PriceTierImpl.class)
 public interface PriceTier {
 
     /**
-    *  <p>The minimum quantity this price tier is valid for.</p>
-    */
+     *  <p>The minimum quantity this price tier is valid for.</p>
+     */
     @NotNull
     @JsonProperty("minimumQuantity")
     public Long getMinimumQuantity();
 
     /**
-    *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
-    */
+     *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")

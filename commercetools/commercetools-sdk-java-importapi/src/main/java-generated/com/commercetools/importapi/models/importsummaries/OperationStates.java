@@ -12,48 +12,63 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OperationStates operationStates = OperationStates.builder()
+           .processing(1)
+           .validationFailed(1)
+           .unresolved(1)
+           .waitForMasterVariant(1)
+           .imported(1)
+           .rejected(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OperationStatesImpl.class)
 public interface OperationStates {
 
     /**
-    *  <p>The number of resources in the <code>processing</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>processing</code> state.</p>
+     */
     @NotNull
     @JsonProperty("processing")
     public Long getProcessing();
 
     /**
-    *  <p>The number of resources in the <code>validationFailed</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     */
     @NotNull
     @JsonProperty("validationFailed")
     public Long getValidationFailed();
 
     /**
-    *  <p>The number of resources in the <code>unresolved</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     */
     @NotNull
     @JsonProperty("unresolved")
     public Long getUnresolved();
 
     /**
-    *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     */
     @NotNull
     @JsonProperty("waitForMasterVariant")
     public Long getWaitForMasterVariant();
 
     /**
-    *  <p>The number of resources in the <code>imported</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>imported</code> state.</p>
+     */
     @NotNull
     @JsonProperty("imported")
     public Long getImported();
 
     /**
-    *  <p>The number of resources in the <code>rejected</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     */
     @NotNull
     @JsonProperty("rejected")
     public Long getRejected();

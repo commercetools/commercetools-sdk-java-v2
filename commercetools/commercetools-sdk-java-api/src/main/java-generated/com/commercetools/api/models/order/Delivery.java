@@ -16,13 +16,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Delivery delivery = Delivery.builder()
+           .id("{id}")
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .plusItems(itemsBuilder -> itemsBuilder)
+           .plusParcels(parcelsBuilder -> parcelsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryImpl.class)
 public interface Delivery extends com.commercetools.api.models.Customizable<Delivery> {
 
     /**
-    *  <p>Platform-generated unique identifier of the Delivery.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Delivery.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
@@ -32,8 +45,8 @@ public interface Delivery extends com.commercetools.api.models.Customizable<Deli
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
-    */
+     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("items")
@@ -49,8 +62,8 @@ public interface Delivery extends com.commercetools.api.models.Customizable<Deli
     public Address getAddress();
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();

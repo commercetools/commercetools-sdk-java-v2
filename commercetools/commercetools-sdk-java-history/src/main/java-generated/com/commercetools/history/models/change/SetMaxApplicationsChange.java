@@ -12,7 +12,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetMaxApplicationsChange setMaxApplicationsChange = SetMaxApplicationsChange.builder()
+           .change("{change}")
+           .previousValue(1)
+           .nextValue(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetMaxApplicationsChangeImpl.class)
 public interface SetMaxApplicationsChange extends Change {
 
@@ -23,8 +35,8 @@ public interface SetMaxApplicationsChange extends Change {
     public String getType();
 
     /**
-    *  <p>Shape of the action for <code>setMaxApplications</code></p>
-    */
+     *  <p>Shape of the action for <code>setMaxApplications</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

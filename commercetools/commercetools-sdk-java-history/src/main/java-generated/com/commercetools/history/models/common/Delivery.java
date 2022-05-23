@@ -13,7 +13,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Delivery delivery = Delivery.builder()
+           .id("{id}")
+           .createdAt("{createdAt}")
+           .plusItems(itemsBuilder -> itemsBuilder)
+           .plusParcels(parcelsBuilder -> parcelsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryImpl.class)
 public interface Delivery {
 
@@ -40,8 +53,8 @@ public interface Delivery {
     public Address getAddress();
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();

@@ -23,13 +23,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   LineItem lineItem = LineItem.builder()
+           .id("{id}")
+           .productId("{productId}")
+           .name(nameBuilder -> nameBuilder)
+           .productType(productTypeBuilder -> productTypeBuilder)
+           .variant(variantBuilder -> variantBuilder)
+           .price(priceBuilder -> priceBuilder)
+           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+           .quantity(0.3)
+           .plusState(stateBuilder -> stateBuilder)
+           .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+           .priceMode(LineItemPriceMode.PLATFORM)
+           .lineItemMode(LineItemMode.STANDARD)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemImpl.class)
 public interface LineItem extends com.commercetools.api.models.Customizable<LineItem> {
 
     /**
-    *  <p>Platform-generated unique identifier of the LineItem.</p>
-    */
+     *  <p>Platform-generated unique identifier of the LineItem.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
@@ -39,23 +60,23 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public String getProductId();
 
     /**
-    *  <p>User-defined unique identifier of the Product. Only present on Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On Order resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>
-    */
+     *  <p>User-defined unique identifier of the Product. Only present on Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On Order resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>
+     */
 
     @JsonProperty("productKey")
     public String getProductKey();
 
     /**
-    *  <p>The product name.</p>
-    */
+     *  <p>The product name.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
-    */
+     *  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
+     */
     @Valid
     @JsonProperty("productSlug")
     public LocalizedString getProductSlug();
@@ -66,46 +87,46 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public ProductTypeReference getProductType();
 
     /**
-    *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>
-    */
+     *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
 
     /**
-    *  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
-    */
+     *  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("price")
     public Price getPrice();
 
     /**
-    *  <p>Set once the <code>taxRate</code> is set.</p>
-    */
+     *  <p>Set once the <code>taxRate</code> is set.</p>
+     */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
 
     /**
-    *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
-    */
+     *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
     public TypedMoney getTotalPrice();
 
     /**
-    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-    *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
-    */
+     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
@@ -116,22 +137,22 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public List<ItemState> getState();
 
     /**
-    *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
-    */
+     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
     /**
-    *  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>
-    */
+     *  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>
+     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
     /**
-    *  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>
-    */
+     *  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>
+     */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelReference getDistributionChannel();
@@ -154,15 +175,15 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public CustomFields getCustom();
 
     /**
-    *  <p>Container for line item specific address(es).</p>
-    */
+     *  <p>Container for line item specific address(es).</p>
+     */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetails getShippingDetails();
 
     /**
-    *  <p>The date when the LineItem was last modified by one of the following actions setLineItemShippingDetails, addLineItem, removeLineItem, or changeLineItemQuantity. Optional only for backwards compatible reasons. When the LineItem is created lastModifiedAt is set to addedAt.</p>
-    */
+     *  <p>The date when the LineItem was last modified by one of the following actions setLineItemShippingDetails, addLineItem, removeLineItem, or changeLineItemQuantity. Optional only for backwards compatible reasons. When the LineItem is created lastModifiedAt is set to addedAt.</p>
+     */
 
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();

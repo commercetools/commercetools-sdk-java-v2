@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemImpl implements ReturnItem, ModelBase {
 
     private String id;
@@ -58,8 +58,8 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the ReturnItem.</p>
-    */
+     *  <p>Platform-generated unique identifier of the ReturnItem.</p>
+     */
     public String getId() {
         return this.id;
     }
@@ -85,8 +85,8 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-    *  <p>Custom Fields of this return item.</p>
-    */
+     *  <p>Custom Fields of this return item.</p>
+     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

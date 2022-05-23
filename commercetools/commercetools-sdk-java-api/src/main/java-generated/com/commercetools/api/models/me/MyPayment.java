@@ -18,14 +18,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MyPayment myPayment = MyPayment.builder()
+           .id("{id}")
+           .version(0.3)
+           .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
+           .paymentMethodInfo(paymentMethodInfoBuilder -> paymentMethodInfoBuilder)
+           .plusTransactions(transactionsBuilder -> transactionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyPaymentImpl.class)
 public interface MyPayment extends com.commercetools.api.models.DomainResource<MyPayment>,
         com.commercetools.api.models.Customizable<MyPayment> {
 
     /**
-    *  <p>Platform-generated unique identifier of the MyPayment.</p>
-    */
+     *  <p>Platform-generated unique identifier of the MyPayment.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
@@ -35,22 +49,22 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
     public Long getVersion();
 
     /**
-    *  <p>A reference to the customer this payment belongs to.</p>
-    */
+     *  <p>A reference to the customer this payment belongs to.</p>
+     */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-    *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
     /**
-    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
-    */
+     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("amountPlanned")
@@ -62,8 +76,8 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
     public PaymentMethodInfo getPaymentMethodInfo();
 
     /**
-    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
-    */
+     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("transactions")

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
 
     private java.time.ZonedDateTime addedAt;
@@ -44,15 +44,15 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-    *  <p>Defaults to the current date and time.</p>
-    */
+     *  <p>Defaults to the current date and time.</p>
+     */
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
@@ -66,8 +66,8 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-    *  <p>Defaults to <code>1</code>.</p>
-    */
+     *  <p>Defaults to <code>1</code>.</p>
+     */
     public Integer getQuantity() {
         return this.quantity;
     }

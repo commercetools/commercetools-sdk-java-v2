@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomFields customFields = CustomFields.builder()
+           .type(typeBuilder -> typeBuilder)
+           .fields(fieldsBuilder -> fieldsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     private com.commercetools.api.models.type.TypeReference type;
@@ -15,8 +26,8 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-    *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
-    */
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     */
 
     public CustomFieldsBuilder type(
             Function<com.commercetools.api.models.type.TypeReferenceBuilder, com.commercetools.api.models.type.TypeReferenceBuilder> builder) {
@@ -25,8 +36,8 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-    *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
-    */
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     */
 
     public CustomFieldsBuilder type(final com.commercetools.api.models.type.TypeReference type) {
         this.type = type;
@@ -34,8 +45,8 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-    *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
-    */
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     */
 
     public CustomFieldsBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
@@ -44,8 +55,8 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-    *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
-    */
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     */
 
     public CustomFieldsBuilder fields(final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;

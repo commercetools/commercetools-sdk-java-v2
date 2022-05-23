@@ -22,22 +22,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Review review = Review.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .includedInStatistics(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewImpl.class)
 public interface Review extends BaseResource, com.commercetools.api.models.DomainResource<Review>,
         com.commercetools.api.models.Referencable<Review>, com.commercetools.api.models.ResourceIdentifiable<Review>,
         com.commercetools.api.models.Customizable<Review> {
 
     /**
-    *  <p>Platform-generated unique identifier of the Review.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Review.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the review.</p>
-    */
+     *  <p>The current version of the review.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
@@ -51,22 +65,22 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier of the Review.</p>
-    */
+     *  <p>User-defined unique identifier of the Review.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
@@ -87,22 +101,22 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public String getText();
 
     /**
-    *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
-    */
+     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     */
 
     @JsonProperty("target")
     public Object getTarget();
 
     /**
-    *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
-    */
+     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     */
     @NotNull
     @JsonProperty("includedInStatistics")
     public Boolean getIncludedInStatistics();
 
     /**
-    *  <p>Number between -100 and 100 included.</p>
-    */
+     *  <p>Number between -100 and 100 included.</p>
+     */
 
     @JsonProperty("rating")
     public Integer getRating();
@@ -112,8 +126,8 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public StateReference getState();
 
     /**
-    *  <p>The customer who created the review.</p>
-    */
+     *  <p>The customer who created the review.</p>
+     */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();

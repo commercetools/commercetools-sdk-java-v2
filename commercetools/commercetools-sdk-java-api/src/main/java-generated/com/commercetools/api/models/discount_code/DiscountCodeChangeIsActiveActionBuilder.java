@@ -6,14 +6,24 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DiscountCodeChangeIsActiveAction discountCodeChangeIsActiveAction = DiscountCodeChangeIsActiveAction.builder()
+           .isActive(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeChangeIsActiveActionBuilder implements Builder<DiscountCodeChangeIsActiveAction> {
 
     private Boolean isActive;
 
     /**
-    *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
-    */
+     *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
+     */
 
     public DiscountCodeChangeIsActiveActionBuilder isActive(final Boolean isActive) {
         this.isActive = isActive;

@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductImport productImport = ProductImport.builder()
+           .key("{key}")
+           .name(nameBuilder -> nameBuilder)
+           .productType(productTypeBuilder -> productTypeBuilder)
+           .slug(slugBuilder -> slugBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImportBuilder implements Builder<ProductImport> {
 
     private String key;
@@ -53,8 +66,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.name</code>.</p>
-    */
+     *  <p>Maps to <code>Product.name</code>.</p>
+     */
 
     public ProductImportBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -63,8 +76,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.name</code>.</p>
-    */
+     *  <p>Maps to <code>Product.name</code>.</p>
+     */
 
     public ProductImportBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
@@ -72,8 +85,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
-    */
+     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     */
 
     public ProductImportBuilder productType(
             Function<com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder> builder) {
@@ -83,8 +96,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
-    */
+     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     */
 
     public ProductImportBuilder productType(
             final com.commercetools.importapi.models.common.ProductTypeKeyReference productType) {
@@ -93,8 +106,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
-    */
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     */
 
     public ProductImportBuilder slug(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -103,8 +116,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
-    */
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     */
 
     public ProductImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
         this.slug = slug;
@@ -112,8 +125,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.description</code>.</p>
-    */
+     *  <p>Maps to <code>Product.description</code>.</p>
+     */
 
     public ProductImportBuilder description(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -122,8 +135,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.description</code>.</p>
-    */
+     *  <p>Maps to <code>Product.description</code>.</p>
+     */
 
     public ProductImportBuilder description(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString description) {
@@ -132,8 +145,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
-    */
+     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     */
 
     public ProductImportBuilder categories(
             @Nullable final com.commercetools.importapi.models.common.CategoryKeyReference... categories) {
@@ -142,8 +155,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
-    */
+     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     */
 
     public ProductImportBuilder categories(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
@@ -152,8 +165,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
-    */
+     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     */
 
     public ProductImportBuilder plusCategories(
             @Nullable final com.commercetools.importapi.models.common.CategoryKeyReference... categories) {
@@ -165,8 +178,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
-    */
+     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     */
 
     public ProductImportBuilder plusCategories(
             Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
@@ -179,8 +192,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
-    */
+     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     */
 
     public ProductImportBuilder withCategories(
             Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
@@ -191,13 +204,13 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public ProductImportBuilder metaTitle(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -206,13 +219,13 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public ProductImportBuilder metaTitle(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaTitle) {
@@ -221,13 +234,13 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public ProductImportBuilder metaDescription(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -237,13 +250,13 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public ProductImportBuilder metaDescription(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaDescription) {
@@ -252,13 +265,13 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public ProductImportBuilder metaKeywords(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -268,13 +281,13 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public ProductImportBuilder metaKeywords(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaKeywords) {
@@ -283,8 +296,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
-    */
+     *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     */
 
     public ProductImportBuilder taxCategory(
             Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
@@ -294,8 +307,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
-    */
+     *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     */
 
     public ProductImportBuilder taxCategory(
             @Nullable final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory) {
@@ -304,24 +317,24 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-    *  <pre><code>{
-    *    "en": [
-    *      { "text": "Multi tool" },
-    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-    *    ],
-    *    "de": [
-    *      {
-    *        "text": "Schweizer Messer",
-    *        "suggestTokenizer": {
-    *          "type": "custom",
-    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-    *        }
-    *      }
-    *    ]
-    *  }
-    *  </code></pre>
-    */
+     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+     *  <pre><code>{
+     *    "en": [
+     *      { "text": "Multi tool" },
+     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+     *    ],
+     *    "de": [
+     *      {
+     *        "text": "Schweizer Messer",
+     *        "suggestTokenizer": {
+     *          "type": "custom",
+     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+     *        }
+     *      }
+     *    ]
+     *  }
+     *  </code></pre>
+     */
 
     public ProductImportBuilder searchKeywords(
             Function<com.commercetools.importapi.models.products.SearchKeywordsBuilder, com.commercetools.importapi.models.products.SearchKeywordsBuilder> builder) {
@@ -331,24 +344,24 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-    *  <pre><code>{
-    *    "en": [
-    *      { "text": "Multi tool" },
-    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-    *    ],
-    *    "de": [
-    *      {
-    *        "text": "Schweizer Messer",
-    *        "suggestTokenizer": {
-    *          "type": "custom",
-    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-    *        }
-    *      }
-    *    ]
-    *  }
-    *  </code></pre>
-    */
+     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+     *  <pre><code>{
+     *    "en": [
+     *      { "text": "Multi tool" },
+     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+     *    ],
+     *    "de": [
+     *      {
+     *        "text": "Schweizer Messer",
+     *        "suggestTokenizer": {
+     *          "type": "custom",
+     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+     *        }
+     *      }
+     *    ]
+     *  }
+     *  </code></pre>
+     */
 
     public ProductImportBuilder searchKeywords(
             @Nullable final com.commercetools.importapi.models.products.SearchKeywords searchKeywords) {
@@ -357,8 +370,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
-    */
+     *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     */
 
     public ProductImportBuilder state(
             Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
@@ -367,8 +380,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
-    */
+     *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     */
 
     public ProductImportBuilder state(
             @Nullable final com.commercetools.importapi.models.common.StateKeyReference state) {
@@ -377,8 +390,8 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-    *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
-    */
+     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     */
 
     public ProductImportBuilder publish(@Nullable final Boolean publish) {
         this.publish = publish;

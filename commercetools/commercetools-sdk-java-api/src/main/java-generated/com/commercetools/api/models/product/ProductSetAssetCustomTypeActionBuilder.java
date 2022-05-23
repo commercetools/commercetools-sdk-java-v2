@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSetAssetCustomTypeAction productSetAssetCustomTypeAction = ProductSetAssetCustomTypeAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSetAssetCustomTypeAction> {
 
     @Nullable
@@ -59,8 +68,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-    *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
-    */
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     */
 
     public ProductSetAssetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
@@ -69,8 +78,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-    *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
-    */
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     */
 
     public ProductSetAssetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -79,8 +88,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the Asset.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     */
 
     public ProductSetAssetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
@@ -89,8 +98,8 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the Asset.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     */
 
     public ProductSetAssetCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

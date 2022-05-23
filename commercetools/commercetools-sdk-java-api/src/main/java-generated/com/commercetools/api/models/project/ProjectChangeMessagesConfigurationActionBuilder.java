@@ -7,15 +7,25 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectChangeMessagesConfigurationAction projectChangeMessagesConfigurationAction = ProjectChangeMessagesConfigurationAction.builder()
+           .messagesConfiguration(messagesConfigurationBuilder -> messagesConfigurationBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeMessagesConfigurationActionBuilder
         implements Builder<ProjectChangeMessagesConfigurationAction> {
 
     private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;
 
     /**
-    *  <p>Configuration for the Messages Query feature.</p>
-    */
+     *  <p>Configuration for the Messages Query feature.</p>
+     */
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
             Function<com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraftBuilder> builder) {
@@ -26,8 +36,8 @@ public class ProjectChangeMessagesConfigurationActionBuilder
     }
 
     /**
-    *  <p>Configuration for the Messages Query feature.</p>
-    */
+     *  <p>Configuration for the Messages Query feature.</p>
+     */
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
             final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {

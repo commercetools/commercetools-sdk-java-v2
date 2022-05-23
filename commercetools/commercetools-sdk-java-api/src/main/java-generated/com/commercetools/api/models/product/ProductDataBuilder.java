@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductData productData = ProductData.builder()
+           .name(nameBuilder -> nameBuilder)
+           .plusCategories(categoriesBuilder -> categoriesBuilder)
+           .slug(slugBuilder -> slugBuilder)
+           .masterVariant(masterVariantBuilder -> masterVariantBuilder)
+           .plusVariants(variantsBuilder -> variantsBuilder)
+           .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDataBuilder implements Builder<ProductData> {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -40,8 +55,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -50,8 +65,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -108,8 +123,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -118,8 +133,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -128,8 +143,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -138,8 +153,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
@@ -147,8 +162,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaTitle(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -157,8 +172,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
@@ -166,8 +181,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -176,8 +191,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
@@ -186,8 +201,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaKeywords(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -196,8 +211,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaKeywords(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayload, ModelBase {
 
     private String type;
@@ -56,8 +56,8 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -79,8 +79,8 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

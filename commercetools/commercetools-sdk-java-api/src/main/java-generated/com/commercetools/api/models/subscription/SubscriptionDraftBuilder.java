@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SubscriptionDraft subscriptionDraft = SubscriptionDraft.builder()
+           .destination(destinationBuilder -> destinationBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
 
     @Nullable
@@ -78,8 +88,8 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Subscription.</p>
-    */
+     *  <p>User-defined unique identifier for the Subscription.</p>
+     */
 
     public SubscriptionDraftBuilder key(@Nullable final String key) {
         this.key = key;

@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A Record captures the differences in a resource between one version and the next. (Recall that the version number is not always incremented by one; see Optimistic Concurrency Control.)</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A Record captures the differences in a resource between one version and the next. (Recall that the version number is not always incremented by one; see Optimistic Concurrency Control.)</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordImpl implements Record, ModelBase {
 
     private Integer version;
@@ -70,78 +70,78 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-    *  <p>Version of the resource after the change.</p>
-    */
+     *  <p>Version of the resource after the change.</p>
+     */
     public Integer getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Version of the resource before the change.</p>
-    */
+     *  <p>Version of the resource before the change.</p>
+     */
     public Integer getPreviousVersion() {
         return this.previousVersion;
     }
 
     /**
-    *  <p>Type of the change (creation, update or deletion).</p>
-    */
+     *  <p>Type of the change (creation, update or deletion).</p>
+     */
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Information about the user or the API client who performed the change.</p>
-    */
+     *  <p>Information about the user or the API client who performed the change.</p>
+     */
     public com.commercetools.history.models.change_history.ModifiedBy getModifiedBy() {
         return this.modifiedBy;
     }
 
     /**
-    *  <p>Date and time when the change was made.</p>
-    */
+     *  <p>Date and time when the change was made.</p>
+     */
     public String getModifiedAt() {
         return this.modifiedAt;
     }
 
     /**
-    *  <p>Information that describes the resource after the change.</p>
-    */
+     *  <p>Information that describes the resource after the change.</p>
+     */
     public com.commercetools.history.models.label.Label getLabel() {
         return this.label;
     }
 
     /**
-    *  <p>Information that describes the resource before the change.</p>
-    */
+     *  <p>Information that describes the resource before the change.</p>
+     */
     public com.commercetools.history.models.label.Label getPreviousLabel() {
         return this.previousLabel;
     }
 
     /**
-    *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
-    */
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     */
     public java.util.List<com.commercetools.history.models.change.Change> getChanges() {
         return this.changes;
     }
 
     /**
-    *  <p>Reference to the changed resource.</p>
-    */
+     *  <p>Reference to the changed resource.</p>
+     */
     public com.commercetools.history.models.common.Reference getResource() {
         return this.resource;
     }
 
     /**
-    *  <p>References to the Stores attached to the Change.</p>
-    */
+     *  <p>References to the Stores attached to the Change.</p>
+     */
     public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
         return this.stores;
     }
 
     /**
-    *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
-    */
+     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     */
     public Boolean getWithoutChanges() {
         return this.withoutChanges;
     }

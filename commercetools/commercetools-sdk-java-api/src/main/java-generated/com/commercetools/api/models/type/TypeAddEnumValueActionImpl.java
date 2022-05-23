@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Adds a value to an EnumType. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Adds a value to an EnumType. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, ModelBase {
 
     private String action;
@@ -43,15 +43,15 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
     }
 
     /**
-    *  <p><code>name</code> of the Field Definition to update.</p>
-    */
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     */
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldEnumValue getValue() {
         return this.value;
     }

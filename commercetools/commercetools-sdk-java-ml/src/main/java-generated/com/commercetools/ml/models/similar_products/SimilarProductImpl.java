@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>One part of a SimilarProductPair. Refers to a specific ProductVariant.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>One part of a SimilarProductPair. Refers to a specific ProductVariant.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductImpl implements SimilarProduct, ModelBase {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -39,22 +39,22 @@ public class SimilarProductImpl implements SimilarProduct, ModelBase {
     }
 
     /**
-    *  <p>Reference to Product</p>
-    */
+     *  <p>Reference to Product</p>
+     */
     public com.commercetools.ml.models.common.ProductReference getProduct() {
         return this.product;
     }
 
     /**
-    *  <p>ID of the ProductVariant that was compared.</p>
-    */
+     *  <p>ID of the ProductVariant that was compared.</p>
+     */
     public Long getVariantId() {
         return this.variantId;
     }
 
     /**
-    *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
-    */
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     */
     public com.commercetools.ml.models.similar_products.SimilarProductMeta getMeta() {
         return this.meta;
     }

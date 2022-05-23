@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReviewPagedQueryResponse reviewPagedQueryResponse = ReviewPagedQueryResponse.builder()
+           .limit(0.3)
+           .count(0.3)
+           .offset(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQueryResponse> {
 
     private Long limit;
@@ -24,8 +37,8 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     private java.util.List<com.commercetools.api.models.review.Review> results;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public ReviewPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
@@ -43,8 +56,8 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public ReviewPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodTaxAmountChangeValueImpl implements ShippingMethodTaxAmountChangeValue, ModelBase {
 
     private com.commercetools.history.models.common.TaxedPrice taxedPrice;
@@ -37,8 +37,8 @@ public class ShippingMethodTaxAmountChangeValueImpl implements ShippingMethodTax
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
     public com.commercetools.history.models.common.TaxRate getTaxRate() {
         return this.taxRate;
     }

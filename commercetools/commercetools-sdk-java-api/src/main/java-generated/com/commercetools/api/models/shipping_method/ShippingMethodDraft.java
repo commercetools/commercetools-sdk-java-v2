@@ -16,13 +16,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingMethodDraft shippingMethodDraft = ShippingMethodDraft.builder()
+           .name("{name}")
+           .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
+           .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
+           .isDefault(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodDraftImpl.class)
 public interface ShippingMethodDraft extends com.commercetools.api.models.CustomizableDraft<ShippingMethodDraft> {
 
     /**
-    *  <p>User-defined unique identifier for the ShippingMethod.</p>
-    */
+     *  <p>User-defined unique identifier for the ShippingMethod.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
@@ -53,15 +66,15 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public List<ZoneRateDraft> getZoneRates();
 
     /**
-    *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
-    */
+     *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
+     */
     @NotNull
     @JsonProperty("isDefault")
     public Boolean getIsDefault();
 
     /**
-    *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
-    */
+     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     */
 
     @JsonProperty("predicate")
     public String getPredicate();

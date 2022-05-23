@@ -9,7 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductProjection productProjection = ProductProjection.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .productType(productTypeBuilder -> productTypeBuilder)
+           .name(nameBuilder -> nameBuilder)
+           .slug(slugBuilder -> slugBuilder)
+           .plusCategories(categoriesBuilder -> categoriesBuilder)
+           .masterVariant(masterVariantBuilder -> masterVariantBuilder)
+           .plusVariants(variantsBuilder -> variantsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     private String id;
@@ -69,8 +88,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
 
     /**
-    *  <p>The unique ID of the Product.</p>
-    */
+     *  <p>The unique ID of the Product.</p>
+     */
 
     public ProductProjectionBuilder id(final String id) {
         this.id = id;
@@ -78,8 +97,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>The current version of the Product.</p>
-    */
+     *  <p>The current version of the Product.</p>
+     */
 
     public ProductProjectionBuilder version(final Long version) {
         this.version = version;
@@ -97,8 +116,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>User-specific unique identifier of the Product.</p>
-    */
+     *  <p>User-specific unique identifier of the Product.</p>
+     */
 
     public ProductProjectionBuilder key(@Nullable final String key) {
         this.key = key;
@@ -153,8 +172,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>References to categories the product is in.</p>
-    */
+     *  <p>References to categories the product is in.</p>
+     */
 
     public ProductProjectionBuilder categories(
             final com.commercetools.api.models.category.CategoryReference... categories) {
@@ -163,8 +182,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>References to categories the product is in.</p>
-    */
+     *  <p>References to categories the product is in.</p>
+     */
 
     public ProductProjectionBuilder categories(
             final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
@@ -173,8 +192,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>References to categories the product is in.</p>
-    */
+     *  <p>References to categories the product is in.</p>
+     */
 
     public ProductProjectionBuilder plusCategories(
             final com.commercetools.api.models.category.CategoryReference... categories) {
@@ -186,8 +205,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>References to categories the product is in.</p>
-    */
+     *  <p>References to categories the product is in.</p>
+     */
 
     public ProductProjectionBuilder plusCategories(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
@@ -199,8 +218,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>References to categories the product is in.</p>
-    */
+     *  <p>References to categories the product is in.</p>
+     */
 
     public ProductProjectionBuilder withCategories(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
@@ -353,8 +372,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>Statistics about the review ratings taken into account for this product.</p>
-    */
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     */
 
     public ProductProjectionBuilder reviewRatingStatistics(
             Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatisticsBuilder> builder) {
@@ -365,8 +384,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-    *  <p>Statistics about the review ratings taken into account for this product.</p>
-    */
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     */
 
     public ProductProjectionBuilder reviewRatingStatistics(
             @Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {

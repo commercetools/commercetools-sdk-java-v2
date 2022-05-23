@@ -17,13 +17,31 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Subscription subscription = Subscription.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .plusChanges(changesBuilder -> changesBuilder)
+           .destination(destinationBuilder -> destinationBuilder)
+           .plusMessages(messagesBuilder -> messagesBuilder)
+           .format(formatBuilder -> formatBuilder)
+           .status(SubscriptionHealthStatus.HEALTHY)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionImpl.class)
 public interface Subscription extends BaseResource, com.commercetools.api.models.DomainResource<Subscription> {
 
     /**
-    *  <p>Platform-generated unique identifier of the Subscription.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Subscription.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
@@ -41,15 +59,15 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
@@ -65,8 +83,8 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public Destination getDestination();
 
     /**
-    *  <p>User-defined unique identifier of the Subscription.</p>
-    */
+     *  <p>User-defined unique identifier of the Subscription.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

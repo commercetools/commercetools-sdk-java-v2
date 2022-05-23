@@ -11,9 +11,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The resources in the request are not in the valid state for the operation. The client application should validate the constraints described in the error message before sending the request again.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>The resources in the request are not in the valid state for the operation. The client application should validate the constraints described in the error message before sending the request again.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InvalidOperation invalidOperation = InvalidOperation.builder()
+           .message("{message}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidOperationImpl.class)
 public interface InvalidOperation extends ErrorObject {
 

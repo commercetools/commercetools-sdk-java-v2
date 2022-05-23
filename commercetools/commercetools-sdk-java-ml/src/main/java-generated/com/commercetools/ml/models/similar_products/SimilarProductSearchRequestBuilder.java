@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SimilarProductSearchRequest similarProductSearchRequest = SimilarProductSearchRequest.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductSearchRequestBuilder implements Builder<SimilarProductSearchRequest> {
 
     @Nullable
@@ -37,8 +46,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     private Double confidenceMax;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public SimilarProductSearchRequestBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
@@ -46,8 +55,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public SimilarProductSearchRequestBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
@@ -55,8 +64,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p>language tag used to prioritize language for text comparisons.</p>
-    */
+     *  <p>language tag used to prioritize language for text comparisons.</p>
+     */
 
     public SimilarProductSearchRequestBuilder language(@Nullable final String language) {
         this.language = language;
@@ -64,8 +73,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
-    */
+     *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
+     */
 
     public SimilarProductSearchRequestBuilder currencyCode(@Nullable final String currencyCode) {
         this.currencyCode = currencyCode;
@@ -73,8 +82,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
-    */
+     *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     */
 
     public SimilarProductSearchRequestBuilder similarityMeasures(
             Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder> builder) {
@@ -85,8 +94,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
-    */
+     *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     */
 
     public SimilarProductSearchRequestBuilder similarityMeasures(
             @Nullable final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
@@ -95,8 +104,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p>Array of length 2 of ProductSetSelector</p>
-    */
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     */
 
     public SimilarProductSearchRequestBuilder productSetSelectors(
             @Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector... productSetSelectors) {
@@ -105,8 +114,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p>Array of length 2 of ProductSetSelector</p>
-    */
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     */
 
     public SimilarProductSearchRequestBuilder productSetSelectors(
             @Nullable final java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors) {
@@ -115,8 +124,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p>Array of length 2 of ProductSetSelector</p>
-    */
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     */
 
     public SimilarProductSearchRequestBuilder plusProductSetSelectors(
             @Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector... productSetSelectors) {
@@ -128,8 +137,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p>Array of length 2 of ProductSetSelector</p>
-    */
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     */
 
     public SimilarProductSearchRequestBuilder plusProductSetSelectors(
             Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
@@ -142,8 +151,8 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-    *  <p>Array of length 2 of ProductSetSelector</p>
-    */
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     */
 
     public SimilarProductSearchRequestBuilder withProductSetSelectors(
             Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {

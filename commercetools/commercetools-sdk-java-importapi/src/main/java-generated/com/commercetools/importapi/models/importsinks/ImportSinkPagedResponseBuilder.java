@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportSinkPagedResponse importSinkPagedResponse = ImportSinkPagedResponse.builder()
+           .limit(1)
+           .offset(1)
+           .count(1)
+           .total(1)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedResponse> {
 
     private Integer limit;
@@ -21,8 +35,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     private java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public ImportSinkPagedResponseBuilder limit(final Integer limit) {
         this.limit = limit;
@@ -30,8 +44,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public ImportSinkPagedResponseBuilder offset(final Long offset) {
         this.offset = offset;
@@ -39,8 +53,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-    *  <p>The actual number of results returned.</p>
-    */
+     *  <p>The actual number of results returned.</p>
+     */
 
     public ImportSinkPagedResponseBuilder count(final Long count) {
         this.count = count;
@@ -48,8 +62,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-    *  <p>The total number of results matching the query.</p>
-    */
+     *  <p>The total number of results matching the query.</p>
+     */
 
     public ImportSinkPagedResponseBuilder total(final Long total) {
         this.total = total;
@@ -57,8 +71,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-    *  <p>The array of Import Sinks matching the query.</p>
-    */
+     *  <p>The array of Import Sinks matching the query.</p>
+     */
 
     public ImportSinkPagedResponseBuilder results(
             final com.commercetools.importapi.models.importsinks.ImportSink... results) {
@@ -67,8 +81,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-    *  <p>The array of Import Sinks matching the query.</p>
-    */
+     *  <p>The array of Import Sinks matching the query.</p>
+     */
 
     public ImportSinkPagedResponseBuilder results(
             final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results) {
@@ -77,8 +91,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-    *  <p>The array of Import Sinks matching the query.</p>
-    */
+     *  <p>The array of Import Sinks matching the query.</p>
+     */
 
     public ImportSinkPagedResponseBuilder plusResults(
             final com.commercetools.importapi.models.importsinks.ImportSink... results) {
@@ -90,8 +104,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-    *  <p>The array of Import Sinks matching the query.</p>
-    */
+     *  <p>The array of Import Sinks matching the query.</p>
+     */
 
     public ImportSinkPagedResponseBuilder plusResults(
             Function<com.commercetools.importapi.models.importsinks.ImportSinkBuilder, com.commercetools.importapi.models.importsinks.ImportSinkBuilder> builder) {
@@ -103,8 +117,8 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-    *  <p>The array of Import Sinks matching the query.</p>
-    */
+     *  <p>The array of Import Sinks matching the query.</p>
+     */
 
     public ImportSinkPagedResponseBuilder withResults(
             Function<com.commercetools.importapi.models.importsinks.ImportSinkBuilder, com.commercetools.importapi.models.importsinks.ImportSinkBuilder> builder) {

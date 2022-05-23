@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PaymentSetCustomTypeAction paymentSetCustomTypeAction = PaymentSetCustomTypeAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCustomTypeAction> {
 
     @Nullable
@@ -19,8 +28,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-    *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
-    */
+     *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     */
 
     public PaymentSetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
@@ -29,8 +38,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-    *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
-    */
+     *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     */
 
     public PaymentSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -39,8 +48,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the Payment.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the Payment.</p>
+     */
 
     public PaymentSetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
@@ -49,8 +58,8 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the Payment.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the Payment.</p>
+     */
 
     public PaymentSetCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

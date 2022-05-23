@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
+           .name(nameBuilder -> nameBuilder)
+           .quantity(0.3)
+           .money(moneyBuilder -> moneyBuilder)
+           .slug("{slug}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -44,8 +57,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
+     */
 
     public CustomLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
@@ -69,8 +82,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
-    */
+     *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
+     */
 
     public CustomLineItemDraftBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
@@ -81,8 +94,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
-    */
+     *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
+     */
 
     public CustomLineItemDraftBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
@@ -91,8 +104,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
-    */
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+     */
 
     public CustomLineItemDraftBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
@@ -102,8 +115,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
-    */
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+     */
 
     public CustomLineItemDraftBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
@@ -112,8 +125,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public CustomLineItemDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -122,8 +135,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public CustomLineItemDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -132,8 +145,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>Container for custom line item specific address(es).</p>
-    */
+     *  <p>Container for custom line item specific address(es).</p>
+     */
 
     public CustomLineItemDraftBuilder shippingDetails(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
@@ -143,8 +156,8 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-    *  <p>Container for custom line item specific address(es).</p>
-    */
+     *  <p>Container for custom line item specific address(es).</p>
+     */
 
     public CustomLineItemDraftBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {

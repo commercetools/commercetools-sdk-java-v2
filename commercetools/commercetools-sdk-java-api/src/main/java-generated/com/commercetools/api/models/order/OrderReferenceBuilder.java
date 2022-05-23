@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderReference orderReference = OrderReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReferenceBuilder implements Builder<OrderReference> {
 
     private String id;
@@ -18,8 +28,8 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     private com.commercetools.api.models.order.Order obj;
 
     /**
-    *  <p>Unique ID of the referenced resource.</p>
-    */
+     *  <p>Unique ID of the referenced resource.</p>
+     */
 
     public OrderReferenceBuilder id(final String id) {
         this.id = id;

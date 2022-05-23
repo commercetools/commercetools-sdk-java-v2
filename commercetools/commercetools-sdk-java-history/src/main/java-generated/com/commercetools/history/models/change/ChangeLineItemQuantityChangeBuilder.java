@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeLineItemQuantityChange changeLineItemQuantityChange = ChangeLineItemQuantityChange.builder()
+           .change("{change}")
+           .lineItem(lineItemBuilder -> lineItemBuilder)
+           .lineItemId("{lineItemId}")
+           .nextValue(1)
+           .previousValue(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineItemQuantityChange> {
 
     private String change;
@@ -21,8 +35,8 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     private Integer previousValue;
 
     /**
-    *  <p>Update action for <code>changeLineItemQuantity</code></p>
-    */
+     *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     */
 
     public ChangeLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
@@ -47,8 +61,8 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
 
     public ChangeLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;
@@ -56,8 +70,8 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
 
     public ChangeLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;

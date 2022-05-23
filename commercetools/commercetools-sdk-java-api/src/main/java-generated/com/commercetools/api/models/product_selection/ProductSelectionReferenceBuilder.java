@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSelectionReference productSelectionReference = ProductSelectionReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionReferenceBuilder implements Builder<ProductSelectionReference> {
 
     private String id;
@@ -18,8 +28,8 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     private com.commercetools.api.models.product_selection.ProductSelection obj;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced ProductSelection.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced ProductSelection.</p>
+     */
 
     public ProductSelectionReferenceBuilder id(final String id) {
         this.id = id;
@@ -27,8 +37,8 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-    *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
-    */
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     */
 
     public ProductSelectionReferenceBuilder obj(
             Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
@@ -37,8 +47,8 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-    *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
-    */
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     */
 
     public ProductSelectionReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.product_selection.ProductSelection obj) {

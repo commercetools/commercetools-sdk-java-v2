@@ -8,7 +8,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TaxCategoryResourceIdentifier taxCategoryResourceIdentifier = TaxCategoryResourceIdentifier.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryResourceIdentifierBuilder implements Builder<TaxCategoryResourceIdentifier> {
 
     @Nullable
@@ -18,8 +27,8 @@ public class TaxCategoryResourceIdentifierBuilder implements Builder<TaxCategory
     private String key;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     public TaxCategoryResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
@@ -27,8 +36,8 @@ public class TaxCategoryResourceIdentifierBuilder implements Builder<TaxCategory
     }
 
     /**
-    *  <p>User-defined unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>User-defined unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     public TaxCategoryResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

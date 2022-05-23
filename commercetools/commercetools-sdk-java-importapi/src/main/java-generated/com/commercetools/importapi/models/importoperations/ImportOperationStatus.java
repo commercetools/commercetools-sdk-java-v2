@@ -14,27 +14,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportOperationStatus importOperationStatus = ImportOperationStatus.builder()
+           .state(ImportOperationState.PROCESSING)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportOperationStatusImpl.class)
 public interface ImportOperationStatus {
 
     /**
-    *  <p>The ID of the ImportOperation.</p>
-    */
+     *  <p>The ID of the ImportOperation.</p>
+     */
 
     @JsonProperty("operationId")
     public String getOperationId();
 
     /**
-    *  <p>The validation state of the ImportOperation.</p>
-    */
+     *  <p>The validation state of the ImportOperation.</p>
+     */
     @NotNull
     @JsonProperty("state")
     public ImportOperationState getState();
 
     /**
-    *  <p>The validation errors for the ImportOperation. See Errors.</p>
-    */
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     */
     @Valid
     @JsonProperty("errors")
     public List<ErrorObject> getErrors();

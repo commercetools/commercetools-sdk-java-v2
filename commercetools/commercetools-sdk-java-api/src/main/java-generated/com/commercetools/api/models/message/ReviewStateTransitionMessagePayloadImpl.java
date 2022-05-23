@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTransitionMessagePayload, ModelBase {
 
     private String type;
@@ -57,15 +57,15 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-    *  <p>Reference to a State.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
 
     /**
-    *  <p>Reference to a State.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     public com.commercetools.api.models.state.StateReference getNewState() {
         return this.newState;
     }
@@ -79,8 +79,8 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
     }
 
     /**
-    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
-    */
+     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
     public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }

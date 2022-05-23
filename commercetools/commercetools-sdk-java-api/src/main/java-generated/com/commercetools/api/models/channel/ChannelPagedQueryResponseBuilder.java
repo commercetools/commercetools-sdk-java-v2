@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChannelPagedQueryResponse channelPagedQueryResponse = ChannelPagedQueryResponse.builder()
+           .limit(0.3)
+           .offset(0.3)
+           .count(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQueryResponse> {
 
     private Long limit;
@@ -24,8 +37,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     private java.util.List<com.commercetools.api.models.channel.Channel> results;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
@@ -33,8 +46,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
@@ -42,8 +55,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
@@ -51,8 +64,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -60,8 +73,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
-    *  <p>Channels matching the query.</p>
-    */
+     *  <p>Channels matching the query.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder results(final com.commercetools.api.models.channel.Channel... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
@@ -69,8 +82,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
-    *  <p>Channels matching the query.</p>
-    */
+     *  <p>Channels matching the query.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.channel.Channel> results) {
@@ -79,8 +92,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
-    *  <p>Channels matching the query.</p>
-    */
+     *  <p>Channels matching the query.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.channel.Channel... results) {
         if (this.results == null) {
@@ -91,8 +104,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
-    *  <p>Channels matching the query.</p>
-    */
+     *  <p>Channels matching the query.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
@@ -104,8 +117,8 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
-    *  <p>Channels matching the query.</p>
-    */
+     *  <p>Channels matching the query.</p>
+     */
 
     public ChannelPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {

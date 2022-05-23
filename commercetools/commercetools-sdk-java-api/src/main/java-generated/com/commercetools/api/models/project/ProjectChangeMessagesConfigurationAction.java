@@ -14,15 +14,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectChangeMessagesConfigurationAction projectChangeMessagesConfigurationAction = ProjectChangeMessagesConfigurationAction.builder()
+           .messagesConfiguration(messagesConfigurationBuilder -> messagesConfigurationBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeMessagesConfigurationActionImpl.class)
 public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateAction {
 
     String CHANGE_MESSAGES_CONFIGURATION = "changeMessagesConfiguration";
 
     /**
-    *  <p>Configuration for the Messages Query feature.</p>
-    */
+     *  <p>Configuration for the Messages Query feature.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("messagesConfiguration")

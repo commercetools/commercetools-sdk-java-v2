@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReviewDraft reviewDraft = ReviewDraft.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     @Nullable
@@ -46,8 +55,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-    *  <p>User-defined unique identifier for the Review.</p>
-    */
+     *  <p>User-defined unique identifier for the Review.</p>
+     */
 
     public ReviewDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -55,8 +64,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-    *  <p>If set, this value must be unique among reviews. For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>
-    */
+     *  <p>If set, this value must be unique among reviews. For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>
+     */
 
     public ReviewDraftBuilder uniquenessValue(@Nullable final String uniquenessValue) {
         this.uniquenessValue = uniquenessValue;
@@ -84,8 +93,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-    *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
-    */
+     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     */
 
     public ReviewDraftBuilder target(@Nullable final java.lang.Object target) {
         this.target = target;
@@ -104,8 +113,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-    *  <p>Number between -100 and 100 included. Rating of the targeted object, like a product. This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1) A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
-    */
+     *  <p>Number between -100 and 100 included. Rating of the targeted object, like a product. This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1) A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
+     */
 
     public ReviewDraftBuilder rating(@Nullable final Integer rating) {
         this.rating = rating;
@@ -113,8 +122,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-    *  <p>The customer who created the review.</p>
-    */
+     *  <p>The customer who created the review.</p>
+     */
 
     public ReviewDraftBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
@@ -124,8 +133,8 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-    *  <p>The customer who created the review.</p>
-    */
+     *  <p>The customer who created the review.</p>
+     */
 
     public ReviewDraftBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {

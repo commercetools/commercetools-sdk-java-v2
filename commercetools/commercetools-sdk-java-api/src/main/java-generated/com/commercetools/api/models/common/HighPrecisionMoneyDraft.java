@@ -13,33 +13,44 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   HighPrecisionMoneyDraft highPrecisionMoneyDraft = HighPrecisionMoneyDraft.builder()
+           .currencyCode("{currencyCode}")
+           .fractionDigits(0.3)
+           .preciseAmount(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HighPrecisionMoneyDraftImpl.class)
 public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
 
     String HIGH_PRECISION = "highPrecision";
 
     /**
-    *  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>
-    */
+     *  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>
+     */
     @NotNull
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
     /**
-    *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
-    */
+     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     */
     @NotNull
     @JsonProperty("preciseAmount")
     public Long getPreciseAmount();
 
     /**
-    *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
-    *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
-    *  <p>If <code>centAmount</code> is not provided, the commercetools Platform calculates the value automatically using the default rounding mode half even.</p>
-    */
+     *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
+     *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
+     *  <p>If <code>centAmount</code> is not provided, the commercetools Platform calculates the value automatically using the default rounding mode half even.</p>
+     */
 
     @JsonProperty("centAmount")
     public Long getCentAmount();

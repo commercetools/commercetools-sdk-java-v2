@@ -14,44 +14,56 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>PagedQueryResult containing an array of AssignedProductSelection.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>PagedQueryResult containing an array of AssignedProductSelection.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AssignedProductSelectionPagedQueryResponse assignedProductSelectionPagedQueryResponse = AssignedProductSelectionPagedQueryResponse.builder()
+           .limit(0.3)
+           .offset(0.3)
+           .count(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssignedProductSelectionPagedQueryResponseImpl.class)
 public interface AssignedProductSelectionPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductSelection> {
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
 
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-    *  <p>References to ProductSelection that are assigned to the Product.</p>
-    */
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("results")

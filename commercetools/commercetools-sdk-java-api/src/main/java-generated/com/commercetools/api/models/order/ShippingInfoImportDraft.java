@@ -19,7 +19,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingInfoImportDraft shippingInfoImportDraft = ShippingInfoImportDraft.builder()
+           .shippingMethodName("{shippingMethodName}")
+           .price(priceBuilder -> priceBuilder)
+           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingInfoImportDraftImpl.class)
 public interface ShippingInfoImportDraft {
 
@@ -33,8 +45,8 @@ public interface ShippingInfoImportDraft {
     public Money getPrice();
 
     /**
-    *  <p>The shipping rate used to determine the price.</p>
-    */
+     *  <p>The shipping rate used to determine the price.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("shippingRate")
@@ -49,15 +61,15 @@ public interface ShippingInfoImportDraft {
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-    *  <p>Not set if custom shipping method is used.</p>
-    */
+     *  <p>Not set if custom shipping method is used.</p>
+     */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
-    */
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     */
     @Valid
     @JsonProperty("deliveries")
     public List<Delivery> getDeliveries();
@@ -67,8 +79,8 @@ public interface ShippingInfoImportDraft {
     public DiscountedLineItemPriceDraft getDiscountedPrice();
 
     /**
-    *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
-    */
+     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     */
 
     @JsonProperty("shippingMethodState")
     public ShippingMethodState getShippingMethodState();

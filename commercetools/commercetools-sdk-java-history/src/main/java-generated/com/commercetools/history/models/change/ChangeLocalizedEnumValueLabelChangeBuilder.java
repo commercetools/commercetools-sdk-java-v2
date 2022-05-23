@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeLocalizedEnumValueLabelChange changeLocalizedEnumValueLabelChange = ChangeLocalizedEnumValueLabelChange.builder()
+           .change("{change}")
+           .fieldName("{fieldName}")
+           .attributeName("{attributeName}")
+           .valueKey("{valueKey}")
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<ChangeLocalizedEnumValueLabelChange> {
 
     private String change;
@@ -23,8 +38,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-    *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
-    */
+     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+     */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder change(final String change) {
         this.change = change;
@@ -32,8 +47,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-    *  <p>The name of the field definition updated.</p>
-    */
+     *  <p>The name of the field definition updated.</p>
+     */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
@@ -41,8 +56,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-    *  <p>The name of the attribute updated.</p>
-    */
+     *  <p>The name of the attribute updated.</p>
+     */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
@@ -50,8 +65,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-    *  <p>Key of the values that was updated</p>
-    */
+     *  <p>Key of the values that was updated</p>
+     */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {
         this.valueKey = valueKey;

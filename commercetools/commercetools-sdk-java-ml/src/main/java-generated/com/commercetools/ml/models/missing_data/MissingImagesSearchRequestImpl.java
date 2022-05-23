@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingImagesSearchRequestImpl implements MissingImagesSearchRequest, ModelBase {
 
     private Long limit;
@@ -57,64 +57,64 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>If true, searches data from staged products in addition to published products.</p>
-    */
+     *  <p>If true, searches data from staged products in addition to published products.</p>
+     */
     public Boolean getStaged() {
         return this.staged;
     }
 
     /**
-    *  <p>Maximum number of products to scan.</p>
-    */
+     *  <p>Maximum number of products to scan.</p>
+     */
     public Long getProductSetLimit() {
         return this.productSetLimit;
     }
 
     /**
-    *  <p>If true, searches all product variants. If false, only searches master variants.</p>
-    */
+     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
+     */
     public Boolean getIncludeVariants() {
         return this.includeVariants;
     }
 
     /**
-    *  <p>If true, uses the median number of images per product variant as a threshold value.</p>
-    */
+     *  <p>If true, uses the median number of images per product variant as a threshold value.</p>
+     */
     public Boolean getAutoThreshold() {
         return this.autoThreshold;
     }
 
     /**
-    *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
-    */
+     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
+     */
     public Long getThreshold() {
         return this.threshold;
     }
 
     /**
-    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
-    */
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     */
     public java.util.List<String> getProductIds() {
         return this.productIds;
     }
 
     /**
-    *  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>
-    */
+     *  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>
+     */
     public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }

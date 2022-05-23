@@ -10,15 +10,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MyCartSetCountryAction myCartSetCountryAction = MyCartSetCountryAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartSetCountryActionImpl.class)
 public interface MyCartSetCountryAction extends MyCartUpdateAction {
 
     String SET_COUNTRY = "setCountry";
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     @JsonProperty("country")
     public String getCountry();

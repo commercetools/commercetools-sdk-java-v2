@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The item's state.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The item's state.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemStateImpl implements ItemState, ModelBase {
 
     private Double quantity;
@@ -39,8 +39,8 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>ItemState.state</code>.</p>
-    */
+     *  <p>Maps to <code>ItemState.state</code>.</p>
+     */
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
         return this.state;
     }

@@ -12,15 +12,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StateSetRolesAction stateSetRolesAction = StateSetRolesAction.builder()
+           .plusRoles(rolesBuilder -> rolesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateSetRolesActionImpl.class)
 public interface StateSetRolesAction extends StateUpdateAction {
 
     String SET_ROLES = "setRoles";
 
     /**
-    *  <p>Value to set. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
     @NotNull
     @JsonProperty("roles")
     public List<StateRoleEnum> getRoles();

@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MyCartDraft myCartDraft = MyCartDraft.builder()
+           .currency("{currency}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartDraftBuilder implements Builder<MyCartDraft> {
 
     private String currency;
@@ -57,8 +67,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
     /**
-    *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public MyCartDraftBuilder currency(final String currency) {
         this.currency = currency;
@@ -71,8 +81,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public MyCartDraftBuilder country(@Nullable final String country) {
         this.country = country;
@@ -80,8 +90,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>Default inventory mode is <code>None</code>.</p>
-    */
+     *  <p>Default inventory mode is <code>None</code>.</p>
+     */
 
     public MyCartDraftBuilder inventoryMode(
             @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
@@ -164,8 +174,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public MyCartDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -174,8 +184,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public MyCartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -188,8 +198,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
-    */
+     *  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
+     */
 
     public MyCartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
@@ -197,8 +207,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
-    */
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+     */
 
     public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
@@ -206,8 +216,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
+     */
 
     public MyCartDraftBuilder itemShippingAddresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
@@ -216,8 +226,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
+     */
 
     public MyCartDraftBuilder itemShippingAddresses(
             @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses) {
@@ -226,8 +236,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
+     */
 
     public MyCartDraftBuilder plusItemShippingAddresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
@@ -239,8 +249,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
+     */
 
     public MyCartDraftBuilder plusItemShippingAddresses(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
@@ -253,8 +263,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
+     */
 
     public MyCartDraftBuilder withItemShippingAddresses(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {

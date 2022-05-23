@@ -18,7 +18,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StagedOrderSetShippingAddressAndCustomShippingMethodAction stagedOrderSetShippingAddressAndCustomShippingMethodAction = StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
+           .address(addressBuilder -> addressBuilder)
+           .shippingMethodName("{shippingMethodName}")
+           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction extends StagedOrderUpdateAction {
 
@@ -39,8 +51,8 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public ShippingRateDraft getShippingRate();
 
     /**
-    *  <p>ResourceIdentifier to a TaxCategory.</p>
-    */
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();

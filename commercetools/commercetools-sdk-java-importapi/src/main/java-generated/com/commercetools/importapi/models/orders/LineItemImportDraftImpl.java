@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
-*  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
+ *  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
@@ -69,36 +69,36 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>LineItem.productId</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
+     */
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
         return this.product;
     }
 
     /**
-    *  <p>Maps to <code>LineItem.name</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.name</code>.</p>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
+     */
     public com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft getVariant() {
         return this.variant;
     }
 
     /**
-    *  <p>Maps to <code>LineItem.price</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.price</code>.</p>
+     */
     public com.commercetools.importapi.models.orders.LineItemPrice getPrice() {
         return this.price;
     }
 
     /**
-    *  <p>Maps to <code>LineItem.quantity</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.quantity</code>.</p>
+     */
     public Double getQuantity() {
         return this.quantity;
     }
@@ -108,29 +108,29 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
-    */
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-    *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
-    */
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel() {
         return this.distributionChannel;
     }
 
     /**
-    *  <p>Maps to <code>LineItem.taxRate</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
+     */
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
         return this.taxRate;
     }
 
     /**
-    *  <p>Maps to LineItem.shippingDetails.</p>
-    */
+     *  <p>Maps to LineItem.shippingDetails.</p>
+     */
     public com.commercetools.importapi.models.orders.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }

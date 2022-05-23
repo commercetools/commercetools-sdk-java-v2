@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Image image = Image.builder()
+           .url("{url}")
+           .dimensions(dimensionsBuilder -> dimensionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageBuilder implements Builder<Image> {
 
     private String url;
@@ -20,8 +31,8 @@ public class ImageBuilder implements Builder<Image> {
     private String label;
 
     /**
-    *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
-    */
+     *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
+     */
 
     public ImageBuilder url(final String url) {
         this.url = url;
@@ -29,8 +40,8 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-    *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
-    */
+     *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+     */
 
     public ImageBuilder dimensions(
             Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensionsBuilder> builder) {
@@ -39,8 +50,8 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-    *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
-    */
+     *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+     */
 
     public ImageBuilder dimensions(final com.commercetools.importapi.models.common.AssetDimensions dimensions) {
         this.dimensions = dimensions;
@@ -48,8 +59,8 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-    *  <p>Custom label that can be used, for example, as an image description.</p>
-    */
+     *  <p>Custom label that can be used, for example, as an image description.</p>
+     */
 
     public ImageBuilder label(@Nullable final String label) {
         this.label = label;

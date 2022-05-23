@@ -9,7 +9,23 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Customer customer = Customer.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .email("{email}")
+           .plusAddresses(addressesBuilder -> addressesBuilder)
+           .isEmailVerified(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerBuilder implements Builder<Customer> {
 
     private String id;
@@ -96,8 +112,8 @@ public class CustomerBuilder implements Builder<Customer> {
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
     /**
-    *  <p>Platform-generated unique identifier of the Customer.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Customer.</p>
+     */
 
     public CustomerBuilder id(final String id) {
         this.id = id;
@@ -105,8 +121,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The current version of the customer.</p>
-    */
+     *  <p>The current version of the customer.</p>
+     */
 
     public CustomerBuilder version(final Long version) {
         this.version = version;
@@ -124,8 +140,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomerBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -134,8 +150,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomerBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -144,8 +160,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomerBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -154,8 +170,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomerBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -163,8 +179,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>
-    */
+     *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>
+     */
 
     public CustomerBuilder customerNumber(@Nullable final String customerNumber) {
         this.customerNumber = customerNumber;
@@ -172,8 +188,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>
-    */
+     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>
+     */
 
     public CustomerBuilder email(final String email) {
         this.email = email;
@@ -181,8 +197,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
-    */
+     *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
+     */
 
     public CustomerBuilder password(@Nullable final String password) {
         this.password = password;
@@ -225,8 +241,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The addresses have unique IDs in the addresses list</p>
-    */
+     *  <p>The addresses have unique IDs in the addresses list</p>
+     */
 
     public CustomerBuilder addresses(final com.commercetools.api.models.common.Address... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
@@ -234,8 +250,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The addresses have unique IDs in the addresses list</p>
-    */
+     *  <p>The addresses have unique IDs in the addresses list</p>
+     */
 
     public CustomerBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
         this.addresses = addresses;
@@ -243,8 +259,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The addresses have unique IDs in the addresses list</p>
-    */
+     *  <p>The addresses have unique IDs in the addresses list</p>
+     */
 
     public CustomerBuilder plusAddresses(final com.commercetools.api.models.common.Address... addresses) {
         if (this.addresses == null) {
@@ -255,8 +271,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The addresses have unique IDs in the addresses list</p>
-    */
+     *  <p>The addresses have unique IDs in the addresses list</p>
+     */
 
     public CustomerBuilder plusAddresses(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
@@ -268,8 +284,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The addresses have unique IDs in the addresses list</p>
-    */
+     *  <p>The addresses have unique IDs in the addresses list</p>
+     */
 
     public CustomerBuilder withAddresses(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
@@ -279,8 +295,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The address ID in the addresses list</p>
-    */
+     *  <p>The address ID in the addresses list</p>
+     */
 
     public CustomerBuilder defaultShippingAddressId(@Nullable final String defaultShippingAddressId) {
         this.defaultShippingAddressId = defaultShippingAddressId;
@@ -288,8 +304,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The IDs from the addresses list which are used as shipping addresses</p>
-    */
+     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     */
 
     public CustomerBuilder shippingAddressIds(@Nullable final String... shippingAddressIds) {
         this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
@@ -297,8 +313,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The IDs from the addresses list which are used as shipping addresses</p>
-    */
+     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     */
 
     public CustomerBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
         this.shippingAddressIds = shippingAddressIds;
@@ -306,8 +322,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The IDs from the addresses list which are used as shipping addresses</p>
-    */
+     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     */
 
     public CustomerBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
         if (this.shippingAddressIds == null) {
@@ -318,8 +334,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The address ID in the addresses list</p>
-    */
+     *  <p>The address ID in the addresses list</p>
+     */
 
     public CustomerBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
         this.defaultBillingAddressId = defaultBillingAddressId;
@@ -327,8 +343,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The IDs from the addresses list which are used as billing addresses</p>
-    */
+     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     */
 
     public CustomerBuilder billingAddressIds(@Nullable final String... billingAddressIds) {
         this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
@@ -336,8 +352,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The IDs from the addresses list which are used as billing addresses</p>
-    */
+     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     */
 
     public CustomerBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
@@ -345,8 +361,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>The IDs from the addresses list which are used as billing addresses</p>
-    */
+     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     */
 
     public CustomerBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
         if (this.billingAddressIds == null) {
@@ -402,8 +418,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Customer.</p>
-    */
+     *  <p>User-defined unique identifier of the Customer.</p>
+     */
 
     public CustomerBuilder key(@Nullable final String key) {
         this.key = key;
@@ -411,8 +427,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
-    */
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     */
 
     public CustomerBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
@@ -420,8 +436,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
-    */
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     */
 
     public CustomerBuilder stores(
             @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
@@ -430,8 +446,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
-    */
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     */
 
     public CustomerBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
         if (this.stores == null) {
@@ -442,8 +458,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
-    */
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     */
 
     public CustomerBuilder plusStores(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
@@ -455,8 +471,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
-    */
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     */
 
     public CustomerBuilder withStores(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
@@ -466,8 +482,8 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-    *  <p>Defines whether a Customer has a password.</p>
-    */
+     *  <p>Defines whether a Customer has a password.</p>
+     */
 
     public CustomerBuilder authenticationMode(
             @Nullable final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {

@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerGroupReference customerGroupReference = CustomerGroupReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupReference> {
 
     private String id;
@@ -18,8 +28,8 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     private com.commercetools.api.models.customer_group.CustomerGroup obj;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced CustomerGroup.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced CustomerGroup.</p>
+     */
 
     public CustomerGroupReferenceBuilder id(final String id) {
         this.id = id;
@@ -27,8 +37,8 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-    *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
-    */
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     */
 
     public CustomerGroupReferenceBuilder obj(
             Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {
@@ -37,8 +47,8 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-    *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
-    */
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     */
 
     public CustomerGroupReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroup obj) {

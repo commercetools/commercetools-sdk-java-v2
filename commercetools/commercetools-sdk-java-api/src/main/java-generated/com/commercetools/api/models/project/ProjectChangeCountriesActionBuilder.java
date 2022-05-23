@@ -6,14 +6,24 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectChangeCountriesAction projectChangeCountriesAction = ProjectChangeCountriesAction.builder()
+           .plusCountries(countriesBuilder -> countriesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChangeCountriesAction> {
 
     private java.util.List<String> countries;
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeCountriesActionBuilder countries(final String... countries) {
         this.countries = new ArrayList<>(Arrays.asList(countries));
@@ -21,8 +31,8 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeCountriesActionBuilder countries(final java.util.List<String> countries) {
         this.countries = countries;
@@ -30,8 +40,8 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeCountriesActionBuilder plusCountries(final String... countries) {
         if (this.countries == null) {

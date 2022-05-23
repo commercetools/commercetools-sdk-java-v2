@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DiscountedPrice discountedPrice = DiscountedPrice.builder()
+           .value(valueBuilder -> valueBuilder)
+           .discount(discountBuilder -> discountBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     private com.commercetools.api.models.common.TypedMoney value;
@@ -15,8 +26,8 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
     /**
-    *  <p>Money value of the discounted price.</p>
-    */
+     *  <p>Money value of the discounted price.</p>
+     */
 
     public DiscountedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
@@ -24,8 +35,8 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-    *  <p>Money value of the discounted price.</p>
-    */
+     *  <p>Money value of the discounted price.</p>
+     */
 
     public DiscountedPriceBuilder value(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -34,8 +45,8 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-    *  <p>ProductDiscount related to the discounted price.</p>
-    */
+     *  <p>ProductDiscount related to the discounted price.</p>
+     */
 
     public DiscountedPriceBuilder discount(
             Function<com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder, com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder> builder) {
@@ -46,8 +57,8 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-    *  <p>ProductDiscount related to the discounted price.</p>
-    */
+     *  <p>ProductDiscount related to the discounted price.</p>
+     */
 
     public DiscountedPriceBuilder discount(
             final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {

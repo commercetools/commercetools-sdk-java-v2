@@ -7,7 +7,19 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SyncInfo syncInfo = SyncInfo.builder()
+           .channel(channelBuilder -> channelBuilder)
+           .externalId("{externalId}")
+           .syncedAt("{syncedAt}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     private com.commercetools.history.models.common.Reference channel;
@@ -28,8 +40,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-    *  <p>Can be used to reference an external order instance, file etc.</p>
-    */
+     *  <p>Can be used to reference an external order instance, file etc.</p>
+     */
 
     public SyncInfoBuilder externalId(final String externalId) {
         this.externalId = externalId;

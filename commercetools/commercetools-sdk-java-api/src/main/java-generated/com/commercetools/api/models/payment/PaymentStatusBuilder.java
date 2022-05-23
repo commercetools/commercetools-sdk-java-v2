@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PaymentStatus paymentStatus = PaymentStatus.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusBuilder implements Builder<PaymentStatus> {
 
     @Nullable
@@ -22,8 +31,8 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
     private com.commercetools.api.models.state.StateReference state;
 
     /**
-    *  <p>A code describing the current status returned by the interface that processes the payment.</p>
-    */
+     *  <p>A code describing the current status returned by the interface that processes the payment.</p>
+     */
 
     public PaymentStatusBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;
@@ -31,8 +40,8 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
     }
 
     /**
-    *  <p>A text describing the current status returned by the interface that processes the payment.</p>
-    */
+     *  <p>A text describing the current status returned by the interface that processes the payment.</p>
+     */
 
     public PaymentStatusBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;

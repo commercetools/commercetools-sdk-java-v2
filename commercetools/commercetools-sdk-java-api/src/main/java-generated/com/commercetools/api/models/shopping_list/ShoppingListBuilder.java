@@ -9,7 +9,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShoppingList shoppingList = ShoppingList.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .name(nameBuilder -> nameBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     private String id;
@@ -59,8 +73,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-    *  <p>Platform-generated unique identifier of the ShoppingList.</p>
-    */
+     *  <p>Platform-generated unique identifier of the ShoppingList.</p>
+     */
 
     public ShoppingListBuilder id(final String id) {
         this.id = id;
@@ -68,8 +82,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>The current version of the shopping list.</p>
-    */
+     *  <p>The current version of the shopping list.</p>
+     */
 
     public ShoppingListBuilder version(final Long version) {
         this.version = version;
@@ -87,8 +101,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ShoppingListBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -97,8 +111,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ShoppingListBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -107,8 +121,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ShoppingListBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -117,8 +131,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ShoppingListBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -149,8 +163,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
-    */
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     */
 
     public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
@@ -170,8 +184,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the ShoppingList.</p>
-    */
+     *  <p>User-defined unique identifier of the ShoppingList.</p>
+     */
 
     public ShoppingListBuilder key(@Nullable final String key) {
         this.key = key;
@@ -229,8 +243,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
-    */
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+     */
 
     public ShoppingListBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -239,8 +253,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
-    */
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+     */
 
     public ShoppingListBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
@@ -287,8 +301,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-    *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
 
     public ShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;

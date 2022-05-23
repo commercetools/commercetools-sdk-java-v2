@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReviewReference reviewReference = ReviewReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewReferenceBuilder implements Builder<ReviewReference> {
 
     private String id;
@@ -18,8 +28,8 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     private com.commercetools.api.models.review.Review obj;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced Review.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced Review.</p>
+     */
 
     public ReviewReferenceBuilder id(final String id) {
         this.id = id;
@@ -27,8 +37,8 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-    *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
-    */
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     */
 
     public ReviewReferenceBuilder obj(
             Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
@@ -37,8 +47,8 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-    *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
-    */
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     */
 
     public ReviewReferenceBuilder obj(@Nullable final com.commercetools.api.models.review.Review obj) {
         this.obj = obj;

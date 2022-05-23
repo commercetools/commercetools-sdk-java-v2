@@ -14,22 +14,31 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderSetShippingAddressCustomTypeAction orderSetShippingAddressCustomTypeAction = OrderSetShippingAddressCustomTypeAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetShippingAddressCustomTypeActionImpl.class)
 public interface OrderSetShippingAddressCustomTypeAction extends OrderUpdateAction {
 
     String SET_SHIPPING_ADDRESS_CUSTOM_TYPE = "setShippingAddressCustomType";
 
     /**
-    *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
-    */
+     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();

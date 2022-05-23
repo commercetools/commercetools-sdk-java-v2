@@ -10,15 +10,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerSetExternalIdAction customerSetExternalIdAction = CustomerSetExternalIdAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetExternalIdActionImpl.class)
 public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
 
     String SET_EXTERNAL_ID = "setExternalId";
 
     /**
-    *  <p>If not defined, the external ID is unset.</p>
-    */
+     *  <p>If not defined, the external ID is unset.</p>
+     */
 
     @JsonProperty("externalId")
     public String getExternalId();

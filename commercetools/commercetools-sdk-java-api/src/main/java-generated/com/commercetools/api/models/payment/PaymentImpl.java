@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentImpl implements Payment, ModelBase {
 
     private String id;
@@ -87,8 +87,8 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Payment.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Payment.</p>
+     */
     public String getId() {
         return this.id;
     }
@@ -106,43 +106,43 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>A reference to the customer this payment belongs to.</p>
-    */
+     *  <p>A reference to the customer this payment belongs to.</p>
+     */
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
     /**
-    *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
     /**
-    *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
-    */
+     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+     */
     public String getInterfaceId() {
         return this.interfaceId;
     }
 
     /**
-    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
-    */
+     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     */
     public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
         return this.amountPlanned;
     }
@@ -156,15 +156,15 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
-    */
+     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     */
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
         return this.transactions;
     }
 
     /**
-    *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
-    */
+     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     */
     public java.util.List<com.commercetools.api.models.type.CustomFields> getInterfaceInteractions() {
         return this.interfaceInteractions;
     }
@@ -174,8 +174,8 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Payment.</p>
-    */
+     *  <p>User-defined unique identifier of the Payment.</p>
+     */
     public String getKey() {
         return this.key;
     }

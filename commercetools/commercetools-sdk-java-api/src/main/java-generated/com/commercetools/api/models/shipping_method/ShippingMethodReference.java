@@ -15,24 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Reference to a ShippingMethod.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Reference to a ShippingMethod.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingMethodReference shippingMethodReference = ShippingMethodReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodReferenceImpl.class)
 public interface ShippingMethodReference extends Reference, com.commercetools.api.models.Identifiable<ShippingMethod> {
 
     String SHIPPING_METHOD = "shipping-method";
 
     /**
-    *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
-    */
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public ShippingMethod getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced ShippingMethod.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced ShippingMethod.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

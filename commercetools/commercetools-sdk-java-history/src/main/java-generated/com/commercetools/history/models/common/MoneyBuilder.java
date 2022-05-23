@@ -6,7 +6,20 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Money money = Money.builder()
+           .currencyCode("{currencyCode}")
+           .centAmount(1)
+           .fractionDigits(1)
+           .type(MoneyType.CENT_PRECISION)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneyBuilder implements Builder<Money> {
 
     private String currencyCode;
@@ -18,8 +31,8 @@ public class MoneyBuilder implements Builder<Money> {
     private com.commercetools.history.models.common.MoneyType type;
 
     /**
-    *  <p>Currency code compliant to ISO 4217.</p>
-    */
+     *  <p>Currency code compliant to ISO 4217.</p>
+     */
 
     public MoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;

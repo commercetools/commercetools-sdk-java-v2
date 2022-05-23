@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BaseAddressImpl implements BaseAddress, ModelBase {
 
     private String id;
@@ -114,176 +114,176 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Address.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Address.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Address.</p>
-    */
+     *  <p>User-defined unique identifier of the Address.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>Title of the contact, for example 'Dr.'</p>
-    */
+     *  <p>Title of the contact, for example 'Dr.'</p>
+     */
     public String getTitle() {
         return this.title;
     }
 
     /**
-    *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
-    */
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     */
     public String getSalutation() {
         return this.salutation;
     }
 
     /**
-    *  <p>Given name (first name) of the contact.</p>
-    */
+     *  <p>Given name (first name) of the contact.</p>
+     */
     public String getFirstName() {
         return this.firstName;
     }
 
     /**
-    *  <p>Family name (last name) of the contact.</p>
-    */
+     *  <p>Family name (last name) of the contact.</p>
+     */
     public String getLastName() {
         return this.lastName;
     }
 
     /**
-    *  <p>Name of the street.</p>
-    */
+     *  <p>Name of the street.</p>
+     */
     public String getStreetName() {
         return this.streetName;
     }
 
     /**
-    *  <p>Street number.</p>
-    */
+     *  <p>Street number.</p>
+     */
     public String getStreetNumber() {
         return this.streetNumber;
     }
 
     /**
-    *  <p>Further information on the street address.</p>
-    */
+     *  <p>Further information on the street address.</p>
+     */
     public String getAdditionalStreetInfo() {
         return this.additionalStreetInfo;
     }
 
     /**
-    *  <p>Postal code.</p>
-    */
+     *  <p>Postal code.</p>
+     */
     public String getPostalCode() {
         return this.postalCode;
     }
 
     /**
-    *  <p>Name of the city.</p>
-    */
+     *  <p>Name of the city.</p>
+     */
     public String getCity() {
         return this.city;
     }
 
     /**
-    *  <p>Name of the region.</p>
-    */
+     *  <p>Name of the region.</p>
+     */
     public String getRegion() {
         return this.region;
     }
 
     /**
-    *  <p>Name of the state, for example, Colorado.</p>
-    */
+     *  <p>Name of the state, for example, Colorado.</p>
+     */
     public String getState() {
         return this.state;
     }
 
     /**
-    *  <p>Name of the company.</p>
-    */
+     *  <p>Name of the company.</p>
+     */
     public String getCompany() {
         return this.company;
     }
 
     /**
-    *  <p>Name of the department.</p>
-    */
+     *  <p>Name of the department.</p>
+     */
     public String getDepartment() {
         return this.department;
     }
 
     /**
-    *  <p>Number or name of the building.</p>
-    */
+     *  <p>Number or name of the building.</p>
+     */
     public String getBuilding() {
         return this.building;
     }
 
     /**
-    *  <p>Number or name of the apartment.</p>
-    */
+     *  <p>Number or name of the apartment.</p>
+     */
     public String getApartment() {
         return this.apartment;
     }
 
     /**
-    *  <p>Post office box number.</p>
-    */
+     *  <p>Post office box number.</p>
+     */
     public String getPOBox() {
         return this.pOBox;
     }
 
     /**
-    *  <p>Phone number of the contact.</p>
-    */
+     *  <p>Phone number of the contact.</p>
+     */
     public String getPhone() {
         return this.phone;
     }
 
     /**
-    *  <p>Mobile phone number of the contact.</p>
-    */
+     *  <p>Mobile phone number of the contact.</p>
+     */
     public String getMobile() {
         return this.mobile;
     }
 
     /**
-    *  <p>Email address of the contact.</p>
-    */
+     *  <p>Email address of the contact.</p>
+     */
     public String getEmail() {
         return this.email;
     }
 
     /**
-    *  <p>Fax number of the contact.</p>
-    */
+     *  <p>Fax number of the contact.</p>
+     */
     public String getFax() {
         return this.fax;
     }
 
     /**
-    *  <p>Further information on the Address.</p>
-    */
+     *  <p>Further information on the Address.</p>
+     */
     public String getAdditionalAddressInfo() {
         return this.additionalAddressInfo;
     }
 
     /**
-    *  <p>ID for the contact used in an external system.</p>
-    */
+     *  <p>ID for the contact used in an external system.</p>
+     */
     public String getExternalId() {
         return this.externalId;
     }

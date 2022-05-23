@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxRateImpl implements TaxRate, ModelBase {
 
     private String id;
@@ -65,8 +65,8 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
     public String getCountry() {
         return this.country;
     }

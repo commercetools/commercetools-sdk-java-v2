@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomObjectReference customObjectReference = CustomObjectReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectReferenceBuilder implements Builder<CustomObjectReference> {
 
     private String id;
@@ -18,8 +28,8 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     private com.commercetools.api.models.custom_object.CustomObject obj;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced CustomObject.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced CustomObject.</p>
+     */
 
     public CustomObjectReferenceBuilder id(final String id) {
         this.id = id;
@@ -27,8 +37,8 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-    *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
-    */
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     */
 
     public CustomObjectReferenceBuilder obj(
             Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
@@ -37,8 +47,8 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-    *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
-    */
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     */
 
     public CustomObjectReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.custom_object.CustomObject obj) {

@@ -15,15 +15,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartDiscountValueGiftLineItemDraft cartDiscountValueGiftLineItemDraft = CartDiscountValueGiftLineItemDraft.builder()
+           .product(productBuilder -> productBuilder)
+           .variantId(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueGiftLineItemDraftImpl.class)
 public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDraft {
 
     String GIFT_LINE_ITEM = "giftLineItem";
 
     /**
-    *  <p>ResourceIdentifier to a Product.</p>
-    */
+     *  <p>ResourceIdentifier to a Product.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("product")
@@ -34,15 +45,15 @@ public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDra
     public Long getVariantId();
 
     /**
-    *  <p>The channel must have the role <code>InventorySupply</code></p>
-    */
+     *  <p>The channel must have the role <code>InventorySupply</code></p>
+     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-    *  <p>The channel must have the role <code>ProductDistribution</code></p>
-    */
+     *  <p>The channel must have the role <code>ProductDistribution</code></p>
+     */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();

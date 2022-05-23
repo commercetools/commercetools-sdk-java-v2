@@ -13,15 +13,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReferencedResourceNotFoundError referencedResourceNotFoundError = ReferencedResourceNotFoundError.builder()
+           .message("{message}")
+           .typeId(ReferenceTypeId.CART)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferencedResourceNotFoundErrorImpl.class)
 public interface ReferencedResourceNotFoundError extends ErrorObject {
 
     String REFERENCED_RESOURCE_NOT_FOUND = "ReferencedResourceNotFound";
 
     /**
-    *  <p>supported resource type identifiers:</p>
-    */
+     *  <p>supported resource type identifiers:</p>
+     */
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();

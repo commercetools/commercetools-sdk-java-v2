@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreSetProductSelectionsAction storeSetProductSelectionsAction = StoreSetProductSelectionsAction.builder()
+           .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetProductSelectionsAction> {
 
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections;
 
     /**
-    *  <p>The total of Product Selections to be set for this Store.</p>
-    */
+     *  <p>The total of Product Selections to be set for this Store.</p>
+     */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
             final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
@@ -23,8 +33,8 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-    *  <p>The total of Product Selections to be set for this Store.</p>
-    */
+     *  <p>The total of Product Selections to be set for this Store.</p>
+     */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
             final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
@@ -33,8 +43,8 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-    *  <p>The total of Product Selections to be set for this Store.</p>
-    */
+     *  <p>The total of Product Selections to be set for this Store.</p>
+     */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
             final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
@@ -46,8 +56,8 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-    *  <p>The total of Product Selections to be set for this Store.</p>
-    */
+     *  <p>The total of Product Selections to be set for this Store.</p>
+     */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder> builder) {
@@ -60,8 +70,8 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-    *  <p>The total of Product Selections to be set for this Store.</p>
-    */
+     *  <p>The total of Product Selections to be set for this Store.</p>
+     */
 
     public StoreSetProductSelectionsActionBuilder withProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder> builder) {

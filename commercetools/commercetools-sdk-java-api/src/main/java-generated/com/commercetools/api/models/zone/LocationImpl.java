@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocationImpl implements Location, ModelBase {
 
     private String country;
@@ -34,15 +34,15 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-    *  <p>Country code of the geographic location.</p>
-    */
+     *  <p>Country code of the geographic location.</p>
+     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>State within the country.</p>
-    */
+     *  <p>State within the country.</p>
+     */
     public String getState() {
         return this.state;
     }

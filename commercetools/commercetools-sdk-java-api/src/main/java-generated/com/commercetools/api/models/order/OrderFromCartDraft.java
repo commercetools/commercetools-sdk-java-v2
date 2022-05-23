@@ -16,20 +16,30 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderFromCartDraft orderFromCartDraft = OrderFromCartDraft.builder()
+           .version(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderFromCartDraftImpl.class)
 public interface OrderFromCartDraft {
 
     /**
-    *  <p>Platform-generated unique identifier of the Cart from which you can create an Order.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Cart from which you can create an Order.</p>
+     */
     @Deprecated
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
-    */
+     *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
+     */
     @Valid
     @JsonProperty("cart")
     public CartResourceIdentifier getCart();
@@ -39,8 +49,8 @@ public interface OrderFromCartDraft {
     public Long getVersion();
 
     /**
-    *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
-    */
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     */
 
     @JsonProperty("orderNumber")
     public String getOrderNumber();
@@ -52,8 +62,8 @@ public interface OrderFromCartDraft {
     public ShipmentState getShipmentState();
 
     /**
-    *  <p>Order will be created with <code>Open</code> status by default.</p>
-    */
+     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     */
 
     @JsonProperty("orderState")
     public OrderState getOrderState();
@@ -63,8 +73,8 @@ public interface OrderFromCartDraft {
     public StateResourceIdentifier getState();
 
     /**
-    *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
-    */
+     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

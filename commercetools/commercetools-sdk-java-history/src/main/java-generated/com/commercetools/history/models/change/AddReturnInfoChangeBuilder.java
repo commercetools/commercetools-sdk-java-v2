@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AddReturnInfoChange addReturnInfoChange = AddReturnInfoChange.builder()
+           .change("{change}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> {
 
     private String change;
@@ -15,8 +26,8 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
     private com.commercetools.history.models.common.ReturnInfo nextValue;
 
     /**
-    *  <p>Update action for <code>addReturnInfo</code></p>
-    */
+     *  <p>Update action for <code>addReturnInfo</code></p>
+     */
 
     public AddReturnInfoChangeBuilder change(final String change) {
         this.change = change;

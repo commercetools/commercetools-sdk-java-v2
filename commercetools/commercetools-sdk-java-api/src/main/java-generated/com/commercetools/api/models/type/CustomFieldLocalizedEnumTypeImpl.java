@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Field type for localized enum values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Field type for localized enum values.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnumType, ModelBase {
 
     private String name;
@@ -40,8 +40,8 @@ public class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnu
     }
 
     /**
-    *  <p>Allowed values.</p>
-    */
+     *  <p>Allowed values.</p>
+     */
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
         return this.values;
     }

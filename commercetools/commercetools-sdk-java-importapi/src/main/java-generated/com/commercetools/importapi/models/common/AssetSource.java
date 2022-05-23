@@ -14,9 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>An AssetSource is a representation of an Asset in a specific format, for example, a video in a certain encoding or an image in a certain resolution.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>An AssetSource is a representation of an Asset in a specific format, for example, a video in a certain encoding or an image in a certain resolution.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AssetSource assetSource = AssetSource.builder()
+           .uri("{uri}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssetSourceImpl.class)
 public interface AssetSource {
 
@@ -28,8 +37,8 @@ public interface AssetSource {
     public String getKey();
 
     /**
-    *  <p>The width and height of the Asset Source.</p>
-    */
+     *  <p>The width and height of the Asset Source.</p>
+     */
     @Valid
     @JsonProperty("dimensions")
     public AssetDimensions getDimensions();

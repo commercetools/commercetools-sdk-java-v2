@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswordUpdatedMessagePayload, ModelBase {
 
     private String type;
@@ -36,8 +36,8 @@ public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswo
     }
 
     /**
-    *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
-    */
+     *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
+     */
     public Boolean getReset() {
         return this.reset;
     }

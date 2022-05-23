@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductVariantImport productVariantImport = ProductVariantImport.builder()
+           .key("{key}")
+           .isMasterVariant(true)
+           .product(productBuilder -> productBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImportBuilder implements Builder<ProductVariantImport> {
 
     private String key;
@@ -39,8 +51,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.sku</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.sku</code>.</p>
+     */
 
     public ProductVariantImportBuilder sku(@Nullable final String sku) {
         this.sku = sku;
@@ -48,8 +60,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     */
 
     public ProductVariantImportBuilder isMasterVariant(final Boolean isMasterVariant) {
         this.isMasterVariant = isMasterVariant;
@@ -57,8 +69,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     */
 
     public ProductVariantImportBuilder attributes(
             @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
@@ -67,8 +79,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     */
 
     public ProductVariantImportBuilder attributes(
             @Nullable final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
@@ -77,8 +89,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     */
 
     public ProductVariantImportBuilder plusAttributes(
             @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
@@ -90,8 +102,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     */
 
     public ProductVariantImportBuilder plusAttributes(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
@@ -104,8 +116,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     */
 
     public ProductVariantImportBuilder withAttributes(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
@@ -116,8 +128,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.images</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     */
 
     public ProductVariantImportBuilder images(
             @Nullable final com.commercetools.importapi.models.common.Image... images) {
@@ -126,8 +138,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.images</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     */
 
     public ProductVariantImportBuilder images(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
@@ -136,8 +148,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.images</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     */
 
     public ProductVariantImportBuilder plusImages(
             @Nullable final com.commercetools.importapi.models.common.Image... images) {
@@ -149,8 +161,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.images</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     */
 
     public ProductVariantImportBuilder plusImages(
             Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
@@ -162,8 +174,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.images</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     */
 
     public ProductVariantImportBuilder withImages(
             Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
@@ -173,8 +185,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.assets</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     */
 
     public ProductVariantImportBuilder assets(
             @Nullable final com.commercetools.importapi.models.common.Asset... assets) {
@@ -183,8 +195,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.assets</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     */
 
     public ProductVariantImportBuilder assets(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
@@ -193,8 +205,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.assets</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     */
 
     public ProductVariantImportBuilder plusAssets(
             @Nullable final com.commercetools.importapi.models.common.Asset... assets) {
@@ -206,8 +218,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.assets</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     */
 
     public ProductVariantImportBuilder plusAssets(
             Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
@@ -219,8 +231,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>Maps to <code>ProductVariant.assets</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     */
 
     public ProductVariantImportBuilder withAssets(
             Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
@@ -230,8 +242,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
-    */
+     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     */
 
     public ProductVariantImportBuilder publish(@Nullable final Boolean publish) {
         this.publish = publish;
@@ -239,8 +251,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
-    */
+     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     */
 
     public ProductVariantImportBuilder product(
             Function<com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReferenceBuilder> builder) {
@@ -249,8 +261,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-    *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
-    */
+     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     */
 
     public ProductVariantImportBuilder product(
             final com.commercetools.importapi.models.common.ProductKeyReference product) {

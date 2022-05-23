@@ -7,7 +7,19 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   RemoveTaxRateChange removeTaxRateChange = RemoveTaxRateChange.builder()
+           .change("{change}")
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> {
 
     private String change;
@@ -17,8 +29,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     private com.commercetools.history.models.common.TaxRate nextValue;
 
     /**
-    *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
-    */
+     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     */
 
     public RemoveTaxRateChangeBuilder change(final String change) {
         this.change = change;
@@ -26,8 +38,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public RemoveTaxRateChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
@@ -36,8 +48,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public RemoveTaxRateChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxRate previousValue) {
@@ -46,8 +58,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public RemoveTaxRateChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
@@ -56,8 +68,8 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public RemoveTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;

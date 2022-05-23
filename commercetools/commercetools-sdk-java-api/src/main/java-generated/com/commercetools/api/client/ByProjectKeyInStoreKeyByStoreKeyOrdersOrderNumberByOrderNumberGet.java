@@ -17,10 +17,22 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Returns an order by its order number from a specific Store.</p>
-*  <p>If the order exists in the commercetools project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error. In case the orderNumber does not match the regular expression [a-zA-Z0-9_-]+, it should be provided in URL-encoded format.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Returns an order by its order number from a specific Store.</p>
+ <p>If the order exists in the commercetools project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error. In case the orderNumber does not match the regular expression [a-zA-Z0-9_-]+, it should be provided in URL-encoded format.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .inStoreKeyWithStoreKeyValue("{storeKey}")
+           .orders()
+           .withOrderNumber("{orderNumber}")
+           .get()
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet, com.commercetools.api.models.order.Order>
         implements

@@ -15,7 +15,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   LineItemStateTransitionMessagePayload lineItemStateTransitionMessagePayload = LineItemStateTransitionMessagePayload.builder()
+           .lineItemId("{lineItemId}")
+           .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .quantity(0.3)
+           .fromState(fromStateBuilder -> fromStateBuilder)
+           .toState(toStateBuilder -> toStateBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemStateTransitionMessagePayloadImpl.class)
 public interface LineItemStateTransitionMessagePayload extends OrderMessagePayload {
 
@@ -34,16 +48,16 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     public Long getQuantity();
 
     /**
-    *  <p>Reference to a State.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("fromState")
     public StateReference getFromState();
 
     /**
-    *  <p>Reference to a State.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("toState")

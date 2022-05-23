@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderImport orderImport = OrderImport.builder()
+           .orderNumber("{orderNumber}")
+           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportBuilder implements Builder<OrderImport> {
 
     private String orderNumber;
@@ -77,8 +88,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     private java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses;
 
     /**
-    *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
-    */
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     */
 
     public OrderImportBuilder orderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
@@ -99,8 +110,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.customerEmail</code>.</p>
-    */
+     *  <p>Maps to <code>Order.customerEmail</code>.</p>
+     */
 
     public OrderImportBuilder customerEmail(@Nullable final String customerEmail) {
         this.customerEmail = customerEmail;
@@ -108,8 +119,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.lineItems</code>.</p>
-    */
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     */
 
     public OrderImportBuilder lineItems(
             @Nullable final com.commercetools.importapi.models.orders.LineItemImportDraft... lineItems) {
@@ -118,8 +129,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.lineItems</code>.</p>
-    */
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     */
 
     public OrderImportBuilder lineItems(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.LineItemImportDraft> lineItems) {
@@ -128,8 +139,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.lineItems</code>.</p>
-    */
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     */
 
     public OrderImportBuilder plusLineItems(
             @Nullable final com.commercetools.importapi.models.orders.LineItemImportDraft... lineItems) {
@@ -141,8 +152,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.lineItems</code>.</p>
-    */
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     */
 
     public OrderImportBuilder plusLineItems(
             Function<com.commercetools.importapi.models.orders.LineItemImportDraftBuilder, com.commercetools.importapi.models.orders.LineItemImportDraftBuilder> builder) {
@@ -155,8 +166,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.lineItems</code>.</p>
-    */
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     */
 
     public OrderImportBuilder withLineItems(
             Function<com.commercetools.importapi.models.orders.LineItemImportDraftBuilder, com.commercetools.importapi.models.orders.LineItemImportDraftBuilder> builder) {
@@ -167,8 +178,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.customLineItems</code></p>
-    */
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     */
 
     public OrderImportBuilder customLineItems(
             @Nullable final com.commercetools.importapi.models.orders.CustomLineItemDraft... customLineItems) {
@@ -177,8 +188,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.customLineItems</code></p>
-    */
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     */
 
     public OrderImportBuilder customLineItems(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.CustomLineItemDraft> customLineItems) {
@@ -187,8 +198,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.customLineItems</code></p>
-    */
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     */
 
     public OrderImportBuilder plusCustomLineItems(
             @Nullable final com.commercetools.importapi.models.orders.CustomLineItemDraft... customLineItems) {
@@ -200,8 +211,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.customLineItems</code></p>
-    */
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     */
 
     public OrderImportBuilder plusCustomLineItems(
             Function<com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder, com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder> builder) {
@@ -214,8 +225,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.customLineItems</code></p>
-    */
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     */
 
     public OrderImportBuilder withCustomLineItems(
             Function<com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder, com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder> builder) {
@@ -226,8 +237,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.totalPrice</code>.</p>
-    */
+     *  <p>Maps to <code>Order.totalPrice</code>.</p>
+     */
 
     public OrderImportBuilder totalPrice(final com.commercetools.importapi.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
@@ -235,8 +246,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.totalPrice</code>.</p>
-    */
+     *  <p>Maps to <code>Order.totalPrice</code>.</p>
+     */
 
     public OrderImportBuilder totalPrice(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
@@ -245,8 +256,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.taxedPrice</code>.</p>
-    */
+     *  <p>Maps to <code>Order.taxedPrice</code>.</p>
+     */
 
     public OrderImportBuilder taxedPrice(
             Function<com.commercetools.importapi.models.orders.TaxedPriceBuilder, com.commercetools.importapi.models.orders.TaxedPriceBuilder> builder) {
@@ -255,8 +266,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.taxedPrice</code>.</p>
-    */
+     *  <p>Maps to <code>Order.taxedPrice</code>.</p>
+     */
 
     public OrderImportBuilder taxedPrice(
             @Nullable final com.commercetools.importapi.models.orders.TaxedPrice taxedPrice) {
@@ -265,8 +276,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.shippingAddress</code>.</p>
-    */
+     *  <p>Maps to <code>Order.shippingAddress</code>.</p>
+     */
 
     public OrderImportBuilder shippingAddress(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
@@ -275,8 +286,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.shippingAddress</code>.</p>
-    */
+     *  <p>Maps to <code>Order.shippingAddress</code>.</p>
+     */
 
     public OrderImportBuilder shippingAddress(
             @Nullable final com.commercetools.importapi.models.common.Address shippingAddress) {
@@ -285,8 +296,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.billingAddress</code>.</p>
-    */
+     *  <p>Maps to <code>Order.billingAddress</code>.</p>
+     */
 
     public OrderImportBuilder billingAddress(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
@@ -295,8 +306,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.billingAddress</code>.</p>
-    */
+     *  <p>Maps to <code>Order.billingAddress</code>.</p>
+     */
 
     public OrderImportBuilder billingAddress(
             @Nullable final com.commercetools.importapi.models.common.Address billingAddress) {
@@ -305,8 +316,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.customerGroup</code>.</p>
-    */
+     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     */
 
     public OrderImportBuilder customerGroup(
             Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder> builder) {
@@ -317,8 +328,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.customerGroup</code>.</p>
-    */
+     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     */
 
     public OrderImportBuilder customerGroup(
             @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
@@ -327,8 +338,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.country</code>.</p>
-    */
+     *  <p>Maps to <code>Order.country</code>.</p>
+     */
 
     public OrderImportBuilder country(@Nullable final String country) {
         this.country = country;
@@ -336,8 +347,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.orderState</code>.</p>
-    */
+     *  <p>Maps to <code>Order.orderState</code>.</p>
+     */
 
     public OrderImportBuilder orderState(
             @Nullable final com.commercetools.importapi.models.orders.OrderState orderState) {
@@ -346,8 +357,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.shipmentState</code>.</p>
-    */
+     *  <p>Maps to <code>Order.shipmentState</code>.</p>
+     */
 
     public OrderImportBuilder shipmentState(
             @Nullable final com.commercetools.importapi.models.orders.ShipmentState shipmentState) {
@@ -356,8 +367,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.paymentState</code>.</p>
-    */
+     *  <p>Maps to <code>Order.paymentState</code>.</p>
+     */
 
     public OrderImportBuilder paymentState(
             @Nullable final com.commercetools.importapi.models.orders.PaymentState paymentState) {
@@ -366,8 +377,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.shippingInfo</code>.</p>
-    */
+     *  <p>Maps to <code>Order.shippingInfo</code>.</p>
+     */
 
     public OrderImportBuilder shippingInfo(
             Function<com.commercetools.importapi.models.orders.ShippingInfoImportDraftBuilder, com.commercetools.importapi.models.orders.ShippingInfoImportDraftBuilder> builder) {
@@ -377,8 +388,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.shippingInfo</code>.</p>
-    */
+     *  <p>Maps to <code>Order.shippingInfo</code>.</p>
+     */
 
     public OrderImportBuilder shippingInfo(
             @Nullable final com.commercetools.importapi.models.orders.ShippingInfoImportDraft shippingInfo) {
@@ -387,8 +398,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.completedAt</code>.</p>
-    */
+     *  <p>Maps to <code>Order.completedAt</code>.</p>
+     */
 
     public OrderImportBuilder completedAt(@Nullable final java.time.ZonedDateTime completedAt) {
         this.completedAt = completedAt;
@@ -396,8 +407,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.custom</code>.</p>
-    */
+     *  <p>Maps to <code>Order.custom</code>.</p>
+     */
 
     public OrderImportBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
@@ -406,8 +417,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.custom</code>.</p>
-    */
+     *  <p>Maps to <code>Order.custom</code>.</p>
+     */
 
     public OrderImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;
@@ -415,8 +426,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.inventoryMode</code>.</p>
-    */
+     *  <p>Maps to <code>Order.inventoryMode</code>.</p>
+     */
 
     public OrderImportBuilder inventoryMode(
             @Nullable final com.commercetools.importapi.models.orders.InventoryMode inventoryMode) {
@@ -425,8 +436,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
-    */
+     *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
+     */
 
     public OrderImportBuilder taxRoundingMode(
             @Nullable final com.commercetools.importapi.models.orders.RoundingMode taxRoundingMode) {
@@ -435,8 +446,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.taxCalculationMode</code>.</p>
-    */
+     *  <p>Maps to <code>Order.taxCalculationMode</code>.</p>
+     */
 
     public OrderImportBuilder taxCalculationMode(
             @Nullable final com.commercetools.importapi.models.orders.TaxCalculationMode taxCalculationMode) {
@@ -445,8 +456,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.origin</code>.</p>
-    */
+     *  <p>Maps to <code>Order.origin</code>.</p>
+     */
 
     public OrderImportBuilder origin(@Nullable final com.commercetools.importapi.models.orders.CartOrigin origin) {
         this.origin = origin;
@@ -454,8 +465,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
-    */
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     */
 
     public OrderImportBuilder itemShippingAddresses(
             @Nullable final com.commercetools.importapi.models.common.Address... itemShippingAddresses) {
@@ -464,8 +475,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
-    */
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     */
 
     public OrderImportBuilder itemShippingAddresses(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses) {
@@ -474,8 +485,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
-    */
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     */
 
     public OrderImportBuilder plusItemShippingAddresses(
             @Nullable final com.commercetools.importapi.models.common.Address... itemShippingAddresses) {
@@ -487,8 +498,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
-    */
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     */
 
     public OrderImportBuilder plusItemShippingAddresses(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
@@ -501,8 +512,8 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-    *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
-    */
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     */
 
     public OrderImportBuilder withItemShippingAddresses(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {

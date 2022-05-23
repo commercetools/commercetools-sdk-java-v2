@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TermFacetResult termFacetResult = TermFacetResult.builder()
+           .dataType(TermFacetResultType.TEXT)
+           .missing(0.3)
+           .total(0.3)
+           .other(0.3)
+           .plusTerms(termsBuilder -> termsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     private com.commercetools.api.models.product.TermFacetResultType dataType;

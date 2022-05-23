@@ -19,7 +19,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomLineItemImportDraft customLineItemImportDraft = CustomLineItemImportDraft.builder()
+           .name(nameBuilder -> nameBuilder)
+           .quantity(0.3)
+           .money(moneyBuilder -> moneyBuilder)
+           .slug("{slug}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemImportDraftImpl.class)
 public interface CustomLineItemImportDraft
         extends com.commercetools.api.models.CustomizableDraft<CustomLineItemImportDraft> {
@@ -30,15 +43,15 @@ public interface CustomLineItemImportDraft
     public LocalizedString getName();
 
     /**
-    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-    *  <p>The cost to add to the cart. The amount can be negative.</p>
-    */
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("money")
@@ -61,8 +74,8 @@ public interface CustomLineItemImportDraft
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

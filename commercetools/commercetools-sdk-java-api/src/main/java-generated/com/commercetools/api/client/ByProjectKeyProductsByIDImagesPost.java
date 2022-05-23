@@ -20,9 +20,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Uploads a binary image file to a given product variant. The supported image formats are JPEG, PNG and GIF.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Uploads a binary image file to a given product variant. The supported image formats are JPEG, PNG and GIF.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .products()
+           .withId("{ID}")
+           .images()
+           .post(file)
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductsByIDImagesPost extends
         BodyApiMethod<ByProjectKeyProductsByIDImagesPost, com.commercetools.api.models.product.Product, java.io.File> {
 

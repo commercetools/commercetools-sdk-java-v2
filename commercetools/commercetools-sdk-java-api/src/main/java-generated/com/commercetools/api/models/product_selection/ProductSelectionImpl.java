@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionImpl implements ProductSelection, ModelBase {
 
     private String id;
@@ -67,78 +67,78 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the ProductSelection.</p>
-    */
+     *  <p>Platform-generated unique identifier of the ProductSelection.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the ProductSelection.</p>
-    */
+     *  <p>Current version of the ProductSelection.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
+     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
+     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier of the ProductSelection.</p>
-    */
+     *  <p>User-defined unique identifier of the ProductSelection.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Name of the ProductSelection.</p>
-    */
+     *  <p>Name of the ProductSelection.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
-    */
+     *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
+     */
     public Integer getProductCount() {
         return this.productCount;
     }
 
     /**
-    *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
-    */
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
+     */
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
     }
 
     /**
-    *  <p>Custom Fields of this ProductSelection.</p>
-    */
+     *  <p>Custom Fields of this ProductSelection.</p>
+     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

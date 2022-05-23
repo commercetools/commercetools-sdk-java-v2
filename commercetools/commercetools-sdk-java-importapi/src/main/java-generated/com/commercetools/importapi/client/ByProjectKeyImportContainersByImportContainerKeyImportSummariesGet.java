@@ -14,9 +14,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Retrieves an ImportSummary for the given import container. An ImportSummary is calculated on demand.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Retrieves an ImportSummary for the given import container. An ImportSummary is calculated on demand.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary>> result = apiRoot
+           .withProjectKeyValue("{projectKey}")
+           .importContainers()
+           .withImportContainerKeyValue("{importContainerKey}")
+           .importSummaries()
+           .get()
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet extends
         ApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet, com.commercetools.importapi.models.importsummaries.ImportSummary>
         implements

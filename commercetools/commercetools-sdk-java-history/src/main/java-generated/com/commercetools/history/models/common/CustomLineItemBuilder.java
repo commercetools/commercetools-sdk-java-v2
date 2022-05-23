@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomLineItem customLineItem = CustomLineItem.builder()
+           .id("{id}")
+           .name(nameBuilder -> nameBuilder)
+           .money(moneyBuilder -> moneyBuilder)
+           .taxedPrice(taxedPriceBuilder -> taxedPriceBuilder)
+           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+           .slug("{slug}")
+           .quantity(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private String id;
@@ -25,8 +41,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     private Integer quantity;
 
     /**
-    *  <p>The unique ID of this CustomLineItem.</p>
-    */
+     *  <p>The unique ID of this CustomLineItem.</p>
+     */
 
     public CustomLineItemBuilder id(final String id) {
         this.id = id;
@@ -78,8 +94,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-    *  <p>A unique String in the cart to identify this CustomLineItem.</p>
-    */
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     */
 
     public CustomLineItemBuilder slug(final String slug) {
         this.slug = slug;
@@ -87,8 +103,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     */
 
     public CustomLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;

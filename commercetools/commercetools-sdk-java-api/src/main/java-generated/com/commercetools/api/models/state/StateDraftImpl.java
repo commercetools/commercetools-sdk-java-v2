@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateDraftImpl implements StateDraft, ModelBase {
 
     private String key;
@@ -52,55 +52,55 @@ public class StateDraftImpl implements StateDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the State.</p>
-    */
+     *  <p>User-defined unique identifier for the State.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Specify to which resource or object type the State is assigned to.</p>
-    */
+     *  <p>Specify to which resource or object type the State is assigned to.</p>
+     */
     public com.commercetools.api.models.state.StateTypeEnum getType() {
         return this.type;
     }
 
     /**
-    *  <p>Name of the State.</p>
-    */
+     *  <p>Name of the State.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Description of the State.</p>
-    */
+     *  <p>Description of the State.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
-    */
+     *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
+     */
     public Boolean getInitial() {
         return this.initial;
     }
 
     /**
-    *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
-    */
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     */
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }
 
     /**
-    *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
-    *  <ul>
-    *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
-    *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
-    *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>
-    */
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
     public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions() {
         return this.transitions;
     }

@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingInfoImportDraft shippingInfoImportDraft = ShippingInfoImportDraft.builder()
+           .shippingMethodName("{shippingMethodName}")
+           .price(priceBuilder -> priceBuilder)
+           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImportDraft> {
 
     private String shippingMethodName;
@@ -53,8 +65,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>The shipping rate used to determine the price.</p>
-    */
+     *  <p>The shipping rate used to determine the price.</p>
+     */
 
     public ShippingInfoImportDraftBuilder shippingRate(
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
@@ -64,8 +76,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>The shipping rate used to determine the price.</p>
-    */
+     *  <p>The shipping rate used to determine the price.</p>
+     */
 
     public ShippingInfoImportDraftBuilder shippingRate(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
@@ -100,8 +112,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>Not set if custom shipping method is used.</p>
-    */
+     *  <p>Not set if custom shipping method is used.</p>
+     */
 
     public ShippingInfoImportDraftBuilder shippingMethod(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
@@ -112,8 +124,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>Not set if custom shipping method is used.</p>
-    */
+     *  <p>Not set if custom shipping method is used.</p>
+     */
 
     public ShippingInfoImportDraftBuilder shippingMethod(
             @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
@@ -122,8 +134,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
-    */
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     */
 
     public ShippingInfoImportDraftBuilder deliveries(
             @Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
@@ -132,8 +144,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
-    */
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     */
 
     public ShippingInfoImportDraftBuilder deliveries(
             @Nullable final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
@@ -142,8 +154,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
-    */
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
             @Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
@@ -155,8 +167,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
-    */
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
             Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
@@ -168,8 +180,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
-    */
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     */
 
     public ShippingInfoImportDraftBuilder withDeliveries(
             Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
@@ -193,8 +205,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-    *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
-    */
+     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     */
 
     public ShippingInfoImportDraftBuilder shippingMethodState(
             @Nullable final com.commercetools.api.models.cart.ShippingMethodState shippingMethodState) {

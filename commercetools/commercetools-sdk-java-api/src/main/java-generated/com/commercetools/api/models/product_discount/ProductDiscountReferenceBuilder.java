@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductDiscountReference productDiscountReference = ProductDiscountReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountReference> {
 
     private String id;
@@ -18,8 +28,8 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     private com.commercetools.api.models.product_discount.ProductDiscount obj;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>
+     */
 
     public ProductDiscountReferenceBuilder id(final String id) {
         this.id = id;
@@ -27,8 +37,8 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-    *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
-    */
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     */
 
     public ProductDiscountReferenceBuilder obj(
             Function<com.commercetools.api.models.product_discount.ProductDiscountBuilder, com.commercetools.api.models.product_discount.ProductDiscountBuilder> builder) {
@@ -37,8 +47,8 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-    *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
-    */
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     */
 
     public ProductDiscountReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.product_discount.ProductDiscount obj) {

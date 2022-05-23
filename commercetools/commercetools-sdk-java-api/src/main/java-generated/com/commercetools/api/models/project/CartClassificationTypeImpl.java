@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartClassificationTypeImpl implements CartClassificationType, ModelBase {
 
     private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
@@ -34,15 +34,15 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
     }
 
     /**
-    *  <p>Can be one of the following or absent.</p>
-    */
+     *  <p>Can be one of the following or absent.</p>
+     */
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
         return this.type;
     }
 
     /**
-    *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
-    */
+     *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
+     */
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
         return this.values;
     }

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractionChange, ModelBase {
 
     private String type;
@@ -40,15 +40,15 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
     }
 
     /**
-    *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
-    */
+     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     */
     public String getChange() {
         return this.change;
     }
 
     /**
-    *  <p>Only available if <code>expand</code> is set to true</p>
-    */
+     *  <p>Only available if <code>expand</code> is set to true</p>
+     */
     public com.commercetools.history.models.change_value.CustomFieldExpandedValue getNextValue() {
         return this.nextValue;
     }

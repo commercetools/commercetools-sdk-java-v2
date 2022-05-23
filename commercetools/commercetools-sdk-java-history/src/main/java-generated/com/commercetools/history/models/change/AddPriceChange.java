@@ -14,7 +14,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AddPriceChange addPriceChange = AddPriceChange.builder()
+           .change("{change}")
+           .catalogData("{catalogData}")
+           .priceId("{priceId}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddPriceChangeImpl.class)
 public interface AddPriceChange extends Change {
 
@@ -25,8 +38,8 @@ public interface AddPriceChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for adding prices</p>
-    */
+     *  <p>Update action for adding prices</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

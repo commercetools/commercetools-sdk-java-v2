@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>If a language is used by a Store, it cannot be deleted. Attempts to delete such language will lead to LanguageUsedInStores errors.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>If a language is used by a Store, it cannot be deleted. Attempts to delete such language will lead to LanguageUsedInStores errors.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesAction, ModelBase {
 
     private String action;
@@ -39,8 +39,8 @@ public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesA
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
     public java.util.List<String> getLanguages() {
         return this.languages;
     }

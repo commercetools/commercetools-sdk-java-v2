@@ -17,9 +17,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This endpoint takes arbitrary product names or image URLs and generates recommendations from a general set of categories, which cover a broad range of industries. The full list of supported categories can be found here. These are independent of the categories that are actually defined in your project. The main purpose of this API is to provide a quick way to test the behavior of the category recommendations engine for different names and images. In contrast to the project-specific endpoint, this endpoint does not have activation criteria and is enabled for all projects.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>This endpoint takes arbitrary product names or image URLs and generates recommendations from a general set of categories, which cover a broad range of industries. The full list of supported categories can be found here. These are independent of the categories that are actually defined in your project. The main purpose of this API is to provide a quick way to test the behavior of the category recommendations engine for different names and images. In contrast to the project-specific endpoint, this endpoint does not have activation criteria and is enabled for all projects.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .recommendations()
+           .generalCategories()
+           .get()
+           .withProductName(productName)
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
         ApiMethod<ByProjectKeyRecommendationsGeneralCategoriesGet, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> {
 

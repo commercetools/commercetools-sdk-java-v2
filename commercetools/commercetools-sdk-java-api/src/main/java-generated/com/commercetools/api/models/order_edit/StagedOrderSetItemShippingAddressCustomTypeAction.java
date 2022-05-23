@@ -16,7 +16,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StagedOrderSetItemShippingAddressCustomTypeAction stagedOrderSetItemShippingAddressCustomTypeAction = StagedOrderSetItemShippingAddressCustomTypeAction.builder()
+           .addressKey("{addressKey}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetItemShippingAddressCustomTypeActionImpl.class)
 public interface StagedOrderSetItemShippingAddressCustomTypeAction extends StagedOrderUpdateAction {
 
@@ -27,15 +37,15 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     public String getAddressKey();
 
     /**
-    *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
-    */
+     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();

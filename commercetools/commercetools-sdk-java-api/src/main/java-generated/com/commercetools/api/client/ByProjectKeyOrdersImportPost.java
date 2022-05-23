@@ -14,9 +14,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Create an Order by Import</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Create an Order by Import</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .orders()
+           .importOrder()
+           .post(null)
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersImportPost extends
         BodyApiMethod<ByProjectKeyOrdersImportPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderImportDraft>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersImportPost> {

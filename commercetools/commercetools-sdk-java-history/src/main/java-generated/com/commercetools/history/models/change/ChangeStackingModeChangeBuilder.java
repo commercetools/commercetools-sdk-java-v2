@@ -6,7 +6,19 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeStackingModeChange changeStackingModeChange = ChangeStackingModeChange.builder()
+           .change("{change}")
+           .nextValue(StackingMode.STACKING)
+           .previousValue(StackingMode.STACKING)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingModeChange> {
 
     private String change;
@@ -16,8 +28,8 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     private com.commercetools.history.models.common.StackingMode previousValue;
 
     /**
-    *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
-    */
+     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     */
 
     public ChangeStackingModeChangeBuilder change(final String change) {
         this.change = change;

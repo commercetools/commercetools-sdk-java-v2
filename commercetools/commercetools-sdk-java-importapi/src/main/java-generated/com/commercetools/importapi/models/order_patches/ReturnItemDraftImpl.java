@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
 
     private Double quantity;
@@ -60,8 +60,8 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
-    */
+     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     */
     public com.commercetools.importapi.models.order_patches.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
     }

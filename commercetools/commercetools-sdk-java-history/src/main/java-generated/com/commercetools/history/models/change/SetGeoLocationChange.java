@@ -14,15 +14,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetGeoLocationChange setGeoLocationChange = SetGeoLocationChange.builder()
+           .change("{change}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetGeoLocationChangeImpl.class)
 public interface SetGeoLocationChange extends Change {
 
     String SET_GEO_LOCATION_CHANGE = "SetGeoLocationChange";
 
     /**
-    *  <p>Update action for <code>setGeoLocation</code></p>
-    */
+     *  <p>Update action for <code>setGeoLocation</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

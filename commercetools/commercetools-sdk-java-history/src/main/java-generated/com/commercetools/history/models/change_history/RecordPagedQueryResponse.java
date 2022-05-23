@@ -14,36 +14,49 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Response to a query request for Record.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Response to a query request for Record.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   RecordPagedQueryResponse recordPagedQueryResponse = RecordPagedQueryResponse.builder()
+           .limit(1)
+           .count(1)
+           .total(1)
+           .offset(1)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RecordPagedQueryResponseImpl.class)
 public interface RecordPagedQueryResponse {
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     @NotNull
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     */
     @NotNull
     @JsonProperty("total")
     public Integer getTotal();
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     @NotNull
     @JsonProperty("offset")
     public Integer getOffset();

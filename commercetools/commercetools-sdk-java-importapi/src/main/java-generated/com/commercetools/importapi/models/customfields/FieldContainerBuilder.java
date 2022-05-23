@@ -6,14 +6,24 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   FieldContainer fieldContainer = FieldContainer.builder()
+           .//(//Builder -> //Builder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldContainerBuilder implements Builder<FieldContainer> {
 
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values = new HashMap<>();
 
     /**
-    *  <p>Mapping from the custom field name to the actual value.</p>
-    */
+     *  <p>Mapping from the custom field name to the actual value.</p>
+     */
 
     public FieldContainerBuilder values(
             final Map<String, com.commercetools.importapi.models.customfields.CustomField> values) {
@@ -22,8 +32,8 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     }
 
     /**
-    *  <p>Mapping from the custom field name to the actual value.</p>
-    */
+     *  <p>Mapping from the custom field name to the actual value.</p>
+     */
 
     public FieldContainerBuilder addValue(final String key,
             final com.commercetools.importapi.models.customfields.CustomField value) {

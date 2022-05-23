@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A pair of SimilarProducts</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A pair of SimilarProducts</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductPairImpl implements SimilarProductPair, ModelBase {
 
     private Double confidence;
@@ -35,8 +35,8 @@ public class SimilarProductPairImpl implements SimilarProductPair, ModelBase {
     }
 
     /**
-    *  <p>The probability of product similarity.</p>
-    */
+     *  <p>The probability of product similarity.</p>
+     */
     public Double getConfidence() {
         return this.confidence;
     }

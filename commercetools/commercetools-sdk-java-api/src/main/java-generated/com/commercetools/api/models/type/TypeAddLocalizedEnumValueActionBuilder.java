@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TypeAddLocalizedEnumValueAction typeAddLocalizedEnumValueAction = TypeAddLocalizedEnumValueAction.builder()
+           .fieldName("{fieldName}")
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLocalizedEnumValueAction> {
 
     private String fieldName;
@@ -15,8 +26,8 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
     /**
-    *  <p><code>name</code> of the FieldDefinition to update.</p>
-    */
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     */
 
     public TypeAddLocalizedEnumValueActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
@@ -24,8 +35,8 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
 
     public TypeAddLocalizedEnumValueActionBuilder value(
             Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
@@ -34,8 +45,8 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
 
     public TypeAddLocalizedEnumValueActionBuilder value(
             final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {

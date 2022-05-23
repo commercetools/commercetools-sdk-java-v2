@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductVariant productVariant = ProductVariant.builder()
+           .id(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private Long id;
@@ -48,8 +58,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     private Boolean scopedPriceDiscounted;
 
     /**
-    *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
-    */
+     *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
+     */
 
     public ProductVariantBuilder id(final Long id) {
         this.id = id;
@@ -62,8 +72,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
-    */
+     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     */
 
     public ProductVariantBuilder key(@Nullable final String key) {
         this.key = key;

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAction, ModelBase {
 
     private String action;
@@ -36,8 +36,8 @@ public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAct
     }
 
     /**
-    *  <p>If not defined, the external ID is unset.</p>
-    */
+     *  <p>If not defined, the external ID is unset.</p>
+     */
     public String getExternalId() {
         return this.externalId;
     }

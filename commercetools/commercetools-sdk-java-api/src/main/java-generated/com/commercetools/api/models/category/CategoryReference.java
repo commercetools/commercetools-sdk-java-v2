@@ -15,24 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Reference to a Category.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Reference to a Category.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CategoryReference categoryReference = CategoryReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryReferenceImpl.class)
 public interface CategoryReference extends Reference, com.commercetools.api.models.Identifiable<Category> {
 
     String CATEGORY = "category";
 
     /**
-    *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
-    */
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public Category getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced Category.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced Category.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   RecordPagedQueryResponse recordPagedQueryResponse = RecordPagedQueryResponse.builder()
+           .limit(1)
+           .count(1)
+           .total(1)
+           .offset(1)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQueryResponse> {
 
     private Integer limit;
@@ -21,8 +35,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public RecordPagedQueryResponseBuilder limit(final Integer limit) {
         this.limit = limit;
@@ -30,8 +44,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
 
     public RecordPagedQueryResponseBuilder count(final Integer count) {
         this.count = count;
@@ -39,8 +53,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     */
 
     public RecordPagedQueryResponseBuilder total(final Integer total) {
         this.total = total;
@@ -48,8 +62,8 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public RecordPagedQueryResponseBuilder offset(final Integer offset) {
         this.offset = offset;

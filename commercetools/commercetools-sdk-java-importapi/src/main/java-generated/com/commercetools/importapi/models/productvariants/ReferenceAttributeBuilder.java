@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReferenceAttribute referenceAttribute = ReferenceAttribute.builder()
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     @Nullable
@@ -18,8 +28,8 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
     private com.commercetools.importapi.models.common.KeyReference value;
 
     /**
-    *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-    */
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     */
 
     public ReferenceAttributeBuilder name(@Nullable final String name) {
         this.name = name;
@@ -27,8 +37,8 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
     }
 
     /**
-    *  <p>References a resource by key.</p>
-    */
+     *  <p>References a resource by key.</p>
+     */
 
     public ReferenceAttributeBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
@@ -36,8 +46,8 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
     }
 
     /**
-    *  <p>References a resource by key.</p>
-    */
+     *  <p>References a resource by key.</p>
+     */
 
     public ReferenceAttributeBuilder value(
             Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {

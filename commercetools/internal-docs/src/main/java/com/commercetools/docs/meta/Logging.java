@@ -36,7 +36,7 @@ package com.commercetools.docs.meta;
  *
  * <p>The loggers form a hierarchy separated by a dot. The root logger is {@code commercetools}.</p>
  *
- * <p>The child loggers of commercetools Composable Commerce are the endpoints, so for example {@code commercetools.categories} for categories and {@code commercetools.product-types} for product types.</p>
+ * <p>The child loggers of commercetools Composable Commerce correspond with the names of the API endpoints, so for example {@code commercetools.categories} for Categories and {@code commercetools.product-types} for Product Types.</p>
  *
  * <p>The grandchild loggers refer to the action. {@code commercetools.categories.request} refers to performing requests per HTTPS to commercetools Composable Commerce for categories, {@code commercetools.categories.response} refers to the responses of the platform.</p>
  *

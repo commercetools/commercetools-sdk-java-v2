@@ -93,13 +93,13 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <div class="block"><p>To create a new product, send a representation that is going to become the initial staged representation of the new product in the master catalog. If price selection query parameters are provided, the selected prices will be added to the response.</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.product.Product&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .products()
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

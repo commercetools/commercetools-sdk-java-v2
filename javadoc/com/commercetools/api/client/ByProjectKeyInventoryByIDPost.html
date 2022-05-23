@@ -91,14 +91,14 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyInventoryByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDPost</a>,&#8203;<a href="../models/inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a>,&#8203;<a href="../models/inventory/InventoryEntryUpdate.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdate</a>&gt;
 implements <a href="ConflictingTrait.html" title="interface in com.commercetools.api.client">ConflictingTrait</a>&lt;<a href="ByProjectKeyInventoryByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDPost</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInventoryByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDPost</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInventoryByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDPost</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInventoryByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDPost</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.inventory.InventoryEntry&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .inventory()
            .withId("{ID}")
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

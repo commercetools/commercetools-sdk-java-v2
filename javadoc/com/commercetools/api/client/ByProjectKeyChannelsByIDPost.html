@@ -91,14 +91,14 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyChannelsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyChannelsByIDPost</a>,&#8203;<a href="../models/channel/Channel.html" title="interface in com.commercetools.api.models.channel">Channel</a>,&#8203;<a href="../models/channel/ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a>&gt;
 implements <a href="ConflictingTrait.html" title="interface in com.commercetools.api.client">ConflictingTrait</a>&lt;<a href="ByProjectKeyChannelsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyChannelsByIDPost</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyChannelsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyChannelsByIDPost</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyChannelsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyChannelsByIDPost</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyChannelsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyChannelsByIDPost</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.channel.Channel>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.channel.Channel&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .channels()
            .withId("{ID}")
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

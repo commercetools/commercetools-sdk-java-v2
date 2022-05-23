@@ -93,13 +93,13 @@ implements <a href="ConflictingTrait.html" title="interface in com.commercetools
 <div class="block"><p>Creates an order from a Cart. The cart must have a shipping address set before creating an order. When using the Platform TaxMode, the shipping address is used for tax calculation.</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.order.Order&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .orders()
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

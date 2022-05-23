@@ -91,14 +91,14 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyMePaymentsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMePaymentsPost</a>,&#8203;<a href="../models/me/MyPayment.html" title="interface in com.commercetools.api.models.me">MyPayment</a>,&#8203;<a href="../models/me/MyPaymentDraft.html" title="interface in com.commercetools.api.models.me">MyPaymentDraft</a>&gt;
 implements <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyMePaymentsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMePaymentsPost</a>&gt;, <a href="Deprecatable201Trait.html" title="interface in com.commercetools.api.client">Deprecatable201Trait</a>&lt;<a href="ByProjectKeyMePaymentsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMePaymentsPost</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyMePaymentsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMePaymentsPost</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyPayment>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.me.MyPayment&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .me()
            .payments()
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

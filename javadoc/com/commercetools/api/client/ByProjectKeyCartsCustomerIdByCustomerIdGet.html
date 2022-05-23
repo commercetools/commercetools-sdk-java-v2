@@ -92,14 +92,14 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
  <p>The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.cart.Cart&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .carts()
            .withCustomerId("{customerId}")
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

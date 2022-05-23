@@ -91,8 +91,8 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyOrdersEditsByIDApplyPost.html" title="class in com.commercetools.api.client">ByProjectKeyOrdersEditsByIDApplyPost</a>,&#8203;<a href="../models/order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>,&#8203;<a href="../models/order_edit/OrderEditApply.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApply</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyOrdersEditsByIDApplyPost.html" title="class in com.commercetools.api.client">ByProjectKeyOrdersEditsByIDApplyPost</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.order_edit.OrderEdit&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .orders()
            .edits()
@@ -100,7 +100,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
            .apply()
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

@@ -90,14 +90,14 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyMissingDataImagesPost.html#line.28">ByProjectKeyMissingDataImagesPost</a></span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyMissingDataImagesPost.html" title="class in com.commercetools.ml.client">ByProjectKeyMissingDataImagesPost</a>,&#8203;<a href="../models/common/TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a>,&#8203;<a href="../models/missing_data/MissingImagesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesSearchRequest</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.common.TaskToken>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.ml.models.common.TaskToken&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .missingData()
            .images()
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

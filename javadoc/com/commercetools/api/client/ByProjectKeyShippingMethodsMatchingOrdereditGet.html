@@ -89,8 +89,8 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyShippingMethodsMatchingOrdereditGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditGet</a>,&#8203;<a href="../models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyShippingMethodsMatchingOrdereditGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyShippingMethodsMatchingOrdereditGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditGet</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .shippingMethods()
            .matchingOrderedit()
@@ -98,7 +98,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
            .withOrderEditId(orderEditId)
            .withCountry(country)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

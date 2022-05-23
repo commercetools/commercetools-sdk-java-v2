@@ -89,14 +89,14 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a>,&#8203;<a href="../models/shopping_list/ShoppingListPagedQueryResponse.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListPagedQueryResponse</a>&gt;
 implements <a href="../models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a>,&#8203;<a href="../models/shopping_list/ShoppingListPagedQueryResponse.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListPagedQueryResponse</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a>&gt;, <a href="SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a>&gt;, <a href="PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a>&gt;, <a href="QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .inStoreKeyWithStoreKeyValue("{storeKey}")
            .shoppingLists()
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

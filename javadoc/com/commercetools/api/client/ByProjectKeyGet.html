@@ -89,12 +89,12 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyGet</a>,&#8203;<a href="../models/project/Project.html" title="interface in com.commercetools.api.models.project">Project</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyGet</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.project.Project>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.project.Project&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

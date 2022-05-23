@@ -91,15 +91,15 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <div class="block"><p>Gets the current or staged representation of a product by its ID from a specific Store.</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjection>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.product.ProductProjection&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .inStoreKeyWithStoreKeyValue("{storeKey}")
            .productProjections()
            .withKey("{key}")
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

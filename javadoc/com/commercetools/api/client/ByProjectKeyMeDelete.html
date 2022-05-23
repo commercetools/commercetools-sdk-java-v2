@@ -91,14 +91,14 @@ implements <a href="VersionedTrait.html" title="interface in com.commercetools.a
 <div class="block"><p>Delete my Customer</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.customer.Customer&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .me()
            .delete()
            .withVersion(version)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

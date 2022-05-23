@@ -89,14 +89,14 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersGet</a>,&#8203;<a href="../models/customer/CustomerPagedQueryResponse.html" title="interface in com.commercetools.api.models.customer">CustomerPagedQueryResponse</a>&gt;
 implements <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersGet</a>&gt;, <a href="SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersGet</a>&gt;, <a href="PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersGet</a>&gt;, <a href="QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersGet</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCustomersGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersGet</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerPagedQueryResponse>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.customer.CustomerPagedQueryResponse&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .inStoreKeyWithStoreKeyValue("{storeKey}")
            .customers()
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

@@ -91,14 +91,14 @@ implements <a href="SortableTrait.html" title="interface in com.commercetools.ap
 <div class="block"><p>Search Product Projection</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.product.ProductProjectionPagedSearchResponse&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .productProjections()
            .search()
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

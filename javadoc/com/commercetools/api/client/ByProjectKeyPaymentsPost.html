@@ -93,13 +93,13 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <div class="block"><p>To create a payment object a payment draft object has to be given with the request.</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.payment.Payment&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .payments()
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

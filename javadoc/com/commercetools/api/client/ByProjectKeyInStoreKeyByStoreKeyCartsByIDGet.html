@@ -91,15 +91,15 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <div class="block"><p>Returns a cart by its ID from a specific Store. If the cart exists in the commercetools project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error. The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.cart.Cart&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .inStoreKeyWithStoreKeyValue("{storeKey}")
            .carts()
            .withId("{ID}")
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

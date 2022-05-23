@@ -91,8 +91,8 @@ implements <a href="Secured_by_view_productsTrait.html" title="interface in com.
 <div class="block"><p>Retrieves the import operation with the given id.</p>
 
  <div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.importapi.models.importoperations.ImportOperation&gt;&gt; result = apiRoot
            .withProjectKeyValue("{projectKey}")
            .productTypes()
            .importSinkKeyWithImportSinkKeyValue("{importSinkKey}")
@@ -100,7 +100,7 @@ implements <a href="Secured_by_view_productsTrait.html" title="interface in com.
            .withIdValue("{id}")
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

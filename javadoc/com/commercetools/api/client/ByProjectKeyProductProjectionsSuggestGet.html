@@ -89,14 +89,14 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyProductProjectionsSuggestGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSuggestGet</a>,&#8203;<a href="../models/product/SuggestionResult.html" title="interface in com.commercetools.api.models.product">SuggestionResult</a>&gt;
 implements <a href="SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="ByProjectKeyProductProjectionsSuggestGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSuggestGet</a>&gt;, <a href="PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="ByProjectKeyProductProjectionsSuggestGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSuggestGet</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyProductProjectionsSuggestGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSuggestGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyProductProjectionsSuggestGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSuggestGet</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.SuggestionResult>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.product.SuggestionResult&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .productProjections()
            .suggest()
            .get()
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

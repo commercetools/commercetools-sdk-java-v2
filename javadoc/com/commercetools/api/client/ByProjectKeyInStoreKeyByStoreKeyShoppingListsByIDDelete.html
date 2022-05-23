@@ -89,8 +89,8 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a>,&#8203;<a href="../models/shopping_list/ShoppingList.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingList</a>&gt;
 implements <a href="DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a>&gt;, <a href="VersionedTrait.html" title="interface in com.commercetools.api.client">VersionedTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a>&gt;, <a href="ConflictingTrait.html" title="interface in com.commercetools.api.client">ConflictingTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.shopping_list.ShoppingList&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .inStoreKeyWithStoreKeyValue("{storeKey}")
            .shoppingLists()
@@ -98,7 +98,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
            .delete()
            .withVersion(version)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

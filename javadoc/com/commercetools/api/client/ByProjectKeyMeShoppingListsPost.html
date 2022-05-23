@@ -91,14 +91,14 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyMeShoppingListsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsPost</a>,&#8203;<a href="../models/shopping_list/ShoppingList.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingList</a>,&#8203;<a href="../models/me/MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&gt;
 implements <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyMeShoppingListsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsPost</a>&gt;, <a href="Deprecatable201Trait.html" title="interface in com.commercetools.api.client">Deprecatable201Trait</a>&lt;<a href="ByProjectKeyMeShoppingListsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsPost</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyMeShoppingListsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsPost</a>&gt;</span></div>
 <div class="block"><div class=code-example>
- <pre><code class='java'>
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList>> result = apiRoot
+ <pre><code class='java'><code>
+   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.shopping_list.ShoppingList&gt;&gt; result = apiRoot
            .withProjectKey("{projectKey}")
            .me()
            .shoppingLists()
            .post(null)
            .execute()
- </code></pre>
+ </code></code></pre>
  </div></div>
 </section>
 <section class="summary">

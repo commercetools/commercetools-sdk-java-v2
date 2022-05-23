@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   UserProvidedIdentifiers userProvidedIdentifiers = UserProvidedIdentifiers.builder()
-           .build()
- </code></pre>
- </div>
+ * UserProvidedIdentifiersBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     UserProvidedIdentifiers userProvidedIdentifiers = UserProvidedIdentifiers.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdentifiers> {
@@ -43,7 +45,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     private com.commercetools.api.models.message.ContainerAndKey containerAndKey;
 
     /**
-     *  <p>User-provided unique identifier of the resource.</p>
+     <*  <p>User-provided unique identifier of the resource.</p>>
      */
 
     public UserProvidedIdentifiersBuilder key(@Nullable final String key) {
@@ -51,20 +53,36 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
         return this;
     }
 
+    /**
+     <>
+     */
+
     public UserProvidedIdentifiersBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public UserProvidedIdentifiersBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public UserProvidedIdentifiersBuilder customerNumber(@Nullable final String customerNumber) {
         this.customerNumber = customerNumber;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public UserProvidedIdentifiersBuilder sku(@Nullable final String sku) {
         this.sku = sku;
@@ -72,7 +90,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public UserProvidedIdentifiersBuilder slug(
@@ -82,7 +100,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public UserProvidedIdentifiersBuilder slug(
@@ -92,7 +110,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     <*  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>>
      */
 
     public UserProvidedIdentifiersBuilder containerAndKey(
@@ -102,7 +120,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     <*  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>>
      */
 
     public UserProvidedIdentifiersBuilder containerAndKey(

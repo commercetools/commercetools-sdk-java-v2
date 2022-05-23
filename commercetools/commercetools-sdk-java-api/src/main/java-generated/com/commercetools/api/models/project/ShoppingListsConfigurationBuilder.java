@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListsConfiguration shoppingListsConfiguration = ShoppingListsConfiguration.builder()
-           .build()
- </code></pre>
- </div>
+ * ShoppingListsConfigurationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListsConfiguration shoppingListsConfiguration = ShoppingListsConfiguration.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsConfiguration> {
@@ -24,7 +26,7 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
     private Long deleteDaysAfterLastModification;
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
+     <*  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>>
      */
 
     public ShoppingListsConfigurationBuilder deleteDaysAfterLastModification(

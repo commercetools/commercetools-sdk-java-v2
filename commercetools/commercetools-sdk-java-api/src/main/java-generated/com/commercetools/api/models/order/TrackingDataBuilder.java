@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TrackingData trackingData = TrackingData.builder()
-           .build()
- </code></pre>
- </div>
+ * TrackingDataBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TrackingData trackingData = TrackingData.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TrackingDataBuilder implements Builder<TrackingData> {
@@ -36,7 +38,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     private Boolean isReturn;
 
     /**
-     *  <p>The ID to track one parcel.</p>
+     <*  <p>The ID to track one parcel.</p>>
      */
 
     public TrackingDataBuilder trackingId(@Nullable final String trackingId) {
@@ -45,7 +47,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     *  <p>The carrier that delivers the parcel.</p>
+     <*  <p>The carrier that delivers the parcel.</p>>
      */
 
     public TrackingDataBuilder carrier(@Nullable final String carrier) {
@@ -53,10 +55,18 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TrackingDataBuilder provider(@Nullable final String provider) {
         this.provider = provider;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TrackingDataBuilder providerTransaction(@Nullable final String providerTransaction) {
         this.providerTransaction = providerTransaction;
@@ -64,7 +74,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     <*  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>>
      */
 
     public TrackingDataBuilder isReturn(@Nullable final Boolean isReturn) {

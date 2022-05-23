@@ -10,21 +10,23 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DeliveryAddedMessage deliveryAddedMessage = DeliveryAddedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .delivery(deliveryBuilder -> deliveryBuilder)
-           .build()
- </code></pre>
- </div>
+ * DeliveryAddedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryAddedMessage deliveryAddedMessage = DeliveryAddedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .delivery(deliveryBuilder -> deliveryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage> {
@@ -55,7 +57,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     private com.commercetools.api.models.order.Delivery delivery;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public DeliveryAddedMessageBuilder id(final String id) {
@@ -63,15 +65,27 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryAddedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -79,7 +93,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public DeliveryAddedMessageBuilder lastModifiedBy(
@@ -89,7 +103,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public DeliveryAddedMessageBuilder lastModifiedBy(
@@ -99,7 +113,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public DeliveryAddedMessageBuilder createdBy(
@@ -109,7 +123,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public DeliveryAddedMessageBuilder createdBy(
@@ -118,13 +132,17 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public DeliveryAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -133,7 +151,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public DeliveryAddedMessageBuilder resource(
@@ -142,10 +160,18 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryAddedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryAddedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -155,17 +181,29 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryAddedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryAddedMessageBuilder delivery(
             Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
         this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryAddedMessageBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;

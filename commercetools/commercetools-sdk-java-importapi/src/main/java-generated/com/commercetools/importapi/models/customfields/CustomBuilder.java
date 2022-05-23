@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Custom custom = Custom.builder()
-           .type(typeBuilder -> typeBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Custom custom = Custom.builder()
+ *             .type(typeBuilder -> typeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomBuilder implements Builder<Custom> {
@@ -28,7 +30,7 @@ public class CustomBuilder implements Builder<Custom> {
     private com.commercetools.importapi.models.customfields.FieldContainer fields;
 
     /**
-     *  <p>The type that provides the field definitions for this object.</p>
+     <*  <p>The type that provides the field definitions for this object.</p>>
      */
 
     public CustomBuilder type(
@@ -38,7 +40,7 @@ public class CustomBuilder implements Builder<Custom> {
     }
 
     /**
-     *  <p>The type that provides the field definitions for this object.</p>
+     <*  <p>The type that provides the field definitions for this object.</p>>
      */
 
     public CustomBuilder type(final com.commercetools.importapi.models.common.TypeKeyReference type) {
@@ -47,7 +49,7 @@ public class CustomBuilder implements Builder<Custom> {
     }
 
     /**
-     *  <p>The custom fields of this object.</p>
+     <*  <p>The custom fields of this object.</p>>
      */
 
     public CustomBuilder fields(
@@ -57,7 +59,7 @@ public class CustomBuilder implements Builder<Custom> {
     }
 
     /**
-     *  <p>The custom fields of this object.</p>
+     <*  <p>The custom fields of this object.</p>>
      */
 
     public CustomBuilder fields(@Nullable final com.commercetools.importapi.models.customfields.FieldContainer fields) {

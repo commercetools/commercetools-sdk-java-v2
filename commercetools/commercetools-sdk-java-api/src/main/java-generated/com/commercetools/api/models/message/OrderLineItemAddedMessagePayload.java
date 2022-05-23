@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderLineItemAddedMessagePayload orderLineItemAddedMessagePayload = OrderLineItemAddedMessagePayload.builder()
-           .lineItem(lineItemBuilder -> lineItemBuilder)
-           .addedQuantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * OrderLineItemAddedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemAddedMessagePayload orderLineItemAddedMessagePayload = OrderLineItemAddedMessagePayload.builder()
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .addedQuantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemAddedMessagePayloadImpl.class)
@@ -31,11 +34,17 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
 
     String ORDER_LINE_ITEM_ADDED = "OrderLineItemAdded";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("lineItem")
     public LineItem getLineItem();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("addedQuantity")
     public Long getAddedQuantity();

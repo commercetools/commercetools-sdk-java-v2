@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeAddAttributeDefinitionAction productTypeAddAttributeDefinitionAction = ProductTypeAddAttributeDefinitionAction.builder()
-           .attribute(attributeBuilder -> attributeBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeAddAttributeDefinitionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeAddAttributeDefinitionAction productTypeAddAttributeDefinitionAction = ProductTypeAddAttributeDefinitionAction.builder()
+ *             .attribute(attributeBuilder -> attributeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeAddAttributeDefinitionActionImpl.class)
@@ -29,6 +32,9 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
 
     String ADD_ATTRIBUTE_DEFINITION = "addAttributeDefinition";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("attribute")

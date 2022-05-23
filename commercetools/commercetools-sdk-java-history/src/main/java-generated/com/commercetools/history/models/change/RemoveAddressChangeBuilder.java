@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveAddressChange removeAddressChange = RemoveAddressChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveAddressChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveAddressChange removeAddressChange = RemoveAddressChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> {
@@ -26,7 +28,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     private com.commercetools.history.models.common.Address previousValue;
 
     /**
-     *  <p>Update action for <code>removeAddress</code> action.</p>
+     <*  <p>Update action for <code>removeAddress</code> action.</p>>
      */
 
     public RemoveAddressChangeBuilder change(final String change) {
@@ -34,11 +36,19 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveAddressChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveAddressChangeBuilder previousValue(
             final com.commercetools.history.models.common.Address previousValue) {

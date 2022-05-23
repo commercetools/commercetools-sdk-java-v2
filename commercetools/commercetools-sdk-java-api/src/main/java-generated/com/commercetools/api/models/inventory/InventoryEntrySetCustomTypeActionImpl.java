@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InventoryEntrySetCustomTypeAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetCustomTypeActionImpl implements InventoryEntrySetCustomTypeAction, ModelBase {
 
@@ -36,20 +39,26 @@ public class InventoryEntrySetCustomTypeActionImpl implements InventoryEntrySetC
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     <*  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>>
      */
+
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     <*  <p>Sets the Custom Fields fields for the InventoryEntry.</p>>
      */
+
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

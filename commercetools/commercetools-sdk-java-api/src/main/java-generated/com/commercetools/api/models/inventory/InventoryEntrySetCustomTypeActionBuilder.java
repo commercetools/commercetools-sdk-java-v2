@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntrySetCustomTypeAction inventoryEntrySetCustomTypeAction = InventoryEntrySetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * InventoryEntrySetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntrySetCustomTypeAction inventoryEntrySetCustomTypeAction = InventoryEntrySetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetCustomTypeActionBuilder implements Builder<InventoryEntrySetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     <*  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>>
      */
 
     public InventoryEntrySetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     }
 
     /**
-     *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+     <*  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>>
      */
 
     public InventoryEntrySetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     <*  <p>Sets the Custom Fields fields for the InventoryEntry.</p>>
      */
 
     public InventoryEntrySetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
+     <*  <p>Sets the Custom Fields fields for the InventoryEntry.</p>>
      */
 
     public InventoryEntrySetCustomTypeActionBuilder fields(

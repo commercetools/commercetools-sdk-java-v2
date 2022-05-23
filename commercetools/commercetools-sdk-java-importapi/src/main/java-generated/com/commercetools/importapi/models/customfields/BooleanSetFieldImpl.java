@@ -35,11 +35,16 @@ public class BooleanSetFieldImpl implements BooleanSetField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<Boolean> getValue() {
         return this.value;

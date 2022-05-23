@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelTrackingData parcelTrackingData = ParcelTrackingData.builder()
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * ParcelTrackingDataBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelTrackingData parcelTrackingData = ParcelTrackingData.builder()
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
@@ -27,16 +29,28 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     @Nullable
     private com.commercetools.importapi.models.orders.TrackingData trackingData;
 
+    /**
+     <>
+     */
+
     public ParcelTrackingDataBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelTrackingDataBuilder trackingData(
             Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.importapi.models.orders.TrackingDataBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelTrackingDataBuilder trackingData(
             @Nullable final com.commercetools.importapi.models.orders.TrackingData trackingData) {

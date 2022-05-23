@@ -7,20 +7,26 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderRemoveParcelFromDeliveryAction stagedOrderRemoveParcelFromDeliveryAction = StagedOrderRemoveParcelFromDeliveryAction.builder()
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderRemoveParcelFromDeliveryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderRemoveParcelFromDeliveryAction stagedOrderRemoveParcelFromDeliveryAction = StagedOrderRemoveParcelFromDeliveryAction.builder()
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderRemoveParcelFromDeliveryActionBuilder
         implements Builder<StagedOrderRemoveParcelFromDeliveryAction> {
 
     private String parcelId;
+
+    /**
+     <>
+     */
 
     public StagedOrderRemoveParcelFromDeliveryActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;

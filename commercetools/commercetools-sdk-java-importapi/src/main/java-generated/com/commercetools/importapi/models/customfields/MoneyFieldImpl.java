@@ -35,11 +35,16 @@ public class MoneyFieldImpl implements MoneyField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;

@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountValueRelative cartDiscountValueRelative = CartDiscountValueRelative.builder()
-           .permyriad(0.3)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountValueRelativeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountValueRelative cartDiscountValueRelative = CartDiscountValueRelative.builder()
+ *             .permyriad(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountValueRelative> {
 
     private Long permyriad;
+
+    /**
+     <>
+     */
 
     public CartDiscountValueRelativeBuilder permyriad(final Long permyriad) {
         this.permyriad = permyriad;

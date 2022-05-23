@@ -13,16 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeChangeEnumKeyAction productTypeChangeEnumKeyAction = ProductTypeChangeEnumKeyAction.builder()
-           .attributeName("{attributeName}")
-           .key("{key}")
-           .newKey("{newKey}")
-           .build()
- </code></pre>
- </div>
+ * ProductTypeChangeEnumKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeEnumKeyAction productTypeChangeEnumKeyAction = ProductTypeChangeEnumKeyAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .key("{key}")
+ *             .newKey("{newKey}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeEnumKeyActionImpl.class)
@@ -30,14 +33,23 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
 
     String CHANGE_ENUM_KEY = "changeEnumKey";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("newKey")
     public String getNewKey();

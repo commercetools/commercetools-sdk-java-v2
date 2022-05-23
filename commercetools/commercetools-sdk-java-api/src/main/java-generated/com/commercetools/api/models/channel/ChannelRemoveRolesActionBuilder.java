@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelRemoveRolesAction channelRemoveRolesAction = ChannelRemoveRolesAction.builder()
-           .plusRoles(rolesBuilder -> rolesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChannelRemoveRolesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelRemoveRolesAction channelRemoveRolesAction = ChannelRemoveRolesAction.builder()
+ *             .plusRoles(rolesBuilder -> rolesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRolesAction> {
@@ -22,7 +24,7 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
     /**
-     *  <p>Value to remove from the array.</p>
+     <*  <p>Value to remove from the array.</p>>
      */
 
     public ChannelRemoveRolesActionBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
@@ -31,7 +33,7 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
     }
 
     /**
-     *  <p>Value to remove from the array.</p>
+     <*  <p>Value to remove from the array.</p>>
      */
 
     public ChannelRemoveRolesActionBuilder roles(
@@ -41,7 +43,7 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
     }
 
     /**
-     *  <p>Value to remove from the array.</p>
+     <*  <p>Value to remove from the array.</p>>
      */
 
     public ChannelRemoveRolesActionBuilder plusRoles(

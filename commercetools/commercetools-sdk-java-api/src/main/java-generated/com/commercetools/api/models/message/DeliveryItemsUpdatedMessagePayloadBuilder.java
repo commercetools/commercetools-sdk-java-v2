@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DeliveryItemsUpdatedMessagePayload deliveryItemsUpdatedMessagePayload = DeliveryItemsUpdatedMessagePayload.builder()
-           .deliveryId("{deliveryId}")
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DeliveryItemsUpdatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryItemsUpdatedMessagePayload deliveryItemsUpdatedMessagePayload = DeliveryItemsUpdatedMessagePayload.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<DeliveryItemsUpdatedMessagePayload> {
@@ -28,10 +30,18 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    /**
+     <>
+     */
+
     public DeliveryItemsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder items(
             final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -39,11 +49,19 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryItemsUpdatedMessagePayloadBuilder items(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
             final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -54,6 +72,10 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -63,6 +85,10 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryItemsUpdatedMessagePayloadBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
@@ -70,17 +96,29 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
             final com.commercetools.api.models.order.DeliveryItem... oldItems) {
         this.oldItems = new ArrayList<>(Arrays.asList(oldItems));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
         this.oldItems = oldItems;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
             final com.commercetools.api.models.order.DeliveryItem... oldItems) {
@@ -91,6 +129,10 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.oldItems == null) {
@@ -99,6 +141,10 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryItemsUpdatedMessagePayloadBuilder withOldItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {

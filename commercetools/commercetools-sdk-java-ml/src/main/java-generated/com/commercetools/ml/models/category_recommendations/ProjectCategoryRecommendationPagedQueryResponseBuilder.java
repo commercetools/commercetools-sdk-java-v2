@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectCategoryRecommendationPagedQueryResponse projectCategoryRecommendationPagedQueryResponse = ProjectCategoryRecommendationPagedQueryResponse.builder()
-           .count(0.3)
-           .total(0.3)
-           .offset(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .meta(metaBuilder -> metaBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProjectCategoryRecommendationPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectCategoryRecommendationPagedQueryResponse projectCategoryRecommendationPagedQueryResponse = ProjectCategoryRecommendationPagedQueryResponse.builder()
+ *             .count(0.3)
+ *             .total(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .meta(metaBuilder -> metaBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectCategoryRecommendationPagedQueryResponseBuilder
@@ -35,10 +37,18 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
 
     private com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta;
 
+    /**
+     <>
+     */
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder total(final Long total) {
         this.total = total;
@@ -46,7 +56,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
@@ -54,17 +64,29 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
             final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
             final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation... results) {
@@ -75,6 +97,10 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder> builder) {
         if (this.results == null) {
@@ -86,6 +112,10 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder withResults(
             Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder> builder) {
         this.results = new ArrayList<>();
@@ -95,6 +125,10 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder meta(
             Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder> builder) {
         this.meta = builder
@@ -103,6 +137,10 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder meta(
             final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta) {

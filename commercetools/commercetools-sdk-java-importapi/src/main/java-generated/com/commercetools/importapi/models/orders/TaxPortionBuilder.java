@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxPortion taxPortion = TaxPortion.builder()
-           .rate(0.3)
-           .amount(amountBuilder -> amountBuilder)
-           .build()
- </code></pre>
- </div>
+ * TaxPortionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxPortion taxPortion = TaxPortion.builder()
+ *             .rate(0.3)
+ *             .amount(amountBuilder -> amountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxPortionBuilder implements Builder<TaxPortion> {
@@ -30,20 +32,36 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     private com.commercetools.importapi.models.common.TypedMoney amount;
 
+    /**
+     <>
+     */
+
     public TaxPortionBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TaxPortionBuilder rate(final Double rate) {
         this.rate = rate;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TaxPortionBuilder amount(final com.commercetools.importapi.models.common.TypedMoney amount) {
         this.amount = amount;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TaxPortionBuilder amount(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {

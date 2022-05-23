@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountUpdate
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountUpdateImpl implements CartDiscountUpdate, ModelBase {
 
@@ -31,9 +34,17 @@ public class CartDiscountUpdateImpl implements CartDiscountUpdate, ModelBase {
     public CartDiscountUpdateImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction> getActions() {
         return this.actions;

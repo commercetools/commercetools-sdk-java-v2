@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreSetProductSelectionsAction storeSetProductSelectionsAction = StoreSetProductSelectionsAction.builder()
-           .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * StoreSetProductSelectionsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreSetProductSelectionsAction storeSetProductSelectionsAction = StoreSetProductSelectionsAction.builder()
+ *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetProductSelectionsAction> {
@@ -23,7 +25,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections;
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     <*  <p>The total of Product Selections to be set for this Store.</p>>
      */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
@@ -33,7 +35,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     <*  <p>The total of Product Selections to be set for this Store.</p>>
      */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
@@ -43,7 +45,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     <*  <p>The total of Product Selections to be set for this Store.</p>>
      */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
@@ -56,7 +58,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     <*  <p>The total of Product Selections to be set for this Store.</p>>
      */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
@@ -70,7 +72,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     <*  <p>The total of Product Selections to be set for this Store.</p>>
      */
 
     public StoreSetProductSelectionsActionBuilder withProductSelections(

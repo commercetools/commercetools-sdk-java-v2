@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TransactionChangeValue transactionChangeValue = TransactionChangeValue.builder()
-           .id("{id}")
-           .interactionId("{interactionId}")
-           .timestamp("{timestamp}")
-           .build()
- </code></pre>
- </div>
+ * TransactionChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TransactionChangeValue transactionChangeValue = TransactionChangeValue.builder()
+ *             .id("{id}")
+ *             .interactionId("{interactionId}")
+ *             .timestamp("{timestamp}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionChangeValueBuilder implements Builder<TransactionChangeValue> {
@@ -27,15 +29,27 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
 
     private String timestamp;
 
+    /**
+     <>
+     */
+
     public TransactionChangeValueBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransactionChangeValueBuilder interactionId(final String interactionId) {
         this.interactionId = interactionId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TransactionChangeValueBuilder timestamp(final String timestamp) {
         this.timestamp = timestamp;

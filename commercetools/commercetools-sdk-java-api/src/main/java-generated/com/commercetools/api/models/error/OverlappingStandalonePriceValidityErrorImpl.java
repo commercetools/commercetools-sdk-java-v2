@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OverlappingStandalonePriceValidityError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingStandalonePriceValidityError, ModelBase {
 
@@ -74,62 +77,105 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
         this.code = OVERLAPPING_STANDALONE_PRICE_VALIDITY;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     <>
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     <>
+     */
 
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     <*  <p>Reference to a StandalonePrice.</p>>
      */
+
     public com.commercetools.api.models.standalone_price.StandalonePriceReference getConflictingStandalonePrice() {
         return this.conflictingStandalonePrice;
     }
+
+    /**
+     <>
+     */
 
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     <>
+     */
+
     public String getCurrency() {
         return this.currency;
     }
+
+    /**
+     <>
+     */
 
     public String getCountry() {
         return this.country;
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
      */
+
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getConflictingValidFrom() {
         return this.conflictingValidFrom;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getConflictingValidUntil() {
         return this.conflictingValidUntil;

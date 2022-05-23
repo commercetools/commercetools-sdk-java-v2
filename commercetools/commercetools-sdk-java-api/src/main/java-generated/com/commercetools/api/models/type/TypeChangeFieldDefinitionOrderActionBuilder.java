@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeChangeFieldDefinitionOrderAction typeChangeFieldDefinitionOrderAction = TypeChangeFieldDefinitionOrderAction.builder()
-           .plusFieldNames(fieldNamesBuilder -> fieldNamesBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeChangeFieldDefinitionOrderActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeFieldDefinitionOrderAction typeChangeFieldDefinitionOrderAction = TypeChangeFieldDefinitionOrderAction.builder()
+ *             .plusFieldNames(fieldNamesBuilder -> fieldNamesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<TypeChangeFieldDefinitionOrderAction> {
@@ -22,7 +24,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
     private java.util.List<String> fieldNames;
 
     /**
-     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+     <*  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>>
      */
 
     public TypeChangeFieldDefinitionOrderActionBuilder fieldNames(final String... fieldNames) {
@@ -31,7 +33,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
     }
 
     /**
-     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+     <*  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>>
      */
 
     public TypeChangeFieldDefinitionOrderActionBuilder fieldNames(final java.util.List<String> fieldNames) {
@@ -40,7 +42,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
     }
 
     /**
-     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+     <*  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>>
      */
 
     public TypeChangeFieldDefinitionOrderActionBuilder plusFieldNames(final String... fieldNames) {

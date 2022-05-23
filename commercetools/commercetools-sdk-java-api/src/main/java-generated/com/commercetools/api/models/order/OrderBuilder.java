@@ -10,25 +10,27 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Order order = Order.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
-           .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .orderState(OrderState.OPEN)
-           .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
-           .lastMessageSequenceNumber(0.3)
-           .origin(CartOrigin.CUSTOMER)
-           .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Order order = Order.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
+ *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .orderState(OrderState.OPEN)
+ *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
+ *             .lastMessageSequenceNumber(0.3)
+ *             .origin(CartOrigin.CUSTOMER)
+ *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderBuilder implements Builder<Order> {
@@ -145,7 +147,7 @@ public class OrderBuilder implements Builder<Order> {
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
     /**
-     *  <p>Platform-generated unique identifier of the Order.</p>
+     <*  <p>Platform-generated unique identifier of the Order.</p>>
      */
 
     public OrderBuilder id(final String id) {
@@ -154,7 +156,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>The current version of the order.</p>
+     <*  <p>The current version of the order.</p>>
      */
 
     public OrderBuilder version(final Long version) {
@@ -162,10 +164,18 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -173,7 +183,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderBuilder lastModifiedBy(
@@ -183,7 +193,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderBuilder lastModifiedBy(
@@ -193,7 +203,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderBuilder createdBy(
@@ -203,7 +213,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -212,7 +222,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>This field will only be present if it was set for Order Import</p>
+     <*  <p>This field will only be present if it was set for Order Import</p>>
      */
 
     public OrderBuilder completedAt(@Nullable final java.time.ZonedDateTime completedAt) {
@@ -221,7 +231,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     <*  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>>
      */
 
     public OrderBuilder orderNumber(@Nullable final String orderNumber) {
@@ -229,10 +239,18 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder customerId(@Nullable final String customerId) {
         this.customerId = customerId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder customerEmail(@Nullable final String customerEmail) {
         this.customerEmail = customerEmail;
@@ -240,7 +258,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     <*  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>>
      */
 
     public OrderBuilder anonymousId(@Nullable final String anonymousId) {
@@ -248,26 +266,46 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder store(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder lineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
         this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder lineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusLineItems(final com.commercetools.api.models.cart.LineItem... lineItems) {
         if (this.lineItems == null) {
@@ -276,6 +314,10 @@ public class OrderBuilder implements Builder<Order> {
         this.lineItems.addAll(Arrays.asList(lineItems));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusLineItems(
             Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
@@ -286,6 +328,10 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder withLineItems(
             Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
         this.lineItems = new ArrayList<>();
@@ -293,16 +339,28 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder customLineItems(final com.commercetools.api.models.cart.CustomLineItem... customLineItems) {
         this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder customLineItems(
             final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems) {
         this.customLineItems = customLineItems;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusCustomLineItems(final com.commercetools.api.models.cart.CustomLineItem... customLineItems) {
         if (this.customLineItems == null) {
@@ -311,6 +369,10 @@ public class OrderBuilder implements Builder<Order> {
         this.customLineItems.addAll(Arrays.asList(customLineItems));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusCustomLineItems(
             Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItemBuilder> builder) {
@@ -321,6 +383,10 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder withCustomLineItems(
             Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItemBuilder> builder) {
         this.customLineItems = new ArrayList<>();
@@ -328,10 +394,18 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder totalPrice(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -340,7 +414,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>The taxes are calculated based on the shipping address.</p>
+     <*  <p>The taxes are calculated based on the shipping address.</p>>
      */
 
     public OrderBuilder taxedPrice(
@@ -350,7 +424,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>The taxes are calculated based on the shipping address.</p>
+     <*  <p>The taxes are calculated based on the shipping address.</p>>
      */
 
     public OrderBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
@@ -358,16 +432,28 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder shippingAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder shippingAddress(@Nullable final com.commercetools.api.models.common.Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder billingAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
@@ -375,10 +461,18 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder billingAddress(@Nullable final com.commercetools.api.models.common.Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
@@ -386,7 +480,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>>
      */
 
     public OrderBuilder taxRoundingMode(
@@ -396,7 +490,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     <*  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>>
      */
 
     public OrderBuilder customerGroup(
@@ -408,7 +502,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     <*  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>>
      */
 
     public OrderBuilder customerGroup(
@@ -418,7 +512,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>>
      */
 
     public OrderBuilder country(@Nullable final String country) {
@@ -427,7 +521,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>One of the four predefined OrderStates.</p>
+     <*  <p>One of the four predefined OrderStates.</p>>
      */
 
     public OrderBuilder orderState(final com.commercetools.api.models.order.OrderState orderState) {
@@ -436,7 +530,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>This reference can point to a state in a custom workflow.</p>
+     <*  <p>This reference can point to a state in a custom workflow.</p>>
      */
 
     public OrderBuilder state(
@@ -446,7 +540,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>This reference can point to a state in a custom workflow.</p>
+     <*  <p>This reference can point to a state in a custom workflow.</p>>
      */
 
     public OrderBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -454,10 +548,18 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder shipmentState(@Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder paymentState(@Nullable final com.commercetools.api.models.order.PaymentState paymentState) {
         this.paymentState = paymentState;
@@ -465,7 +567,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Set if the ShippingMethod is set.</p>
+     <*  <p>Set if the ShippingMethod is set.</p>>
      */
 
     public OrderBuilder shippingInfo(
@@ -475,7 +577,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Set if the ShippingMethod is set.</p>
+     <*  <p>Set if the ShippingMethod is set.</p>>
      */
 
     public OrderBuilder shippingInfo(@Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
@@ -483,15 +585,27 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder syncInfo(final com.commercetools.api.models.order.SyncInfo... syncInfo) {
         this.syncInfo = new ArrayList<>(Arrays.asList(syncInfo));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder syncInfo(final java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo) {
         this.syncInfo = syncInfo;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusSyncInfo(final com.commercetools.api.models.order.SyncInfo... syncInfo) {
         if (this.syncInfo == null) {
@@ -500,6 +614,10 @@ public class OrderBuilder implements Builder<Order> {
         this.syncInfo.addAll(Arrays.asList(syncInfo));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusSyncInfo(
             Function<com.commercetools.api.models.order.SyncInfoBuilder, com.commercetools.api.models.order.SyncInfoBuilder> builder) {
@@ -510,6 +628,10 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder withSyncInfo(
             Function<com.commercetools.api.models.order.SyncInfoBuilder, com.commercetools.api.models.order.SyncInfoBuilder> builder) {
         this.syncInfo = new ArrayList<>();
@@ -517,16 +639,28 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder returnInfo(@Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
         this.returnInfo = new ArrayList<>(Arrays.asList(returnInfo));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder returnInfo(
             @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
         this.returnInfo = returnInfo;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusReturnInfo(@Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
         if (this.returnInfo == null) {
@@ -535,6 +669,10 @@ public class OrderBuilder implements Builder<Order> {
         this.returnInfo.addAll(Arrays.asList(returnInfo));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusReturnInfo(
             Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
@@ -545,6 +683,10 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder withReturnInfo(
             Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
         this.returnInfo = new ArrayList<>();
@@ -552,17 +694,29 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder discountCodes(
             @Nullable final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
         this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder discountCodes(
             @Nullable final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
         this.discountCodes = discountCodes;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder plusDiscountCodes(
             @Nullable final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
@@ -573,6 +727,10 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder plusDiscountCodes(
             Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfoBuilder> builder) {
         if (this.discountCodes == null) {
@@ -582,6 +740,10 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder withDiscountCodes(
             Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfoBuilder> builder) {
         this.discountCodes = new ArrayList<>();
@@ -590,7 +752,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>
+     <*  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>>
      */
 
     public OrderBuilder lastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
@@ -599,7 +761,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     <*  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>>
      */
 
     public OrderBuilder cart(
@@ -609,7 +771,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     <*  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>>
      */
 
     public OrderBuilder cart(@Nullable final com.commercetools.api.models.cart.CartReference cart) {
@@ -617,16 +779,28 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder paymentInfo(
             Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
@@ -634,20 +808,36 @@ public class OrderBuilder implements Builder<Order> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder paymentInfo(@Nullable final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
         this.paymentInfo = paymentInfo;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder locale(@Nullable final String locale) {
         this.locale = locale;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderBuilder inventoryMode(@Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
         this.inventoryMode = inventoryMode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderBuilder origin(final com.commercetools.api.models.cart.CartOrigin origin) {
         this.origin = origin;
@@ -655,7 +845,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>>
      */
 
     public OrderBuilder taxCalculationMode(
@@ -665,7 +855,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+     <*  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>>
      */
 
     public OrderBuilder shippingRateInput(
@@ -675,7 +865,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+     <*  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>>
      */
 
     public OrderBuilder shippingRateInput(
@@ -685,7 +875,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
      */
 
     public OrderBuilder itemShippingAddresses(
@@ -695,7 +885,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
      */
 
     public OrderBuilder itemShippingAddresses(
@@ -705,7 +895,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
      */
 
     public OrderBuilder plusItemShippingAddresses(
@@ -718,7 +908,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
      */
 
     public OrderBuilder plusItemShippingAddresses(
@@ -731,7 +921,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
      */
 
     public OrderBuilder withItemShippingAddresses(
@@ -742,7 +932,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>>
      */
 
     public OrderBuilder refusedGifts(
@@ -752,7 +942,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>>
      */
 
     public OrderBuilder refusedGifts(
@@ -762,7 +952,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>>
      */
 
     public OrderBuilder plusRefusedGifts(
@@ -775,7 +965,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>>
      */
 
     public OrderBuilder plusRefusedGifts(
@@ -789,7 +979,7 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>>
      */
 
     public OrderBuilder withRefusedGifts(

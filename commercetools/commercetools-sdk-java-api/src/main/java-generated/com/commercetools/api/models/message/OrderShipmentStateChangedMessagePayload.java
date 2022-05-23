@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderShipmentStateChangedMessagePayload orderShipmentStateChangedMessagePayload = OrderShipmentStateChangedMessagePayload.builder()
-           .shipmentState(ShipmentState.SHIPPED)
-           .build()
- </code></pre>
- </div>
+ * OrderShipmentStateChangedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderShipmentStateChangedMessagePayload orderShipmentStateChangedMessagePayload = OrderShipmentStateChangedMessagePayload.builder()
+ *             .shipmentState(ShipmentState.SHIPPED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderShipmentStateChangedMessagePayloadImpl.class)
@@ -29,9 +32,16 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
 
     String ORDER_SHIPMENT_STATE_CHANGED = "OrderShipmentStateChanged";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
+
+    /**
+     <>
+     */
 
     @JsonProperty("oldShipmentState")
     public ShipmentState getOldShipmentState();

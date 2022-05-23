@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodTaxAmountChangeValue shippingMethodTaxAmountChangeValue = ShippingMethodTaxAmountChangeValue.builder()
-           .taxedPrice(taxedPriceBuilder -> taxedPriceBuilder)
-           .taxRate(taxRateBuilder -> taxRateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodTaxAmountChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodTaxAmountChangeValue shippingMethodTaxAmountChangeValue = ShippingMethodTaxAmountChangeValue.builder()
+ *             .taxedPrice(taxedPriceBuilder -> taxedPriceBuilder)
+ *             .taxRate(taxRateBuilder -> taxRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<ShippingMethodTaxAmountChangeValue> {
@@ -25,11 +27,19 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
 
     private com.commercetools.history.models.common.TaxRate taxRate;
 
+    /**
+     <>
+     */
+
     public ShippingMethodTaxAmountChangeValueBuilder taxedPrice(
             Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxedPrice(
             final com.commercetools.history.models.common.TaxedPrice taxedPrice) {
@@ -38,7 +48,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(
@@ -48,7 +58,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(

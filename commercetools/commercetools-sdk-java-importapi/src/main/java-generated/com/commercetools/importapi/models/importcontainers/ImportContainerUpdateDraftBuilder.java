@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImportContainerUpdateDraft importContainerUpdateDraft = ImportContainerUpdateDraft.builder()
-           .version(0.3)
-           .build()
- </code></pre>
- </div>
+ * ImportContainerUpdateDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportContainerUpdateDraft importContainerUpdateDraft = ImportContainerUpdateDraft.builder()
+ *             .version(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerUpdateDraftBuilder implements Builder<ImportContainerUpdateDraft> {
@@ -27,7 +29,7 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     /**
-     *  <p>Current version of the ImportContainer.</p>
+     <*  <p>Current version of the ImportContainer.</p>>
      */
 
     public ImportContainerUpdateDraftBuilder version(final Long version) {
@@ -36,7 +38,7 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     <*  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>>
      */
 
     public ImportContainerUpdateDraftBuilder resourceType(

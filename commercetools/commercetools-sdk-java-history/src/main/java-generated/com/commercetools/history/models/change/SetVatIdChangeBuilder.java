@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetVatIdChange setVatIdChange = SetVatIdChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetVatIdChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetVatIdChange setVatIdChange = SetVatIdChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
@@ -28,7 +30,7 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setVatId</code></p>
+     <*  <p>Shape of the action for <code>setVatId</code></p>>
      */
 
     public SetVatIdChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetVatIdChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetVatIdChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

@@ -30,6 +30,10 @@ public class ExtensionDestinationImpl implements ExtensionDestination, ModelBase
     public ExtensionDestinationImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }

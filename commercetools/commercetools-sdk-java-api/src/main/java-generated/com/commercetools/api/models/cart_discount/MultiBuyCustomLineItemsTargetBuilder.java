@@ -9,17 +9,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MultiBuyCustomLineItemsTarget multiBuyCustomLineItemsTarget = MultiBuyCustomLineItemsTarget.builder()
-           .predicate("{predicate}")
-           .triggerQuantity(1)
-           .discountedQuantity(1)
-           .selectionMode(SelectionMode.CHEAPEST)
-           .build()
- </code></pre>
- </div>
+ * MultiBuyCustomLineItemsTargetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MultiBuyCustomLineItemsTarget multiBuyCustomLineItemsTarget = MultiBuyCustomLineItemsTarget.builder()
+ *             .predicate("{predicate}")
+ *             .triggerQuantity(1)
+ *             .discountedQuantity(1)
+ *             .selectionMode(SelectionMode.CHEAPEST)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCustomLineItemsTarget> {
@@ -36,7 +38,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
     /**
-     *  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are matched by the predicate.</p>
+     <*  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are matched by the predicate.</p>>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder predicate(final String predicate) {
@@ -45,7 +47,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
@@ -54,7 +56,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
@@ -63,13 +65,17 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     *  <p>Maximum number of applications of this discount.</p>
+     <*  <p>Maximum number of applications of this discount.</p>>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MultiBuyCustomLineItemsTargetBuilder selectionMode(
             final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {

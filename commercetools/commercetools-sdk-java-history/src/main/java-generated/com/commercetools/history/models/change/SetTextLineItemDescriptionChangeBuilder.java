@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetTextLineItemDescriptionChange setTextLineItemDescriptionChange = SetTextLineItemDescriptionChange.builder()
-           .change("{change}")
-           .textLineItem(textLineItemBuilder -> textLineItemBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetTextLineItemDescriptionChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetTextLineItemDescriptionChange setTextLineItemDescriptionChange = SetTextLineItemDescriptionChange.builder()
+ *             .change("{change}")
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextLineItemDescriptionChange> {
@@ -31,10 +33,18 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     <>
+     */
+
     public SetTextLineItemDescriptionChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetTextLineItemDescriptionChangeBuilder textLineItem(
             Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
@@ -43,11 +53,19 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetTextLineItemDescriptionChangeBuilder textLineItem(
             final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.textLineItem = textLineItem;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetTextLineItemDescriptionChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -55,17 +73,29 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetTextLineItemDescriptionChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetTextLineItemDescriptionChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetTextLineItemDescriptionChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString nextValue) {

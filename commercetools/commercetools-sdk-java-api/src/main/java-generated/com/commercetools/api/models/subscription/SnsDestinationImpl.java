@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SnsDestination
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SnsDestinationImpl implements SnsDestination, ModelBase {
 
@@ -38,17 +41,33 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
         this.type = SNS;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getAccessKey() {
         return this.accessKey;
     }
 
+    /**
+     <>
+     */
+
     public String getAccessSecret() {
         return this.accessSecret;
     }
+
+    /**
+     <>
+     */
 
     public String getTopicArn() {
         return this.topicArn;

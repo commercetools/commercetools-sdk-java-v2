@@ -117,152 +117,177 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     <*  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>>
      */
+
     public String getOrderNumber() {
         return this.orderNumber;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.importapi.models.common.CustomerKeyReference getCustomer() {
         return this.customer;
     }
 
     /**
-     *  <p>Maps to <code>Order.customerEmail</code>.</p>
+     <*  <p>Maps to <code>Order.customerEmail</code>.</p>>
      */
+
     public String getCustomerEmail() {
         return this.customerEmail;
     }
 
     /**
-     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     <*  <p>Maps to <code>Order.lineItems</code>.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.orders.LineItemImportDraft> getLineItems() {
         return this.lineItems;
     }
 
     /**
-     *  <p>Maps to <code>Order.customLineItems</code></p>
+     <*  <p>Maps to <code>Order.customLineItems</code></p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.orders.CustomLineItemDraft> getCustomLineItems() {
         return this.customLineItems;
     }
 
     /**
-     *  <p>Maps to <code>Order.totalPrice</code>.</p>
+     <*  <p>Maps to <code>Order.totalPrice</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
 
     /**
-     *  <p>Maps to <code>Order.taxedPrice</code>.</p>
+     <*  <p>Maps to <code>Order.taxedPrice</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
     /**
-     *  <p>Maps to <code>Order.shippingAddress</code>.</p>
+     <*  <p>Maps to <code>Order.shippingAddress</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.Address getShippingAddress() {
         return this.shippingAddress;
     }
 
     /**
-     *  <p>Maps to <code>Order.billingAddress</code>.</p>
+     <*  <p>Maps to <code>Order.billingAddress</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.Address getBillingAddress() {
         return this.billingAddress;
     }
 
     /**
-     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     <*  <p>Maps to <code>Order.customerGroup</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-     *  <p>Maps to <code>Order.country</code>.</p>
+     <*  <p>Maps to <code>Order.country</code>.</p>>
      */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-     *  <p>Maps to <code>Order.orderState</code>.</p>
+     <*  <p>Maps to <code>Order.orderState</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.OrderState getOrderState() {
         return this.orderState;
     }
 
     /**
-     *  <p>Maps to <code>Order.shipmentState</code>.</p>
+     <*  <p>Maps to <code>Order.shipmentState</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
 
     /**
-     *  <p>Maps to <code>Order.paymentState</code>.</p>
+     <*  <p>Maps to <code>Order.paymentState</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.PaymentState getPaymentState() {
         return this.paymentState;
     }
 
     /**
-     *  <p>Maps to <code>Order.shippingInfo</code>.</p>
+     <*  <p>Maps to <code>Order.shippingInfo</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.ShippingInfoImportDraft getShippingInfo() {
         return this.shippingInfo;
     }
 
     /**
-     *  <p>Maps to <code>Order.completedAt</code>.</p>
+     <*  <p>Maps to <code>Order.completedAt</code>.</p>>
      */
+
     public java.time.ZonedDateTime getCompletedAt() {
         return this.completedAt;
     }
 
     /**
-     *  <p>Maps to <code>Order.custom</code>.</p>
+     <*  <p>Maps to <code>Order.custom</code>.</p>>
      */
+
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }
 
     /**
-     *  <p>Maps to <code>Order.inventoryMode</code>.</p>
+     <*  <p>Maps to <code>Order.inventoryMode</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
 
     /**
-     *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
+     <*  <p>Maps to <code>Order.taxRoundingMode</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
     /**
-     *  <p>Maps to <code>Order.taxCalculationMode</code>.</p>
+     <*  <p>Maps to <code>Order.taxCalculationMode</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
 
     /**
-     *  <p>Maps to <code>Order.origin</code>.</p>
+     <*  <p>Maps to <code>Order.origin</code>.</p>>
      */
+
     public com.commercetools.importapi.models.orders.CartOrigin getOrigin() {
         return this.origin;
     }
 
     /**
-     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     <*  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.common.Address> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }

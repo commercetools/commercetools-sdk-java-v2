@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreDraft storeDraft = StoreDraft.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * StoreDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreDraft storeDraft = StoreDraft.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreDraftBuilder implements Builder<StoreDraft> {
@@ -43,7 +45,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+     <*  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>>
      */
 
     public StoreDraftBuilder key(final String key) {
@@ -52,7 +54,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>The name of the store</p>
+     <*  <p>The name of the store</p>>
      */
 
     public StoreDraftBuilder name(
@@ -62,7 +64,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>The name of the store</p>
+     <*  <p>The name of the store</p>>
      */
 
     public StoreDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -70,15 +72,27 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreDraftBuilder languages(@Nullable final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreDraftBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreDraftBuilder plusLanguages(@Nullable final String... languages) {
         if (this.languages == null) {
@@ -89,7 +103,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     <*  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>>
      */
 
     public StoreDraftBuilder distributionChannels(
@@ -99,7 +113,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     <*  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>>
      */
 
     public StoreDraftBuilder distributionChannels(
@@ -109,7 +123,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     <*  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>>
      */
 
     public StoreDraftBuilder plusDistributionChannels(
@@ -122,7 +136,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     <*  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>>
      */
 
     public StoreDraftBuilder plusDistributionChannels(
@@ -136,7 +150,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     <*  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>>
      */
 
     public StoreDraftBuilder withDistributionChannels(
@@ -148,7 +162,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     <*  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>>
      */
 
     public StoreDraftBuilder supplyChannels(
@@ -158,7 +172,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     <*  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>>
      */
 
     public StoreDraftBuilder supplyChannels(
@@ -168,7 +182,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     <*  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>>
      */
 
     public StoreDraftBuilder plusSupplyChannels(
@@ -181,7 +195,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     <*  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>>
      */
 
     public StoreDraftBuilder plusSupplyChannels(
@@ -195,7 +209,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     <*  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>>
      */
 
     public StoreDraftBuilder withSupplyChannels(
@@ -207,7 +221,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     <*  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>>
      */
 
     public StoreDraftBuilder productSelections(
@@ -217,7 +231,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     <*  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>>
      */
 
     public StoreDraftBuilder productSelections(
@@ -227,7 +241,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     <*  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>>
      */
 
     public StoreDraftBuilder plusProductSelections(
@@ -240,7 +254,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     <*  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>>
      */
 
     public StoreDraftBuilder plusProductSelections(
@@ -254,7 +268,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     <*  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>>
      */
 
     public StoreDraftBuilder withProductSelections(
@@ -265,11 +279,19 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;

@@ -11,19 +11,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetLocaleAction customerSetLocaleAction = CustomerSetLocaleAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetLocaleAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetLocaleAction customerSetLocaleAction = CustomerSetLocaleAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetLocaleActionImpl.class)
 public interface CustomerSetLocaleAction extends CustomerUpdateAction {
 
     String SET_LOCALE = "setLocale";
+
+    /**
+     <>
+     */
 
     @JsonProperty("locale")
     public String getLocale();

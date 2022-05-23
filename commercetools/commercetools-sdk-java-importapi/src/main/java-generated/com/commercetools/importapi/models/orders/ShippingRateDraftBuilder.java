@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingRateDraft shippingRateDraft = ShippingRateDraft.builder()
-           .price(priceBuilder -> priceBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingRateDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingRateDraft shippingRateDraft = ShippingRateDraft.builder()
+ *             .price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
@@ -30,16 +32,28 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers;
 
+    /**
+     <>
+     */
+
     public ShippingRateDraftBuilder price(
             Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
         this.price = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingRateDraftBuilder price(final com.commercetools.importapi.models.common.Money price) {
         this.price = price;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateDraftBuilder freeAbove(
             Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
@@ -47,11 +61,19 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingRateDraftBuilder freeAbove(
             @Nullable final com.commercetools.importapi.models.common.Money freeAbove) {
         this.freeAbove = freeAbove;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateDraftBuilder tiers(
             @Nullable final com.commercetools.importapi.models.orders.ShippingRatePriceTier... tiers) {
@@ -59,11 +81,19 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingRateDraftBuilder tiers(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers) {
         this.tiers = tiers;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateDraftBuilder plusTiers(
             @Nullable final com.commercetools.importapi.models.orders.ShippingRatePriceTier... tiers) {
@@ -74,6 +104,10 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingRateDraftBuilder plusTiers(
             Function<com.commercetools.importapi.models.orders.ShippingRatePriceTierBuilder, Builder<? extends com.commercetools.importapi.models.orders.ShippingRatePriceTier>> builder) {
         if (this.tiers == null) {
@@ -83,6 +117,10 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
             builder.apply(com.commercetools.importapi.models.orders.ShippingRatePriceTierBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateDraftBuilder withTiers(
             Function<com.commercetools.importapi.models.orders.ShippingRatePriceTierBuilder, Builder<? extends com.commercetools.importapi.models.orders.ShippingRatePriceTier>> builder) {

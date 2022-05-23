@@ -10,21 +10,23 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethod shippingMethod = ShippingMethod.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .name("{name}")
-           .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
-           .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
-           .isDefault(true)
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethod shippingMethod = ShippingMethod.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name("{name}")
+ *             .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
+ *             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
+ *             .isDefault(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodBuilder implements Builder<ShippingMethod> {
@@ -70,7 +72,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>Platform-generated unique identifier of the ShippingMethod.</p>
+     <*  <p>Platform-generated unique identifier of the ShippingMethod.</p>>
      */
 
     public ShippingMethodBuilder id(final String id) {
@@ -79,7 +81,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>The current version of the shipping method.</p>
+     <*  <p>The current version of the shipping method.</p>>
      */
 
     public ShippingMethodBuilder version(final Long version) {
@@ -87,10 +89,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -98,7 +108,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ShippingMethodBuilder lastModifiedBy(
@@ -108,7 +118,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ShippingMethodBuilder lastModifiedBy(
@@ -118,7 +128,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ShippingMethodBuilder createdBy(
@@ -128,7 +138,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ShippingMethodBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -137,7 +147,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the ShippingMethod.</p>
+     <*  <p>User-defined unique identifier of the ShippingMethod.</p>>
      */
 
     public ShippingMethodBuilder key(@Nullable final String key) {
@@ -145,10 +155,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodBuilder localizedName(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -156,16 +174,28 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder localizedName(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {
         this.localizedName = localizedName;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodBuilder localizedDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -174,11 +204,19 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder localizedDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
@@ -187,22 +225,38 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder taxCategory(
             final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder zoneRates(final com.commercetools.api.models.shipping_method.ZoneRate... zoneRates) {
         this.zoneRates = new ArrayList<>(Arrays.asList(zoneRates));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodBuilder zoneRates(
             final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates) {
         this.zoneRates = zoneRates;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodBuilder plusZoneRates(
             final com.commercetools.api.models.shipping_method.ZoneRate... zoneRates) {
@@ -213,6 +267,10 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder plusZoneRates(
             Function<com.commercetools.api.models.shipping_method.ZoneRateBuilder, com.commercetools.api.models.shipping_method.ZoneRateBuilder> builder) {
         if (this.zoneRates == null) {
@@ -222,6 +280,10 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder withZoneRates(
             Function<com.commercetools.api.models.shipping_method.ZoneRateBuilder, com.commercetools.api.models.shipping_method.ZoneRateBuilder> builder) {
         this.zoneRates = new ArrayList<>();
@@ -230,7 +292,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>One shipping method in a project can be default.</p>
+     <*  <p>One shipping method in a project can be default.</p>>
      */
 
     public ShippingMethodBuilder isDefault(final Boolean isDefault) {
@@ -239,7 +301,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     <*  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>>
      */
 
     public ShippingMethodBuilder predicate(@Nullable final String predicate) {
@@ -247,11 +309,19 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

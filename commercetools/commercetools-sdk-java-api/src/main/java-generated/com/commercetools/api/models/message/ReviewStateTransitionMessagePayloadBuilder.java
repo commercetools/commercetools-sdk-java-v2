@@ -8,19 +8,21 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewStateTransitionMessagePayload reviewStateTransitionMessagePayload = ReviewStateTransitionMessagePayload.builder()
-           .oldState(oldStateBuilder -> oldStateBuilder)
-           .newState(newStateBuilder -> newStateBuilder)
-           .oldIncludedInStatistics(true)
-           .newIncludedInStatistics(true)
-           .target(targetBuilder -> targetBuilder)
-           .force(true)
-           .build()
- </code></pre>
- </div>
+ * ReviewStateTransitionMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewStateTransitionMessagePayload reviewStateTransitionMessagePayload = ReviewStateTransitionMessagePayload.builder()
+ *             .oldState(oldStateBuilder -> oldStateBuilder)
+ *             .newState(newStateBuilder -> newStateBuilder)
+ *             .oldIncludedInStatistics(true)
+ *             .newIncludedInStatistics(true)
+ *             .target(targetBuilder -> targetBuilder)
+ *             .force(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewStateTransitionMessagePayloadBuilder implements Builder<ReviewStateTransitionMessagePayload> {
@@ -38,7 +40,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
@@ -48,7 +50,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
@@ -58,7 +60,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
@@ -68,7 +70,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
@@ -77,10 +79,18 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics(final Boolean oldIncludedInStatistics) {
         this.oldIncludedInStatistics = oldIncludedInStatistics;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics(final Boolean newIncludedInStatistics) {
         this.newIncludedInStatistics = newIncludedInStatistics;
@@ -88,7 +98,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
@@ -98,7 +108,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
@@ -106,6 +116,10 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         this.target = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewStateTransitionMessagePayloadBuilder force(final Boolean force) {
         this.force = force;

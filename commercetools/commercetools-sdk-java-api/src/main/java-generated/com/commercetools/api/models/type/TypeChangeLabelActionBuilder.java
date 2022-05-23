@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeChangeLabelAction typeChangeLabelAction = TypeChangeLabelAction.builder()
-           .fieldName("{fieldName}")
-           .label(labelBuilder -> labelBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeChangeLabelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeLabelAction typeChangeLabelAction = TypeChangeLabelAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelAction> {
@@ -26,7 +28,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     <*  <p>Name of the Field Definition to update.</p>>
      */
 
     public TypeChangeLabelActionBuilder fieldName(final String fieldName) {
@@ -35,7 +37,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public TypeChangeLabelActionBuilder label(
@@ -45,7 +47,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public TypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {

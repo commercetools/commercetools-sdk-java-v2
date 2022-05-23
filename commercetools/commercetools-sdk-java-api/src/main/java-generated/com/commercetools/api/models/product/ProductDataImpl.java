@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductData
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDataImpl implements ProductData, ModelBase {
 
@@ -68,62 +71,88 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
         return this.categories;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
         return this.categoryOrderHints;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
         return this.masterVariant;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
         return this.variants;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;

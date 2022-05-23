@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderExcerpt orderExcerpt = OrderExcerpt.builder()
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .version(1)
-           .build()
- </code></pre>
- </div>
+ * OrderExcerptBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderExcerpt orderExcerpt = OrderExcerpt.builder()
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .version(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
@@ -30,10 +32,18 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
 
     private Integer version;
 
+    /**
+     <>
+     */
+
     public OrderExcerptBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderExcerptBuilder totalPrice(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -41,16 +51,28 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderExcerptBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderExcerptBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderExcerptBuilder version(final Integer version) {
         this.version = version;

@@ -8,25 +8,35 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListStoreSetMessagePayload shoppingListStoreSetMessagePayload = ShoppingListStoreSetMessagePayload.builder()
-           .store(storeBuilder -> storeBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShoppingListStoreSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListStoreSetMessagePayload shoppingListStoreSetMessagePayload = ShoppingListStoreSetMessagePayload.builder()
+ *             .store(storeBuilder -> storeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<ShoppingListStoreSetMessagePayload> {
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    /**
+     <>
+     */
+
     public ShoppingListStoreSetMessagePayloadBuilder store(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListStoreSetMessagePayloadBuilder store(
             final com.commercetools.api.models.store.StoreKeyReference store) {

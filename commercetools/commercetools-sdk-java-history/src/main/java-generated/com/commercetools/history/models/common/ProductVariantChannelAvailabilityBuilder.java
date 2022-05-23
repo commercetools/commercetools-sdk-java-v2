@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariantChannelAvailability productVariantChannelAvailability = ProductVariantChannelAvailability.builder()
-           .isOnStock(true)
-           .restockableInDays(1)
-           .availableQuantity(1)
-           .build()
- </code></pre>
- </div>
+ * ProductVariantChannelAvailabilityBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantChannelAvailability productVariantChannelAvailability = ProductVariantChannelAvailability.builder()
+ *             .isOnStock(true)
+ *             .restockableInDays(1)
+ *             .availableQuantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityBuilder implements Builder<ProductVariantChannelAvailability> {
@@ -27,15 +29,27 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
 
     private Integer availableQuantity;
 
+    /**
+     <>
+     */
+
     public ProductVariantChannelAvailabilityBuilder isOnStock(final Boolean isOnStock) {
         this.isOnStock = isOnStock;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantChannelAvailabilityBuilder restockableInDays(final Integer restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantChannelAvailabilityBuilder availableQuantity(final Integer availableQuantity) {
         this.availableQuantity = availableQuantity;

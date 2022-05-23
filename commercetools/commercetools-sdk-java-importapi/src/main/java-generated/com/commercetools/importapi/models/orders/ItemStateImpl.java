@@ -34,13 +34,18 @@ public class ItemStateImpl implements ItemState, ModelBase {
     public ItemStateImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Double getQuantity() {
         return this.quantity;
     }
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     <*  <p>Maps to <code>ItemState.state</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
         return this.state;
     }

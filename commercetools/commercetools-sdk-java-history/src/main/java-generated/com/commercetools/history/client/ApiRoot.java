@@ -7,6 +7,9 @@ import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * Entrypoint for building requests against the API
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApiRoot implements Closeable {
 

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderBillingAddressSetMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAddressSetMessagePayload, ModelBase {
 
@@ -36,13 +39,25 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
         this.type = ORDER_BILLING_ADDRESS_SET;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.Address getOldAddress() {
         return this.oldAddress;

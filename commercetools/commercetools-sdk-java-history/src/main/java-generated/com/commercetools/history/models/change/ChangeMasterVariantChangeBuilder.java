@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeMasterVariantChange changeMasterVariantChange = ChangeMasterVariantChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeMasterVariantChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeMasterVariantChange changeMasterVariantChange = ChangeMasterVariantChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVariantChange> {
@@ -32,7 +34,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     private com.commercetools.history.models.common.Variant nextValue;
 
     /**
-     *  <p>Update action for <code>changeMasterVariant</code></p>
+     <*  <p>Update action for <code>changeMasterVariant</code></p>>
      */
 
     public ChangeMasterVariantChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeMasterVariantChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeMasterVariantChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
@@ -51,17 +61,29 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeMasterVariantChangeBuilder previousValue(
             final com.commercetools.history.models.common.Variant previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeMasterVariantChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.VariantBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeMasterVariantChangeBuilder nextValue(final com.commercetools.history.models.common.Variant nextValue) {
         this.nextValue = nextValue;

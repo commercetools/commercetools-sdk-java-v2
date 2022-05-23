@@ -16,17 +16,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeTransactionStateChange changeTransactionStateChange = ChangeTransactionStateChange.builder()
-           .change("{change}")
-           .transaction(transactionBuilder -> transactionBuilder)
-           .nextValue(TransactionState.INITIAL)
-           .previousValue(TransactionState.INITIAL)
-           .build()
- </code></pre>
- </div>
+ * ChangeTransactionStateChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTransactionStateChange changeTransactionStateChange = ChangeTransactionStateChange.builder()
+ *             .change("{change}")
+ *             .transaction(transactionBuilder -> transactionBuilder)
+ *             .nextValue(TransactionState.INITIAL)
+ *             .previousValue(TransactionState.INITIAL)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTransactionStateChangeImpl.class)
@@ -35,25 +38,37 @@ public interface ChangeTransactionStateChange extends Change {
     String CHANGE_TRANSACTION_STATE_CHANGE = "ChangeTransactionStateChange";
 
     /**
-     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     <*  <p>Update action for <code>changeTransactionState</code> on payments</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("transaction")
     public TransactionChangeValue getTransaction();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public TransactionState getNextValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public TransactionState getPreviousValue();

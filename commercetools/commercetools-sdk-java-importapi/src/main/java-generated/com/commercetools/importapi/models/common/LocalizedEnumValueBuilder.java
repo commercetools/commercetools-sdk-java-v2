@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LocalizedEnumValue localizedEnumValue = LocalizedEnumValue.builder()
-           .key("{key}")
-           .label(labelBuilder -> labelBuilder)
-           .build()
- </code></pre>
- </div>
+ * LocalizedEnumValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LocalizedEnumValue localizedEnumValue = LocalizedEnumValue.builder()
+ *             .key("{key}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
@@ -25,18 +27,22 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
 
     private com.commercetools.importapi.models.common.LocalizedString label;
 
+    /**
+     <>
+     */
+
     public LocalizedEnumValueBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
 
     public LocalizedEnumValueBuilder label(
@@ -46,12 +52,12 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
 
     public LocalizedEnumValueBuilder label(final com.commercetools.importapi.models.common.LocalizedString label) {

@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetParcelMeasurementsChange setParcelMeasurementsChange = SetParcelMeasurementsChange.builder()
-           .change("{change}")
-           .parcel(parcelBuilder -> parcelBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetParcelMeasurementsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetParcelMeasurementsChange setParcelMeasurementsChange = SetParcelMeasurementsChange.builder()
+ *             .change("{change}")
+ *             .parcel(parcelBuilder -> parcelBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeasurementsChange> {
@@ -32,13 +34,17 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     private com.commercetools.history.models.common.ParcelMeasurements previousValue;
 
     /**
-     *  <p>Update action for <code>setParcelMeasurements</code></p>
+     <*  <p>Update action for <code>setParcelMeasurements</code></p>>
      */
 
     public SetParcelMeasurementsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetParcelMeasurementsChangeBuilder parcel(
             Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValueBuilder> builder) {
@@ -47,11 +53,19 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetParcelMeasurementsChangeBuilder parcel(
             final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.parcel = parcel;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetParcelMeasurementsChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurementsBuilder> builder) {
@@ -59,11 +73,19 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetParcelMeasurementsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ParcelMeasurements nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetParcelMeasurementsChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurementsBuilder> builder) {
@@ -71,6 +93,10 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetParcelMeasurementsChangeBuilder previousValue(
             final com.commercetools.history.models.common.ParcelMeasurements previousValue) {

@@ -37,15 +37,17 @@ public class OrderPatchImportRequestImpl implements OrderPatchImportRequest, Mod
     }
 
     /**
-     *  <p>The type of the import resource.</p>
+     <*  <p>The type of the import resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
         return this.type;
     }
 
     /**
-     *  <p>The order patches of this request</p>
+     <*  <p>The order patches of this request</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> getPatches() {
         return this.patches;
     }

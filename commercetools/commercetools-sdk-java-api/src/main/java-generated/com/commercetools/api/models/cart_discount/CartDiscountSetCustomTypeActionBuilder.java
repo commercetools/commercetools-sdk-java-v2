@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountSetCustomTypeAction cartDiscountSetCustomTypeAction = CartDiscountSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartDiscountSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountSetCustomTypeAction cartDiscountSetCustomTypeAction = CartDiscountSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDiscountSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
+     <*  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>>
      */
 
     public CartDiscountSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
+     <*  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>>
      */
 
     public CartDiscountSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
+     <*  <p>Sets the Custom Fields fields for the CartDiscount.</p>>
      */
 
     public CartDiscountSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
+     <*  <p>Sets the Custom Fields fields for the CartDiscount.</p>>
      */
 
     public CartDiscountSetCustomTypeActionBuilder fields(

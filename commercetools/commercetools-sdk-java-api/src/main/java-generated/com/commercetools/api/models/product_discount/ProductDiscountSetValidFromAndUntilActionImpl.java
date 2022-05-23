@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductDiscountSetValidFromAndUntilAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountSetValidFromAndUntilActionImpl
         implements ProductDiscountSetValidFromAndUntilAction, ModelBase {
@@ -36,20 +39,26 @@ public class ProductDiscountSetValidFromAndUntilActionImpl
         this.action = SET_VALID_FROM_AND_UNTIL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     <*  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>>
      */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     <*  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>>
      */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }

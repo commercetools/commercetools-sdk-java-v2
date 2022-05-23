@@ -34,9 +34,17 @@ public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineIte
         this.type = LINE_ITEMS;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getPredicate() {
         return this.predicate;

@@ -14,15 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetDeliveryItemsAction orderSetDeliveryItemsAction = OrderSetDeliveryItemsAction.builder()
-           .deliveryId("{deliveryId}")
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderSetDeliveryItemsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetDeliveryItemsAction orderSetDeliveryItemsAction = OrderSetDeliveryItemsAction.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetDeliveryItemsActionImpl.class)
@@ -30,10 +33,16 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
 
     String SET_DELIVERY_ITEMS = "setDeliveryItems";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("items")

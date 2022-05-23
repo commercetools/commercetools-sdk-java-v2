@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * LineItemReturnItem
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemReturnItemImpl implements LineItemReturnItem, ModelBase {
 
@@ -63,46 +66,80 @@ public class LineItemReturnItemImpl implements LineItemReturnItem, ModelBase {
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the ReturnItem.</p>
+     <*  <p>Platform-generated unique identifier of the ReturnItem.</p>>
      */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getComment() {
         return this.comment;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
         return this.paymentState;
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     <*  <p>Custom Fields of this return item.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     <>
+     */
 
     public String getLineItemId() {
         return this.lineItemId;

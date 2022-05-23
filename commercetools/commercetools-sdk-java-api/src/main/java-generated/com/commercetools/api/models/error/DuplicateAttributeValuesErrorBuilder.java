@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicateAttributeValuesError duplicateAttributeValuesError = DuplicateAttributeValuesError.builder()
-           .message("{message}")
-           .plusAttributes(attributesBuilder -> attributesBuilder)
-           .build()
- </code></pre>
- </div>
+ * DuplicateAttributeValuesErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateAttributeValuesError duplicateAttributeValuesError = DuplicateAttributeValuesError.builder()
+ *             .message("{message}")
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAttributeValuesError> {
@@ -27,15 +29,27 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValuesErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateAttributeValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -45,17 +59,29 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValuesErrorBuilder attributes(
             final com.commercetools.api.models.product.Attribute... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValuesErrorBuilder attributes(
             final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
             final com.commercetools.api.models.product.Attribute... attributes) {
@@ -66,6 +92,10 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         if (this.attributes == null) {
@@ -74,6 +104,10 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateAttributeValuesErrorBuilder withAttributes(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {

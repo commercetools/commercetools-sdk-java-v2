@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PriceDraftImport priceDraftImport = PriceDraftImport.builder()
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * PriceDraftImportBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PriceDraftImport priceDraftImport = PriceDraftImport.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
@@ -51,10 +53,18 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     @Nullable
     private String key;
 
+    /**
+     <>
+     */
+
     public PriceDraftImportBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PriceDraftImportBuilder value(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
@@ -63,7 +73,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
 
     public PriceDraftImportBuilder country(@Nullable final String country) {
@@ -72,7 +82,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     <*  <p>References a customer group by key.</p>>
      */
 
     public PriceDraftImportBuilder customerGroup(
@@ -84,7 +94,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     <*  <p>References a customer group by key.</p>>
      */
 
     public PriceDraftImportBuilder customerGroup(
@@ -94,7 +104,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     <*  <p>References a channel by key.</p>>
      */
 
     public PriceDraftImportBuilder channel(
@@ -104,7 +114,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     <*  <p>References a channel by key.</p>>
      */
 
     public PriceDraftImportBuilder channel(
@@ -113,10 +123,18 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PriceDraftImportBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PriceDraftImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
@@ -124,7 +142,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The custom fields for this category.</p>
+     <*  <p>The custom fields for this category.</p>>
      */
 
     public PriceDraftImportBuilder custom(
@@ -134,7 +152,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The custom fields for this category.</p>
+     <*  <p>The custom fields for this category.</p>>
      */
 
     public PriceDraftImportBuilder custom(
@@ -144,7 +162,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     <*  <p>Sets a discounted price from an external service.</p>>
      */
 
     public PriceDraftImportBuilder discounted(
@@ -154,7 +172,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     <*  <p>Sets a discounted price from an external service.</p>>
      */
 
     public PriceDraftImportBuilder discounted(
@@ -164,7 +182,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public PriceDraftImportBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -173,7 +191,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public PriceDraftImportBuilder tiers(
@@ -183,7 +201,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public PriceDraftImportBuilder plusTiers(
@@ -196,7 +214,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public PriceDraftImportBuilder plusTiers(
@@ -209,7 +227,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public PriceDraftImportBuilder withTiers(
@@ -218,6 +236,10 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
         this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PriceDraftImportBuilder key(@Nullable final String key) {
         this.key = key;

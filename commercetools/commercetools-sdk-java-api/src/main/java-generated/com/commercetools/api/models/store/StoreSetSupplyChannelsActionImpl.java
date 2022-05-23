@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StoreSetSupplyChannelsAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsA
         this.action = SET_SUPPLY_CHANNELS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {
         return this.supplyChannels;

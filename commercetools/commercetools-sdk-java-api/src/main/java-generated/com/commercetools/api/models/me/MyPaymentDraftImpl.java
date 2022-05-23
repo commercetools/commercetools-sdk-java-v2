@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyPaymentDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
 
@@ -40,23 +43,33 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     <*  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>>
      */
+
     public com.commercetools.api.models.common.Money getAmountPlanned() {
         return this.amountPlanned;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-     *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+     <*  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>>
      */
+
     public com.commercetools.api.models.me.MyTransactionDraft getTransaction() {
         return this.transaction;
     }

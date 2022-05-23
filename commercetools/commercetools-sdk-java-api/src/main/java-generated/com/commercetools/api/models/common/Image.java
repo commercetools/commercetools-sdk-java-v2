@@ -14,28 +14,41 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Image image = Image.builder()
-           .url("{url}")
-           .dimensions(dimensionsBuilder -> dimensionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * Image
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Image image = Image.builder()
+ *             .url("{url}")
+ *             .dimensions(dimensionsBuilder -> dimensionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImageImpl.class)
 public interface Image {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("url")
     public String getUrl();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("dimensions")
     public ImageDimensions getDimensions();
+
+    /**
+     <>
+     */
 
     @JsonProperty("label")
     public String getLabel();

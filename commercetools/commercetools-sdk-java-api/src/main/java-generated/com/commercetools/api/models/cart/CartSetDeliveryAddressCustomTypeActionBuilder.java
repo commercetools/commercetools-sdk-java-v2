@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetDeliveryAddressCustomTypeAction cartSetDeliveryAddressCustomTypeAction = CartSetDeliveryAddressCustomTypeAction.builder()
-           .deliveryId("{deliveryId}")
-           .build()
- </code></pre>
- </div>
+ * CartSetDeliveryAddressCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetDeliveryAddressCustomTypeAction cartSetDeliveryAddressCustomTypeAction = CartSetDeliveryAddressCustomTypeAction.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<CartSetDeliveryAddressCustomTypeAction> {
@@ -30,13 +32,17 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public CartSetDeliveryAddressCustomTypeActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     <*  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>>
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder type(
@@ -46,7 +52,7 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     <*  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>>
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder type(
@@ -56,7 +62,7 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     <*  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>>
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder fields(
@@ -66,7 +72,7 @@ public class CartSetDeliveryAddressCustomTypeActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     <*  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>>
      */
 
     public CartSetDeliveryAddressCustomTypeActionBuilder fields(

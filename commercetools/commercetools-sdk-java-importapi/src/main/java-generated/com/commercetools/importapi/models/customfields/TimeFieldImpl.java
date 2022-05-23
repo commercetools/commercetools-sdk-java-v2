@@ -35,11 +35,16 @@ public class TimeFieldImpl implements TimeField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.time.LocalTime getValue() {
         return this.value;

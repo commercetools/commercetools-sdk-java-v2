@@ -15,27 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
-           .totalNet(totalNetBuilder -> totalNetBuilder)
-           .totalGross(totalGrossBuilder -> totalGrossBuilder)
-           .build()
- </code></pre>
- </div>
+ * TaxedItemPrice
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxedItemPriceImpl.class)
 public interface TaxedItemPrice {
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
     public TypedMoney getTotalNet();
 
     /**
-     *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+     <*  <p>TaxedItemPrice fields can not be used in query predicates.</p>>
      */
     @NotNull
     @Valid
@@ -43,7 +49,7 @@ public interface TaxedItemPrice {
     public TypedMoney getTotalGross();
 
     /**
-     *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
      */
     @Valid
     @JsonProperty("totalTax")

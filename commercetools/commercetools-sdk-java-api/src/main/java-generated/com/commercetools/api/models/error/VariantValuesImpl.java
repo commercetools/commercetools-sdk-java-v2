@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * VariantValues
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantValuesImpl implements VariantValues, ModelBase {
 
@@ -35,13 +38,25 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     public VariantValuesImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;

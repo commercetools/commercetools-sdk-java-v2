@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategoryChangeAssetOrderAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOrderAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOr
         this.action = CHANGE_ASSET_ORDER;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getAssetOrder() {
         return this.assetOrder;

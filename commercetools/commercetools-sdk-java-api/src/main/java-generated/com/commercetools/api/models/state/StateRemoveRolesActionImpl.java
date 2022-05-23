@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StateRemoveRolesAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, Model
         this.action = REMOVE_ROLES;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Roles to remove from the State.</p>
+     <*  <p>Roles to remove from the State.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }

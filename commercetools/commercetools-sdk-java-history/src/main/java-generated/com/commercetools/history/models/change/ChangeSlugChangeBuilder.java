@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeSlugChange changeSlugChange = ChangeSlugChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeSlugChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeSlugChange changeSlugChange = ChangeSlugChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
@@ -29,7 +31,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changeSlug</code></p>
+     <*  <p>Shape of the action for <code>changeSlug</code></p>>
      */
 
     public ChangeSlugChangeBuilder change(final String change) {
@@ -37,11 +39,19 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeSlugChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeSlugChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {
@@ -49,11 +59,19 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeSlugChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeSlugChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;

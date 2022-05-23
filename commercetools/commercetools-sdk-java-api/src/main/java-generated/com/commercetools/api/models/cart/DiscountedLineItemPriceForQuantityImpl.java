@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DiscountedLineItemPriceForQuantity
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineItemPriceForQuantity, ModelBase {
 
@@ -31,9 +34,17 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
     public DiscountedLineItemPriceForQuantityImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice() {
         return this.discountedPrice;

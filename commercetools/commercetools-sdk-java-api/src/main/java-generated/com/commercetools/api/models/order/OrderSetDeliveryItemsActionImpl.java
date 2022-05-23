@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderSetDeliveryItemsAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryItemsAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryItemsAct
         this.action = SET_DELIVERY_ITEMS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;

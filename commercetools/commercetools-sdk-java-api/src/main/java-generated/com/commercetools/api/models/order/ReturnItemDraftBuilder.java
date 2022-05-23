@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReturnItemDraft returnItemDraft = ReturnItemDraft.builder()
-           .quantity(0.3)
-           .shipmentState(ReturnShipmentState.ADVISED)
-           .build()
- </code></pre>
- </div>
+ * ReturnItemDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReturnItemDraft returnItemDraft = ReturnItemDraft.builder()
+ *             .quantity(0.3)
+ *             .shipmentState(ReturnShipmentState.ADVISED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
@@ -39,25 +41,45 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     <>
+     */
+
     public ReturnItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReturnItemDraftBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReturnItemDraftBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReturnItemDraftBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReturnItemDraftBuilder shipmentState(
             final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
@@ -66,7 +88,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     <*  <p>Custom Fields of this return item.</p>>
      */
 
     public ReturnItemDraftBuilder custom(
@@ -76,7 +98,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     <*  <p>Custom Fields of this return item.</p>>
      */
 
     public ReturnItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

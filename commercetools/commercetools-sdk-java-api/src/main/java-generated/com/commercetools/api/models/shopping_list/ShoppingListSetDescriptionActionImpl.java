@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShoppingListSetDescriptionAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetDescriptionActionImpl implements ShoppingListSetDescriptionAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class ShoppingListSetDescriptionActionImpl implements ShoppingListSetDesc
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;

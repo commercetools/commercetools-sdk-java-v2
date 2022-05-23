@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeValueRelativeChangeValue changeValueRelativeChangeValue = ChangeValueRelativeChangeValue.builder()
-           .permyriad(1)
-           .build()
- </code></pre>
- </div>
+ * ChangeValueRelativeChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeValueRelativeChangeValue changeValueRelativeChangeValue = ChangeValueRelativeChangeValue.builder()
+ *             .permyriad(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValueRelativeChangeValue> {
 
     private Integer permyriad;
+
+    /**
+     <>
+     */
 
     public ChangeValueRelativeChangeValueBuilder permyriad(final Integer permyriad) {
         this.permyriad = permyriad;

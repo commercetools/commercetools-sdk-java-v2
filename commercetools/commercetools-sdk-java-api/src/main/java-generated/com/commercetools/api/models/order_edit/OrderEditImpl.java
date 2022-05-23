@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderEdit
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditImpl implements OrderEdit, ModelBase {
 
@@ -71,76 +74,97 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the OrderEdit.</p>
+     <*  <p>Platform-generated unique identifier of the OrderEdit.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>The current version of the OrderEdit.</p>
+     <*  <p>The current version of the OrderEdit.</p>>
      */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-     *  <p>User-defined unique identifier of the OrderEdit.</p>
+     <*  <p>User-defined unique identifier of the OrderEdit.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     <*  <p>The order to be updated with this edit.</p>>
      */
+
     public com.commercetools.api.models.order.OrderReference getResource() {
         return this.resource;
     }
 
     /**
-     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     <*  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
         return this.stagedActions;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     /**
-     *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+     <*  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>>
      */
+
     public com.commercetools.api.models.order_edit.OrderEditResult getResult() {
         return this.result;
     }
 
     /**
-     *  <p>This field can be used to add textual information regarding the edit.</p>
+     <*  <p>This field can be used to add textual information regarding the edit.</p>>
      */
+
     public String getComment() {
         return this.comment;
     }

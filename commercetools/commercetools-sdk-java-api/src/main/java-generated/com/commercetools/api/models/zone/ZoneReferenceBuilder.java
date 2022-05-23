@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneReference zoneReference = ZoneReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * ZoneReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneReference zoneReference = ZoneReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneReferenceBuilder implements Builder<ZoneReference> {
@@ -28,7 +30,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     private com.commercetools.api.models.zone.Zone obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Zone.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Zone.</p>>
      */
 
     public ZoneReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     <*  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>>
      */
 
     public ZoneReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     <*  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>>
      */
 
     public ZoneReferenceBuilder obj(@Nullable final com.commercetools.api.models.zone.Zone obj) {

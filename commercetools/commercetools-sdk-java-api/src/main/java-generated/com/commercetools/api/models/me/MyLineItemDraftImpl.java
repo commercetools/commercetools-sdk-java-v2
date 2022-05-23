@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyLineItemDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
 
@@ -58,52 +61,73 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     public MyLineItemDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getProductId() {
         return this.productId;
     }
 
+    /**
+     <>
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     <>
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     <*  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>>
      */
+
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     <*  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
      */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
      */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     <*  <p>Container for line item specific address(es).</p>>
      */
+
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     <>
+     */
 
     public String getSku() {
         return this.sku;

@@ -19,36 +19,42 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDraft productDraft = ProductDraft.builder()
-           .productType(productTypeBuilder -> productTypeBuilder)
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDraft productDraft = ProductDraft.builder()
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDraftImpl.class)
 public interface ProductDraft {
 
     /**
-     *  <p>A predefined product type assigned to the product. All products must have a product type.</p>
+     <*  <p>A predefined product type assigned to the product. All products must have a product type.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("productType")
     public ProductTypeResourceIdentifier getProductType();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URLs for the product. A slug must be unique across a project, but a product can have the same slug for different languages. Slugs have a maximum size of 256. Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
+     <*  <p>Human-readable identifiers usually used as deep-link URLs for the product. A slug must be unique across a project, but a product can have the same slug for different languages. Slugs have a maximum size of 256. Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>>
      */
     @NotNull
     @Valid
@@ -56,74 +62,98 @@ public interface ProductDraft {
     public LocalizedString getSlug();
 
     /**
-     *  <p>User-defined unique identifier for the Product.</p>
+     <*  <p>User-defined unique identifier for the Product.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>Categories assigned to the product.</p>
+     <*  <p>Categories assigned to the product.</p>>
      */
     @Valid
     @JsonProperty("categories")
     public List<CategoryResourceIdentifier> getCategories();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("categoryOrderHints")
     public CategoryOrderHints getCategoryOrderHints();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>The master product variant. Required if the <code>variants</code> array has product variants.</p>
+     <*  <p>The master product variant. Required if the <code>variants</code> array has product variants.</p>>
      */
     @Valid
     @JsonProperty("masterVariant")
     public ProductVariantDraft getMasterVariant();
 
     /**
-     *  <p>An array of related product variants.</p>
+     <*  <p>An array of related product variants.</p>>
      */
     @Valid
     @JsonProperty("variants")
     public List<ProductVariantDraft> getVariants();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>If <code>true</code>, the product is published immediately.</p>
+     <*  <p>If <code>true</code>, the product is published immediately.</p>>
      */
 
     @JsonProperty("publish")
     public Boolean getPublish();
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     <*  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>>
      */
 
     @JsonProperty("priceMode")

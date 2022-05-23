@@ -8,19 +8,21 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TextLineItem textLineItem = TextLineItem.builder()
-           .addedAt("{addedAt}")
-           .custom(customBuilder -> customBuilder)
-           .description(descriptionBuilder -> descriptionBuilder)
-           .id("{id}")
-           .name(nameBuilder -> nameBuilder)
-           .quantity(1)
-           .build()
- </code></pre>
- </div>
+ * TextLineItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TextLineItem textLineItem = TextLineItem.builder()
+ *             .addedAt("{addedAt}")
+ *             .custom(customBuilder -> customBuilder)
+ *             .description(descriptionBuilder -> descriptionBuilder)
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .quantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemBuilder implements Builder<TextLineItem> {
@@ -37,10 +39,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private Integer quantity;
 
+    /**
+     <>
+     */
+
     public TextLineItemBuilder addedAt(final String addedAt) {
         this.addedAt = addedAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TextLineItemBuilder custom(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
@@ -48,10 +58,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TextLineItemBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TextLineItemBuilder description(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -59,15 +77,27 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TextLineItemBuilder description(final com.commercetools.history.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TextLineItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TextLineItemBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -75,10 +105,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TextLineItemBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TextLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;

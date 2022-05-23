@@ -16,14 +16,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetAddressCustomTypeAction customerSetAddressCustomTypeAction = CustomerSetAddressCustomTypeAction.builder()
-           .addressId("{addressId}")
-           .build()
- </code></pre>
- </div>
+ * CustomerSetAddressCustomTypeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetAddressCustomTypeAction customerSetAddressCustomTypeAction = CustomerSetAddressCustomTypeAction.builder()
+ *             .addressId("{addressId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetAddressCustomTypeActionImpl.class)
@@ -32,19 +35,22 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+     <*  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
+     <*  <p>Sets the Custom Fields fields for the <code>address</code>.</p>>
      */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("addressId")
     public String getAddressId();

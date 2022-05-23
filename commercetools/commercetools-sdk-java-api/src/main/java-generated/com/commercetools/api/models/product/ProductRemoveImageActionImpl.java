@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductRemoveImageAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, ModelBase {
 
@@ -41,24 +44,41 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
         this.action = REMOVE_IMAGE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     <>
+     */
 
     public String getSku() {
         return this.sku;
     }
 
     /**
-     *  <p>The URL of the image.</p>
+     <*  <p>The URL of the image.</p>>
      */
+
     public String getImageUrl() {
         return this.imageUrl;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

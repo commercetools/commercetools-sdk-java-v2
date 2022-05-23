@@ -15,13 +15,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetShippingRateInputAction stagedOrderSetShippingRateInputAction = StagedOrderSetShippingRateInputAction.builder()
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetShippingRateInputAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetShippingRateInputAction stagedOrderSetShippingRateInputAction = StagedOrderSetShippingRateInputAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetShippingRateInputActionImpl.class)
@@ -29,6 +32,9 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
 
     String SET_SHIPPING_RATE_INPUT = "setShippingRateInput";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInputDraft getShippingRateInput();

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeInfo discountCodeInfo = DiscountCodeInfo.builder()
-           .discountCode(discountCodeBuilder -> discountCodeBuilder)
-           .state(DiscountCodeState.NOT_ACTIVE)
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeInfo discountCodeInfo = DiscountCodeInfo.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .state(DiscountCodeState.NOT_ACTIVE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
@@ -25,6 +27,10 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     private com.commercetools.api.models.cart.DiscountCodeState state;
 
+    /**
+     <>
+     */
+
     public DiscountCodeInfoBuilder discountCode(
             Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
         this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
@@ -32,11 +38,19 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountCodeInfoBuilder discountCode(
             final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountCodeInfoBuilder state(final com.commercetools.api.models.cart.DiscountCodeState state) {
         this.state = state;

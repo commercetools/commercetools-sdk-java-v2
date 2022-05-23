@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ScoreShippingRateInput scoreShippingRateInput = ScoreShippingRateInput.builder()
-           .score(0.3)
-           .build()
- </code></pre>
- </div>
+ * ScoreShippingRateInputBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ScoreShippingRateInput scoreShippingRateInput = ScoreShippingRateInput.builder()
+ *             .score(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateInput> {
 
     private Double score;
+
+    /**
+     <>
+     */
 
     public ScoreShippingRateInputBuilder score(final Double score) {
         this.score = score;

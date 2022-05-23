@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeTransactionTimestampChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTimestampChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
         this.type = CHANGE_TRANSACTION_TIMESTAMP_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
+     <*  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
         return this.transaction;
     }
 
+    /**
+     <>
+     */
+
     public String getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public String getPreviousValue() {
         return this.previousValue;

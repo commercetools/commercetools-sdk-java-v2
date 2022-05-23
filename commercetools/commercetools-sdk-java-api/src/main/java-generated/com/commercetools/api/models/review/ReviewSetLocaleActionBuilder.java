@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewSetLocaleAction reviewSetLocaleAction = ReviewSetLocaleAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ReviewSetLocaleActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewSetLocaleAction reviewSetLocaleAction = ReviewSetLocaleAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleAction> {
@@ -24,7 +26,7 @@ public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleActi
     private String locale;
 
     /**
-     *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     <*  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
      */
 
     public ReviewSetLocaleActionBuilder locale(@Nullable final String locale) {

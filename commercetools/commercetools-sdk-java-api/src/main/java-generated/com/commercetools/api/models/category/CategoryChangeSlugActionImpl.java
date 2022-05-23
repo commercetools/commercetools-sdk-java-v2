@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategoryChangeSlugAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, M
         this.action = CHANGE_SLUG;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p>
+     <*  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }

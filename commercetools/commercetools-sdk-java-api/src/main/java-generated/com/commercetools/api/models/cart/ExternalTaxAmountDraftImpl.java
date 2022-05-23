@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ExternalTaxAmountDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft, ModelBase {
 
@@ -32,11 +35,16 @@ public class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft, Model
     }
 
     /**
-     *  <p>The total gross amount of the item (totalNet + taxes).</p>
+     <*  <p>The total gross amount of the item (totalNet + taxes).</p>>
      */
+
     public com.commercetools.api.models.common.Money getTotalGross() {
         return this.totalGross;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getTaxRate() {
         return this.taxRate;

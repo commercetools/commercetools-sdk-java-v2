@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentChangeTransactionTimestampAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeTransactionTimestampActionImpl implements PaymentChangeTransactionTimestampAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
         this.action = CHANGE_TRANSACTION_TIMESTAMP;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getTransactionId() {
         return this.transactionId;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;

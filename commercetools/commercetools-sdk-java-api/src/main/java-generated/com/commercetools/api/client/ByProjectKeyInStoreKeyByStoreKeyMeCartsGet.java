@@ -17,17 +17,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .inStoreKeyWithStoreKeyValue("{storeKey}")
-           .me()
-           .carts()
-           .get()
-           .execute()
- }</code></pre>
- </div>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .me()
+ *            .carts()
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet extends

@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxedPrice taxedPrice = TaxedPrice.builder()
-           .totalNet(totalNetBuilder -> totalNetBuilder)
-           .totalGross(totalGrossBuilder -> totalGrossBuilder)
-           .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TaxedPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedPrice taxedPrice = TaxedPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceBuilder implements Builder<TaxedPrice> {
@@ -34,7 +36,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     private com.commercetools.importapi.models.common.Money totalTax;
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>>
      */
 
     public TaxedPriceBuilder totalNet(
@@ -44,7 +46,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>>
      */
 
     public TaxedPriceBuilder totalNet(final com.commercetools.importapi.models.common.Money totalNet) {
@@ -53,7 +55,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>>
      */
 
     public TaxedPriceBuilder totalGross(
@@ -63,7 +65,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>>
      */
 
     public TaxedPriceBuilder totalGross(final com.commercetools.importapi.models.common.Money totalGross) {
@@ -72,7 +74,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
      */
 
     public TaxedPriceBuilder taxPortions(final com.commercetools.importapi.models.orders.TaxPortion... taxPortions) {
@@ -81,7 +83,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
      */
 
     public TaxedPriceBuilder taxPortions(
@@ -91,7 +93,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
      */
 
     public TaxedPriceBuilder plusTaxPortions(
@@ -104,7 +106,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
      */
 
     public TaxedPriceBuilder plusTaxPortions(
@@ -117,7 +119,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
      */
 
     public TaxedPriceBuilder withTaxPortions(
@@ -128,7 +130,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>>
      */
 
     public TaxedPriceBuilder totalTax(
@@ -138,7 +140,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>>
      */
 
     public TaxedPriceBuilder totalTax(@Nullable final com.commercetools.importapi.models.common.Money totalTax) {

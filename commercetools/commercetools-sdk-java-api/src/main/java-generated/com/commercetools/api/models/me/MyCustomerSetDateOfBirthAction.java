@@ -12,19 +12,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCustomerSetDateOfBirthAction myCustomerSetDateOfBirthAction = MyCustomerSetDateOfBirthAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCustomerSetDateOfBirthAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerSetDateOfBirthAction myCustomerSetDateOfBirthAction = MyCustomerSetDateOfBirthAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSetDateOfBirthActionImpl.class)
 public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
 
     String SET_DATE_OF_BIRTH = "setDateOfBirth";
+
+    /**
+     <>
+     */
 
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartSetCustomTypeAction myCartSetCustomTypeAction = MyCartSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCartSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartSetCustomTypeAction myCartSetCustomTypeAction = MyCartSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetCustomTypeActionBuilder implements Builder<MyCartSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class MyCartSetCustomTypeActionBuilder implements Builder<MyCartSetCustom
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the MyCart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCart.</p>
+     <*  <p>Defines the Type that extends the MyCart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCart.</p>>
      */
 
     public MyCartSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class MyCartSetCustomTypeActionBuilder implements Builder<MyCartSetCustom
     }
 
     /**
-     *  <p>Defines the Type that extends the MyCart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCart.</p>
+     <*  <p>Defines the Type that extends the MyCart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCart.</p>>
      */
 
     public MyCartSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class MyCartSetCustomTypeActionBuilder implements Builder<MyCartSetCustom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyCart.</p>
+     <*  <p>Sets the Custom Fields fields for the MyCart.</p>>
      */
 
     public MyCartSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class MyCartSetCustomTypeActionBuilder implements Builder<MyCartSetCustom
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyCart.</p>
+     <*  <p>Sets the Custom Fields fields for the MyCart.</p>>
      */
 
     public MyCartSetCustomTypeActionBuilder fields(

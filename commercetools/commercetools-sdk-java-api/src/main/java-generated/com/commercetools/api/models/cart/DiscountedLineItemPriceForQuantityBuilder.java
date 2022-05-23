@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountedLineItemPriceForQuantity discountedLineItemPriceForQuantity = DiscountedLineItemPriceForQuantity.builder()
-           .quantity(0.3)
-           .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountedLineItemPriceForQuantityBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPriceForQuantity discountedLineItemPriceForQuantity = DiscountedLineItemPriceForQuantity.builder()
+ *             .quantity(0.3)
+ *             .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceForQuantityBuilder implements Builder<DiscountedLineItemPriceForQuantity> {
@@ -25,10 +27,18 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
 
     private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
 
+    /**
+     <>
+     */
+
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder> builder) {
@@ -36,6 +46,10 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
             final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice) {

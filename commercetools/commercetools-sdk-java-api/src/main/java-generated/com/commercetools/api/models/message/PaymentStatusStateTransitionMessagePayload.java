@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentStatusStateTransitionMessagePayload paymentStatusStateTransitionMessagePayload = PaymentStatusStateTransitionMessagePayload.builder()
-           .state(stateBuilder -> stateBuilder)
-           .force(true)
-           .build()
- </code></pre>
- </div>
+ * PaymentStatusStateTransitionMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentStatusStateTransitionMessagePayload paymentStatusStateTransitionMessagePayload = PaymentStatusStateTransitionMessagePayload.builder()
+ *             .state(stateBuilder -> stateBuilder)
+ *             .force(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentStatusStateTransitionMessagePayloadImpl.class)
@@ -32,13 +35,16 @@ public interface PaymentStatusStateTransitionMessagePayload extends MessagePaylo
     String PAYMENT_STATUS_STATE_TRANSITION = "PaymentStatusStateTransition";
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("force")
     public Boolean getForce();

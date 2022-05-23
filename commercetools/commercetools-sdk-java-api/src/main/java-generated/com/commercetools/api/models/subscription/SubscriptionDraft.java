@@ -14,39 +14,54 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SubscriptionDraft subscriptionDraft = SubscriptionDraft.builder()
-           .destination(destinationBuilder -> destinationBuilder)
-           .build()
- </code></pre>
- </div>
+ * SubscriptionDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionDraft subscriptionDraft = SubscriptionDraft.builder()
+ *             .destination(destinationBuilder -> destinationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionDraftImpl.class)
 public interface SubscriptionDraft {
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("changes")
     public List<ChangeSubscription> getChanges();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("destination")
     public Destination getDestination();
 
     /**
-     *  <p>User-defined unique identifier for the Subscription.</p>
+     <*  <p>User-defined unique identifier for the Subscription.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("messages")
     public List<MessageSubscription> getMessages();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("format")
     public DeliveryFormat getFormat();

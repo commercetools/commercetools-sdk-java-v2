@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetExpectedDeliveryChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange,
         this.type = SET_EXPECTED_DELIVERY_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
+     <*  <p>Shape of the action for <code>setExpectedDelivery</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public String getNextValue() {
         return this.nextValue;

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeUpdate typeUpdate = TypeUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeUpdate typeUpdate = TypeUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeUpdateBuilder implements Builder<TypeUpdate> {
@@ -26,7 +28,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
     private java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     <*  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
      */
 
     public TypeUpdateBuilder version(final Long version) {
@@ -35,7 +37,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Type.</p>
+     <*  <p>Update actions to be performed on the Type.</p>>
      */
 
     public TypeUpdateBuilder actions(final com.commercetools.api.models.type.TypeUpdateAction... actions) {
@@ -44,7 +46,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Type.</p>
+     <*  <p>Update actions to be performed on the Type.</p>>
      */
 
     public TypeUpdateBuilder actions(final java.util.List<com.commercetools.api.models.type.TypeUpdateAction> actions) {
@@ -53,7 +55,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Type.</p>
+     <*  <p>Update actions to be performed on the Type.</p>>
      */
 
     public TypeUpdateBuilder plusActions(final com.commercetools.api.models.type.TypeUpdateAction... actions) {
@@ -65,7 +67,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Type.</p>
+     <*  <p>Update actions to be performed on the Type.</p>>
      */
 
     public TypeUpdateBuilder plusActions(
@@ -78,7 +80,7 @@ public class TypeUpdateBuilder implements Builder<TypeUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Type.</p>
+     <*  <p>Update actions to be performed on the Type.</p>>
      */
 
     public TypeUpdateBuilder withActions(

@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentUpdateAction paymentUpdateAction = PaymentUpdateAction.addInterfaceInteractionBuilder()
-           type(typeBuilder -> typeBuilder)
-           .build()
- </code></pre>
- </div>
+ * PaymentUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentUpdateAction paymentUpdateAction = PaymentUpdateAction.addInterfaceInteractionBuilder()
+ *             type(typeBuilder -> typeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionImpl.class, name = PaymentAddInterfaceInteractionAction.ADD_INTERFACE_INTERACTION),
@@ -52,6 +55,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface PaymentUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<PaymentUpdateAction> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

@@ -14,16 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetReturnPaymentStateChange setReturnPaymentStateChange = SetReturnPaymentStateChange.builder()
-           .change("{change}")
-           .nextValue(ReturnPaymentState.NON_REFUNDABLE)
-           .previousValue(ReturnPaymentState.NON_REFUNDABLE)
-           .build()
- </code></pre>
- </div>
+ * SetReturnPaymentStateChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetReturnPaymentStateChange setReturnPaymentStateChange = SetReturnPaymentStateChange.builder()
+ *             .change("{change}")
+ *             .nextValue(ReturnPaymentState.NON_REFUNDABLE)
+ *             .previousValue(ReturnPaymentState.NON_REFUNDABLE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetReturnPaymentStateChangeImpl.class)
@@ -31,21 +34,30 @@ public interface SetReturnPaymentStateChange extends Change {
 
     String SET_RETURN_PAYMENT_STATE_CHANGE = "SetReturnPaymentStateChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>setReturnPaymentState</code></p>
+     <*  <p>Update action for <code>setReturnPaymentState</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public ReturnPaymentState getNextValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public ReturnPaymentState getPreviousValue();

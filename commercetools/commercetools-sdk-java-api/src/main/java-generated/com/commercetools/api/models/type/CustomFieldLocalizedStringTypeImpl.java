@@ -26,6 +26,10 @@ public class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedS
         this.name = LOCALIZED_STRING;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }

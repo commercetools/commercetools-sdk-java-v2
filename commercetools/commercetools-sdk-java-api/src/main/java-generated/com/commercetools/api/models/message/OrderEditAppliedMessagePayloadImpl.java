@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderEditAppliedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessagePayload, ModelBase {
 
@@ -36,16 +39,25 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
         this.type = ORDER_EDIT_APPLIED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Reference to a OrderEdit.</p>
+     <*  <p>Reference to a OrderEdit.</p>>
      */
+
     public com.commercetools.api.models.order_edit.OrderEditReference getEdit() {
         return this.edit;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order_edit.OrderEditApplied getResult() {
         return this.result;

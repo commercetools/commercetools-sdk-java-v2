@@ -41,27 +41,34 @@ public class AWSLambdaDestinationImpl implements AWSLambdaDestination, ModelBase
         this.type = AWS_LAMBDA;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>
+     <*  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>>
      */
+
     public String getArn() {
         return this.arn;
     }
 
     /**
-     *  <p>Partially hidden on retrieval for security reasons.</p>
+     <*  <p>Partially hidden on retrieval for security reasons.</p>>
      */
+
     public String getAccessKey() {
         return this.accessKey;
     }
 
     /**
-     *  <p>Partially hidden on retrieval for security reasons.</p>
+     <*  <p>Partially hidden on retrieval for security reasons.</p>>
      */
+
     public String getAccessSecret() {
         return this.accessSecret;
     }

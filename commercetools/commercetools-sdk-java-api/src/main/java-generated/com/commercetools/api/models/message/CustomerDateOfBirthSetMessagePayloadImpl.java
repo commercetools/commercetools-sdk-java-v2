@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerDateOfBirthSetMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfBirthSetMessagePayload, ModelBase {
 
@@ -31,9 +34,17 @@ public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfB
         this.type = CUSTOMER_DATE_OF_BIRTH_SET;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;

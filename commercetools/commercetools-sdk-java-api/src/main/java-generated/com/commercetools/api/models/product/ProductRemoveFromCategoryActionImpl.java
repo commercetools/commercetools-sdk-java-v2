@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductRemoveFromCategoryAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCategoryAction, ModelBase {
 
@@ -36,13 +39,25 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
         this.action = REMOVE_FROM_CATEGORY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
         return this.category;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

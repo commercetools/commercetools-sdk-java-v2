@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductReference productReference = ProductReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * ProductReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductReference productReference = ProductReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductReferenceBuilder implements Builder<ProductReference> {
 
     private String id;
+
+    /**
+     <>
+     */
 
     public ProductReferenceBuilder id(final String id) {
         this.id = id;

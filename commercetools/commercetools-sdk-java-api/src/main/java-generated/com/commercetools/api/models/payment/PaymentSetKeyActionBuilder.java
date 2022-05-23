@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetKeyAction paymentSetKeyAction = PaymentSetKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetKeyAction paymentSetKeyAction = PaymentSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> {
@@ -24,7 +26,7 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
     private String key;
 
     /**
-     *  <p>User-specific unique identifier for the payment (max. 256 characters). If not provided an existing key will be removed.</p>
+     <*  <p>User-specific unique identifier for the payment (max. 256 characters). If not provided an existing key will be removed.</p>>
      */
 
     public PaymentSetKeyActionBuilder key(@Nullable final String key) {

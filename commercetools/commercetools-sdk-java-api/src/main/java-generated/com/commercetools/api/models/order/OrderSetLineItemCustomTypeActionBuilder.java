@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetLineItemCustomTypeAction orderSetLineItemCustomTypeAction = OrderSetLineItemCustomTypeAction.builder()
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * OrderSetLineItemCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetLineItemCustomTypeAction orderSetLineItemCustomTypeAction = OrderSetLineItemCustomTypeAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSetLineItemCustomTypeAction> {
@@ -30,13 +32,17 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public OrderSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     <*  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>>
      */
 
     public OrderSetLineItemCustomTypeActionBuilder type(
@@ -46,7 +52,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     <*  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>>
      */
 
     public OrderSetLineItemCustomTypeActionBuilder type(
@@ -56,7 +62,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     <*  <p>Sets the Custom Fields fields for the LineItem.</p>>
      */
 
     public OrderSetLineItemCustomTypeActionBuilder fields(
@@ -66,7 +72,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     <*  <p>Sets the Custom Fields fields for the LineItem.</p>>
      */
 
     public OrderSetLineItemCustomTypeActionBuilder fields(

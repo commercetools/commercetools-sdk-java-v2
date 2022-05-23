@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetTaxCategoryAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAct
         this.action = SET_TAX_CATEGORY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+     <*  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>>
      */
+
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }

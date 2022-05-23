@@ -14,39 +14,51 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   FieldDefinition fieldDefinition = FieldDefinition.builder()
-           .type(typeBuilder -> typeBuilder)
-           .name("{name}")
-           .label(labelBuilder -> labelBuilder)
-           .inputHint(TextInputHint.SINGLE_LINE)
-           .build()
- </code></pre>
- </div>
+ * FieldDefinition
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FieldDefinition fieldDefinition = FieldDefinition.builder()
+ *             .type(typeBuilder -> typeBuilder)
+ *             .name("{name}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .inputHint(TextInputHint.SINGLE_LINE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FieldDefinitionImpl.class)
 public interface FieldDefinition {
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("type")
     public FieldType getType();
 
     /**
-     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     <*  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("label")
     public LocalizedString getLabel();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();

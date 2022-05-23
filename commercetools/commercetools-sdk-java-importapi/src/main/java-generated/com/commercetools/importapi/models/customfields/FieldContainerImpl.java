@@ -32,8 +32,9 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
     }
 
     /**
-     *  <p>Mapping from the custom field name to the actual value.</p>
+     <*  <p>Mapping from the custom field name to the actual value.</p>>
      */
+
     public Map<String, com.commercetools.importapi.models.customfields.CustomField> values() {
         return values;
     }

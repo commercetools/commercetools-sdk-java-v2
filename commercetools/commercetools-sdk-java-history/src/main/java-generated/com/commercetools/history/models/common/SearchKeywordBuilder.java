@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SearchKeyword searchKeyword = SearchKeyword.builder()
-           .text("{text}")
-           .suggestTokenizer(suggestTokenizerBuilder -> suggestTokenizerBuilder)
-           .build()
- </code></pre>
- </div>
+ * SearchKeywordBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SearchKeyword searchKeyword = SearchKeyword.builder()
+ *             .text("{text}")
+ *             .suggestTokenizer(suggestTokenizerBuilder -> suggestTokenizerBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchKeywordBuilder implements Builder<SearchKeyword> {
@@ -25,10 +27,18 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     private com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer;
 
+    /**
+     <>
+     */
+
     public SearchKeywordBuilder text(final String text) {
         this.text = text;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SearchKeywordBuilder suggestTokenizer(
             Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, com.commercetools.history.models.common.SuggestTokenizerBuilder> builder) {
@@ -36,6 +46,10 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SearchKeywordBuilder suggestTokenizer(
             final com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer) {

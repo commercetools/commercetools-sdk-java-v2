@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SyncInfo syncInfo = SyncInfo.builder()
-           .channel(channelBuilder -> channelBuilder)
-           .syncedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ * SyncInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SyncInfo syncInfo = SyncInfo.builder()
+ *             .channel(channelBuilder -> channelBuilder)
+ *             .syncedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyncInfoBuilder implements Builder<SyncInfo> {
@@ -31,7 +33,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     <*  <p>Connection to a particular synchronization destination.</p>>
      */
 
     public SyncInfoBuilder channel(
@@ -41,7 +43,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     <*  <p>Connection to a particular synchronization destination.</p>>
      */
 
     public SyncInfoBuilder channel(final com.commercetools.api.models.channel.ChannelReference channel) {
@@ -50,13 +52,17 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     <*  <p>Can be used to reference an external order instance, file etc.</p>>
      */
 
     public SyncInfoBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SyncInfoBuilder syncedAt(final java.time.ZonedDateTime syncedAt) {
         this.syncedAt = syncedAt;

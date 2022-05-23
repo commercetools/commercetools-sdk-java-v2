@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeSetInputTipAction productTypeSetInputTipAction = ProductTypeSetInputTipAction.builder()
-           .attributeName("{attributeName}")
-           .build()
- </code></pre>
- </div>
+ * ProductTypeSetInputTipAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeSetInputTipAction productTypeSetInputTipAction = ProductTypeSetInputTipAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeSetInputTipActionImpl.class)
@@ -30,12 +33,15 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
 
     String SET_INPUT_TIP = "setInputTip";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("inputTip")

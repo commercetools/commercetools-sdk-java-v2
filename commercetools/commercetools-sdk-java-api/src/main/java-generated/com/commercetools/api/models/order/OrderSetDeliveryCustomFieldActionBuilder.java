@@ -9,15 +9,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetDeliveryCustomFieldAction orderSetDeliveryCustomFieldAction = OrderSetDeliveryCustomFieldAction.builder()
-           .deliveryId("{deliveryId}")
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * OrderSetDeliveryCustomFieldActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetDeliveryCustomFieldAction orderSetDeliveryCustomFieldAction = OrderSetDeliveryCustomFieldAction.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSetDeliveryCustomFieldAction> {
@@ -29,13 +31,17 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
     @Nullable
     private java.lang.Object value;
 
+    /**
+     <>
+     */
+
     public OrderSetDeliveryCustomFieldActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     <*  <p>Name of the Custom Field.</p>>
      */
 
     public OrderSetDeliveryCustomFieldActionBuilder name(final String name) {
@@ -44,7 +50,7 @@ public class OrderSetDeliveryCustomFieldActionBuilder implements Builder<OrderSe
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
      */
 
     public OrderSetDeliveryCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

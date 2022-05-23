@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategorySetCustomTypeAction categorySetCustomTypeAction = CategorySetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CategorySetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetCustomTypeAction categorySetCustomTypeAction = CategorySetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
+     <*  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>>
      */
 
     public CategorySetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
     }
 
     /**
-     *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
+     <*  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>>
      */
 
     public CategorySetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Category.</p>
+     <*  <p>Sets the Custom Fields fields for the Category.</p>>
      */
 
     public CategorySetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class CategorySetCustomTypeActionBuilder implements Builder<CategorySetCu
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Category.</p>
+     <*  <p>Sets the Custom Fields fields for the Category.</p>>
      */
 
     public CategorySetCustomTypeActionBuilder fields(

@@ -14,17 +14,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeAttributeConstraintChange changeAttributeConstraintChange = ChangeAttributeConstraintChange.builder()
-           .change("{change}")
-           .attributeName("{attributeName}")
-           .previousValue(AttributeConstraintEnum.NONE)
-           .nextValue(AttributeConstraintEnum.NONE)
-           .build()
- </code></pre>
- </div>
+ * ChangeAttributeConstraintChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeAttributeConstraintChange changeAttributeConstraintChange = ChangeAttributeConstraintChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .previousValue(AttributeConstraintEnum.NONE)
+ *             .nextValue(AttributeConstraintEnum.NONE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeAttributeConstraintChangeImpl.class)
@@ -32,25 +35,37 @@ public interface ChangeAttributeConstraintChange extends Change {
 
     String CHANGE_ATTRIBUTE_CONSTRAINT_CHANGE = "ChangeAttributeConstraintChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     *  <p>name of the updated attribute</p>
+     <*  <p>name of the updated attribute</p>>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public AttributeConstraintEnum getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public AttributeConstraintEnum getNextValue();

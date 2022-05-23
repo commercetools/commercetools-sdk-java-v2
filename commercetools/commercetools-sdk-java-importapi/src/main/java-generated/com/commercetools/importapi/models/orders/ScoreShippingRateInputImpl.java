@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ScoreShippingRateInput
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ScoreShippingRateInputImpl implements ScoreShippingRateInput, ModelBase {
 
@@ -31,9 +34,17 @@ public class ScoreShippingRateInputImpl implements ScoreShippingRateInput, Model
         this.type = ShippingRateInputType.findEnum("Score");
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.importapi.models.orders.ShippingRateInputType getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public Double getScore() {
         return this.score;

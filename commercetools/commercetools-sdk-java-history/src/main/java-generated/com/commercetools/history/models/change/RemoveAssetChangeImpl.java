@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemoveAssetChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
 
@@ -35,16 +38,25 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
         this.type = REMOVE_ASSET_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>removeAsset</code></p>
+     <*  <p>Update action for <code>removeAsset</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Asset getPreviousValue() {
         return this.previousValue;

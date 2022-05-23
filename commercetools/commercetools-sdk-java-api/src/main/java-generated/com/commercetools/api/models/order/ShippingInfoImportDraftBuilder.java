@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingInfoImportDraft shippingInfoImportDraft = ShippingInfoImportDraft.builder()
-           .shippingMethodName("{shippingMethodName}")
-           .price(priceBuilder -> priceBuilder)
-           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingInfoImportDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingInfoImportDraft shippingInfoImportDraft = ShippingInfoImportDraft.builder()
+ *             .shippingMethodName("{shippingMethodName}")
+ *             .price(priceBuilder -> priceBuilder)
+ *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImportDraft> {
@@ -48,10 +50,18 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     @Nullable
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder shippingMethodName(final String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingInfoImportDraftBuilder price(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -59,13 +69,17 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder price(final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     <*  <p>The shipping rate used to determine the price.</p>>
      */
 
     public ShippingInfoImportDraftBuilder shippingRate(
@@ -76,7 +90,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     <*  <p>The shipping rate used to determine the price.</p>>
      */
 
     public ShippingInfoImportDraftBuilder shippingRate(
@@ -85,17 +99,29 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder taxRate(
             @Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingInfoImportDraftBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
@@ -105,6 +131,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
@@ -112,7 +142,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     <*  <p>Not set if custom shipping method is used.</p>>
      */
 
     public ShippingInfoImportDraftBuilder shippingMethod(
@@ -124,7 +154,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     <*  <p>Not set if custom shipping method is used.</p>>
      */
 
     public ShippingInfoImportDraftBuilder shippingMethod(
@@ -134,7 +164,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoImportDraftBuilder deliveries(
@@ -144,7 +174,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoImportDraftBuilder deliveries(
@@ -154,7 +184,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
@@ -167,7 +197,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
@@ -180,7 +210,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoImportDraftBuilder withDeliveries(
@@ -190,6 +220,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder discountedPrice(
             Function<com.commercetools.api.models.order.DiscountedLineItemPriceDraftBuilder, com.commercetools.api.models.order.DiscountedLineItemPriceDraftBuilder> builder) {
         this.discountedPrice = builder
@@ -198,6 +232,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder discountedPrice(
             @Nullable final com.commercetools.api.models.order.DiscountedLineItemPriceDraft discountedPrice) {
         this.discountedPrice = discountedPrice;
@@ -205,7 +243,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     <*  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>>
      */
 
     public ShippingInfoImportDraftBuilder shippingMethodState(

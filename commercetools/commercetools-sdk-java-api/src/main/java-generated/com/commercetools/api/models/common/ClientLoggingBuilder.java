@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ClientLogging clientLogging = ClientLogging.builder()
-           .build()
- </code></pre>
- </div>
+ * ClientLoggingBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ClientLogging clientLogging = ClientLogging.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ClientLoggingBuilder implements Builder<ClientLogging> {
@@ -34,7 +36,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     private String anonymousId;
 
     /**
-     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     <*  <p><code>id</code> of the APIClient which created the resource.</p>>
      */
 
     public ClientLoggingBuilder clientId(@Nullable final String clientId) {
@@ -43,7 +45,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
      */
 
     public ClientLoggingBuilder externalUserId(@Nullable final String externalUserId) {
@@ -52,7 +54,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
      */
 
     public ClientLoggingBuilder customer(
@@ -62,7 +64,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
      */
 
     public ClientLoggingBuilder customer(
@@ -72,7 +74,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     <*  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>>
      */
 
     public ClientLoggingBuilder anonymousId(@Nullable final String anonymousId) {

@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddAssetChange addAssetChange = AddAssetChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddAssetChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddAssetChange addAssetChange = AddAssetChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
@@ -29,7 +31,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     private com.commercetools.history.models.common.Asset previousValue;
 
     /**
-     *  <p>Update action for <code>addAsset</code></p>
+     <*  <p>Update action for <code>addAsset</code></p>>
      */
 
     public AddAssetChangeBuilder change(final String change) {
@@ -37,22 +39,38 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddAssetChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddAssetChangeBuilder nextValue(final com.commercetools.history.models.common.Asset nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddAssetChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddAssetChangeBuilder previousValue(final com.commercetools.history.models.common.Asset previousValue) {
         this.previousValue = previousValue;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderLineItemRemovedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemovedMessagePayload, ModelBase {
 
@@ -59,40 +62,73 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
         this.type = ORDER_LINE_ITEM_REMOVED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getLineItemId() {
         return this.lineItemId;
     }
 
+    /**
+     <>
+     */
+
     public Long getRemovedQuantity() {
         return this.removedQuantity;
     }
 
+    /**
+     <>
+     */
+
     public Long getNewQuantity() {
         return this.newQuantity;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getNewState() {
         return this.newState;
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
      */
+
     public com.commercetools.api.models.common.TypedMoney getNewTotalPrice() {
         return this.newTotalPrice;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getNewTaxedPrice() {
         return this.newTaxedPrice;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.Price getNewPrice() {
         return this.newPrice;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getNewShippingDetail() {
         return this.newShippingDetail;

@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderAddReturnInfoAction orderAddReturnInfoAction = OrderAddReturnInfoAction.builder()
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderAddReturnInfoAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderAddReturnInfoAction orderAddReturnInfoAction = OrderAddReturnInfoAction.builder()
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderAddReturnInfoActionImpl.class)
@@ -30,13 +33,24 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
 
     String ADD_RETURN_INFO = "addReturnInfo";
 
+    /**
+     <>
+     */
+
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("items")
     public List<ReturnItemDraft> getItems();
+
+    /**
+     <>
+     */
 
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();

@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentChangeTransactionTimestampAction paymentChangeTransactionTimestampAction = PaymentChangeTransactionTimestampAction.builder()
-           .transactionId("{transactionId}")
-           .timestamp(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ * PaymentChangeTransactionTimestampActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentChangeTransactionTimestampAction paymentChangeTransactionTimestampAction = PaymentChangeTransactionTimestampAction.builder()
+ *             .transactionId("{transactionId}")
+ *             .timestamp(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeTransactionTimestampActionBuilder
@@ -25,10 +27,18 @@ public class PaymentChangeTransactionTimestampActionBuilder
 
     private java.time.ZonedDateTime timestamp;
 
+    /**
+     <>
+     */
+
     public PaymentChangeTransactionTimestampActionBuilder transactionId(final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentChangeTransactionTimestampActionBuilder timestamp(final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;

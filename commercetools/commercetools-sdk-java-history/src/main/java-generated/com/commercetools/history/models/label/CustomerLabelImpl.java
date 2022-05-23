@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerLabel
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerLabelImpl implements CustomerLabel, ModelBase {
 
@@ -39,17 +42,33 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
         this.type = CUSTOMER_LABEL;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getFirstName() {
         return this.firstName;
     }
 
+    /**
+     <>
+     */
+
     public String getLastName() {
         return this.lastName;
     }
+
+    /**
+     <>
+     */
 
     public String getCustomerNumber() {
         return this.customerNumber;

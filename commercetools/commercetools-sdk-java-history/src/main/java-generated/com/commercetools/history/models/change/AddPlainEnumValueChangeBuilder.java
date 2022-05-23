@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddPlainEnumValueChange addPlainEnumValueChange = AddPlainEnumValueChange.builder()
-           .change("{change}")
-           .attributeName("{attributeName}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddPlainEnumValueChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddPlainEnumValueChange addPlainEnumValueChange = AddPlainEnumValueChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValueChange> {
@@ -29,7 +31,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
     /**
-     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     <*  <p>Update action for <code>addPlainEnumValue</code> on product types</p>>
      */
 
     public AddPlainEnumValueChangeBuilder change(final String change) {
@@ -38,7 +40,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     <*  <p>The name of the attribute updated.</p>>
      */
 
     public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
@@ -46,11 +48,19 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddPlainEnumValueChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddPlainEnumValueChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.EnumValue nextValue) {

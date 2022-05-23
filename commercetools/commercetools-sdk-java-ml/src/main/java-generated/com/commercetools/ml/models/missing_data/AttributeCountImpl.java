@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AttributeCount
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeCountImpl implements AttributeCount, ModelBase {
 
@@ -36,22 +39,25 @@ public class AttributeCountImpl implements AttributeCount, ModelBase {
     }
 
     /**
-     *  <p>Number of attributes defined in the product type.</p>
+     <*  <p>Number of attributes defined in the product type.</p>>
      */
+
     public Integer getProductTypeAttributes() {
         return this.productTypeAttributes;
     }
 
     /**
-     *  <p>Number of attributes defined in the variant.</p>
+     <*  <p>Number of attributes defined in the variant.</p>>
      */
+
     public Integer getVariantAttributes() {
         return this.variantAttributes;
     }
 
     /**
-     *  <p>Number of attributes missing values in the variant.</p>
+     <*  <p>Number of attributes missing values in the variant.</p>>
      */
+
     public Integer getMissingAttributeValues() {
         return this.missingAttributeValues;
     }

@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeLabelChange changeLabelChange = ChangeLabelChange.builder()
-           .change("{change}")
-           .fieldName("{fieldName}")
-           .attributeName("{attributeName}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeLabelChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeLabelChange changeLabelChange = ChangeLabelChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
@@ -35,7 +37,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     /**
-     *  <p>Update action for <code>changeLabel</code> on product types and types</p>
+     <*  <p>Update action for <code>changeLabel</code> on product types and types</p>>
      */
 
     public ChangeLabelChangeBuilder change(final String change) {
@@ -44,7 +46,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-     *  <p>The name of the field definition to update (types).</p>
+     <*  <p>The name of the field definition to update (types).</p>>
      */
 
     public ChangeLabelChangeBuilder fieldName(final String fieldName) {
@@ -53,7 +55,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-     *  <p>The name of the attribute definition to update (product-type).</p>
+     <*  <p>The name of the attribute definition to update (product-type).</p>>
      */
 
     public ChangeLabelChangeBuilder attributeName(final String attributeName) {
@@ -61,22 +63,38 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLabelChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLabelChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeLabelChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeLabelChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {

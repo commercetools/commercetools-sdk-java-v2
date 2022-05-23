@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeReference
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeReferenceImpl implements ProductTypeReference, ModelBase {
 
@@ -31,9 +34,17 @@ public class ProductTypeReferenceImpl implements ProductTypeReference, ModelBase
         this.typeId = ReferenceTypeId.findEnum("product-type");
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.ml.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
+
+    /**
+     <>
+     */
 
     public String getId() {
         return this.id;

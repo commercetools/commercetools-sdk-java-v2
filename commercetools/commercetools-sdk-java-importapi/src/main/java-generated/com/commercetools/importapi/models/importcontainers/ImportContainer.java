@@ -15,54 +15,55 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImportContainer importContainer = ImportContainer.builder()
-           .key("{key}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ *  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportContainer importContainer = ImportContainer.builder()
+ *             .key("{key}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportContainerImpl.class)
 public interface ImportContainer {
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     <*  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     <*  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>>
      */
 
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     <*  <p>The version of the ImportContainer.</p>>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     <*  <p>The time when the ImportContainer was created.</p>>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     <*  <p>The last time when the ImportContainer was modified.</p>>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")

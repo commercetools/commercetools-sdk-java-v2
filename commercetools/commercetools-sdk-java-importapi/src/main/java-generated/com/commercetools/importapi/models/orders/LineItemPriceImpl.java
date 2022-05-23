@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * LineItemPrice
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemPriceImpl implements LineItemPrice, ModelBase {
 
@@ -60,64 +63,73 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Price.value</code>.</p>
+     <*  <p>Maps to <code>Price.value</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-     *  <p>Maps to <code>Price.county</code>.</p>
+     <*  <p>Maps to <code>Price.county</code>.</p>>
      */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-     *  <p>Maps to <code>Price.validFrom</code>.</p>
+     <*  <p>Maps to <code>Price.validFrom</code>.</p>>
      */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-     *  <p>Maps to <code>Price.validUntil</code>.</p>
+     <*  <p>Maps to <code>Price.validUntil</code>.</p>>
      */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     <*  <p>References a customer group by key.</p>>
      */
+
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     <*  <p>References a channel by key.</p>>
      */
+
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     <*  <p>Sets a discounted price from an external service.</p>>
      */
+
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
 
     /**
-     *  <p>Maps to <code>Price.custom</code>.</p>
+     <*  <p>Maps to <code>Price.custom</code>.</p>>
      */
+
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }

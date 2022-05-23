@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreAddProductSelectionAction storeAddProductSelectionAction = StoreAddProductSelectionAction.builder()
-           .productSelection(productSelectionBuilder -> productSelectionBuilder)
-           .build()
- </code></pre>
- </div>
+ * StoreAddProductSelectionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreAddProductSelectionAction storeAddProductSelectionAction = StoreAddProductSelectionAction.builder()
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddProductSelectionAction> {
@@ -28,7 +30,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
     private Boolean active;
 
     /**
-     *  <p>Resource Identifier of a Product Selection</p>
+     <*  <p>Resource Identifier of a Product Selection</p>>
      */
 
     public StoreAddProductSelectionActionBuilder productSelection(
@@ -40,7 +42,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
     }
 
     /**
-     *  <p>Resource Identifier of a Product Selection</p>
+     <*  <p>Resource Identifier of a Product Selection</p>>
      */
 
     public StoreAddProductSelectionActionBuilder productSelection(
@@ -50,7 +52,7 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+     <*  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>>
      */
 
     public StoreAddProductSelectionActionBuilder active(@Nullable final Boolean active) {

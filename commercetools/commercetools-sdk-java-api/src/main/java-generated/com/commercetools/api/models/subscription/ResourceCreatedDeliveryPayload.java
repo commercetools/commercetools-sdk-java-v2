@@ -14,17 +14,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ResourceCreatedDeliveryPayload resourceCreatedDeliveryPayload = ResourceCreatedDeliveryPayload.builder()
-           .projectKey("{projectKey}")
-           .resource(resourceBuilder -> resourceBuilder)
-           .version(0.3)
-           .modifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ * ResourceCreatedDeliveryPayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResourceCreatedDeliveryPayload resourceCreatedDeliveryPayload = ResourceCreatedDeliveryPayload.builder()
+ *             .projectKey("{projectKey}")
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .version(0.3)
+ *             .modifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceCreatedDeliveryPayloadImpl.class)
@@ -32,10 +35,16 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
 
     String RESOURCE_CREATED = "ResourceCreated";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("modifiedAt")
     public ZonedDateTime getModifiedAt();

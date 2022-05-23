@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * GeneralCategoryRecommendationPagedQueryResponse
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeneralCategoryRecommendationPagedQueryResponseImpl
         implements GeneralCategoryRecommendationPagedQueryResponse, ModelBase {
@@ -39,20 +42,33 @@ public class GeneralCategoryRecommendationPagedQueryResponseImpl
     public GeneralCategoryRecommendationPagedQueryResponseImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     <>
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
+
     public Long getOffset() {
         return this.offset;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> getResults() {
         return this.results;

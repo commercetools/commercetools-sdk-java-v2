@@ -14,16 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeStateTypeChange changeStateTypeChange = ChangeStateTypeChange.builder()
-           .change("{change}")
-           .previousValue(StateType.ORDER_STATE)
-           .nextValue(StateType.ORDER_STATE)
-           .build()
- </code></pre>
- </div>
+ * ChangeStateTypeChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeStateTypeChange changeStateTypeChange = ChangeStateTypeChange.builder()
+ *             .change("{change}")
+ *             .previousValue(StateType.ORDER_STATE)
+ *             .nextValue(StateType.ORDER_STATE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeStateTypeChangeImpl.class)
@@ -31,21 +34,30 @@ public interface ChangeStateTypeChange extends Change {
 
     String CHANGE_STATE_TYPE_CHANGE = "ChangeStateTypeChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeType</code> on state</p>
+     <*  <p>Update action for <code>changeType</code> on state</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public StateType getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public StateType getNextValue();

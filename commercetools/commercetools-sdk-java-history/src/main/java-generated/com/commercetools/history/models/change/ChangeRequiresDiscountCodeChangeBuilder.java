@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeRequiresDiscountCodeChange changeRequiresDiscountCodeChange = ChangeRequiresDiscountCodeChange.builder()
-           .change("{change}")
-           .previousValue(true)
-           .nextValue(true)
-           .build()
- </code></pre>
- </div>
+ * ChangeRequiresDiscountCodeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeRequiresDiscountCodeChange changeRequiresDiscountCodeChange = ChangeRequiresDiscountCodeChange.builder()
+ *             .change("{change}")
+ *             .previousValue(true)
+ *             .nextValue(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRequiresDiscountCodeChange> {
@@ -28,7 +30,7 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
     private Boolean nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>
+     <*  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>>
      */
 
     public ChangeRequiresDiscountCodeChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeRequiresDiscountCodeChangeBuilder previousValue(final Boolean previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeRequiresDiscountCodeChangeBuilder nextValue(final Boolean nextValue) {
         this.nextValue = nextValue;

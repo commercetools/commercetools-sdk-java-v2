@@ -7,20 +7,26 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountChangeRequiresDiscountCodeAction cartDiscountChangeRequiresDiscountCodeAction = CartDiscountChangeRequiresDiscountCodeAction.builder()
-           .requiresDiscountCode(true)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountChangeRequiresDiscountCodeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeRequiresDiscountCodeAction cartDiscountChangeRequiresDiscountCodeAction = CartDiscountChangeRequiresDiscountCodeAction.builder()
+ *             .requiresDiscountCode(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeRequiresDiscountCodeActionBuilder
         implements Builder<CartDiscountChangeRequiresDiscountCodeAction> {
 
     private Boolean requiresDiscountCode;
+
+    /**
+     <>
+     */
 
     public CartDiscountChangeRequiresDiscountCodeActionBuilder requiresDiscountCode(
             final Boolean requiresDiscountCode) {

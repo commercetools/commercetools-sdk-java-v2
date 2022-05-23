@@ -14,43 +14,44 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Present on resources modified after 1 February 2019 except for events not tracked.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LastModifiedBy lastModifiedBy = LastModifiedBy.builder()
-           .build()
- </code></pre>
- </div>
+ *  <p>Present on resources modified after 1 February 2019 except for events not tracked.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LastModifiedBy lastModifiedBy = LastModifiedBy.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LastModifiedByImpl.class)
 public interface LastModifiedBy extends ClientLogging {
 
     /**
-     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     <*  <p><code>id</code> of the APIClient which modified the resource.</p>>
      */
 
     @JsonProperty("clientId")
     public String getClientId();
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
      */
 
     @JsonProperty("externalUserId")
     public String getExternalUserId();
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     <*  <p>Indicates the anonymous session during which the resource was modified.</p>>
      */
 
     @JsonProperty("anonymousId")

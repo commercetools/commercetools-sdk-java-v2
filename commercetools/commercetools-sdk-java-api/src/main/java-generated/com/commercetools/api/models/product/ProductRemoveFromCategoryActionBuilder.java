@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductRemoveFromCategoryAction productRemoveFromCategoryAction = ProductRemoveFromCategoryAction.builder()
-           .category(categoryBuilder -> categoryBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductRemoveFromCategoryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductRemoveFromCategoryAction productRemoveFromCategoryAction = ProductRemoveFromCategoryAction.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRemoveFromCategoryAction> {
@@ -27,6 +29,10 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
     @Nullable
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductRemoveFromCategoryActionBuilder category(
             Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
@@ -34,11 +40,19 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductRemoveFromCategoryActionBuilder category(
             final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
         this.category = category;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductRemoveFromCategoryActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

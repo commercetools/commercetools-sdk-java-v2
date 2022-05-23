@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCustomerSetLastNameAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetLastNameActionImpl implements MyCustomerSetLastNameAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class MyCustomerSetLastNameActionImpl implements MyCustomerSetLastNameAct
         this.action = SET_LAST_NAME;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getLastName() {
         return this.lastName;

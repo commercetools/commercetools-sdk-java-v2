@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeShipmentStateChange changeShipmentStateChange = ChangeShipmentStateChange.builder()
-           .change("{change}")
-           .nextValue(ShipmentState.SHIPPED)
-           .previousValue(ShipmentState.SHIPPED)
-           .build()
- </code></pre>
- </div>
+ * ChangeShipmentStateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeShipmentStateChange changeShipmentStateChange = ChangeShipmentStateChange.builder()
+ *             .change("{change}")
+ *             .nextValue(ShipmentState.SHIPPED)
+ *             .previousValue(ShipmentState.SHIPPED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentStateChange> {
@@ -28,7 +30,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     private com.commercetools.history.models.common.ShipmentState previousValue;
 
     /**
-     *  <p>Update action for <code>changeShipmentState</code></p>
+     <*  <p>Update action for <code>changeShipmentState</code></p>>
      */
 
     public ChangeShipmentStateChangeBuilder change(final String change) {
@@ -36,11 +38,19 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeShipmentStateChangeBuilder nextValue(
             final com.commercetools.history.models.common.ShipmentState nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeShipmentStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.ShipmentState previousValue) {

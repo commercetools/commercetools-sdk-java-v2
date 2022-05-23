@@ -18,43 +18,46 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeDraft discountCodeDraft = DiscountCodeDraft.builder()
-           .code("{code}")
-           .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeDraft discountCodeDraft = DiscountCodeDraft.builder()
+ *             .code("{code}")
+ *             .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeDraftImpl.class)
 public interface DiscountCodeDraft extends com.commercetools.api.models.CustomizableDraft<DiscountCodeDraft> {
 
     /**
-     *  <p>Name of the DiscountCode.</p>
+     <*  <p>Name of the DiscountCode.</p>>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *  <p>Description of the DiscountCode.</p>
+     <*  <p>Description of the DiscountCode.</p>>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     <*  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>>
      */
     @NotNull
     @JsonProperty("code")
     public String getCode();
 
     /**
-     *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+     <*  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>>
      */
     @NotNull
     @Valid
@@ -62,56 +65,56 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
     public List<CartDiscountResourceIdentifier> getCartDiscounts();
 
     /**
-     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     <*  <p>DiscountCode can only be applied to Carts that match this predicate.</p>>
      */
 
     @JsonProperty("cartPredicate")
     public String getCartPredicate();
 
     /**
-     *  <p>Only active DiscountCodes can be applied to the Cart.</p>
+     <*  <p>Only active DiscountCodes can be applied to the Cart.</p>>
      */
 
     @JsonProperty("isActive")
     public Boolean getIsActive();
 
     /**
-     *  <p>Number of times the DiscountCode can be applied.</p>
+     <*  <p>Number of times the DiscountCode can be applied.</p>>
      */
 
     @JsonProperty("maxApplications")
     public Long getMaxApplications();
 
     /**
-     *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     <*  <p>Number of times the DiscountCode can be applied per Customer.</p>>
      */
 
     @JsonProperty("maxApplicationsPerCustomer")
     public Long getMaxApplicationsPerCustomer();
 
     /**
-     *  <p>Custom Fields for the DiscountCode.</p>
+     <*  <p>Custom Fields for the DiscountCode.</p>>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Groups to which the DiscountCode will belong to.</p>
+     <*  <p>Groups to which the DiscountCode will belong to.</p>>
      */
 
     @JsonProperty("groups")
     public List<String> getGroups();
 
     /**
-     *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
+     <*  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
+     <*  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>>
      */
 
     @JsonProperty("validUntil")

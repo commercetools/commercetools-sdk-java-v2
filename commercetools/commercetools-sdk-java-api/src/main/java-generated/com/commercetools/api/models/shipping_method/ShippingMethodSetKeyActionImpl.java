@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShippingMethodSetKeyAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodSetKeyActionImpl implements ShippingMethodSetKeyAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ShippingMethodSetKeyActionImpl implements ShippingMethodSetKeyActio
         this.action = SET_KEY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     <*  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>>
      */
+
     public String getKey() {
         return this.key;
     }

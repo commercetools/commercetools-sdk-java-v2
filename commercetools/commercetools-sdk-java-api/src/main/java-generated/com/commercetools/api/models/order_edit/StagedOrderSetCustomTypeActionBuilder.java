@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetCustomTypeAction stagedOrderSetCustomTypeAction = StagedOrderSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetCustomTypeAction stagedOrderSetCustomTypeAction = StagedOrderSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrderSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     <*  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>>
      */
 
     public StagedOrderSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     <*  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>>
      */
 
     public StagedOrderSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     <*  <p>Sets the Custom Fields fields for the StagedOrder.</p>>
      */
 
     public StagedOrderSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     <*  <p>Sets the Custom Fields fields for the StagedOrder.</p>>
      */
 
     public StagedOrderSetCustomTypeActionBuilder fields(

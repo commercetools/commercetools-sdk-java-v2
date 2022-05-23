@@ -13,18 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Generic type for destinations.</p>
-
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionDestination extensionDestination = ExtensionDestination.awsLambdaBuilder()
-           arn("{arn}")
-           accessKey("{accessKey}")
-           accessSecret("{accessSecret}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Generic type for destinations.</p>
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionDestination extensionDestination = ExtensionDestination.awsLambdaBuilder()
+ *             arn("{arn}")
+ *             accessKey("{accessKey}")
+ *             accessSecret("{accessSecret}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AWSLambdaDestinationImpl.class, name = AWSLambdaDestination.AWS_LAMBDA),
@@ -34,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ExtensionDestination {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

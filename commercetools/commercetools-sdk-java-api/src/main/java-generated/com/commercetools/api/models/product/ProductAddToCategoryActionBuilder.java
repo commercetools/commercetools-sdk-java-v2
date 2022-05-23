@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductAddToCategoryAction productAddToCategoryAction = ProductAddToCategoryAction.builder()
-           .category(categoryBuilder -> categoryBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductAddToCategoryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductAddToCategoryAction productAddToCategoryAction = ProductAddToCategoryAction.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCategoryAction> {
@@ -30,6 +32,10 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     @Nullable
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductAddToCategoryActionBuilder category(
             Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
@@ -37,16 +43,28 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductAddToCategoryActionBuilder category(
             final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
         this.category = category;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductAddToCategoryActionBuilder orderHint(@Nullable final String orderHint) {
         this.orderHint = orderHint;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductAddToCategoryActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

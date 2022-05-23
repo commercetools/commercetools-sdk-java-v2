@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeInfo discountCodeInfo = DiscountCodeInfo.builder()
-           .discountCode(discountCodeBuilder -> discountCodeBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeInfo discountCodeInfo = DiscountCodeInfo.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
@@ -28,7 +30,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     private com.commercetools.importapi.models.orders.DiscountCodeState state;
 
     /**
-     *  <p>References a discount code by key.</p>
+     <*  <p>References a discount code by key.</p>>
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -40,7 +42,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     *  <p>References a discount code by key.</p>
+     <*  <p>References a discount code by key.</p>>
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -50,7 +52,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
+     <*  <p>Maps to <code>DiscountCodeInfo.state</code></p>>
      */
 
     public DiscountCodeInfoBuilder state(

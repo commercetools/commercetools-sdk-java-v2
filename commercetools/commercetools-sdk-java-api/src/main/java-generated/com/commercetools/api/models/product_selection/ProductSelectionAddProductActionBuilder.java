@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionAddProductAction productSelectionAddProductAction = ProductSelectionAddProductAction.builder()
-           .product(productBuilder -> productBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionAddProductActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionAddProductAction productSelectionAddProductAction = ProductSelectionAddProductAction.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionAddProductActionBuilder implements Builder<ProductSelectionAddProductAction> {
@@ -23,7 +25,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
 
     /**
-     *  <p>ResourceIdentifier to Product</p>
+     <*  <p>ResourceIdentifier to Product</p>>
      */
 
     public ProductSelectionAddProductActionBuilder product(
@@ -34,7 +36,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>ResourceIdentifier to Product</p>
+     <*  <p>ResourceIdentifier to Product</p>>
      */
 
     public ProductSelectionAddProductActionBuilder product(

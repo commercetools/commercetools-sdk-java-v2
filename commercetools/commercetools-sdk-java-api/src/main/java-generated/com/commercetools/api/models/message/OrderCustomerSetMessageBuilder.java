@@ -10,20 +10,22 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderCustomerSetMessage orderCustomerSetMessage = OrderCustomerSetMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .build()
- </code></pre>
- </div>
+ * OrderCustomerSetMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerSetMessage orderCustomerSetMessage = OrderCustomerSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetMessage> {
@@ -64,7 +66,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public OrderCustomerSetMessageBuilder id(final String id) {
@@ -72,15 +74,27 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomerSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomerSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderCustomerSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -88,7 +102,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderCustomerSetMessageBuilder lastModifiedBy(
@@ -98,7 +112,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderCustomerSetMessageBuilder lastModifiedBy(
@@ -108,7 +122,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderCustomerSetMessageBuilder createdBy(
@@ -118,7 +132,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderCustomerSetMessageBuilder createdBy(
@@ -127,13 +141,17 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomerSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public OrderCustomerSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -142,7 +160,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public OrderCustomerSetMessageBuilder resource(
@@ -151,10 +169,18 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomerSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -164,6 +190,10 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
@@ -171,7 +201,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
 
     public OrderCustomerSetMessageBuilder customer(
@@ -181,7 +211,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
 
     public OrderCustomerSetMessageBuilder customer(
@@ -191,7 +221,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerSetMessageBuilder customerGroup(
@@ -203,7 +233,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerSetMessageBuilder customerGroup(
@@ -213,7 +243,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
 
     public OrderCustomerSetMessageBuilder oldCustomer(
@@ -223,7 +253,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
 
     public OrderCustomerSetMessageBuilder oldCustomer(
@@ -233,7 +263,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerSetMessageBuilder oldCustomerGroup(
@@ -245,7 +275,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerSetMessageBuilder oldCustomerGroup(

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetAssetDescriptionAction productSetAssetDescriptionAction = ProductSetAssetDescriptionAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetAssetDescriptionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAssetDescriptionAction productSetAssetDescriptionAction = ProductSetAssetDescriptionAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductSetAssetDescriptionAction> {
@@ -39,36 +41,64 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     <>
+     */
+
     public ProductSetAssetDescriptionActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetAssetDescriptionActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductSetAssetDescriptionActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetAssetDescriptionActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductSetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetAssetDescriptionActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetAssetDescriptionActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {

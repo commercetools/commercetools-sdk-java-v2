@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartApplyDeltaToLineItemShippingDetailsTargetsAction myCartApplyDeltaToLineItemShippingDetailsTargetsAction = MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.builder()
-           .lineItemId("{lineItemId}")
-           .plusTargetsDelta(targetsDeltaBuilder -> targetsDeltaBuilder)
-           .build()
- </code></pre>
- </div>
+ * MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartApplyDeltaToLineItemShippingDetailsTargetsAction myCartApplyDeltaToLineItemShippingDetailsTargetsAction = MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .plusTargetsDelta(targetsDeltaBuilder -> targetsDeltaBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
@@ -26,10 +28,18 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
 
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
+    /**
+     <>
+     */
+
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
             final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {
@@ -37,11 +47,19 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder targetsDelta(
             final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
         this.targetsDelta = targetsDelta;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
             final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {
@@ -52,6 +70,10 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
             Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {
         if (this.targetsDelta == null) {
@@ -60,6 +82,10 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
         this.targetsDelta.add(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(
             Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {

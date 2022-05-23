@@ -15,17 +15,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntryQuantitySetMessagePayload inventoryEntryQuantitySetMessagePayload = InventoryEntryQuantitySetMessagePayload.builder()
-           .oldQuantityOnStock(0.3)
-           .newQuantityOnStock(0.3)
-           .oldAvailableQuantity(0.3)
-           .newAvailableQuantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * InventoryEntryQuantitySetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryQuantitySetMessagePayload inventoryEntryQuantitySetMessagePayload = InventoryEntryQuantitySetMessagePayload.builder()
+ *             .oldQuantityOnStock(0.3)
+ *             .newQuantityOnStock(0.3)
+ *             .oldAvailableQuantity(0.3)
+ *             .newAvailableQuantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryQuantitySetMessagePayloadImpl.class)
@@ -33,24 +36,36 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
 
     String INVENTORY_ENTRY_QUANTITY_SET = "InventoryEntryQuantitySet";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("oldQuantityOnStock")
     public Long getOldQuantityOnStock();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("newQuantityOnStock")
     public Long getNewQuantityOnStock();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("oldAvailableQuantity")
     public Long getOldAvailableQuantity();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("newAvailableQuantity")
     public Long getNewAvailableQuantity();
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
     @Valid
     @JsonProperty("supplyChannel")

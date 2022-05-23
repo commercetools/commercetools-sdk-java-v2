@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetMethodInfoNameAction paymentSetMethodInfoNameAction = PaymentSetMethodInfoNameAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetMethodInfoNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetMethodInfoNameAction paymentSetMethodInfoNameAction = PaymentSetMethodInfoNameAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSetMethodInfoNameAction> {
@@ -25,7 +27,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>If not provided, the name is unset.</p>
+     <*  <p>If not provided, the name is unset.</p>>
      */
 
     public PaymentSetMethodInfoNameActionBuilder name(
@@ -35,7 +37,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
     }
 
     /**
-     *  <p>If not provided, the name is unset.</p>
+     <*  <p>If not provided, the name is unset.</p>>
      */
 
     public PaymentSetMethodInfoNameActionBuilder name(

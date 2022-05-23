@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountLineItemsTarget cartDiscountLineItemsTarget = CartDiscountLineItemsTarget.builder()
-           .predicate("{predicate}")
-           .build()
- </code></pre>
- </div>
+ * CartDiscountLineItemsTarget
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountLineItemsTarget cartDiscountLineItemsTarget = CartDiscountLineItemsTarget.builder()
+ *             .predicate("{predicate}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountLineItemsTargetImpl.class)
@@ -28,6 +31,9 @@ public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
 
     String LINE_ITEMS = "lineItems";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();

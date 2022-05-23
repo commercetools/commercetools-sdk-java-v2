@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DeliveryAddressSetMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetMessagePayload, ModelBase {
 
@@ -39,17 +42,33 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
         this.type = DELIVERY_ADDRESS_SET;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.Address getOldAddress() {
         return this.oldAddress;

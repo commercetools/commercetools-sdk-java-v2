@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeChangeIsSearchableAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChangeIsSearchableAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
         this.action = CHANGE_IS_SEARCHABLE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getIsSearchable() {
         return this.isSearchable;

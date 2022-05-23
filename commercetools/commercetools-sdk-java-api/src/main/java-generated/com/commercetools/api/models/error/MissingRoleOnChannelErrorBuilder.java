@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingRoleOnChannelError missingRoleOnChannelError = MissingRoleOnChannelError.builder()
-           .message("{message}")
-           .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
-           .build()
- </code></pre>
- </div>
+ * MissingRoleOnChannelErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingRoleOnChannelError missingRoleOnChannelError = MissingRoleOnChannelError.builder()
+ *             .message("{message}")
+ *             .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnChannelError> {
@@ -32,15 +34,27 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     private com.commercetools.api.models.channel.ChannelRoleEnum missingRole;
 
+    /**
+     <>
+     */
+
     public MissingRoleOnChannelErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingRoleOnChannelErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingRoleOnChannelErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -51,7 +65,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public MissingRoleOnChannelErrorBuilder channel(
@@ -62,7 +76,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public MissingRoleOnChannelErrorBuilder channel(
@@ -72,7 +86,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+     <*  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>>
      */
 
     public MissingRoleOnChannelErrorBuilder missingRole(

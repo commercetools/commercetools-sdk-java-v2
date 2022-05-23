@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   BooleanAttribute booleanAttribute = BooleanAttribute.builder()
-           .value(true)
-           .build()
- </code></pre>
- </div>
+ * BooleanAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     BooleanAttribute booleanAttribute = BooleanAttribute.builder()
+ *             .value(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BooleanAttributeBuilder implements Builder<BooleanAttribute> {
@@ -27,13 +29,17 @@ public class BooleanAttributeBuilder implements Builder<BooleanAttribute> {
     private Boolean value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
      */
 
     public BooleanAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public BooleanAttributeBuilder value(final Boolean value) {
         this.value = value;

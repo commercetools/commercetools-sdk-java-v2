@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingImages missingImages = MissingImages.builder()
-           .product(productBuilder -> productBuilder)
-           .variantId(0.3)
-           .imageCount(0.3)
-           .build()
- </code></pre>
- </div>
+ * MissingImagesBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingImages missingImages = MissingImages.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .variantId(0.3)
+ *             .imageCount(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingImagesBuilder implements Builder<MissingImages> {
@@ -28,11 +30,19 @@ public class MissingImagesBuilder implements Builder<MissingImages> {
 
     private Long imageCount;
 
+    /**
+     <>
+     */
+
     public MissingImagesBuilder product(
             Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingImagesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
@@ -40,7 +50,7 @@ public class MissingImagesBuilder implements Builder<MissingImages> {
     }
 
     /**
-     *  <p>ID of the variant</p>
+     <*  <p>ID of the variant</p>>
      */
 
     public MissingImagesBuilder variantId(final Long variantId) {
@@ -49,7 +59,7 @@ public class MissingImagesBuilder implements Builder<MissingImages> {
     }
 
     /**
-     *  <p>Number of images the variant contains.</p>
+     <*  <p>Number of images the variant contains.</p>>
      */
 
     public MissingImagesBuilder imageCount(final Long imageCount) {

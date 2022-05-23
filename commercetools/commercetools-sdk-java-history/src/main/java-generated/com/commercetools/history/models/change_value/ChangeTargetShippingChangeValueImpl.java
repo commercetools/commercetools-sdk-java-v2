@@ -26,6 +26,10 @@ public class ChangeTargetShippingChangeValueImpl implements ChangeTargetShipping
         this.type = SHIPPING;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariantPatch productVariantPatch = ProductVariantPatch.builder()
-           .productVariant(productVariantBuilder -> productVariantBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductVariantPatchBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantPatch productVariantPatch = ProductVariantPatch.builder()
+ *             .productVariant(productVariantBuilder -> productVariantBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> {
@@ -31,7 +33,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     private Boolean staged;
 
     /**
-     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     <*  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>>
      */
 
     public ProductVariantPatchBuilder productVariant(
@@ -43,7 +45,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     <*  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>>
      */
 
     public ProductVariantPatchBuilder productVariant(
@@ -53,7 +55,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantPatchBuilder attributes(
@@ -64,7 +66,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantPatchBuilder attributes(
@@ -74,7 +76,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>
+     <*  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>>
      */
 
     public ProductVariantPatchBuilder staged(@Nullable final Boolean staged) {

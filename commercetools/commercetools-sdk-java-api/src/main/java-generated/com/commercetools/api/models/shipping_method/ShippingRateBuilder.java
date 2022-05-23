@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingRate shippingRate = ShippingRate.builder()
-           .price(priceBuilder -> priceBuilder)
-           .plusTiers(tiersBuilder -> tiersBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingRateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingRate shippingRate = ShippingRate.builder()
+ *             .price(priceBuilder -> priceBuilder)
+ *             .plusTiers(tiersBuilder -> tiersBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateBuilder implements Builder<ShippingRate> {
@@ -33,10 +35,18 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
 
+    /**
+     <>
+     */
+
     public ShippingRateBuilder price(final com.commercetools.api.models.common.TypedMoney price) {
         this.price = price;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateBuilder price(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -45,7 +55,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
+     <*  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>>
      */
 
     public ShippingRateBuilder freeAbove(@Nullable final com.commercetools.api.models.common.TypedMoney freeAbove) {
@@ -54,7 +64,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
+     <*  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>>
      */
 
     public ShippingRateBuilder freeAbove(
@@ -64,7 +74,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
+     <*  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>>
      */
 
     public ShippingRateBuilder isMatching(@Nullable final Boolean isMatching) {
@@ -73,7 +83,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     <*  <p>A list of shipping rate price tiers.</p>>
      */
 
     public ShippingRateBuilder tiers(
@@ -83,7 +93,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     <*  <p>A list of shipping rate price tiers.</p>>
      */
 
     public ShippingRateBuilder tiers(
@@ -93,7 +103,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     <*  <p>A list of shipping rate price tiers.</p>>
      */
 
     public ShippingRateBuilder plusTiers(
@@ -106,7 +116,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     <*  <p>A list of shipping rate price tiers.</p>>
      */
 
     public ShippingRateBuilder plusTiers(
@@ -120,7 +130,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     <*  <p>A list of shipping rate price tiers.</p>>
      */
 
     public ShippingRateBuilder withTiers(

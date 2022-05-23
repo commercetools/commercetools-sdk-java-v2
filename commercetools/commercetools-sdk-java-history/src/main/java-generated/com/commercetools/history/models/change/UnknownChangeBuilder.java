@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   UnknownChange unknownChange = UnknownChange.builder()
-           .change("{change}")
-           .build()
- </code></pre>
- </div>
+ * UnknownChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     UnknownChange unknownChange = UnknownChange.builder()
+ *             .change("{change}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UnknownChangeBuilder implements Builder<UnknownChange> {
@@ -25,15 +27,27 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
 
     private java.lang.Object nextValue;
 
+    /**
+     <>
+     */
+
     public UnknownChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public UnknownChangeBuilder previousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public UnknownChangeBuilder nextValue(final java.lang.Object nextValue) {
         this.nextValue = nextValue;

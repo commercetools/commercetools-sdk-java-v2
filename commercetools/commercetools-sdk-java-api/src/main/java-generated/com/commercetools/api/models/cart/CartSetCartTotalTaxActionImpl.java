@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartSetCartTotalTaxAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction, ModelBase {
 
@@ -36,16 +39,25 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
         this.action = SET_CART_TOTAL_TAX;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     <*  <p>The total gross amount of the cart (totalNet + taxes).</p>>
      */
+
     public com.commercetools.api.models.common.Money getExternalTotalGross() {
         return this.externalTotalGross;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions() {
         return this.externalTaxPortions;

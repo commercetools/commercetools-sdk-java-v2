@@ -17,57 +17,67 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreDraft storeDraft = StoreDraft.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * StoreDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreDraft storeDraft = StoreDraft.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreDraftImpl.class)
 public interface StoreDraft extends com.commercetools.api.models.CustomizableDraft<StoreDraft> {
 
     /**
-     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+     <*  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>The name of the store</p>
+     <*  <p>The name of the store</p>>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     <>
+     */
+
     @JsonProperty("languages")
     public List<String> getLanguages();
 
     /**
-     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     <*  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>>
      */
     @Valid
     @JsonProperty("distributionChannels")
     public List<ChannelResourceIdentifier> getDistributionChannels();
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     <*  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>>
      */
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelResourceIdentifier> getSupplyChannels();
 
     /**
-     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     <*  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>>
      */
     @Valid
     @JsonProperty("productSelections")
     public List<ProductSelectionSettingDraft> getProductSelections();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TransitionLineItemStateChange transitionLineItemStateChange = TransitionLineItemStateChange.builder()
-           .change("{change}")
-           .lineItemId("{lineItemId}")
-           .stateId("{stateId}")
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * TransitionLineItemStateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TransitionLineItemStateChange transitionLineItemStateChange = TransitionLineItemStateChange.builder()
+ *             .change("{change}")
+ *             .lineItemId("{lineItemId}")
+ *             .stateId("{stateId}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransitionLineItemStateChangeBuilder implements Builder<TransitionLineItemStateChange> {
@@ -35,7 +37,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
 
     /**
-     *  <p>Update action for <code>transitionLineItemState</code></p>
+     <*  <p>Update action for <code>transitionLineItemState</code></p>>
      */
 
     public TransitionLineItemStateChangeBuilder change(final String change) {
@@ -43,15 +45,27 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransitionLineItemStateChangeBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransitionLineItemStateChangeBuilder stateId(final String stateId) {
         this.stateId = stateId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TransitionLineItemStateChangeBuilder nextValue(
             final com.commercetools.history.models.common.ItemState... nextValue) {
@@ -59,11 +73,19 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransitionLineItemStateChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.ItemState> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TransitionLineItemStateChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.ItemState... nextValue) {
@@ -74,6 +96,10 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransitionLineItemStateChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
         if (this.nextValue == null) {
@@ -83,6 +109,10 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransitionLineItemStateChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
         this.nextValue = new ArrayList<>();
@@ -90,17 +120,29 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransitionLineItemStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.ItemState... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransitionLineItemStateChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.ItemState> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TransitionLineItemStateChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.ItemState... previousValue) {
@@ -111,6 +153,10 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransitionLineItemStateChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
         if (this.previousValue == null) {
@@ -119,6 +165,10 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TransitionLineItemStateChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {

@@ -15,17 +15,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeTextLineItemQuantityChange changeTextLineItemQuantityChange = ChangeTextLineItemQuantityChange.builder()
-           .change("{change}")
-           .textLineItem(textLineItemBuilder -> textLineItemBuilder)
-           .previousValue(1)
-           .nextValue(1)
-           .build()
- </code></pre>
- </div>
+ * ChangeTextLineItemQuantityChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTextLineItemQuantityChange changeTextLineItemQuantityChange = ChangeTextLineItemQuantityChange.builder()
+ *             .change("{change}")
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
+ *             .previousValue(1)
+ *             .nextValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTextLineItemQuantityChangeImpl.class)
@@ -33,23 +36,38 @@ public interface ChangeTextLineItemQuantityChange extends Change {
 
     String CHANGE_TEXT_LINE_ITEM_QUANTITY_CHANGE = "ChangeTextLineItemQuantityChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("textLineItem")
     public TextLineItemValue getTextLineItem();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();

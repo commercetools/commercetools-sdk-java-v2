@@ -14,33 +14,42 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingImagesMeta missingImagesMeta = MissingImagesMeta.builder()
-           .productLevel(productLevelBuilder -> productLevelBuilder)
-           .variantLevel(variantLevelBuilder -> variantLevelBuilder)
-           .threshold(0.3)
-           .build()
- </code></pre>
- </div>
+ * MissingImagesMeta
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingImagesMeta missingImagesMeta = MissingImagesMeta.builder()
+ *             .productLevel(productLevelBuilder -> productLevelBuilder)
+ *             .variantLevel(variantLevelBuilder -> variantLevelBuilder)
+ *             .threshold(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingImagesMetaImpl.class)
 public interface MissingImagesMeta {
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("productLevel")
     public MissingImagesProductLevel getProductLevel();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("variantLevel")
     public MissingImagesVariantLevel getVariantLevel();
 
     /**
-     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
+     <*  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>>
      */
     @NotNull
     @JsonProperty("threshold")

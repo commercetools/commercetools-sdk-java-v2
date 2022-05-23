@@ -16,14 +16,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetTransactionCustomTypeAction paymentSetTransactionCustomTypeAction = PaymentSetTransactionCustomTypeAction.builder()
-           .transactionId("{transactionId}")
-           .build()
- </code></pre>
- </div>
+ * PaymentSetTransactionCustomTypeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetTransactionCustomTypeAction paymentSetTransactionCustomTypeAction = PaymentSetTransactionCustomTypeAction.builder()
+ *             .transactionId("{transactionId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetTransactionCustomTypeActionImpl.class)
@@ -31,19 +34,22 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
 
     String SET_TRANSACTION_CUSTOM_TYPE = "setTransactionCustomType";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
     /**
-     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     <*  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     <*  <p>Sets the Custom Fields fields for the Transaction.</p>>
      */
     @Valid
     @JsonProperty("fields")

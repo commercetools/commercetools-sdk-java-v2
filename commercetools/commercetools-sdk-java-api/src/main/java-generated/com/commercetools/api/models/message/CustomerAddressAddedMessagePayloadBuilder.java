@@ -8,25 +8,35 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerAddressAddedMessagePayload customerAddressAddedMessagePayload = CustomerAddressAddedMessagePayload.builder()
-           .address(addressBuilder -> addressBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomerAddressAddedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerAddressAddedMessagePayload customerAddressAddedMessagePayload = CustomerAddressAddedMessagePayload.builder()
+ *             .address(addressBuilder -> addressBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressAddedMessagePayloadBuilder implements Builder<CustomerAddressAddedMessagePayload> {
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     <>
+     */
+
     public CustomerAddressAddedMessagePayloadBuilder address(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressAddedMessagePayloadBuilder address(
             final com.commercetools.api.models.common.Address address) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MissingAttributesDetails
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesDetailsImpl implements MissingAttributesDetails, ModelBase {
 
@@ -36,22 +39,25 @@ public class MissingAttributesDetailsImpl implements MissingAttributesDetails, M
     }
 
     /**
-     *  <p>Number of products scanned.</p>
+     <*  <p>Number of products scanned.</p>>
      */
+
     public Integer getTotal() {
         return this.total;
     }
 
     /**
-     *  <p>Number of products missing attribute names.</p>
+     <*  <p>Number of products missing attribute names.</p>>
      */
+
     public Integer getMissingAttributeNames() {
         return this.missingAttributeNames;
     }
 
     /**
-     *  <p>Number of products missing attribute values.</p>
+     <*  <p>Number of products missing attribute values.</p>>
      */
+
     public Integer getMissingAttributeValues() {
         return this.missingAttributeValues;
     }

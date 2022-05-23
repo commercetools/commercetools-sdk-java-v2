@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   UpdateSyncInfoChange updateSyncInfoChange = UpdateSyncInfoChange.builder()
-           .change("{change}")
-           .channelId("{channelId}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * UpdateSyncInfoChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     UpdateSyncInfoChange updateSyncInfoChange = UpdateSyncInfoChange.builder()
+ *             .change("{change}")
+ *             .channelId("{channelId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange> {
@@ -29,7 +31,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     private com.commercetools.history.models.common.SyncInfo nextValue;
 
     /**
-     *  <p>Update action for <code>updateSyncInfo</code></p>
+     <*  <p>Update action for <code>updateSyncInfo</code></p>>
      */
 
     public UpdateSyncInfoChangeBuilder change(final String change) {
@@ -37,16 +39,28 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
         return this;
     }
 
+    /**
+     <>
+     */
+
     public UpdateSyncInfoChangeBuilder channelId(final String channelId) {
         this.channelId = channelId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public UpdateSyncInfoChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.SyncInfoBuilder, com.commercetools.history.models.common.SyncInfoBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.SyncInfoBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public UpdateSyncInfoChangeBuilder nextValue(final com.commercetools.history.models.common.SyncInfo nextValue) {
         this.nextValue = nextValue;

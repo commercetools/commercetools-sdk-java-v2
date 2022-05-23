@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderUpdateSyncInfoAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyncInfoAction, ModelBase {
 
@@ -40,20 +43,33 @@ public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyn
         this.action = UPDATE_SYNC_INFO;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
+    /**
+     <>
+     */
+
     public String getExternalId() {
         return this.externalId;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getSyncedAt() {
         return this.syncedAt;

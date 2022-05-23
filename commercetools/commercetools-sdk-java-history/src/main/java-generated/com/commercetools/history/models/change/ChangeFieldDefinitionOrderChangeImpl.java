@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeFieldDefinitionOrderChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefinitionOrderChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
         this.type = CHANGE_FIELD_DEFINITION_ORDER_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     <*  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> getNextValue() {
         return this.nextValue;

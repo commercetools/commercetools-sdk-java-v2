@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListSetTextLineItemCustomTypeAction myShoppingListSetTextLineItemCustomTypeAction = MyShoppingListSetTextLineItemCustomTypeAction.builder()
-           .textLineItemId("{textLineItemId}")
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListSetTextLineItemCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListSetTextLineItemCustomTypeAction myShoppingListSetTextLineItemCustomTypeAction = MyShoppingListSetTextLineItemCustomTypeAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
@@ -31,13 +33,17 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public MyShoppingListSetTextLineItemCustomTypeActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     <*  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>>
      */
 
     public MyShoppingListSetTextLineItemCustomTypeActionBuilder type(
@@ -47,7 +53,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     <*  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>>
      */
 
     public MyShoppingListSetTextLineItemCustomTypeActionBuilder type(
@@ -57,7 +63,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
+     <*  <p>Sets the Custom Fields fields for the TextLineItem.</p>>
      */
 
     public MyShoppingListSetTextLineItemCustomTypeActionBuilder fields(
@@ -67,7 +73,7 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
+     <*  <p>Sets the Custom Fields fields for the TextLineItem.</p>>
      */
 
     public MyShoppingListSetTextLineItemCustomTypeActionBuilder fields(

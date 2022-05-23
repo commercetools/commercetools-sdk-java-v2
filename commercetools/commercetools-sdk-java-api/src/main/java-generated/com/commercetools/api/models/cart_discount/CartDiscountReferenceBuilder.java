@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountReference cartDiscountReference = CartDiscountReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * CartDiscountReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountReference cartDiscountReference = CartDiscountReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountReferenceBuilder implements Builder<CartDiscountReference> {
@@ -28,7 +30,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
     private com.commercetools.api.models.cart_discount.CartDiscount obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>
+     <*  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>>
      */
 
     public CartDiscountReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     <*  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>>
      */
 
     public CartDiscountReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     <*  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>>
      */
 
     public CartDiscountReferenceBuilder obj(

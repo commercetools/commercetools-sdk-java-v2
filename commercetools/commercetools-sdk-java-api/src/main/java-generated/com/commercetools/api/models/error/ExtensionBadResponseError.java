@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionBadResponseError extensionBadResponseError = ExtensionBadResponseError.builder()
-           .message("{message}")
-           .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExtensionBadResponseError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionBadResponseError extensionBadResponseError = ExtensionBadResponseError.builder()
+ *             .message("{message}")
+ *             .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionBadResponseErrorImpl.class)
@@ -32,16 +35,22 @@ public interface ExtensionBadResponseError extends ErrorObject {
     String EXTENSION_BAD_RESPONSE = "ExtensionBadResponse";
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("localizedMessage")
     public LocalizedString getLocalizedMessage();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("extensionExtraInfo")
     public Object getExtensionExtraInfo();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("errorByExtension")

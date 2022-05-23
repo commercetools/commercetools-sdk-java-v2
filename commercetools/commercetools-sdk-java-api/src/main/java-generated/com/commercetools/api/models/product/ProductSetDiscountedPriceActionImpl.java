@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetDiscountedPriceAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscountedPriceAction, ModelBase {
 
@@ -39,17 +42,33 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
         this.action = SET_DISCOUNTED_PRICE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getPriceId() {
         return this.priceId;
     }
 
+    /**
+     <>
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;

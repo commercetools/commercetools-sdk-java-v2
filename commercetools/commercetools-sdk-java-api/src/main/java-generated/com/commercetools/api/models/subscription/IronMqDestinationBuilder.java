@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   IronMqDestination ironMqDestination = IronMqDestination.builder()
-           .uri("{uri}")
-           .build()
- </code></pre>
- </div>
+ * IronMqDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     IronMqDestination ironMqDestination = IronMqDestination.builder()
+ *             .uri("{uri}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class IronMqDestinationBuilder implements Builder<IronMqDestination> {
 
     private String uri;
+
+    /**
+     <>
+     */
 
     public IronMqDestinationBuilder uri(final String uri) {
         this.uri = uri;

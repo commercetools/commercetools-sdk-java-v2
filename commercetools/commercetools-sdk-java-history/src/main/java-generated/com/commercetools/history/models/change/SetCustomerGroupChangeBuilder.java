@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomerGroupChange setCustomerGroupChange = SetCustomerGroupChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCustomerGroupChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomerGroupChange setCustomerGroupChange = SetCustomerGroupChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupChange> {
@@ -29,7 +31,7 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
     private com.commercetools.history.models.common.Reference nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setCustomerGroup</code></p>
+     <*  <p>Shape of the action for <code>setCustomerGroup</code></p>>
      */
 
     public SetCustomerGroupChangeBuilder change(final String change) {
@@ -37,11 +39,19 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomerGroupChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomerGroupChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {
@@ -49,11 +59,19 @@ public class SetCustomerGroupChangeBuilder implements Builder<SetCustomerGroupCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomerGroupChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomerGroupChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;

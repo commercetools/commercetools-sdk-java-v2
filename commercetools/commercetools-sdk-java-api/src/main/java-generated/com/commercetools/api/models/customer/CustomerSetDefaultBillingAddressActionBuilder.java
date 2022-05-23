@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetDefaultBillingAddressAction customerSetDefaultBillingAddressAction = CustomerSetDefaultBillingAddressAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetDefaultBillingAddressActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetDefaultBillingAddressAction customerSetDefaultBillingAddressAction = CustomerSetDefaultBillingAddressAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<CustomerSetDefaultBillingAddressAction> {
@@ -27,13 +29,17 @@ public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<Cu
     private String addressKey;
 
     /**
-     *  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>
+     <*  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>>
      */
 
     public CustomerSetDefaultBillingAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerSetDefaultBillingAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;

@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductMoveImageToPositionAction productMoveImageToPositionAction = ProductMoveImageToPositionAction.builder()
-           .imageUrl("{imageUrl}")
-           .position(0.3)
-           .build()
- </code></pre>
- </div>
+ * ProductMoveImageToPositionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductMoveImageToPositionAction productMoveImageToPositionAction = ProductMoveImageToPositionAction.builder()
+ *             .imageUrl("{imageUrl}")
+ *             .position(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductMoveImageToPositionActionImpl.class)
@@ -29,22 +32,37 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
     String MOVE_IMAGE_TO_POSITION = "moveImageToPosition";
 
+    /**
+     <>
+     */
+
     @JsonProperty("variantId")
     public Long getVariantId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>The URL of the image</p>
+     <*  <p>The URL of the image</p>>
      */
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("position")
     public Long getPosition();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

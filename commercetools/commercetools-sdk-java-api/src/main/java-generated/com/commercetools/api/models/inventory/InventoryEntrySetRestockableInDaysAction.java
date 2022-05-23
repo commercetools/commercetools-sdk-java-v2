@@ -11,19 +11,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntrySetRestockableInDaysAction inventoryEntrySetRestockableInDaysAction = InventoryEntrySetRestockableInDaysAction.builder()
-           .build()
- </code></pre>
- </div>
+ * InventoryEntrySetRestockableInDaysAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntrySetRestockableInDaysAction inventoryEntrySetRestockableInDaysAction = InventoryEntrySetRestockableInDaysAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetRestockableInDaysActionImpl.class)
 public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntryUpdateAction {
 
     String SET_RESTOCKABLE_IN_DAYS = "setRestockableInDays";
+
+    /**
+     <>
+     */
 
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();

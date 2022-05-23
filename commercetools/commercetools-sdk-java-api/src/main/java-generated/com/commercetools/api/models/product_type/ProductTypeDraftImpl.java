@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
 
@@ -39,19 +42,32 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ProductType.</p>
+     <*  <p>User-defined unique identifier for the ProductType.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     <>
+     */
+
     public String getDescription() {
         return this.description;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes() {
         return this.attributes;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InventoryEntry
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryImpl implements InventoryEntry, ModelBase {
 
@@ -78,83 +81,112 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the InventoryEntry.</p>
+     <*  <p>Platform-generated unique identifier of the InventoryEntry.</p>>
      */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-     *  <p>User-defined unique identifier of the InventoryEntry.</p>
+     <*  <p>User-defined unique identifier of the InventoryEntry.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public String getSku() {
         return this.sku;
     }
 
     /**
-     *  <p>Connection to a particular supplier.</p>
+     <*  <p>Connection to a particular supplier.</p>>
      */
+
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-     *  <p>Overall amount of stock. (available + reserved)</p>
+     <*  <p>Overall amount of stock. (available + reserved)</p>>
      */
+
     public Long getQuantityOnStock() {
         return this.quantityOnStock;
     }
 
     /**
-     *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
+     <*  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>>
      */
+
     public Long getAvailableQuantity() {
         return this.availableQuantity;
     }
 
     /**
-     *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
+     <*  <p>The time period in days, that tells how often this inventory entry is restocked.</p>>
      */
+
     public Long getRestockableInDays() {
         return this.restockableInDays;
     }
 
     /**
-     *  <p>The date and time of the next restock.</p>
+     <*  <p>The date and time of the next restock.</p>>
      */
+
     public java.time.ZonedDateTime getExpectedDelivery() {
         return this.expectedDelivery;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;

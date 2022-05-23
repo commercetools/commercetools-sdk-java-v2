@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SubscriptionDraft subscriptionDraft = SubscriptionDraft.builder()
-           .destination(destinationBuilder -> destinationBuilder)
-           .build()
- </code></pre>
- </div>
+ * SubscriptionDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionDraft subscriptionDraft = SubscriptionDraft.builder()
+ *             .destination(destinationBuilder -> destinationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
@@ -36,17 +38,29 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     @Nullable
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder changes(
             @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder changes(
             @Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SubscriptionDraftBuilder plusChanges(
             @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
@@ -57,6 +71,10 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder plusChanges(
             Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
         if (this.changes == null) {
@@ -67,6 +85,10 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder withChanges(
             Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
         this.changes = new ArrayList<>();
@@ -75,11 +97,19 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder destination(
             final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SubscriptionDraftBuilder destination(
             Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {
@@ -88,7 +118,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Subscription.</p>
+     <*  <p>User-defined unique identifier for the Subscription.</p>>
      */
 
     public SubscriptionDraftBuilder key(@Nullable final String key) {
@@ -96,17 +126,29 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder messages(
             @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
         this.messages = new ArrayList<>(Arrays.asList(messages));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder messages(
             @Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
         this.messages = messages;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SubscriptionDraftBuilder plusMessages(
             @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
@@ -117,6 +159,10 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder plusMessages(
             Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
         if (this.messages == null) {
@@ -127,6 +173,10 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder withMessages(
             Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
         this.messages = new ArrayList<>();
@@ -135,11 +185,19 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionDraftBuilder format(
             @Nullable final com.commercetools.api.models.subscription.DeliveryFormat format) {
         this.format = format;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SubscriptionDraftBuilder format(
             Function<com.commercetools.api.models.subscription.DeliveryFormatBuilder, Builder<? extends com.commercetools.api.models.subscription.DeliveryFormat>> builder) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DeliveryAddressDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase {
 
@@ -31,9 +34,17 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
     public DeliveryAddressDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.importapi.models.common.Address getAddress() {
         return this.address;

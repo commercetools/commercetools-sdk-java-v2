@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelTrackingDataUpdatedMessagePayload parcelTrackingDataUpdatedMessagePayload = ParcelTrackingDataUpdatedMessagePayload.builder()
-           .deliveryId("{deliveryId}")
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * ParcelTrackingDataUpdatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelTrackingDataUpdatedMessagePayload parcelTrackingDataUpdatedMessagePayload = ParcelTrackingDataUpdatedMessagePayload.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataUpdatedMessagePayloadBuilder
@@ -31,21 +33,37 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    /**
+     <>
+     */
+
     public ParcelTrackingDataUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelTrackingDataUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelTrackingDataUpdatedMessagePayloadBuilder trackingData(
             Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelTrackingDataUpdatedMessagePayloadBuilder trackingData(
             @Nullable final com.commercetools.api.models.order.TrackingData trackingData) {

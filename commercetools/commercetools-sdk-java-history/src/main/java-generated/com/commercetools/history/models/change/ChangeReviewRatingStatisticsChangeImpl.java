@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeReviewRatingStatisticsChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatingStatisticsChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
         this.type = CHANGE_REVIEW_RATING_STATISTICS_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     <*  <p>Update action for <code>changeReviewRatingStatistics</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.ReviewRatingStatistics getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.ReviewRatingStatistics getPreviousValue() {
         return this.previousValue;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderSetCustomLineItemCustomFieldAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetCustomLineItemCustomFieldActionImpl implements OrderSetCustomLineItemCustomFieldAction, ModelBase {
 
@@ -38,24 +41,34 @@ public class OrderSetCustomLineItemCustomFieldActionImpl implements OrderSetCust
         this.action = SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     <*  <p>Name of the Custom Field.</p>>
      */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
      */
+
     public java.lang.Object getValue() {
         return this.value;
     }

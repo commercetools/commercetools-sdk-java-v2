@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategoryChangeParentAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeParentActionImpl implements CategoryChangeParentAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CategoryChangeParentActionImpl implements CategoryChangeParentActio
         this.action = CHANGE_PARENT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {
         return this.parent;

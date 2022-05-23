@@ -10,20 +10,22 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LineItemReturnItem lineItemReturnItem = LineItemReturnItem.builder()
-           .id("{id}")
-           .quantity(0.3)
-           .shipmentState(ReturnShipmentState.ADVISED)
-           .paymentState(ReturnPaymentState.NON_REFUNDABLE)
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * LineItemReturnItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemReturnItem lineItemReturnItem = LineItemReturnItem.builder()
+ *             .id("{id}")
+ *             .quantity(0.3)
+ *             .shipmentState(ReturnShipmentState.ADVISED)
+ *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
@@ -49,7 +51,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     private String lineItemId;
 
     /**
-     *  <p>Platform-generated unique identifier of the ReturnItem.</p>
+     <*  <p>Platform-generated unique identifier of the ReturnItem.</p>>
      */
 
     public LineItemReturnItemBuilder id(final String id) {
@@ -57,21 +59,37 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemReturnItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LineItemReturnItemBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemReturnItemBuilder shipmentState(
             final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LineItemReturnItemBuilder paymentState(
             final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
@@ -80,7 +98,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     <*  <p>Custom Fields of this return item.</p>>
      */
 
     public LineItemReturnItemBuilder custom(
@@ -90,7 +108,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     <*  <p>Custom Fields of this return item.</p>>
      */
 
     public LineItemReturnItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -98,15 +116,27 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemReturnItemBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemReturnItemBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LineItemReturnItemBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;

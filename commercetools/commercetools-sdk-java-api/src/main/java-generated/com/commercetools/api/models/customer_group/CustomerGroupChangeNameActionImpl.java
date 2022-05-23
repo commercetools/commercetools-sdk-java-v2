@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerGroupChangeNameAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupChangeNameActionImpl implements CustomerGroupChangeNameAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class CustomerGroupChangeNameActionImpl implements CustomerGroupChangeNam
         this.action = CHANGE_NAME;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New name of the CustomerGroup.</p>
+     <*  <p>New name of the CustomerGroup.</p>>
      */
+
     public String getName() {
         return this.name;
     }

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AssetSource assetSource = AssetSource.builder()
-           .uri("{uri}")
-           .build()
- </code></pre>
- </div>
+ * AssetSourceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssetSource assetSource = AssetSource.builder()
+ *             .uri("{uri}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetSourceBuilder implements Builder<AssetSource> {
@@ -34,7 +36,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     private String contentType;
 
     /**
-     *  <p>URI of the AssetSource.</p>
+     <*  <p>URI of the AssetSource.</p>>
      */
 
     public AssetSourceBuilder uri(final String uri) {
@@ -43,7 +45,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the AssetSource.</p>
+     <*  <p>User-defined unique identifier of the AssetSource.</p>>
      */
 
     public AssetSourceBuilder key(@Nullable final String key) {
@@ -52,7 +54,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>Width and height of the AssetSource.</p>
+     <*  <p>Width and height of the AssetSource.</p>>
      */
 
     public AssetSourceBuilder dimensions(
@@ -62,7 +64,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>Width and height of the AssetSource.</p>
+     <*  <p>Width and height of the AssetSource.</p>>
      */
 
     public AssetSourceBuilder dimensions(
@@ -72,7 +74,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
+     <*  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>>
      */
 
     public AssetSourceBuilder contentType(@Nullable final String contentType) {

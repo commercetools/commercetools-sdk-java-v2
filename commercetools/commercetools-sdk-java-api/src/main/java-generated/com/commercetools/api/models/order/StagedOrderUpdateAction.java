@@ -98,16 +98,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderUpdateAction stagedOrderUpdateAction = StagedOrderUpdateAction.addCustomLineItemBuilder()
-           money(moneyBuilder -> moneyBuilder)
-           name(nameBuilder -> nameBuilder)
-           slug("{slug}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderUpdateAction stagedOrderUpdateAction = StagedOrderUpdateAction.addCustomLineItemBuilder()
+ *             money(moneyBuilder -> moneyBuilder)
+ *             name(nameBuilder -> nameBuilder)
+ *             slug("{slug}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderAddCustomLineItemActionImpl.class, name = StagedOrderAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM),
@@ -201,6 +204,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StagedOrderUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<StagedOrderUpdateAction> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

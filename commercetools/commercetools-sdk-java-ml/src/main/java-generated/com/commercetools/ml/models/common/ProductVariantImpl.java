@@ -38,22 +38,25 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>The product that contains this variant.</p>
+     <*  <p>The product that contains this variant.</p>>
      */
+
     public com.commercetools.ml.models.common.ProductReference getProduct() {
         return this.product;
     }
 
     /**
-     *  <p>The state of the product variant.</p>
+     <*  <p>The state of the product variant.</p>>
      */
+
     public Boolean getStaged() {
         return this.staged;
     }
 
     /**
-     *  <p>The id of the product variant.</p>
+     <*  <p>The id of the product variant.</p>>
      */
+
     public Integer getVariantId() {
         return this.variantId;
     }

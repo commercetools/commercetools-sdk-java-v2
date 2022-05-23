@@ -13,13 +13,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SubscriptionSetMessagesAction subscriptionSetMessagesAction = SubscriptionSetMessagesAction.builder()
-           .build()
- </code></pre>
- </div>
+ * SubscriptionSetMessagesAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionSetMessagesAction subscriptionSetMessagesAction = SubscriptionSetMessagesAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionSetMessagesActionImpl.class)
@@ -27,6 +30,9 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
 
     String SET_MESSAGES = "setMessages";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("messages")
     public List<MessageSubscription> getMessages();

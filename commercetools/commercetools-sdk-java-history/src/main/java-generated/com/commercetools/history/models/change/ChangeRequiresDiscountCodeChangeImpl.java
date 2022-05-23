@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeRequiresDiscountCodeChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDiscountCodeChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
         this.type = CHANGE_REQUIRES_DISCOUNT_CODE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>
+     <*  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public Boolean getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getNextValue() {
         return this.nextValue;

@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductImageAddedMessagePayload productImageAddedMessagePayload = ProductImageAddedMessagePayload.builder()
-           .variantId(0.3)
-           .image(imageBuilder -> imageBuilder)
-           .staged(true)
-           .build()
- </code></pre>
- </div>
+ * ProductImageAddedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductImageAddedMessagePayload productImageAddedMessagePayload = ProductImageAddedMessagePayload.builder()
+ *             .variantId(0.3)
+ *             .image(imageBuilder -> imageBuilder)
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductImageAddedMessagePayloadImpl.class)
@@ -32,15 +35,24 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
 
     String PRODUCT_IMAGE_ADDED = "ProductImageAdded";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("image")
     public Image getImage();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();

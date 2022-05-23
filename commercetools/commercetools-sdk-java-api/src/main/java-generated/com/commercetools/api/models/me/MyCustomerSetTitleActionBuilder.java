@@ -9,19 +9,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCustomerSetTitleAction myCustomerSetTitleAction = MyCustomerSetTitleAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCustomerSetTitleActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerSetTitleAction myCustomerSetTitleAction = MyCustomerSetTitleAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetTitleActionBuilder implements Builder<MyCustomerSetTitleAction> {
 
     @Nullable
     private String title;
+
+    /**
+     <>
+     */
 
     public MyCustomerSetTitleActionBuilder title(@Nullable final String title) {
         this.title = title;

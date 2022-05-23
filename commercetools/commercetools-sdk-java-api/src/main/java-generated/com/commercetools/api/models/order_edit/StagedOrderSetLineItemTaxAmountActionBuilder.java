@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetLineItemTaxAmountAction stagedOrderSetLineItemTaxAmountAction = StagedOrderSetLineItemTaxAmountAction.builder()
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetLineItemTaxAmountActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetLineItemTaxAmountAction stagedOrderSetLineItemTaxAmountAction = StagedOrderSetLineItemTaxAmountAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<StagedOrderSetLineItemTaxAmountAction> {
@@ -27,10 +29,18 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    /**
+     <>
+     */
+
     public StagedOrderSetLineItemTaxAmountActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetLineItemTaxAmountActionBuilder externalTaxAmount(
             Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
@@ -38,6 +48,10 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetLineItemTaxAmountActionBuilder externalTaxAmount(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {

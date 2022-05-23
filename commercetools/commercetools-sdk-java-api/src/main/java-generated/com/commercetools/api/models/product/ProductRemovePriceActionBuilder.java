@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductRemovePriceAction productRemovePriceAction = ProductRemovePriceAction.builder()
-           .priceId("{priceId}")
-           .build()
- </code></pre>
- </div>
+ * ProductRemovePriceActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductRemovePriceAction productRemovePriceAction = ProductRemovePriceAction.builder()
+ *             .priceId("{priceId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePriceAction> {
@@ -27,13 +29,17 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
     private Boolean staged;
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     <*  <p>ID of the EmbeddedPrice</p>>
      */
 
     public ProductRemovePriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductRemovePriceActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

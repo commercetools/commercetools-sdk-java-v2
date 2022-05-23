@@ -38,17 +38,26 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
         this.code = DUPLICATE_ATTRIBUTE_VALUE;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-     *  <p>The attribute in conflict.</p>
+     <*  <p>The attribute in conflict.</p>>
      */
+
     public com.commercetools.importapi.models.productvariants.Attribute getAttribute() {
         return this.attribute;
     }

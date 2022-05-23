@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderAddCustomLineItemAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCustomLineItemAction, ModelBase {
 
@@ -54,46 +57,66 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
+
     public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     <>
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     <>
+     */
 
     public String getSlug() {
         return this.slug;
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
      */
+
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;

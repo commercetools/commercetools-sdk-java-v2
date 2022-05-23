@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AttributeLocalizableTextType
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeLocalizableTextTypeImpl implements AttributeLocalizableTextType, ModelBase {
 
@@ -22,6 +25,10 @@ public class AttributeLocalizableTextTypeImpl implements AttributeLocalizableTex
     AttributeLocalizableTextTypeImpl() {
         this.name = LTEXT;
     }
+
+    /**
+     <>
+     */
 
     public String getName() {
         return this.name;

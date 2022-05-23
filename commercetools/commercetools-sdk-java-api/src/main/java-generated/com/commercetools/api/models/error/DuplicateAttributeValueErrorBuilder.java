@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicateAttributeValueError duplicateAttributeValueError = DuplicateAttributeValueError.builder()
-           .message("{message}")
-           .attribute(attributeBuilder -> attributeBuilder)
-           .build()
- </code></pre>
- </div>
+ * DuplicateAttributeValueErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateAttributeValueError duplicateAttributeValueError = DuplicateAttributeValueError.builder()
+ *             .message("{message}")
+ *             .attribute(attributeBuilder -> attributeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAttributeValueError> {
@@ -27,15 +29,27 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     private com.commercetools.api.models.product.Attribute attribute;
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValueErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValueErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateAttributeValueErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -45,11 +59,19 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValueErrorBuilder attribute(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         this.attribute = builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateAttributeValueErrorBuilder attribute(
             final com.commercetools.api.models.product.Attribute attribute) {

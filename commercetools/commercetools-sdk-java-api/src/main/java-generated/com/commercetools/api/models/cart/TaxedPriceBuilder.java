@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxedPrice taxedPrice = TaxedPrice.builder()
-           .totalNet(totalNetBuilder -> totalNetBuilder)
-           .totalGross(totalGrossBuilder -> totalGrossBuilder)
-           .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TaxedPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedPrice taxedPrice = TaxedPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceBuilder implements Builder<TaxedPrice> {
@@ -33,10 +35,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     @Nullable
     private com.commercetools.api.models.common.TypedMoney totalTax;
 
+    /**
+     <>
+     */
+
     public TaxedPriceBuilder totalNet(final com.commercetools.api.models.common.TypedMoney totalNet) {
         this.totalNet = totalNet;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TaxedPriceBuilder totalNet(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -44,10 +54,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TaxedPriceBuilder totalGross(final com.commercetools.api.models.common.TypedMoney totalGross) {
         this.totalGross = totalGross;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TaxedPriceBuilder totalGross(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -56,7 +74,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
      */
 
     public TaxedPriceBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
@@ -65,7 +83,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
      */
 
     public TaxedPriceBuilder taxPortions(
@@ -75,7 +93,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
      */
 
     public TaxedPriceBuilder plusTaxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
@@ -87,7 +105,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
      */
 
     public TaxedPriceBuilder plusTaxPortions(
@@ -100,7 +118,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
      */
 
     public TaxedPriceBuilder withTaxPortions(
@@ -111,7 +129,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
      */
 
     public TaxedPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.TypedMoney totalTax) {
@@ -120,7 +138,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
      */
 
     public TaxedPriceBuilder totalTax(

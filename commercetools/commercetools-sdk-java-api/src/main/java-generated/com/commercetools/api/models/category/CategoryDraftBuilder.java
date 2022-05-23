@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryDraft categoryDraft = CategoryDraft.builder()
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .build()
- </code></pre>
- </div>
+ * CategoryDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryDraft categoryDraft = CategoryDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryDraftBuilder implements Builder<CategoryDraft> {
@@ -57,11 +59,19 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     @Nullable
     private String key;
 
+    /**
+     <>
+     */
+
     public CategoryDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -69,7 +79,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
+     <*  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>>
      */
 
     public CategoryDraftBuilder slug(
@@ -79,7 +89,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
+     <*  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>>
      */
 
     public CategoryDraftBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -87,11 +97,19 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -100,7 +118,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
+     <*  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>>
      */
 
     public CategoryDraftBuilder parent(
@@ -111,7 +129,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
+     <*  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>>
      */
 
     public CategoryDraftBuilder parent(
@@ -121,7 +139,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>
+     <*  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>>
      */
 
     public CategoryDraftBuilder orderHint(@Nullable final String orderHint) {
@@ -129,10 +147,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryDraftBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryDraftBuilder metaTitle(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -140,11 +166,19 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryDraftBuilder metaTitle(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryDraftBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -152,17 +186,29 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryDraftBuilder metaDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryDraftBuilder metaKeywords(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryDraftBuilder metaKeywords(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
@@ -171,7 +217,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
 
     public CategoryDraftBuilder custom(
@@ -181,7 +227,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
 
     public CategoryDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -189,16 +235,28 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryDraftBuilder assets(
             @Nullable final java.util.List<com.commercetools.api.models.common.AssetDraft> assets) {
         this.assets = assets;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryDraftBuilder plusAssets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
         if (this.assets == null) {
@@ -207,6 +265,10 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         this.assets.addAll(Arrays.asList(assets));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryDraftBuilder plusAssets(
             Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
@@ -217,6 +279,10 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryDraftBuilder withAssets(
             Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
         this.assets = new ArrayList<>();
@@ -225,7 +291,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Category.</p>
+     <*  <p>User-defined unique identifier for the Category.</p>>
      */
 
     public CategoryDraftBuilder key(@Nullable final String key) {

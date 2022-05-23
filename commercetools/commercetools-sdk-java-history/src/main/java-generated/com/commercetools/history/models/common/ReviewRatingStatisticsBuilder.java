@@ -7,18 +7,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewRatingStatistics reviewRatingStatistics = ReviewRatingStatistics.builder()
-           .averageRating(1)
-           .highestRating(1)
-           .lowestRating(1)
-           .count(1)
-           .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
-           .build()
- </code></pre>
- </div>
+ * ReviewRatingStatisticsBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewRatingStatistics reviewRatingStatistics = ReviewRatingStatistics.builder()
+ *             .averageRating(1)
+ *             .highestRating(1)
+ *             .lowestRating(1)
+ *             .count(1)
+ *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatistics> {
@@ -34,7 +36,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     private java.lang.Object ratingsDistribution;
 
     /**
-     *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
+     <*  <p>Average rating of one target This number is rounded with 5 decimals.</p>>
      */
 
     public ReviewRatingStatisticsBuilder averageRating(final Integer averageRating) {
@@ -43,7 +45,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     *  <p>Highest rating of one target</p>
+     <*  <p>Highest rating of one target</p>>
      */
 
     public ReviewRatingStatisticsBuilder highestRating(final Integer highestRating) {
@@ -52,7 +54,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     *  <p>Lowest rating of one target</p>
+     <*  <p>Lowest rating of one target</p>>
      */
 
     public ReviewRatingStatisticsBuilder lowestRating(final Integer lowestRating) {
@@ -61,7 +63,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     *  <p>Number of ratings taken into account</p>
+     <*  <p>Number of ratings taken into account</p>>
      */
 
     public ReviewRatingStatisticsBuilder count(final Integer count) {
@@ -70,7 +72,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     <*  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>>
      */
 
     public ReviewRatingStatisticsBuilder ratingsDistribution(final java.lang.Object ratingsDistribution) {

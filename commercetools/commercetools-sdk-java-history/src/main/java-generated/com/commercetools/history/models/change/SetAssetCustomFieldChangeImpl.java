@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetAssetCustomFieldChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange, ModelBase {
 
@@ -50,32 +53,57 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
         this.type = SET_ASSET_CUSTOM_FIELD_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setAssetCustomField</code></p>
+     <*  <p>Update action for <code>setAssetCustomField</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     <>
+     */
+
     public String getCustomTypeId() {
         return this.customTypeId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
         return this.asset;
     }
 
+    /**
+     <>
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;

@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetApplicationVersionChange setApplicationVersionChange = SetApplicationVersionChange.builder()
-           .change("{change}")
-           .previousValue(1)
-           .nextValue(1)
-           .build()
- </code></pre>
- </div>
+ * SetApplicationVersionChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetApplicationVersionChange setApplicationVersionChange = SetApplicationVersionChange.builder()
+ *             .change("{change}")
+ *             .previousValue(1)
+ *             .nextValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetApplicationVersionChangeBuilder implements Builder<SetApplicationVersionChange> {
@@ -28,7 +30,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     private Integer nextValue;
 
     /**
-     *  <p>Internal Update action for <code>setApplicationVersion</code></p>
+     <*  <p>Internal Update action for <code>setApplicationVersion</code></p>>
      */
 
     public SetApplicationVersionChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetApplicationVersionChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetApplicationVersionChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;

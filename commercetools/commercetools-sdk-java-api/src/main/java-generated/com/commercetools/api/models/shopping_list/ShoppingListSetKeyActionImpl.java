@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShoppingListSetKeyAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAction, M
         this.action = SET_KEY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>User-specific unique identifier for the shopping list.</p>
+     <*  <p>User-specific unique identifier for the shopping list.</p>>
      */
+
     public String getKey() {
         return this.key;
     }

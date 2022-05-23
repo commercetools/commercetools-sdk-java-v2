@@ -35,13 +35,18 @@ public class AzureFunctionsAuthenticationImpl implements AzureFunctionsAuthentic
         this.type = AZURE_FUNCTIONS;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Partially hidden on retrieval for security reasons.</p>
+     <*  <p>Partially hidden on retrieval for security reasons.</p>>
      */
+
     public String getKey() {
         return this.key;
     }

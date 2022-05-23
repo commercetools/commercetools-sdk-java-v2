@@ -16,29 +16,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountedLineItemPriceDraft discountedLineItemPriceDraft = DiscountedLineItemPriceDraft.builder()
-           .value(valueBuilder -> valueBuilder)
-           .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountedLineItemPriceDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPriceDraft discountedLineItemPriceDraft = DiscountedLineItemPriceDraft.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountedLineItemPriceDraftImpl.class)
 public interface DiscountedLineItemPriceDraft {
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("value")
     public Money getValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("includedDiscounts")

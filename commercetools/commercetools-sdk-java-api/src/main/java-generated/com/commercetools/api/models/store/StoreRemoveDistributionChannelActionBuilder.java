@@ -8,19 +8,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreRemoveDistributionChannelAction storeRemoveDistributionChannelAction = StoreRemoveDistributionChannelAction.builder()
-           .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
-           .build()
- </code></pre>
- </div>
+ * StoreRemoveDistributionChannelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreRemoveDistributionChannelAction storeRemoveDistributionChannelAction = StoreRemoveDistributionChannelAction.builder()
+ *             .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreRemoveDistributionChannelActionBuilder implements Builder<StoreRemoveDistributionChannelAction> {
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    /**
+     <>
+     */
 
     public StoreRemoveDistributionChannelActionBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -29,6 +35,10 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreRemoveDistributionChannelActionBuilder distributionChannel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {

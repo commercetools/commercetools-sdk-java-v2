@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderTransitionLineItemStateAction orderTransitionLineItemStateAction = OrderTransitionLineItemStateAction.builder()
-           .lineItemId("{lineItemId}")
-           .quantity(0.3)
-           .fromState(fromStateBuilder -> fromStateBuilder)
-           .toState(toStateBuilder -> toStateBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderTransitionLineItemStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderTransitionLineItemStateAction orderTransitionLineItemStateAction = OrderTransitionLineItemStateAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderTransitionLineItemStateAction> {
@@ -36,10 +38,18 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     @Nullable
     private java.time.ZonedDateTime actualTransitionDate;
 
+    /**
+     <>
+     */
+
     public OrderTransitionLineItemStateActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderTransitionLineItemStateActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
@@ -47,7 +57,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
 
     public OrderTransitionLineItemStateActionBuilder fromState(
@@ -57,7 +67,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
 
     public OrderTransitionLineItemStateActionBuilder fromState(
@@ -67,7 +77,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
 
     public OrderTransitionLineItemStateActionBuilder toState(
@@ -77,7 +87,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
 
     public OrderTransitionLineItemStateActionBuilder toState(
@@ -85,6 +95,10 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
         this.toState = toState;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderTransitionLineItemStateActionBuilder actualTransitionDate(
             @Nullable final java.time.ZonedDateTime actualTransitionDate) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AttributeLocalizedEnumValue
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumValue, ModelBase {
 
@@ -31,18 +34,23 @@ public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumVa
     public AttributeLocalizedEnumValueImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
+
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
         return this.label;
     }

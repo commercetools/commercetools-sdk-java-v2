@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetKeyAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetKeyActionImpl implements ProductSetKeyAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ProductSetKeyActionImpl implements ProductSetKeyAction, ModelBase {
         this.action = SET_KEY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>User-specific unique identifier for the product. If left blank or set to <code>null</code>, the product key is unset/removed.</p>
+     <*  <p>User-specific unique identifier for the product. If left blank or set to <code>null</code>, the product key is unset/removed.</p>>
      */
+
     public String getKey() {
         return this.key;
     }

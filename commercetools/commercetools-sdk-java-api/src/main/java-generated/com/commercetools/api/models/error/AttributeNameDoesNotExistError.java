@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeNameDoesNotExistError attributeNameDoesNotExistError = AttributeNameDoesNotExistError.builder()
-           .message("{message}")
-           .invalidAttributeName("{invalidAttributeName}")
-           .build()
- </code></pre>
- </div>
+ * AttributeNameDoesNotExistError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeNameDoesNotExistError attributeNameDoesNotExistError = AttributeNameDoesNotExistError.builder()
+ *             .message("{message}")
+ *             .invalidAttributeName("{invalidAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeNameDoesNotExistErrorImpl.class)
@@ -29,6 +32,9 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
 
     String ATTRIBUTE_NAME_DOES_NOT_EXIST = "AttributeNameDoesNotExist";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("invalidAttributeName")
     public String getInvalidAttributeName();

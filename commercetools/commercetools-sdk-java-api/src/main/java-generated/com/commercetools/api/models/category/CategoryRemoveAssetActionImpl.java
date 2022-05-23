@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategoryRemoveAssetAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
         this.action = REMOVE_ASSET;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetId() {
         return this.assetId;
     }
+
+    /**
+     <>
+     */
 
     public String getAssetKey() {
         return this.assetKey;

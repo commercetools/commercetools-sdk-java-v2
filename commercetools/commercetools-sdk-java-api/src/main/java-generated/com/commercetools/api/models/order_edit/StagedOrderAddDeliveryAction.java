@@ -18,13 +18,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderAddDeliveryAction stagedOrderAddDeliveryAction = StagedOrderAddDeliveryAction.builder()
-           .build()
- </code></pre>
- </div>
+ * StagedOrderAddDeliveryAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderAddDeliveryAction stagedOrderAddDeliveryAction = StagedOrderAddDeliveryAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddDeliveryActionImpl.class)
@@ -33,20 +36,29 @@ public interface StagedOrderAddDeliveryAction
 
     String ADD_DELIVERY = "addDelivery";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("parcels")
     public List<ParcelDraft> getParcels();
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     <*  <p>Custom Fields for the Transaction.</p>>
      */
     @Valid
     @JsonProperty("custom")

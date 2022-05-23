@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MissingTaxRateForCountryError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCountryError, ModelBase {
 
@@ -46,25 +49,49 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
         this.code = MISSING_TAX_RATE_FOR_COUNTRY;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     <>
+     */
 
     public String getTaxCategoryId() {
         return this.taxCategoryId;
     }
 
+    /**
+     <>
+     */
+
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     <>
+     */
 
     public String getState() {
         return this.state;

@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeValue attributeValue = AttributeValue.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * AttributeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeValue attributeValue = AttributeValue.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeValueBuilder implements Builder<AttributeValue> {
@@ -23,10 +25,18 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
 
     private java.lang.Object value;
 
+    /**
+     <>
+     */
+
     public AttributeValueBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeValueBuilder value(final java.lang.Object value) {
         this.value = value;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
         implements CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction, ModelBase {
@@ -37,13 +40,25 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
         this.action = APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta() {
         return this.targetsDelta;

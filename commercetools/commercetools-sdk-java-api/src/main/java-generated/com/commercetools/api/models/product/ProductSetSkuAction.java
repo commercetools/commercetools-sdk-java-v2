@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetSkuAction productSetSkuAction = ProductSetSkuAction.builder()
-           .variantId(0.3)
-           .build()
- </code></pre>
- </div>
+ * ProductSetSkuAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetSkuAction productSetSkuAction = ProductSetSkuAction.builder()
+ *             .variantId(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetSkuActionImpl.class)
@@ -28,16 +31,23 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
 
     String SET_SKU = "setSku";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>
+     <*  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>>
      */
 
     @JsonProperty("sku")
     public String getSku();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

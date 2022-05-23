@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetAssetDescriptionAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDescriptionAction, ModelBase {
 
@@ -49,29 +52,57 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
         this.action = SET_ASSET_DESCRIPTION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;

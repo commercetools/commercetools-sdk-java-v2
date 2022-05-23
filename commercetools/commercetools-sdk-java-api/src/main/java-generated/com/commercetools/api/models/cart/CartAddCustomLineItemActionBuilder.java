@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartAddCustomLineItemAction cartAddCustomLineItemAction = CartAddCustomLineItemAction.builder()
-           .money(moneyBuilder -> moneyBuilder)
-           .name(nameBuilder -> nameBuilder)
-           .quantity(0.3)
-           .slug("{slug}")
-           .build()
- </code></pre>
- </div>
+ * CartAddCustomLineItemActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartAddCustomLineItemAction cartAddCustomLineItemAction = CartAddCustomLineItemAction.builder()
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .quantity(0.3)
+ *             .slug("{slug}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustomLineItemAction> {
@@ -43,8 +45,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public CartAddCustomLineItemActionBuilder money(
@@ -54,8 +56,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public CartAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -64,7 +66,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public CartAddCustomLineItemActionBuilder name(
@@ -74,7 +76,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public CartAddCustomLineItemActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -82,10 +84,18 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartAddCustomLineItemActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartAddCustomLineItemActionBuilder slug(final String slug) {
         this.slug = slug;
@@ -93,7 +103,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
      */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
@@ -105,7 +115,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
      */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
@@ -115,7 +125,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public CartAddCustomLineItemActionBuilder custom(
@@ -125,7 +135,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public CartAddCustomLineItemActionBuilder custom(
@@ -134,12 +144,20 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartAddCustomLineItemActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {

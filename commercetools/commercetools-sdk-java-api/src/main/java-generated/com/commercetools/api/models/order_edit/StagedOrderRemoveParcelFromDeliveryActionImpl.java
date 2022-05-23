@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderRemoveParcelFromDeliveryAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderRemoveParcelFromDeliveryActionImpl
         implements StagedOrderRemoveParcelFromDeliveryAction, ModelBase {
@@ -32,9 +35,17 @@ public class StagedOrderRemoveParcelFromDeliveryActionImpl
         this.action = REMOVE_PARCEL_FROM_DELIVERY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getParcelId() {
         return this.parcelId;

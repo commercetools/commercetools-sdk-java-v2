@@ -26,6 +26,10 @@ public class CustomFieldTimeTypeImpl implements CustomFieldTimeType, ModelBase {
         this.name = TIME;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }

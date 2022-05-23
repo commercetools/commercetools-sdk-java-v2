@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ParcelDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelDraftImpl implements ParcelDraft, ModelBase {
 
@@ -40,24 +43,34 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     public ParcelDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     <*  <p>The delivery items contained in this parcel.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     <*  <p>Custom Fields of this parcel.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

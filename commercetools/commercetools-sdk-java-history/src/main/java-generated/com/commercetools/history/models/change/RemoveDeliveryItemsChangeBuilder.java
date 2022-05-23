@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveDeliveryItemsChange removeDeliveryItemsChange = RemoveDeliveryItemsChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveDeliveryItemsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveDeliveryItemsChange removeDeliveryItemsChange = RemoveDeliveryItemsChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryItemsChange> {
@@ -26,7 +28,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     private com.commercetools.history.models.common.Delivery previousValue;
 
     /**
-     *  <p>Update action for <code>removeDelivery</code></p>
+     <*  <p>Update action for <code>removeDelivery</code></p>>
      */
 
     public RemoveDeliveryItemsChangeBuilder change(final String change) {
@@ -34,11 +36,19 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveDeliveryItemsChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.DeliveryBuilder, com.commercetools.history.models.common.DeliveryBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.DeliveryBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveDeliveryItemsChangeBuilder previousValue(
             final com.commercetools.history.models.common.Delivery previousValue) {

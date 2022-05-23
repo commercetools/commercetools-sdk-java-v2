@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountPagedQueryResponse
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountPagedQueryResponseImpl implements CartDiscountPagedQueryResponse, ModelBase {
 
@@ -42,26 +45,40 @@ public class CartDiscountPagedQueryResponseImpl implements CartDiscountPagedQuer
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
+
     public Long getLimit() {
         return this.limit;
     }
 
+    /**
+     <>
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     <>
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
+
     public Long getOffset() {
         return this.offset;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> getResults() {
         return this.results;

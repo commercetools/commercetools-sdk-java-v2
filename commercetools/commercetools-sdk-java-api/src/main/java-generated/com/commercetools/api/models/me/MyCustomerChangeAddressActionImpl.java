@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCustomerChangeAddressAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddressAction, ModelBase {
 
@@ -39,17 +42,33 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
         this.action = CHANGE_ADDRESS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getAddressId() {
         return this.addressId;
     }
 
+    /**
+     <>
+     */
+
     public String getAddressKey() {
         return this.addressKey;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;

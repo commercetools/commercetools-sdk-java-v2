@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductDiscountChangePredicateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountChangePredicateActionImpl implements ProductDiscountChangePredicateAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ProductDiscountChangePredicateActionImpl implements ProductDiscount
         this.action = CHANGE_PREDICATE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     <*  <p>New value to set. Must be a valid ProductDiscount predicate.</p>>
      */
+
     public String getPredicate() {
         return this.predicate;
     }

@@ -14,47 +14,68 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TextLineItem textLineItem = TextLineItem.builder()
-           .addedAt("{addedAt}")
-           .custom(customBuilder -> customBuilder)
-           .description(descriptionBuilder -> descriptionBuilder)
-           .id("{id}")
-           .name(nameBuilder -> nameBuilder)
-           .quantity(1)
-           .build()
- </code></pre>
- </div>
+ * TextLineItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TextLineItem textLineItem = TextLineItem.builder()
+ *             .addedAt("{addedAt}")
+ *             .custom(customBuilder -> customBuilder)
+ *             .description(descriptionBuilder -> descriptionBuilder)
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .quantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TextLineItemImpl.class)
 public interface TextLineItem {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("addedAt")
     public String getAddedAt();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();

@@ -14,43 +14,44 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ClientLogging clientLogging = ClientLogging.builder()
-           .build()
- </code></pre>
- </div>
+ *  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ClientLogging clientLogging = ClientLogging.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ClientLoggingImpl.class)
 public interface ClientLogging {
 
     /**
-     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     <*  <p><code>id</code> of the APIClient which created the resource.</p>>
      */
 
     @JsonProperty("clientId")
     public String getClientId();
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
      */
 
     @JsonProperty("externalUserId")
     public String getExternalUserId();
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     <*  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>>
      */
 
     @JsonProperty("anonymousId")

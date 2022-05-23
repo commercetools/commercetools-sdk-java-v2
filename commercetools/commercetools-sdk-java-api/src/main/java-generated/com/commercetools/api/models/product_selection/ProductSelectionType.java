@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionType productSelectionType = ProductSelectionType.individualBuilder()
-           name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionType
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionType productSelectionType = ProductSelectionType.individualBuilder()
+ *             name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualProductSelectionTypeImpl.class, name = IndividualProductSelectionType.INDIVIDUAL) })
@@ -30,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionType {
 
     /**
-     *  <p>The following type of Product Selections is supported:</p>
+     <*  <p>The following type of Product Selections is supported:</p>>
      */
     @NotNull
     @JsonProperty("type")

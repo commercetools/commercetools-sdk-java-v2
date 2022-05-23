@@ -14,18 +14,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Creates a new import request for product variant patches</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse>> result = apiRoot
-           .withProjectKeyValue("{projectKey}")
-           .productVariantPatches()
-           .importSinkKeyWithImportSinkKeyValue("{importSinkKey}")
-           .post(null)
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Creates a new import request for product variant patches</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse>> result = apiRoot
+ *            .withProjectKeyValue("{projectKey}")
+ *            .productVariantPatches()
+ *            .importSinkKeyWithImportSinkKeyValue("{importSinkKey}")
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyPost extends

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductCatalogData
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
 
@@ -39,17 +42,33 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     public ProductCatalogDataImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Boolean getPublished() {
         return this.published;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.ProductData getCurrent() {
         return this.current;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.product.ProductData getStaged() {
         return this.staged;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getHasStagedChanges() {
         return this.hasStagedChanges;

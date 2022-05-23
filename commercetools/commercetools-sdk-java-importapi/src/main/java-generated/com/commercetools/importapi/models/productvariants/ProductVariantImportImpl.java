@@ -57,55 +57,66 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     public ProductVariantImportImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.sku</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.sku</code>.</p>>
      */
+
     public String getSku() {
         return this.sku;
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>>
      */
+
     public Boolean getIsMasterVariant() {
         return this.isMasterVariant;
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.images</code>.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
         return this.images;
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.assets</code>.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
         return this.assets;
     }
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     <*  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>>
      */
+
     public Boolean getPublish() {
         return this.publish;
     }
 
     /**
-     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     <*  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>>
      */
+
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
         return this.product;
     }

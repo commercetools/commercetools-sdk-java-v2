@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartSetLineItemTotalPriceAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotalPriceAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
         this.action = SET_LINE_ITEM_TOTAL_PRICE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
         return this.externalTotalPrice;

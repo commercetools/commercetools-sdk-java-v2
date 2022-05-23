@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartClassificationType cartClassificationType = CartClassificationType.builder()
-           .plusValues(valuesBuilder -> valuesBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartClassificationType
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartClassificationType cartClassificationType = CartClassificationType.builder()
+ *             .plusValues(valuesBuilder -> valuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartClassificationTypeImpl.class)
@@ -31,7 +34,7 @@ public interface CartClassificationType extends ShippingRateInputType {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-     *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
+     <*  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>>
      */
     @NotNull
     @Valid

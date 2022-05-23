@@ -49,34 +49,49 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
         this.code = INVALID_FIELD;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-     *  <p>The name of the field.</p>
+     <*  <p>The name of the field.</p>>
      */
+
     public String getField() {
         return this.field;
     }
 
     /**
-     *  <p>The invalid value.</p>
+     <*  <p>The invalid value.</p>>
      */
+
     public java.lang.Object getInvalidValue() {
         return this.invalidValue;
     }
 
     /**
-     *  <p>The set of allowed values for the field, if any.</p>
+     <*  <p>The set of allowed values for the field, if any.</p>>
      */
+
     public java.util.List<java.lang.Object> getAllowedValues() {
         return this.allowedValues;
     }
+
+    /**
+     <>
+     */
 
     public Long getResourceIndex() {
         return this.resourceIndex;

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Update update = Update.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * UpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Update update = Update.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UpdateBuilder implements Builder<Update> {
@@ -25,20 +27,36 @@ public class UpdateBuilder implements Builder<Update> {
 
     private java.util.List<com.commercetools.api.models.common.UpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public UpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public UpdateBuilder actions(final com.commercetools.api.models.common.UpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public UpdateBuilder actions(final java.util.List<com.commercetools.api.models.common.UpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public UpdateBuilder plusActions(final com.commercetools.api.models.common.UpdateAction... actions) {
         if (this.actions == null) {
@@ -48,6 +66,10 @@ public class UpdateBuilder implements Builder<Update> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public UpdateBuilder plusActions(
             Function<com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder> builder) {
         if (this.actions == null) {
@@ -56,6 +78,10 @@ public class UpdateBuilder implements Builder<Update> {
         this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public UpdateBuilder withActions(
             Function<com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder> builder) {

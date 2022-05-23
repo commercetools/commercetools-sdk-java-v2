@@ -35,11 +35,16 @@ public class StringSetFieldImpl implements StringSetField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getValue() {
         return this.value;

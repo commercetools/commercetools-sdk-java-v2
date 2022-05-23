@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryRemoveAssetAction categoryRemoveAssetAction = CategoryRemoveAssetAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CategoryRemoveAssetActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryRemoveAssetAction categoryRemoveAssetAction = CategoryRemoveAssetAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveAssetAction> {
@@ -26,10 +28,18 @@ public class CategoryRemoveAssetActionBuilder implements Builder<CategoryRemoveA
     @Nullable
     private String assetKey;
 
+    /**
+     <>
+     */
+
     public CategoryRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;

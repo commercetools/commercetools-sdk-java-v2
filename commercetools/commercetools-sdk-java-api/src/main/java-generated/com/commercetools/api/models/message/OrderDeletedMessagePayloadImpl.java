@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderDeletedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDeletedMessagePayloadImpl implements OrderDeletedMessagePayload, ModelBase {
 
@@ -31,9 +34,17 @@ public class OrderDeletedMessagePayloadImpl implements OrderDeletedMessagePayloa
         this.type = ORDER_DELETED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order.Order getOrder() {
         return this.order;

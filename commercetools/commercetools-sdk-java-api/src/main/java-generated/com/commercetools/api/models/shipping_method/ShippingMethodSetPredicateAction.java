@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodSetPredicateAction shippingMethodSetPredicateAction = ShippingMethodSetPredicateAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodSetPredicateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodSetPredicateAction shippingMethodSetPredicateAction = ShippingMethodSetPredicateAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetPredicateActionImpl.class)
@@ -26,7 +29,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     String SET_PREDICATE = "setPredicate";
 
     /**
-     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     <*  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>>
      */
 
     @JsonProperty("predicate")

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProjectChangeCountryTaxRateFallbackEnabledAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
         implements ProjectChangeCountryTaxRateFallbackEnabledAction, ModelBase {
@@ -33,13 +36,18 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
         this.action = CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
+     <*  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>>
      */
+
     public Boolean getCountryTaxRateFallbackEnabled() {
         return this.countryTaxRateFallbackEnabled;
     }

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetLocaleChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
 
@@ -39,27 +42,34 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
         this.type = SET_LOCALE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setLocale</code> on reviews</p>
+     <*  <p>Update action for <code>setLocale</code> on reviews</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>A locale of IETF language tag.</p>
+     <*  <p>A locale of IETF language tag.</p>>
      */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
 
     /**
-     *  <p>A locale of IETF language tag.</p>
+     <*  <p>A locale of IETF language tag.</p>>
      */
+
     public String getNextValue() {
         return this.nextValue;
     }

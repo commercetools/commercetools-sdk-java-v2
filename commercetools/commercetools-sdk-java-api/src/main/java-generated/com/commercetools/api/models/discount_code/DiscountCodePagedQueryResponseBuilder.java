@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodePagedQueryResponse discountCodePagedQueryResponse = DiscountCodePagedQueryResponse.builder()
-           .limit(0.3)
-           .offset(0.3)
-           .count(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountCodePagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodePagedQueryResponse discountCodePagedQueryResponse = DiscountCodePagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .offset(0.3)
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCodePagedQueryResponse> {
@@ -37,7 +39,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     private java.util.List<com.commercetools.api.models.discount_code.DiscountCode> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder limit(final Long limit) {
@@ -46,7 +48,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder offset(final Long offset) {
@@ -55,7 +57,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
-     *  <p>Actual number of results returned.</p>
+     <*  <p>Actual number of results returned.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder count(final Long count) {
@@ -64,7 +66,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     <*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -73,7 +75,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
-     *  <p>DiscountCodes matching the query.</p>
+     <*  <p>DiscountCodes matching the query.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder results(
@@ -83,7 +85,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
-     *  <p>DiscountCodes matching the query.</p>
+     <*  <p>DiscountCodes matching the query.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder results(
@@ -93,7 +95,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
-     *  <p>DiscountCodes matching the query.</p>
+     <*  <p>DiscountCodes matching the query.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder plusResults(
@@ -106,7 +108,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
-     *  <p>DiscountCodes matching the query.</p>
+     <*  <p>DiscountCodes matching the query.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder plusResults(
@@ -119,7 +121,7 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
-     *  <p>DiscountCodes matching the query.</p>
+     <*  <p>DiscountCodes matching the query.</p>>
      */
 
     public DiscountCodePagedQueryResponseBuilder withResults(

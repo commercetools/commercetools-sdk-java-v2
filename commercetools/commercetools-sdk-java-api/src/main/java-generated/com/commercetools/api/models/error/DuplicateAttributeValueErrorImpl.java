@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DuplicateAttributeValueError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValueError, ModelBase {
 
@@ -39,17 +42,33 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
         this.code = DUPLICATE_ATTRIBUTE_VALUE;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.Attribute getAttribute() {
         return this.attribute;

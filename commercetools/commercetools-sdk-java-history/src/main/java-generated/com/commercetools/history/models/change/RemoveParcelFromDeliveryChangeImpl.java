@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemoveParcelFromDeliveryChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliveryChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
         this.type = REMOVE_PARCEL_FROM_DELIVERY_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     <*  <p>Update action for <code>removeParcelFromDelivery</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Parcel getPreviousValue() {
         return this.previousValue;

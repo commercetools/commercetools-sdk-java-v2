@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * FacetRange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FacetRangeImpl implements FacetRange, ModelBase {
 
@@ -58,41 +61,81 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     public FacetRangeImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Double getFrom() {
         return this.from;
     }
+
+    /**
+     <>
+     */
 
     public String getFromStr() {
         return this.fromStr;
     }
 
+    /**
+     <>
+     */
+
     public Double getTo() {
         return this.to;
     }
+
+    /**
+     <>
+     */
 
     public String getToStr() {
         return this.toStr;
     }
 
+    /**
+     <>
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     <>
+     */
 
     public Long getProductCount() {
         return this.productCount;
     }
 
+    /**
+     <>
+     */
+
     public Double getTotal() {
         return this.total;
     }
+
+    /**
+     <>
+     */
 
     public Double getMin() {
         return this.min;
     }
 
+    /**
+     <>
+     */
+
     public Double getMax() {
         return this.max;
     }
+
+    /**
+     <>
+     */
 
     public Double getMean() {
         return this.mean;

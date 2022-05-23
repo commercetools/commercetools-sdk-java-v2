@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariantAvailability productVariantAvailability = ProductVariantAvailability.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductVariantAvailabilityBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantAvailability productVariantAvailability = ProductVariantAvailability.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantAvailabilityBuilder implements Builder<ProductVariantAvailability> {
@@ -33,20 +35,36 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     @Nullable
     private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
 
+    /**
+     <>
+     */
+
     public ProductVariantAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
         this.isOnStock = isOnStock;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantAvailabilityBuilder channels(
             Function<com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder, com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder> builder) {
@@ -55,6 +73,10 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantAvailabilityBuilder channels(
             @Nullable final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels) {

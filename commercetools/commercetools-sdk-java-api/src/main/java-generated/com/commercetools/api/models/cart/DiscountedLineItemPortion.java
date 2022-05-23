@@ -16,25 +16,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountedLineItemPortion discountedLineItemPortion = DiscountedLineItemPortion.builder()
-           .discount(discountBuilder -> discountBuilder)
-           .discountedAmount(discountedAmountBuilder -> discountedAmountBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountedLineItemPortion
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPortion discountedLineItemPortion = DiscountedLineItemPortion.builder()
+ *             .discount(discountBuilder -> discountBuilder)
+ *             .discountedAmount(discountedAmountBuilder -> discountedAmountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountedLineItemPortionImpl.class)
 public interface DiscountedLineItemPortion {
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("discount")
     public CartDiscountReference getDiscount();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("discountedAmount")

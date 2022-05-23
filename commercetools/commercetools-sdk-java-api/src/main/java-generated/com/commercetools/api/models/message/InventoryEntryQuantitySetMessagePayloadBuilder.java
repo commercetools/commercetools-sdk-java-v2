@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntryQuantitySetMessagePayload inventoryEntryQuantitySetMessagePayload = InventoryEntryQuantitySetMessagePayload.builder()
-           .oldQuantityOnStock(0.3)
-           .newQuantityOnStock(0.3)
-           .oldAvailableQuantity(0.3)
-           .newAvailableQuantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * InventoryEntryQuantitySetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryQuantitySetMessagePayload inventoryEntryQuantitySetMessagePayload = InventoryEntryQuantitySetMessagePayload.builder()
+ *             .oldQuantityOnStock(0.3)
+ *             .newQuantityOnStock(0.3)
+ *             .oldAvailableQuantity(0.3)
+ *             .newAvailableQuantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryQuantitySetMessagePayloadBuilder
@@ -37,20 +39,36 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
+    /**
+     <>
+     */
+
     public InventoryEntryQuantitySetMessagePayloadBuilder oldQuantityOnStock(final Long oldQuantityOnStock) {
         this.oldQuantityOnStock = oldQuantityOnStock;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder newQuantityOnStock(final Long newQuantityOnStock) {
         this.newQuantityOnStock = newQuantityOnStock;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InventoryEntryQuantitySetMessagePayloadBuilder oldAvailableQuantity(final Long oldAvailableQuantity) {
         this.oldAvailableQuantity = oldAvailableQuantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder newAvailableQuantity(final Long newAvailableQuantity) {
         this.newAvailableQuantity = newAvailableQuantity;
@@ -58,7 +76,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
@@ -68,7 +86,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(

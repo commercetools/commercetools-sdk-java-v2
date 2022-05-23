@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LineItemProductVariantImportDraft lineItemProductVariantImportDraft = LineItemProductVariantImportDraft.builder()
-           .build()
- </code></pre>
- </div>
+ * LineItemProductVariantImportDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemProductVariantImportDraft lineItemProductVariantImportDraft = LineItemProductVariantImportDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemProductVariantImportDraftBuilder implements Builder<LineItemProductVariantImportDraft> {
@@ -37,7 +39,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.product</code>.</p>>
      */
 
     public LineItemProductVariantImportDraftBuilder productVariant(
@@ -49,7 +51,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.product</code>.</p>>
      */
 
     public LineItemProductVariantImportDraftBuilder productVariant(
@@ -59,7 +61,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>>
      */
 
     public LineItemProductVariantImportDraftBuilder sku(@Nullable final String sku) {
@@ -68,7 +70,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder prices(
@@ -78,7 +80,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder prices(
@@ -88,7 +90,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder plusPrices(
@@ -101,7 +103,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder plusPrices(
@@ -114,7 +116,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder withPrices(
@@ -125,7 +127,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder attributes(
@@ -135,7 +137,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder attributes(
@@ -145,7 +147,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder plusAttributes(
@@ -158,7 +160,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder plusAttributes(
@@ -172,7 +174,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
      */
 
     public LineItemProductVariantImportDraftBuilder withAttributes(
@@ -184,7 +186,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
      */
 
     public LineItemProductVariantImportDraftBuilder images(
@@ -194,7 +196,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
      */
 
     public LineItemProductVariantImportDraftBuilder images(
@@ -204,7 +206,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
      */
 
     public LineItemProductVariantImportDraftBuilder plusImages(
@@ -217,7 +219,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
      */
 
     public LineItemProductVariantImportDraftBuilder plusImages(
@@ -230,7 +232,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
      */
 
     public LineItemProductVariantImportDraftBuilder withImages(

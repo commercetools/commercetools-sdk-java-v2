@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderCustomLineItemDiscountSetMessagePayload orderCustomLineItemDiscountSetMessagePayload = OrderCustomLineItemDiscountSetMessagePayload.builder()
-           .customLineItemId("{customLineItemId}")
-           .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderCustomLineItemDiscountSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomLineItemDiscountSetMessagePayload orderCustomLineItemDiscountSetMessagePayload = OrderCustomLineItemDiscountSetMessagePayload.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
@@ -31,10 +33,18 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    /**
+     <>
+     */
+
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
@@ -42,11 +52,19 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
             final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
@@ -57,6 +75,10 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
         if (this.discountedPricePerQuantity == null) {
@@ -67,6 +89,10 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
         this.discountedPricePerQuantity = new ArrayList<>();
@@ -75,11 +101,19 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder taxedPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {

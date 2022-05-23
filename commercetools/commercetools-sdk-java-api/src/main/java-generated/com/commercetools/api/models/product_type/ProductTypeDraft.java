@@ -14,35 +14,47 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeDraft productTypeDraft = ProductTypeDraft.builder()
-           .name("{name}")
-           .description("{description}")
-           .build()
- </code></pre>
- </div>
+ * ProductTypeDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeDraft productTypeDraft = ProductTypeDraft.builder()
+ *             .name("{name}")
+ *             .description("{description}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeDraftImpl.class)
 public interface ProductTypeDraft {
 
     /**
-     *  <p>User-defined unique identifier for the ProductType.</p>
+     <*  <p>User-defined unique identifier for the ProductType.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("description")
     public String getDescription();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("attributes")
     public List<AttributeDefinitionDraft> getAttributes();

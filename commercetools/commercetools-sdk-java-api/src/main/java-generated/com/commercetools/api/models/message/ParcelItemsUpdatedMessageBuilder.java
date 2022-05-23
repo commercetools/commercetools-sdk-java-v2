@@ -10,23 +10,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelItemsUpdatedMessage parcelItemsUpdatedMessage = ParcelItemsUpdatedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .parcelId("{parcelId}")
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ParcelItemsUpdatedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelItemsUpdatedMessage parcelItemsUpdatedMessage = ParcelItemsUpdatedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .parcelId("{parcelId}")
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpdatedMessage> {
@@ -64,7 +66,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public ParcelItemsUpdatedMessageBuilder id(final String id) {
@@ -72,15 +74,27 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -88,7 +102,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedBy(
@@ -98,7 +112,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedBy(
@@ -108,7 +122,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ParcelItemsUpdatedMessageBuilder createdBy(
@@ -118,7 +132,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ParcelItemsUpdatedMessageBuilder createdBy(
@@ -127,13 +141,17 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public ParcelItemsUpdatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -142,7 +160,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public ParcelItemsUpdatedMessageBuilder resource(
@@ -151,10 +169,18 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -164,32 +190,56 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelItemsUpdatedMessageBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelItemsUpdatedMessageBuilder items(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelItemsUpdatedMessageBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
         if (this.items == null) {
@@ -198,6 +248,10 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         this.items.addAll(Arrays.asList(items));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelItemsUpdatedMessageBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
@@ -208,6 +262,10 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
@@ -215,17 +273,29 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder oldItems(
             final com.commercetools.api.models.order.DeliveryItem... oldItems) {
         this.oldItems = new ArrayList<>(Arrays.asList(oldItems));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder oldItems(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
         this.oldItems = oldItems;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelItemsUpdatedMessageBuilder plusOldItems(
             final com.commercetools.api.models.order.DeliveryItem... oldItems) {
@@ -236,6 +306,10 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelItemsUpdatedMessageBuilder plusOldItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.oldItems == null) {
@@ -244,6 +318,10 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelItemsUpdatedMessageBuilder withOldItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {

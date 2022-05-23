@@ -14,27 +14,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImageSearchConfigResponse imageSearchConfigResponse = ImageSearchConfigResponse.builder()
-           .status(ImageSearchConfigStatus.ON)
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ * ImageSearchConfigResponse
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImageSearchConfigResponse imageSearchConfigResponse = ImageSearchConfigResponse.builder()
+ *             .status(ImageSearchConfigStatus.ON)
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImageSearchConfigResponseImpl.class)
 public interface ImageSearchConfigResponse {
 
     /**
-     *  <p>The image search activation status.</p>
+     <*  <p>The image search activation status.</p>>
      */
     @NotNull
     @JsonProperty("status")
     public ImageSearchConfigStatus getStatus();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();

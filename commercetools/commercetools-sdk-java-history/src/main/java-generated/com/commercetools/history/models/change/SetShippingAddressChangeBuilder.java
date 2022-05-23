@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetShippingAddressChange setShippingAddressChange = SetShippingAddressChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetShippingAddressChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetShippingAddressChange setShippingAddressChange = SetShippingAddressChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddressChange> {
@@ -29,7 +31,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
     private com.commercetools.history.models.common.Address previousValue;
 
     /**
-     *  <p>Update action for <code>setShippingAddress</code></p>
+     <*  <p>Update action for <code>setShippingAddress</code></p>>
      */
 
     public SetShippingAddressChangeBuilder change(final String change) {
@@ -37,22 +39,38 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetShippingAddressChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetShippingAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetShippingAddressChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetShippingAddressChangeBuilder previousValue(
             final com.commercetools.history.models.common.Address previousValue) {

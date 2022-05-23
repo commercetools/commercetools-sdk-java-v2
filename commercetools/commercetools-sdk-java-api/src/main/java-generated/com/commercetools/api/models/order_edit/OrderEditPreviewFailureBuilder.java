@@ -8,30 +8,44 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderEditPreviewFailure orderEditPreviewFailure = OrderEditPreviewFailure.builder()
-           .plusErrors(errorsBuilder -> errorsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderEditPreviewFailureBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditPreviewFailure orderEditPreviewFailure = OrderEditPreviewFailure.builder()
+ *             .plusErrors(errorsBuilder -> errorsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewFailure> {
 
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
+    /**
+     <>
+     */
+
     public OrderEditPreviewFailureBuilder errors(final com.commercetools.api.models.error.ErrorObject... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditPreviewFailureBuilder errors(
             final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditPreviewFailureBuilder plusErrors(final com.commercetools.api.models.error.ErrorObject... errors) {
         if (this.errors == null) {
@@ -41,6 +55,10 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderEditPreviewFailureBuilder plusErrors(
             Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
         if (this.errors == null) {
@@ -49,6 +67,10 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
         this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditPreviewFailureBuilder withErrors(
             Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {

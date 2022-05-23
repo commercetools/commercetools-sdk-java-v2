@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetPriceModeAction productSetPriceModeAction = ProductSetPriceModeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetPriceModeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetPriceModeAction productSetPriceModeAction = ProductSetPriceModeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetPriceModeActionImpl.class)
@@ -26,7 +29,7 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
     String SET_PRICE_MODE = "setPriceMode";
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     <*  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>>
      */
 
     @JsonProperty("priceMode")

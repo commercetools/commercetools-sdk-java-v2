@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicateFieldWithConflictingResourceError duplicateFieldWithConflictingResourceError = DuplicateFieldWithConflictingResourceError.builder()
-           .message("{message}")
-           .field("{field}")
-           .conflictingResource(conflictingResourceBuilder -> conflictingResourceBuilder)
-           .build()
- </code></pre>
- </div>
+ * DuplicateFieldWithConflictingResourceError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateFieldWithConflictingResourceError duplicateFieldWithConflictingResourceError = DuplicateFieldWithConflictingResourceError.builder()
+ *             .message("{message}")
+ *             .field("{field}")
+ *             .conflictingResource(conflictingResourceBuilder -> conflictingResourceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateFieldWithConflictingResourceErrorImpl.class)
@@ -32,16 +35,22 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
 
     String DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE = "DuplicateFieldWithConflictingResource";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("field")
     public String getField();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("duplicateValue")
     public Object getDuplicateValue();
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
     @NotNull
     @Valid

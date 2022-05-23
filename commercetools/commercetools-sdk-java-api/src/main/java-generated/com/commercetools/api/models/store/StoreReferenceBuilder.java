@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreReference storeReference = StoreReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * StoreReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreReference storeReference = StoreReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreReferenceBuilder implements Builder<StoreReference> {
@@ -28,7 +30,7 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
     private com.commercetools.api.models.store.Store obj;
 
     /**
-     *  <p>Unique ID of the referenced resource.</p>
+     <*  <p>Unique ID of the referenced resource.</p>>
      */
 
     public StoreReferenceBuilder id(final String id) {
@@ -36,11 +38,19 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreReferenceBuilder obj(
             Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.StoreBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.store.StoreBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreReferenceBuilder obj(@Nullable final com.commercetools.api.models.store.Store obj) {
         this.obj = obj;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShoppingListSetStoreAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetStoreActionImpl implements ShoppingListSetStoreAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class ShoppingListSetStoreActionImpl implements ShoppingListSetStoreActio
         this.action = SET_STORE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;

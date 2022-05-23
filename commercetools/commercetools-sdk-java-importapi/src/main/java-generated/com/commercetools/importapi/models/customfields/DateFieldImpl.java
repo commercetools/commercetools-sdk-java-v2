@@ -35,11 +35,16 @@ public class DateFieldImpl implements DateField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.time.LocalDate getValue() {
         return this.value;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MatchingPriceNotFoundError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundError, ModelBase {
 
@@ -57,44 +60,74 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
         this.code = MATCHING_PRICE_NOT_FOUND;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     <>
+     */
 
     public String getProductId() {
         return this.productId;
     }
 
+    /**
+     <>
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public String getCurrency() {
         return this.currency;
     }
+
+    /**
+     <>
+     */
 
     public String getCountry() {
         return this.country;
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
+
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
+
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }

@@ -10,18 +10,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Review review = Review.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .includedInStatistics(true)
-           .build()
- </code></pre>
- </div>
+ * ReviewBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Review review = Review.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .includedInStatistics(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewBuilder implements Builder<Review> {
@@ -76,7 +78,7 @@ public class ReviewBuilder implements Builder<Review> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>Platform-generated unique identifier of the Review.</p>
+     <*  <p>Platform-generated unique identifier of the Review.</p>>
      */
 
     public ReviewBuilder id(final String id) {
@@ -85,7 +87,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>The current version of the review.</p>
+     <*  <p>The current version of the review.</p>>
      */
 
     public ReviewBuilder version(final Long version) {
@@ -93,10 +95,18 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -104,7 +114,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ReviewBuilder lastModifiedBy(
@@ -114,7 +124,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ReviewBuilder lastModifiedBy(
@@ -124,7 +134,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ReviewBuilder createdBy(
@@ -134,7 +144,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ReviewBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -143,7 +153,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Review.</p>
+     <*  <p>User-defined unique identifier of the Review.</p>>
      */
 
     public ReviewBuilder key(@Nullable final String key) {
@@ -151,25 +161,45 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewBuilder uniquenessValue(@Nullable final String uniquenessValue) {
         this.uniquenessValue = uniquenessValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewBuilder locale(@Nullable final String locale) {
         this.locale = locale;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewBuilder authorName(@Nullable final String authorName) {
         this.authorName = authorName;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewBuilder text(@Nullable final String text) {
         this.text = text;
@@ -177,7 +207,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     <*  <p>Identifies the target of the review. Can be a Product or a Channel</p>>
      */
 
     public ReviewBuilder target(@Nullable final java.lang.Object target) {
@@ -186,7 +216,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     <*  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>>
      */
 
     public ReviewBuilder includedInStatistics(final Boolean includedInStatistics) {
@@ -195,7 +225,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Number between -100 and 100 included.</p>
+     <*  <p>Number between -100 and 100 included.</p>>
      */
 
     public ReviewBuilder rating(@Nullable final Integer rating) {
@@ -203,11 +233,19 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
@@ -215,7 +253,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>The customer who created the review.</p>
+     <*  <p>The customer who created the review.</p>>
      */
 
     public ReviewBuilder customer(
@@ -225,7 +263,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>The customer who created the review.</p>
+     <*  <p>The customer who created the review.</p>>
      */
 
     public ReviewBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -233,11 +271,19 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

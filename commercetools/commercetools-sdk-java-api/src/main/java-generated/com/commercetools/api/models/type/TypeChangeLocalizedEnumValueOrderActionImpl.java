@@ -38,20 +38,26 @@ public class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLo
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     <*  <p><code>name</code> of the Field Definition to update.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-     *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     <*  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>>
      */
+
     public java.util.List<String> getKeys() {
         return this.keys;
     }

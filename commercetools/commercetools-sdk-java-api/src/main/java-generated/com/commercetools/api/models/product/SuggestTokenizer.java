@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SuggestTokenizer suggestTokenizer = SuggestTokenizer.customBuilder()
-           plusInputs(inputsBuilder -> inputsBuilder)
-           .build()
- </code></pre>
- </div>
+ * SuggestTokenizer
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SuggestTokenizer suggestTokenizer = SuggestTokenizer.customBuilder()
+ *             plusInputs(inputsBuilder -> inputsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.CustomTokenizerImpl.class, name = CustomTokenizer.CUSTOM),
@@ -30,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface SuggestTokenizer {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

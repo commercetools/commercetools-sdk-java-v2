@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeIsActiveChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase
         this.type = CHANGE_IS_ACTIVE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Shape of the action for <code>changeIsActive</code></p>
+     <*  <p>Shape of the action for <code>changeIsActive</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public Boolean getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getNextValue() {
         return this.nextValue;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderShippingRateInputSetMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippingRateInputSetMessagePayload, ModelBase {
 
@@ -36,13 +39,25 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
         this.type = ORDER_SHIPPING_RATE_INPUT_SET;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput() {
         return this.oldShippingRateInput;

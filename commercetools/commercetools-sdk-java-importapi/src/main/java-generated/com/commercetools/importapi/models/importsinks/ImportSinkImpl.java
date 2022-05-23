@@ -47,36 +47,41 @@ public class ImportSinkImpl implements ImportSink, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     <*  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>>
      */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
+     <*  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>>
      */
+
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }
 
     /**
-     *  <p>The version of the ImportSink.</p>
+     <*  <p>The version of the ImportSink.</p>>
      */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-     *  <p>The time when the ImportSink was created.</p>
+     <*  <p>The time when the ImportSink was created.</p>>
      */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-     *  <p>The last time when the ImportSink was modified.</p>
+     <*  <p>The last time when the ImportSink was modified.</p>>
      */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }

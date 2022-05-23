@@ -5,6 +5,9 @@ import java.util.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * StagedOrderUpdateActionBuilder
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderUpdateActionBuilder {
 

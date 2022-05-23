@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShoppingListRemoveTextLineItemAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListRemoveTextLineItemActionImpl implements ShoppingListRemoveTextLineItemAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class ShoppingListRemoveTextLineItemActionImpl implements ShoppingListRem
         this.action = REMOVE_TEXT_LINE_ITEM;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getTextLineItemId() {
         return this.textLineItemId;
     }
+
+    /**
+     <>
+     */
 
     public Long getQuantity() {
         return this.quantity;

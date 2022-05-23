@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReferenceExistsError referenceExistsError = ReferenceExistsError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ReferenceExistsErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReferenceExistsError referenceExistsError = ReferenceExistsError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError> {
@@ -28,15 +30,27 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     @Nullable
     private com.commercetools.api.models.common.ReferenceTypeId referencedBy;
 
+    /**
+     <>
+     */
+
     public ReferenceExistsErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReferenceExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReferenceExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -47,7 +61,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     }
 
     /**
-     *  <p>supported resource type identifiers:</p>
+     <*  <p>supported resource type identifiers:</p>>
      */
 
     public ReferenceExistsErrorBuilder referencedBy(

@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductUnpublishedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductUnpublishedMessagePayloadImpl implements ProductUnpublishedMessagePayload, ModelBase {
 
@@ -22,6 +25,10 @@ public class ProductUnpublishedMessagePayloadImpl implements ProductUnpublishedM
     ProductUnpublishedMessagePayloadImpl() {
         this.type = PRODUCT_UNPUBLISHED;
     }
+
+    /**
+     <>
+     */
 
     public String getType() {
         return this.type;

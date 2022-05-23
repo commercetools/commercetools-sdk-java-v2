@@ -26,6 +26,10 @@ public class CustomFieldBooleanTypeImpl implements CustomFieldBooleanType, Model
         this.name = BOOLEAN;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }

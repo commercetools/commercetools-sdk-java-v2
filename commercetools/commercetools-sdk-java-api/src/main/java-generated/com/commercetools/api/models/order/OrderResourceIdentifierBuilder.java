@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderResourceIdentifier orderResourceIdentifier = OrderResourceIdentifier.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderResourceIdentifierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderResourceIdentifier orderResourceIdentifier = OrderResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderResourceIdentifierBuilder implements Builder<OrderResourceIdentifier> {
@@ -27,7 +29,7 @@ public class OrderResourceIdentifierBuilder implements Builder<OrderResourceIden
     private String key;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     <*  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>>
      */
 
     public OrderResourceIdentifierBuilder id(@Nullable final String id) {
@@ -36,7 +38,7 @@ public class OrderResourceIdentifierBuilder implements Builder<OrderResourceIden
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     <*  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>>
      */
 
     public OrderResourceIdentifierBuilder key(@Nullable final String key) {

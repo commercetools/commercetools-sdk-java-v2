@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartSetCustomLineItemShippingDetailsAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomLineItemShippingDetailsActionImpl
         implements CartSetCustomLineItemShippingDetailsAction, ModelBase {
@@ -36,13 +39,25 @@ public class CartSetCustomLineItemShippingDetailsActionImpl
         this.action = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;

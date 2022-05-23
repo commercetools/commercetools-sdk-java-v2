@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingRatePriceTier shippingRatePriceTier = ShippingRatePriceTier.cartClassificationBuilder()
-           value("{value}")
-           price(priceBuilder -> priceBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingRatePriceTier
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingRatePriceTier shippingRatePriceTier = ShippingRatePriceTier.cartClassificationBuilder()
+ *             value("{value}")
+ *             price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartClassificationTierImpl.class, name = CartClassificationTier.CART_CLASSIFICATION),
@@ -33,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingRatePriceTier {
 
     /**
-     *  <p>Can be one of the following or absent.</p>
+     <*  <p>Can be one of the following or absent.</p>>
      */
     @NotNull
     @JsonProperty("type")

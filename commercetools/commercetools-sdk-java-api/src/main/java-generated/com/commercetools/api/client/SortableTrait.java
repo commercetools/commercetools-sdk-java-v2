@@ -5,6 +5,9 @@ import java.util.List;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * SortableTrait
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface SortableTrait<T extends SortableTrait<T>> {
     List<String> getSort();

@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelChangeKeyAction channelChangeKeyAction = ChannelChangeKeyAction.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * ChannelChangeKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelChangeKeyAction channelChangeKeyAction = ChannelChangeKeyAction.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelChangeKeyActionImpl.class)
@@ -29,7 +32,7 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
     String CHANGE_KEY = "changeKey";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
     @NotNull
     @JsonProperty("key")

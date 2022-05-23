@@ -7,17 +7,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeIsSearchableChange changeIsSearchableChange = ChangeIsSearchableChange.builder()
-           .change("{change}")
-           .attributeName("{attributeName}")
-           .nextValue(true)
-           .previousValue(true)
-           .build()
- </code></pre>
- </div>
+ * ChangeIsSearchableChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeIsSearchableChange changeIsSearchableChange = ChangeIsSearchableChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .nextValue(true)
+ *             .previousValue(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchableChange> {
@@ -31,7 +33,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     private Boolean previousValue;
 
     /**
-     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     <*  <p>Update action for <code>changeIsSearchable</code> on product types</p>>
      */
 
     public ChangeIsSearchableChangeBuilder change(final String change) {
@@ -40,7 +42,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
-     *  <p>The name of the updated attribute.</p>
+     <*  <p>The name of the updated attribute.</p>>
      */
 
     public ChangeIsSearchableChangeBuilder attributeName(final String attributeName) {
@@ -48,10 +50,18 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeIsSearchableChangeBuilder nextValue(final Boolean nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeIsSearchableChangeBuilder previousValue(final Boolean previousValue) {
         this.previousValue = previousValue;

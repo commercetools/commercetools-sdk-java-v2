@@ -13,37 +13,40 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Hit hit = Hit.builder()
-           .id("{id}")
-           .version(0.3)
-           .relevance(0.3)
-           .build()
- </code></pre>
- </div>
+ * Hit
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Hit hit = Hit.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .relevance(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HitImpl.class)
 public interface Hit {
 
     /**
-     *  <p>Platform-generated unique identifier of the Order.</p>
+     <*  <p>Platform-generated unique identifier of the Order.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>Current version of the Order.</p>
+     <*  <p>Current version of the Order.</p>>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
+     <*  <p>The higher the value is, the more relevant the hit is for the search request.</p>>
      */
     @NotNull
     @JsonProperty("relevance")

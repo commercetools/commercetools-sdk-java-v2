@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * GraphQLError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLErrorImpl implements GraphQLError, ModelBase {
 
@@ -35,13 +38,25 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     public GraphQLErrorImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> getLocations() {
         return this.locations;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<java.lang.Object> getPath() {
         return this.path;

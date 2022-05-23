@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImportContainerDraft importContainerDraft = ImportContainerDraft.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * ImportContainerDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportContainerDraft importContainerDraft = ImportContainerDraft.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft> {
@@ -27,7 +29,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     /**
-     *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     <*  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>>
      */
 
     public ImportContainerDraftBuilder key(final String key) {
@@ -36,7 +38,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     <*  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>>
      */
 
     public ImportContainerDraftBuilder resourceType(

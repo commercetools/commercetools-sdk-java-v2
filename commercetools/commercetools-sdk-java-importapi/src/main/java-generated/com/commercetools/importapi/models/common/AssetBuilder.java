@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Asset asset = Asset.builder()
-           .key("{key}")
-           .plusSources(sourcesBuilder -> sourcesBuilder)
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * AssetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Asset asset = Asset.builder()
+ *             .key("{key}")
+ *             .plusSources(sourcesBuilder -> sourcesBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetBuilder implements Builder<Asset> {
@@ -40,7 +42,7 @@ public class AssetBuilder implements Builder<Asset> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
+     <*  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>>
      */
 
     public AssetBuilder key(final String key) {
@@ -48,15 +50,27 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AssetBuilder sources(final com.commercetools.importapi.models.common.AssetSource... sources) {
         this.sources = new ArrayList<>(Arrays.asList(sources));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AssetBuilder sources(final java.util.List<com.commercetools.importapi.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AssetBuilder plusSources(final com.commercetools.importapi.models.common.AssetSource... sources) {
         if (this.sources == null) {
@@ -65,6 +79,10 @@ public class AssetBuilder implements Builder<Asset> {
         this.sources.addAll(Arrays.asList(sources));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AssetBuilder plusSources(
             Function<com.commercetools.importapi.models.common.AssetSourceBuilder, com.commercetools.importapi.models.common.AssetSourceBuilder> builder) {
@@ -75,6 +93,10 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AssetBuilder withSources(
             Function<com.commercetools.importapi.models.common.AssetSourceBuilder, com.commercetools.importapi.models.common.AssetSourceBuilder> builder) {
         this.sources = new ArrayList<>();
@@ -83,12 +105,12 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
 
     public AssetBuilder name(
@@ -98,12 +120,12 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
 
     public AssetBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -112,12 +134,12 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
 
     public AssetBuilder description(
@@ -127,12 +149,12 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
 
     public AssetBuilder description(
@@ -141,15 +163,27 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AssetBuilder tags(@Nullable final String... tags) {
         this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AssetBuilder plusTags(@Nullable final String... tags) {
         if (this.tags == null) {
@@ -160,7 +194,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     <*  <p>The representation to be sent to the server when creating a resource with custom fields.</p>>
      */
 
     public AssetBuilder custom(
@@ -170,7 +204,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     <*  <p>The representation to be sent to the server when creating a resource with custom fields.</p>>
      */
 
     public AssetBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {

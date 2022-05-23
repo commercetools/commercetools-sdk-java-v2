@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneAddLocationAction zoneAddLocationAction = ZoneAddLocationAction.builder()
-           .location(locationBuilder -> locationBuilder)
-           .build()
- </code></pre>
- </div>
+ * ZoneAddLocationAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneAddLocationAction zoneAddLocationAction = ZoneAddLocationAction.builder()
+ *             .location(locationBuilder -> locationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneAddLocationActionImpl.class)
@@ -30,7 +33,7 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
     String ADD_LOCATION = "addLocation";
 
     /**
-     *  <p>Location to be added to the Zone.</p>
+     <*  <p>Location to be added to the Zone.</p>>
      */
     @NotNull
     @Valid

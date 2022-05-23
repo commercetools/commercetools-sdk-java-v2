@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxCategoryChangeNameAction taxCategoryChangeNameAction = TaxCategoryChangeNameAction.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * TaxCategoryChangeNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategoryChangeNameAction taxCategoryChangeNameAction = TaxCategoryChangeNameAction.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryChangeNameAction> {
@@ -22,7 +24,7 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
     private String name;
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public TaxCategoryChangeNameActionBuilder name(final String name) {

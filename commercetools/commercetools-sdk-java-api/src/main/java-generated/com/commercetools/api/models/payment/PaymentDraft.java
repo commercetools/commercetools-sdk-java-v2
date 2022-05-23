@@ -17,46 +17,52 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentDraft paymentDraft = PaymentDraft.builder()
-           .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
-           .build()
- </code></pre>
- </div>
+ * PaymentDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentDraft paymentDraft = PaymentDraft.builder()
+ *             .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentDraftImpl.class)
 public interface PaymentDraft extends com.commercetools.api.models.CustomizableDraft<PaymentDraft> {
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     <*  <p>A reference to the customer this payment belongs to.</p>>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     <*  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>>
      */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    /**
+     <>
+     */
     @Deprecated
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+     <*  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>>
      */
 
     @JsonProperty("interfaceId")
     public String getInterfaceId();
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     <*  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>>
      */
     @NotNull
     @Valid
@@ -64,60 +70,73 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public Money getAmountPlanned();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
     @Valid
     @JsonProperty("amountAuthorized")
     public Money getAmountAuthorized();
 
+    /**
+     <>
+     */
+
     @JsonProperty("authorizedUntil")
     public String getAuthorizedUntil();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
     @Valid
     @JsonProperty("amountPaid")
     public Money getAmountPaid();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
     @Valid
     @JsonProperty("amountRefunded")
     public Money getAmountRefunded();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("paymentMethodInfo")
     public PaymentMethodInfo getPaymentMethodInfo();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("paymentStatus")
     public PaymentStatusDraft getPaymentStatus();
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
      */
     @Valid
     @JsonProperty("transactions")
     public List<TransactionDraft> getTransactions();
 
     /**
-     *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     <*  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>>
      */
     @Valid
     @JsonProperty("interfaceInteractions")
     public List<CustomFieldsDraft> getInterfaceInteractions();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier for the Payment.</p>
+     <*  <p>User-defined unique identifier for the Payment.</p>>
      */
 
     @JsonProperty("key")

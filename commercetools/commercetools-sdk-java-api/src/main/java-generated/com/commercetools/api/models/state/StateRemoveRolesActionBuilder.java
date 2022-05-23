@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StateRemoveRolesAction stateRemoveRolesAction = StateRemoveRolesAction.builder()
-           .plusRoles(rolesBuilder -> rolesBuilder)
-           .build()
- </code></pre>
- </div>
+ * StateRemoveRolesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateRemoveRolesAction stateRemoveRolesAction = StateRemoveRolesAction.builder()
+ *             .plusRoles(rolesBuilder -> rolesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAction> {
@@ -22,7 +24,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
     /**
-     *  <p>Roles to remove from the State.</p>
+     <*  <p>Roles to remove from the State.</p>>
      */
 
     public StateRemoveRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -31,7 +33,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
     }
 
     /**
-     *  <p>Roles to remove from the State.</p>
+     <*  <p>Roles to remove from the State.</p>>
      */
 
     public StateRemoveRolesActionBuilder roles(
@@ -41,7 +43,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
     }
 
     /**
-     *  <p>Roles to remove from the State.</p>
+     <*  <p>Roles to remove from the State.</p>>
      */
 
     public StateRemoveRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {

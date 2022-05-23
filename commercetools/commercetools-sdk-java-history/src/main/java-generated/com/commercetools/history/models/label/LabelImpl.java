@@ -30,6 +30,10 @@ public class LabelImpl implements Label, ModelBase {
     public LabelImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }

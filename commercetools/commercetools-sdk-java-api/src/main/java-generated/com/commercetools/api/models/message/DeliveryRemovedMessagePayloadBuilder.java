@@ -8,25 +8,35 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DeliveryRemovedMessagePayload deliveryRemovedMessagePayload = DeliveryRemovedMessagePayload.builder()
-           .delivery(deliveryBuilder -> deliveryBuilder)
-           .build()
- </code></pre>
- </div>
+ * DeliveryRemovedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryRemovedMessagePayload deliveryRemovedMessagePayload = DeliveryRemovedMessagePayload.builder()
+ *             .delivery(deliveryBuilder -> deliveryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRemovedMessagePayload> {
 
     private com.commercetools.api.models.order.Delivery delivery;
 
+    /**
+     <>
+     */
+
     public DeliveryRemovedMessagePayloadBuilder delivery(
             Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
         this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryRemovedMessagePayloadBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;

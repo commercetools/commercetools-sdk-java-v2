@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * FacetTerm
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FacetTermImpl implements FacetTerm, ModelBase {
 
@@ -34,13 +37,25 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     public FacetTermImpl() {
     }
 
+    /**
+     <>
+     */
+
     public java.lang.Object getTerm() {
         return this.term;
     }
 
+    /**
+     <>
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     <>
+     */
 
     public Long getProductCount() {
         return this.productCount;

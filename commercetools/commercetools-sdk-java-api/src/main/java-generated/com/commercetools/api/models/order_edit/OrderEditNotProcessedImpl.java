@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderEditNotProcessed
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBase {
 
@@ -22,6 +25,10 @@ public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBa
     OrderEditNotProcessedImpl() {
         this.type = NOT_PROCESSED;
     }
+
+    /**
+     <>
+     */
 
     public String getType() {
         return this.type;

@@ -26,6 +26,10 @@ public class CustomFieldMoneyTypeImpl implements CustomFieldMoneyType, ModelBase
         this.name = MONEY;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }

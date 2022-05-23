@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeUpdate productTypeUpdate = ProductTypeUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeUpdate productTypeUpdate = ProductTypeUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
@@ -25,10 +27,18 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
 
     private java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public ProductTypeUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeUpdateBuilder actions(
             final com.commercetools.api.models.product_type.ProductTypeUpdateAction... actions) {
@@ -36,11 +46,19 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductTypeUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeUpdateBuilder plusActions(
             final com.commercetools.api.models.product_type.ProductTypeUpdateAction... actions) {
@@ -51,6 +69,10 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductTypeUpdateBuilder plusActions(
             Function<com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product_type.ProductTypeUpdateAction>> builder) {
         if (this.actions == null) {
@@ -60,6 +82,10 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
             builder.apply(com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeUpdateBuilder withActions(
             Function<com.commercetools.api.models.product_type.ProductTypeUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product_type.ProductTypeUpdateAction>> builder) {

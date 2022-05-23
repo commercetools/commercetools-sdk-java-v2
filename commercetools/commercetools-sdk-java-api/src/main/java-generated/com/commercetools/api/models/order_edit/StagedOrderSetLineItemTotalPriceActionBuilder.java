@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetLineItemTotalPriceAction stagedOrderSetLineItemTotalPriceAction = StagedOrderSetLineItemTotalPriceAction.builder()
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetLineItemTotalPriceActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetLineItemTotalPriceAction stagedOrderSetLineItemTotalPriceAction = StagedOrderSetLineItemTotalPriceAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<StagedOrderSetLineItemTotalPriceAction> {
@@ -27,10 +29,18 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     @Nullable
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    /**
+     <>
+     */
+
     public StagedOrderSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(
             Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
@@ -39,6 +49,10 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(
             @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {

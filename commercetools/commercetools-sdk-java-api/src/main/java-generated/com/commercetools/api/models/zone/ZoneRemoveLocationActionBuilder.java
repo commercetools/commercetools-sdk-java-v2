@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneRemoveLocationAction zoneRemoveLocationAction = ZoneRemoveLocationAction.builder()
-           .location(locationBuilder -> locationBuilder)
-           .build()
- </code></pre>
- </div>
+ * ZoneRemoveLocationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneRemoveLocationAction zoneRemoveLocationAction = ZoneRemoveLocationAction.builder()
+ *             .location(locationBuilder -> locationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocationAction> {
@@ -23,7 +25,7 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
     private com.commercetools.api.models.zone.Location location;
 
     /**
-     *  <p>Location to be removed from the Zone.</p>
+     <*  <p>Location to be removed from the Zone.</p>>
      */
 
     public ZoneRemoveLocationActionBuilder location(
@@ -33,7 +35,7 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
     }
 
     /**
-     *  <p>Location to be removed from the Zone.</p>
+     <*  <p>Location to be removed from the Zone.</p>>
      */
 
     public ZoneRemoveLocationActionBuilder location(final com.commercetools.api.models.zone.Location location) {

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetAmountRefundedAction paymentSetAmountRefundedAction = PaymentSetAmountRefundedAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetAmountRefundedActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetAmountRefundedAction paymentSetAmountRefundedAction = PaymentSetAmountRefundedAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetAmountRefundedActionBuilder implements Builder<PaymentSetAmountRefundedAction> {
@@ -25,8 +27,8 @@ public class PaymentSetAmountRefundedActionBuilder implements Builder<PaymentSet
     private com.commercetools.api.models.common.Money amount;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentSetAmountRefundedActionBuilder amount(
@@ -36,8 +38,8 @@ public class PaymentSetAmountRefundedActionBuilder implements Builder<PaymentSet
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentSetAmountRefundedActionBuilder amount(

@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   GraphQLError graphQLError = GraphQLError.builder()
-           .message("{message}")
-           .plusLocations(locationsBuilder -> locationsBuilder)
-           .plusPath(pathBuilder -> pathBuilder)
-           .build()
- </code></pre>
- </div>
+ * GraphQLErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GraphQLError graphQLError = GraphQLError.builder()
+ *             .message("{message}")
+ *             .plusLocations(locationsBuilder -> locationsBuilder)
+ *             .plusPath(pathBuilder -> pathBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLErrorBuilder implements Builder<GraphQLError> {
@@ -28,10 +30,18 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     private java.util.List<java.lang.Object> path;
 
+    /**
+     <>
+     */
+
     public GraphQLErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public GraphQLErrorBuilder locations(
             final com.commercetools.api.models.graph_ql.GraphQLErrorLocation... locations) {
@@ -39,11 +49,19 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public GraphQLErrorBuilder locations(
             final java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations) {
         this.locations = locations;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public GraphQLErrorBuilder plusLocations(
             final com.commercetools.api.models.graph_ql.GraphQLErrorLocation... locations) {
@@ -54,6 +72,10 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public GraphQLErrorBuilder plusLocations(
             Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder> builder) {
         if (this.locations == null) {
@@ -64,6 +86,10 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public GraphQLErrorBuilder withLocations(
             Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder> builder) {
         this.locations = new ArrayList<>();
@@ -72,15 +98,27 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public GraphQLErrorBuilder path(final java.lang.Object... path) {
         this.path = new ArrayList<>(Arrays.asList(path));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public GraphQLErrorBuilder path(final java.util.List<java.lang.Object> path) {
         this.path = path;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public GraphQLErrorBuilder plusPath(final java.lang.Object... path) {
         if (this.path == null) {

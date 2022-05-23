@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderImportCustomLineItemStateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportCustomLineItemStateActionImpl implements OrderImportCustomLineItemStateAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class OrderImportCustomLineItemStateActionImpl implements OrderImportCust
         this.action = IMPORT_CUSTOM_LINE_ITEM_STATE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;

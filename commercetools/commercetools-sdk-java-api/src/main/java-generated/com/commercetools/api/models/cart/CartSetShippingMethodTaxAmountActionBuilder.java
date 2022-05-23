@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetShippingMethodTaxAmountAction cartSetShippingMethodTaxAmountAction = CartSetShippingMethodTaxAmountAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartSetShippingMethodTaxAmountActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetShippingMethodTaxAmountAction cartSetShippingMethodTaxAmountAction = CartSetShippingMethodTaxAmountAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<CartSetShippingMethodTaxAmountAction> {
@@ -24,12 +26,20 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    /**
+     <>
+     */
+
     public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
             Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
         this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {

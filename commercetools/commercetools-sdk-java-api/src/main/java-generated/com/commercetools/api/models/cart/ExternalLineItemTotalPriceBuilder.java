@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExternalLineItemTotalPrice externalLineItemTotalPrice = ExternalLineItemTotalPrice.builder()
-           .price(priceBuilder -> priceBuilder)
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExternalLineItemTotalPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExternalLineItemTotalPrice externalLineItemTotalPrice = ExternalLineItemTotalPrice.builder()
+ *             .price(priceBuilder -> priceBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineItemTotalPrice> {
@@ -25,22 +27,38 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     private com.commercetools.api.models.common.Money totalPrice;
 
+    /**
+     <>
+     */
+
     public ExternalLineItemTotalPriceBuilder price(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ExternalLineItemTotalPriceBuilder price(final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ExternalLineItemTotalPriceBuilder totalPrice(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ExternalLineItemTotalPriceBuilder totalPrice(final com.commercetools.api.models.common.Money totalPrice) {
         this.totalPrice = totalPrice;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TypeUpdate
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeUpdateImpl implements TypeUpdate, ModelBase {
 
@@ -32,15 +35,17 @@ public class TypeUpdateImpl implements TypeUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     <*  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
      */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-     *  <p>Update actions to be performed on the Type.</p>
+     <*  <p>Update actions to be performed on the Type.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.type.TypeUpdateAction> getActions() {
         return this.actions;
     }

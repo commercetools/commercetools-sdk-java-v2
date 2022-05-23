@@ -38,20 +38,26 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
         this.type = HTTP;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>URL to the target destination.</p>
+     <*  <p>URL to the target destination.</p>>
      */
+
     public String getUrl() {
         return this.url;
     }
 
     /**
-     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     <*  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>>
      */
+
     public com.commercetools.api.models.extension.HttpDestinationAuthentication getAuthentication() {
         return this.authentication;
     }

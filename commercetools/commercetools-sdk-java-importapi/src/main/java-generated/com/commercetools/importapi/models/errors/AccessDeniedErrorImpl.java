@@ -34,9 +34,17 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
         this.code = ACCESS_DENIED;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;

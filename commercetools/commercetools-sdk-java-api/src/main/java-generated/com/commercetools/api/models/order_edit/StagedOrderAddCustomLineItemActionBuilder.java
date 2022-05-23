@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderAddCustomLineItemAction stagedOrderAddCustomLineItemAction = StagedOrderAddCustomLineItemAction.builder()
-           .money(moneyBuilder -> moneyBuilder)
-           .name(nameBuilder -> nameBuilder)
-           .slug("{slug}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderAddCustomLineItemActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderAddCustomLineItemAction stagedOrderAddCustomLineItemAction = StagedOrderAddCustomLineItemAction.builder()
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug("{slug}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddCustomLineItemActionBuilder implements Builder<StagedOrderAddCustomLineItemAction> {
@@ -43,8 +45,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder money(
@@ -54,8 +56,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -64,7 +66,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder name(
@@ -74,7 +76,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder name(
@@ -83,10 +85,18 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderAddCustomLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderAddCustomLineItemActionBuilder slug(final String slug) {
         this.slug = slug;
@@ -94,7 +104,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder taxCategory(
@@ -106,7 +116,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder taxCategory(
@@ -116,7 +126,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder custom(
@@ -126,7 +136,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public StagedOrderAddCustomLineItemActionBuilder custom(
@@ -135,12 +145,20 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {

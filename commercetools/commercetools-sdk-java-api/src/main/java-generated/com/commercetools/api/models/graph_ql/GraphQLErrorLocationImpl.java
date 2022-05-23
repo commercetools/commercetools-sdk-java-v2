@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * GraphQLErrorLocation
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase {
 
@@ -30,9 +33,17 @@ public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase
     public GraphQLErrorLocationImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Integer getLine() {
         return this.line;
     }
+
+    /**
+     <>
+     */
 
     public Integer getColumn() {
         return this.column;

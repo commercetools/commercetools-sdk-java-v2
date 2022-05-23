@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetGeoLocationChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
         this.type = SET_GEO_LOCATION_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setGeoLocation</code></p>
+     <*  <p>Update action for <code>setGeoLocation</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.GeoLocation getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.GeoLocation getPreviousValue() {
         return this.previousValue;

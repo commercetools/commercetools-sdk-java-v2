@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaskToken taskToken = TaskToken.builder()
-           .taskId("{taskId}")
-           .uriPath("{uriPath}")
-           .build()
- </code></pre>
- </div>
+ * TaskTokenBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaskToken taskToken = TaskToken.builder()
+ *             .taskId("{taskId}")
+ *             .uriPath("{uriPath}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaskTokenBuilder implements Builder<TaskToken> {
@@ -25,7 +27,7 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
     private String uriPath;
 
     /**
-     *  <p>The ID for the task. Used to find the status of the task.</p>
+     <*  <p>The ID for the task. Used to find the status of the task.</p>>
      */
 
     public TaskTokenBuilder taskId(final String taskId) {
@@ -34,7 +36,7 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
     }
 
     /**
-     *  <p>The URI path to poll for the status of the task.</p>
+     <*  <p>The URI path to poll for the status of the task.</p>>
      */
 
     public TaskTokenBuilder uriPath(final String uriPath) {

@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderChangeTaxRoundingModeAction stagedOrderChangeTaxRoundingModeAction = StagedOrderChangeTaxRoundingModeAction.builder()
-           .taxRoundingMode(RoundingMode.HALF_EVEN)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderChangeTaxRoundingModeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderChangeTaxRoundingModeAction stagedOrderChangeTaxRoundingModeAction = StagedOrderChangeTaxRoundingModeAction.builder()
+ *             .taxRoundingMode(RoundingMode.HALF_EVEN)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderChangeTaxRoundingModeActionImpl.class)
@@ -30,6 +33,9 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
 
     String CHANGE_TAX_ROUNDING_MODE = "changeTaxRoundingMode";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("taxRoundingMode")
     public RoundingMode getTaxRoundingMode();

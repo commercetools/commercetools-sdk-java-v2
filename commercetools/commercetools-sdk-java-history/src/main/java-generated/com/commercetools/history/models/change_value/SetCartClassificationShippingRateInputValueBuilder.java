@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCartClassificationShippingRateInputValue setCartClassificationShippingRateInputValue = SetCartClassificationShippingRateInputValue.builder()
-           .type("{type}")
-           .key("{key}")
-           .label(labelBuilder -> labelBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCartClassificationShippingRateInputValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCartClassificationShippingRateInputValue setCartClassificationShippingRateInputValue = SetCartClassificationShippingRateInputValue.builder()
+ *             .type("{type}")
+ *             .key("{key}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCartClassificationShippingRateInputValueBuilder
@@ -29,21 +31,37 @@ public class SetCartClassificationShippingRateInputValueBuilder
 
     private com.commercetools.history.models.common.LocalizedString label;
 
+    /**
+     <>
+     */
+
     public SetCartClassificationShippingRateInputValueBuilder type(final String type) {
         this.type = type;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCartClassificationShippingRateInputValueBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCartClassificationShippingRateInputValueBuilder label(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCartClassificationShippingRateInputValueBuilder label(
             final com.commercetools.history.models.common.LocalizedString label) {

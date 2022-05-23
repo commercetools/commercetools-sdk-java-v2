@@ -15,6 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StoreResourceIdentifier
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, ModelBase {
 
@@ -36,22 +39,25 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     <*  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     <*  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     <*  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>>
      */
+
     public String getKey() {
         return this.key;
     }

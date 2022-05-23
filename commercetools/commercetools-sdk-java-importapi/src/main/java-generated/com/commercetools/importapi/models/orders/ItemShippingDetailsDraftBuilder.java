@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ItemShippingDetailsDraft itemShippingDetailsDraft = ItemShippingDetailsDraft.builder()
-           .plusTargets(targetsBuilder -> targetsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ItemShippingDetailsDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemShippingDetailsDraft itemShippingDetailsDraft = ItemShippingDetailsDraft.builder()
+ *             .plusTargets(targetsBuilder -> targetsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDetailsDraft> {
@@ -23,7 +25,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     private java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets;
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -33,7 +35,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -43,7 +45,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -56,7 +58,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -70,7 +72,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder withTargets(

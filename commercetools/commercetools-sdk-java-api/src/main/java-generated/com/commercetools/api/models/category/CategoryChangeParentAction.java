@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryChangeParentAction categoryChangeParentAction = CategoryChangeParentAction.builder()
-           .parent(parentBuilder -> parentBuilder)
-           .build()
- </code></pre>
- </div>
+ * CategoryChangeParentAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryChangeParentAction categoryChangeParentAction = CategoryChangeParentAction.builder()
+ *             .parent(parentBuilder -> parentBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryChangeParentActionImpl.class)
@@ -29,6 +32,9 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
 
     String CHANGE_PARENT = "changeParent";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("parent")

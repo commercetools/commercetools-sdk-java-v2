@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxCategoryReference taxCategoryReference = TaxCategoryReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * TaxCategoryReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategoryReference taxCategoryReference = TaxCategoryReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference> {
@@ -28,7 +30,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     private com.commercetools.api.models.tax_category.TaxCategory obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>
+     <*  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>>
      */
 
     public TaxCategoryReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     <*  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>>
      */
 
     public TaxCategoryReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     <*  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>>
      */
 
     public TaxCategoryReferenceBuilder obj(@Nullable final com.commercetools.api.models.tax_category.TaxCategory obj) {

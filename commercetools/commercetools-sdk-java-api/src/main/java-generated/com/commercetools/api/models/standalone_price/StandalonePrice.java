@@ -24,82 +24,85 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StandalonePrice standalonePrice = StandalonePrice.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sku("{sku}")
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * StandalonePrice
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePrice standalonePrice = StandalonePrice.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sku("{sku}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceImpl.class)
 public interface StandalonePrice extends BaseResource, com.commercetools.api.models.DomainResource<StandalonePrice> {
 
     /**
-     *  <p>Platform-generated unique identifier of the StandalonePrice.</p>
+     <*  <p>Platform-generated unique identifier of the StandalonePrice.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>Current version of the StandalonePrice.</p>
+     <*  <p>Current version of the StandalonePrice.</p>>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
+     <*  <p>Date and time (UTC) the StandalonePrice was initially created.</p>>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
+     <*  <p>Date and time (UTC) the StandalonePrice was last updated.</p>>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>User-defined unique identifier of the StandalonePrice.</p>
+     <*  <p>User-defined unique identifier of the StandalonePrice.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     <*  <p>SKU of the ProductVariant to which this Price is associated.</p>>
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>Money value of this Price.</p>
+     <*  <p>Money value of this Price.</p>>
      */
     @NotNull
     @Valid
@@ -107,56 +110,56 @@ public interface StandalonePrice extends BaseResource, com.commercetools.api.mod
     public TypedMoney getValue();
 
     /**
-     *  <p>Country for which this Price is valid.</p>
+     <*  <p>Country for which this Price is valid.</p>>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     <*  <p>CustomerGroup for which this Price is valid.</p>>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Product distribution Channel for which this Price is valid.</p>
+     <*  <p>Product distribution Channel for which this Price is valid.</p>>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelReference getChannel();
 
     /**
-     *  <p>Date from which the Price is valid.</p>
+     <*  <p>Date from which the Price is valid.</p>>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Date until the Price is valid.</p>
+     <*  <p>Date until the Price is valid.</p>>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Price tiers if any are defined.</p>
+     <*  <p>Price tiers if any are defined.</p>>
      */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     <*  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     <*  <p>Custom Fields for the StandalonePrice.</p>>
      */
     @Valid
     @JsonProperty("custom")

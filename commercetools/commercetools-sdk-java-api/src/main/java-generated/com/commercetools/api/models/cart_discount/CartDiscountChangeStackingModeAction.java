@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountChangeStackingModeAction cartDiscountChangeStackingModeAction = CartDiscountChangeStackingModeAction.builder()
-           .stackingMode(StackingMode.STACKING)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountChangeStackingModeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeStackingModeAction cartDiscountChangeStackingModeAction = CartDiscountChangeStackingModeAction.builder()
+ *             .stackingMode(StackingMode.STACKING)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeStackingModeActionImpl.class)
@@ -28,6 +31,9 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
 
     String CHANGE_STACKING_MODE = "changeStackingMode";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("stackingMode")
     public StackingMode getStackingMode();

@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Reference to a CustomObject.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomObjectReference customObjectReference = CustomObjectReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Reference to a CustomObject.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomObjectReference customObjectReference = CustomObjectReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomObjectReferenceImpl.class)
@@ -33,14 +34,14 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     <*  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>>
      */
     @Valid
     @JsonProperty("obj")
     public CustomObject getObj();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced CustomObject.</p>
+     <*  <p>Platform-generated unique identifier of the referenced CustomObject.</p>>
      */
     @NotNull
     @JsonProperty("id")

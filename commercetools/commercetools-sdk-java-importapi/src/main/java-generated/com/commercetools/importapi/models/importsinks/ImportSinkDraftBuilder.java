@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImportSinkDraft importSinkDraft = ImportSinkDraft.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * ImportSinkDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportSinkDraft importSinkDraft = ImportSinkDraft.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSinkDraftBuilder implements Builder<ImportSinkDraft> {
@@ -27,7 +29,7 @@ public class ImportSinkDraftBuilder implements Builder<ImportSinkDraft> {
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     /**
-     *  <p>User-defined unique identifier of the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     <*  <p>User-defined unique identifier of the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>>
      */
 
     public ImportSinkDraftBuilder key(final String key) {
@@ -36,7 +38,7 @@ public class ImportSinkDraftBuilder implements Builder<ImportSinkDraft> {
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
+     <*  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>>
      */
 
     public ImportSinkDraftBuilder resourceType(

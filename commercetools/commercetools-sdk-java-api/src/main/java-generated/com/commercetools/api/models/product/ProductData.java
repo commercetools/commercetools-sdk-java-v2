@@ -16,50 +16,59 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductData productData = ProductData.builder()
-           .name(nameBuilder -> nameBuilder)
-           .plusCategories(categoriesBuilder -> categoriesBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .masterVariant(masterVariantBuilder -> masterVariantBuilder)
-           .plusVariants(variantsBuilder -> variantsBuilder)
-           .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductData
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductData productData = ProductData.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .plusCategories(categoriesBuilder -> categoriesBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
+ *             .plusVariants(variantsBuilder -> variantsBuilder)
+ *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDataImpl.class)
 public interface ProductData extends ProductDataLike {
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("categories")
     public List<CategoryReference> getCategories();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("categoryOrderHints")
     public CategoryOrderHints getCategoryOrderHints();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @NotNull
     @Valid
@@ -67,36 +76,45 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getSlug();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("masterVariant")
     public ProductVariant getMasterVariant();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("variants")
     public List<ProductVariant> getVariants();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("searchKeywords")

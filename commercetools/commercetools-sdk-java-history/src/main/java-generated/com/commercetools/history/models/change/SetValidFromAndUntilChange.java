@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetValidFromAndUntilChange setValidFromAndUntilChange = SetValidFromAndUntilChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetValidFromAndUntilChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetValidFromAndUntilChange setValidFromAndUntilChange = SetValidFromAndUntilChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetValidFromAndUntilChangeImpl.class)
@@ -32,16 +35,22 @@ public interface SetValidFromAndUntilChange extends Change {
 
     String SET_VALID_FROM_AND_UNTIL_CHANGE = "SetValidFromAndUntilChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
      */
     @NotNull
     @Valid
@@ -49,7 +58,7 @@ public interface SetValidFromAndUntilChange extends Change {
     public ValidFromAndUntilValue getPreviousValue();
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
      */
     @NotNull
     @Valid

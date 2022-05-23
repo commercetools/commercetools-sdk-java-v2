@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetValidFromAndUntilChange setValidFromAndUntilChange = SetValidFromAndUntilChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetValidFromAndUntilChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetValidFromAndUntilChange setValidFromAndUntilChange = SetValidFromAndUntilChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAndUntilChange> {
@@ -28,13 +30,17 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     private com.commercetools.history.models.change_value.ValidFromAndUntilValue nextValue;
 
+    /**
+     <>
+     */
+
     public SetValidFromAndUntilChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
      */
 
     public SetValidFromAndUntilChangeBuilder previousValue(
@@ -46,7 +52,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
      */
 
     public SetValidFromAndUntilChangeBuilder previousValue(
@@ -56,7 +62,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
      */
 
     public SetValidFromAndUntilChangeBuilder nextValue(
@@ -67,7 +73,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
      */
 
     public SetValidFromAndUntilChangeBuilder nextValue(

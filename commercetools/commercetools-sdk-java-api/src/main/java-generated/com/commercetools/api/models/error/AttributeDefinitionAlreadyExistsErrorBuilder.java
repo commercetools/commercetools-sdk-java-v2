@@ -7,17 +7,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeDefinitionAlreadyExistsError attributeDefinitionAlreadyExistsError = AttributeDefinitionAlreadyExistsError.builder()
-           .message("{message}")
-           .conflictingProductTypeId("{conflictingProductTypeId}")
-           .conflictingProductTypeName("{conflictingProductTypeName}")
-           .conflictingAttributeName("{conflictingAttributeName}")
-           .build()
- </code></pre>
- </div>
+ * AttributeDefinitionAlreadyExistsErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeDefinitionAlreadyExistsError attributeDefinitionAlreadyExistsError = AttributeDefinitionAlreadyExistsError.builder()
+ *             .message("{message}")
+ *             .conflictingProductTypeId("{conflictingProductTypeId}")
+ *             .conflictingProductTypeName("{conflictingProductTypeName}")
+ *             .conflictingAttributeName("{conflictingAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<AttributeDefinitionAlreadyExistsError> {
@@ -32,15 +34,27 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
 
     private String conflictingAttributeName;
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionAlreadyExistsErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -50,17 +64,29 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingProductTypeId(
             final String conflictingProductTypeId) {
         this.conflictingProductTypeId = conflictingProductTypeId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingProductTypeName(
             final String conflictingProductTypeName) {
         this.conflictingProductTypeName = conflictingProductTypeName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingAttributeName(
             final String conflictingAttributeName) {

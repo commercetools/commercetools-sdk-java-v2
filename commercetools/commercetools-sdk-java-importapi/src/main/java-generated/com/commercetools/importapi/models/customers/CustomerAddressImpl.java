@@ -113,102 +113,192 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     <*  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public String getTitle() {
         return this.title;
     }
 
+    /**
+     <>
+     */
+
     public String getSalutation() {
         return this.salutation;
     }
+
+    /**
+     <>
+     */
 
     public String getFirstName() {
         return this.firstName;
     }
 
+    /**
+     <>
+     */
+
     public String getLastName() {
         return this.lastName;
     }
+
+    /**
+     <>
+     */
 
     public String getStreetName() {
         return this.streetName;
     }
 
+    /**
+     <>
+     */
+
     public String getStreetNumber() {
         return this.streetNumber;
     }
+
+    /**
+     <>
+     */
 
     public String getAdditionalStreetInfo() {
         return this.additionalStreetInfo;
     }
 
+    /**
+     <>
+     */
+
     public String getPostalCode() {
         return this.postalCode;
     }
+
+    /**
+     <>
+     */
 
     public String getCity() {
         return this.city;
     }
 
+    /**
+     <>
+     */
+
     public String getRegion() {
         return this.region;
     }
+
+    /**
+     <>
+     */
 
     public String getState() {
         return this.state;
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
+
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     <>
+     */
 
     public String getCompany() {
         return this.company;
     }
 
+    /**
+     <>
+     */
+
     public String getDepartment() {
         return this.department;
     }
+
+    /**
+     <>
+     */
 
     public String getBuilding() {
         return this.building;
     }
 
+    /**
+     <>
+     */
+
     public String getApartment() {
         return this.apartment;
     }
+
+    /**
+     <>
+     */
 
     public String getPOBox() {
         return this.pOBox;
     }
 
+    /**
+     <>
+     */
+
     public String getPhone() {
         return this.phone;
     }
+
+    /**
+     <>
+     */
 
     public String getMobile() {
         return this.mobile;
     }
 
+    /**
+     <>
+     */
+
     public String getEmail() {
         return this.email;
     }
+
+    /**
+     <>
+     */
 
     public String getFax() {
         return this.fax;
     }
 
+    /**
+     <>
+     */
+
     public String getAdditionalAddressInfo() {
         return this.additionalAddressInfo;
     }
+
+    /**
+     <>
+     */
 
     public String getExternalId() {
         return this.externalId;

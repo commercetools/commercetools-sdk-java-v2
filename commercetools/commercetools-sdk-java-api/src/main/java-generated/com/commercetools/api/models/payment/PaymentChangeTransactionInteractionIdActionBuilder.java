@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentChangeTransactionInteractionIdAction paymentChangeTransactionInteractionIdAction = PaymentChangeTransactionInteractionIdAction.builder()
-           .transactionId("{transactionId}")
-           .interactionId("{interactionId}")
-           .build()
- </code></pre>
- </div>
+ * PaymentChangeTransactionInteractionIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentChangeTransactionInteractionIdAction paymentChangeTransactionInteractionIdAction = PaymentChangeTransactionInteractionIdAction.builder()
+ *             .transactionId("{transactionId}")
+ *             .interactionId("{interactionId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeTransactionInteractionIdActionBuilder
@@ -25,10 +27,18 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
 
     private String interactionId;
 
+    /**
+     <>
+     */
+
     public PaymentChangeTransactionInteractionIdActionBuilder transactionId(final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentChangeTransactionInteractionIdActionBuilder interactionId(final String interactionId) {
         this.interactionId = interactionId;

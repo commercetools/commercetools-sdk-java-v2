@@ -14,24 +14,31 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Address address = Address.builder()
-           .country("{country}")
-           .build()
- </code></pre>
- </div>
+ * Address
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Address address = Address.builder()
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddressImpl.class)
 public interface Address extends BaseAddress, com.commercetools.api.models.Customizable<Address> {
 
+    /**
+     <>
+     */
+
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>Custom Fields defined for the Address.</p>
+     <*  <p>Custom Fields defined for the Address.</p>>
      */
     @Valid
     @JsonProperty("custom")

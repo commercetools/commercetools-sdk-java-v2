@@ -26,6 +26,10 @@ public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
         this.name = DATE;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }

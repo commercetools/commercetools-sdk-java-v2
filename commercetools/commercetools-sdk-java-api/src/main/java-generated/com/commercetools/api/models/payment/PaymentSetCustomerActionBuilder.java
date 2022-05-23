@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetCustomerAction paymentSetCustomerAction = PaymentSetCustomerAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetCustomerActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetCustomerAction paymentSetCustomerAction = PaymentSetCustomerAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustomerAction> {
@@ -25,7 +27,7 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     <*  <p>A reference to the customer this payment belongs to.</p>>
      */
 
     public PaymentSetCustomerActionBuilder customer(
@@ -36,7 +38,7 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
     }
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     <*  <p>A reference to the customer this payment belongs to.</p>>
      */
 
     public PaymentSetCustomerActionBuilder customer(

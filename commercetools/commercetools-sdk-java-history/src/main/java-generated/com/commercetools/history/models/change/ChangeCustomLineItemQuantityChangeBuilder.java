@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeCustomLineItemQuantityChange changeCustomLineItemQuantityChange = ChangeCustomLineItemQuantityChange.builder()
-           .change("{change}")
-           .customLineItem(customLineItemBuilder -> customLineItemBuilder)
-           .customLineItemId("{customLineItemId}")
-           .nextValue(1)
-           .previousValue(1)
-           .build()
- </code></pre>
- </div>
+ * ChangeCustomLineItemQuantityChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeCustomLineItemQuantityChange changeCustomLineItemQuantityChange = ChangeCustomLineItemQuantityChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .nextValue(1)
+ *             .previousValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<ChangeCustomLineItemQuantityChange> {
@@ -35,13 +37,17 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     private Integer previousValue;
 
     /**
-     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+     <*  <p>Update action for <code>changeCustomLineItemQuantity</code></p>>
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeCustomLineItemQuantityChangeBuilder customLineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -50,21 +56,37 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeCustomLineItemQuantityChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeCustomLineItemQuantityChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeCustomLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeCustomLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;

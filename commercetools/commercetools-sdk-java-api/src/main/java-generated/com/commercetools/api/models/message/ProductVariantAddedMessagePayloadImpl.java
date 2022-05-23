@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductVariantAddedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAddedMessagePayload, ModelBase {
 
@@ -36,13 +39,25 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
         this.type = PRODUCT_VARIANT_ADDED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

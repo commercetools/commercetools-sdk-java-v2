@@ -7,17 +7,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeDefinitionTypeConflictError attributeDefinitionTypeConflictError = AttributeDefinitionTypeConflictError.builder()
-           .message("{message}")
-           .conflictingProductTypeId("{conflictingProductTypeId}")
-           .conflictingProductTypeName("{conflictingProductTypeName}")
-           .conflictingAttributeName("{conflictingAttributeName}")
-           .build()
- </code></pre>
- </div>
+ * AttributeDefinitionTypeConflictErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeDefinitionTypeConflictError attributeDefinitionTypeConflictError = AttributeDefinitionTypeConflictError.builder()
+ *             .message("{message}")
+ *             .conflictingProductTypeId("{conflictingProductTypeId}")
+ *             .conflictingProductTypeName("{conflictingProductTypeName}")
+ *             .conflictingAttributeName("{conflictingAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<AttributeDefinitionTypeConflictError> {
@@ -32,15 +34,27 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
 
     private String conflictingAttributeName;
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionTypeConflictErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionTypeConflictErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionTypeConflictErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -50,16 +64,28 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeId(final String conflictingProductTypeId) {
         this.conflictingProductTypeId = conflictingProductTypeId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeName(
             final String conflictingProductTypeName) {
         this.conflictingProductTypeName = conflictingProductTypeName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {
         this.conflictingAttributeName = conflictingAttributeName;

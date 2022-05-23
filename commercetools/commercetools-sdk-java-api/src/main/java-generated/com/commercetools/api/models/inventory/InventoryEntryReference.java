@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Reference to a InventoryEntry.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntryReference inventoryEntryReference = InventoryEntryReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Reference to a InventoryEntry.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryReference inventoryEntryReference = InventoryEntryReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
@@ -33,14 +34,14 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     String INVENTORY_ENTRY = "inventory-entry";
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     <*  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>>
      */
     @Valid
     @JsonProperty("obj")
     public InventoryEntry getObj();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>
+     <*  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>>
      */
     @NotNull
     @JsonProperty("id")

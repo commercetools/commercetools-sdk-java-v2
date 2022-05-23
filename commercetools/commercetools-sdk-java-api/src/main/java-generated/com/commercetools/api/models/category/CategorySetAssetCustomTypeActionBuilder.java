@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategorySetAssetCustomTypeAction categorySetAssetCustomTypeAction = CategorySetAssetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CategorySetAssetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetAssetCustomTypeAction categorySetAssetCustomTypeAction = CategorySetAssetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetAssetCustomTypeActionBuilder implements Builder<CategorySetAssetCustomTypeAction> {
@@ -33,10 +35,18 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     @Nullable
     private java.lang.Object fields;
 
+    /**
+     <>
+     */
+
     public CategorySetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
@@ -44,7 +54,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
      */
 
     public CategorySetAssetCustomTypeActionBuilder type(
@@ -54,7 +64,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
      */
 
     public CategorySetAssetCustomTypeActionBuilder type(
@@ -64,7 +74,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
      */
 
     public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreSetCustomTypeAction storeSetCustomTypeAction = StoreSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * StoreSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreSetCustomTypeAction storeSetCustomTypeAction = StoreSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
+     <*  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>>
      */
 
     public StoreSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
     }
 
     /**
-     *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
+     <*  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>>
      */
 
     public StoreSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Store.</p>
+     <*  <p>Sets the Custom Fields fields for the Store.</p>>
      */
 
     public StoreSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Store.</p>
+     <*  <p>Sets the Custom Fields fields for the Store.</p>>
      */
 
     public StoreSetCustomTypeActionBuilder fields(

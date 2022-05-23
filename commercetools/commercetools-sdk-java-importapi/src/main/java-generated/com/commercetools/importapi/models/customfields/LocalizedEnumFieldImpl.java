@@ -35,11 +35,16 @@ public class LocalizedEnumFieldImpl implements LocalizedEnumField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getValue() {
         return this.value;

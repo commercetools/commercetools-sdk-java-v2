@@ -12,15 +12,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>ResourceIdentifier to a CartDiscount.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountResourceIdentifier cartDiscountResourceIdentifier = CartDiscountResourceIdentifier.builder()
-           .build()
- </code></pre>
- </div>
+ *  <p>ResourceIdentifier to a CartDiscount.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountResourceIdentifier cartDiscountResourceIdentifier = CartDiscountResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountResourceIdentifierImpl.class)
@@ -30,14 +31,14 @@ public interface CartDiscountResourceIdentifier
     String CART_DISCOUNT = "cart-discount";
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>Platform-generated unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>User-defined unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("key")

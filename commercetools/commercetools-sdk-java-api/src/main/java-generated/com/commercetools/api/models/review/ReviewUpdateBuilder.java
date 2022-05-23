@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewUpdate reviewUpdate = ReviewUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ReviewUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewUpdate reviewUpdate = ReviewUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
@@ -25,21 +27,37 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
 
     private java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public ReviewUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewUpdateBuilder actions(final com.commercetools.api.models.review.ReviewUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewUpdateBuilder plusActions(final com.commercetools.api.models.review.ReviewUpdateAction... actions) {
         if (this.actions == null) {
@@ -49,6 +67,10 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewUpdateBuilder plusActions(
             Function<com.commercetools.api.models.review.ReviewUpdateActionBuilder, Builder<? extends com.commercetools.api.models.review.ReviewUpdateAction>> builder) {
         if (this.actions == null) {
@@ -57,6 +79,10 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.review.ReviewUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewUpdateBuilder withActions(
             Function<com.commercetools.api.models.review.ReviewUpdateActionBuilder, Builder<? extends com.commercetools.api.models.review.ReviewUpdateAction>> builder) {

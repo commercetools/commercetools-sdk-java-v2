@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TaxedItemPrice
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
 
@@ -35,20 +38,26 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     public TaxedItemPriceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.TypedMoney getTotalNet() {
         return this.totalNet;
     }
 
     /**
-     *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+     <*  <p>TaxedItemPrice fields can not be used in query predicates.</p>>
      */
+
     public com.commercetools.api.models.common.TypedMoney getTotalGross() {
         return this.totalGross;
     }
 
     /**
-     *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
      */
+
     public com.commercetools.api.models.common.TypedMoney getTotalTax() {
         return this.totalTax;
     }

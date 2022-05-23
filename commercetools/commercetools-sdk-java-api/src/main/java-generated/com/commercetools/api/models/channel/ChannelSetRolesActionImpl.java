@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChannelSetRolesAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelSetRolesActionImpl implements ChannelSetRolesAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ChannelSetRolesActionImpl implements ChannelSetRolesAction, ModelBa
         this.action = SET_ROLES;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     <*  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }

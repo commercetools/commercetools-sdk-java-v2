@@ -35,13 +35,18 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
         this.name = REFERENCE;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>Resource type the Custom Field can reference.</p>
+     <*  <p>Resource type the Custom Field can reference.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldReferenceValue getReferenceTypeId() {
         return this.referenceTypeId;
     }

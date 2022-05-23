@@ -10,19 +10,21 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListLineItem shoppingListLineItem = ShoppingListLineItem.builder()
-           .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .id("{id}")
-           .name(nameBuilder -> nameBuilder)
-           .productId("{productId}")
-           .productType(productTypeBuilder -> productTypeBuilder)
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * ShoppingListLineItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListLineItem shoppingListLineItem = ShoppingListLineItem.builder()
+ *             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .productId("{productId}")
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem> {
@@ -54,13 +56,17 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     @Nullable
     private Long variantId;
 
+    /**
+     <>
+     */
+
     public ShoppingListLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
 
     public ShoppingListLineItemBuilder custom(
@@ -70,7 +76,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
 
     public ShoppingListLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -78,13 +84,17 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListLineItemBuilder deactivatedAt(@Nullable final java.time.ZonedDateTime deactivatedAt) {
         this.deactivatedAt = deactivatedAt;
         return this;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>
+     <*  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>>
      */
 
     public ShoppingListLineItemBuilder id(final String id) {
@@ -93,7 +103,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ShoppingListLineItemBuilder name(
@@ -103,7 +113,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ShoppingListLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -111,13 +121,17 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListLineItemBuilder productId(final String productId) {
         this.productId = productId;
         return this;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ShoppingListLineItemBuilder productSlug(
@@ -127,7 +141,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ShoppingListLineItemBuilder productSlug(
@@ -137,7 +151,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Reference to a ProductType.</p>
+     <*  <p>Reference to a ProductType.</p>>
      */
 
     public ShoppingListLineItemBuilder productType(
@@ -148,7 +162,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     *  <p>Reference to a ProductType.</p>
+     <*  <p>Reference to a ProductType.</p>>
      */
 
     public ShoppingListLineItemBuilder productType(
@@ -157,10 +171,18 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListLineItemBuilder variant(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
@@ -168,11 +190,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListLineItemBuilder variant(
             @Nullable final com.commercetools.api.models.product.ProductVariant variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListLineItemBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;

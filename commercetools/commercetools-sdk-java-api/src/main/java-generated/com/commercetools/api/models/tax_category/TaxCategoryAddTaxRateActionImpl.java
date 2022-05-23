@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TaxCategoryAddTaxRateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAct
         this.action = ADD_TAX_RATE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Value to append to the <code>rates</code> array.</p>
+     <*  <p>Value to append to the <code>rates</code> array.</p>>
      */
+
     public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {
         return this.taxRate;
     }

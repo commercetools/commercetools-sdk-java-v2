@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetShippingMethodAction stagedOrderSetShippingMethodAction = StagedOrderSetShippingMethodAction.builder()
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetShippingMethodActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetShippingMethodAction stagedOrderSetShippingMethodAction = StagedOrderSetShippingMethodAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingMethodActionBuilder implements Builder<StagedOrderSetShippingMethodAction> {
@@ -28,7 +30,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
      */
 
     public StagedOrderSetShippingMethodActionBuilder shippingMethod(
@@ -40,7 +42,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
      */
 
     public StagedOrderSetShippingMethodActionBuilder shippingMethod(
@@ -49,12 +51,20 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderSetShippingMethodActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetShippingMethodActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {

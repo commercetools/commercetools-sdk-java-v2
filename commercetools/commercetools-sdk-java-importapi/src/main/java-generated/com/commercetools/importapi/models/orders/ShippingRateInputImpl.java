@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShippingRateInput
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateInputImpl implements ShippingRateInput, ModelBase {
 
@@ -27,6 +30,10 @@ public class ShippingRateInputImpl implements ShippingRateInput, ModelBase {
 
     public ShippingRateInputImpl() {
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.importapi.models.orders.ShippingRateInputType getType() {
         return this.type;

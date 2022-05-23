@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeRemoveEnumValuesAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveEnumValuesAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
         this.action = REMOVE_ENUM_VALUES;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getKeys() {
         return this.keys;

@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderDiscountCodeStateSetMessagePayload orderDiscountCodeStateSetMessagePayload = OrderDiscountCodeStateSetMessagePayload.builder()
-           .discountCode(discountCodeBuilder -> discountCodeBuilder)
-           .state(DiscountCodeState.NOT_ACTIVE)
-           .build()
- </code></pre>
- </div>
+ * OrderDiscountCodeStateSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderDiscountCodeStateSetMessagePayload orderDiscountCodeStateSetMessagePayload = OrderDiscountCodeStateSetMessagePayload.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .state(DiscountCodeState.NOT_ACTIVE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeStateSetMessagePayloadBuilder
@@ -32,7 +34,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     <*  <p>Reference to a DiscountCode.</p>>
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
@@ -43,7 +45,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     <*  <p>Reference to a DiscountCode.</p>>
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
@@ -52,11 +54,19 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderDiscountCodeStateSetMessagePayloadBuilder state(
             final com.commercetools.api.models.cart.DiscountCodeState state) {
         this.state = state;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder oldState(
             @Nullable final com.commercetools.api.models.cart.DiscountCodeState oldState) {

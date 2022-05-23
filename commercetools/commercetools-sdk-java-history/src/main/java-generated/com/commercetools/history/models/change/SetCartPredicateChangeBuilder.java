@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCartPredicateChange setCartPredicateChange = SetCartPredicateChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetCartPredicateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCartPredicateChange setCartPredicateChange = SetCartPredicateChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateChange> {
@@ -28,7 +30,7 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setCartPredicate</code></p>
+     <*  <p>Shape of the action for <code>setCartPredicate</code></p>>
      */
 
     public SetCartPredicateChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCartPredicateChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCartPredicateChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

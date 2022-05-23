@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductPriceDiscountsSetUpdatedPrice productPriceDiscountsSetUpdatedPrice = ProductPriceDiscountsSetUpdatedPrice.builder()
-           .variantId(1)
-           .priceId("{priceId}")
-           .staged(true)
-           .build()
- </code></pre>
- </div>
+ * ProductPriceDiscountsSetUpdatedPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPriceDiscountsSetUpdatedPrice productPriceDiscountsSetUpdatedPrice = ProductPriceDiscountsSetUpdatedPrice.builder()
+ *             .variantId(1)
+ *             .priceId("{priceId}")
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<ProductPriceDiscountsSetUpdatedPrice> {
@@ -39,25 +41,45 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
 
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantId(final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantKey(@Nullable final String variantKey) {
         this.variantKey = variantKey;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPriceDiscountsSetUpdatedPriceBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
@@ -65,11 +87,19 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder staged(final Boolean staged) {
         this.staged = staged;

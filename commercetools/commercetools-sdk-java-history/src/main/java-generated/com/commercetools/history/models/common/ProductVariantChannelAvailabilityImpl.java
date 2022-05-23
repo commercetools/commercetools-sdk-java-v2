@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductVariantChannelAvailability
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityImpl implements ProductVariantChannelAvailability, ModelBase {
 
@@ -35,13 +38,25 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     public ProductVariantChannelAvailabilityImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Boolean getIsOnStock() {
         return this.isOnStock;
     }
 
+    /**
+     <>
+     */
+
     public Integer getRestockableInDays() {
         return this.restockableInDays;
     }
+
+    /**
+     <>
+     */
 
     public Integer getAvailableQuantity() {
         return this.availableQuantity;

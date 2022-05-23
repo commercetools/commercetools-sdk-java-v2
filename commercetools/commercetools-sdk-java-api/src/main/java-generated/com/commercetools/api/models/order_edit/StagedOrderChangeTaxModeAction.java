@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderChangeTaxModeAction stagedOrderChangeTaxModeAction = StagedOrderChangeTaxModeAction.builder()
-           .taxMode(TaxMode.PLATFORM)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderChangeTaxModeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderChangeTaxModeAction stagedOrderChangeTaxModeAction = StagedOrderChangeTaxModeAction.builder()
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderChangeTaxModeActionImpl.class)
@@ -30,6 +33,9 @@ public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction 
 
     String CHANGE_TAX_MODE = "changeTaxMode";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();

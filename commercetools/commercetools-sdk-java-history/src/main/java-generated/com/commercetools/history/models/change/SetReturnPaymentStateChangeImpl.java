@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetReturnPaymentStateChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
         this.type = SET_RETURN_PAYMENT_STATE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setReturnPaymentState</code></p>
+     <*  <p>Update action for <code>setReturnPaymentState</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.ReturnPaymentState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.ReturnPaymentState getPreviousValue() {
         return this.previousValue;

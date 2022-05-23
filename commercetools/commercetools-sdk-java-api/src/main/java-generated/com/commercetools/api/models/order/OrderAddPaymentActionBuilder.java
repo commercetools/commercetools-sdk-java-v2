@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderAddPaymentAction orderAddPaymentAction = OrderAddPaymentAction.builder()
-           .payment(paymentBuilder -> paymentBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderAddPaymentActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderAddPaymentAction orderAddPaymentAction = OrderAddPaymentAction.builder()
+ *             .payment(paymentBuilder -> paymentBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddPaymentActionBuilder implements Builder<OrderAddPaymentAction> {
@@ -23,7 +25,7 @@ public class OrderAddPaymentActionBuilder implements Builder<OrderAddPaymentActi
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     <*  <p>ResourceIdentifier to a Payment.</p>>
      */
 
     public OrderAddPaymentActionBuilder payment(
@@ -34,7 +36,7 @@ public class OrderAddPaymentActionBuilder implements Builder<OrderAddPaymentActi
     }
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     <*  <p>ResourceIdentifier to a Payment.</p>>
      */
 
     public OrderAddPaymentActionBuilder payment(

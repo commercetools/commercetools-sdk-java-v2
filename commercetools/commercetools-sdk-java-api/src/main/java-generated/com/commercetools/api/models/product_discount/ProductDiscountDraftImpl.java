@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductDiscountDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase {
 
@@ -59,64 +62,73 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
     }
 
     /**
-     *  <p>Name of the ProductDiscount.</p>
+     <*  <p>Name of the ProductDiscount.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-     *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     <*  <p>User-defined unique identifier for the ProductDiscount.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>Description of the ProductDiscount.</p>
+     <*  <p>Description of the ProductDiscount.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-     *  <p>Type of Discount and its corresponding value.</p>
+     <*  <p>Type of Discount and its corresponding value.</p>>
      */
+
     public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {
         return this.value;
     }
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     <*  <p>Valid ProductDiscount predicate.</p>>
      */
+
     public String getPredicate() {
         return this.predicate;
     }
 
     /**
-     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     <*  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>>
      */
+
     public String getSortOrder() {
         return this.sortOrder;
     }
 
     /**
-     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     <*  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>>
      */
+
     public Boolean getIsActive() {
         return this.isActive;
     }
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     <*  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>>
      */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     <*  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>>
      */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }

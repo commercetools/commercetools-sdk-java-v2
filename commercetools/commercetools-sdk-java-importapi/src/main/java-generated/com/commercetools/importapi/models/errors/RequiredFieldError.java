@@ -13,17 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>A required field is missing a value.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RequiredFieldError requiredFieldError = RequiredFieldError.builder()
-           .message("{message}")
-           .field("{field}")
-           .build()
- </code></pre>
- </div>
+ *  <p>A required field is missing a value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RequiredFieldError requiredFieldError = RequiredFieldError.builder()
+ *             .message("{message}")
+ *             .field("{field}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RequiredFieldErrorImpl.class)
@@ -32,7 +33,7 @@ public interface RequiredFieldError extends ErrorObject {
     String REQUIRED_FIELD = "RequiredField";
 
     /**
-     *  <p>The name of the field.</p>
+     <*  <p>The name of the field.</p>>
      */
     @NotNull
     @JsonProperty("field")

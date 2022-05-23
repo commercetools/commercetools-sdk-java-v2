@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetAssetCustomTypeChange setAssetCustomTypeChange = SetAssetCustomTypeChange.builder()
-           .change("{change}")
-           .asset(assetBuilder -> assetBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetAssetCustomTypeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAssetCustomTypeChange setAssetCustomTypeChange = SetAssetCustomTypeChange.builder()
+ *             .change("{change}")
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTypeChange> {
@@ -32,7 +34,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     /**
-     *  <p>Update action for <code>setAssetCustomType</code></p>
+     <*  <p>Update action for <code>setAssetCustomType</code></p>>
      */
 
     public SetAssetCustomTypeChangeBuilder change(final String change) {
@@ -40,11 +42,19 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAssetCustomTypeChangeBuilder asset(
             Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
         this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetAssetCustomTypeChangeBuilder asset(
             final com.commercetools.history.models.change_value.AssetChangeValue asset) {
@@ -52,11 +62,19 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAssetCustomTypeChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetAssetCustomTypeChangeBuilder nextValue(
             final com.commercetools.history.models.common.CustomFields nextValue) {
@@ -64,11 +82,19 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAssetCustomTypeChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetAssetCustomTypeChangeBuilder previousValue(
             final com.commercetools.history.models.common.CustomFields previousValue) {

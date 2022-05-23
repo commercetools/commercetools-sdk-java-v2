@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartChangeTaxModeAction myCartChangeTaxModeAction = MyCartChangeTaxModeAction.builder()
-           .taxMode(TaxMode.PLATFORM)
-           .build()
- </code></pre>
- </div>
+ * MyCartChangeTaxModeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartChangeTaxModeAction myCartChangeTaxModeAction = MyCartChangeTaxModeAction.builder()
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartChangeTaxModeActionBuilder implements Builder<MyCartChangeTaxModeAction> {
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
+
+    /**
+     <>
+     */
 
     public MyCartChangeTaxModeActionBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;

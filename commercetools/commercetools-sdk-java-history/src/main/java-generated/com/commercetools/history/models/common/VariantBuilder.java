@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Variant variant = Variant.builder()
-           .id(1)
-           .sku("{sku}")
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * VariantBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Variant variant = Variant.builder()
+ *             .id(1)
+ *             .sku("{sku}")
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantBuilder implements Builder<Variant> {
@@ -27,15 +29,27 @@ public class VariantBuilder implements Builder<Variant> {
 
     private String key;
 
+    /**
+     <>
+     */
+
     public VariantBuilder id(final Integer id) {
         this.id = id;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public VariantBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public VariantBuilder key(final String key) {
         this.key = key;

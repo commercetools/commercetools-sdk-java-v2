@@ -16,15 +16,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountValueGiftLineItem cartDiscountValueGiftLineItem = CartDiscountValueGiftLineItem.builder()
-           .product(productBuilder -> productBuilder)
-           .variantId(0.3)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountValueGiftLineItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountValueGiftLineItem cartDiscountValueGiftLineItem = CartDiscountValueGiftLineItem.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .variantId(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueGiftLineItemImpl.class)
@@ -33,26 +36,29 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     String GIFT_LINE_ITEM = "giftLineItem";
 
     /**
-     *  <p>Reference to a Product.</p>
+     <*  <p>Reference to a Product.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *  <p>The channel must have the role <code>InventorySupply</code></p>
+     <*  <p>The channel must have the role <code>InventorySupply</code></p>>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
     /**
-     *  <p>The channel must have the role <code>ProductDistribution</code></p>
+     <*  <p>The channel must have the role <code>ProductDistribution</code></p>>
      */
     @Valid
     @JsonProperty("distributionChannel")

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFieldsDraft customFieldsDraft = CustomFieldsDraft.builder()
-           .type(typeBuilder -> typeBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomFieldsDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldsDraft customFieldsDraft = CustomFieldsDraft.builder()
+ *             .type(typeBuilder -> typeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
@@ -28,7 +30,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     <*  <p><code>id</code> or <code>key</code> of the Type.</p>>
      */
 
     public CustomFieldsDraftBuilder type(
@@ -38,7 +40,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     <*  <p><code>id</code> or <code>key</code> of the Type.</p>>
      */
 
     public CustomFieldsDraftBuilder type(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -47,7 +49,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
      */
 
     public CustomFieldsDraftBuilder fields(
@@ -57,7 +59,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
      */
 
     public CustomFieldsDraftBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderExcerpt
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
 
@@ -35,13 +38,25 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     public OrderExcerptImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
+
+    /**
+     <>
+     */
 
     public Integer getVersion() {
         return this.version;

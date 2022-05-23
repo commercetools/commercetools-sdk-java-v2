@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PriceChangedError priceChangedError = PriceChangedError.builder()
-           .message("{message}")
-           .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
-           .shipping(true)
-           .build()
- </code></pre>
- </div>
+ * PriceChangedErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PriceChangedError priceChangedError = PriceChangedError.builder()
+ *             .message("{message}")
+ *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
+ *             .shipping(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
@@ -29,15 +31,27 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
 
     private Boolean shipping;
 
+    /**
+     <>
+     */
+
     public PriceChangedErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PriceChangedErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PriceChangedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -47,15 +61,27 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PriceChangedErrorBuilder lineItems(final String... lineItems) {
         this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PriceChangedErrorBuilder lineItems(final java.util.List<String> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PriceChangedErrorBuilder plusLineItems(final String... lineItems) {
         if (this.lineItems == null) {
@@ -64,6 +90,10 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
         this.lineItems.addAll(Arrays.asList(lineItems));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PriceChangedErrorBuilder shipping(final Boolean shipping) {
         this.shipping = shipping;

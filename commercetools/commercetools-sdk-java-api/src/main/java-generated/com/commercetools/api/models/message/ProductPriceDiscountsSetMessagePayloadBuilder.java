@@ -8,19 +8,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductPriceDiscountsSetMessagePayload productPriceDiscountsSetMessagePayload = ProductPriceDiscountsSetMessagePayload.builder()
-           .plusUpdatedPrices(updatedPricesBuilder -> updatedPricesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductPriceDiscountsSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPriceDiscountsSetMessagePayload productPriceDiscountsSetMessagePayload = ProductPriceDiscountsSetMessagePayload.builder()
+ *             .plusUpdatedPrices(updatedPricesBuilder -> updatedPricesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<ProductPriceDiscountsSetMessagePayload> {
 
     private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
+
+    /**
+     <>
+     */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
             final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice... updatedPrices) {
@@ -28,11 +34,19 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
             final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
         this.updatedPrices = updatedPrices;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder plusUpdatedPrices(
             final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice... updatedPrices) {
@@ -42,6 +56,10 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
         this.updatedPrices.addAll(Arrays.asList(updatedPrices));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder plusUpdatedPrices(
             Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
@@ -53,6 +71,10 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
                     .build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder withUpdatedPrices(
             Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {

@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelMeasurementsUpdatedMessagePayload parcelMeasurementsUpdatedMessagePayload = ParcelMeasurementsUpdatedMessagePayload.builder()
-           .deliveryId("{deliveryId}")
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * ParcelMeasurementsUpdatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelMeasurementsUpdatedMessagePayload parcelMeasurementsUpdatedMessagePayload = ParcelMeasurementsUpdatedMessagePayload.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementsUpdatedMessagePayloadBuilder
@@ -31,21 +33,37 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
+    /**
+     <>
+     */
+
     public ParcelMeasurementsUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
             Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
         this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelMeasurementsUpdatedMessagePayloadBuilder measurements(
             @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {

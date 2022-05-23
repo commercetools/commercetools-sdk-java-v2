@@ -17,17 +17,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Creates an order from a Cart. The cart must have a shipping address set before creating an order. When using the Platform TaxMode, the shipping address is used for tax calculation.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .orders()
-           .post(null)
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Creates an order from a Cart. The cart must have a shipping address set before creating an order. When using the Platform TaxMode, the shipping address is used for tax calculation.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .orders()
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersPost extends

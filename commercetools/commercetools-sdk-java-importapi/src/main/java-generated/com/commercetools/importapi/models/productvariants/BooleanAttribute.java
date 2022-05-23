@@ -13,16 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>This type represents an attribute whose value is either "true" or "false".</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   BooleanAttribute booleanAttribute = BooleanAttribute.builder()
-           .value(true)
-           .build()
- </code></pre>
- </div>
+ *  <p>This type represents an attribute whose value is either "true" or "false".</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     BooleanAttribute booleanAttribute = BooleanAttribute.builder()
+ *             .value(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BooleanAttributeImpl.class)
@@ -30,6 +31,9 @@ public interface BooleanAttribute extends Attribute {
 
     String BOOLEAN = "boolean";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("value")
     public Boolean getValue();

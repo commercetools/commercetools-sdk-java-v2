@@ -46,31 +46,42 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
         this.code = CONCURRENT_MODIFICATION;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-     *  <p>The version specified in the failed request.</p>
+     <*  <p>The version specified in the failed request.</p>>
      */
+
     public Long getSpecifiedVersion() {
         return this.specifiedVersion;
     }
 
     /**
-     *  <p>The current version of the resource.</p>
+     <*  <p>The current version of the resource.</p>>
      */
+
     public Long getCurrentVersion() {
         return this.currentVersion;
     }
 
     /**
-     *  <p>The resource in conflict.</p>
+     <*  <p>The resource in conflict.</p>>
      */
+
     public java.lang.Object getConflictedResource() {
         return this.conflictedResource;
     }

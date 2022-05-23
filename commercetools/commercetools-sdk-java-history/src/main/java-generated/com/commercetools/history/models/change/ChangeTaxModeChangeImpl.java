@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeTaxModeChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
         this.type = CHANGE_TAX_MODE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Shape of the action for <code>changeTaxMode</code></p>
+     <*  <p>Shape of the action for <code>changeTaxMode</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.TaxMode getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.TaxMode getNextValue() {
         return this.nextValue;

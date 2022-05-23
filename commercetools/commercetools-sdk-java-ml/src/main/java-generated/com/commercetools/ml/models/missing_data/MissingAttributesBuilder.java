@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingAttributes missingAttributes = MissingAttributes.builder()
-           .product(productBuilder -> productBuilder)
-           .productType(productTypeBuilder -> productTypeBuilder)
-           .variantId(0.3)
-           .plusMissingAttributeValues(missingAttributeValuesBuilder -> missingAttributeValuesBuilder)
-           .build()
- </code></pre>
- </div>
+ * MissingAttributesBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingAttributes missingAttributes = MissingAttributes.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .variantId(0.3)
+ *             .plusMissingAttributeValues(missingAttributeValuesBuilder -> missingAttributeValuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesBuilder implements Builder<MissingAttributes> {
@@ -42,22 +44,38 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     @Nullable
     private com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage;
 
+    /**
+     <>
+     */
+
     public MissingAttributesBuilder product(
             Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingAttributesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingAttributesBuilder productType(
             Function<com.commercetools.ml.models.common.ProductTypeReferenceBuilder, com.commercetools.ml.models.common.ProductTypeReferenceBuilder> builder) {
         this.productType = builder.apply(com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingAttributesBuilder productType(
             final com.commercetools.ml.models.common.ProductTypeReference productType) {
@@ -66,7 +84,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     *  <p>ID of a ProductVariant.</p>
+     <*  <p>ID of a ProductVariant.</p>>
      */
 
     public MissingAttributesBuilder variantId(final Integer variantId) {
@@ -75,7 +93,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
      */
 
     public MissingAttributesBuilder missingAttributeValues(final String... missingAttributeValues) {
@@ -84,7 +102,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
      */
 
     public MissingAttributesBuilder missingAttributeValues(final java.util.List<String> missingAttributeValues) {
@@ -93,7 +111,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
      */
 
     public MissingAttributesBuilder plusMissingAttributeValues(final String... missingAttributeValues) {
@@ -105,7 +123,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
      */
 
     public MissingAttributesBuilder missingAttributeNames(@Nullable final String... missingAttributeNames) {
@@ -114,7 +132,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
      */
 
     public MissingAttributesBuilder missingAttributeNames(
@@ -124,7 +142,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
      */
 
     public MissingAttributesBuilder plusMissingAttributeNames(@Nullable final String... missingAttributeNames) {
@@ -135,6 +153,10 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingAttributesBuilder attributeCount(
             Function<com.commercetools.ml.models.missing_data.AttributeCountBuilder, com.commercetools.ml.models.missing_data.AttributeCountBuilder> builder) {
         this.attributeCount = builder.apply(com.commercetools.ml.models.missing_data.AttributeCountBuilder.of())
@@ -142,11 +164,19 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingAttributesBuilder attributeCount(
             @Nullable final com.commercetools.ml.models.missing_data.AttributeCount attributeCount) {
         this.attributeCount = attributeCount;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingAttributesBuilder attributeCoverage(
             Function<com.commercetools.ml.models.missing_data.AttributeCoverageBuilder, com.commercetools.ml.models.missing_data.AttributeCoverageBuilder> builder) {
@@ -154,6 +184,10 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingAttributesBuilder attributeCoverage(
             @Nullable final com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage) {

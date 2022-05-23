@@ -7,17 +7,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelMeasurements parcelMeasurements = ParcelMeasurements.builder()
-           .heightInMillimeter(1)
-           .lengthInMillimeter(1)
-           .widthInMillimeter(1)
-           .weightInGram(1)
-           .build()
- </code></pre>
- </div>
+ * ParcelMeasurementsBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelMeasurements parcelMeasurements = ParcelMeasurements.builder()
+ *             .heightInMillimeter(1)
+ *             .lengthInMillimeter(1)
+ *             .widthInMillimeter(1)
+ *             .weightInGram(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
@@ -30,20 +32,36 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
     private Integer weightInGram;
 
+    /**
+     <>
+     */
+
     public ParcelMeasurementsBuilder heightInMillimeter(final Integer heightInMillimeter) {
         this.heightInMillimeter = heightInMillimeter;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelMeasurementsBuilder lengthInMillimeter(final Integer lengthInMillimeter) {
         this.lengthInMillimeter = lengthInMillimeter;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelMeasurementsBuilder widthInMillimeter(final Integer widthInMillimeter) {
         this.widthInMillimeter = widthInMillimeter;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelMeasurementsBuilder weightInGram(final Integer weightInGram) {
         this.weightInGram = weightInGram;

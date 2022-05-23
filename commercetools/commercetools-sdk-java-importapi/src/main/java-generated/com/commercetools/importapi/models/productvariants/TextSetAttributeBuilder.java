@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TextSetAttribute textSetAttribute = TextSetAttribute.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * TextSetAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TextSetAttribute textSetAttribute = TextSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
@@ -27,7 +29,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     private java.util.List<String> value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
      */
 
     public TextSetAttributeBuilder name(@Nullable final String name) {
@@ -35,15 +37,27 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TextSetAttributeBuilder value(final String... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TextSetAttributeBuilder value(final java.util.List<String> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TextSetAttributeBuilder plusValue(final String... value) {
         if (this.value == null) {

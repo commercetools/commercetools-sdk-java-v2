@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomTokenizer customTokenizer = CustomTokenizer.builder()
-           .plusInputs(inputsBuilder -> inputsBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomTokenizer
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomTokenizer customTokenizer = CustomTokenizer.builder()
+ *             .plusInputs(inputsBuilder -> inputsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomTokenizerImpl.class)
@@ -28,6 +31,9 @@ public interface CustomTokenizer extends SuggestTokenizer {
 
     String CUSTOM = "custom";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("inputs")
     public List<String> getInputs();

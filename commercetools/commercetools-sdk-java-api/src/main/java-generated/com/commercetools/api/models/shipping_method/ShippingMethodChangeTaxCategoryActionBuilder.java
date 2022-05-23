@@ -8,19 +8,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodChangeTaxCategoryAction shippingMethodChangeTaxCategoryAction = ShippingMethodChangeTaxCategoryAction.builder()
-           .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodChangeTaxCategoryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodChangeTaxCategoryAction shippingMethodChangeTaxCategoryAction = ShippingMethodChangeTaxCategoryAction.builder()
+ *             .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<ShippingMethodChangeTaxCategoryAction> {
 
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
+
+    /**
+     <>
+     */
 
     public ShippingMethodChangeTaxCategoryActionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
@@ -29,6 +35,10 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodChangeTaxCategoryActionBuilder taxCategory(
             final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {

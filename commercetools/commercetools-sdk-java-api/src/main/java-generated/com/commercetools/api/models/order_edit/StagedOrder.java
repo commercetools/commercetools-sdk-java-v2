@@ -12,25 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrder stagedOrder = StagedOrder.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
-           .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .orderState(OrderState.OPEN)
-           .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
-           .lastMessageSequenceNumber(0.3)
-           .origin(CartOrigin.CUSTOMER)
-           .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrder
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrder stagedOrder = StagedOrder.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
+ *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .orderState(OrderState.OPEN)
+ *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
+ *             .lastMessageSequenceNumber(0.3)
+ *             .origin(CartOrigin.CUSTOMER)
+ *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderImpl.class)

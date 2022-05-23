@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountChangeTargetAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTargetAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTar
         this.action = CHANGE_TARGET;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
         return this.target;

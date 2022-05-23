@@ -49,25 +49,49 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     public ProductVariantDraftImportImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     <>
+     */
 
     public String getKey() {
         return this.key;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> getPrices() {
         return this.prices;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
         return this.assets;

@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentChangeTransactionStateAction paymentChangeTransactionStateAction = PaymentChangeTransactionStateAction.builder()
-           .transactionId("{transactionId}")
-           .state(TransactionState.INITIAL)
-           .build()
- </code></pre>
- </div>
+ * PaymentChangeTransactionStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentChangeTransactionStateAction paymentChangeTransactionStateAction = PaymentChangeTransactionStateAction.builder()
+ *             .transactionId("{transactionId}")
+ *             .state(TransactionState.INITIAL)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeTransactionStateActionBuilder implements Builder<PaymentChangeTransactionStateAction> {
@@ -24,10 +26,18 @@ public class PaymentChangeTransactionStateActionBuilder implements Builder<Payme
 
     private com.commercetools.api.models.payment.TransactionState state;
 
+    /**
+     <>
+     */
+
     public PaymentChangeTransactionStateActionBuilder transactionId(final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentChangeTransactionStateActionBuilder state(
             final com.commercetools.api.models.payment.TransactionState state) {

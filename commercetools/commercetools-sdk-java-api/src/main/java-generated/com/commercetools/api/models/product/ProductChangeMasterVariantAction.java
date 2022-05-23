@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductChangeMasterVariantAction productChangeMasterVariantAction = ProductChangeMasterVariantAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductChangeMasterVariantAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductChangeMasterVariantAction productChangeMasterVariantAction = ProductChangeMasterVariantAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductChangeMasterVariantActionImpl.class)
@@ -25,11 +28,23 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
 
     String CHANGE_MASTER_VARIANT = "changeMasterVariant";
 
+    /**
+     <>
+     */
+
     @JsonProperty("variantId")
     public Long getVariantId();
 
+    /**
+     <>
+     */
+
     @JsonProperty("sku")
     public String getSku();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

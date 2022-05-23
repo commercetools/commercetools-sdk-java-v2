@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetRestockableInDaysChange setRestockableInDaysChange = SetRestockableInDaysChange.builder()
-           .change("{change}")
-           .previousValue(1)
-           .nextValue(1)
-           .build()
- </code></pre>
- </div>
+ * SetRestockableInDaysChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetRestockableInDaysChange setRestockableInDaysChange = SetRestockableInDaysChange.builder()
+ *             .change("{change}")
+ *             .previousValue(1)
+ *             .nextValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockableInDaysChange> {
@@ -28,7 +30,7 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
     private Integer nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setRestockableInDays</code></p>
+     <*  <p>Shape of the action for <code>setRestockableInDays</code></p>>
      */
 
     public SetRestockableInDaysChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetRestockableInDaysChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetRestockableInDaysChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;

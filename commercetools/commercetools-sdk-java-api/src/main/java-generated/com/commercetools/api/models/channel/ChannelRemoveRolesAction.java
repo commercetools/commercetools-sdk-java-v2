@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelRemoveRolesAction channelRemoveRolesAction = ChannelRemoveRolesAction.builder()
-           .plusRoles(rolesBuilder -> rolesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChannelRemoveRolesAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelRemoveRolesAction channelRemoveRolesAction = ChannelRemoveRolesAction.builder()
+ *             .plusRoles(rolesBuilder -> rolesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelRemoveRolesActionImpl.class)
@@ -29,7 +32,7 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
     String REMOVE_ROLES = "removeRoles";
 
     /**
-     *  <p>Value to remove from the array.</p>
+     <*  <p>Value to remove from the array.</p>>
      */
     @NotNull
     @JsonProperty("roles")

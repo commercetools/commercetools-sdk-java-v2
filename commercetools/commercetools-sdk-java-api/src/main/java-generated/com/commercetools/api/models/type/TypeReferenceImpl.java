@@ -40,22 +40,25 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Type.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Type.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     <*  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>>
      */
+
     public com.commercetools.api.models.type.Type getObj() {
         return this.obj;
     }

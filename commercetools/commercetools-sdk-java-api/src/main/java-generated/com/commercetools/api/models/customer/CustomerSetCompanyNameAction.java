@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetCompanyNameAction customerSetCompanyNameAction = CustomerSetCompanyNameAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetCompanyNameAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetCompanyNameAction customerSetCompanyNameAction = CustomerSetCompanyNameAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetCompanyNameActionImpl.class)
@@ -26,7 +29,7 @@ public interface CustomerSetCompanyNameAction extends CustomerUpdateAction {
     String SET_COMPANY_NAME = "setCompanyName";
 
     /**
-     *  <p>If not defined, the company name is unset.</p>
+     <*  <p>If not defined, the company name is unset.</p>>
      */
 
     @JsonProperty("companyName")

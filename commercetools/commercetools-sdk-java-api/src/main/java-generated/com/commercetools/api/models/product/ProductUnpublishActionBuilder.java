@@ -7,13 +7,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductUnpublishAction productUnpublishAction = ProductUnpublishAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductUnpublishActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductUnpublishAction productUnpublishAction = ProductUnpublishAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductUnpublishActionBuilder implements Builder<ProductUnpublishAction> {

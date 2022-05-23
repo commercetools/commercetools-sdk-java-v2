@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentInfo
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentInfoImpl implements PaymentInfo, ModelBase {
 
@@ -27,6 +30,10 @@ public class PaymentInfoImpl implements PaymentInfo, ModelBase {
 
     public PaymentInfoImpl() {
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getPayments() {
         return this.payments;

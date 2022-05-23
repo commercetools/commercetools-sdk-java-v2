@@ -17,19 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Returns a cart by its key from a specific Store. If the cart exists in the commercetools project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error. The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .inStoreKeyWithStoreKeyValue("{storeKey}")
-           .carts()
-           .withKey("{key}")
-           .get()
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Returns a cart by its key from a specific Store. If the cart exists in the commercetools project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error. The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .carts()
+ *            .withKey("{key}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet

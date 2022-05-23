@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomLineItemStateTransitionMessagePayload customLineItemStateTransitionMessagePayload = CustomLineItemStateTransitionMessagePayload.builder()
-           .customLineItemId("{customLineItemId}")
-           .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .quantity(0.3)
-           .fromState(fromStateBuilder -> fromStateBuilder)
-           .toState(toStateBuilder -> toStateBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomLineItemStateTransitionMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItemStateTransitionMessagePayload customLineItemStateTransitionMessagePayload = CustomLineItemStateTransitionMessagePayload.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemStateTransitionMessagePayloadBuilder
@@ -35,10 +37,18 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     private com.commercetools.api.models.state.StateReference toState;
 
+    /**
+     <>
+     */
+
     public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder transitionDate(
             final java.time.ZonedDateTime transitionDate) {
@@ -46,13 +56,17 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
@@ -62,7 +76,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
@@ -72,7 +86,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(
@@ -82,7 +96,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(

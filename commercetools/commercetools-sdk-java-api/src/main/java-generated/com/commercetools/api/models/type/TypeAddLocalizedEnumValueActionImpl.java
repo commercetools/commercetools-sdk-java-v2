@@ -38,20 +38,26 @@ public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnum
         this.action = ADD_LOCALIZED_ENUM_VALUE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-     *  <p>Value to append to the array.</p>
+     <*  <p>Value to append to the array.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {
         return this.value;
     }

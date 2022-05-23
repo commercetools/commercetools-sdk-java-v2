@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderAddDeliveryAction orderAddDeliveryAction = OrderAddDeliveryAction.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderAddDeliveryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderAddDeliveryAction orderAddDeliveryAction = OrderAddDeliveryAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAction> {
@@ -33,17 +35,29 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder items(
             @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder items(
             @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderAddDeliveryActionBuilder plusItems(
             @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -54,6 +68,10 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -63,6 +81,10 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
@@ -70,11 +92,19 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder address(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderAddDeliveryActionBuilder address(
             @Nullable final com.commercetools.api.models.common.BaseAddress address) {
@@ -82,17 +112,29 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder parcels(
             @Nullable final com.commercetools.api.models.order.ParcelDraft... parcels) {
         this.parcels = new ArrayList<>(Arrays.asList(parcels));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder parcels(
             @Nullable final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels) {
         this.parcels = parcels;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderAddDeliveryActionBuilder plusParcels(
             @Nullable final com.commercetools.api.models.order.ParcelDraft... parcels) {
@@ -103,6 +145,10 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder plusParcels(
             Function<com.commercetools.api.models.order.ParcelDraftBuilder, com.commercetools.api.models.order.ParcelDraftBuilder> builder) {
         if (this.parcels == null) {
@@ -112,6 +158,10 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddDeliveryActionBuilder withParcels(
             Function<com.commercetools.api.models.order.ParcelDraftBuilder, com.commercetools.api.models.order.ParcelDraftBuilder> builder) {
         this.parcels = new ArrayList<>();
@@ -120,7 +170,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     <*  <p>Custom Fields for the Transaction.</p>>
      */
 
     public OrderAddDeliveryActionBuilder custom(
@@ -130,7 +180,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     <*  <p>Custom Fields for the Transaction.</p>>
      */
 
     public OrderAddDeliveryActionBuilder custom(

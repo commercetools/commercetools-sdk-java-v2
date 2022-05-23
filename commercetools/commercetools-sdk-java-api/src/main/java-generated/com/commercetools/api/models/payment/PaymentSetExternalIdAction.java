@@ -11,19 +11,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetExternalIdAction paymentSetExternalIdAction = PaymentSetExternalIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetExternalIdAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetExternalIdAction paymentSetExternalIdAction = PaymentSetExternalIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetExternalIdActionImpl.class)
 public interface PaymentSetExternalIdAction extends PaymentUpdateAction {
 
     String SET_EXTERNAL_ID = "setExternalId";
+
+    /**
+     <>
+     */
 
     @JsonProperty("externalId")
     public String getExternalId();

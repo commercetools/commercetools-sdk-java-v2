@@ -15,37 +15,61 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExternalTaxRateDraft externalTaxRateDraft = ExternalTaxRateDraft.builder()
-           .name("{name}")
-           .country("{country}")
-           .build()
- </code></pre>
- </div>
+ * ExternalTaxRateDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExternalTaxRateDraft externalTaxRateDraft = ExternalTaxRateDraft.builder()
+ *             .name("{name}")
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExternalTaxRateDraftImpl.class)
 public interface ExternalTaxRateDraft {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     <>
+     */
+
     @JsonProperty("amount")
     public Double getAmount();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+     <>
+     */
+
     @JsonProperty("state")
     public String getState();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
+
+    /**
+     <>
+     */
 
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();

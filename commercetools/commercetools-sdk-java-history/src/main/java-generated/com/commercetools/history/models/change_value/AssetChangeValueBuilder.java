@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AssetChangeValue assetChangeValue = AssetChangeValue.builder()
-           .id("{id}")
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * AssetChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssetChangeValue assetChangeValue = AssetChangeValue.builder()
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
@@ -25,16 +27,28 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
 
     private com.commercetools.history.models.common.LocalizedString name;
 
+    /**
+     <>
+     */
+
     public AssetChangeValueBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AssetChangeValueBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AssetChangeValueBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;

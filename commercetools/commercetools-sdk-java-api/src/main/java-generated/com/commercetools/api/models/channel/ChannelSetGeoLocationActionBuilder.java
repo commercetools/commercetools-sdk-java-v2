@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelSetGeoLocationAction channelSetGeoLocationAction = ChannelSetGeoLocationAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ChannelSetGeoLocationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelSetGeoLocationAction channelSetGeoLocationAction = ChannelSetGeoLocationAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeoLocationAction> {
@@ -25,7 +27,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
     /**
-     *  <p>Value to set.</p>
+     <*  <p>Value to set.</p>>
      */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(
@@ -35,7 +37,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
     }
 
     /**
-     *  <p>Value to set.</p>
+     <*  <p>Value to set.</p>>
      */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(

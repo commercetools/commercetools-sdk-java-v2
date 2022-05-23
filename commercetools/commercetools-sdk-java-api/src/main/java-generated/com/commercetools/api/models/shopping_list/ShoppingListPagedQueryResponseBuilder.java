@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListPagedQueryResponse shoppingListPagedQueryResponse = ShoppingListPagedQueryResponse.builder()
-           .limit(0.3)
-           .count(0.3)
-           .offset(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShoppingListPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListPagedQueryResponse shoppingListPagedQueryResponse = ShoppingListPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .count(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingListPagedQueryResponse> {
@@ -37,7 +39,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     private java.util.List<com.commercetools.api.models.shopping_list.ShoppingList> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public ShoppingListPagedQueryResponseBuilder limit(final Long limit) {
@@ -45,10 +47,18 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -56,7 +66,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public ShoppingListPagedQueryResponseBuilder offset(final Long offset) {
@@ -64,17 +74,29 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListPagedQueryResponseBuilder results(
             final com.commercetools.api.models.shopping_list.ShoppingList... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.shopping_list.ShoppingList> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.shopping_list.ShoppingList... results) {
@@ -85,6 +107,10 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
         if (this.results == null) {
@@ -93,6 +119,10 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
         this.results.add(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {

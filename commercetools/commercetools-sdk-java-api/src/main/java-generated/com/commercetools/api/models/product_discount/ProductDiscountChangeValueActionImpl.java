@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductDiscountChangeValueAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountChangeValueActionImpl implements ProductDiscountChangeValueAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ProductDiscountChangeValueActionImpl implements ProductDiscountChan
         this.action = CHANGE_VALUE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
+
     public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {
         return this.value;
     }

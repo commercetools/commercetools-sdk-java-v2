@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeKeyChange changeKeyChange = ChangeKeyChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * ChangeKeyChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeKeyChange changeKeyChange = ChangeKeyChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
@@ -28,7 +30,7 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changeKey</code></p>
+     <*  <p>Shape of the action for <code>changeKey</code></p>>
      */
 
     public ChangeKeyChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeKeyChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeKeyChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

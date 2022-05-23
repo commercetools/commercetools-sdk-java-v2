@@ -17,19 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Deletion will only succeed if the Product Selection is not assigned to any Store.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_selection.ProductSelection>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .productSelections()
-           .withKey("{key}")
-           .delete()
-           .withVersion(version)
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Deletion will only succeed if the Product Selection is not assigned to any Store.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_selection.ProductSelection>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .productSelections()
+ *            .withKey("{key}")
+ *            .delete()
+ *            .withVersion(version)
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductSelectionsKeyByKeyDelete extends

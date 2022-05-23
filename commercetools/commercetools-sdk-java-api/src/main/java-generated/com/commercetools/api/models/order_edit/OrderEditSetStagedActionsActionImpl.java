@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderEditSetStagedActionsAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedActionsAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedAc
         this.action = SET_STAGED_ACTIONS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     <*  <p>The actions to edit the <code>resource</code>.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
         return this.stagedActions;
     }

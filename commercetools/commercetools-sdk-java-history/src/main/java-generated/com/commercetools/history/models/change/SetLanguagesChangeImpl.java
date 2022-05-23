@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetLanguagesChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
         this.type = SET_LANGUAGES_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setLanguages</code> on stores</p>
+     <*  <p>Update action for <code>setLanguages</code> on stores</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;

@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductChangeAssetNameAction productChangeAssetNameAction = ProductChangeAssetNameAction.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductChangeAssetNameAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductChangeAssetNameAction productChangeAssetNameAction = ProductChangeAssetNameAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductChangeAssetNameActionImpl.class)
@@ -30,21 +33,44 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
 
     String CHANGE_ASSET_NAME = "changeAssetName";
 
+    /**
+     <>
+     */
+
     @JsonProperty("variantId")
     public Long getVariantId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+     <>
+     */
+
     @JsonProperty("staged")
     public Boolean getStaged();
+
+    /**
+     <>
+     */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
+    /**
+     <>
+     */
+
     @JsonProperty("assetKey")
     public String getAssetKey();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")

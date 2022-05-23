@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DeliveryItem deliveryItem = DeliveryItem.builder()
-           .id("{id}")
-           .quantity(1)
-           .build()
- </code></pre>
- </div>
+ * DeliveryItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryItem deliveryItem = DeliveryItem.builder()
+ *             .id("{id}")
+ *             .quantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryItemBuilder implements Builder<DeliveryItem> {
@@ -24,10 +26,18 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     private Integer quantity;
 
+    /**
+     <>
+     */
+
     public DeliveryItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;

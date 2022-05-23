@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddInterfaceInteractionChange addInterfaceInteractionChange = AddInterfaceInteractionChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddInterfaceInteractionChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddInterfaceInteractionChange addInterfaceInteractionChange = AddInterfaceInteractionChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddInterfaceInteractionChangeImpl.class)
@@ -31,19 +34,22 @@ public interface AddInterfaceInteractionChange extends Change {
 
     String ADD_INTERFACE_INTERACTION_CHANGE = "AddInterfaceInteractionChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     <*  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     *  <p>Only available if <code>expand</code> is set to true</p>
+     <*  <p>Only available if <code>expand</code> is set to true</p>>
      */
     @NotNull
     @Valid

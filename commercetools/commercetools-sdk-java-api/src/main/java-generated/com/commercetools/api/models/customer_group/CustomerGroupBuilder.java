@@ -10,18 +10,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerGroup customerGroup = CustomerGroup.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * CustomerGroupBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroup customerGroup = CustomerGroup.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupBuilder implements Builder<CustomerGroup> {
@@ -49,7 +51,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>Platform-generated unique identifier of the CustomerGroup.</p>
+     <*  <p>Platform-generated unique identifier of the CustomerGroup.</p>>
      */
 
     public CustomerGroupBuilder id(final String id) {
@@ -58,7 +60,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Current version of the CustomerGroup.</p>
+     <*  <p>Current version of the CustomerGroup.</p>>
      */
 
     public CustomerGroupBuilder version(final Long version) {
@@ -67,7 +69,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
+     <*  <p>Date and time (UTC) the CustomerGroup was initially created.</p>>
      */
 
     public CustomerGroupBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -76,7 +78,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
+     <*  <p>Date and time (UTC) the CustomerGroup was last updated.</p>>
      */
 
     public CustomerGroupBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -85,7 +87,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerGroupBuilder lastModifiedBy(
@@ -95,7 +97,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerGroupBuilder lastModifiedBy(
@@ -105,7 +107,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerGroupBuilder createdBy(
@@ -115,7 +117,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerGroupBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -124,7 +126,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     <*  <p>User-defined unique identifier for the CustomerGroup.</p>>
      */
 
     public CustomerGroupBuilder key(@Nullable final String key) {
@@ -133,7 +135,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Unique name of the CustomerGroup.</p>
+     <*  <p>Unique name of the CustomerGroup.</p>>
      */
 
     public CustomerGroupBuilder name(final String name) {
@@ -142,7 +144,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     <*  <p>Custom Fields for the CustomerGroup.</p>>
      */
 
     public CustomerGroupBuilder custom(
@@ -152,7 +154,7 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     }
 
     /**
-     *  <p>Custom Fields for the CustomerGroup.</p>
+     <*  <p>Custom Fields for the CustomerGroup.</p>>
      */
 
     public CustomerGroupBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

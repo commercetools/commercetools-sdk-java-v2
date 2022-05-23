@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
-           .addressKey("{addressKey}")
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * ItemShippingTargetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
+ *             .addressKey("{addressKey}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
@@ -25,7 +27,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     private Double quantity;
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     <*  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>>
      */
 
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
@@ -34,7 +36,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     <*  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>>
      */
 
     public ItemShippingTargetBuilder quantity(final Double quantity) {

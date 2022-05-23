@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountChangeSortOrderAction cartDiscountChangeSortOrderAction = CartDiscountChangeSortOrderAction.builder()
-           .sortOrder("{sortOrder}")
-           .build()
- </code></pre>
- </div>
+ * CartDiscountChangeSortOrderAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeSortOrderAction cartDiscountChangeSortOrderAction = CartDiscountChangeSortOrderAction.builder()
+ *             .sortOrder("{sortOrder}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeSortOrderActionImpl.class)
@@ -29,7 +32,7 @@ public interface CartDiscountChangeSortOrderAction extends CartDiscountUpdateAct
     String CHANGE_SORT_ORDER = "changeSortOrder";
 
     /**
-     *  <p>The string must contain a number between 0 and 1. A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
+     <*  <p>The string must contain a number between 0 and 1. A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>>
      */
     @NotNull
     @JsonProperty("sortOrder")

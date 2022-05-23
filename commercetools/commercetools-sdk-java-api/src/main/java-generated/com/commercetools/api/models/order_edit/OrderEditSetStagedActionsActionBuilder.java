@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderEditSetStagedActionsAction orderEditSetStagedActionsAction = OrderEditSetStagedActionsAction.builder()
-           .plusStagedActions(stagedActionsBuilder -> stagedActionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderEditSetStagedActionsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditSetStagedActionsAction orderEditSetStagedActionsAction = OrderEditSetStagedActionsAction.builder()
+ *             .plusStagedActions(stagedActionsBuilder -> stagedActionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEditSetStagedActionsAction> {
@@ -23,7 +25,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     <*  <p>The actions to edit the <code>resource</code>.</p>>
      */
 
     public OrderEditSetStagedActionsActionBuilder stagedActions(
@@ -33,7 +35,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     <*  <p>The actions to edit the <code>resource</code>.</p>>
      */
 
     public OrderEditSetStagedActionsActionBuilder stagedActions(
@@ -43,7 +45,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     <*  <p>The actions to edit the <code>resource</code>.</p>>
      */
 
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
@@ -56,7 +58,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     <*  <p>The actions to edit the <code>resource</code>.</p>>
      */
 
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
@@ -70,7 +72,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     <*  <p>The actions to edit the <code>resource</code>.</p>>
      */
 
     public OrderEditSetStagedActionsActionBuilder withStagedActions(

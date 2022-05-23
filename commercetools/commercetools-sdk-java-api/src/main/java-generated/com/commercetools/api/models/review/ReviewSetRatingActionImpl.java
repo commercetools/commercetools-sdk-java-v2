@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ReviewSetRatingAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetRatingActionImpl implements ReviewSetRatingAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ReviewSetRatingActionImpl implements ReviewSetRatingAction, ModelBa
         this.action = SET_RATING;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Number between -100 and 100 included. If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     <*  <p>Number between -100 and 100 included. If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
      */
+
     public Integer getRating() {
         return this.rating;
     }

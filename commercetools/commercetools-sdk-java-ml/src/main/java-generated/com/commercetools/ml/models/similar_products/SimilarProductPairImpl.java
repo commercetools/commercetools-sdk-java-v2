@@ -35,11 +35,16 @@ public class SimilarProductPairImpl implements SimilarProductPair, ModelBase {
     }
 
     /**
-     *  <p>The probability of product similarity.</p>
+     <*  <p>The probability of product similarity.</p>>
      */
+
     public Double getConfidence() {
         return this.confidence;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> getProducts() {
         return this.products;

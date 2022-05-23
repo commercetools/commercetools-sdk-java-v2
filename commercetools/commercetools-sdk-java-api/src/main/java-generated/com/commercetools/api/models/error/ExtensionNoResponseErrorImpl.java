@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ExtensionNoResponseError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, ModelBase {
 
@@ -43,21 +46,41 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
         this.code = EXTENSION_NO_RESPONSE;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
+    /**
+     <>
+     */
+
     public String getExtensionId() {
         return this.extensionId;
     }
+
+    /**
+     <>
+     */
 
     public String getExtensionKey() {
         return this.extensionKey;

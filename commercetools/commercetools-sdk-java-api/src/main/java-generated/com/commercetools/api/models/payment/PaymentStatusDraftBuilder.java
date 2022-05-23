@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentStatusDraft paymentStatusDraft = PaymentStatusDraft.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentStatusDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentStatusDraft paymentStatusDraft = PaymentStatusDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
@@ -30,10 +32,18 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     @Nullable
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
+    /**
+     <>
+     */
+
     public PaymentStatusDraftBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;
@@ -41,7 +51,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
 
     public PaymentStatusDraftBuilder state(
@@ -51,7 +61,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
 
     public PaymentStatusDraftBuilder state(

@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetSupplyChannelsChange setSupplyChannelsChange = SetSupplyChannelsChange.builder()
-           .change("{change}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetSupplyChannelsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetSupplyChannelsChange setSupplyChannelsChange = SetSupplyChannelsChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannelsChange> {
@@ -29,7 +31,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setSupplyChannels</code></p>
+     <*  <p>Shape of the action for <code>setSupplyChannels</code></p>>
      */
 
     public SetSupplyChannelsChangeBuilder change(final String change) {
@@ -37,17 +39,29 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSupplyChannelsChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSupplyChannelsChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetSupplyChannelsChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -58,6 +72,10 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSupplyChannelsChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.previousValue == null) {
@@ -67,6 +85,10 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSupplyChannelsChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -74,17 +96,29 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSupplyChannelsChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSupplyChannelsChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Reference> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetSupplyChannelsChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
@@ -95,6 +129,10 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSupplyChannelsChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.nextValue == null) {
@@ -103,6 +141,10 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetSupplyChannelsChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {

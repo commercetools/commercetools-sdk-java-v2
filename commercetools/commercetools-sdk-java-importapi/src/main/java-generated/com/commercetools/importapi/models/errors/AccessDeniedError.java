@@ -11,16 +11,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>This is the generic error code for access denied. In case of a wrong scope, an InvalidScopeError will be returned.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AccessDeniedError accessDeniedError = AccessDeniedError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ *  <p>This is the generic error code for access denied. In case of a wrong scope, an InvalidScopeError will be returned.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AccessDeniedError accessDeniedError = AccessDeniedError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AccessDeniedErrorImpl.class)

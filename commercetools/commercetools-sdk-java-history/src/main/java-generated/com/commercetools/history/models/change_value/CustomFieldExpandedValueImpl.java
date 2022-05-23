@@ -39,15 +39,24 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
     }
 
     /**
-     *  <p>Name of a custom field.</p>
+     <*  <p>Name of a custom field.</p>>
      */
+
     public String getName() {
         return this.name;
     }
 
+    /**
+     <>
+     */
+
     public java.lang.Object getValue() {
         return this.value;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;

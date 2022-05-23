@@ -17,19 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Retrieves the active cart of the customer that has been modified most recently. It does not consider carts with CartOrigin Merchant. If no active cart exists, a 404 Not Found error is returned.</p>
- <p>The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .carts()
-           .withCustomerId("{customerId}")
-           .get()
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Retrieves the active cart of the customer that has been modified most recently. It does not consider carts with CartOrigin Merchant. If no active cart exists, a 404 Not Found error is returned.</p>
+ *  <p>The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .carts()
+ *            .withCustomerId("{customerId}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCartsCustomerIdByCustomerIdGet

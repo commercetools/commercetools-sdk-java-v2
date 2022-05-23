@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetAttributeChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
         this.type = SET_ATTRIBUTE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setAttribute</code></p>
+     <*  <p>Update action for <code>setAttribute</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.change_value.AttributeValue getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.change_value.AttributeValue getNextValue() {
         return this.nextValue;

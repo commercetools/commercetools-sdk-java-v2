@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductDiscount
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountImpl implements ProductDiscount, ModelBase {
 
@@ -86,113 +89,129 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the ProductDiscount.</p>
+     <*  <p>Platform-generated unique identifier of the ProductDiscount.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Current version of the ProductDiscount.</p>
+     <*  <p>Current version of the ProductDiscount.</p>>
      */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-     *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
+     <*  <p>Date and time (UTC) the ProductDiscount was initially created.</p>>
      */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-     *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
+     <*  <p>Date and time (UTC) the ProductDiscount was last updated.</p>>
      */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-     *  <p>Name of the ProductDiscount.</p>
+     <*  <p>Name of the ProductDiscount.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-     *  <p>User-defined unique identifier of the ProductDiscount.</p>
+     <*  <p>User-defined unique identifier of the ProductDiscount.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>Description of the ProductDiscount.</p>
+     <*  <p>Description of the ProductDiscount.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-     *  <p>Type of Discount and its corresponding value.</p>
+     <*  <p>Type of Discount and its corresponding value.</p>>
      */
+
     public com.commercetools.api.models.product_discount.ProductDiscountValue getValue() {
         return this.value;
     }
 
     /**
-     *  <p>Valid ProductDiscount predicate.</p>
+     <*  <p>Valid ProductDiscount predicate.</p>>
      */
+
     public String getPredicate() {
         return this.predicate;
     }
 
     /**
-     *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
+     <*  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>>
      */
+
     public String getSortOrder() {
         return this.sortOrder;
     }
 
     /**
-     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     <*  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>>
      */
+
     public Boolean getIsActive() {
         return this.isActive;
     }
 
     /**
-     *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+     <*  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
         return this.references;
     }
 
     /**
-     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     <*  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>>
      */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     <*  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>>
      */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }

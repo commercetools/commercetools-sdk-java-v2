@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeAmountPlannedChange changeAmountPlannedChange = ChangeAmountPlannedChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeAmountPlannedChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeAmountPlannedChange changeAmountPlannedChange = ChangeAmountPlannedChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPlannedChange> {
@@ -28,10 +30,18 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
 
     private com.commercetools.history.models.common.Money nextValue;
 
+    /**
+     <>
+     */
+
     public ChangeAmountPlannedChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAmountPlannedChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -39,17 +49,29 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAmountPlannedChangeBuilder previousValue(
             final com.commercetools.history.models.common.Money previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAmountPlannedChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAmountPlannedChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
         this.nextValue = nextValue;

@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddToCategoryChange addToCategoryChange = AddToCategoryChange.builder()
-           .change("{change}")
-           .category(categoryBuilder -> categoryBuilder)
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddToCategoryChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddToCategoryChange addToCategoryChange = AddToCategoryChange.builder()
+ *             .change("{change}")
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> {
@@ -32,7 +34,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     *  <p>Update action for <code>addToCategory</code></p>
+     <*  <p>Update action for <code>addToCategory</code></p>>
      */
 
     public AddToCategoryChangeBuilder change(final String change) {
@@ -40,16 +42,28 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddToCategoryChangeBuilder category(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.category = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddToCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
         this.category = category;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddToCategoryChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -57,11 +71,19 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddToCategoryChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddToCategoryChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -72,6 +94,10 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddToCategoryChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.previousValue == null) {
@@ -81,6 +107,10 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddToCategoryChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -88,16 +118,28 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddToCategoryChangeBuilder nextValue(final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddToCategoryChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Reference> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddToCategoryChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
@@ -108,6 +150,10 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddToCategoryChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.nextValue == null) {
@@ -116,6 +162,10 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddToCategoryChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {

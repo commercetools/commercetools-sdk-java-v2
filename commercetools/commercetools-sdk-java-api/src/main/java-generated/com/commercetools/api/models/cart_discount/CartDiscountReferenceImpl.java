@@ -40,22 +40,25 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>
+     <*  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     <*  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>>
      */
+
     public com.commercetools.api.models.cart_discount.CartDiscount getObj() {
         return this.obj;
     }

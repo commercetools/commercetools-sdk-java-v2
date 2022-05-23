@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListLineItemDraft shoppingListLineItemDraft = ShoppingListLineItemDraft.builder()
-           .build()
- </code></pre>
- </div>
+ * ShoppingListLineItemDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListLineItemDraft shoppingListLineItemDraft = ShoppingListLineItemDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLineItemDraft> {
@@ -39,13 +41,17 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     @Nullable
     private Long variantId;
 
+    /**
+     <>
+     */
+
     public ShoppingListLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public ShoppingListLineItemDraftBuilder custom(
@@ -55,7 +61,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public ShoppingListLineItemDraftBuilder custom(
@@ -64,20 +70,36 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShoppingListLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;

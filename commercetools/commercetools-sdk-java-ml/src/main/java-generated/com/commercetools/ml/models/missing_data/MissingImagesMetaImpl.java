@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MissingImagesMeta
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
 
@@ -36,17 +39,26 @@ public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
     public MissingImagesMetaImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.ml.models.missing_data.MissingImagesProductLevel getProductLevel() {
         return this.productLevel;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.ml.models.missing_data.MissingImagesVariantLevel getVariantLevel() {
         return this.variantLevel;
     }
 
     /**
-     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
+     <*  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>>
      */
+
     public Long getThreshold() {
         return this.threshold;
     }

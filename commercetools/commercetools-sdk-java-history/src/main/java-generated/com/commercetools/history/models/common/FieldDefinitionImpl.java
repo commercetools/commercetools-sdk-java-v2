@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * FieldDefinition
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
 
@@ -39,20 +42,33 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     public FieldDefinitionImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.FieldType getType() {
         return this.type;
     }
 
     /**
-     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     <*  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>>
      */
+
     public String getName() {
         return this.name;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.TextInputHint getInputHint() {
         return this.inputHint;

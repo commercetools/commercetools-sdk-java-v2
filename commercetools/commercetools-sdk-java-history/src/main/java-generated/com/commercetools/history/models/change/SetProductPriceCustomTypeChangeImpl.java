@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetProductPriceCustomTypeChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetProductPriceCustomTypeChangeImpl implements SetProductPriceCustomTypeChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class SetProductPriceCustomTypeChangeImpl implements SetProductPriceCusto
         this.type = SET_PRODUCT_PRICE_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setProductPriceCustomType</code></p>
+     <*  <p>Update action for <code>setProductPriceCustomType</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;

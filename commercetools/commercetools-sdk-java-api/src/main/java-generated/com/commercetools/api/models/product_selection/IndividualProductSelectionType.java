@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   IndividualProductSelectionType individualProductSelectionType = IndividualProductSelectionType.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * IndividualProductSelectionType
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     IndividualProductSelectionType individualProductSelectionType = IndividualProductSelectionType.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = IndividualProductSelectionTypeImpl.class)
@@ -31,7 +34,7 @@ public interface IndividualProductSelectionType extends ProductSelectionType {
     String INDIVIDUAL = "individual";
 
     /**
-     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     <*  <p>The name of the ProductSelection which is recommended to be unique.</p>>
      */
     @NotNull
     @Valid

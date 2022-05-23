@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ErrorObject errorObject = ErrorObject.accessDeniedBuilder()
-           message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ErrorObject
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorObject errorObject = ErrorObject.accessDeniedBuilder()
+ *             message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.AccessDeniedErrorImpl.class, name = AccessDeniedError.ACCESS_DENIED),
@@ -50,10 +53,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ErrorObject {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("code")
     public String getCode();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("message")
     public String getMessage();

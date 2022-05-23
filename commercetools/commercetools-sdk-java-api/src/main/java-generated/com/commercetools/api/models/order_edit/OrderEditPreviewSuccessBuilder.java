@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderEditPreviewSuccess orderEditPreviewSuccess = OrderEditPreviewSuccess.builder()
-           .preview(previewBuilder -> previewBuilder)
-           .plusMessagePayloads(messagePayloadsBuilder -> messagePayloadsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderEditPreviewSuccessBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditPreviewSuccess orderEditPreviewSuccess = OrderEditPreviewSuccess.builder()
+ *             .preview(previewBuilder -> previewBuilder)
+ *             .plusMessagePayloads(messagePayloadsBuilder -> messagePayloadsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewSuccess> {
@@ -25,16 +27,28 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
 
     private java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads;
 
+    /**
+     <>
+     */
+
     public OrderEditPreviewSuccessBuilder preview(
             Function<com.commercetools.api.models.order_edit.StagedOrderBuilder, com.commercetools.api.models.order_edit.StagedOrderBuilder> builder) {
         this.preview = builder.apply(com.commercetools.api.models.order_edit.StagedOrderBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderEditPreviewSuccessBuilder preview(final com.commercetools.api.models.order_edit.StagedOrder preview) {
         this.preview = preview;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditPreviewSuccessBuilder messagePayloads(
             final com.commercetools.api.models.message.MessagePayload... messagePayloads) {
@@ -42,11 +56,19 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderEditPreviewSuccessBuilder messagePayloads(
             final java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads) {
         this.messagePayloads = messagePayloads;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditPreviewSuccessBuilder plusMessagePayloads(
             final com.commercetools.api.models.message.MessagePayload... messagePayloads) {
@@ -57,6 +79,10 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderEditPreviewSuccessBuilder plusMessagePayloads(
             Function<com.commercetools.api.models.message.MessagePayloadBuilder, Builder<? extends com.commercetools.api.models.message.MessagePayload>> builder) {
         if (this.messagePayloads == null) {
@@ -66,6 +92,10 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
                 .add(builder.apply(com.commercetools.api.models.message.MessagePayloadBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditPreviewSuccessBuilder withMessagePayloads(
             Function<com.commercetools.api.models.message.MessagePayloadBuilder, Builder<? extends com.commercetools.api.models.message.MessagePayload>> builder) {

@@ -14,15 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeUpdate typeUpdate = TypeUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeUpdate
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeUpdate typeUpdate = TypeUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeUpdateImpl.class)
@@ -30,14 +33,14 @@ public interface TypeUpdate
         extends com.commercetools.api.models.ResourceUpdate<TypeUpdate, TypeUpdateAction, TypeUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     <*  <p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *  <p>Update actions to be performed on the Type.</p>
+     <*  <p>Update actions to be performed on the Type.</p>>
      */
     @NotNull
     @Valid

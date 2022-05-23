@@ -14,15 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MaxResourceLimitExceededError maxResourceLimitExceededError = MaxResourceLimitExceededError.builder()
-           .message("{message}")
-           .exceededResource(ReferenceTypeId.CART)
-           .build()
- </code></pre>
- </div>
+ * MaxResourceLimitExceededError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MaxResourceLimitExceededError maxResourceLimitExceededError = MaxResourceLimitExceededError.builder()
+ *             .message("{message}")
+ *             .exceededResource(ReferenceTypeId.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MaxResourceLimitExceededErrorImpl.class)
@@ -31,7 +34,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     String MAX_RESOURCE_LIMIT_EXCEEDED = "MaxResourceLimitExceeded";
 
     /**
-     *  <p>supported resource type identifiers:</p>
+     <*  <p>supported resource type identifiers:</p>>
      */
     @NotNull
     @JsonProperty("exceededResource")

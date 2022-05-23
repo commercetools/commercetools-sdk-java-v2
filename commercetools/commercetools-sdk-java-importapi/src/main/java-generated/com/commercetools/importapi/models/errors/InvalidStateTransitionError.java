@@ -14,16 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InvalidStateTransitionError invalidStateTransitionError = InvalidStateTransitionError.builder()
-           .message("{message}")
-           .currentState(ProcessingState.PROCESSING)
-           .newState(ProcessingState.PROCESSING)
-           .build()
- </code></pre>
- </div>
+ * InvalidStateTransitionError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidStateTransitionError invalidStateTransitionError = InvalidStateTransitionError.builder()
+ *             .message("{message}")
+ *             .currentState(ProcessingState.PROCESSING)
+ *             .newState(ProcessingState.PROCESSING)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidStateTransitionErrorImpl.class)
@@ -32,14 +35,14 @@ public interface InvalidStateTransitionError extends ErrorObject {
     String INVALID_TRANSITION = "InvalidTransition";
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
      */
     @NotNull
     @JsonProperty("currentState")
     public ProcessingState getCurrentState();
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
      */
     @NotNull
     @JsonProperty("newState")

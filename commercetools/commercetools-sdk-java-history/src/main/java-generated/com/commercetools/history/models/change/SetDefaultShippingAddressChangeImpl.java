@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetDefaultShippingAddressChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDefaultShippingAddressChangeImpl implements SetDefaultShippingAddressChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetDefaultShippingAddressChangeImpl implements SetDefaultShippingAd
         this.type = SET_DEFAULT_SHIPPING_ADDRESS_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setDefaultShippingAddress</code> action.</p>
+     <*  <p>Update action for <code>setDefaultShippingAddress</code> action.</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Address getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {
         return this.previousValue;

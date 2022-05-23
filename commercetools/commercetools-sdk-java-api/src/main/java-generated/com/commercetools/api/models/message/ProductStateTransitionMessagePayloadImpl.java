@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductStateTransitionMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductStateTransitionMessagePayloadImpl implements ProductStateTransitionMessagePayload, ModelBase {
 
@@ -36,16 +39,25 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
         this.type = PRODUCT_STATE_TRANSITION;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
+
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getForce() {
         return this.force;

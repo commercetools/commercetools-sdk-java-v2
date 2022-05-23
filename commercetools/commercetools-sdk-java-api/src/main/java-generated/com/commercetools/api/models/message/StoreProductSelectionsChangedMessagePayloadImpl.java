@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StoreProductSelectionsChangedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreProductSelectionsChangedMessagePayloadImpl
         implements StoreProductSelectionsChangedMessagePayload, ModelBase {
@@ -41,17 +44,33 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
         this.type = STORE_PRODUCT_SELECTIONS_CHANGED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getAddedProductSelections() {
         return this.addedProductSelections;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getRemovedProductSelections() {
         return this.removedProductSelections;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getUpdatedProductSelections() {
         return this.updatedProductSelections;

@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddOrderLineItemChange addOrderLineItemChange = AddOrderLineItemChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddOrderLineItemChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddOrderLineItemChange addOrderLineItemChange = AddOrderLineItemChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemChange> {
@@ -28,10 +30,18 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
 
     private com.commercetools.history.models.common.LineItem nextValue;
 
+    /**
+     <>
+     */
+
     public AddOrderLineItemChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddOrderLineItemChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
@@ -39,17 +49,29 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddOrderLineItemChangeBuilder previousValue(
             final com.commercetools.history.models.common.LineItem previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddOrderLineItemChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddOrderLineItemChangeBuilder nextValue(final com.commercetools.history.models.common.LineItem nextValue) {
         this.nextValue = nextValue;

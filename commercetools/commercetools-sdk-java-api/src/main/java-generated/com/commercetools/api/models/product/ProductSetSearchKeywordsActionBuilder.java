@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetSearchKeywordsAction productSetSearchKeywordsAction = ProductSetSearchKeywordsAction.builder()
-           .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSetSearchKeywordsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetSearchKeywordsAction productSetSearchKeywordsAction = ProductSetSearchKeywordsAction.builder()
+ *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSetSearchKeywordsAction> {
@@ -27,17 +29,29 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
     @Nullable
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
             Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
         this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
             final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetSearchKeywordsActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

@@ -31,8 +31,9 @@ public class CustomFieldImpl implements CustomField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }

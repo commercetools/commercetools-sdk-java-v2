@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ExternalTaxRateDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase {
 
@@ -45,41 +48,50 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     public ExternalTaxRateDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
+     <*  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>>
      */
+
     public Double getAmount() {
         return this.amount;
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-     *  <p>The state in the country</p>
+     <*  <p>The state in the country</p>>
      */
+
     public String getState() {
         return this.state;
     }
 
     /**
-     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
+     <*  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>>
      */
+
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;
     }
 
     /**
-     *  <p>The default value for <code>includedInPrice</code> is FALSE.</p>
+     <*  <p>The default value for <code>includedInPrice</code> is FALSE.</p>>
      */
+
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }

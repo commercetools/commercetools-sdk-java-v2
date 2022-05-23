@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryCreatedMessagePayload categoryCreatedMessagePayload = CategoryCreatedMessagePayload.builder()
-           .category(categoryBuilder -> categoryBuilder)
-           .build()
- </code></pre>
- </div>
+ * CategoryCreatedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryCreatedMessagePayload categoryCreatedMessagePayload = CategoryCreatedMessagePayload.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryCreatedMessagePayloadImpl.class)
@@ -30,6 +33,9 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
 
     String CATEGORY_CREATED = "CategoryCreated";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("category")

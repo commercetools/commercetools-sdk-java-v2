@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ErrorResponse errorResponse = ErrorResponse.builder()
-           .statusCode(1)
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ErrorResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorResponse errorResponse = ErrorResponse.builder()
+ *             .statusCode(1)
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorResponseBuilder implements Builder<ErrorResponse> {
@@ -37,7 +39,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
     /**
-     *  <p>The http status code of the response.</p>
+     <*  <p>The http status code of the response.</p>>
      */
 
     public ErrorResponseBuilder statusCode(final Integer statusCode) {
@@ -46,7 +48,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>Describes the error.</p>
+     <*  <p>Describes the error.</p>>
      */
 
     public ErrorResponseBuilder message(final String message) {
@@ -55,7 +57,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
+     <*  <p>This property is only used for OAuth2 errors. Contains the error code.</p>>
      */
 
     public ErrorResponseBuilder error(@Nullable final String error) {
@@ -64,7 +66,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
+     <*  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>>
      */
 
     public ErrorResponseBuilder error_description(@Nullable final String error_description) {
@@ -73,7 +75,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>The errors that caused this error response.</p>
+     <*  <p>The errors that caused this error response.</p>>
      */
 
     public ErrorResponseBuilder errors(
@@ -83,7 +85,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>The errors that caused this error response.</p>
+     <*  <p>The errors that caused this error response.</p>>
      */
 
     public ErrorResponseBuilder errors(
@@ -93,7 +95,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>The errors that caused this error response.</p>
+     <*  <p>The errors that caused this error response.</p>>
      */
 
     public ErrorResponseBuilder plusErrors(
@@ -106,7 +108,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>The errors that caused this error response.</p>
+     <*  <p>The errors that caused this error response.</p>>
      */
 
     public ErrorResponseBuilder plusErrors(
@@ -119,7 +121,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>The errors that caused this error response.</p>
+     <*  <p>The errors that caused this error response.</p>>
      */
 
     public ErrorResponseBuilder withErrors(

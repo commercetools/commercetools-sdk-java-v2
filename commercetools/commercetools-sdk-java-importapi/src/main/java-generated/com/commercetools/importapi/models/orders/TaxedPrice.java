@@ -15,23 +15,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxedPrice taxedPrice = TaxedPrice.builder()
-           .totalNet(totalNetBuilder -> totalNetBuilder)
-           .totalGross(totalGrossBuilder -> totalGrossBuilder)
-           .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TaxedPrice
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedPrice taxedPrice = TaxedPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxedPriceImpl.class)
 public interface TaxedPrice {
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>>
      */
     @NotNull
     @Valid
@@ -39,7 +42,7 @@ public interface TaxedPrice {
     public Money getTotalNet();
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>>
      */
     @NotNull
     @Valid
@@ -47,7 +50,7 @@ public interface TaxedPrice {
     public Money getTotalGross();
 
     /**
-     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
      */
     @NotNull
     @Valid
@@ -55,7 +58,7 @@ public interface TaxedPrice {
     public List<TaxPortion> getTaxPortions();
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>>
      */
     @Valid
     @JsonProperty("totalTax")

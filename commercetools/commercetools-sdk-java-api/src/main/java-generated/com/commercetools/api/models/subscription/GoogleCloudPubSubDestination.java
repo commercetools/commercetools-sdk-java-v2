@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   GoogleCloudPubSubDestination googleCloudPubSubDestination = GoogleCloudPubSubDestination.builder()
-           .projectId("{projectId}")
-           .topic("{topic}")
-           .build()
- </code></pre>
- </div>
+ * GoogleCloudPubSubDestination
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GoogleCloudPubSubDestination googleCloudPubSubDestination = GoogleCloudPubSubDestination.builder()
+ *             .projectId("{projectId}")
+ *             .topic("{topic}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GoogleCloudPubSubDestinationImpl.class)
@@ -29,10 +32,16 @@ public interface GoogleCloudPubSubDestination extends Destination {
 
     String GOOGLE_CLOUD_PUB_SUB = "GoogleCloudPubSub";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("projectId")
     public String getProjectId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("topic")
     public String getTopic();

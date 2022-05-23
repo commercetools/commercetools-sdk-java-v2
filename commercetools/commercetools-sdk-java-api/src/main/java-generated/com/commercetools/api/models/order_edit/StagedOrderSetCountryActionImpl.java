@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderSetCountryAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAct
         this.action = SET_COUNTRY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getCountry() {
         return this.country;

@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountKeyReference cartDiscountKeyReference = CartDiscountKeyReference.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * CartDiscountKeyReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountKeyReference cartDiscountKeyReference = CartDiscountKeyReference.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyReference> {
 
     private String key;
+
+    /**
+     <>
+     */
 
     public CartDiscountKeyReferenceBuilder key(final String key) {
         this.key = key;

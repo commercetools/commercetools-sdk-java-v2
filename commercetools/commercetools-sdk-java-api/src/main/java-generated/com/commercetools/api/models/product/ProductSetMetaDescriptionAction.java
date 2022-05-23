@@ -14,13 +14,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetMetaDescriptionAction productSetMetaDescriptionAction = ProductSetMetaDescriptionAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetMetaDescriptionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetMetaDescriptionAction productSetMetaDescriptionAction = ProductSetMetaDescriptionAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetMetaDescriptionActionImpl.class)
@@ -28,9 +31,16 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
 
     String SET_META_DESCRIPTION = "setMetaDescription";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

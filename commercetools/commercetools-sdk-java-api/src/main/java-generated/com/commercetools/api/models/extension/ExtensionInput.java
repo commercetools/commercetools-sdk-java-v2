@@ -15,29 +15,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionInput extensionInput = ExtensionInput.builder()
-           .action(ExtensionAction.CREATE)
-           .resource(resourceBuilder -> resourceBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExtensionInput
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionInput extensionInput = ExtensionInput.builder()
+ *             .action(ExtensionAction.CREATE)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionInputImpl.class)
 public interface ExtensionInput {
 
     /**
-     *  <p><code>Create</code> or <code>Update</code> request.</p>
+     <*  <p><code>Create</code> or <code>Update</code> request.</p>>
      */
     @NotNull
     @JsonProperty("action")
     public ExtensionAction getAction();
 
     /**
-     *  <p>Expanded reference to the resource that triggered the Extension.</p>
+     <*  <p>Expanded reference to the resource that triggered the Extension.</p>>
      */
     @NotNull
     @Valid

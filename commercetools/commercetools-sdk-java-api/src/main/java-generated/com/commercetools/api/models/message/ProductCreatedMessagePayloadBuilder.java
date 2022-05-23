@@ -8,19 +8,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductCreatedMessagePayload productCreatedMessagePayload = ProductCreatedMessagePayload.builder()
-           .productProjection(productProjectionBuilder -> productProjectionBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductCreatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductCreatedMessagePayload productCreatedMessagePayload = ProductCreatedMessagePayload.builder()
+ *             .productProjection(productProjectionBuilder -> productProjectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreatedMessagePayload> {
 
     private com.commercetools.api.models.product.ProductProjection productProjection;
+
+    /**
+     <>
+     */
 
     public ProductCreatedMessagePayloadBuilder productProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
@@ -28,6 +34,10 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductCreatedMessagePayloadBuilder productProjection(
             final com.commercetools.api.models.product.ProductProjection productProjection) {

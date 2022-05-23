@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategorySetAssetTagsAction categorySetAssetTagsAction = CategorySetAssetTagsAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CategorySetAssetTagsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetAssetTagsAction categorySetAssetTagsAction = CategorySetAssetTagsAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAssetTagsAction> {
@@ -29,25 +31,45 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
     @Nullable
     private java.util.List<String> tags;
 
+    /**
+     <>
+     */
+
     public CategorySetAssetTagsActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategorySetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategorySetAssetTagsActionBuilder tags(@Nullable final String... tags) {
         this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategorySetAssetTagsActionBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategorySetAssetTagsActionBuilder plusTags(@Nullable final String... tags) {
         if (this.tags == null) {

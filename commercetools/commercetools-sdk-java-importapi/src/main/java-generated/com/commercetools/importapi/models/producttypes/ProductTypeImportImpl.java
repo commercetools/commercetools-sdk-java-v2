@@ -41,27 +41,34 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     public ProductTypeImportImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>Maps to <code>ProductType.name</code>.</p>
+     <*  <p>Maps to <code>ProductType.name</code>.</p>>
      */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>Maps to <code>ProductType.description</code>.</p>
+     <*  <p>Maps to <code>ProductType.description</code>.</p>>
      */
+
     public String getDescription() {
         return this.description;
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     <*  <p>The <code>attributes</code> of ProductType.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {
         return this.attributes;
     }

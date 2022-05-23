@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerSetTitleAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetTitleActionImpl implements CustomerSetTitleAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class CustomerSetTitleActionImpl implements CustomerSetTitleAction, Model
         this.action = SET_TITLE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getTitle() {
         return this.title;

@@ -10,25 +10,27 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderLineItemRemovedMessage orderLineItemRemovedMessage = OrderLineItemRemovedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .lineItemId("{lineItemId}")
-           .removedQuantity(0.3)
-           .newQuantity(0.3)
-           .plusNewState(newStateBuilder -> newStateBuilder)
-           .newTotalPrice(newTotalPriceBuilder -> newTotalPriceBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderLineItemRemovedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemRemovedMessage orderLineItemRemovedMessage = OrderLineItemRemovedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .lineItemId("{lineItemId}")
+ *             .removedQuantity(0.3)
+ *             .newQuantity(0.3)
+ *             .plusNewState(newStateBuilder -> newStateBuilder)
+ *             .newTotalPrice(newTotalPriceBuilder -> newTotalPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItemRemovedMessage> {
@@ -76,7 +78,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     private com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder id(final String id) {
@@ -84,15 +86,27 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemRemovedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -100,7 +114,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder lastModifiedBy(
@@ -110,7 +124,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder lastModifiedBy(
@@ -120,7 +134,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder createdBy(
@@ -130,7 +144,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder createdBy(
@@ -139,13 +153,17 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +172,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder resource(
@@ -163,10 +181,18 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemRemovedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -176,37 +202,65 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemRemovedMessageBuilder removedQuantity(final Long removedQuantity) {
         this.removedQuantity = removedQuantity;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder newQuantity(final Long newQuantity) {
         this.newQuantity = newQuantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemRemovedMessageBuilder newState(final com.commercetools.api.models.order.ItemState... newState) {
         this.newState = new ArrayList<>(Arrays.asList(newState));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder newState(
             final java.util.List<com.commercetools.api.models.order.ItemState> newState) {
         this.newState = newState;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemRemovedMessageBuilder plusNewState(
             final com.commercetools.api.models.order.ItemState... newState) {
@@ -217,6 +271,10 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder plusNewState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         if (this.newState == null) {
@@ -226,6 +284,10 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder withNewState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         this.newState = new ArrayList<>();
@@ -234,7 +296,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder newTotalPrice(
@@ -244,7 +306,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
      */
 
     public OrderLineItemRemovedMessageBuilder newTotalPrice(
@@ -253,11 +315,19 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder newTaxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.newTaxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemRemovedMessageBuilder newTaxedPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedItemPrice newTaxedPrice) {
@@ -265,11 +335,19 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder newPrice(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.newPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemRemovedMessageBuilder newPrice(
             @Nullable final com.commercetools.api.models.common.Price newPrice) {
@@ -277,12 +355,20 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemRemovedMessageBuilder newShippingDetail(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsBuilder, com.commercetools.api.models.cart.ItemShippingDetailsBuilder> builder) {
         this.newShippingDetail = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemRemovedMessageBuilder newShippingDetail(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail) {

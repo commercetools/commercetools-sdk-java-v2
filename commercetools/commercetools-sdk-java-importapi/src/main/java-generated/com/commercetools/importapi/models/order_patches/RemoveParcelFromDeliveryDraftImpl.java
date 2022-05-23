@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemoveParcelFromDeliveryDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveParcelFromDeliveryDraftImpl implements RemoveParcelFromDeliveryDraft, ModelBase {
 
@@ -26,6 +29,10 @@ public class RemoveParcelFromDeliveryDraftImpl implements RemoveParcelFromDelive
 
     public RemoveParcelFromDeliveryDraftImpl() {
     }
+
+    /**
+     <>
+     */
 
     public String getParcelId() {
         return this.parcelId;

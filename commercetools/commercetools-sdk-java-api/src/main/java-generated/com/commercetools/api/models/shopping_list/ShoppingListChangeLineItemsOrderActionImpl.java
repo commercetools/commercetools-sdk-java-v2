@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShoppingListChangeLineItemsOrderAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListChangeLineItemsOrderAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
         this.action = CHANGE_LINE_ITEMS_ORDER;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getLineItemOrder() {
         return this.lineItemOrder;

@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetDateOfBirthAction customerSetDateOfBirthAction = CustomerSetDateOfBirthAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetDateOfBirthActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetDateOfBirthAction customerSetDateOfBirthAction = CustomerSetDateOfBirthAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetDateOfBirthActionBuilder implements Builder<CustomerSetDateOfBirthAction> {
@@ -24,7 +26,7 @@ public class CustomerSetDateOfBirthActionBuilder implements Builder<CustomerSetD
     private java.time.LocalDate dateOfBirth;
 
     /**
-     *  <p>If not defined, the date of birth is unset.</p>
+     <*  <p>If not defined, the date of birth is unset.</p>>
      */
 
     public CustomerSetDateOfBirthActionBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {

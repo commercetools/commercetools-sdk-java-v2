@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionNoResponseError extensionNoResponseError = ExtensionNoResponseError.builder()
-           .message("{message}")
-           .extensionId("{extensionId}")
-           .build()
- </code></pre>
- </div>
+ * ExtensionNoResponseError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionNoResponseError extensionNoResponseError = ExtensionNoResponseError.builder()
+ *             .message("{message}")
+ *             .extensionId("{extensionId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionNoResponseErrorImpl.class)
@@ -29,9 +32,16 @@ public interface ExtensionNoResponseError extends ErrorObject {
 
     String EXTENSION_NO_RESPONSE = "ExtensionNoResponse";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("extensionId")
     public String getExtensionId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("extensionKey")
     public String getExtensionKey();

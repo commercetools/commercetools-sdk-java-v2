@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Reservation reservation = Reservation.builder()
-           .quantity(1)
-           .owner(ownerBuilder -> ownerBuilder)
-           .createdAt("{createdAt}")
-           .checkoutStartedAt("{checkoutStartedAt}")
-           .build()
- </code></pre>
- </div>
+ * ReservationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Reservation reservation = Reservation.builder()
+ *             .quantity(1)
+ *             .owner(ownerBuilder -> ownerBuilder)
+ *             .createdAt("{createdAt}")
+ *             .checkoutStartedAt("{checkoutStartedAt}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReservationBuilder implements Builder<Reservation> {
@@ -31,10 +33,18 @@ public class ReservationBuilder implements Builder<Reservation> {
 
     private String checkoutStartedAt;
 
+    /**
+     <>
+     */
+
     public ReservationBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReservationBuilder owner(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -42,15 +52,27 @@ public class ReservationBuilder implements Builder<Reservation> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReservationBuilder owner(final com.commercetools.history.models.common.Reference owner) {
         this.owner = owner;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReservationBuilder createdAt(final String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReservationBuilder checkoutStartedAt(final String checkoutStartedAt) {
         this.checkoutStartedAt = checkoutStartedAt;

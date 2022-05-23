@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AttributeDateTimeType
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDateTimeTypeImpl implements AttributeDateTimeType, ModelBase {
 
@@ -22,6 +25,10 @@ public class AttributeDateTimeTypeImpl implements AttributeDateTimeType, ModelBa
     AttributeDateTimeTypeImpl() {
         this.name = DATETIME;
     }
+
+    /**
+     <>
+     */
 
     public String getName() {
         return this.name;

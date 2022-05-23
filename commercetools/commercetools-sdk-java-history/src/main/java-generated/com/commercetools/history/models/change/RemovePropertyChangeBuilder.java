@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemovePropertyChange removePropertyChange = RemovePropertyChange.builder()
-           .change("{change}")
-           .path("{path}")
-           .build()
- </code></pre>
- </div>
+ * RemovePropertyChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemovePropertyChange removePropertyChange = RemovePropertyChange.builder()
+ *             .change("{change}")
+ *             .path("{path}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange> {
@@ -27,7 +29,7 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     private java.lang.Object previousValue;
 
     /**
-     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     <*  <p>Update action for <code>removeProperty</code> on custom objects</p>>
      */
 
     public RemovePropertyChangeBuilder change(final String change) {
@@ -36,13 +38,17 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     }
 
     /**
-     *  <p>Value path to the property that was removed</p>
+     <*  <p>Value path to the property that was removed</p>>
      */
 
     public RemovePropertyChangeBuilder path(final String path) {
         this.path = path;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemovePropertyChangeBuilder previousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;

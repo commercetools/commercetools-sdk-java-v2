@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderChangeOrderStateAction stagedOrderChangeOrderStateAction = StagedOrderChangeOrderStateAction.builder()
-           .orderState(OrderState.OPEN)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderChangeOrderStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderChangeOrderStateAction stagedOrderChangeOrderStateAction = StagedOrderChangeOrderStateAction.builder()
+ *             .orderState(OrderState.OPEN)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeOrderStateActionBuilder implements Builder<StagedOrderChangeOrderStateAction> {
 
     private com.commercetools.api.models.order.OrderState orderState;
+
+    /**
+     <>
+     */
 
     public StagedOrderChangeOrderStateActionBuilder orderState(
             final com.commercetools.api.models.order.OrderState orderState) {

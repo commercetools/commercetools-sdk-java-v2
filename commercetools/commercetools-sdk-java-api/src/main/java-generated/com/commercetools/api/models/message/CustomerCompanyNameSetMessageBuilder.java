@@ -10,20 +10,22 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerCompanyNameSetMessage customerCompanyNameSetMessage = CustomerCompanyNameSetMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .build()
- </code></pre>
- </div>
+ * CustomerCompanyNameSetMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerCompanyNameSetMessage customerCompanyNameSetMessage = CustomerCompanyNameSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCompanyNameSetMessage> {
@@ -55,7 +57,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
     private String companyName;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public CustomerCompanyNameSetMessageBuilder id(final String id) {
@@ -63,15 +65,27 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerCompanyNameSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerCompanyNameSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerCompanyNameSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -79,7 +93,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerCompanyNameSetMessageBuilder lastModifiedBy(
@@ -89,7 +103,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerCompanyNameSetMessageBuilder lastModifiedBy(
@@ -99,7 +113,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerCompanyNameSetMessageBuilder createdBy(
@@ -109,7 +123,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerCompanyNameSetMessageBuilder createdBy(
@@ -118,13 +132,17 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerCompanyNameSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public CustomerCompanyNameSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -133,7 +151,7 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public CustomerCompanyNameSetMessageBuilder resource(
@@ -142,10 +160,18 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerCompanyNameSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerCompanyNameSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -155,11 +181,19 @@ public class CustomerCompanyNameSetMessageBuilder implements Builder<CustomerCom
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerCompanyNameSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerCompanyNameSetMessageBuilder companyName(@Nullable final String companyName) {
         this.companyName = companyName;

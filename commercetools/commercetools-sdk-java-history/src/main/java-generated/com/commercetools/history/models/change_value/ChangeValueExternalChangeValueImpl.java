@@ -26,6 +26,10 @@ public class ChangeValueExternalChangeValueImpl implements ChangeValueExternalCh
         this.type = EXTERNAL;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }

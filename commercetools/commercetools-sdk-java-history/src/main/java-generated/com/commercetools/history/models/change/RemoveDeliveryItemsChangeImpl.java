@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemoveDeliveryItemsChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange, ModelBase {
 
@@ -35,16 +38,25 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         this.type = REMOVE_DELIVERY_ITEMS_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>removeDelivery</code></p>
+     <*  <p>Update action for <code>removeDelivery</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Delivery getPreviousValue() {
         return this.previousValue;

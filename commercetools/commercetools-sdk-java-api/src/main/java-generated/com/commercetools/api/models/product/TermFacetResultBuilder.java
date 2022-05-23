@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TermFacetResult termFacetResult = TermFacetResult.builder()
-           .dataType(TermFacetResultType.TEXT)
-           .missing(0.3)
-           .total(0.3)
-           .other(0.3)
-           .plusTerms(termsBuilder -> termsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TermFacetResultBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TermFacetResult termFacetResult = TermFacetResult.builder()
+ *             .dataType(TermFacetResultType.TEXT)
+ *             .missing(0.3)
+ *             .total(0.3)
+ *             .other(0.3)
+ *             .plusTerms(termsBuilder -> termsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TermFacetResultBuilder implements Builder<TermFacetResult> {
@@ -34,35 +36,63 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
 
     private java.util.List<com.commercetools.api.models.product.FacetTerm> terms;
 
+    /**
+     <>
+     */
+
     public TermFacetResultBuilder dataType(final com.commercetools.api.models.product.TermFacetResultType dataType) {
         this.dataType = dataType;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TermFacetResultBuilder missing(final Long missing) {
         this.missing = missing;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TermFacetResultBuilder total(final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TermFacetResultBuilder other(final Long other) {
         this.other = other;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TermFacetResultBuilder terms(final com.commercetools.api.models.product.FacetTerm... terms) {
         this.terms = new ArrayList<>(Arrays.asList(terms));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TermFacetResultBuilder terms(final java.util.List<com.commercetools.api.models.product.FacetTerm> terms) {
         this.terms = terms;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TermFacetResultBuilder plusTerms(final com.commercetools.api.models.product.FacetTerm... terms) {
         if (this.terms == null) {
@@ -72,6 +102,10 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TermFacetResultBuilder plusTerms(
             Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTermBuilder> builder) {
         if (this.terms == null) {
@@ -80,6 +114,10 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
         this.terms.add(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TermFacetResultBuilder withTerms(
             Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTermBuilder> builder) {

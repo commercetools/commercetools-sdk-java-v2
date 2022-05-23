@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomShippingMethodChangeValue customShippingMethodChangeValue = CustomShippingMethodChangeValue.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * CustomShippingMethodChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomShippingMethodChangeValue customShippingMethodChangeValue = CustomShippingMethodChangeValue.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShippingMethodChangeValue> {
 
     private String name;
+
+    /**
+     <>
+     */
 
     public CustomShippingMethodChangeValueBuilder name(final String name) {
         this.name = name;

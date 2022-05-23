@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountPagedQueryResponse cartDiscountPagedQueryResponse = CartDiscountPagedQueryResponse.builder()
-           .limit(0.3)
-           .count(0.3)
-           .offset(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountPagedQueryResponse cartDiscountPagedQueryResponse = CartDiscountPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .count(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscountPagedQueryResponse> {
@@ -37,7 +39,7 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public CartDiscountPagedQueryResponseBuilder limit(final Long limit) {
@@ -45,10 +47,18 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartDiscountPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -56,7 +66,7 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public CartDiscountPagedQueryResponseBuilder offset(final Long offset) {
@@ -64,17 +74,29 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartDiscountPagedQueryResponseBuilder results(
             final com.commercetools.api.models.cart_discount.CartDiscount... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartDiscountPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.cart_discount.CartDiscount... results) {
@@ -85,6 +107,10 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartDiscountPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscountBuilder> builder) {
         if (this.results == null) {
@@ -93,6 +119,10 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         this.results.add(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscountBuilder> builder) {

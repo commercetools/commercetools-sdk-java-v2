@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetSalutationChange setSalutationChange = SetSalutationChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetSalutationChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetSalutationChange setSalutationChange = SetSalutationChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> {
@@ -28,7 +30,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setSalutation</code></p>
+     <*  <p>Shape of the action for <code>setSalutation</code></p>>
      */
 
     public SetSalutationChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSalutationChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetSalutationChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

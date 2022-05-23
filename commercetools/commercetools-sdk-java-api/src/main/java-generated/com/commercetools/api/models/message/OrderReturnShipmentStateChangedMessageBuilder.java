@@ -10,22 +10,24 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderReturnShipmentStateChangedMessage orderReturnShipmentStateChangedMessage = OrderReturnShipmentStateChangedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .returnItemId("{returnItemId}")
-           .returnShipmentState(ReturnShipmentState.ADVISED)
-           .build()
- </code></pre>
- </div>
+ * OrderReturnShipmentStateChangedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderReturnShipmentStateChangedMessage orderReturnShipmentStateChangedMessage = OrderReturnShipmentStateChangedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .returnItemId("{returnItemId}")
+ *             .returnShipmentState(ReturnShipmentState.ADVISED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<OrderReturnShipmentStateChangedMessage> {
@@ -58,7 +60,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     private com.commercetools.api.models.order.ReturnShipmentState returnShipmentState;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public OrderReturnShipmentStateChangedMessageBuilder id(final String id) {
@@ -66,15 +68,27 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderReturnShipmentStateChangedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderReturnShipmentStateChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderReturnShipmentStateChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -82,7 +96,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderReturnShipmentStateChangedMessageBuilder lastModifiedBy(
@@ -92,7 +106,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderReturnShipmentStateChangedMessageBuilder lastModifiedBy(
@@ -102,7 +116,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderReturnShipmentStateChangedMessageBuilder createdBy(
@@ -112,7 +126,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public OrderReturnShipmentStateChangedMessageBuilder createdBy(
@@ -121,13 +135,17 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderReturnShipmentStateChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public OrderReturnShipmentStateChangedMessageBuilder resource(
@@ -137,7 +155,7 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public OrderReturnShipmentStateChangedMessageBuilder resource(
@@ -146,10 +164,18 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderReturnShipmentStateChangedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderReturnShipmentStateChangedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -159,16 +185,28 @@ public class OrderReturnShipmentStateChangedMessageBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderReturnShipmentStateChangedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderReturnShipmentStateChangedMessageBuilder returnItemId(final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderReturnShipmentStateChangedMessageBuilder returnShipmentState(
             final com.commercetools.api.models.order.ReturnShipmentState returnShipmentState) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * Parcel
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelImpl implements Parcel, ModelBase {
 
@@ -42,21 +45,41 @@ public class ParcelImpl implements Parcel, ModelBase {
     public ParcelImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public String getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.TrackingData getTrackingData() {
         return this.trackingData;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
         return this.items;

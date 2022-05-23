@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemoveFieldDefinitionChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinitionChange, ModelBase {
 
@@ -35,16 +38,25 @@ public class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinitionCha
         this.type = REMOVE_FIELD_DEFINITION_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
+     <*  <p>Update action for <code>removeFieldDefinition</code> on payments</p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.FieldDefinition getPreviousValue() {
         return this.previousValue;

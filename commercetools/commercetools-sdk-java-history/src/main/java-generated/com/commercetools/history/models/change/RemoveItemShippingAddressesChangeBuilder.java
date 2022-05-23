@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveItemShippingAddressesChange removeItemShippingAddressesChange = RemoveItemShippingAddressesChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveItemShippingAddressesChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveItemShippingAddressesChange removeItemShippingAddressesChange = RemoveItemShippingAddressesChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveItemShippingAddressesChange> {
@@ -29,7 +31,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
     private com.commercetools.history.models.common.Address previousValue;
 
     /**
-     *  <p>Update action for <code>removeItemShippingAddress</code></p>
+     <*  <p>Update action for <code>removeItemShippingAddress</code></p>>
      */
 
     public RemoveItemShippingAddressesChangeBuilder change(final String change) {
@@ -37,11 +39,19 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveItemShippingAddressesChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveItemShippingAddressesChangeBuilder nextValue(
             final com.commercetools.history.models.common.Address nextValue) {
@@ -49,11 +59,19 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveItemShippingAddressesChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveItemShippingAddressesChangeBuilder previousValue(
             final com.commercetools.history.models.common.Address previousValue) {

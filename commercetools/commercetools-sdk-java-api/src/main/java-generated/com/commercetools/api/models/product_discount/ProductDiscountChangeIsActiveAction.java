@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountChangeIsActiveAction productDiscountChangeIsActiveAction = ProductDiscountChangeIsActiveAction.builder()
-           .isActive(true)
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountChangeIsActiveAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountChangeIsActiveAction productDiscountChangeIsActiveAction = ProductDiscountChangeIsActiveAction.builder()
+ *             .isActive(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountChangeIsActiveActionImpl.class)
@@ -29,7 +32,7 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
     String CHANGE_IS_ACTIVE = "changeIsActive";
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
+     <*  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>>
      */
     @NotNull
     @JsonProperty("isActive")

@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductImportRequest productImportRequest = ProductImportRequest.builder()
-           .plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductImportRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductImportRequest productImportRequest = ProductImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImportRequestBuilder implements Builder<ProductImportRequest> {
@@ -23,7 +25,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     private java.util.List<com.commercetools.importapi.models.products.ProductImport> resources;
 
     /**
-     *  <p>The product import resources of this request.</p>
+     <*  <p>The product import resources of this request.</p>>
      */
 
     public ProductImportRequestBuilder resources(
@@ -33,7 +35,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     }
 
     /**
-     *  <p>The product import resources of this request.</p>
+     <*  <p>The product import resources of this request.</p>>
      */
 
     public ProductImportRequestBuilder resources(
@@ -43,7 +45,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     }
 
     /**
-     *  <p>The product import resources of this request.</p>
+     <*  <p>The product import resources of this request.</p>>
      */
 
     public ProductImportRequestBuilder plusResources(
@@ -56,7 +58,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     }
 
     /**
-     *  <p>The product import resources of this request.</p>
+     <*  <p>The product import resources of this request.</p>>
      */
 
     public ProductImportRequestBuilder plusResources(
@@ -70,7 +72,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     }
 
     /**
-     *  <p>The product import resources of this request.</p>
+     <*  <p>The product import resources of this request.</p>>
      */
 
     public ProductImportRequestBuilder withResources(

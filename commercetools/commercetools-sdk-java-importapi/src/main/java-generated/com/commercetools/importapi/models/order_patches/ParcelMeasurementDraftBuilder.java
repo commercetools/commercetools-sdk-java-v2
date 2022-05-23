@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelMeasurementDraft parcelMeasurementDraft = ParcelMeasurementDraft.builder()
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * ParcelMeasurementDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelMeasurementDraft parcelMeasurementDraft = ParcelMeasurementDraft.builder()
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementDraft> {
@@ -27,10 +29,18 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     @Nullable
     private com.commercetools.importapi.models.orders.ParcelMeasurements measurements;
 
+    /**
+     <>
+     */
+
     public ParcelMeasurementDraftBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelMeasurementDraftBuilder measurements(
             Function<com.commercetools.importapi.models.orders.ParcelMeasurementsBuilder, com.commercetools.importapi.models.orders.ParcelMeasurementsBuilder> builder) {
@@ -38,6 +48,10 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelMeasurementDraftBuilder measurements(
             @Nullable final com.commercetools.importapi.models.orders.ParcelMeasurements measurements) {

@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFieldEnumType customFieldEnumType = CustomFieldEnumType.builder()
-           .plusValues(valuesBuilder -> valuesBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomFieldEnumTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldEnumType customFieldEnumType = CustomFieldEnumType.builder()
+ *             .plusValues(valuesBuilder -> valuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> {
@@ -23,7 +25,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     private java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values;
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldEnumTypeBuilder values(final com.commercetools.api.models.type.CustomFieldEnumValue... values) {
@@ -32,7 +34,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldEnumTypeBuilder values(
@@ -42,7 +44,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldEnumTypeBuilder plusValues(
@@ -55,7 +57,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldEnumTypeBuilder plusValues(
@@ -68,7 +70,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldEnumTypeBuilder withValues(

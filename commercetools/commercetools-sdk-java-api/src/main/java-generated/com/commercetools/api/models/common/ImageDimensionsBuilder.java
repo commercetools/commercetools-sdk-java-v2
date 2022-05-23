@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImageDimensions imageDimensions = ImageDimensions.builder()
-           .w(0.3)
-           .h(0.3)
-           .build()
- </code></pre>
- </div>
+ * ImageDimensionsBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImageDimensions imageDimensions = ImageDimensions.builder()
+ *             .w(0.3)
+ *             .h(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
@@ -24,10 +26,18 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
 
     private Integer h;
 
+    /**
+     <>
+     */
+
     public ImageDimensionsBuilder w(final Integer w) {
         this.w = w;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ImageDimensionsBuilder h(final Integer h) {
         this.h = h;

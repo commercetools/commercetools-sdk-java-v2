@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RequiredFieldError requiredFieldError = RequiredFieldError.builder()
-           .message("{message}")
-           .field("{field}")
-           .build()
- </code></pre>
- </div>
+ * RequiredFieldErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RequiredFieldError requiredFieldError = RequiredFieldError.builder()
+ *             .message("{message}")
+ *             .field("{field}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
@@ -24,13 +26,17 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
 
     private String field;
 
+    /**
+     <>
+     */
+
     public RequiredFieldErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
     /**
-     *  <p>The name of the field.</p>
+     <*  <p>The name of the field.</p>>
      */
 
     public RequiredFieldErrorBuilder field(final String field) {

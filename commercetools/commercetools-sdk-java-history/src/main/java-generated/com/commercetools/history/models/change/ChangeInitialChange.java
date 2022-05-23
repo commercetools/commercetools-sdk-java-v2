@@ -13,16 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeInitialChange changeInitialChange = ChangeInitialChange.builder()
-           .change("{change}")
-           .previousValue(true)
-           .nextValue(true)
-           .build()
- </code></pre>
- </div>
+ * ChangeInitialChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeInitialChange changeInitialChange = ChangeInitialChange.builder()
+ *             .change("{change}")
+ *             .previousValue(true)
+ *             .nextValue(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeInitialChangeImpl.class)
@@ -30,21 +33,30 @@ public interface ChangeInitialChange extends Change {
 
     String CHANGE_INITIAL_CHANGE = "ChangeInitialChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Shape of the action for <code>changeInitial</code></p>
+     <*  <p>Shape of the action for <code>changeInitial</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Boolean getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Boolean getNextValue();

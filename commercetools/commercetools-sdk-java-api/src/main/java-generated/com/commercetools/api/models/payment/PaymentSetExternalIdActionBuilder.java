@@ -9,19 +9,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetExternalIdAction paymentSetExternalIdAction = PaymentSetExternalIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetExternalIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetExternalIdAction paymentSetExternalIdAction = PaymentSetExternalIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetExternalIdActionBuilder implements Builder<PaymentSetExternalIdAction> {
 
     @Nullable
     private String externalId;
+
+    /**
+     <>
+     */
 
     public PaymentSetExternalIdActionBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;

@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeImport productTypeImport = ProductTypeImport.builder()
-           .key("{key}")
-           .name("{name}")
-           .description("{description}")
-           .build()
- </code></pre>
- </div>
+ * ProductTypeImportBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeImport productTypeImport = ProductTypeImport.builder()
+ *             .key("{key}")
+ *             .name("{name}")
+ *             .description("{description}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
@@ -33,13 +35,17 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes;
 
+    /**
+     <>
+     */
+
     public ProductTypeImportBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
     /**
-     *  <p>Maps to <code>ProductType.name</code>.</p>
+     <*  <p>Maps to <code>ProductType.name</code>.</p>>
      */
 
     public ProductTypeImportBuilder name(final String name) {
@@ -48,7 +54,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>Maps to <code>ProductType.description</code>.</p>
+     <*  <p>Maps to <code>ProductType.description</code>.</p>>
      */
 
     public ProductTypeImportBuilder description(final String description) {
@@ -57,7 +63,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     <*  <p>The <code>attributes</code> of ProductType.</p>>
      */
 
     public ProductTypeImportBuilder attributes(
@@ -67,7 +73,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     <*  <p>The <code>attributes</code> of ProductType.</p>>
      */
 
     public ProductTypeImportBuilder attributes(
@@ -77,7 +83,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     <*  <p>The <code>attributes</code> of ProductType.</p>>
      */
 
     public ProductTypeImportBuilder plusAttributes(
@@ -90,7 +96,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     <*  <p>The <code>attributes</code> of ProductType.</p>>
      */
 
     public ProductTypeImportBuilder plusAttributes(
@@ -104,7 +110,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     <*  <p>The <code>attributes</code> of ProductType.</p>>
      */
 
     public ProductTypeImportBuilder withAttributes(

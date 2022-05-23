@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetShippingRateInputAction cartSetShippingRateInputAction = CartSetShippingRateInputAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartSetShippingRateInputActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetShippingRateInputAction cartSetShippingRateInputAction = CartSetShippingRateInputAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShippingRateInputAction> {
@@ -25,7 +27,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     /**
-     *  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+     <*  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>>
      */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(
@@ -35,7 +37,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     }
 
     /**
-     *  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+     <*  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>>
      */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(

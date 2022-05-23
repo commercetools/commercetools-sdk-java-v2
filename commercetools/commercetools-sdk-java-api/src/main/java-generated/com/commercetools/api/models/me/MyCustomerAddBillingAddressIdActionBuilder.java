@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCustomerAddBillingAddressIdAction myCustomerAddBillingAddressIdAction = MyCustomerAddBillingAddressIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCustomerAddBillingAddressIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerAddBillingAddressIdAction myCustomerAddBillingAddressIdAction = MyCustomerAddBillingAddressIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCustomerAddBillingAddressIdAction> {
@@ -26,10 +28,18 @@ public class MyCustomerAddBillingAddressIdActionBuilder implements Builder<MyCus
     @Nullable
     private String addressKey;
 
+    /**
+     <>
+     */
+
     public MyCustomerAddBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCustomerAddBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;

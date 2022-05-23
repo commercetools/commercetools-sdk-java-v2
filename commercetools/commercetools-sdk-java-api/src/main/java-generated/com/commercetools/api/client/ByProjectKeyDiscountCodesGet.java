@@ -17,17 +17,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Deprecated scope: <code>view_orders:{projectKey}</code></p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .discountCodes()
-           .get()
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Deprecated scope: <code>view_orders:{projectKey}</code></p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .discountCodes()
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyDiscountCodesGet extends

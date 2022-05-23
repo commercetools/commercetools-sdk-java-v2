@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListSetCustomTypeAction shoppingListSetCustomTypeAction = ShoppingListSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ShoppingListSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListSetCustomTypeAction shoppingListSetCustomTypeAction = ShoppingListSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingListSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>
+     <*  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>>
      */
 
     public ShoppingListSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
     }
 
     /**
-     *  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>
+     <*  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>>
      */
 
     public ShoppingListSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ShoppingList.</p>
+     <*  <p>Sets the Custom Fields fields for the ShoppingList.</p>>
      */
 
     public ShoppingListSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ShoppingList.</p>
+     <*  <p>Sets the Custom Fields fields for the ShoppingList.</p>>
      */
 
     public ShoppingListSetCustomTypeActionBuilder fields(

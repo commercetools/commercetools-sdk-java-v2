@@ -14,43 +14,44 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CreatedBy createdBy = CreatedBy.builder()
-           .build()
- </code></pre>
- </div>
+ *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CreatedBy createdBy = CreatedBy.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CreatedByImpl.class)
 public interface CreatedBy extends ClientLogging {
 
     /**
-     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     <*  <p><code>id</code> of the APIClient which created the resource.</p>>
      */
 
     @JsonProperty("clientId")
     public String getClientId();
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
      */
 
     @JsonProperty("externalUserId")
     public String getExternalUserId();
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     <*  <p>Indicates the Customer who created the resource using a token from the password flow.</p>>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     <*  <p>Indicates the anonymous session during which the resource was created.</p>>
      */
 
     @JsonProperty("anonymousId")

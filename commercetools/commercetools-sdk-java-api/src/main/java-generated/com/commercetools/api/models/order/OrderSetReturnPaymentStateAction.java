@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetReturnPaymentStateAction orderSetReturnPaymentStateAction = OrderSetReturnPaymentStateAction.builder()
-           .returnItemId("{returnItemId}")
-           .paymentState(ReturnPaymentState.NON_REFUNDABLE)
-           .build()
- </code></pre>
- </div>
+ * OrderSetReturnPaymentStateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetReturnPaymentStateAction orderSetReturnPaymentStateAction = OrderSetReturnPaymentStateAction.builder()
+ *             .returnItemId("{returnItemId}")
+ *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetReturnPaymentStateActionImpl.class)
@@ -29,10 +32,16 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
 
     String SET_RETURN_PAYMENT_STATE = "setReturnPaymentState";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("paymentState")
     public ReturnPaymentState getPaymentState();

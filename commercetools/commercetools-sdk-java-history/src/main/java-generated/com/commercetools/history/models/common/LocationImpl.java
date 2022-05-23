@@ -34,11 +34,16 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
+
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     <>
+     */
 
     public String getState() {
         return this.state;

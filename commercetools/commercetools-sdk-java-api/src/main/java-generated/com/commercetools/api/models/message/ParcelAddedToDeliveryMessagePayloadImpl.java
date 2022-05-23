@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ParcelAddedToDeliveryMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDeliveryMessagePayload, ModelBase {
 
@@ -36,13 +39,25 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
         this.type = PARCEL_ADDED_TO_DELIVERY;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.order.Delivery getDelivery() {
         return this.delivery;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order.Parcel getParcel() {
         return this.parcel;

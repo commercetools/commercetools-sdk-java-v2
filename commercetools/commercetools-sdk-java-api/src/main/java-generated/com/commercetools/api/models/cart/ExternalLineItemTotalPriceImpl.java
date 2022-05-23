@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ExternalLineItemTotalPrice
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPrice, ModelBase {
 
@@ -31,9 +34,17 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
     public ExternalLineItemTotalPriceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.Money getTotalPrice() {
         return this.totalPrice;

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetBillingAddressCustomTypeAction orderSetBillingAddressCustomTypeAction = OrderSetBillingAddressCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderSetBillingAddressCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetBillingAddressCustomTypeAction orderSetBillingAddressCustomTypeAction = OrderSetBillingAddressCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetBillingAddressCustomTypeActionBuilder implements Builder<OrderSetBillingAddressCustomTypeAction> {
@@ -28,7 +30,7 @@ public class OrderSetBillingAddressCustomTypeActionBuilder implements Builder<Or
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     <*  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>>
      */
 
     public OrderSetBillingAddressCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class OrderSetBillingAddressCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+     <*  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>>
      */
 
     public OrderSetBillingAddressCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class OrderSetBillingAddressCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     <*  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>>
      */
 
     public OrderSetBillingAddressCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class OrderSetBillingAddressCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
+     <*  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>>
      */
 
     public OrderSetBillingAddressCustomTypeActionBuilder fields(

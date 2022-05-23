@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DiscountCodeSetValidUntilAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeSetValidUntilActionImpl implements DiscountCodeSetValidUntilAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class DiscountCodeSetValidUntilActionImpl implements DiscountCodeSetValid
         this.action = SET_VALID_UNTIL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>>
      */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProjectChangeCountriesAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesA
         this.action = CHANGE_COUNTRIES;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
+
     public java.util.List<String> getCountries() {
         return this.countries;
     }

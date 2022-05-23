@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   GeneralCategoryRecommendation generalCategoryRecommendation = GeneralCategoryRecommendation.builder()
-           .categoryName("{categoryName}")
-           .confidence(0.3)
-           .build()
- </code></pre>
- </div>
+ * GeneralCategoryRecommendationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GeneralCategoryRecommendation generalCategoryRecommendation = GeneralCategoryRecommendation.builder()
+ *             .categoryName("{categoryName}")
+ *             .confidence(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCategoryRecommendation> {
@@ -25,7 +27,7 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
     private Double confidence;
 
     /**
-     *  <p>An English category name that is recommended for a product.</p>
+     <*  <p>An English category name that is recommended for a product.</p>>
      */
 
     public GeneralCategoryRecommendationBuilder categoryName(final String categoryName) {
@@ -34,7 +36,7 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
     }
 
     /**
-     *  <p>Probability score for the category recommendation.</p>
+     <*  <p>Probability score for the category recommendation.</p>>
      */
 
     public GeneralCategoryRecommendationBuilder confidence(final Double confidence) {

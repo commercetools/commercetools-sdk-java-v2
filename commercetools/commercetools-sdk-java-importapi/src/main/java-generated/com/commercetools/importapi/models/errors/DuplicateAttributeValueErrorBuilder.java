@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicateAttributeValueError duplicateAttributeValueError = DuplicateAttributeValueError.builder()
-           .message("{message}")
-           .attribute(attributeBuilder -> attributeBuilder)
-           .build()
- </code></pre>
- </div>
+ * DuplicateAttributeValueErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateAttributeValueError duplicateAttributeValueError = DuplicateAttributeValueError.builder()
+ *             .message("{message}")
+ *             .attribute(attributeBuilder -> attributeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAttributeValueError> {
@@ -25,13 +27,17 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
 
     private com.commercetools.importapi.models.productvariants.Attribute attribute;
 
+    /**
+     <>
+     */
+
     public DuplicateAttributeValueErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
     /**
-     *  <p>The attribute in conflict.</p>
+     <*  <p>The attribute in conflict.</p>>
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(
@@ -41,7 +47,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     *  <p>The attribute in conflict.</p>
+     <*  <p>The attribute in conflict.</p>>
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(

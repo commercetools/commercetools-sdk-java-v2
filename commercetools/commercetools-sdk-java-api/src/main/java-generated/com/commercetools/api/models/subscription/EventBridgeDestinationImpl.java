@@ -38,20 +38,26 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         this.type = EVENT_BRIDGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>AWS region to which commercetools sends the events.</p>
+     <*  <p>AWS region to which commercetools sends the events.</p>>
      */
+
     public String getRegion() {
         return this.region;
     }
 
     /**
-     *  <p>ID of the AWS account that receives events from the commercetools platform.</p>
+     <*  <p>ID of the AWS account that receives events from the commercetools platform.</p>>
      */
+
     public String getAccountId() {
         return this.accountId;
     }

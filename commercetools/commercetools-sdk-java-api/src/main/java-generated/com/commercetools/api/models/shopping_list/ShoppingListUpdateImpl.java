@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShoppingListUpdate
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListUpdateImpl implements ShoppingListUpdate, ModelBase {
 
@@ -31,9 +34,17 @@ public class ShoppingListUpdateImpl implements ShoppingListUpdate, ModelBase {
     public ShoppingListUpdateImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> getActions() {
         return this.actions;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductVariantImportDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImportDraftImpl implements ProductVariantImportDraft, ModelBase {
 
@@ -43,36 +46,41 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>
+     <*  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>>
      */
+
     public Long getId() {
         return this.id;
     }
 
     /**
-     *  <p>The SKU of the existing variant.</p>
+     <*  <p>The SKU of the existing variant.</p>>
      */
+
     public String getSku() {
         return this.sku;
     }
 
     /**
-     *  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     <*  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     <*  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     <*  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
         return this.images;
     }

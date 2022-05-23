@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetOrderTotalTaxChange setOrderTotalTaxChange = SetOrderTotalTaxChange.builder()
-           .change("{change}")
-           .taxMode(TaxMode.PLATFORM)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetOrderTotalTaxChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetOrderTotalTaxChange setOrderTotalTaxChange = SetOrderTotalTaxChange.builder()
+ *             .change("{change}")
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxChange> {
@@ -32,7 +34,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     private com.commercetools.history.models.common.Money previousValue;
 
     /**
-     *  <p>Update action for <code>setOrderTotalTax</code></p>
+     <*  <p>Update action for <code>setOrderTotalTax</code></p>>
      */
 
     public SetOrderTotalTaxChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetOrderTotalTaxChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
         this.taxMode = taxMode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetOrderTotalTaxChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -51,16 +61,28 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetOrderTotalTaxChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetOrderTotalTaxChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetOrderTotalTaxChangeBuilder previousValue(
             final com.commercetools.history.models.common.Money previousValue) {

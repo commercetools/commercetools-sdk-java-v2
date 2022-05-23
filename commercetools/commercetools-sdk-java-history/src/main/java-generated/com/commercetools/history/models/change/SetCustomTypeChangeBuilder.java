@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomTypeChange setCustomTypeChange = SetCustomTypeChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCustomTypeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomTypeChange setCustomTypeChange = SetCustomTypeChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> {
@@ -29,7 +31,7 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     /**
-     *  <p>Update action for setting a custom type</p>
+     <*  <p>Update action for setting a custom type</p>>
      */
 
     public SetCustomTypeChangeBuilder change(final String change) {
@@ -37,22 +39,38 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomTypeChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomTypeChangeBuilder nextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomTypeChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomTypeChangeBuilder previousValue(
             final com.commercetools.history.models.common.CustomFields previousValue) {

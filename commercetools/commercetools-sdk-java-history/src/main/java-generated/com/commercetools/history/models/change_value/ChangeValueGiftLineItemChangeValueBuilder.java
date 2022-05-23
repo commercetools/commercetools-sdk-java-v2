@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeValueGiftLineItemChangeValue changeValueGiftLineItemChangeValue = ChangeValueGiftLineItemChangeValue.builder()
-           .product(productBuilder -> productBuilder)
-           .variantId(1)
-           .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeValueGiftLineItemChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeValueGiftLineItemChangeValue changeValueGiftLineItemChangeValue = ChangeValueGiftLineItemChangeValue.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .variantId(1)
+ *             .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<ChangeValueGiftLineItemChangeValue> {
@@ -33,11 +35,19 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
 
     private com.commercetools.history.models.common.Reference distributionChannel;
 
+    /**
+     <>
+     */
+
     public ChangeValueGiftLineItemChangeValueBuilder product(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeValueGiftLineItemChangeValueBuilder product(
             final com.commercetools.history.models.common.Reference product) {
@@ -45,10 +55,18 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeValueGiftLineItemChangeValueBuilder variantId(final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -56,17 +74,29 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
             @Nullable final com.commercetools.history.models.common.Reference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
             final com.commercetools.history.models.common.Reference distributionChannel) {

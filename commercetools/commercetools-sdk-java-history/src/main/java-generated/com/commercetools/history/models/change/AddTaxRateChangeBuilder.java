@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddTaxRateChange addTaxRateChange = AddTaxRateChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddTaxRateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddTaxRateChange addTaxRateChange = AddTaxRateChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
@@ -26,7 +28,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     private com.commercetools.history.models.common.TaxRate nextValue;
 
     /**
-     *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
+     <*  <p>Update action for <code>addTaxRate</code> on tax categories</p>>
      */
 
     public AddTaxRateChangeBuilder change(final String change) {
@@ -35,7 +37,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
 
     public AddTaxRateChangeBuilder nextValue(
@@ -45,7 +47,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
 
     public AddTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {

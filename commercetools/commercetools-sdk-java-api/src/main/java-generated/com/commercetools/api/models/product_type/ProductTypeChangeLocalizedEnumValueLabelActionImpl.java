@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeChangeLocalizedEnumValueLabelAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeLocalizedEnumValueLabelActionImpl
         implements ProductTypeChangeLocalizedEnumValueLabelAction, ModelBase {
@@ -36,13 +39,25 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionImpl
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getNewValue() {
         return this.newValue;

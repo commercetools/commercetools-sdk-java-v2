@@ -14,15 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodPagedQueryResponse shippingMethodPagedQueryResponse = ShippingMethodPagedQueryResponse.builder()
-           .count(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodPagedQueryResponse
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodPagedQueryResponse shippingMethodPagedQueryResponse = ShippingMethodPagedQueryResponse.builder()
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodPagedQueryResponseImpl.class)
@@ -30,26 +33,36 @@ public interface ShippingMethodPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ShippingMethod> {
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     @JsonProperty("limit")
     public Long getLimit();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
+
+    /**
+     <>
+     */
 
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     @JsonProperty("offset")
     public Long getOffset();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("results")

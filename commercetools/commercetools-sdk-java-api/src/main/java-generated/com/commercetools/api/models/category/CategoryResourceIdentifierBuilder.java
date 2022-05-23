@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryResourceIdentifier categoryResourceIdentifier = CategoryResourceIdentifier.builder()
-           .build()
- </code></pre>
- </div>
+ * CategoryResourceIdentifierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryResourceIdentifier categoryResourceIdentifier = CategoryResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryResourceIdentifierBuilder implements Builder<CategoryResourceIdentifier> {
@@ -27,7 +29,7 @@ public class CategoryResourceIdentifierBuilder implements Builder<CategoryResour
     private String key;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public CategoryResourceIdentifierBuilder id(@Nullable final String id) {
@@ -36,7 +38,7 @@ public class CategoryResourceIdentifierBuilder implements Builder<CategoryResour
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public CategoryResourceIdentifierBuilder key(@Nullable final String key) {

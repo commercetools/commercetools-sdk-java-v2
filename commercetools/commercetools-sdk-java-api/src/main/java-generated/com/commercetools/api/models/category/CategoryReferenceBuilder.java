@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryReference categoryReference = CategoryReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * CategoryReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryReference categoryReference = CategoryReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryReferenceBuilder implements Builder<CategoryReference> {
@@ -28,7 +30,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     private com.commercetools.api.models.category.Category obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Category.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Category.</p>>
      */
 
     public CategoryReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     <*  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>>
      */
 
     public CategoryReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     <*  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>>
      */
 
     public CategoryReferenceBuilder obj(@Nullable final com.commercetools.api.models.category.Category obj) {

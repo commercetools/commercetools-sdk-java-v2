@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderEditSetCustomTypeAction orderEditSetCustomTypeAction = OrderEditSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderEditSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditSetCustomTypeAction orderEditSetCustomTypeAction = OrderEditSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSet
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>
+     <*  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>>
      */
 
     public OrderEditSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSet
     }
 
     /**
-     *  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>
+     <*  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>>
      */
 
     public OrderEditSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSet
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the OrderEdit.</p>
+     <*  <p>Sets the Custom Fields fields for the OrderEdit.</p>>
      */
 
     public OrderEditSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class OrderEditSetCustomTypeActionBuilder implements Builder<OrderEditSet
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the OrderEdit.</p>
+     <*  <p>Sets the Custom Fields fields for the OrderEdit.</p>>
      */
 
     public OrderEditSetCustomTypeActionBuilder fields(

@@ -40,22 +40,25 @@ public class ChannelReferenceImpl implements ChannelReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Channel.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Channel.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     <*  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>>
      */
+
     public com.commercetools.api.models.channel.Channel getObj() {
         return this.obj;
     }

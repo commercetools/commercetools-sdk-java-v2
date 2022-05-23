@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InvalidOperation invalidOperation = InvalidOperation.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * InvalidOperationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidOperation invalidOperation = InvalidOperation.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidOperationBuilder implements Builder<InvalidOperation> {
 
     private String message;
+
+    /**
+     <>
+     */
 
     public InvalidOperationBuilder message(final String message) {
         this.message = message;

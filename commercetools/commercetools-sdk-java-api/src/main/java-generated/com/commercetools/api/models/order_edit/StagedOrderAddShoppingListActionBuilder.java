@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderAddShoppingListAction stagedOrderAddShoppingListAction = StagedOrderAddShoppingListAction.builder()
-           .shoppingList(shoppingListBuilder -> shoppingListBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderAddShoppingListActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderAddShoppingListAction stagedOrderAddShoppingListAction = StagedOrderAddShoppingListAction.builder()
+ *             .shoppingList(shoppingListBuilder -> shoppingListBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOrderAddShoppingListAction> {
@@ -31,7 +33,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     <*  <p>ResourceIdentifier to a ShoppingList.</p>>
      */
 
     public StagedOrderAddShoppingListActionBuilder shoppingList(
@@ -43,7 +45,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     <*  <p>ResourceIdentifier to a ShoppingList.</p>>
      */
 
     public StagedOrderAddShoppingListActionBuilder shoppingList(
@@ -53,7 +55,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderAddShoppingListActionBuilder supplyChannel(
@@ -64,7 +66,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderAddShoppingListActionBuilder supplyChannel(
@@ -74,7 +76,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderAddShoppingListActionBuilder distributionChannel(
@@ -86,7 +88,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderAddShoppingListActionBuilder distributionChannel(

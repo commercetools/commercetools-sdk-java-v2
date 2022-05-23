@@ -18,63 +18,66 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelDraft channelDraft = ChannelDraft.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * ChannelDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelDraft channelDraft = ChannelDraft.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelDraftImpl.class)
 public interface ChannelDraft extends com.commercetools.api.models.CustomizableDraft<ChannelDraft> {
 
     /**
-     *  <p>User-defined unique identifier for the Channel.</p>
+     <*  <p>User-defined unique identifier for the Channel.</p>>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     <*  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>>
      */
 
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();
 
     /**
-     *  <p>Name of the Channel.</p>
+     <*  <p>Name of the Channel.</p>>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *  <p>Description of the Channel.</p>
+     <*  <p>Description of the Channel.</p>>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>Address where the Channel is located.</p>
+     <*  <p>Address where the Channel is located.</p>>
      */
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();
 
     /**
-     *  <p>Custom fields defined for the Channel.</p>
+     <*  <p>Custom fields defined for the Channel.</p>>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     <*  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>>
      */
     @Valid
     @JsonProperty("geoLocation")

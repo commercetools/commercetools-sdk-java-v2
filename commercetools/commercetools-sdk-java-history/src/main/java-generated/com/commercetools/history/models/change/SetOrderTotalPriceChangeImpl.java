@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetOrderTotalPriceChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, M
         this.type = SET_ORDER_TOTAL_PRICE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setOrderTotalPrice</code></p>
+     <*  <p>Update action for <code>setOrderTotalPrice</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Money getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {
         return this.previousValue;

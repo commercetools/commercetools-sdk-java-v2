@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyOrderFromCartDraft myOrderFromCartDraft = MyOrderFromCartDraft.builder()
-           .id("{id}")
-           .version(0.3)
-           .build()
- </code></pre>
- </div>
+ * MyOrderFromCartDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyOrderFromCartDraft myOrderFromCartDraft = MyOrderFromCartDraft.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft> {
@@ -25,13 +27,17 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     private Long version;
 
     /**
-     *  <p>Platform-generated unique identifier of the Cart from which the Platform creates an Order.</p>
+     <*  <p>Platform-generated unique identifier of the Cart from which the Platform creates an Order.</p>>
      */
 
     public MyOrderFromCartDraftBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyOrderFromCartDraftBuilder version(final Long version) {
         this.version = version;

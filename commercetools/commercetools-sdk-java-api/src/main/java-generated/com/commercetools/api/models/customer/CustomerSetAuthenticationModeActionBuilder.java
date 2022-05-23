@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetAuthenticationModeAction customerSetAuthenticationModeAction = CustomerSetAuthenticationModeAction.builder()
-           .authMode(AuthenticationMode.PASSWORD)
-           .build()
- </code></pre>
- </div>
+ * CustomerSetAuthenticationModeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetAuthenticationModeAction customerSetAuthenticationModeAction = CustomerSetAuthenticationModeAction.builder()
+ *             .authMode(AuthenticationMode.PASSWORD)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetAuthenticationModeActionBuilder implements Builder<CustomerSetAuthenticationModeAction> {
@@ -26,6 +28,10 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
     @Nullable
     private String password;
 
+    /**
+     <>
+     */
+
     public CustomerSetAuthenticationModeActionBuilder authMode(
             final com.commercetools.api.models.customer.AuthenticationMode authMode) {
         this.authMode = authMode;
@@ -33,7 +39,7 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
     }
 
     /**
-     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
+     <*  <p>Required when <code>authMode</code> is <code>Password</code></p>>
      */
 
     public CustomerSetAuthenticationModeActionBuilder password(@Nullable final String password) {

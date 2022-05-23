@@ -47,21 +47,41 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
         this.type = GIFT_LINE_ITEM;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Reference getProduct() {
         return this.product;
     }
 
+    /**
+     <>
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Reference getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Reference getDistributionChannel() {
         return this.distributionChannel;

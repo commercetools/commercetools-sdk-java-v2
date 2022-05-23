@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetExpectedDeliveryChange setExpectedDeliveryChange = SetExpectedDeliveryChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetExpectedDeliveryChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetExpectedDeliveryChange setExpectedDeliveryChange = SetExpectedDeliveryChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeliveryChange> {
@@ -28,7 +30,7 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
+     <*  <p>Shape of the action for <code>setExpectedDelivery</code></p>>
      */
 
     public SetExpectedDeliveryChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetExpectedDeliveryChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetExpectedDeliveryChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DiscountedPrice
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
 
@@ -32,15 +35,17 @@ public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
     }
 
     /**
-     *  <p>Money value of the discounted price.</p>
+     <*  <p>Money value of the discounted price.</p>>
      */
+
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     <*  <p>ProductDiscount related to the discounted price.</p>>
      */
+
     public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {
         return this.discount;
     }

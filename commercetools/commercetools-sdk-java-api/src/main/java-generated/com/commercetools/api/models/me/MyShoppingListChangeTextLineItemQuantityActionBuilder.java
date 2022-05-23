@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListChangeTextLineItemQuantityAction myShoppingListChangeTextLineItemQuantityAction = MyShoppingListChangeTextLineItemQuantityAction.builder()
-           .textLineItemId("{textLineItemId}")
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListChangeTextLineItemQuantityActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListChangeTextLineItemQuantityAction myShoppingListChangeTextLineItemQuantityAction = MyShoppingListChangeTextLineItemQuantityAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListChangeTextLineItemQuantityActionBuilder
@@ -25,10 +27,18 @@ public class MyShoppingListChangeTextLineItemQuantityActionBuilder
 
     private Long quantity;
 
+    /**
+     <>
+     */
+
     public MyShoppingListChangeTextLineItemQuantityActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyShoppingListChangeTextLineItemQuantityActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;

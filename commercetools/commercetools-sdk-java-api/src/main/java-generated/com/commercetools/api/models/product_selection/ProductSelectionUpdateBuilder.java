@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionUpdate productSelectionUpdate = ProductSelectionUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionUpdate productSelectionUpdate = ProductSelectionUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUpdate> {
@@ -25,10 +27,18 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
 
     private java.util.List<com.commercetools.api.models.product_selection.ProductSelectionUpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public ProductSelectionUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSelectionUpdateBuilder actions(
             final com.commercetools.api.models.product_selection.ProductSelectionUpdateAction... actions) {
@@ -36,11 +46,19 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductSelectionUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.product_selection.ProductSelectionUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSelectionUpdateBuilder plusActions(
             final com.commercetools.api.models.product_selection.ProductSelectionUpdateAction... actions) {
@@ -50,6 +68,10 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
         this.actions.addAll(Arrays.asList(actions));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSelectionUpdateBuilder plusActions(
             Function<com.commercetools.api.models.product_selection.ProductSelectionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionUpdateAction>> builder) {
@@ -61,6 +83,10 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
                     .build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSelectionUpdateBuilder withActions(
             Function<com.commercetools.api.models.product_selection.ProductSelectionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionUpdateAction>> builder) {

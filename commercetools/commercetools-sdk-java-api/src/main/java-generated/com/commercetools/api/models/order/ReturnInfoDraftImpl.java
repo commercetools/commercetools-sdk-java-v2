@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ReturnInfoDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
 
@@ -36,16 +39,25 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
     public ReturnInfoDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems() {
         return this.items;
     }
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     <*  <p>Identifies, which return tracking ID is connected to this particular return.</p>>
      */
+
     public String getReturnTrackingId() {
         return this.returnTrackingId;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getReturnDate() {
         return this.returnDate;

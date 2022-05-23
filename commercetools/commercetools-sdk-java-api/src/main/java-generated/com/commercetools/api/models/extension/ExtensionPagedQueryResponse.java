@@ -14,19 +14,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>PagedQueryResult with <code>results</code> containing an array of Extension.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionPagedQueryResponse extensionPagedQueryResponse = ExtensionPagedQueryResponse.builder()
-           .limit(0.3)
-           .offset(0.3)
-           .count(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>PagedQueryResult with <code>results</code> containing an array of Extension.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionPagedQueryResponse extensionPagedQueryResponse = ExtensionPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .offset(0.3)
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionPagedQueryResponseImpl.class)
@@ -34,35 +35,35 @@ public interface ExtensionPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<Extension> {
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     *  <p>Actual number of results returned.</p>
+     <*  <p>Actual number of results returned.</p>>
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     <*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>>
      */
 
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     *  <p>Extensions matching the query.</p>
+     <*  <p>Extensions matching the query.</p>>
      */
     @NotNull
     @Valid

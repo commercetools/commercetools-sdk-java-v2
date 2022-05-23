@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeChangeEnumKeyAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnumKeyAction, ModelBase {
 
@@ -38,17 +41,33 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
         this.action = CHANGE_ENUM_KEY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public String getNewKey() {
         return this.newKey;

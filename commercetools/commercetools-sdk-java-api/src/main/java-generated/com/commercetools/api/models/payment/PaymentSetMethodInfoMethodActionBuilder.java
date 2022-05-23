@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetMethodInfoMethodAction paymentSetMethodInfoMethodAction = PaymentSetMethodInfoMethodAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetMethodInfoMethodActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetMethodInfoMethodAction paymentSetMethodInfoMethodAction = PaymentSetMethodInfoMethodAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentSetMethodInfoMethodAction> {
@@ -24,7 +26,7 @@ public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentS
     private String method;
 
     /**
-     *  <p>If not provided, the method is unset.</p>
+     <*  <p>If not provided, the method is unset.</p>>
      */
 
     public PaymentSetMethodInfoMethodActionBuilder method(@Nullable final String method) {

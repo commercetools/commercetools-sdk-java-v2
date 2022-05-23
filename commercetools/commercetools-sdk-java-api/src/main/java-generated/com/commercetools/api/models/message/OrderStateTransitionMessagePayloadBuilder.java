@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderStateTransitionMessagePayload orderStateTransitionMessagePayload = OrderStateTransitionMessagePayload.builder()
-           .state(stateBuilder -> stateBuilder)
-           .force(true)
-           .build()
- </code></pre>
- </div>
+ * OrderStateTransitionMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderStateTransitionMessagePayload orderStateTransitionMessagePayload = OrderStateTransitionMessagePayload.builder()
+ *             .state(stateBuilder -> stateBuilder)
+ *             .force(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderStateTransitionMessagePayload> {
@@ -31,7 +33,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public OrderStateTransitionMessagePayloadBuilder state(
@@ -41,7 +43,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public OrderStateTransitionMessagePayloadBuilder state(
@@ -51,7 +53,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
@@ -61,7 +63,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
@@ -69,6 +71,10 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
         this.oldState = oldState;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderStateTransitionMessagePayloadBuilder force(final Boolean force) {
         this.force = force;

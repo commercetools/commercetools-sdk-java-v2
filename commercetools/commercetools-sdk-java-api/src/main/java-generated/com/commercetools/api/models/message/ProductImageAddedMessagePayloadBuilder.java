@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductImageAddedMessagePayload productImageAddedMessagePayload = ProductImageAddedMessagePayload.builder()
-           .variantId(0.3)
-           .image(imageBuilder -> imageBuilder)
-           .staged(true)
-           .build()
- </code></pre>
- </div>
+ * ProductImageAddedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductImageAddedMessagePayload productImageAddedMessagePayload = ProductImageAddedMessagePayload.builder()
+ *             .variantId(0.3)
+ *             .image(imageBuilder -> imageBuilder)
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductImageAddedMessagePayload> {
@@ -28,10 +30,18 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
 
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessagePayloadBuilder variantId(final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductImageAddedMessagePayloadBuilder image(
             Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
@@ -39,10 +49,18 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessagePayloadBuilder image(final com.commercetools.api.models.common.Image image) {
         this.image = image;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductImageAddedMessagePayloadBuilder staged(final Boolean staged) {
         this.staged = staged;

@@ -13,24 +13,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryQuantityValue inventoryQuantityValue = InventoryQuantityValue.builder()
-           .quantityOnStock(1)
-           .availableQuantity(1)
-           .build()
- </code></pre>
- </div>
+ * InventoryQuantityValue
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryQuantityValue inventoryQuantityValue = InventoryQuantityValue.builder()
+ *             .quantityOnStock(1)
+ *             .availableQuantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryQuantityValueImpl.class)
 public interface InventoryQuantityValue {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantityOnStock")
     public Integer getQuantityOnStock();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("availableQuantity")
     public Integer getAvailableQuantity();

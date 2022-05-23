@@ -10,21 +10,23 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Type type = Type.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .key("{key}")
-           .name(nameBuilder -> nameBuilder)
-           .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
-           .plusFieldDefinitions(fieldDefinitionsBuilder -> fieldDefinitionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Type type = Type.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .key("{key}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
+ *             .plusFieldDefinitions(fieldDefinitionsBuilder -> fieldDefinitionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeBuilder implements Builder<Type> {
@@ -55,7 +57,7 @@ public class TypeBuilder implements Builder<Type> {
     private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
     /**
-     *  <p>Platform-generated unique identifier of the Type.</p>
+     <*  <p>Platform-generated unique identifier of the Type.</p>>
      */
 
     public TypeBuilder id(final String id) {
@@ -64,7 +66,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Current version of the Type.</p>
+     <*  <p>Current version of the Type.</p>>
      */
 
     public TypeBuilder version(final Long version) {
@@ -73,7 +75,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Type was initially created.</p>
+     <*  <p>Date and time (UTC) the Type was initially created.</p>>
      */
 
     public TypeBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -82,7 +84,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Type was last updated.</p>
+     <*  <p>Date and time (UTC) the Type was last updated.</p>>
      */
 
     public TypeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -91,7 +93,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public TypeBuilder lastModifiedBy(
@@ -101,7 +103,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public TypeBuilder lastModifiedBy(
@@ -111,7 +113,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public TypeBuilder createdBy(
@@ -121,7 +123,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public TypeBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -130,7 +132,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Type.</p>
+     <*  <p>User-defined unique identifier of the Type.</p>>
      */
 
     public TypeBuilder key(final String key) {
@@ -139,7 +141,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Name of the Type.</p>
+     <*  <p>Name of the Type.</p>>
      */
 
     public TypeBuilder name(
@@ -149,7 +151,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Name of the Type.</p>
+     <*  <p>Name of the Type.</p>>
      */
 
     public TypeBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -158,7 +160,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Description of the Type.</p>
+     <*  <p>Description of the Type.</p>>
      */
 
     public TypeBuilder description(
@@ -168,7 +170,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Description of the Type.</p>
+     <*  <p>Description of the Type.</p>>
      */
 
     public TypeBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -177,7 +179,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Resources and/or data types for which the Type is defined.</p>
+     <*  <p>Resources and/or data types for which the Type is defined.</p>>
      */
 
     public TypeBuilder resourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
@@ -186,7 +188,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Resources and/or data types for which the Type is defined.</p>
+     <*  <p>Resources and/or data types for which the Type is defined.</p>>
      */
 
     public TypeBuilder resourceTypeIds(
@@ -196,7 +198,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Resources and/or data types for which the Type is defined.</p>
+     <*  <p>Resources and/or data types for which the Type is defined.</p>>
      */
 
     public TypeBuilder plusResourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
@@ -208,7 +210,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeBuilder fieldDefinitions(final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
@@ -217,7 +219,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeBuilder fieldDefinitions(
@@ -227,7 +229,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeBuilder plusFieldDefinitions(
@@ -240,7 +242,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeBuilder plusFieldDefinitions(
@@ -253,7 +255,7 @@ public class TypeBuilder implements Builder<Type> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeBuilder withFieldDefinitions(

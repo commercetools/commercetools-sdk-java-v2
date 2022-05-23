@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxCategoryUpdateAction taxCategoryUpdateAction = TaxCategoryUpdateAction.addTaxRateBuilder()
-           taxRate(taxRateBuilder -> taxRateBuilder)
-           .build()
- </code></pre>
- </div>
+ * TaxCategoryUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategoryUpdateAction taxCategoryUpdateAction = TaxCategoryUpdateAction.addTaxRateBuilder()
+ *             taxRate(taxRateBuilder -> taxRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateActionImpl.class, name = TaxCategoryAddTaxRateAction.ADD_TAX_RATE),
@@ -35,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxCategoryUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<TaxCategoryUpdateAction> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

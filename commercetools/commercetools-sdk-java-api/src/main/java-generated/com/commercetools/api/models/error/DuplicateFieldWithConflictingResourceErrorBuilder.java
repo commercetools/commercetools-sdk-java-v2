@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicateFieldWithConflictingResourceError duplicateFieldWithConflictingResourceError = DuplicateFieldWithConflictingResourceError.builder()
-           .message("{message}")
-           .field("{field}")
-           .conflictingResource(conflictingResourceBuilder -> conflictingResourceBuilder)
-           .build()
- </code></pre>
- </div>
+ * DuplicateFieldWithConflictingResourceErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateFieldWithConflictingResourceError duplicateFieldWithConflictingResourceError = DuplicateFieldWithConflictingResourceError.builder()
+ *             .message("{message}")
+ *             .field("{field}")
+ *             .conflictingResource(conflictingResourceBuilder -> conflictingResourceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateFieldWithConflictingResourceErrorBuilder
@@ -33,15 +35,27 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     private com.commercetools.api.models.common.Reference conflictingResource;
 
+    /**
+     <>
+     */
+
     public DuplicateFieldWithConflictingResourceErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateFieldWithConflictingResourceErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -51,10 +65,18 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateFieldWithConflictingResourceErrorBuilder field(final String field) {
         this.field = field;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder duplicateValue(final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;
@@ -62,7 +84,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(
@@ -72,7 +94,7 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(

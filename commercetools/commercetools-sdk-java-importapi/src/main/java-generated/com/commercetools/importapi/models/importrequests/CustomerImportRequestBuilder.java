@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerImportRequest customerImportRequest = CustomerImportRequest.builder()
-           .plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomerImportRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerImportRequest customerImportRequest = CustomerImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerImportRequestBuilder implements Builder<CustomerImportRequest> {
@@ -23,7 +25,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     private java.util.List<com.commercetools.importapi.models.customers.CustomerImport> resources;
 
     /**
-     *  <p>The customer import resources of this request.</p>
+     <*  <p>The customer import resources of this request.</p>>
      */
 
     public CustomerImportRequestBuilder resources(
@@ -33,7 +35,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     }
 
     /**
-     *  <p>The customer import resources of this request.</p>
+     <*  <p>The customer import resources of this request.</p>>
      */
 
     public CustomerImportRequestBuilder resources(
@@ -43,7 +45,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     }
 
     /**
-     *  <p>The customer import resources of this request.</p>
+     <*  <p>The customer import resources of this request.</p>>
      */
 
     public CustomerImportRequestBuilder plusResources(
@@ -56,7 +58,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     }
 
     /**
-     *  <p>The customer import resources of this request.</p>
+     <*  <p>The customer import resources of this request.</p>>
      */
 
     public CustomerImportRequestBuilder plusResources(
@@ -70,7 +72,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     }
 
     /**
-     *  <p>The customer import resources of this request.</p>
+     <*  <p>The customer import resources of this request.</p>>
      */
 
     public CustomerImportRequestBuilder withResources(

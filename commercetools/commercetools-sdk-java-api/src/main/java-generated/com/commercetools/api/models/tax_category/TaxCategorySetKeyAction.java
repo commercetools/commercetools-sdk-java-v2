@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxCategorySetKeyAction taxCategorySetKeyAction = TaxCategorySetKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * TaxCategorySetKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategorySetKeyAction taxCategorySetKeyAction = TaxCategorySetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategorySetKeyActionImpl.class)
@@ -26,7 +29,7 @@ public interface TaxCategorySetKeyAction extends TaxCategoryUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     @JsonProperty("key")

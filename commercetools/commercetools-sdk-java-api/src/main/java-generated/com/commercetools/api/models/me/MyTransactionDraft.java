@@ -18,48 +18,54 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyTransactionDraft myTransactionDraft = MyTransactionDraft.builder()
-           .type(TransactionType.AUTHORIZATION)
-           .amount(amountBuilder -> amountBuilder)
-           .build()
- </code></pre>
- </div>
+ * MyTransactionDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyTransactionDraft myTransactionDraft = MyTransactionDraft.builder()
+ *             .type(TransactionType.AUTHORIZATION)
+ *             .amount(amountBuilder -> amountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyTransactionDraftImpl.class)
 public interface MyTransactionDraft extends com.commercetools.api.models.CustomizableDraft<MyTransactionDraft> {
 
     /**
-     *  <p>The time at which the transaction took place.</p>
+     <*  <p>The time at which the transaction took place.</p>>
      */
 
     @JsonProperty("timestamp")
     public ZonedDateTime getTimestamp();
 
     /**
-     *  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>
+     <*  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>>
      */
     @NotNull
     @JsonProperty("type")
     public TransactionType getType();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("amount")
     public Money getAmount();
 
     /**
-     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
+     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>>
      */
 
     @JsonProperty("interactionId")
     public String getInteractionId();
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     <*  <p>Custom Fields for the Transaction.</p>>
      */
     @Valid
     @JsonProperty("custom")

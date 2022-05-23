@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFieldEnumValue customFieldEnumValue = CustomFieldEnumValue.builder()
-           .key("{key}")
-           .label("{label}")
-           .build()
- </code></pre>
- </div>
+ * CustomFieldEnumValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldEnumValue customFieldEnumValue = CustomFieldEnumValue.builder()
+ *             .key("{key}")
+ *             .label("{label}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue> {
@@ -25,7 +27,7 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
     private String label;
 
     /**
-     *  <p>Key of the value used as a programmatic identifier.</p>
+     <*  <p>Key of the value used as a programmatic identifier.</p>>
      */
 
     public CustomFieldEnumValueBuilder key(final String key) {
@@ -34,7 +36,7 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
     }
 
     /**
-     *  <p>Descriptive label of the value.</p>
+     <*  <p>Descriptive label of the value.</p>>
      */
 
     public CustomFieldEnumValueBuilder label(final String label) {

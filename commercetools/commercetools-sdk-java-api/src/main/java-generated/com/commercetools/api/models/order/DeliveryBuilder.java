@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Delivery delivery = Delivery.builder()
-           .id("{id}")
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .plusParcels(parcelsBuilder -> parcelsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DeliveryBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Delivery delivery = Delivery.builder()
+ *             .id("{id}")
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .plusParcels(parcelsBuilder -> parcelsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryBuilder implements Builder<Delivery> {
@@ -40,7 +42,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>Platform-generated unique identifier of the Delivery.</p>
+     <*  <p>Platform-generated unique identifier of the Delivery.</p>>
      */
 
     public DeliveryBuilder id(final String id) {
@@ -48,13 +50,17 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     <*  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>>
      */
 
     public DeliveryBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -63,7 +69,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     <*  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>>
      */
 
     public DeliveryBuilder items(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
@@ -72,7 +78,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     <*  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>>
      */
 
     public DeliveryBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -84,7 +90,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     <*  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>>
      */
 
     public DeliveryBuilder plusItems(
@@ -97,7 +103,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     <*  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>>
      */
 
     public DeliveryBuilder withItems(
@@ -107,15 +113,27 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryBuilder parcels(final com.commercetools.api.models.order.Parcel... parcels) {
         this.parcels = new ArrayList<>(Arrays.asList(parcels));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryBuilder parcels(final java.util.List<com.commercetools.api.models.order.Parcel> parcels) {
         this.parcels = parcels;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryBuilder plusParcels(final com.commercetools.api.models.order.Parcel... parcels) {
         if (this.parcels == null) {
@@ -124,6 +142,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         this.parcels.addAll(Arrays.asList(parcels));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryBuilder plusParcels(
             Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
@@ -134,6 +156,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryBuilder withParcels(
             Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
         this.parcels = new ArrayList<>();
@@ -141,11 +167,19 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryBuilder address(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryBuilder address(@Nullable final com.commercetools.api.models.common.Address address) {
         this.address = address;
@@ -153,7 +187,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     <*  <p>Custom Fields for the Transaction.</p>>
      */
 
     public DeliveryBuilder custom(
@@ -163,7 +197,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     <*  <p>Custom Fields for the Transaction.</p>>
      */
 
     public DeliveryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

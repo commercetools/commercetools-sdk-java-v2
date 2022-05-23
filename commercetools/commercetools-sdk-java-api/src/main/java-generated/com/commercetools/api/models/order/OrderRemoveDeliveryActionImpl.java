@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderRemoveDeliveryAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderRemoveDeliveryActionImpl implements OrderRemoveDeliveryAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class OrderRemoveDeliveryActionImpl implements OrderRemoveDeliveryAction,
         this.action = REMOVE_DELIVERY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;

@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DateTimeSetAttribute dateTimeSetAttribute = DateTimeSetAttribute.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * DateTimeSetAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DateTimeSetAttribute dateTimeSetAttribute = DateTimeSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute> {
@@ -27,7 +29,7 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
     private java.util.List<java.time.ZonedDateTime> value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
      */
 
     public DateTimeSetAttributeBuilder name(@Nullable final String name) {
@@ -35,15 +37,27 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DateTimeSetAttributeBuilder value(final java.time.ZonedDateTime... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DateTimeSetAttributeBuilder value(final java.util.List<java.time.ZonedDateTime> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DateTimeSetAttributeBuilder plusValue(final java.time.ZonedDateTime... value) {
         if (this.value == null) {

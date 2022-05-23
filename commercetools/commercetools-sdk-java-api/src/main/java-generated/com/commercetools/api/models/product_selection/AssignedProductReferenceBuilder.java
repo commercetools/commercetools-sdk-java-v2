@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AssignedProductReference assignedProductReference = AssignedProductReference.builder()
-           .product(productBuilder -> productBuilder)
-           .build()
- </code></pre>
- </div>
+ * AssignedProductReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssignedProductReference assignedProductReference = AssignedProductReference.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssignedProductReferenceBuilder implements Builder<AssignedProductReference> {
@@ -23,7 +25,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
-     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     <*  <p>Reference to a Product that is assigned to the ProductSelection.</p>>
      */
 
     public AssignedProductReferenceBuilder product(
@@ -33,7 +35,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     }
 
     /**
-     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     <*  <p>Reference to a Product that is assigned to the ProductSelection.</p>>
      */
 
     public AssignedProductReferenceBuilder product(

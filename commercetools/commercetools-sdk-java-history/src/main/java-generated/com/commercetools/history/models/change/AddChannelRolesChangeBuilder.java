@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddChannelRolesChange addChannelRolesChange = AddChannelRolesChange.builder()
-           .change("{change}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddChannelRolesChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddChannelRolesChange addChannelRolesChange = AddChannelRolesChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChange> {
@@ -27,10 +29,18 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     private java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue;
 
+    /**
+     <>
+     */
+
     public AddChannelRolesChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddChannelRolesChangeBuilder previousValue(
             final com.commercetools.history.models.common.ChannelRole... previousValue) {
@@ -38,11 +48,19 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddChannelRolesChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddChannelRolesChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.ChannelRole... previousValue) {
@@ -53,17 +71,29 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddChannelRolesChangeBuilder nextValue(
             final com.commercetools.history.models.common.ChannelRole... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddChannelRolesChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddChannelRolesChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.ChannelRole... nextValue) {

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListChangeTextLineItemNameAction myShoppingListChangeTextLineItemNameAction = MyShoppingListChangeTextLineItemNameAction.builder()
-           .textLineItemId("{textLineItemId}")
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListChangeTextLineItemNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListChangeTextLineItemNameAction myShoppingListChangeTextLineItemNameAction = MyShoppingListChangeTextLineItemNameAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListChangeTextLineItemNameActionBuilder
@@ -26,13 +28,17 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     <>
+     */
+
     public MyShoppingListChangeTextLineItemNameActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
         return this;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public MyShoppingListChangeTextLineItemNameActionBuilder name(
@@ -42,7 +48,7 @@ public class MyShoppingListChangeTextLineItemNameActionBuilder
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public MyShoppingListChangeTextLineItemNameActionBuilder name(

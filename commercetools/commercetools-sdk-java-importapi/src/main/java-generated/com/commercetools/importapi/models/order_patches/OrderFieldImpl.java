@@ -64,64 +64,73 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Order.returnInfo</code></p>
+     <*  <p>Maps to <code>Order.returnInfo</code></p>>
      */
+
     public com.commercetools.importapi.models.order_patches.ReturnInfo getAddReturnInfo() {
         return this.addReturnInfo;
     }
 
     /**
-     *  <p>Maps to <code>Order.delivery</code></p>
+     <*  <p>Maps to <code>Order.delivery</code></p>>
      */
+
     public com.commercetools.importapi.models.order_patches.DeliveryParcel getAddParcelToDelivery() {
         return this.addParcelToDelivery;
     }
 
     /**
-     *  <p>Maps to <code>Order.delivery</code></p>
+     <*  <p>Maps to <code>Order.delivery</code></p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.order_patches.DeliveryDraft> getAddDeliveries() {
         return this.addDeliveries;
     }
 
     /**
-     *  <p>Maps to <code>Order.removeDelivery</code></p>
+     <*  <p>Maps to <code>Order.removeDelivery</code></p>>
      */
+
     public com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft getRemoveDelivery() {
         return this.removeDelivery;
     }
 
     /**
-     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     <*  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>>
      */
+
     public com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft getRemoveParcelFromDelivery() {
         return this.removeParcelFromDelivery;
     }
 
     /**
-     *  <p>Maps to <code>Order.addressDraft</code></p>
+     <*  <p>Maps to <code>Order.addressDraft</code></p>>
      */
+
     public com.commercetools.importapi.models.order_patches.DeliveryAddressDraft getSetDeliveryAddress() {
         return this.setDeliveryAddress;
     }
 
     /**
-     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     <*  <p>Maps to <code>Order.parcelMeasurements</code></p>>
      */
+
     public com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft getSetParcelMeasurements() {
         return this.setParcelMeasurements;
     }
 
     /**
-     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     <*  <p>Maps to <code>Order.parcelTrackingData</code></p>>
      */
+
     public com.commercetools.importapi.models.order_patches.ParcelTrackingData getSetParcelTrackingData() {
         return this.setParcelTrackingData;
     }
 
     /**
-     *  <p>Maps to <code>Order.parcelItems</code></p>
+     <*  <p>Maps to <code>Order.parcelItems</code></p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> getSetParcelItems() {
         return this.setParcelItems;
     }

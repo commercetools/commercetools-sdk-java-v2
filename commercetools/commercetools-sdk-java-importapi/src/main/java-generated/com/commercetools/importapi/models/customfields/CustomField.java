@@ -13,16 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Provides the value for a custom field of a specific type.</p>
-
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomField customField = CustomField.booleanBuilder()
-           value(true)
-           .build()
- </code></pre>
- </div>
+ *  <p>Provides the value for a custom field of a specific type.</p>
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomField customField = CustomField.booleanBuilder()
+ *             value(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.customfields.BooleanFieldImpl.class, name = BooleanField.BOOLEAN),
@@ -53,7 +54,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomField {
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
     @NotNull
     @JsonProperty("type")

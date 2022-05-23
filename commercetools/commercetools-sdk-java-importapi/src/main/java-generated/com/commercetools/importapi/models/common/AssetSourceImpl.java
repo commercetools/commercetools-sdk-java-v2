@@ -41,20 +41,33 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     public AssetSourceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getUri() {
         return this.uri;
     }
+
+    /**
+     <>
+     */
 
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>The width and height of the Asset Source.</p>
+     <*  <p>The width and height of the Asset Source.</p>>
      */
+
     public com.commercetools.importapi.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
+
+    /**
+     <>
+     */
 
     public String getContentType() {
         return this.contentType;

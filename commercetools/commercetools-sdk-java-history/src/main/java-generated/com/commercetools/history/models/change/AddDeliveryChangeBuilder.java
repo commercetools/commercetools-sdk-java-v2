@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddDeliveryChange addDeliveryChange = AddDeliveryChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddDeliveryChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddDeliveryChange addDeliveryChange = AddDeliveryChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
@@ -29,13 +31,17 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
     /**
-     *  <p>Update action for <code>addDelivery</code></p>
+     <*  <p>Update action for <code>addDelivery</code></p>>
      */
 
     public AddDeliveryChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddDeliveryChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValueBuilder> builder) {
@@ -44,11 +50,19 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddDeliveryChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddDeliveryChangeBuilder previousValue(
             Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValueBuilder> builder) {
@@ -57,6 +71,10 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddDeliveryChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {

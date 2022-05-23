@@ -13,26 +13,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ValidFromAndUntilValue validFromAndUntilValue = ValidFromAndUntilValue.builder()
-           .validFrom("{validFrom}")
-           .validUntil("{validUntil}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ValidFromAndUntilValue validFromAndUntilValue = ValidFromAndUntilValue.builder()
+ *             .validFrom("{validFrom}")
+ *             .validUntil("{validUntil}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ValidFromAndUntilValueImpl.class)
 public interface ValidFromAndUntilValue {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("validFrom")
     public String getValidFrom();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("validUntil")
     public String getValidUntil();

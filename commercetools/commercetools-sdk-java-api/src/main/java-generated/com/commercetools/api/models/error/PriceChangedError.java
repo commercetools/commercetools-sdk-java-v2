@@ -13,16 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PriceChangedError priceChangedError = PriceChangedError.builder()
-           .message("{message}")
-           .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
-           .shipping(true)
-           .build()
- </code></pre>
- </div>
+ * PriceChangedError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PriceChangedError priceChangedError = PriceChangedError.builder()
+ *             .message("{message}")
+ *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
+ *             .shipping(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PriceChangedErrorImpl.class)
@@ -30,10 +33,16 @@ public interface PriceChangedError extends ErrorObject {
 
     String PRICE_CHANGED = "PriceChanged";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("shipping")
     public Boolean getShipping();

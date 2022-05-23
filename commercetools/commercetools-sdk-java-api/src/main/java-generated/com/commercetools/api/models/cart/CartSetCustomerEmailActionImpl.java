@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartSetCustomerEmailAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomerEmailActionImpl implements CartSetCustomerEmailAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class CartSetCustomerEmailActionImpl implements CartSetCustomerEmailActio
         this.action = SET_CUSTOMER_EMAIL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getEmail() {
         return this.email;

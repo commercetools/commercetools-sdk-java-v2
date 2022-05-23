@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomFields
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsImpl implements CustomFields, ModelBase {
 
@@ -31,13 +34,18 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     public CustomFieldsImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Reference getType() {
         return this.type;
     }
 
     /**
-     *  <p>A valid JSON object, based on FieldDefinition.</p>
+     <*  <p>A valid JSON object, based on FieldDefinition.</p>>
      */
+
     public java.lang.Object getFields() {
         return this.fields;
     }

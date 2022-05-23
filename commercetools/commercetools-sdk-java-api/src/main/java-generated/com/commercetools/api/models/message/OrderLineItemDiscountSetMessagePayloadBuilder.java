@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderLineItemDiscountSetMessagePayload orderLineItemDiscountSetMessagePayload = OrderLineItemDiscountSetMessagePayload.builder()
-           .lineItemId("{lineItemId}")
-           .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderLineItemDiscountSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemDiscountSetMessagePayload orderLineItemDiscountSetMessagePayload = OrderLineItemDiscountSetMessagePayload.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<OrderLineItemDiscountSetMessagePayload> {
@@ -33,10 +35,18 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    /**
+     <>
+     */
+
     public OrderLineItemDiscountSetMessagePayloadBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
@@ -44,11 +54,19 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
             final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
@@ -59,6 +77,10 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
         if (this.discountedPricePerQuantity == null) {
@@ -69,6 +91,10 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
         this.discountedPricePerQuantity = new ArrayList<>();
@@ -78,8 +104,8 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
@@ -89,8 +115,8 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
@@ -99,11 +125,19 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {

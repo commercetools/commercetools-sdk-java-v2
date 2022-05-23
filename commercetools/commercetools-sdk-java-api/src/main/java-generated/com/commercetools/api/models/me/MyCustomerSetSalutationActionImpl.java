@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCustomerSetSalutationAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetSalutationActionImpl implements MyCustomerSetSalutationAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class MyCustomerSetSalutationActionImpl implements MyCustomerSetSalutatio
         this.action = SET_SALUTATION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getSalutation() {
         return this.salutation;

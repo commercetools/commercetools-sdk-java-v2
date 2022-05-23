@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeTransactionInteractionIdChange changeTransactionInteractionIdChange = ChangeTransactionInteractionIdChange.builder()
-           .change("{change}")
-           .transaction(transactionBuilder -> transactionBuilder)
-           .nextValue("{nextValue}")
-           .previousValue("{previousValue}")
-           .build()
- </code></pre>
- </div>
+ * ChangeTransactionInteractionIdChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTransactionInteractionIdChange changeTransactionInteractionIdChange = ChangeTransactionInteractionIdChange.builder()
+ *             .change("{change}")
+ *             .transaction(transactionBuilder -> transactionBuilder)
+ *             .nextValue("{nextValue}")
+ *             .previousValue("{previousValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTransactionInteractionIdChangeBuilder implements Builder<ChangeTransactionInteractionIdChange> {
@@ -32,13 +34,17 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
     private String previousValue;
 
     /**
-     *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
+     <*  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>>
      */
 
     public ChangeTransactionInteractionIdChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeTransactionInteractionIdChangeBuilder transaction(
             Function<com.commercetools.history.models.change_value.TransactionChangeValueBuilder, com.commercetools.history.models.change_value.TransactionChangeValueBuilder> builder) {
@@ -48,16 +54,28 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeTransactionInteractionIdChangeBuilder transaction(
             final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
         this.transaction = transaction;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeTransactionInteractionIdChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeTransactionInteractionIdChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;

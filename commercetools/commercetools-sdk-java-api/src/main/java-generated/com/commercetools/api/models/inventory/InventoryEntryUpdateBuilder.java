@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntryUpdate inventoryEntryUpdate = InventoryEntryUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * InventoryEntryUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryUpdate inventoryEntryUpdate = InventoryEntryUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate> {
@@ -25,10 +27,18 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
 
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public InventoryEntryUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryEntryUpdateBuilder actions(
             final com.commercetools.api.models.inventory.InventoryEntryUpdateAction... actions) {
@@ -36,11 +46,19 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InventoryEntryUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryEntryUpdateBuilder plusActions(
             final com.commercetools.api.models.inventory.InventoryEntryUpdateAction... actions) {
@@ -51,6 +69,10 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InventoryEntryUpdateBuilder plusActions(
             Function<com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.inventory.InventoryEntryUpdateAction>> builder) {
         if (this.actions == null) {
@@ -60,6 +82,10 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
             builder.apply(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryEntryUpdateBuilder withActions(
             Function<com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.inventory.InventoryEntryUpdateAction>> builder) {

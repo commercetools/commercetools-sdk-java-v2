@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCustomerSetDefaultShippingAddressAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetDefaultShippingAddressActionImpl
         implements MyCustomerSetDefaultShippingAddressAction, ModelBase {
@@ -36,13 +39,25 @@ public class MyCustomerSetDefaultShippingAddressActionImpl
         this.action = SET_DEFAULT_SHIPPING_ADDRESS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     <>
+     */
 
     public String getAddressKey() {
         return this.addressKey;

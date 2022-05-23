@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeAmountAuthorizedChange changeAmountAuthorizedChange = ChangeAmountAuthorizedChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeAmountAuthorizedChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeAmountAuthorizedChange changeAmountAuthorizedChange = ChangeAmountAuthorizedChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmountAuthorizedChange> {
@@ -29,7 +31,7 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
     private com.commercetools.history.models.common.Money nextValue;
 
     /**
-     *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
+     <*  <p>Internal Update action for <code>changeAmountAuthorized</code></p>>
      */
 
     public ChangeAmountAuthorizedChangeBuilder change(final String change) {
@@ -37,11 +39,19 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAmountAuthorizedChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAmountAuthorizedChangeBuilder previousValue(
             final com.commercetools.history.models.common.Money previousValue) {
@@ -49,11 +59,19 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAmountAuthorizedChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAmountAuthorizedChangeBuilder nextValue(
             final com.commercetools.history.models.common.Money nextValue) {

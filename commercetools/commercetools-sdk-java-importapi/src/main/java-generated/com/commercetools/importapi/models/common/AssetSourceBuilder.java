@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AssetSource assetSource = AssetSource.builder()
-           .uri("{uri}")
-           .build()
- </code></pre>
- </div>
+ * AssetSourceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssetSource assetSource = AssetSource.builder()
+ *             .uri("{uri}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetSourceBuilder implements Builder<AssetSource> {
@@ -33,10 +35,18 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     @Nullable
     private String contentType;
 
+    /**
+     <>
+     */
+
     public AssetSourceBuilder uri(final String uri) {
         this.uri = uri;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AssetSourceBuilder key(@Nullable final String key) {
         this.key = key;
@@ -44,7 +54,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>The width and height of the Asset Source.</p>
+     <*  <p>The width and height of the Asset Source.</p>>
      */
 
     public AssetSourceBuilder dimensions(
@@ -54,7 +64,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>The width and height of the Asset Source.</p>
+     <*  <p>The width and height of the Asset Source.</p>>
      */
 
     public AssetSourceBuilder dimensions(
@@ -62,6 +72,10 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         this.dimensions = dimensions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AssetSourceBuilder contentType(@Nullable final String contentType) {
         this.contentType = contentType;

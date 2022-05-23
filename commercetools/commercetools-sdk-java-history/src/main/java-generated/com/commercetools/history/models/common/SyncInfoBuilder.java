@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SyncInfo syncInfo = SyncInfo.builder()
-           .channel(channelBuilder -> channelBuilder)
-           .externalId("{externalId}")
-           .syncedAt("{syncedAt}")
-           .build()
- </code></pre>
- </div>
+ * SyncInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SyncInfo syncInfo = SyncInfo.builder()
+ *             .channel(channelBuilder -> channelBuilder)
+ *             .externalId("{externalId}")
+ *             .syncedAt("{syncedAt}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyncInfoBuilder implements Builder<SyncInfo> {
@@ -28,11 +30,19 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     private String syncedAt;
 
+    /**
+     <>
+     */
+
     public SyncInfoBuilder channel(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SyncInfoBuilder channel(final com.commercetools.history.models.common.Reference channel) {
         this.channel = channel;
@@ -40,13 +50,17 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     <*  <p>Can be used to reference an external order instance, file etc.</p>>
      */
 
     public SyncInfoBuilder externalId(final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SyncInfoBuilder syncedAt(final String syncedAt) {
         this.syncedAt = syncedAt;

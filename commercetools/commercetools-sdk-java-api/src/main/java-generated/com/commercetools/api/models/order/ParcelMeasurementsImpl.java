@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ParcelMeasurements
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
 
@@ -39,17 +42,33 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     public ParcelMeasurementsImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Integer getHeightInMillimeter() {
         return this.heightInMillimeter;
     }
+
+    /**
+     <>
+     */
 
     public Integer getLengthInMillimeter() {
         return this.lengthInMillimeter;
     }
 
+    /**
+     <>
+     */
+
     public Integer getWidthInMillimeter() {
         return this.widthInMillimeter;
     }
+
+    /**
+     <>
+     */
 
     public Integer getWeightInGram() {
         return this.weightInGram;

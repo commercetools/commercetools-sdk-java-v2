@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountPagedQueryResponse productDiscountPagedQueryResponse = ProductDiscountPagedQueryResponse.builder()
-           .limit(0.3)
-           .offset(0.3)
-           .count(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountPagedQueryResponse productDiscountPagedQueryResponse = ProductDiscountPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .offset(0.3)
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountPagedQueryResponseBuilder implements Builder<ProductDiscountPagedQueryResponse> {
@@ -37,7 +39,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder limit(final Long limit) {
@@ -46,7 +48,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder offset(final Long offset) {
@@ -55,7 +57,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Actual number of results returned.</p>
+     <*  <p>Actual number of results returned.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder count(final Long count) {
@@ -64,7 +66,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     <*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -73,7 +75,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>ProductDiscounts matching the query.</p>
+     <*  <p>ProductDiscounts matching the query.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder results(
@@ -83,7 +85,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>ProductDiscounts matching the query.</p>
+     <*  <p>ProductDiscounts matching the query.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder results(
@@ -93,7 +95,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>ProductDiscounts matching the query.</p>
+     <*  <p>ProductDiscounts matching the query.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder plusResults(
@@ -106,7 +108,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>ProductDiscounts matching the query.</p>
+     <*  <p>ProductDiscounts matching the query.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder plusResults(
@@ -120,7 +122,7 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>ProductDiscounts matching the query.</p>
+     <*  <p>ProductDiscounts matching the query.</p>>
      */
 
     public ProductDiscountPagedQueryResponseBuilder withResults(

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetCustomLineItemTaxedPriceChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemTaxedPriceChangeImpl implements SetCustomLineItemTaxedPriceChange, ModelBase {
 
@@ -47,28 +50,49 @@ public class SetCustomLineItemTaxedPriceChangeImpl implements SetCustomLineItemT
         this.type = SET_CUSTOM_LINE_ITEM_TAXED_PRICE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setCustomLineItemTaxedPrice</code></p>
+     <*  <p>Update action for <code>setCustomLineItemTaxedPrice</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
         return this.customLineItem;
     }
 
+    /**
+     <>
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Money getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {
         return this.previousValue;

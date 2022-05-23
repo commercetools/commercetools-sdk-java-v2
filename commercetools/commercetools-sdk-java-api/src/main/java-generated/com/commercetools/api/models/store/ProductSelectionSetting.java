@@ -15,22 +15,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionSetting productSelectionSetting = ProductSelectionSetting.builder()
-           .productSelection(productSelectionBuilder -> productSelectionBuilder)
-           .active(true)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionSetting
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionSetting productSelectionSetting = ProductSelectionSetting.builder()
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .active(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionSettingImpl.class)
 public interface ProductSelectionSetting {
 
     /**
-     *  <p>Reference to a Product Selection</p>
+     <*  <p>Reference to a Product Selection</p>>
      */
     @NotNull
     @Valid
@@ -38,7 +41,7 @@ public interface ProductSelectionSetting {
     public ProductSelectionReference getProductSelection();
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     <*  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>>
      */
     @NotNull
     @JsonProperty("active")

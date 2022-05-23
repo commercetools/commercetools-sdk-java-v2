@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemovePriceChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
 
@@ -46,28 +49,49 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
         this.type = REMOVE_PRICE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for removing prices</p>
+     <*  <p>Update action for removing prices</p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     <>
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Price getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Price getNextValue() {
         return this.nextValue;

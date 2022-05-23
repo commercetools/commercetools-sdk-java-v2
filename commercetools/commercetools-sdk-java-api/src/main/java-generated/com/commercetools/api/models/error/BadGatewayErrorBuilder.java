@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   BadGatewayError badGatewayError = BadGatewayError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * BadGatewayErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     BadGatewayError badGatewayError = BadGatewayError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
@@ -23,15 +25,27 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public BadGatewayErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public BadGatewayErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public BadGatewayErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

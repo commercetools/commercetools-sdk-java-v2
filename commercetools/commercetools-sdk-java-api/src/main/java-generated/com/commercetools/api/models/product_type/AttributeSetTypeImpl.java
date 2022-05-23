@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AttributeSetType
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
 
@@ -32,9 +35,17 @@ public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
         this.name = SET;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product_type.AttributeType getElementType() {
         return this.elementType;

@@ -14,15 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentChangeTransactionTimestampAction paymentChangeTransactionTimestampAction = PaymentChangeTransactionTimestampAction.builder()
-           .transactionId("{transactionId}")
-           .timestamp(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ * PaymentChangeTransactionTimestampAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentChangeTransactionTimestampAction paymentChangeTransactionTimestampAction = PaymentChangeTransactionTimestampAction.builder()
+ *             .transactionId("{transactionId}")
+ *             .timestamp(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentChangeTransactionTimestampActionImpl.class)
@@ -30,10 +33,16 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
 
     String CHANGE_TRANSACTION_TIMESTAMP = "changeTransactionTimestamp";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("timestamp")
     public ZonedDateTime getTimestamp();

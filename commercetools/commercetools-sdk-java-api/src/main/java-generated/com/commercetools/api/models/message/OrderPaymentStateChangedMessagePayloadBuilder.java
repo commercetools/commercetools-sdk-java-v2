@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderPaymentStateChangedMessagePayload orderPaymentStateChangedMessagePayload = OrderPaymentStateChangedMessagePayload.builder()
-           .paymentState(PaymentState.BALANCE_DUE)
-           .build()
- </code></pre>
- </div>
+ * OrderPaymentStateChangedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderPaymentStateChangedMessagePayload orderPaymentStateChangedMessagePayload = OrderPaymentStateChangedMessagePayload.builder()
+ *             .paymentState(PaymentState.BALANCE_DUE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<OrderPaymentStateChangedMessagePayload> {
@@ -26,11 +28,19 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
     @Nullable
     private com.commercetools.api.models.order.PaymentState oldPaymentState;
 
+    /**
+     <>
+     */
+
     public OrderPaymentStateChangedMessagePayloadBuilder paymentState(
             final com.commercetools.api.models.order.PaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderPaymentStateChangedMessagePayloadBuilder oldPaymentState(
             @Nullable final com.commercetools.api.models.order.PaymentState oldPaymentState) {

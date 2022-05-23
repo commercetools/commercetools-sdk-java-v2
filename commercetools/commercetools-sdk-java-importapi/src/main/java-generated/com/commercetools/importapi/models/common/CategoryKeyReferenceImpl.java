@@ -34,13 +34,18 @@ public class CategoryKeyReferenceImpl implements CategoryKeyReference, ModelBase
         this.typeId = ReferenceType.findEnum("category");
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     <*  <p>The type of the referenced resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AddExternalImageChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddExternalImageChangeImpl implements AddExternalImageChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
         this.type = ADD_EXTERNAL_IMAGE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update actions for adding an external image</p>
+     <*  <p>Update actions for adding an external image</p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.common.Image> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.Image> getNextValue() {
         return this.nextValue;

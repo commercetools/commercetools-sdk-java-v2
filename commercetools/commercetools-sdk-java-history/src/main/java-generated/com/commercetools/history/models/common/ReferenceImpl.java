@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * Reference
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceImpl implements Reference, ModelBase {
 
@@ -31,9 +34,17 @@ public class ReferenceImpl implements Reference, ModelBase {
     public ReferenceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;

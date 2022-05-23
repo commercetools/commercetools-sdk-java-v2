@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProjectChangeOrderSearchStatusAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeOrderSearchStatusActionImpl implements ProjectChangeOrderSearchStatusAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ProjectChangeOrderSearchStatusActionImpl implements ProjectChangeOr
         this.action = CHANGE_ORDER_SEARCH_STATUS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     <*  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>>
      */
+
     public com.commercetools.api.models.project.OrderSearchStatus getStatus() {
         return this.status;
     }

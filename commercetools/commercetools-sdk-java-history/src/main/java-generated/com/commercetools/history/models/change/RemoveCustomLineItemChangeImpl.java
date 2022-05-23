@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemoveCustomLineItemChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
         this.type = REMOVE_CUSTOM_LINE_ITEM_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for adding and removing custom line items</p>
+     <*  <p>Update action for adding and removing custom line items</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.CustomLineItem getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.CustomLineItem getPreviousValue() {
         return this.previousValue;

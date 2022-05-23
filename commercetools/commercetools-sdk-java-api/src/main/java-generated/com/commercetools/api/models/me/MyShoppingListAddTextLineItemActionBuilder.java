@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListAddTextLineItemAction myShoppingListAddTextLineItemAction = MyShoppingListAddTextLineItemAction.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListAddTextLineItemActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListAddTextLineItemAction myShoppingListAddTextLineItemAction = MyShoppingListAddTextLineItemAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MyShoppingListAddTextLineItemAction> {
@@ -37,7 +39,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder name(
@@ -47,7 +49,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder name(
@@ -57,7 +59,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder description(
@@ -67,7 +69,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder description(
@@ -76,10 +78,18 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MyShoppingListAddTextLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyShoppingListAddTextLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
@@ -87,7 +97,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder custom(
@@ -97,7 +107,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder custom(

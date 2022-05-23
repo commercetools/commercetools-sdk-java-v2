@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ReviewSetTextAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetTextActionImpl implements ReviewSetTextAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ReviewSetTextActionImpl implements ReviewSetTextAction, ModelBase {
         this.action = SET_TEXT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     <*  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
      */
+
     public String getText() {
         return this.text;
     }

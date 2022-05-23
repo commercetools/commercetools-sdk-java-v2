@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PriceFunction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceFunctionImpl implements PriceFunction, ModelBase {
 
@@ -32,11 +35,16 @@ public class PriceFunctionImpl implements PriceFunction, ModelBase {
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     <*  <p>Currency code compliant to ISO 4217.</p>>
      */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
+
+    /**
+     <>
+     */
 
     public String getFunction() {
         return this.function;

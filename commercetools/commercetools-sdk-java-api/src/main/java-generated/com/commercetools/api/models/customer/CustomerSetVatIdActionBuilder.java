@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetVatIdAction customerSetVatIdAction = CustomerSetVatIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetVatIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetVatIdAction customerSetVatIdAction = CustomerSetVatIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAction> {
@@ -24,7 +26,7 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
     private String vatId;
 
     /**
-     *  <p>If not defined, the vat Id is unset.</p>
+     <*  <p>If not defined, the vat Id is unset.</p>>
      */
 
     public CustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {

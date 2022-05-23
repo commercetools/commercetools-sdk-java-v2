@@ -9,15 +9,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InvalidFieldError invalidFieldError = InvalidFieldError.builder()
-           .message("{message}")
-           .field("{field}")
-           .build()
- </code></pre>
- </div>
+ * InvalidFieldErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidFieldError invalidFieldError = InvalidFieldError.builder()
+ *             .message("{message}")
+ *             .field("{field}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
@@ -33,15 +35,27 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     @Nullable
     private java.util.List<java.lang.Object> allowedValues;
 
+    /**
+     <>
+     */
+
     public InvalidFieldErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InvalidFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InvalidFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -51,25 +65,45 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InvalidFieldErrorBuilder field(final String field) {
         this.field = field;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
         this.invalidValue = invalidValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
         this.allowedValues = new ArrayList<>(Arrays.asList(allowedValues));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
         this.allowedValues = allowedValues;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {
         if (this.allowedValues == null) {

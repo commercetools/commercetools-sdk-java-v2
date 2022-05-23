@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerGroupSetCustomTypeAction customerGroupSetCustomTypeAction = CustomerGroupSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerGroupSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroupSetCustomTypeAction customerGroupSetCustomTypeAction = CustomerGroupSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupSetCustomTypeActionBuilder implements Builder<CustomerGroupSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     <*  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>>
      */
 
     public CustomerGroupSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     <*  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>>
      */
 
     public CustomerGroupSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     <*  <p>Sets the Custom Fields fields for the CustomerGroup.</p>>
      */
 
     public CustomerGroupSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class CustomerGroupSetCustomTypeActionBuilder implements Builder<Customer
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     <*  <p>Sets the Custom Fields fields for the CustomerGroup.</p>>
      */
 
     public CustomerGroupSetCustomTypeActionBuilder fields(

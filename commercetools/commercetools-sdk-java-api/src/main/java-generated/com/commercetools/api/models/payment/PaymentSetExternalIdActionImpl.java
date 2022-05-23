@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentSetExternalIdAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetExternalIdActionImpl implements PaymentSetExternalIdAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class PaymentSetExternalIdActionImpl implements PaymentSetExternalIdActio
         this.action = SET_EXTERNAL_ID;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getExternalId() {
         return this.externalId;

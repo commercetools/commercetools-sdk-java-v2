@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCustomerSetVatIdAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetVatIdActionImpl implements MyCustomerSetVatIdAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class MyCustomerSetVatIdActionImpl implements MyCustomerSetVatIdAction, M
         this.action = SET_VAT_ID;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getVatId() {
         return this.vatId;

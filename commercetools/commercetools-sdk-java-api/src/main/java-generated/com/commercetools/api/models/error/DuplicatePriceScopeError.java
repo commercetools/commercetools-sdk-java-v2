@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicatePriceScopeError duplicatePriceScopeError = DuplicatePriceScopeError.builder()
-           .message("{message}")
-           .plusConflictingPrices(conflictingPricesBuilder -> conflictingPricesBuilder)
-           .build()
- </code></pre>
- </div>
+ * DuplicatePriceScopeError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicatePriceScopeError duplicatePriceScopeError = DuplicatePriceScopeError.builder()
+ *             .message("{message}")
+ *             .plusConflictingPrices(conflictingPricesBuilder -> conflictingPricesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicatePriceScopeErrorImpl.class)
@@ -31,6 +34,9 @@ public interface DuplicatePriceScopeError extends ErrorObject {
 
     String DUPLICATE_PRICE_SCOPE = "DuplicatePriceScope";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("conflictingPrices")

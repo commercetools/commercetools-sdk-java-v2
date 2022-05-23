@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeAddPlainEnumValueAction productTypeAddPlainEnumValueAction = ProductTypeAddPlainEnumValueAction.builder()
-           .attributeName("{attributeName}")
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeAddPlainEnumValueActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeAddPlainEnumValueAction productTypeAddPlainEnumValueAction = ProductTypeAddPlainEnumValueAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<ProductTypeAddPlainEnumValueAction> {
@@ -25,10 +27,18 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     private com.commercetools.api.models.product_type.AttributePlainEnumValue value;
 
+    /**
+     <>
+     */
+
     public ProductTypeAddPlainEnumValueActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeAddPlainEnumValueActionBuilder value(
             Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
@@ -36,6 +46,10 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeAddPlainEnumValueActionBuilder value(
             final com.commercetools.api.models.product_type.AttributePlainEnumValue value) {

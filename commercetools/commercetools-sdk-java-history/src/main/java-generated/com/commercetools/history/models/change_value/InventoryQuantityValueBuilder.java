@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryQuantityValue inventoryQuantityValue = InventoryQuantityValue.builder()
-           .quantityOnStock(1)
-           .availableQuantity(1)
-           .build()
- </code></pre>
- </div>
+ * InventoryQuantityValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryQuantityValue inventoryQuantityValue = InventoryQuantityValue.builder()
+ *             .quantityOnStock(1)
+ *             .availableQuantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityValue> {
@@ -24,10 +26,18 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
 
     private Integer availableQuantity;
 
+    /**
+     <>
+     */
+
     public InventoryQuantityValueBuilder quantityOnStock(final Integer quantityOnStock) {
         this.quantityOnStock = quantityOnStock;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryQuantityValueBuilder availableQuantity(final Integer availableQuantity) {
         this.availableQuantity = availableQuantity;

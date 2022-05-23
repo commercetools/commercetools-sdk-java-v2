@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeChangeLabelAction typeChangeLabelAction = TypeChangeLabelAction.builder()
-           .fieldName("{fieldName}")
-           .label(labelBuilder -> labelBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeChangeLabelAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeLabelAction typeChangeLabelAction = TypeChangeLabelAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeLabelActionImpl.class)
@@ -32,14 +35,14 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     String CHANGE_LABEL = "changeLabel";
 
     /**
-     *  <p>Name of the Field Definition to update.</p>
+     <*  <p>Name of the Field Definition to update.</p>>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @NotNull
     @Valid

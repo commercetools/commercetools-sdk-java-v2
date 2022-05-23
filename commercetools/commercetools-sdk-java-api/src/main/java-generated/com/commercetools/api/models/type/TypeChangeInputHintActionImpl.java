@@ -38,20 +38,26 @@ public class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction,
         this.action = CHANGE_INPUT_HINT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     <*  <p><code>name</code> of the Field Definition to update.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
+
     public com.commercetools.api.models.type.TypeTextInputHint getInputHint() {
         return this.inputHint;
     }

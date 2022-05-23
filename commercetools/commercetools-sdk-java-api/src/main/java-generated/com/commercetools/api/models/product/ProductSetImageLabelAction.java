@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetImageLabelAction productSetImageLabelAction = ProductSetImageLabelAction.builder()
-           .imageUrl("{imageUrl}")
-           .build()
- </code></pre>
- </div>
+ * ProductSetImageLabelAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetImageLabelAction productSetImageLabelAction = ProductSetImageLabelAction.builder()
+ *             .imageUrl("{imageUrl}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetImageLabelActionImpl.class)
@@ -28,25 +31,37 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
     String SET_IMAGE_LABEL = "setImageLabel";
 
+    /**
+     <>
+     */
+
     @JsonProperty("sku")
     public String getSku();
+
+    /**
+     <>
+     */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *  <p>The URL of the image.</p>
+     <*  <p>The URL of the image.</p>>
      */
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
 
     /**
-     *  <p>The new image label. If left blank or set to null, the label is removed.</p>
+     <*  <p>The new image label. If left blank or set to null, the label is removed.</p>>
      */
 
     @JsonProperty("label")
     public String getLabel();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

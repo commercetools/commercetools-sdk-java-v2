@@ -9,22 +9,24 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   FacetRange facetRange = FacetRange.builder()
-           .from(0.3)
-           .fromStr("{fromStr}")
-           .to(0.3)
-           .toStr("{toStr}")
-           .count(0.3)
-           .total(0.3)
-           .min(0.3)
-           .max(0.3)
-           .mean(0.3)
-           .build()
- </code></pre>
- </div>
+ * FacetRangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FacetRange facetRange = FacetRange.builder()
+ *             .from(0.3)
+ *             .fromStr("{fromStr}")
+ *             .to(0.3)
+ *             .toStr("{toStr}")
+ *             .count(0.3)
+ *             .total(0.3)
+ *             .min(0.3)
+ *             .max(0.3)
+ *             .mean(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FacetRangeBuilder implements Builder<FacetRange> {
@@ -50,50 +52,90 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
 
     private Double mean;
 
+    /**
+     <>
+     */
+
     public FacetRangeBuilder from(final Double from) {
         this.from = from;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public FacetRangeBuilder fromStr(final String fromStr) {
         this.fromStr = fromStr;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public FacetRangeBuilder to(final Double to) {
         this.to = to;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public FacetRangeBuilder toStr(final String toStr) {
         this.toStr = toStr;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public FacetRangeBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public FacetRangeBuilder productCount(@Nullable final Long productCount) {
         this.productCount = productCount;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public FacetRangeBuilder total(final Double total) {
         this.total = total;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public FacetRangeBuilder min(final Double min) {
         this.min = min;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public FacetRangeBuilder max(final Double max) {
         this.max = max;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public FacetRangeBuilder mean(final Double mean) {
         this.mean = mean;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ParcelTrackingData
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
 
@@ -31,9 +34,17 @@ public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
     public ParcelTrackingDataImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {
         return this.trackingData;

@@ -10,18 +10,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductProjectionPagedSearchResponse productProjectionPagedSearchResponse = ProductProjectionPagedSearchResponse.builder()
-           .limit(0.3)
-           .count(0.3)
-           .offset(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .facets(facetsBuilder -> facetsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductProjectionPagedSearchResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductProjectionPagedSearchResponse productProjectionPagedSearchResponse = ProductProjectionPagedSearchResponse.builder()
+ *             .limit(0.3)
+ *             .count(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .facets(facetsBuilder -> facetsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductProjectionPagedSearchResponseBuilder implements Builder<ProductProjectionPagedSearchResponse> {
@@ -40,7 +42,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     private com.commercetools.api.models.product.FacetResults facets;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public ProductProjectionPagedSearchResponseBuilder limit(final Long limit) {
@@ -48,10 +50,18 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionPagedSearchResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionPagedSearchResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -59,7 +69,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public ProductProjectionPagedSearchResponseBuilder offset(final Long offset) {
@@ -67,17 +77,29 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionPagedSearchResponseBuilder results(
             final com.commercetools.api.models.product.ProductProjection... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionPagedSearchResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product.ProductProjection> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionPagedSearchResponseBuilder plusResults(
             final com.commercetools.api.models.product.ProductProjection... results) {
@@ -88,6 +110,10 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionPagedSearchResponseBuilder plusResults(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         if (this.results == null) {
@@ -97,6 +123,10 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionPagedSearchResponseBuilder withResults(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         this.results = new ArrayList<>();
@@ -104,11 +134,19 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionPagedSearchResponseBuilder facets(
             Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResultsBuilder> builder) {
         this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionPagedSearchResponseBuilder facets(
             final com.commercetools.api.models.product.FacetResults facets) {

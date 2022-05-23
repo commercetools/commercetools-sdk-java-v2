@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelDraft parcelDraft = ParcelDraft.builder()
-           .build()
- </code></pre>
- </div>
+ * ParcelDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelDraft parcelDraft = ParcelDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelDraftBuilder implements Builder<ParcelDraft> {
@@ -33,11 +35,19 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     <>
+     */
+
     public ParcelDraftBuilder measurements(
             Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
         this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelDraftBuilder measurements(
             @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
@@ -45,11 +55,19 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelDraftBuilder trackingData(
             Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelDraftBuilder trackingData(
             @Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
@@ -58,7 +76,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     <*  <p>The delivery items contained in this parcel.</p>>
      */
 
     public ParcelDraftBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -67,7 +85,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     <*  <p>The delivery items contained in this parcel.</p>>
      */
 
     public ParcelDraftBuilder items(
@@ -77,7 +95,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     <*  <p>The delivery items contained in this parcel.</p>>
      */
 
     public ParcelDraftBuilder plusItems(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -89,7 +107,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     <*  <p>The delivery items contained in this parcel.</p>>
      */
 
     public ParcelDraftBuilder plusItems(
@@ -102,7 +120,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     <*  <p>The delivery items contained in this parcel.</p>>
      */
 
     public ParcelDraftBuilder withItems(
@@ -113,7 +131,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     <*  <p>Custom Fields of this parcel.</p>>
      */
 
     public ParcelDraftBuilder custom(
@@ -123,7 +141,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     <*  <p>Custom Fields of this parcel.</p>>
      */
 
     public ParcelDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

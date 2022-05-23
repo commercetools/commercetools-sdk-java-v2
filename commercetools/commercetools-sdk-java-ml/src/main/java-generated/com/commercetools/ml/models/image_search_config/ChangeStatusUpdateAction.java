@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeStatusUpdateAction changeStatusUpdateAction = ChangeStatusUpdateAction.builder()
-           .status(ImageSearchConfigStatus.ON)
-           .build()
- </code></pre>
- </div>
+ * ChangeStatusUpdateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeStatusUpdateAction changeStatusUpdateAction = ChangeStatusUpdateAction.builder()
+ *             .status(ImageSearchConfigStatus.ON)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeStatusUpdateActionImpl.class)
@@ -28,6 +31,9 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
 
     String CHANGE_STATUS = "changeStatus";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("status")
     public ImageSearchConfigStatus getStatus();

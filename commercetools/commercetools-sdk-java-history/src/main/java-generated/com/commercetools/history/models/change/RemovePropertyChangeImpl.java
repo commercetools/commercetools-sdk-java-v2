@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemovePropertyChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase {
 
@@ -38,23 +41,33 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
         this.type = REMOVE_PROPERTY_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     <*  <p>Update action for <code>removeProperty</code> on custom objects</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>Value path to the property that was removed</p>
+     <*  <p>Value path to the property that was removed</p>>
      */
+
     public String getPath() {
         return this.path;
     }
+
+    /**
+     <>
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountedLineItemPrice discountedLineItemPrice = DiscountedLineItemPrice.builder()
-           .value(valueBuilder -> valueBuilder)
-           .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountedLineItemPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPrice discountedLineItemPrice = DiscountedLineItemPrice.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineItemPrice> {
@@ -25,16 +27,28 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
 
     private java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts;
 
+    /**
+     <>
+     */
+
     public DiscountedLineItemPriceBuilder value(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountedLineItemPriceBuilder value(final com.commercetools.history.models.common.Money value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountedLineItemPriceBuilder includedDiscounts(
             final com.commercetools.history.models.common.DiscountedLineItemPortion... includedDiscounts) {
@@ -42,11 +56,19 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountedLineItemPriceBuilder includedDiscounts(
             final java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts) {
         this.includedDiscounts = includedDiscounts;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
             final com.commercetools.history.models.common.DiscountedLineItemPortion... includedDiscounts) {
@@ -57,6 +79,10 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
             Function<com.commercetools.history.models.common.DiscountedLineItemPortionBuilder, com.commercetools.history.models.common.DiscountedLineItemPortionBuilder> builder) {
         if (this.includedDiscounts == null) {
@@ -66,6 +92,10 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
             builder.apply(com.commercetools.history.models.common.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountedLineItemPriceBuilder withIncludedDiscounts(
             Function<com.commercetools.history.models.common.DiscountedLineItemPortionBuilder, com.commercetools.history.models.common.DiscountedLineItemPortionBuilder> builder) {

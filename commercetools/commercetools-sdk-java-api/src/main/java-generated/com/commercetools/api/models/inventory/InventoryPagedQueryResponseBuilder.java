@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryPagedQueryResponse inventoryPagedQueryResponse = InventoryPagedQueryResponse.builder()
-           .limit(0.3)
-           .count(0.3)
-           .offset(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * InventoryPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryPagedQueryResponse inventoryPagedQueryResponse = InventoryPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .count(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPagedQueryResponse> {
@@ -37,7 +39,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public InventoryPagedQueryResponseBuilder limit(final Long limit) {
@@ -45,10 +47,18 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InventoryPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -56,7 +66,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public InventoryPagedQueryResponseBuilder offset(final Long offset) {
@@ -64,17 +74,29 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InventoryPagedQueryResponseBuilder results(
             final com.commercetools.api.models.inventory.InventoryEntry... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InventoryPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.inventory.InventoryEntry... results) {
@@ -85,6 +107,10 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InventoryPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
         if (this.results == null) {
@@ -93,6 +119,10 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         this.results.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InventoryPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShippingMethodChangeIsDefaultAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodChangeIsDefaultAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodCh
         this.action = CHANGE_IS_DEFAULT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Only one ShippingMethod in a project can be default.</p>
+     <*  <p>Only one ShippingMethod in a project can be default.</p>>
      */
+
     public Boolean getIsDefault() {
         return this.isDefault;
     }

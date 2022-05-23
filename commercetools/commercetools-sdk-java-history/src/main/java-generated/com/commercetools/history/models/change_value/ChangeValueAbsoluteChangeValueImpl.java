@@ -35,9 +35,17 @@ public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteCh
         this.type = ABSOLUTE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.Money> getMoney() {
         return this.money;

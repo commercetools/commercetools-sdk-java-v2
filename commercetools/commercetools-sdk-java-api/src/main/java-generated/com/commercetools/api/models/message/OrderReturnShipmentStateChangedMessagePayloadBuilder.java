@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderReturnShipmentStateChangedMessagePayload orderReturnShipmentStateChangedMessagePayload = OrderReturnShipmentStateChangedMessagePayload.builder()
-           .returnItemId("{returnItemId}")
-           .returnShipmentState(ReturnShipmentState.ADVISED)
-           .build()
- </code></pre>
- </div>
+ * OrderReturnShipmentStateChangedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderReturnShipmentStateChangedMessagePayload orderReturnShipmentStateChangedMessagePayload = OrderReturnShipmentStateChangedMessagePayload.builder()
+ *             .returnItemId("{returnItemId}")
+ *             .returnShipmentState(ReturnShipmentState.ADVISED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnShipmentStateChangedMessagePayloadBuilder
@@ -25,10 +27,18 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
 
     private com.commercetools.api.models.order.ReturnShipmentState returnShipmentState;
 
+    /**
+     <>
+     */
+
     public OrderReturnShipmentStateChangedMessagePayloadBuilder returnItemId(final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderReturnShipmentStateChangedMessagePayloadBuilder returnShipmentState(
             final com.commercetools.api.models.order.ReturnShipmentState returnShipmentState) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetInputTipChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
 
@@ -43,27 +46,41 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
         this.type = SET_INPUT_TIP_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setInputTip</code> on product types</p>
+     <*  <p>Update action for <code>setInputTip</code> on product types</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>The name of the updated attribute.</p>
+     <*  <p>The name of the updated attribute.</p>>
      */
+
     public String getAttributeName() {
         return this.attributeName;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
         return this.previousValue;

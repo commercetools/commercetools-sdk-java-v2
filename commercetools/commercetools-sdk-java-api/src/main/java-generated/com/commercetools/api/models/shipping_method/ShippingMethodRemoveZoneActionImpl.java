@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShippingMethodRemoveZoneAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZoneAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZ
         this.action = REMOVE_ZONE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
         return this.zone;

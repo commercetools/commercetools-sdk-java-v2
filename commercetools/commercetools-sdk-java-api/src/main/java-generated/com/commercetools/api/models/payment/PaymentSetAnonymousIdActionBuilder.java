@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetAnonymousIdAction paymentSetAnonymousIdAction = PaymentSetAnonymousIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetAnonymousIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetAnonymousIdAction paymentSetAnonymousIdAction = PaymentSetAnonymousIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetAnonymousIdActionBuilder implements Builder<PaymentSetAnonymousIdAction> {
@@ -24,7 +26,7 @@ public class PaymentSetAnonymousIdActionBuilder implements Builder<PaymentSetAno
     private String anonymousId;
 
     /**
-     *  <p>Anonymous ID of the anonymous customer that this payment belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>
+     <*  <p>Anonymous ID of the anonymous customer that this payment belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>>
      */
 
     public PaymentSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {

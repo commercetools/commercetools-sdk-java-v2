@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingInfoImportDraft shippingInfoImportDraft = ShippingInfoImportDraft.builder()
-           .shippingMethodName("{shippingMethodName}")
-           .price(priceBuilder -> priceBuilder)
-           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingInfoImportDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingInfoImportDraft shippingInfoImportDraft = ShippingInfoImportDraft.builder()
+ *             .shippingMethodName("{shippingMethodName}")
+ *             .price(priceBuilder -> priceBuilder)
+ *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImportDraft> {
@@ -48,21 +50,37 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     @Nullable
     private com.commercetools.importapi.models.orders.ShippingMethodState shippingMethodState;
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder shippingMethodName(final String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingInfoImportDraftBuilder price(final com.commercetools.importapi.models.common.TypedMoney price) {
         this.price = price;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder price(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
         this.price = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingInfoImportDraftBuilder shippingRate(
             Function<com.commercetools.importapi.models.orders.ShippingRateDraftBuilder, com.commercetools.importapi.models.orders.ShippingRateDraftBuilder> builder) {
@@ -71,17 +89,29 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder shippingRate(
             final com.commercetools.importapi.models.orders.ShippingRateDraft shippingRate) {
         this.shippingRate = shippingRate;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder taxRate(
             Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.importapi.models.prices.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingInfoImportDraftBuilder taxRate(
             @Nullable final com.commercetools.importapi.models.prices.TaxRate taxRate) {
@@ -90,7 +120,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>References a tax category by key.</p>
+     <*  <p>References a tax category by key.</p>>
      */
 
     public ShippingInfoImportDraftBuilder taxCategory(
@@ -101,7 +131,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>References a tax category by key.</p>
+     <*  <p>References a tax category by key.</p>>
      */
 
     public ShippingInfoImportDraftBuilder taxCategory(
@@ -111,7 +141,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>References a shipping method by key.</p>
+     <*  <p>References a shipping method by key.</p>>
      */
 
     public ShippingInfoImportDraftBuilder shippingMethod(
@@ -123,7 +153,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>References a shipping method by key.</p>
+     <*  <p>References a shipping method by key.</p>>
      */
 
     public ShippingInfoImportDraftBuilder shippingMethod(
@@ -133,7 +163,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
      */
 
     public ShippingInfoImportDraftBuilder deliveries(
@@ -143,7 +173,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
      */
 
     public ShippingInfoImportDraftBuilder deliveries(
@@ -153,7 +183,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
      */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
@@ -166,7 +196,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
      */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
@@ -179,7 +209,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
      */
 
     public ShippingInfoImportDraftBuilder withDeliveries(
@@ -189,6 +219,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder discountedPrice(
             Function<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder> builder) {
         this.discountedPrice = builder
@@ -197,11 +231,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoImportDraftBuilder discountedPrice(
             @Nullable final com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft discountedPrice) {
         this.discountedPrice = discountedPrice;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingInfoImportDraftBuilder shippingMethodState(
             @Nullable final com.commercetools.importapi.models.orders.ShippingMethodState shippingMethodState) {

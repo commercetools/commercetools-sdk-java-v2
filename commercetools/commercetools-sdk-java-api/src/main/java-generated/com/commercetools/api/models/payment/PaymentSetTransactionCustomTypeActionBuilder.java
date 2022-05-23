@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetTransactionCustomTypeAction paymentSetTransactionCustomTypeAction = PaymentSetTransactionCustomTypeAction.builder()
-           .transactionId("{transactionId}")
-           .build()
- </code></pre>
- </div>
+ * PaymentSetTransactionCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetTransactionCustomTypeAction paymentSetTransactionCustomTypeAction = PaymentSetTransactionCustomTypeAction.builder()
+ *             .transactionId("{transactionId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<PaymentSetTransactionCustomTypeAction> {
@@ -30,13 +32,17 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public PaymentSetTransactionCustomTypeActionBuilder transactionId(final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     <*  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder type(
@@ -46,7 +52,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     <*  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder type(
@@ -56,7 +62,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     <*  <p>Sets the Custom Fields fields for the Transaction.</p>>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder fields(
@@ -66,7 +72,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     <*  <p>Sets the Custom Fields fields for the Transaction.</p>>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder fields(

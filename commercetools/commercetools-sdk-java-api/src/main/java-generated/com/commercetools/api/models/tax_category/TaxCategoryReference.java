@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Reference to a TaxCategory.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxCategoryReference taxCategoryReference = TaxCategoryReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Reference to a TaxCategory.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategoryReference taxCategoryReference = TaxCategoryReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryReferenceImpl.class)
@@ -33,14 +34,14 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     String TAX_CATEGORY = "tax-category";
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     <*  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>>
      */
     @Valid
     @JsonProperty("obj")
     public TaxCategory getObj();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>
+     <*  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>>
      */
     @NotNull
     @JsonProperty("id")

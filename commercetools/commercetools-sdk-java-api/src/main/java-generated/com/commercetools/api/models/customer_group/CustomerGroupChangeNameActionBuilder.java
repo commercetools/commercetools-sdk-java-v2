@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerGroupChangeNameAction customerGroupChangeNameAction = CustomerGroupChangeNameAction.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * CustomerGroupChangeNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroupChangeNameAction customerGroupChangeNameAction = CustomerGroupChangeNameAction.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGroupChangeNameAction> {
@@ -22,7 +24,7 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
     private String name;
 
     /**
-     *  <p>New name of the CustomerGroup.</p>
+     <*  <p>New name of the CustomerGroup.</p>>
      */
 
     public CustomerGroupChangeNameActionBuilder name(final String name) {

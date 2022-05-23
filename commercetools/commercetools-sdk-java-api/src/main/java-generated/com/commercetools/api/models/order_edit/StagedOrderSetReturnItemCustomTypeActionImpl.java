@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderSetReturnItemCustomTypeAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetReturnItemCustomTypeActionImpl
         implements StagedOrderSetReturnItemCustomTypeAction, ModelBase {
@@ -40,24 +43,34 @@ public class StagedOrderSetReturnItemCustomTypeActionImpl
         this.action = SET_RETURN_ITEM_CUSTOM_TYPE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getReturnItemId() {
         return this.returnItemId;
     }
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     <*  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>>
      */
+
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     <*  <p>Sets the Custom Fields fields for the ReturnItem.</p>>
      */
+
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

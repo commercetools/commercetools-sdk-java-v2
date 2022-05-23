@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetAssetCustomTypeAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCustomTypeAction, ModelBase {
 
@@ -53,40 +56,66 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
         this.action = SET_ASSET_CUSTOM_TYPE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetId() {
         return this.assetId;
     }
+
+    /**
+     <>
+     */
 
     public String getAssetKey() {
         return this.assetKey;
     }
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
      */
+
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
      */
+
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

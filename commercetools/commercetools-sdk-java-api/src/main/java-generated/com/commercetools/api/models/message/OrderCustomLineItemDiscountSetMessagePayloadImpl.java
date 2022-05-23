@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderCustomLineItemDiscountSetMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemDiscountSetMessagePayloadImpl
         implements OrderCustomLineItemDiscountSetMessagePayload, ModelBase {
@@ -40,17 +43,33 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
         this.type = ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
         return this.discountedPricePerQuantity;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;

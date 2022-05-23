@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeNestedType attributeNestedType = AttributeNestedType.builder()
-           .typeReference(typeReferenceBuilder -> typeReferenceBuilder)
-           .build()
- </code></pre>
- </div>
+ * AttributeNestedTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeNestedType attributeNestedType = AttributeNestedType.builder()
+ *             .typeReference(typeReferenceBuilder -> typeReferenceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> {
@@ -23,7 +25,7 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
     private com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference;
 
     /**
-     *  <p>References a product type by key.</p>
+     <*  <p>References a product type by key.</p>>
      */
 
     public AttributeNestedTypeBuilder typeReference(
@@ -35,7 +37,7 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
     }
 
     /**
-     *  <p>References a product type by key.</p>
+     <*  <p>References a product type by key.</p>>
      */
 
     public AttributeNestedTypeBuilder typeReference(

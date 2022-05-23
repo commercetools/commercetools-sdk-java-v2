@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentChangeTransactionStateAction paymentChangeTransactionStateAction = PaymentChangeTransactionStateAction.builder()
-           .transactionId("{transactionId}")
-           .state(TransactionState.INITIAL)
-           .build()
- </code></pre>
- </div>
+ * PaymentChangeTransactionStateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentChangeTransactionStateAction paymentChangeTransactionStateAction = PaymentChangeTransactionStateAction.builder()
+ *             .transactionId("{transactionId}")
+ *             .state(TransactionState.INITIAL)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentChangeTransactionStateActionImpl.class)
@@ -29,10 +32,16 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
 
     String CHANGE_TRANSACTION_STATE = "changeTransactionState";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("state")
     public TransactionState getState();

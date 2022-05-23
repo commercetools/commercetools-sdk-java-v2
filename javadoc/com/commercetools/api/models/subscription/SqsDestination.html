@@ -84,17 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SqsDestinationImpl.html" title="class in com.commercetools.api.models.subscription">SqsDestinationImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.28">SqsDestination</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.31">SqsDestination</a></span><span class="extends-implements">
 extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">SqsDestination
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   SqsDestination sqsDestination = SqsDestination.builder()
-           .accessKey("{accessKey}")
-           .accessSecret("{accessSecret}")
-           .queueUrl("{queueUrl}")
-           .region("{region}")
-           .build()
+     SqsDestination sqsDestination = SqsDestination.builder()
+             .accessKey("{accessKey}")
+             .accessSecret("{accessSecret}")
+             .queueUrl("{queueUrl}")
+             .region("{region}")
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -134,16 +137,24 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAccessKey()">getAccessKey</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAccessSecret()">getAccessSecret</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getQueueUrl()">getQueueUrl</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getRegion()">getRegion</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -188,7 +199,7 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="SQS">
 <h3>SQS</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.32">SQS</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.35">SQS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.subscription.SqsDestination.SQS">Constant Field Values</a></dd>
@@ -207,88 +218,92 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getAccessKey()">
 <h3>getAccessKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.34">getAccessKey</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.40">getAccessKey</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAccessSecret()">
 <h3>getAccessSecret</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.38">getAccessSecret</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.47">getAccessSecret</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQueueUrl()">
 <h3>getQueueUrl</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.42">getQueueUrl</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.54">getQueueUrl</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRegion()">
 <h3>getRegion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.46">getRegion</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.61">getRegion</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAccessKey(java.lang.String)">
 <h3>setAccessKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.50">setAccessKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accessKey)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.65">setAccessKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accessKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAccessSecret(java.lang.String)">
 <h3>setAccessSecret</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.52">setAccessSecret</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accessSecret)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.67">setAccessSecret</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accessSecret)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setQueueUrl(java.lang.String)">
 <h3>setQueueUrl</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.54">setQueueUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;queueUrl)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.69">setQueueUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;queueUrl)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRegion(java.lang.String)">
 <h3>setRegion</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.56">setRegion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;region)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.71">setRegion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;region)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.58">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.73">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.subscription.SqsDestination)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">SqsDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.71">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">SqsDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.86">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.subscription.SqsDestination)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">SqsDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.75">builder</a></span>&#8203;<span class="parameters">(<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">SqsDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.90">builder</a></span>&#8203;<span class="parameters">(<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSqsDestination(java.util.function.Function)">
 <h3>withSqsDestination</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.79">withSqsDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.94">withSqsDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.83">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SqsDestination.html" title="interface in com.commercetools.api.models.subscription">SqsDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SqsDestination.html#line.98">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

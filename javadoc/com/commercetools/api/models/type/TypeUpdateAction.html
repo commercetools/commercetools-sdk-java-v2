@@ -88,15 +88,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TypeAddEnumValueActionImpl.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionImpl</a></code>, <code><a href="TypeAddFieldDefinitionActionImpl.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionImpl</a></code>, <code><a href="TypeAddLocalizedEnumValueActionImpl.html" title="class in com.commercetools.api.models.type">TypeAddLocalizedEnumValueActionImpl</a></code>, <code><a href="TypeChangeEnumValueLabelActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueLabelActionImpl</a></code>, <code><a href="TypeChangeEnumValueOrderActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueOrderActionImpl</a></code>, <code><a href="TypeChangeFieldDefinitionLabelActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionLabelActionImpl</a></code>, <code><a href="TypeChangeFieldDefinitionOrderActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionImpl</a></code>, <code><a href="TypeChangeInputHintActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionImpl</a></code>, <code><a href="TypeChangeKeyActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeKeyActionImpl</a></code>, <code><a href="TypeChangeLabelActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionImpl</a></code>, <code><a href="TypeChangeLocalizedEnumValueLabelActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelActionImpl</a></code>, <code><a href="TypeChangeLocalizedEnumValueOrderActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueOrderActionImpl</a></code>, <code><a href="TypeChangeNameActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeNameActionImpl</a></code>, <code><a href="TypeRemoveFieldDefinitionActionImpl.html" title="class in com.commercetools.api.models.type">TypeRemoveFieldDefinitionActionImpl</a></code>, <code><a href="TypeSetDescriptionActionImpl.html" title="class in com.commercetools.api.models.type">TypeSetDescriptionActionImpl</a></code>, <code><a href="TypeUpdateActionImpl.html" title="class in com.commercetools.api.models.type">TypeUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.26">TypeUpdateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.29">TypeUpdateAction</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</span></div>
-<div class="block">Example to create a subtype instance using the builder pattern
+<div class="block">TypeUpdateAction
+
+ <hr>
+ Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   TypeUpdateAction typeUpdateAction = TypeUpdateAction.addEnumValueBuilder()
-           fieldName("{fieldName}")
-           value(valueBuilder -> valueBuilder)
-           .build()
+     TypeUpdateAction typeUpdateAction = TypeUpdateAction.addEnumValueBuilder()
+             fieldName("{fieldName}")
+             value(valueBuilder -> valueBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -154,7 +157,9 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAction()">getAction</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeRemoveFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveFieldDefinitionActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#removeFieldDefinitionBuilder()">removeFieldDefinitionBuilder</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -188,7 +193,8 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.47">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.53">getAction</a></span>()</div>
+<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</code></dd>
@@ -198,103 +204,103 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="addEnumValueBuilder()">
 <h3>addEnumValueBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.51">addEnumValueBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.57">addEnumValueBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addFieldDefinitionBuilder()">
 <h3>addFieldDefinitionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.55">addFieldDefinitionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.61">addFieldDefinitionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addLocalizedEnumValueBuilder()">
 <h3>addLocalizedEnumValueBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddLocalizedEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddLocalizedEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.59">addLocalizedEnumValueBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddLocalizedEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddLocalizedEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.65">addLocalizedEnumValueBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeEnumValueLabelBuilder()">
 <h3>changeEnumValueLabelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.63">changeEnumValueLabelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.69">changeEnumValueLabelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeEnumValueOrderBuilder()">
 <h3>changeEnumValueOrderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.67">changeEnumValueOrderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.73">changeEnumValueOrderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeFieldDefinitionLabelBuilder()">
 <h3>changeFieldDefinitionLabelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.71">changeFieldDefinitionLabelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.77">changeFieldDefinitionLabelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeFieldDefinitionOrderBuilder()">
 <h3>changeFieldDefinitionOrderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.75">changeFieldDefinitionOrderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.81">changeFieldDefinitionOrderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeInputHintBuilder()">
 <h3>changeInputHintBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.79">changeInputHintBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.85">changeInputHintBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeKeyBuilder()">
 <h3>changeKeyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeKeyActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.83">changeKeyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeKeyActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.89">changeKeyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeLabelBuilder()">
 <h3>changeLabelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.87">changeLabelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.93">changeLabelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeLocalizedEnumValueLabelBuilder()">
 <h3>changeLocalizedEnumValueLabelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLocalizedEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.91">changeLocalizedEnumValueLabelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLocalizedEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.97">changeLocalizedEnumValueLabelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeLocalizedEnumValueOrderBuilder()">
 <h3>changeLocalizedEnumValueOrderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.95">changeLocalizedEnumValueOrderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.101">changeLocalizedEnumValueOrderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeNameBuilder()">
 <h3>changeNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeNameActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.99">changeNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeNameActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.105">changeNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeFieldDefinitionBuilder()">
 <h3>removeFieldDefinitionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeRemoveFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.103">removeFieldDefinitionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeRemoveFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.109">removeFieldDefinitionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescriptionBuilder()">
 <h3>setDescriptionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeSetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeSetDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.107">setDescriptionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeSetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeSetDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.113">setDescriptionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTypeUpdateAction(java.util.function.Function)">
 <h3>withTypeUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.111">withTypeUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.117">withTypeUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.115">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.121">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -84,19 +84,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ChangeLocalizedEnumValueLabelChangeImpl.html" title="class in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.32">ChangeLocalizedEnumValueLabelChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.35">ChangeLocalizedEnumValueLabelChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ChangeLocalizedEnumValueLabelChange
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ChangeLocalizedEnumValueLabelChange changeLocalizedEnumValueLabelChange = ChangeLocalizedEnumValueLabelChange.builder()
-           .change("{change}")
-           .fieldName("{fieldName}")
-           .attributeName("{attributeName}")
-           .valueKey("{valueKey}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
+     ChangeLocalizedEnumValueLabelChange changeLocalizedEnumValueLabelChange = ChangeLocalizedEnumValueLabelChange.builder()
+             .change("{change}")
+             .fieldName("{fieldName}")
+             .attributeName("{attributeName}")
+             .valueKey("{valueKey}")
+             .previousValue(previousValueBuilder -> previousValueBuilder)
+             .nextValue(nextValueBuilder -> nextValueBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -137,31 +140,37 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAttributeName()">getAttributeName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The name of the attribute updated.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getChange()">getChange</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Update action for <code>changeLocalizedEnumValueLabel</code> on types</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFieldName()">getFieldName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The name of the field definition updated.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNextValue()">getNextValue</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPreviousValue()">getPreviousValue</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getValueKey()">getValueKey</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Key of the values that was updated</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -213,7 +222,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE">
 <h3>CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.36">CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.39">CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.ChangeLocalizedEnumValueLabelChange.CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE">Constant Field Values</a></dd>
@@ -232,7 +241,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.38">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.44">getType</a></span>()</div>
+<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -243,8 +253,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.45">getChange</a></span>()</div>
-<div class="block"><p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.51">getChange</a></span>()</div>
+<div class="block"><*  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getChange()">getChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -255,24 +265,24 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getFieldName()">
 <h3>getFieldName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.52">getFieldName</a></span>()</div>
-<div class="block"><p>The name of the field definition updated.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.58">getFieldName</a></span>()</div>
+<div class="block"><*  <p>The name of the field definition updated.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAttributeName()">
 <h3>getAttributeName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.59">getAttributeName</a></span>()</div>
-<div class="block"><p>The name of the attribute updated.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.65">getAttributeName</a></span>()</div>
+<div class="block"><*  <p>The name of the attribute updated.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValueKey()">
 <h3>getValueKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.66">getValueKey</a></span>()</div>
-<div class="block"><p>Key of the values that was updated</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.72">getValueKey</a></span>()</div>
+<div class="block"><*  <p>Key of the values that was updated</p>></div>
 </section>
 </li>
 <li>
@@ -280,7 +290,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.70">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.79">getPreviousValue</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -288,13 +299,14 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.75">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.87">getNextValue</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.80">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.92">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -304,67 +316,67 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setFieldName(java.lang.String)">
 <h3>setFieldName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.82">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.94">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributeName(java.lang.String)">
 <h3>setAttributeName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.84">setAttributeName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.96">setAttributeName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValueKey(java.lang.String)">
 <h3>setValueKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.86">setValueKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;valueKey)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.98">setValueKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;valueKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(com.commercetools.history.models.common.LocalizedString)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.88">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.100">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(com.commercetools.history.models.common.LocalizedString)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.90">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.102">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.92">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.104">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.ChangeLocalizedEnumValueLabelChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.96">of</a></span>&#8203;<span class="parameters">(<a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.108">of</a></span>&#8203;<span class="parameters">(<a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeLocalizedEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.107">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeLocalizedEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.119">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.ChangeLocalizedEnumValueLabelChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeLocalizedEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.111">builder</a></span>&#8203;<span class="parameters">(<a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeLocalizedEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.123">builder</a></span>&#8203;<span class="parameters">(<a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withChangeLocalizedEnumValueLabelChange(java.util.function.Function)">
 <h3>withChangeLocalizedEnumValueLabelChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.116">withChangeLocalizedEnumValueLabelChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.128">withChangeLocalizedEnumValueLabelChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.120">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeLocalizedEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangeLocalizedEnumValueLabelChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeLocalizedEnumValueLabelChange.html#line.132">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

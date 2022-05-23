@@ -80,16 +80,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductSelectionAssignmentImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionAssignmentImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.30">ProductSelectionAssignment</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.31">ProductSelectionAssignment</a></span></div>
 <div class="block"><p>Specifies which Product is assigned to which ProductSelection.</p>
 
+ <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ProductSelectionAssignment productSelectionAssignment = ProductSelectionAssignment.builder()
-           .product(productBuilder -> productBuilder)
-           .productSelection(productSelectionBuilder -> productSelectionBuilder)
-           .build()
+     ProductSelectionAssignment productSelectionAssignment = ProductSelectionAssignment.builder()
+             .product(productBuilder -> productBuilder)
+             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -115,12 +116,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProduct()">getProduct</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Reference to a Product that is assigned to the ProductSelection.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProductSelection()">getProductSelection</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Reference to the ProductSelection that this assignment is part of.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -159,8 +160,8 @@ loadScripts(document, 'script');</script>
 <h3>getProduct</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.37">getProduct</a></span>()</div>
-<div class="block"><p>Reference to a Product that is assigned to the ProductSelection.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.38">getProduct</a></span>()</div>
+<div class="block"><*  <p>Reference to a Product that is assigned to the ProductSelection.</p>></div>
 </section>
 </li>
 <li>
@@ -168,56 +169,56 @@ loadScripts(document, 'script');</script>
 <h3>getProductSelection</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.45">getProductSelection</a></span>()</div>
-<div class="block"><p>Reference to the ProductSelection that this assignment is part of.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.46">getProductSelection</a></span>()</div>
+<div class="block"><*  <p>Reference to the ProductSelection that this assignment is part of.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProduct(com.commercetools.api.models.product.ProductReference)">
 <h3>setProduct</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.50">setProduct</a></span>&#8203;<span class="parameters">(<a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.51">setProduct</a></span>&#8203;<span class="parameters">(<a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionReference)">
 <h3>setProductSelection</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.52">setProductSelection</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a>&nbsp;productSelection)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.53">setProductSelection</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a>&nbsp;productSelection)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.54">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.55">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_selection.ProductSelectionAssignment)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAssignmentBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionAssignmentBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.65">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAssignmentBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionAssignmentBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.66">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.product_selection.ProductSelectionAssignment)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAssignmentBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionAssignmentBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.69">builder</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAssignmentBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionAssignmentBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductSelectionAssignment(java.util.function.Function)">
 <h3>withProductSelectionAssignment</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.73">withProductSelectionAssignment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.74">withProductSelectionAssignment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.77">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionAssignment.html#line.78">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

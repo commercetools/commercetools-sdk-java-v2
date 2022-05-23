@@ -84,15 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StagedOrderSetReturnPaymentStateActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.28">StagedOrderSetReturnPaymentStateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.31">StagedOrderSetReturnPaymentStateAction</a></span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">StagedOrderSetReturnPaymentStateAction
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   StagedOrderSetReturnPaymentStateAction stagedOrderSetReturnPaymentStateAction = StagedOrderSetReturnPaymentStateAction.builder()
-           .returnItemId("{returnItemId}")
-           .paymentState(ReturnPaymentState.NON_REFUNDABLE)
-           .build()
+     StagedOrderSetReturnPaymentStateAction stagedOrderSetReturnPaymentStateAction = StagedOrderSetReturnPaymentStateAction.builder()
+             .returnItemId("{returnItemId}")
+             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -132,10 +135,14 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="../order/ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPaymentState()">getPaymentState</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getReturnItemId()">getReturnItemId</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -177,7 +184,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <li>
 <section class="detail" id="SET_RETURN_PAYMENT_STATE">
 <h3>SET_RETURN_PAYMENT_STATE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.32">SET_RETURN_PAYMENT_STATE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.35">SET_RETURN_PAYMENT_STATE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order_edit.StagedOrderSetReturnPaymentStateAction.SET_RETURN_PAYMENT_STATE">Constant Field Values</a></dd>
@@ -196,62 +203,64 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="getReturnItemId()">
 <h3>getReturnItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.34">getReturnItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.40">getReturnItemId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPaymentState()">
 <h3>getPaymentState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../order/ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.38">getPaymentState</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../order/ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.47">getPaymentState</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setReturnItemId(java.lang.String)">
 <h3>setReturnItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.42">setReturnItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.51">setReturnItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPaymentState(com.commercetools.api.models.order.ReturnPaymentState)">
 <h3>setPaymentState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.44">setPaymentState</a></span>&#8203;<span class="parameters">(<a href="../order/ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a>&nbsp;paymentState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.53">setPaymentState</a></span>&#8203;<span class="parameters">(<a href="../order/ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a>&nbsp;paymentState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.46">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.55">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.StagedOrderSetReturnPaymentStateAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetReturnPaymentStateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.57">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetReturnPaymentStateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.66">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.StagedOrderSetReturnPaymentStateAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetReturnPaymentStateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.61">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetReturnPaymentStateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedOrderSetReturnPaymentStateAction(java.util.function.Function)">
 <h3>withStagedOrderSetReturnPaymentStateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.66">withStagedOrderSetReturnPaymentStateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.75">withStagedOrderSetReturnPaymentStateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.71">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderSetReturnPaymentStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetReturnPaymentStateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetReturnPaymentStateAction.html#line.80">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

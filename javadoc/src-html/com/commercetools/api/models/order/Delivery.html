@@ -30,111 +30,123 @@
 <span class="source-line-no">017</span><span id="line.17">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
 <span class="source-line-no">019</span><span id="line.19">/**</span>
-<span class="source-line-no">020</span><span id="line.20"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">021</span><span id="line.21"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">023</span><span id="line.23">   Delivery delivery = Delivery.builder()</span>
-<span class="source-line-no">024</span><span id="line.24">           .id("{id}")</span>
-<span class="source-line-no">025</span><span id="line.25">           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">026</span><span id="line.26">           .plusItems(itemsBuilder -&gt; itemsBuilder)</span>
-<span class="source-line-no">027</span><span id="line.27">           .plusParcels(parcelsBuilder -&gt; parcelsBuilder)</span>
-<span class="source-line-no">028</span><span id="line.28">           .build()</span>
-<span class="source-line-no">029</span><span id="line.29"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> &lt;/div&gt;</span>
-<span class="source-line-no">031</span><span id="line.31"> */</span>
-<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = DeliveryImpl.class)</span>
-<span class="source-line-no">034</span><span id="line.34">public interface Delivery extends com.commercetools.api.models.Customizable&lt;Delivery&gt; {</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;Platform-generated unique identifier of the Delivery.&lt;/p&gt;</span>
-<span class="source-line-no">038</span><span id="line.38">     */</span>
-<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
-<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("id")</span>
-<span class="source-line-no">041</span><span id="line.41">    public String getId();</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    @NotNull</span>
-<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("createdAt")</span>
-<span class="source-line-no">045</span><span id="line.45">    public ZonedDateTime getCreatedAt();</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.&lt;/p&gt;</span>
-<span class="source-line-no">049</span><span id="line.49">     */</span>
-<span class="source-line-no">050</span><span id="line.50">    @NotNull</span>
-<span class="source-line-no">051</span><span id="line.51">    @Valid</span>
-<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("items")</span>
-<span class="source-line-no">053</span><span id="line.53">    public List&lt;DeliveryItem&gt; getItems();</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    @NotNull</span>
-<span class="source-line-no">056</span><span id="line.56">    @Valid</span>
-<span class="source-line-no">057</span><span id="line.57">    @JsonProperty("parcels")</span>
-<span class="source-line-no">058</span><span id="line.58">    public List&lt;Parcel&gt; getParcels();</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    @Valid</span>
-<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("address")</span>
-<span class="source-line-no">062</span><span id="line.62">    public Address getAddress();</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;Custom Fields for the Transaction.&lt;/p&gt;</span>
-<span class="source-line-no">066</span><span id="line.66">     */</span>
-<span class="source-line-no">067</span><span id="line.67">    @Valid</span>
-<span class="source-line-no">068</span><span id="line.68">    @JsonProperty("custom")</span>
-<span class="source-line-no">069</span><span id="line.69">    public CustomFields getCustom();</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public void setId(final String id);</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    @JsonIgnore</span>
-<span class="source-line-no">076</span><span id="line.76">    public void setItems(final DeliveryItem... items);</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setItems(final List&lt;DeliveryItem&gt; items);</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @JsonIgnore</span>
-<span class="source-line-no">081</span><span id="line.81">    public void setParcels(final Parcel... parcels);</span>
+<span class="source-line-no">020</span><span id="line.20"> * Delivery</span>
+<span class="source-line-no">021</span><span id="line.21"> *</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;hr&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> *     Delivery delivery = Delivery.builder()</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .id("{id}")</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .plusItems(itemsBuilder -&gt; itemsBuilder)</span>
+<span class="source-line-no">030</span><span id="line.30"> *             .plusParcels(parcelsBuilder -&gt; parcelsBuilder)</span>
+<span class="source-line-no">031</span><span id="line.31"> *             .build()</span>
+<span class="source-line-no">032</span><span id="line.32"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">033</span><span id="line.33"> * &lt;/div&gt;</span>
+<span class="source-line-no">034</span><span id="line.34"> */</span>
+<span class="source-line-no">035</span><span id="line.35">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">036</span><span id="line.36">@JsonDeserialize(as = DeliveryImpl.class)</span>
+<span class="source-line-no">037</span><span id="line.37">public interface Delivery extends com.commercetools.api.models.Customizable&lt;Delivery&gt; {</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    /**</span>
+<span class="source-line-no">040</span><span id="line.40">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the Delivery.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">041</span><span id="line.41">     */</span>
+<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
+<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("id")</span>
+<span class="source-line-no">044</span><span id="line.44">    public String getId();</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    /**</span>
+<span class="source-line-no">047</span><span id="line.47">     &lt;&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     */</span>
+<span class="source-line-no">049</span><span id="line.49">    @NotNull</span>
+<span class="source-line-no">050</span><span id="line.50">    @JsonProperty("createdAt")</span>
+<span class="source-line-no">051</span><span id="line.51">    public ZonedDateTime getCreatedAt();</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    /**</span>
+<span class="source-line-no">054</span><span id="line.54">     &lt;*  &lt;p&gt;Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">055</span><span id="line.55">     */</span>
+<span class="source-line-no">056</span><span id="line.56">    @NotNull</span>
+<span class="source-line-no">057</span><span id="line.57">    @Valid</span>
+<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("items")</span>
+<span class="source-line-no">059</span><span id="line.59">    public List&lt;DeliveryItem&gt; getItems();</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    /**</span>
+<span class="source-line-no">062</span><span id="line.62">     &lt;&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     */</span>
+<span class="source-line-no">064</span><span id="line.64">    @NotNull</span>
+<span class="source-line-no">065</span><span id="line.65">    @Valid</span>
+<span class="source-line-no">066</span><span id="line.66">    @JsonProperty("parcels")</span>
+<span class="source-line-no">067</span><span id="line.67">    public List&lt;Parcel&gt; getParcels();</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    /**</span>
+<span class="source-line-no">070</span><span id="line.70">     &lt;&gt;</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">072</span><span id="line.72">    @Valid</span>
+<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("address")</span>
+<span class="source-line-no">074</span><span id="line.74">    public Address getAddress();</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    /**</span>
+<span class="source-line-no">077</span><span id="line.77">     &lt;*  &lt;p&gt;Custom Fields for the Transaction.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     */</span>
+<span class="source-line-no">079</span><span id="line.79">    @Valid</span>
+<span class="source-line-no">080</span><span id="line.80">    @JsonProperty("custom")</span>
+<span class="source-line-no">081</span><span id="line.81">    public CustomFields getCustom();</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public void setParcels(final List&lt;Parcel&gt; parcels);</span>
+<span class="source-line-no">083</span><span id="line.83">    public void setId(final String id);</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setAddress(final Address address);</span>
+<span class="source-line-no">085</span><span id="line.85">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setCustom(final CustomFields custom);</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public static Delivery of() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return new DeliveryImpl();</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public static Delivery of(final Delivery template) {</span>
-<span class="source-line-no">094</span><span id="line.94">        DeliveryImpl instance = new DeliveryImpl();</span>
-<span class="source-line-no">095</span><span id="line.95">        instance.setId(template.getId());</span>
-<span class="source-line-no">096</span><span id="line.96">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">097</span><span id="line.97">        instance.setItems(template.getItems());</span>
-<span class="source-line-no">098</span><span id="line.98">        instance.setParcels(template.getParcels());</span>
-<span class="source-line-no">099</span><span id="line.99">        instance.setAddress(template.getAddress());</span>
-<span class="source-line-no">100</span><span id="line.100">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">101</span><span id="line.101">        return instance;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public static DeliveryBuilder builder() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return DeliveryBuilder.of();</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public static DeliveryBuilder builder(final Delivery template) {</span>
-<span class="source-line-no">109</span><span id="line.109">        return DeliveryBuilder.of(template);</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    default &lt;T&gt; T withDelivery(Function&lt;Delivery, T&gt; helper) {</span>
-<span class="source-line-no">113</span><span id="line.113">        return helper.apply(this);</span>
+<span class="source-line-no">087</span><span id="line.87">    @JsonIgnore</span>
+<span class="source-line-no">088</span><span id="line.88">    public void setItems(final DeliveryItem... items);</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setItems(final List&lt;DeliveryItem&gt; items);</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    @JsonIgnore</span>
+<span class="source-line-no">093</span><span id="line.93">    public void setParcels(final Parcel... parcels);</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public void setParcels(final List&lt;Parcel&gt; parcels);</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public void setAddress(final Address address);</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public static Delivery of() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return new DeliveryImpl();</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public static Delivery of(final Delivery template) {</span>
+<span class="source-line-no">106</span><span id="line.106">        DeliveryImpl instance = new DeliveryImpl();</span>
+<span class="source-line-no">107</span><span id="line.107">        instance.setId(template.getId());</span>
+<span class="source-line-no">108</span><span id="line.108">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">109</span><span id="line.109">        instance.setItems(template.getItems());</span>
+<span class="source-line-no">110</span><span id="line.110">        instance.setParcels(template.getParcels());</span>
+<span class="source-line-no">111</span><span id="line.111">        instance.setAddress(template.getAddress());</span>
+<span class="source-line-no">112</span><span id="line.112">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">113</span><span id="line.113">        return instance;</span>
 <span class="source-line-no">114</span><span id="line.114">    }</span>
 <span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Delivery&gt; typeReference() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Delivery&gt;() {</span>
-<span class="source-line-no">118</span><span id="line.118">            @Override</span>
-<span class="source-line-no">119</span><span id="line.119">            public String toString() {</span>
-<span class="source-line-no">120</span><span id="line.120">                return "TypeReference&lt;Delivery&gt;";</span>
-<span class="source-line-no">121</span><span id="line.121">            }</span>
-<span class="source-line-no">122</span><span id="line.122">        };</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124">}</span>
+<span class="source-line-no">116</span><span id="line.116">    public static DeliveryBuilder builder() {</span>
+<span class="source-line-no">117</span><span id="line.117">        return DeliveryBuilder.of();</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public static DeliveryBuilder builder(final Delivery template) {</span>
+<span class="source-line-no">121</span><span id="line.121">        return DeliveryBuilder.of(template);</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    default &lt;T&gt; T withDelivery(Function&lt;Delivery, T&gt; helper) {</span>
+<span class="source-line-no">125</span><span id="line.125">        return helper.apply(this);</span>
+<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Delivery&gt; typeReference() {</span>
+<span class="source-line-no">129</span><span id="line.129">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Delivery&gt;() {</span>
+<span class="source-line-no">130</span><span id="line.130">            @Override</span>
+<span class="source-line-no">131</span><span id="line.131">            public String toString() {</span>
+<span class="source-line-no">132</span><span id="line.132">                return "TypeReference&lt;Delivery&gt;";</span>
+<span class="source-line-no">133</span><span id="line.133">            }</span>
+<span class="source-line-no">134</span><span id="line.134">        };</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136">}</span>
 
 
 

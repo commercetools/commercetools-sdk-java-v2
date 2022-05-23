@@ -28,73 +28,74 @@
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> &lt;p&gt;Reference to a ProductType.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">021</span><span id="line.21"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">023</span><span id="line.23">   ProductTypeReference productTypeReference = ProductTypeReference.builder()</span>
-<span class="source-line-no">024</span><span id="line.24">           .id("{id}")</span>
-<span class="source-line-no">025</span><span id="line.25">           .build()</span>
-<span class="source-line-no">026</span><span id="line.26"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> &lt;/div&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> */</span>
-<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = ProductTypeReferenceImpl.class)</span>
-<span class="source-line-no">031</span><span id="line.31">public interface ProductTypeReference extends Reference, com.commercetools.api.models.Identifiable&lt;ProductType&gt; {</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    String PRODUCT_TYPE = "product-type";</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    /**</span>
-<span class="source-line-no">036</span><span id="line.36">     *  &lt;p&gt;Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.&lt;/p&gt;</span>
-<span class="source-line-no">037</span><span id="line.37">     */</span>
-<span class="source-line-no">038</span><span id="line.38">    @Valid</span>
-<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("obj")</span>
-<span class="source-line-no">040</span><span id="line.40">    public ProductType getObj();</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;Platform-generated unique identifier of the referenced ProductType.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">     */</span>
-<span class="source-line-no">045</span><span id="line.45">    @NotNull</span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("id")</span>
-<span class="source-line-no">047</span><span id="line.47">    public String getId();</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public void setObj(final ProductType obj);</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public void setId(final String id);</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public static ProductTypeReference of() {</span>
-<span class="source-line-no">054</span><span id="line.54">        return new ProductTypeReferenceImpl();</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public static ProductTypeReference of(final ProductTypeReference template) {</span>
-<span class="source-line-no">058</span><span id="line.58">        ProductTypeReferenceImpl instance = new ProductTypeReferenceImpl();</span>
-<span class="source-line-no">059</span><span id="line.59">        instance.setId(template.getId());</span>
-<span class="source-line-no">060</span><span id="line.60">        instance.setObj(template.getObj());</span>
-<span class="source-line-no">061</span><span id="line.61">        return instance;</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public static ProductTypeReferenceBuilder builder() {</span>
-<span class="source-line-no">065</span><span id="line.65">        return ProductTypeReferenceBuilder.of();</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public static ProductTypeReferenceBuilder builder(final ProductTypeReference template) {</span>
-<span class="source-line-no">069</span><span id="line.69">        return ProductTypeReferenceBuilder.of(template);</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    default &lt;T&gt; T withProductTypeReference(Function&lt;ProductTypeReference, T&gt; helper) {</span>
-<span class="source-line-no">073</span><span id="line.73">        return helper.apply(this);</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeReference&gt; typeReference() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeReference&gt;() {</span>
-<span class="source-line-no">078</span><span id="line.78">            @Override</span>
-<span class="source-line-no">079</span><span id="line.79">            public String toString() {</span>
-<span class="source-line-no">080</span><span id="line.80">                return "TypeReference&lt;ProductTypeReference&gt;";</span>
-<span class="source-line-no">081</span><span id="line.81">            }</span>
-<span class="source-line-no">082</span><span id="line.82">        };</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84">}</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Reference to a ProductType.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> *     ProductTypeReference productTypeReference = ProductTypeReference.builder()</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .id("{id}")</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .build()</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;/div&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> */</span>
+<span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">031</span><span id="line.31">@JsonDeserialize(as = ProductTypeReferenceImpl.class)</span>
+<span class="source-line-no">032</span><span id="line.32">public interface ProductTypeReference extends Reference, com.commercetools.api.models.Identifiable&lt;ProductType&gt; {</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    String PRODUCT_TYPE = "product-type";</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    /**</span>
+<span class="source-line-no">037</span><span id="line.37">     &lt;*  &lt;p&gt;Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">038</span><span id="line.38">     */</span>
+<span class="source-line-no">039</span><span id="line.39">    @Valid</span>
+<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("obj")</span>
+<span class="source-line-no">041</span><span id="line.41">    public ProductType getObj();</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the referenced ProductType.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
+<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("id")</span>
+<span class="source-line-no">048</span><span id="line.48">    public String getId();</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    public void setObj(final ProductType obj);</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public void setId(final String id);</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public static ProductTypeReference of() {</span>
+<span class="source-line-no">055</span><span id="line.55">        return new ProductTypeReferenceImpl();</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    public static ProductTypeReference of(final ProductTypeReference template) {</span>
+<span class="source-line-no">059</span><span id="line.59">        ProductTypeReferenceImpl instance = new ProductTypeReferenceImpl();</span>
+<span class="source-line-no">060</span><span id="line.60">        instance.setId(template.getId());</span>
+<span class="source-line-no">061</span><span id="line.61">        instance.setObj(template.getObj());</span>
+<span class="source-line-no">062</span><span id="line.62">        return instance;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public static ProductTypeReferenceBuilder builder() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return ProductTypeReferenceBuilder.of();</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public static ProductTypeReferenceBuilder builder(final ProductTypeReference template) {</span>
+<span class="source-line-no">070</span><span id="line.70">        return ProductTypeReferenceBuilder.of(template);</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    default &lt;T&gt; T withProductTypeReference(Function&lt;ProductTypeReference, T&gt; helper) {</span>
+<span class="source-line-no">074</span><span id="line.74">        return helper.apply(this);</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeReference&gt; typeReference() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeReference&gt;() {</span>
+<span class="source-line-no">079</span><span id="line.79">            @Override</span>
+<span class="source-line-no">080</span><span id="line.80">            public String toString() {</span>
+<span class="source-line-no">081</span><span id="line.81">                return "TypeReference&lt;ProductTypeReference&gt;";</span>
+<span class="source-line-no">082</span><span id="line.82">            }</span>
+<span class="source-line-no">083</span><span id="line.83">        };</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85">}</span>
 
 
 

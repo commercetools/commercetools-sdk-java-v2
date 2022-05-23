@@ -84,17 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StagedOrderTransitionCustomLineItemStateActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.32">StagedOrderTransitionCustomLineItemStateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.35">StagedOrderTransitionCustomLineItemStateAction</a></span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">StagedOrderTransitionCustomLineItemStateAction
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   StagedOrderTransitionCustomLineItemStateAction stagedOrderTransitionCustomLineItemStateAction = StagedOrderTransitionCustomLineItemStateAction.builder()
-           .customLineItemId("{customLineItemId}")
-           .quantity(0.3)
-           .fromState(fromStateBuilder -> fromStateBuilder)
-           .toState(toStateBuilder -> toStateBuilder)
-           .build()
+     StagedOrderTransitionCustomLineItemStateAction stagedOrderTransitionCustomLineItemStateAction = StagedOrderTransitionCustomLineItemStateAction.builder()
+             .customLineItemId("{customLineItemId}")
+             .quantity(0.3)
+             .fromState(fromStateBuilder -> fromStateBuilder)
+             .toState(toStateBuilder -> toStateBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -134,22 +137,28 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getActualTransitionDate()">getActualTransitionDate</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustomLineItemId()">getCustomLineItemId</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFromState()">getFromState</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">ResourceIdentifier to a State.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getQuantity()">getQuantity</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getToState()">getToState</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">ResourceIdentifier to a State.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -201,7 +210,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <li>
 <section class="detail" id="TRANSITION_CUSTOM_LINE_ITEM_STATE">
 <h3>TRANSITION_CUSTOM_LINE_ITEM_STATE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.36">TRANSITION_CUSTOM_LINE_ITEM_STATE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.39">TRANSITION_CUSTOM_LINE_ITEM_STATE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction.TRANSITION_CUSTOM_LINE_ITEM_STATE">Constant Field Values</a></dd>
@@ -220,14 +229,16 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="getCustomLineItemId()">
 <h3>getCustomLineItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.38">getCustomLineItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.44">getCustomLineItemId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.42">getQuantity</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.51">getQuantity</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -235,8 +246,8 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <h3>getFromState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.49">getFromState</a></span>()</div>
-<div class="block"><p>ResourceIdentifier to a State.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.58">getFromState</a></span>()</div>
+<div class="block"><*  <p>ResourceIdentifier to a State.</p>></div>
 </section>
 </li>
 <li>
@@ -244,80 +255,81 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <h3>getToState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.57">getToState</a></span>()</div>
-<div class="block"><p>ResourceIdentifier to a State.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.66">getToState</a></span>()</div>
+<div class="block"><*  <p>ResourceIdentifier to a State.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getActualTransitionDate()">
 <h3>getActualTransitionDate</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.62">getActualTransitionDate</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.75">getActualTransitionDate</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomLineItemId(java.lang.String)">
 <h3>setCustomLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.65">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.78">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setQuantity(java.lang.Long)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.67">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.80">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFromState(com.commercetools.api.models.state.StateResourceIdentifier)">
 <h3>setFromState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.69">setFromState</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;fromState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.82">setFromState</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;fromState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setToState(com.commercetools.api.models.state.StateResourceIdentifier)">
 <h3>setToState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.71">setToState</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;toState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.84">setToState</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;toState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setActualTransitionDate(java.time.ZonedDateTime)">
 <h3>setActualTransitionDate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.73">setActualTransitionDate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;actualTransitionDate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.86">setActualTransitionDate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;actualTransitionDate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.75">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.88">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.79">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.92">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderTransitionCustomLineItemStateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.90">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderTransitionCustomLineItemStateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.103">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderTransitionCustomLineItemStateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.94">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderTransitionCustomLineItemStateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.107">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedOrderTransitionCustomLineItemStateAction(java.util.function.Function)">
 <h3>withStagedOrderTransitionCustomLineItemStateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.99">withStagedOrderTransitionCustomLineItemStateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.112">withStagedOrderTransitionCustomLineItemStateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.104">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#line.117">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

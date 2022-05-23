@@ -34,232 +34,236 @@
 <span class="source-line-no">021</span><span id="line.21">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">/**</span>
-<span class="source-line-no">024</span><span id="line.24"> &lt;p&gt;The representation of a Product Draft for the import purpose.&lt;/p&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">027</span><span id="line.27"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">029</span><span id="line.29">   ProductDraftImport productDraftImport = ProductDraftImport.builder()</span>
-<span class="source-line-no">030</span><span id="line.30">           .key("{key}")</span>
-<span class="source-line-no">031</span><span id="line.31">           .productType(productTypeBuilder -&gt; productTypeBuilder)</span>
-<span class="source-line-no">032</span><span id="line.32">           .name(nameBuilder -&gt; nameBuilder)</span>
-<span class="source-line-no">033</span><span id="line.33">           .slug(slugBuilder -&gt; slugBuilder)</span>
-<span class="source-line-no">034</span><span id="line.34">           .build()</span>
-<span class="source-line-no">035</span><span id="line.35"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">036</span><span id="line.36"> &lt;/div&gt;</span>
-<span class="source-line-no">037</span><span id="line.37"> */</span>
-<span class="source-line-no">038</span><span id="line.38">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">039</span><span id="line.39">@JsonDeserialize(as = ProductDraftImportImpl.class)</span>
-<span class="source-line-no">040</span><span id="line.40">public interface ProductDraftImport extends ImportResource {</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;The &lt;code&gt;productType&lt;/code&gt; of a Product. Maps to &lt;code&gt;Product.productType&lt;/code&gt;. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductType is created.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">     */</span>
-<span class="source-line-no">045</span><span id="line.45">    @NotNull</span>
-<span class="source-line-no">046</span><span id="line.46">    @Valid</span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("productType")</span>
-<span class="source-line-no">048</span><span id="line.48">    public ProductTypeKeyReference getProductType();</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    @NotNull</span>
-<span class="source-line-no">051</span><span id="line.51">    @Valid</span>
-<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("name")</span>
-<span class="source-line-no">053</span><span id="line.53">    public LocalizedString getName();</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    /**</span>
-<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.&lt;/p&gt;</span>
-<span class="source-line-no">057</span><span id="line.57">     */</span>
-<span class="source-line-no">058</span><span id="line.58">    @NotNull</span>
-<span class="source-line-no">059</span><span id="line.59">    @Valid</span>
-<span class="source-line-no">060</span><span id="line.60">    @JsonProperty("slug")</span>
-<span class="source-line-no">061</span><span id="line.61">    public LocalizedString getSlug();</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">     *  &lt;p&gt;Maps to &lt;code&gt;Product.description&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">065</span><span id="line.65">     */</span>
-<span class="source-line-no">066</span><span id="line.66">    @Valid</span>
-<span class="source-line-no">067</span><span id="line.67">    @JsonProperty("description")</span>
-<span class="source-line-no">068</span><span id="line.68">    public LocalizedString getDescription();</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">     *  &lt;p&gt;The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Categories are created.&lt;/p&gt;</span>
-<span class="source-line-no">072</span><span id="line.72">     */</span>
-<span class="source-line-no">073</span><span id="line.73">    @Valid</span>
-<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("categories")</span>
-<span class="source-line-no">075</span><span id="line.75">    public List&lt;CategoryKeyReference&gt; getCategories();</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">079</span><span id="line.79">     *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">080</span><span id="line.80">     *    "de": "Hundefutter",</span>
-<span class="source-line-no">081</span><span id="line.81">     *    "en": "dog food"</span>
-<span class="source-line-no">082</span><span id="line.82">     *  }</span>
-<span class="source-line-no">083</span><span id="line.83">     *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">084</span><span id="line.84">     */</span>
-<span class="source-line-no">085</span><span id="line.85">    @Valid</span>
-<span class="source-line-no">086</span><span id="line.86">    @JsonProperty("metaTitle")</span>
-<span class="source-line-no">087</span><span id="line.87">    public LocalizedString getMetaTitle();</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    /**</span>
-<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">091</span><span id="line.91">     *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">092</span><span id="line.92">     *    "de": "Hundefutter",</span>
-<span class="source-line-no">093</span><span id="line.93">     *    "en": "dog food"</span>
-<span class="source-line-no">094</span><span id="line.94">     *  }</span>
-<span class="source-line-no">095</span><span id="line.95">     *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">096</span><span id="line.96">     */</span>
-<span class="source-line-no">097</span><span id="line.97">    @Valid</span>
-<span class="source-line-no">098</span><span id="line.98">    @JsonProperty("metaDescription")</span>
-<span class="source-line-no">099</span><span id="line.99">    public LocalizedString getMetaDescription();</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    /**</span>
-<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">103</span><span id="line.103">     *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">104</span><span id="line.104">     *    "de": "Hundefutter",</span>
-<span class="source-line-no">105</span><span id="line.105">     *    "en": "dog food"</span>
-<span class="source-line-no">106</span><span id="line.106">     *  }</span>
-<span class="source-line-no">107</span><span id="line.107">     *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">108</span><span id="line.108">     */</span>
-<span class="source-line-no">109</span><span id="line.109">    @Valid</span>
-<span class="source-line-no">110</span><span id="line.110">    @JsonProperty("metaKeywords")</span>
-<span class="source-line-no">111</span><span id="line.111">    public LocalizedString getMetaKeywords();</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;The master Product variant. Required if the &lt;code&gt;variants&lt;/code&gt; array contains a Product Variant.&lt;/p&gt;</span>
-<span class="source-line-no">115</span><span id="line.115">     */</span>
-<span class="source-line-no">116</span><span id="line.116">    @Valid</span>
-<span class="source-line-no">117</span><span id="line.117">    @JsonProperty("masterVariant")</span>
-<span class="source-line-no">118</span><span id="line.118">    public ProductVariantDraftImport getMasterVariant();</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    /**</span>
-<span class="source-line-no">121</span><span id="line.121">     *  &lt;p&gt;An array of related Product Variants.&lt;/p&gt;</span>
-<span class="source-line-no">122</span><span id="line.122">     */</span>
-<span class="source-line-no">123</span><span id="line.123">    @Valid</span>
-<span class="source-line-no">124</span><span id="line.124">    @JsonProperty("variants")</span>
-<span class="source-line-no">125</span><span id="line.125">    public List&lt;ProductVariantDraftImport&gt; getVariants();</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    /**</span>
-<span class="source-line-no">128</span><span id="line.128">     *  &lt;p&gt;The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary TaxCategory is created.&lt;/p&gt;</span>
-<span class="source-line-no">129</span><span id="line.129">     */</span>
-<span class="source-line-no">130</span><span id="line.130">    @Valid</span>
-<span class="source-line-no">131</span><span id="line.131">    @JsonProperty("taxCategory")</span>
-<span class="source-line-no">132</span><span id="line.132">    public TaxCategoryKeyReference getTaxCategory();</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    /**</span>
-<span class="source-line-no">135</span><span id="line.135">     *  &lt;p&gt;Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.&lt;/p&gt;</span>
-<span class="source-line-no">136</span><span id="line.136">     *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">137</span><span id="line.137">     *    "en": [</span>
-<span class="source-line-no">138</span><span id="line.138">     *      { "text": "Multi tool" },</span>
-<span class="source-line-no">139</span><span id="line.139">     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }</span>
-<span class="source-line-no">140</span><span id="line.140">     *    ],</span>
-<span class="source-line-no">141</span><span id="line.141">     *    "de": [</span>
-<span class="source-line-no">142</span><span id="line.142">     *      {</span>
-<span class="source-line-no">143</span><span id="line.143">     *        "text": "Schweizer Messer",</span>
-<span class="source-line-no">144</span><span id="line.144">     *        "suggestTokenizer": {</span>
-<span class="source-line-no">145</span><span id="line.145">     *          "type": "custom",</span>
-<span class="source-line-no">146</span><span id="line.146">     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]</span>
-<span class="source-line-no">147</span><span id="line.147">     *        }</span>
-<span class="source-line-no">148</span><span id="line.148">     *      }</span>
-<span class="source-line-no">149</span><span id="line.149">     *    ]</span>
-<span class="source-line-no">150</span><span id="line.150">     *  }</span>
-<span class="source-line-no">151</span><span id="line.151">     *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">152</span><span id="line.152">     */</span>
-<span class="source-line-no">153</span><span id="line.153">    @Valid</span>
-<span class="source-line-no">154</span><span id="line.154">    @JsonProperty("searchKeywords")</span>
-<span class="source-line-no">155</span><span id="line.155">    public SearchKeywords getSearchKeywords();</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    /**</span>
-<span class="source-line-no">158</span><span id="line.158">     *  &lt;p&gt;The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary State is created.&lt;/p&gt;</span>
-<span class="source-line-no">159</span><span id="line.159">     */</span>
-<span class="source-line-no">160</span><span id="line.160">    @Valid</span>
-<span class="source-line-no">161</span><span id="line.161">    @JsonProperty("state")</span>
-<span class="source-line-no">162</span><span id="line.162">    public StateKeyReference getState();</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">     *  &lt;p&gt;If &lt;code&gt;publish&lt;/code&gt; is set to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;, both staged and current projections are set to the same value provided by the import data. If &lt;code&gt;publish&lt;/code&gt; is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether &lt;code&gt;publish&lt;/code&gt; is set or not.&lt;/p&gt;</span>
-<span class="source-line-no">166</span><span id="line.166">     */</span>
+<span class="source-line-no">024</span><span id="line.24"> *  &lt;p&gt;The representation of a Product Draft for the import purpose.&lt;/p&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> *</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;hr&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> *     ProductDraftImport productDraftImport = ProductDraftImport.builder()</span>
+<span class="source-line-no">031</span><span id="line.31"> *             .key("{key}")</span>
+<span class="source-line-no">032</span><span id="line.32"> *             .productType(productTypeBuilder -&gt; productTypeBuilder)</span>
+<span class="source-line-no">033</span><span id="line.33"> *             .name(nameBuilder -&gt; nameBuilder)</span>
+<span class="source-line-no">034</span><span id="line.34"> *             .slug(slugBuilder -&gt; slugBuilder)</span>
+<span class="source-line-no">035</span><span id="line.35"> *             .build()</span>
+<span class="source-line-no">036</span><span id="line.36"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">037</span><span id="line.37"> * &lt;/div&gt;</span>
+<span class="source-line-no">038</span><span id="line.38"> */</span>
+<span class="source-line-no">039</span><span id="line.39">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">040</span><span id="line.40">@JsonDeserialize(as = ProductDraftImportImpl.class)</span>
+<span class="source-line-no">041</span><span id="line.41">public interface ProductDraftImport extends ImportResource {</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     &lt;*  &lt;p&gt;The &lt;code&gt;productType&lt;/code&gt; of a Product. Maps to &lt;code&gt;Product.productType&lt;/code&gt;. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductType is created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
+<span class="source-line-no">047</span><span id="line.47">    @Valid</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("productType")</span>
+<span class="source-line-no">049</span><span id="line.49">    public ProductTypeKeyReference getProductType();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     &lt;&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54">    @NotNull</span>
+<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("name")</span>
+<span class="source-line-no">057</span><span id="line.57">    public LocalizedString getName();</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">     &lt;*  &lt;p&gt;Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62">    @NotNull</span>
+<span class="source-line-no">063</span><span id="line.63">    @Valid</span>
+<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("slug")</span>
+<span class="source-line-no">065</span><span id="line.65">    public LocalizedString getSlug();</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Product.description&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     */</span>
+<span class="source-line-no">070</span><span id="line.70">    @Valid</span>
+<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("description")</span>
+<span class="source-line-no">072</span><span id="line.72">    public LocalizedString getDescription();</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     &lt;*  &lt;p&gt;The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Categories are created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77">    @Valid</span>
+<span class="source-line-no">078</span><span id="line.78">    @JsonProperty("categories")</span>
+<span class="source-line-no">079</span><span id="line.79">    public List&lt;CategoryKeyReference&gt; getCategories();</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">     &lt;*  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">083</span><span id="line.83">    *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">084</span><span id="line.84">    *    "de": "Hundefutter",</span>
+<span class="source-line-no">085</span><span id="line.85">    *    "en": "dog food"</span>
+<span class="source-line-no">086</span><span id="line.86">    *  }</span>
+<span class="source-line-no">087</span><span id="line.87">    *  &lt;/code&gt;&lt;/pre&gt;&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
+<span class="source-line-no">089</span><span id="line.89">    @Valid</span>
+<span class="source-line-no">090</span><span id="line.90">    @JsonProperty("metaTitle")</span>
+<span class="source-line-no">091</span><span id="line.91">    public LocalizedString getMetaTitle();</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    /**</span>
+<span class="source-line-no">094</span><span id="line.94">     &lt;*  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">    *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">096</span><span id="line.96">    *    "de": "Hundefutter",</span>
+<span class="source-line-no">097</span><span id="line.97">    *    "en": "dog food"</span>
+<span class="source-line-no">098</span><span id="line.98">    *  }</span>
+<span class="source-line-no">099</span><span id="line.99">    *  &lt;/code&gt;&lt;/pre&gt;&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101">    @Valid</span>
+<span class="source-line-no">102</span><span id="line.102">    @JsonProperty("metaDescription")</span>
+<span class="source-line-no">103</span><span id="line.103">    public LocalizedString getMetaDescription();</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     &lt;*  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">    *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">108</span><span id="line.108">    *    "de": "Hundefutter",</span>
+<span class="source-line-no">109</span><span id="line.109">    *    "en": "dog food"</span>
+<span class="source-line-no">110</span><span id="line.110">    *  }</span>
+<span class="source-line-no">111</span><span id="line.111">    *  &lt;/code&gt;&lt;/pre&gt;&gt;</span>
+<span class="source-line-no">112</span><span id="line.112">     */</span>
+<span class="source-line-no">113</span><span id="line.113">    @Valid</span>
+<span class="source-line-no">114</span><span id="line.114">    @JsonProperty("metaKeywords")</span>
+<span class="source-line-no">115</span><span id="line.115">    public LocalizedString getMetaKeywords();</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    /**</span>
+<span class="source-line-no">118</span><span id="line.118">     &lt;*  &lt;p&gt;The master Product variant. Required if the &lt;code&gt;variants&lt;/code&gt; array contains a Product Variant.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">119</span><span id="line.119">     */</span>
+<span class="source-line-no">120</span><span id="line.120">    @Valid</span>
+<span class="source-line-no">121</span><span id="line.121">    @JsonProperty("masterVariant")</span>
+<span class="source-line-no">122</span><span id="line.122">    public ProductVariantDraftImport getMasterVariant();</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    /**</span>
+<span class="source-line-no">125</span><span id="line.125">     &lt;*  &lt;p&gt;An array of related Product Variants.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
+<span class="source-line-no">127</span><span id="line.127">    @Valid</span>
+<span class="source-line-no">128</span><span id="line.128">    @JsonProperty("variants")</span>
+<span class="source-line-no">129</span><span id="line.129">    public List&lt;ProductVariantDraftImport&gt; getVariants();</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    /**</span>
+<span class="source-line-no">132</span><span id="line.132">     &lt;*  &lt;p&gt;The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary TaxCategory is created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">133</span><span id="line.133">     */</span>
+<span class="source-line-no">134</span><span id="line.134">    @Valid</span>
+<span class="source-line-no">135</span><span id="line.135">    @JsonProperty("taxCategory")</span>
+<span class="source-line-no">136</span><span id="line.136">    public TaxCategoryKeyReference getTaxCategory();</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    /**</span>
+<span class="source-line-no">139</span><span id="line.139">     &lt;*  &lt;p&gt;Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.&lt;/p&gt;</span>
+<span class="source-line-no">140</span><span id="line.140">    *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">141</span><span id="line.141">    *    "en": [</span>
+<span class="source-line-no">142</span><span id="line.142">    *      { "text": "Multi tool" },</span>
+<span class="source-line-no">143</span><span id="line.143">    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }</span>
+<span class="source-line-no">144</span><span id="line.144">    *    ],</span>
+<span class="source-line-no">145</span><span id="line.145">    *    "de": [</span>
+<span class="source-line-no">146</span><span id="line.146">    *      {</span>
+<span class="source-line-no">147</span><span id="line.147">    *        "text": "Schweizer Messer",</span>
+<span class="source-line-no">148</span><span id="line.148">    *        "suggestTokenizer": {</span>
+<span class="source-line-no">149</span><span id="line.149">    *          "type": "custom",</span>
+<span class="source-line-no">150</span><span id="line.150">    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]</span>
+<span class="source-line-no">151</span><span id="line.151">    *        }</span>
+<span class="source-line-no">152</span><span id="line.152">    *      }</span>
+<span class="source-line-no">153</span><span id="line.153">    *    ]</span>
+<span class="source-line-no">154</span><span id="line.154">    *  }</span>
+<span class="source-line-no">155</span><span id="line.155">    *  &lt;/code&gt;&lt;/pre&gt;&gt;</span>
+<span class="source-line-no">156</span><span id="line.156">     */</span>
+<span class="source-line-no">157</span><span id="line.157">    @Valid</span>
+<span class="source-line-no">158</span><span id="line.158">    @JsonProperty("searchKeywords")</span>
+<span class="source-line-no">159</span><span id="line.159">    public SearchKeywords getSearchKeywords();</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    /**</span>
+<span class="source-line-no">162</span><span id="line.162">     &lt;*  &lt;p&gt;The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary State is created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">163</span><span id="line.163">     */</span>
+<span class="source-line-no">164</span><span id="line.164">    @Valid</span>
+<span class="source-line-no">165</span><span id="line.165">    @JsonProperty("state")</span>
+<span class="source-line-no">166</span><span id="line.166">    public StateKeyReference getState();</span>
 <span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    @JsonProperty("publish")</span>
-<span class="source-line-no">169</span><span id="line.169">    public Boolean getPublish();</span>
-<span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public void setProductType(final ProductTypeKeyReference productType);</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public void setName(final LocalizedString name);</span>
+<span class="source-line-no">168</span><span id="line.168">    /**</span>
+<span class="source-line-no">169</span><span id="line.169">     &lt;*  &lt;p&gt;If &lt;code&gt;publish&lt;/code&gt; is set to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;, both staged and current projections are set to the same value provided by the import data. If &lt;code&gt;publish&lt;/code&gt; is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether &lt;code&gt;publish&lt;/code&gt; is set or not.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">170</span><span id="line.170">     */</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    @JsonProperty("publish")</span>
+<span class="source-line-no">173</span><span id="line.173">    public Boolean getPublish();</span>
 <span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public void setSlug(final LocalizedString slug);</span>
+<span class="source-line-no">175</span><span id="line.175">    public void setProductType(final ProductTypeKeyReference productType);</span>
 <span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    public void setDescription(final LocalizedString description);</span>
+<span class="source-line-no">177</span><span id="line.177">    public void setName(final LocalizedString name);</span>
 <span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    @JsonIgnore</span>
-<span class="source-line-no">180</span><span id="line.180">    public void setCategories(final CategoryKeyReference... categories);</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    public void setCategories(final List&lt;CategoryKeyReference&gt; categories);</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public void setMetaTitle(final LocalizedString metaTitle);</span>
+<span class="source-line-no">179</span><span id="line.179">    public void setSlug(final LocalizedString slug);</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public void setDescription(final LocalizedString description);</span>
+<span class="source-line-no">182</span><span id="line.182"></span>
+<span class="source-line-no">183</span><span id="line.183">    @JsonIgnore</span>
+<span class="source-line-no">184</span><span id="line.184">    public void setCategories(final CategoryKeyReference... categories);</span>
 <span class="source-line-no">185</span><span id="line.185"></span>
-<span class="source-line-no">186</span><span id="line.186">    public void setMetaDescription(final LocalizedString metaDescription);</span>
+<span class="source-line-no">186</span><span id="line.186">    public void setCategories(final List&lt;CategoryKeyReference&gt; categories);</span>
 <span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public void setMetaKeywords(final LocalizedString metaKeywords);</span>
+<span class="source-line-no">188</span><span id="line.188">    public void setMetaTitle(final LocalizedString metaTitle);</span>
 <span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">    public void setMasterVariant(final ProductVariantDraftImport masterVariant);</span>
+<span class="source-line-no">190</span><span id="line.190">    public void setMetaDescription(final LocalizedString metaDescription);</span>
 <span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    @JsonIgnore</span>
-<span class="source-line-no">193</span><span id="line.193">    public void setVariants(final ProductVariantDraftImport... variants);</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">    public void setVariants(final List&lt;ProductVariantDraftImport&gt; variants);</span>
-<span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    public void setTaxCategory(final TaxCategoryKeyReference taxCategory);</span>
+<span class="source-line-no">192</span><span id="line.192">    public void setMetaKeywords(final LocalizedString metaKeywords);</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    public void setMasterVariant(final ProductVariantDraftImport masterVariant);</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">    @JsonIgnore</span>
+<span class="source-line-no">197</span><span id="line.197">    public void setVariants(final ProductVariantDraftImport... variants);</span>
 <span class="source-line-no">198</span><span id="line.198"></span>
-<span class="source-line-no">199</span><span id="line.199">    public void setSearchKeywords(final SearchKeywords searchKeywords);</span>
+<span class="source-line-no">199</span><span id="line.199">    public void setVariants(final List&lt;ProductVariantDraftImport&gt; variants);</span>
 <span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    public void setState(final StateKeyReference state);</span>
+<span class="source-line-no">201</span><span id="line.201">    public void setTaxCategory(final TaxCategoryKeyReference taxCategory);</span>
 <span class="source-line-no">202</span><span id="line.202"></span>
-<span class="source-line-no">203</span><span id="line.203">    public void setPublish(final Boolean publish);</span>
+<span class="source-line-no">203</span><span id="line.203">    public void setSearchKeywords(final SearchKeywords searchKeywords);</span>
 <span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    public static ProductDraftImport of() {</span>
-<span class="source-line-no">206</span><span id="line.206">        return new ProductDraftImportImpl();</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">205</span><span id="line.205">    public void setState(final StateKeyReference state);</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    public void setPublish(final Boolean publish);</span>
 <span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public static ProductDraftImport of(final ProductDraftImport template) {</span>
-<span class="source-line-no">210</span><span id="line.210">        ProductDraftImportImpl instance = new ProductDraftImportImpl();</span>
-<span class="source-line-no">211</span><span id="line.211">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">212</span><span id="line.212">        instance.setProductType(template.getProductType());</span>
-<span class="source-line-no">213</span><span id="line.213">        instance.setName(template.getName());</span>
-<span class="source-line-no">214</span><span id="line.214">        instance.setSlug(template.getSlug());</span>
-<span class="source-line-no">215</span><span id="line.215">        instance.setDescription(template.getDescription());</span>
-<span class="source-line-no">216</span><span id="line.216">        instance.setCategories(template.getCategories());</span>
-<span class="source-line-no">217</span><span id="line.217">        instance.setMetaTitle(template.getMetaTitle());</span>
-<span class="source-line-no">218</span><span id="line.218">        instance.setMetaDescription(template.getMetaDescription());</span>
-<span class="source-line-no">219</span><span id="line.219">        instance.setMetaKeywords(template.getMetaKeywords());</span>
-<span class="source-line-no">220</span><span id="line.220">        instance.setMasterVariant(template.getMasterVariant());</span>
-<span class="source-line-no">221</span><span id="line.221">        instance.setVariants(template.getVariants());</span>
-<span class="source-line-no">222</span><span id="line.222">        instance.setTaxCategory(template.getTaxCategory());</span>
-<span class="source-line-no">223</span><span id="line.223">        instance.setSearchKeywords(template.getSearchKeywords());</span>
-<span class="source-line-no">224</span><span id="line.224">        instance.setState(template.getState());</span>
-<span class="source-line-no">225</span><span id="line.225">        instance.setPublish(template.getPublish());</span>
-<span class="source-line-no">226</span><span id="line.226">        return instance;</span>
-<span class="source-line-no">227</span><span id="line.227">    }</span>
-<span class="source-line-no">228</span><span id="line.228"></span>
-<span class="source-line-no">229</span><span id="line.229">    public static ProductDraftImportBuilder builder() {</span>
-<span class="source-line-no">230</span><span id="line.230">        return ProductDraftImportBuilder.of();</span>
+<span class="source-line-no">209</span><span id="line.209">    public static ProductDraftImport of() {</span>
+<span class="source-line-no">210</span><span id="line.210">        return new ProductDraftImportImpl();</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public static ProductDraftImport of(final ProductDraftImport template) {</span>
+<span class="source-line-no">214</span><span id="line.214">        ProductDraftImportImpl instance = new ProductDraftImportImpl();</span>
+<span class="source-line-no">215</span><span id="line.215">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">216</span><span id="line.216">        instance.setProductType(template.getProductType());</span>
+<span class="source-line-no">217</span><span id="line.217">        instance.setName(template.getName());</span>
+<span class="source-line-no">218</span><span id="line.218">        instance.setSlug(template.getSlug());</span>
+<span class="source-line-no">219</span><span id="line.219">        instance.setDescription(template.getDescription());</span>
+<span class="source-line-no">220</span><span id="line.220">        instance.setCategories(template.getCategories());</span>
+<span class="source-line-no">221</span><span id="line.221">        instance.setMetaTitle(template.getMetaTitle());</span>
+<span class="source-line-no">222</span><span id="line.222">        instance.setMetaDescription(template.getMetaDescription());</span>
+<span class="source-line-no">223</span><span id="line.223">        instance.setMetaKeywords(template.getMetaKeywords());</span>
+<span class="source-line-no">224</span><span id="line.224">        instance.setMasterVariant(template.getMasterVariant());</span>
+<span class="source-line-no">225</span><span id="line.225">        instance.setVariants(template.getVariants());</span>
+<span class="source-line-no">226</span><span id="line.226">        instance.setTaxCategory(template.getTaxCategory());</span>
+<span class="source-line-no">227</span><span id="line.227">        instance.setSearchKeywords(template.getSearchKeywords());</span>
+<span class="source-line-no">228</span><span id="line.228">        instance.setState(template.getState());</span>
+<span class="source-line-no">229</span><span id="line.229">        instance.setPublish(template.getPublish());</span>
+<span class="source-line-no">230</span><span id="line.230">        return instance;</span>
 <span class="source-line-no">231</span><span id="line.231">    }</span>
 <span class="source-line-no">232</span><span id="line.232"></span>
-<span class="source-line-no">233</span><span id="line.233">    public static ProductDraftImportBuilder builder(final ProductDraftImport template) {</span>
-<span class="source-line-no">234</span><span id="line.234">        return ProductDraftImportBuilder.of(template);</span>
+<span class="source-line-no">233</span><span id="line.233">    public static ProductDraftImportBuilder builder() {</span>
+<span class="source-line-no">234</span><span id="line.234">        return ProductDraftImportBuilder.of();</span>
 <span class="source-line-no">235</span><span id="line.235">    }</span>
 <span class="source-line-no">236</span><span id="line.236"></span>
-<span class="source-line-no">237</span><span id="line.237">    default &lt;T&gt; T withProductDraftImport(Function&lt;ProductDraftImport, T&gt; helper) {</span>
-<span class="source-line-no">238</span><span id="line.238">        return helper.apply(this);</span>
+<span class="source-line-no">237</span><span id="line.237">    public static ProductDraftImportBuilder builder(final ProductDraftImport template) {</span>
+<span class="source-line-no">238</span><span id="line.238">        return ProductDraftImportBuilder.of(template);</span>
 <span class="source-line-no">239</span><span id="line.239">    }</span>
 <span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductDraftImport&gt; typeReference() {</span>
-<span class="source-line-no">242</span><span id="line.242">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductDraftImport&gt;() {</span>
-<span class="source-line-no">243</span><span id="line.243">            @Override</span>
-<span class="source-line-no">244</span><span id="line.244">            public String toString() {</span>
-<span class="source-line-no">245</span><span id="line.245">                return "TypeReference&lt;ProductDraftImport&gt;";</span>
-<span class="source-line-no">246</span><span id="line.246">            }</span>
-<span class="source-line-no">247</span><span id="line.247">        };</span>
-<span class="source-line-no">248</span><span id="line.248">    }</span>
-<span class="source-line-no">249</span><span id="line.249">}</span>
+<span class="source-line-no">241</span><span id="line.241">    default &lt;T&gt; T withProductDraftImport(Function&lt;ProductDraftImport, T&gt; helper) {</span>
+<span class="source-line-no">242</span><span id="line.242">        return helper.apply(this);</span>
+<span class="source-line-no">243</span><span id="line.243">    }</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductDraftImport&gt; typeReference() {</span>
+<span class="source-line-no">246</span><span id="line.246">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductDraftImport&gt;() {</span>
+<span class="source-line-no">247</span><span id="line.247">            @Override</span>
+<span class="source-line-no">248</span><span id="line.248">            public String toString() {</span>
+<span class="source-line-no">249</span><span id="line.249">                return "TypeReference&lt;ProductDraftImport&gt;";</span>
+<span class="source-line-no">250</span><span id="line.250">            }</span>
+<span class="source-line-no">251</span><span id="line.251">        };</span>
+<span class="source-line-no">252</span><span id="line.252">    }</span>
+<span class="source-line-no">253</span><span id="line.253">}</span>
 
 
 

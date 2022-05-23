@@ -80,16 +80,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DeliveryImpl.html" title="class in com.commercetools.importapi.models.orders">DeliveryImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.31">Delivery</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.34">Delivery</a></span></div>
+<div class="block">Delivery
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   Delivery delivery = Delivery.builder()
-           .id("{id}")
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .plusParcels(parcelsBuilder -> parcelsBuilder)
-           .build()
+     Delivery delivery = Delivery.builder()
+             .id("{id}")
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .plusItems(itemsBuilder -> itemsBuilder)
+             .plusParcels(parcelsBuilder -> parcelsBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -114,19 +117,29 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAddress()">getAddress</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.importapi.models.orders">DeliveryItem</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getItems()">getItems</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.importapi.models.orders">Parcel</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getParcels()">getParcels</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -178,14 +191,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.35">getId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.41">getId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.39">getCreatedAt</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.48">getCreatedAt</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -193,7 +208,8 @@ loadScripts(document, 'script');</script>
 <h3>getItems</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.importapi.models.orders">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.43">getItems</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.importapi.models.orders">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.55">getItems</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -201,92 +217,94 @@ loadScripts(document, 'script');</script>
 <h3>getParcels</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.importapi.models.orders">Parcel</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.48">getParcels</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.importapi.models.orders">Parcel</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.63">getParcels</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddress()">
 <h3>getAddress</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.53">getAddress</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.71">getAddress</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.57">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.75">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCreatedAt(java.time.ZonedDateTime)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.59">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.77">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setItems(com.commercetools.importapi.models.orders.DeliveryItem...)">
 <h3>setItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.61">setItems</a></span>&#8203;<span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.importapi.models.orders">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.79">setItems</a></span>&#8203;<span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.importapi.models.orders">DeliveryItem</a>...&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setItems(java.util.List)">
 <h3>setItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.64">setItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.importapi.models.orders">DeliveryItem</a>&gt;&nbsp;items)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.82">setItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.importapi.models.orders">DeliveryItem</a>&gt;&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setParcels(com.commercetools.importapi.models.orders.Parcel...)">
 <h3>setParcels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.66">setParcels</a></span>&#8203;<span class="parameters">(<a href="Parcel.html" title="interface in com.commercetools.importapi.models.orders">Parcel</a>...&nbsp;parcels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.84">setParcels</a></span>&#8203;<span class="parameters">(<a href="Parcel.html" title="interface in com.commercetools.importapi.models.orders">Parcel</a>...&nbsp;parcels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setParcels(java.util.List)">
 <h3>setParcels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.69">setParcels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.importapi.models.orders">Parcel</a>&gt;&nbsp;parcels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.87">setParcels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.importapi.models.orders">Parcel</a>&gt;&nbsp;parcels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddress(com.commercetools.importapi.models.common.Address)">
 <h3>setAddress</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.71">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&nbsp;address)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.89">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&nbsp;address)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.73">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.91">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.orders.Delivery)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.95">of</a></span>&#8203;<span class="parameters">(<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryBuilder.html" title="class in com.commercetools.importapi.models.orders">DeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.87">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryBuilder.html" title="class in com.commercetools.importapi.models.orders">DeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.105">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.orders.Delivery)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryBuilder.html" title="class in com.commercetools.importapi.models.orders">DeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.91">builder</a></span>&#8203;<span class="parameters">(<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryBuilder.html" title="class in com.commercetools.importapi.models.orders">DeliveryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.109">builder</a></span>&#8203;<span class="parameters">(<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDelivery(java.util.function.Function)">
 <h3>withDelivery</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.95">withDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.113">withDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.99">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/Delivery.html#line.117">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

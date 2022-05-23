@@ -84,15 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="PaymentChangeTransactionTimestampActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.27">PaymentChangeTransactionTimestampAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.30">PaymentChangeTransactionTimestampAction</a></span><span class="extends-implements">
 extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">PaymentChangeTransactionTimestampAction
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   PaymentChangeTransactionTimestampAction paymentChangeTransactionTimestampAction = PaymentChangeTransactionTimestampAction.builder()
-           .transactionId("{transactionId}")
-           .timestamp(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
+     PaymentChangeTransactionTimestampAction paymentChangeTransactionTimestampAction = PaymentChangeTransactionTimestampAction.builder()
+             .transactionId("{transactionId}")
+             .timestamp(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -132,10 +135,14 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTimestamp()">getTimestamp</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTransactionId()">getTransactionId</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -177,7 +184,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="CHANGE_TRANSACTION_TIMESTAMP">
 <h3>CHANGE_TRANSACTION_TIMESTAMP</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.31">CHANGE_TRANSACTION_TIMESTAMP</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.34">CHANGE_TRANSACTION_TIMESTAMP</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.payment.PaymentChangeTransactionTimestampAction.CHANGE_TRANSACTION_TIMESTAMP">Constant Field Values</a></dd>
@@ -196,62 +203,64 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getTransactionId()">
 <h3>getTransactionId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.33">getTransactionId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.39">getTransactionId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTimestamp()">
 <h3>getTimestamp</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.37">getTimestamp</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.46">getTimestamp</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransactionId(java.lang.String)">
 <h3>setTransactionId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.41">setTransactionId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;transactionId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.50">setTransactionId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;transactionId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTimestamp(java.time.ZonedDateTime)">
 <h3>setTimestamp</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.43">setTimestamp</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;timestamp)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.52">setTimestamp</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;timestamp)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.45">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.54">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.payment.PaymentChangeTransactionTimestampAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.56">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.65">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.payment.PaymentChangeTransactionTimestampAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.69">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPaymentChangeTransactionTimestampAction(java.util.function.Function)">
 <h3>withPaymentChangeTransactionTimestampAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.65">withPaymentChangeTransactionTimestampAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.74">withPaymentChangeTransactionTimestampAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.70">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentChangeTransactionTimestampAction.html" title="interface in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentChangeTransactionTimestampAction.html#line.79">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

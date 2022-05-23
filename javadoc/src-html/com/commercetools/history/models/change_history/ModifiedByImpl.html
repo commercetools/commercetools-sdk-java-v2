@@ -62,102 +62,108 @@
 <span class="source-line-no">049</span><span id="line.49">    }</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
 <span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.&lt;/p&gt;</span>
+<span class="source-line-no">052</span><span id="line.52">     &lt;*  &lt;p&gt;ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.&lt;/p&gt;&gt;</span>
 <span class="source-line-no">053</span><span id="line.53">     */</span>
-<span class="source-line-no">054</span><span id="line.54">    public String getId() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return this.id;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Indicates whether the change was made by a user or the API client with or without an External user ID.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     */</span>
-<span class="source-line-no">061</span><span id="line.61">    public String getType() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.type;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.&lt;/p&gt;</span>
-<span class="source-line-no">067</span><span id="line.67">     */</span>
-<span class="source-line-no">068</span><span id="line.68">    public com.commercetools.history.models.common.Reference getCustomer() {</span>
-<span class="source-line-no">069</span><span id="line.69">        return this.customer;</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Present only if the change was made using a token from an Anonymous Session.&lt;/p&gt;</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    public String getAnonymousId() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return this.anonymousId;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public String getId() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return this.id;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">     &lt;*  &lt;p&gt;Indicates whether the change was made by a user or the API client with or without an External user ID.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public String getType() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return this.type;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     &lt;*  &lt;p&gt;Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     */</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public com.commercetools.history.models.common.Reference getCustomer() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return this.customer;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    /**</span>
+<span class="source-line-no">076</span><span id="line.76">     &lt;*  &lt;p&gt;Present only if the change was made using a token from an Anonymous Session.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     */</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;ID of the API Client that made the change. Present only if the change was made using an API Client.&lt;/p&gt;</span>
-<span class="source-line-no">081</span><span id="line.81">     */</span>
-<span class="source-line-no">082</span><span id="line.82">    public String getClientId() {</span>
-<span class="source-line-no">083</span><span id="line.83">        return this.clientId;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the change was made via Merchant Center or ImpEx.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89">    public Boolean getIsPlatformClient() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return this.isPlatformClient;</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public void setId(final String id) {</span>
-<span class="source-line-no">094</span><span id="line.94">        this.id = id;</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public void setType(final String type) {</span>
-<span class="source-line-no">098</span><span id="line.98">        this.type = type;</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public void setCustomer(final com.commercetools.history.models.common.Reference customer) {</span>
-<span class="source-line-no">102</span><span id="line.102">        this.customer = customer;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public void setAnonymousId(final String anonymousId) {</span>
-<span class="source-line-no">106</span><span id="line.106">        this.anonymousId = anonymousId;</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public void setClientId(final String clientId) {</span>
-<span class="source-line-no">110</span><span id="line.110">        this.clientId = clientId;</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public void setIsPlatformClient(final Boolean isPlatformClient) {</span>
-<span class="source-line-no">114</span><span id="line.114">        this.isPlatformClient = isPlatformClient;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    @Override</span>
-<span class="source-line-no">118</span><span id="line.118">    public boolean equals(Object o) {</span>
-<span class="source-line-no">119</span><span id="line.119">        if (this == o)</span>
-<span class="source-line-no">120</span><span id="line.120">            return true;</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">123</span><span id="line.123">            return false;</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">        ModifiedByImpl that = (ModifiedByImpl) o;</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">        return new EqualsBuilder().append(id, that.id)</span>
-<span class="source-line-no">128</span><span id="line.128">                .append(type, that.type)</span>
-<span class="source-line-no">129</span><span id="line.129">                .append(customer, that.customer)</span>
-<span class="source-line-no">130</span><span id="line.130">                .append(anonymousId, that.anonymousId)</span>
-<span class="source-line-no">131</span><span id="line.131">                .append(clientId, that.clientId)</span>
-<span class="source-line-no">132</span><span id="line.132">                .append(isPlatformClient, that.isPlatformClient)</span>
-<span class="source-line-no">133</span><span id="line.133">                .isEquals();</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    @Override</span>
-<span class="source-line-no">137</span><span id="line.137">    public int hashCode() {</span>
-<span class="source-line-no">138</span><span id="line.138">        return new HashCodeBuilder(17, 37).append(id)</span>
-<span class="source-line-no">139</span><span id="line.139">                .append(type)</span>
-<span class="source-line-no">140</span><span id="line.140">                .append(customer)</span>
-<span class="source-line-no">141</span><span id="line.141">                .append(anonymousId)</span>
-<span class="source-line-no">142</span><span id="line.142">                .append(clientId)</span>
-<span class="source-line-no">143</span><span id="line.143">                .append(isPlatformClient)</span>
-<span class="source-line-no">144</span><span id="line.144">                .toHashCode();</span>
-<span class="source-line-no">145</span><span id="line.145">    }</span>
-<span class="source-line-no">146</span><span id="line.146"></span>
-<span class="source-line-no">147</span><span id="line.147">}</span>
+<span class="source-line-no">079</span><span id="line.79">    public String getAnonymousId() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return this.anonymousId;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     &lt;*  &lt;p&gt;ID of the API Client that made the change. Present only if the change was made using an API Client.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     */</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public String getClientId() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return this.clientId;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    /**</span>
+<span class="source-line-no">092</span><span id="line.92">     &lt;*  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the change was made via Merchant Center or ImpEx.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public Boolean getIsPlatformClient() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return this.isPlatformClient;</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public void setId(final String id) {</span>
+<span class="source-line-no">100</span><span id="line.100">        this.id = id;</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public void setType(final String type) {</span>
+<span class="source-line-no">104</span><span id="line.104">        this.type = type;</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    public void setCustomer(final com.commercetools.history.models.common.Reference customer) {</span>
+<span class="source-line-no">108</span><span id="line.108">        this.customer = customer;</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    public void setAnonymousId(final String anonymousId) {</span>
+<span class="source-line-no">112</span><span id="line.112">        this.anonymousId = anonymousId;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public void setClientId(final String clientId) {</span>
+<span class="source-line-no">116</span><span id="line.116">        this.clientId = clientId;</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public void setIsPlatformClient(final Boolean isPlatformClient) {</span>
+<span class="source-line-no">120</span><span id="line.120">        this.isPlatformClient = isPlatformClient;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    @Override</span>
+<span class="source-line-no">124</span><span id="line.124">    public boolean equals(Object o) {</span>
+<span class="source-line-no">125</span><span id="line.125">        if (this == o)</span>
+<span class="source-line-no">126</span><span id="line.126">            return true;</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">129</span><span id="line.129">            return false;</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">        ModifiedByImpl that = (ModifiedByImpl) o;</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">        return new EqualsBuilder().append(id, that.id)</span>
+<span class="source-line-no">134</span><span id="line.134">                .append(type, that.type)</span>
+<span class="source-line-no">135</span><span id="line.135">                .append(customer, that.customer)</span>
+<span class="source-line-no">136</span><span id="line.136">                .append(anonymousId, that.anonymousId)</span>
+<span class="source-line-no">137</span><span id="line.137">                .append(clientId, that.clientId)</span>
+<span class="source-line-no">138</span><span id="line.138">                .append(isPlatformClient, that.isPlatformClient)</span>
+<span class="source-line-no">139</span><span id="line.139">                .isEquals();</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    @Override</span>
+<span class="source-line-no">143</span><span id="line.143">    public int hashCode() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return new HashCodeBuilder(17, 37).append(id)</span>
+<span class="source-line-no">145</span><span id="line.145">                .append(type)</span>
+<span class="source-line-no">146</span><span id="line.146">                .append(customer)</span>
+<span class="source-line-no">147</span><span id="line.147">                .append(anonymousId)</span>
+<span class="source-line-no">148</span><span id="line.148">                .append(clientId)</span>
+<span class="source-line-no">149</span><span id="line.149">                .append(isPlatformClient)</span>
+<span class="source-line-no">150</span><span id="line.150">                .toHashCode();</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">}</span>
 
 
 

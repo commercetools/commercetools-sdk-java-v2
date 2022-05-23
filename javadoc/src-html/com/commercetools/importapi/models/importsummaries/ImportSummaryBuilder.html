@@ -21,86 +21,88 @@
 <span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
 <span class="source-line-no">010</span><span id="line.10">/**</span>
-<span class="source-line-no">011</span><span id="line.11"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">012</span><span id="line.12"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">013</span><span id="line.13"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">014</span><span id="line.14">   ImportSummary importSummary = ImportSummary.builder()</span>
-<span class="source-line-no">015</span><span id="line.15">           .states(statesBuilder -&gt; statesBuilder)</span>
-<span class="source-line-no">016</span><span id="line.16">           .total(1)</span>
-<span class="source-line-no">017</span><span id="line.17">           .build()</span>
-<span class="source-line-no">018</span><span id="line.18"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"> &lt;/div&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> */</span>
-<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">022</span><span id="line.22">public class ImportSummaryBuilder implements Builder&lt;ImportSummary&gt; {</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    private com.commercetools.importapi.models.importsummaries.OperationStates states;</span>
+<span class="source-line-no">011</span><span id="line.11"> * ImportSummaryBuilder</span>
+<span class="source-line-no">012</span><span id="line.12"> * &lt;hr&gt;</span>
+<span class="source-line-no">013</span><span id="line.13"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> *     ImportSummary importSummary = ImportSummary.builder()</span>
+<span class="source-line-no">017</span><span id="line.17"> *             .states(statesBuilder -&gt; statesBuilder)</span>
+<span class="source-line-no">018</span><span id="line.18"> *             .total(1)</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .build()</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;/div&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> */</span>
+<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">024</span><span id="line.24">public class ImportSummaryBuilder implements Builder&lt;ImportSummary&gt; {</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private Long total;</span>
+<span class="source-line-no">026</span><span id="line.26">    private com.commercetools.importapi.models.importsummaries.OperationStates states;</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    /**</span>
-<span class="source-line-no">029</span><span id="line.29">     *  &lt;p&gt;The import status of an ImportContainer given by the number of resources in each Processing State.&lt;/p&gt;</span>
-<span class="source-line-no">030</span><span id="line.30">     */</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public ImportSummaryBuilder states(</span>
-<span class="source-line-no">033</span><span id="line.33">            Function&lt;com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStatesBuilder&gt; builder) {</span>
-<span class="source-line-no">034</span><span id="line.34">        this.states = builder.apply(com.commercetools.importapi.models.importsummaries.OperationStatesBuilder.of())</span>
-<span class="source-line-no">035</span><span id="line.35">                .build();</span>
-<span class="source-line-no">036</span><span id="line.36">        return this;</span>
-<span class="source-line-no">037</span><span id="line.37">    }</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    /**</span>
-<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;The import status of an ImportContainer given by the number of resources in each Processing State.&lt;/p&gt;</span>
-<span class="source-line-no">041</span><span id="line.41">     */</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public ImportSummaryBuilder states(</span>
-<span class="source-line-no">044</span><span id="line.44">            final com.commercetools.importapi.models.importsummaries.OperationStates states) {</span>
-<span class="source-line-no">045</span><span id="line.45">        this.states = states;</span>
-<span class="source-line-no">046</span><span id="line.46">        return this;</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;The total number of ImportOperations received for this Import Summary.&lt;/p&gt;</span>
-<span class="source-line-no">051</span><span id="line.51">     */</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public ImportSummaryBuilder total(final Long total) {</span>
-<span class="source-line-no">054</span><span id="line.54">        this.total = total;</span>
-<span class="source-line-no">055</span><span id="line.55">        return this;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return this.states;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public Long getTotal() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return this.total;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public ImportSummary build() {</span>
-<span class="source-line-no">067</span><span id="line.67">        Objects.requireNonNull(states, ImportSummary.class + ": states is missing");</span>
-<span class="source-line-no">068</span><span id="line.68">        Objects.requireNonNull(total, ImportSummary.class + ": total is missing");</span>
-<span class="source-line-no">069</span><span id="line.69">        return new ImportSummaryImpl(states, total);</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     * builds ImportSummary without checking for non null required values</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    public ImportSummary buildUnchecked() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return new ImportSummaryImpl(states, total);</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public static ImportSummaryBuilder of() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return new ImportSummaryBuilder();</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public static ImportSummaryBuilder of(final ImportSummary template) {</span>
-<span class="source-line-no">084</span><span id="line.84">        ImportSummaryBuilder builder = new ImportSummaryBuilder();</span>
-<span class="source-line-no">085</span><span id="line.85">        builder.states = template.getStates();</span>
-<span class="source-line-no">086</span><span id="line.86">        builder.total = template.getTotal();</span>
-<span class="source-line-no">087</span><span id="line.87">        return builder;</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">}</span>
+<span class="source-line-no">028</span><span id="line.28">    private Long total;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    /**</span>
+<span class="source-line-no">031</span><span id="line.31">     &lt;*  &lt;p&gt;The import status of an ImportContainer given by the number of resources in each Processing State.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">032</span><span id="line.32">     */</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public ImportSummaryBuilder states(</span>
+<span class="source-line-no">035</span><span id="line.35">            Function&lt;com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStatesBuilder&gt; builder) {</span>
+<span class="source-line-no">036</span><span id="line.36">        this.states = builder.apply(com.commercetools.importapi.models.importsummaries.OperationStatesBuilder.of())</span>
+<span class="source-line-no">037</span><span id="line.37">                .build();</span>
+<span class="source-line-no">038</span><span id="line.38">        return this;</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    /**</span>
+<span class="source-line-no">042</span><span id="line.42">     &lt;*  &lt;p&gt;The import status of an ImportContainer given by the number of resources in each Processing State.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">     */</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    public ImportSummaryBuilder states(</span>
+<span class="source-line-no">046</span><span id="line.46">            final com.commercetools.importapi.models.importsummaries.OperationStates states) {</span>
+<span class="source-line-no">047</span><span id="line.47">        this.states = states;</span>
+<span class="source-line-no">048</span><span id="line.48">        return this;</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     &lt;*  &lt;p&gt;The total number of ImportOperations received for this Import Summary.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public ImportSummaryBuilder total(final Long total) {</span>
+<span class="source-line-no">056</span><span id="line.56">        this.total = total;</span>
+<span class="source-line-no">057</span><span id="line.57">        return this;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return this.states;</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public Long getTotal() {</span>
+<span class="source-line-no">065</span><span id="line.65">        return this.total;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public ImportSummary build() {</span>
+<span class="source-line-no">069</span><span id="line.69">        Objects.requireNonNull(states, ImportSummary.class + ": states is missing");</span>
+<span class="source-line-no">070</span><span id="line.70">        Objects.requireNonNull(total, ImportSummary.class + ": total is missing");</span>
+<span class="source-line-no">071</span><span id="line.71">        return new ImportSummaryImpl(states, total);</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     * builds ImportSummary without checking for non null required values</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77">    public ImportSummary buildUnchecked() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return new ImportSummaryImpl(states, total);</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public static ImportSummaryBuilder of() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return new ImportSummaryBuilder();</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public static ImportSummaryBuilder of(final ImportSummary template) {</span>
+<span class="source-line-no">086</span><span id="line.86">        ImportSummaryBuilder builder = new ImportSummaryBuilder();</span>
+<span class="source-line-no">087</span><span id="line.87">        builder.states = template.getStates();</span>
+<span class="source-line-no">088</span><span id="line.88">        builder.total = template.getTotal();</span>
+<span class="source-line-no">089</span><span id="line.89">        return builder;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">}</span>
 
 
 

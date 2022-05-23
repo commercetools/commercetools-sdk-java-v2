@@ -84,22 +84,25 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderLineItemAddedMessageImpl.html" title="class in com.commercetools.api.models.message">OrderLineItemAddedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.35">OrderLineItemAddedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.38">OrderLineItemAddedMessage</a></span><span class="extends-implements">
 extends <a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">OrderLineItemAddedMessage
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   OrderLineItemAddedMessage orderLineItemAddedMessage = OrderLineItemAddedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .lineItem(lineItemBuilder -> lineItemBuilder)
-           .addedQuantity(0.3)
-           .build()
+     OrderLineItemAddedMessage orderLineItemAddedMessage = OrderLineItemAddedMessage.builder()
+             .id("{id}")
+             .version(0.3)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .sequenceNumber(0.3)
+             .resource(resourceBuilder -> resourceBuilder)
+             .resourceVersion(0.3)
+             .lineItem(lineItemBuilder -> lineItemBuilder)
+             .addedQuantity(0.3)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -139,10 +142,14 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAddedQuantity()">getAddedQuantity</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../cart/LineItem.html" title="interface in com.commercetools.api.models.cart">LineItem</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLineItem()">getLineItem</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -190,7 +197,7 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <li>
 <section class="detail" id="ORDER_LINE_ITEM_ADDED">
 <h3>ORDER_LINE_ITEM_ADDED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.39">ORDER_LINE_ITEM_ADDED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.42">ORDER_LINE_ITEM_ADDED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderLineItemAddedMessage.ORDER_LINE_ITEM_ADDED">Constant Field Values</a></dd>
@@ -210,62 +217,64 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <h3>getLineItem</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../cart/LineItem.html" title="interface in com.commercetools.api.models.cart">LineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.41">getLineItem</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../cart/LineItem.html" title="interface in com.commercetools.api.models.cart">LineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.47">getLineItem</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddedQuantity()">
 <h3>getAddedQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.46">getAddedQuantity</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.55">getAddedQuantity</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItem(com.commercetools.api.models.cart.LineItem)">
 <h3>setLineItem</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.50">setLineItem</a></span>&#8203;<span class="parameters">(<a href="../cart/LineItem.html" title="interface in com.commercetools.api.models.cart">LineItem</a>&nbsp;lineItem)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.59">setLineItem</a></span>&#8203;<span class="parameters">(<a href="../cart/LineItem.html" title="interface in com.commercetools.api.models.cart">LineItem</a>&nbsp;lineItem)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddedQuantity(java.lang.Long)">
 <h3>setAddedQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.52">setAddedQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;addedQuantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.61">setAddedQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;addedQuantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.54">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderLineItemAddedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemAddedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.75">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemAddedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.84">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.OrderLineItemAddedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemAddedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.79">builder</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemAddedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.88">builder</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderLineItemAddedMessage(java.util.function.Function)">
 <h3>withOrderLineItemAddedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.83">withOrderLineItemAddedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.92">withOrderLineItemAddedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.87">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderLineItemAddedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemAddedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemAddedMessage.html#line.96">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

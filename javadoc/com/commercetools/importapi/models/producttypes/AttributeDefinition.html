@@ -80,16 +80,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AttributeDefinitionImpl.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.30">AttributeDefinition</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.33">AttributeDefinition</a></span></div>
+<div class="block">AttributeDefinition
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   AttributeDefinition attributeDefinition = AttributeDefinition.builder()
-           .type(typeBuilder -> typeBuilder)
-           .name("{name}")
-           .label(labelBuilder -> labelBuilder)
-           .isRequired(true)
-           .build()
+     AttributeDefinition attributeDefinition = AttributeDefinition.builder()
+             .type(typeBuilder -> typeBuilder)
+             .name("{name}")
+             .label(labelBuilder -> labelBuilder)
+             .isRequired(true)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -114,32 +117,44 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAttributeConstraint()">getAttributeConstraint</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getInputHint()">getInputHint</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getInputTip()">getInputTip</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getIsRequired()">getIsRequired</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getIsSearchable()">getIsSearchable</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLabel()">getLabel</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -195,14 +210,16 @@ loadScripts(document, 'script');</script>
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.34">getType</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.40">getType</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.39">getName</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.48">getName</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -210,135 +227,139 @@ loadScripts(document, 'script');</script>
 <h3>getLabel</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.51">getLabel</a></span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.60">getLabel</a></span>()</div>
+<div class="block"><*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
   <pre><code>{
     "de": "Hundefutter",
     "en": "dog food"
   }
-  </code></pre></div>
+  </code></pre>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsRequired()">
 <h3>getIsRequired</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.56">getIsRequired</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.68">getIsRequired</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAttributeConstraint()">
 <h3>getAttributeConstraint</h3>
-<div class="member-signature"><span class="return-type"><a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.60">getAttributeConstraint</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.76">getAttributeConstraint</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInputTip()">
 <h3>getInputTip</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.71">getInputTip</a></span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.87">getInputTip</a></span>()</div>
+<div class="block"><*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
   <pre><code>{
     "de": "Hundefutter",
     "en": "dog food"
   }
-  </code></pre></div>
+  </code></pre>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
-<div class="member-signature"><span class="return-type"><a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.75">getInputHint</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.95">getInputHint</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsSearchable()">
 <h3>getIsSearchable</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.78">getIsSearchable</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.102">getIsSearchable</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.importapi.models.producttypes.AttributeType)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.81">setType</a></span>&#8203;<span class="parameters">(<a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.105">setType</a></span>&#8203;<span class="parameters">(<a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.83">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.107">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLabel(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setLabel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.85">setLabel</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.109">setLabel</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;label)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsRequired(java.lang.Boolean)">
 <h3>setIsRequired</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.87">setIsRequired</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isRequired)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.111">setIsRequired</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isRequired)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributeConstraint(com.commercetools.importapi.models.producttypes.AttributeConstraintEnum)">
 <h3>setAttributeConstraint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.89">setAttributeConstraint</a></span>&#8203;<span class="parameters">(<a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a>&nbsp;attributeConstraint)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.113">setAttributeConstraint</a></span>&#8203;<span class="parameters">(<a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a>&nbsp;attributeConstraint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInputTip(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setInputTip</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.91">setInputTip</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;inputTip)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.115">setInputTip</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;inputTip)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInputHint(com.commercetools.importapi.models.producttypes.TextInputHint)">
 <h3>setInputHint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.93">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a>&nbsp;inputHint)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.117">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a>&nbsp;inputHint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsSearchable(java.lang.Boolean)">
 <h3>setIsSearchable</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.95">setIsSearchable</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.119">setIsSearchable</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.97">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.121">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.producttypes.AttributeDefinition)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.101">of</a></span>&#8203;<span class="parameters">(<a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.125">of</a></span>&#8203;<span class="parameters">(<a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.114">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.138">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.producttypes.AttributeDefinition)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.118">builder</a></span>&#8203;<span class="parameters">(<a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.142">builder</a></span>&#8203;<span class="parameters">(<a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAttributeDefinition(java.util.function.Function)">
 <h3>withAttributeDefinition</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.122">withAttributeDefinition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.146">withAttributeDefinition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.126">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeDefinition.html#line.150">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

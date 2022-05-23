@@ -84,22 +84,25 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductVariantAddedMessageImpl.html" title="class in com.commercetools.api.models.message">ProductVariantAddedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.35">ProductVariantAddedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.38">ProductVariantAddedMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ProductVariantAddedMessage
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ProductVariantAddedMessage productVariantAddedMessage = ProductVariantAddedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .variant(variantBuilder -> variantBuilder)
-           .staged(true)
-           .build()
+     ProductVariantAddedMessage productVariantAddedMessage = ProductVariantAddedMessage.builder()
+             .id("{id}")
+             .version(0.3)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .sequenceNumber(0.3)
+             .resource(resourceBuilder -> resourceBuilder)
+             .resourceVersion(0.3)
+             .variant(variantBuilder -> variantBuilder)
+             .staged(true)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -139,10 +142,14 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getStaged()">getStaged</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getVariant()">getVariant</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -187,7 +194,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="PRODUCT_VARIANT_ADDED">
 <h3>PRODUCT_VARIANT_ADDED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.39">PRODUCT_VARIANT_ADDED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.42">PRODUCT_VARIANT_ADDED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ProductVariantAddedMessage.PRODUCT_VARIANT_ADDED">Constant Field Values</a></dd>
@@ -207,62 +214,64 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <h3>getVariant</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.41">getVariant</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.47">getVariant</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.46">getStaged</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.55">getStaged</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariant(com.commercetools.api.models.product.ProductVariant)">
 <h3>setVariant</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.50">setVariant</a></span>&#8203;<span class="parameters">(<a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.59">setVariant</a></span>&#8203;<span class="parameters">(<a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStaged(java.lang.Boolean)">
 <h3>setStaged</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.52">setStaged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.61">setStaged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.54">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ProductVariantAddedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantAddedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.75">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantAddedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.84">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ProductVariantAddedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantAddedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.79">builder</a></span>&#8203;<span class="parameters">(<a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantAddedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.88">builder</a></span>&#8203;<span class="parameters">(<a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductVariantAddedMessage(java.util.function.Function)">
 <h3>withProductVariantAddedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.83">withProductVariantAddedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.92">withProductVariantAddedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.87">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariantAddedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantAddedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantAddedMessage.html#line.96">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -84,14 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AttributeEnumTypeImpl.html" title="class in com.commercetools.importapi.models.producttypes">AttributeEnumTypeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.26">AttributeEnumType</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.29">AttributeEnumType</a></span><span class="extends-implements">
 extends <a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">AttributeEnumType
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   AttributeEnumType attributeEnumType = AttributeEnumType.builder()
-           .plusValues(valuesBuilder -> valuesBuilder)
-           .build()
+     AttributeEnumType attributeEnumType = AttributeEnumType.builder()
+             .plusValues(valuesBuilder -> valuesBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -131,7 +134,9 @@ extends <a href="AttributeType.html" title="interface in com.commercetools.impor
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributePlainEnumValue.html" title="interface in com.commercetools.importapi.models.producttypes">AttributePlainEnumValue</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getValues()">getValues</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -170,7 +175,7 @@ extends <a href="AttributeType.html" title="interface in com.commercetools.impor
 <li>
 <section class="detail" id="ENUM">
 <h3>ENUM</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.30">ENUM</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.33">ENUM</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.importapi.models.producttypes.AttributeEnumType.ENUM">Constant Field Values</a></dd>
@@ -190,55 +195,56 @@ extends <a href="AttributeType.html" title="interface in com.commercetools.impor
 <h3>getValues</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributePlainEnumValue.html" title="interface in com.commercetools.importapi.models.producttypes">AttributePlainEnumValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.32">getValues</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributePlainEnumValue.html" title="interface in com.commercetools.importapi.models.producttypes">AttributePlainEnumValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.38">getValues</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValues(com.commercetools.importapi.models.producttypes.AttributePlainEnumValue...)">
 <h3>setValues</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.37">setValues</a></span>&#8203;<span class="parameters">(<a href="AttributePlainEnumValue.html" title="interface in com.commercetools.importapi.models.producttypes">AttributePlainEnumValue</a>...&nbsp;values)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.43">setValues</a></span>&#8203;<span class="parameters">(<a href="AttributePlainEnumValue.html" title="interface in com.commercetools.importapi.models.producttypes">AttributePlainEnumValue</a>...&nbsp;values)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValues(java.util.List)">
 <h3>setValues</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.40">setValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributePlainEnumValue.html" title="interface in com.commercetools.importapi.models.producttypes">AttributePlainEnumValue</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.46">setValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributePlainEnumValue.html" title="interface in com.commercetools.importapi.models.producttypes">AttributePlainEnumValue</a>&gt;&nbsp;values)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.42">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.48">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.producttypes.AttributeEnumType)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.52">of</a></span>&#8203;<span class="parameters">(<a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeEnumTypeBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeEnumTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.52">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeEnumTypeBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeEnumTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.58">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.producttypes.AttributeEnumType)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeEnumTypeBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeEnumTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.56">builder</a></span>&#8203;<span class="parameters">(<a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AttributeEnumTypeBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeEnumTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.62">builder</a></span>&#8203;<span class="parameters">(<a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAttributeEnumType(java.util.function.Function)">
 <h3>withAttributeEnumType</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.60">withAttributeEnumType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.66">withAttributeEnumType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.64">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AttributeEnumType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeEnumType</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/producttypes/AttributeEnumType.html#line.70">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

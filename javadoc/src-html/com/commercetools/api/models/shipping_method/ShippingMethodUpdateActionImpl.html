@@ -27,42 +27,49 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">018</span><span id="line.18">public class ShippingMethodUpdateActionImpl implements ShippingMethodUpdateAction, ModelBase {</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    private String action;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    @JsonCreator</span>
-<span class="source-line-no">023</span><span id="line.23">    ShippingMethodUpdateActionImpl(@JsonProperty("action") final String action) {</span>
-<span class="source-line-no">024</span><span id="line.24">        this.action = action;</span>
-<span class="source-line-no">025</span><span id="line.25">    }</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    public ShippingMethodUpdateActionImpl() {</span>
+<span class="source-line-no">017</span><span id="line.17">/**</span>
+<span class="source-line-no">018</span><span id="line.18"> * ShippingMethodUpdateAction</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">021</span><span id="line.21">public class ShippingMethodUpdateActionImpl implements ShippingMethodUpdateAction, ModelBase {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    private String action;</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    @JsonCreator</span>
+<span class="source-line-no">026</span><span id="line.26">    ShippingMethodUpdateActionImpl(@JsonProperty("action") final String action) {</span>
+<span class="source-line-no">027</span><span id="line.27">        this.action = action;</span>
 <span class="source-line-no">028</span><span id="line.28">    }</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public String getAction() {</span>
-<span class="source-line-no">031</span><span id="line.31">        return this.action;</span>
-<span class="source-line-no">032</span><span id="line.32">    }</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    @Override</span>
-<span class="source-line-no">035</span><span id="line.35">    public boolean equals(Object o) {</span>
-<span class="source-line-no">036</span><span id="line.36">        if (this == o)</span>
-<span class="source-line-no">037</span><span id="line.37">            return true;</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">040</span><span id="line.40">            return false;</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">        ShippingMethodUpdateActionImpl that = (ShippingMethodUpdateActionImpl) o;</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">        return new EqualsBuilder().append(action, that.action).isEquals();</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    @Override</span>
-<span class="source-line-no">048</span><span id="line.48">    public int hashCode() {</span>
-<span class="source-line-no">049</span><span id="line.49">        return new HashCodeBuilder(17, 37).append(action).toHashCode();</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">}</span>
+<span class="source-line-no">030</span><span id="line.30">    public ShippingMethodUpdateActionImpl() {</span>
+<span class="source-line-no">031</span><span id="line.31">    }</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    /**</span>
+<span class="source-line-no">034</span><span id="line.34">     &lt;&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">     */</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public String getAction() {</span>
+<span class="source-line-no">038</span><span id="line.38">        return this.action;</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    @Override</span>
+<span class="source-line-no">042</span><span id="line.42">    public boolean equals(Object o) {</span>
+<span class="source-line-no">043</span><span id="line.43">        if (this == o)</span>
+<span class="source-line-no">044</span><span id="line.44">            return true;</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">047</span><span id="line.47">            return false;</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">        ShippingMethodUpdateActionImpl that = (ShippingMethodUpdateActionImpl) o;</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">        return new EqualsBuilder().append(action, that.action).isEquals();</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    @Override</span>
+<span class="source-line-no">055</span><span id="line.55">    public int hashCode() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return new HashCodeBuilder(17, 37).append(action).toHashCode();</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">}</span>
 
 
 

@@ -84,14 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TypeChangeFieldDefinitionOrderActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.25">TypeChangeFieldDefinitionOrderAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.28">TypeChangeFieldDefinitionOrderAction</a></span><span class="extends-implements">
 extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">TypeChangeFieldDefinitionOrderAction
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   TypeChangeFieldDefinitionOrderAction typeChangeFieldDefinitionOrderAction = TypeChangeFieldDefinitionOrderAction.builder()
-           .plusFieldNames(fieldNamesBuilder -> fieldNamesBuilder)
-           .build()
+     TypeChangeFieldDefinitionOrderAction typeChangeFieldDefinitionOrderAction = TypeChangeFieldDefinitionOrderAction.builder()
+             .plusFieldNames(fieldNamesBuilder -> fieldNamesBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -132,7 +135,7 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFieldNames()">getFieldNames</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Must match the set of <code>name</code>s of FieldDefinitions (up to order).</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -175,7 +178,7 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="CHANGE_FIELD_DEFINITION_ORDER">
 <h3>CHANGE_FIELD_DEFINITION_ORDER</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.29">CHANGE_FIELD_DEFINITION_ORDER</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.32">CHANGE_FIELD_DEFINITION_ORDER</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction.CHANGE_FIELD_DEFINITION_ORDER">Constant Field Values</a></dd>
@@ -194,56 +197,56 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <section class="detail" id="getFieldNames()">
 <h3>getFieldNames</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.34">getFieldNames</a></span>()</div>
-<div class="block"><p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.37">getFieldNames</a></span>()</div>
+<div class="block"><*  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFieldNames(java.lang.String...)">
 <h3>setFieldNames</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.38">setFieldNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;fieldNames)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.41">setFieldNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;fieldNames)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFieldNames(java.util.List)">
 <h3>setFieldNames</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.41">setFieldNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;fieldNames)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.44">setFieldNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;fieldNames)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTypeChangeFieldDefinitionOrderAction(java.util.function.Function)">
 <h3>withTypeChangeFieldDefinitionOrderAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.62">withTypeChangeFieldDefinitionOrderAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.65">withTypeChangeFieldDefinitionOrderAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.66">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeChangeFieldDefinitionOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderAction.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

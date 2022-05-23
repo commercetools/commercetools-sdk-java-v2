@@ -80,15 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TaxedPriceDraftImpl.html" title="class in com.commercetools.api.models.cart">TaxedPriceDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.29">TaxedPriceDraft</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.32">TaxedPriceDraft</a></span></div>
+<div class="block">TaxedPriceDraft
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   TaxedPriceDraft taxedPriceDraft = TaxedPriceDraft.builder()
-           .totalNet(totalNetBuilder -> totalNetBuilder)
-           .totalGross(totalGrossBuilder -> totalGrossBuilder)
-           .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
-           .build()
+     TaxedPriceDraft taxedPriceDraft = TaxedPriceDraft.builder()
+             .totalNet(totalNetBuilder -> totalNetBuilder)
+             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -113,16 +116,18 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTaxPortions()">getTaxPortions</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTotalGross()">getTotalGross</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Draft type that stores amounts in cent precision for the specified currency.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTotalNet()">getTotalNet</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Draft type that stores amounts in cent precision for the specified currency.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -167,9 +172,9 @@ loadScripts(document, 'script');</script>
 <h3>getTotalNet</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.37">getTotalNet</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.40">getTotalNet</a></span>()</div>
+<div class="block"><*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>></div>
 </section>
 </li>
 <li>
@@ -177,9 +182,9 @@ loadScripts(document, 'script');</script>
 <h3>getTotalGross</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.46">getTotalGross</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.49">getTotalGross</a></span>()</div>
+<div class="block"><*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>></div>
 </section>
 </li>
 <li>
@@ -187,67 +192,68 @@ loadScripts(document, 'script');</script>
 <h3>getTaxPortions</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.51">getTaxPortions</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.57">getTaxPortions</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTotalNet(com.commercetools.api.models.common.Money)">
 <h3>setTotalNet</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.56">setTotalNet</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalNet)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.62">setTotalNet</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalNet)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTotalGross(com.commercetools.api.models.common.Money)">
 <h3>setTotalGross</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.58">setTotalGross</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalGross)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.64">setTotalGross</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalGross)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxPortions(com.commercetools.api.models.cart.TaxPortionDraft...)">
 <h3>setTaxPortions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.60">setTaxPortions</a></span>&#8203;<span class="parameters">(<a href="TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>...&nbsp;taxPortions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.66">setTaxPortions</a></span>&#8203;<span class="parameters">(<a href="TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>...&nbsp;taxPortions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxPortions(java.util.List)">
 <h3>setTaxPortions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.63">setTaxPortions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;&nbsp;taxPortions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.69">setTaxPortions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;&nbsp;taxPortions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.65">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.71">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.TaxedPriceDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.69">of</a></span>&#8203;<span class="parameters">(<a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.75">of</a></span>&#8203;<span class="parameters">(<a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxedPriceDraftBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.77">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxedPriceDraftBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.83">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart.TaxedPriceDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxedPriceDraftBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.81">builder</a></span>&#8203;<span class="parameters">(<a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxedPriceDraftBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.87">builder</a></span>&#8203;<span class="parameters">(<a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTaxedPriceDraft(java.util.function.Function)">
 <h3>withTaxedPriceDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.85">withTaxedPriceDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.91">withTaxedPriceDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.89">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceDraft.html#line.95">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

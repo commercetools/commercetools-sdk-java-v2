@@ -88,14 +88,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="InventoryEntryAddQuantityActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionImpl</a></code>, <code><a href="InventoryEntryChangeQuantityActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntryChangeQuantityActionImpl</a></code>, <code><a href="InventoryEntryRemoveQuantityActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntryRemoveQuantityActionImpl</a></code>, <code><a href="InventoryEntrySetCustomFieldActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetCustomFieldActionImpl</a></code>, <code><a href="InventoryEntrySetCustomTypeActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetCustomTypeActionImpl</a></code>, <code><a href="InventoryEntrySetExpectedDeliveryActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetExpectedDeliveryActionImpl</a></code>, <code><a href="InventoryEntrySetKeyActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetKeyActionImpl</a></code>, <code><a href="InventoryEntrySetRestockableInDaysActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetRestockableInDaysActionImpl</a></code>, <code><a href="InventoryEntrySetSupplyChannelActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionImpl</a></code>, <code><a href="InventoryEntryUpdateActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntryUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.25">InventoryEntryUpdateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.28">InventoryEntryUpdateAction</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a>&gt;</span></div>
-<div class="block">Example to create a subtype instance using the builder pattern
+<div class="block">InventoryEntryUpdateAction
+
+ <hr>
+ Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   InventoryEntryUpdateAction inventoryEntryUpdateAction = InventoryEntryUpdateAction.addQuantityBuilder()
-           quantity(0.3)
-           .build()
+     InventoryEntryUpdateAction inventoryEntryUpdateAction = InventoryEntryUpdateAction.addQuantityBuilder()
+             quantity(0.3)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -120,7 +123,9 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAction()">getAction</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="InventoryEntryRemoveQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryRemoveQuantityActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#removeQuantityBuilder()">removeQuantityBuilder</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -169,7 +174,8 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.41">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.47">getAction</a></span>()</div>
+<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a>&gt;</code></dd>
@@ -179,67 +185,67 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="addQuantityBuilder()">
 <h3>addQuantityBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.45">addQuantityBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.51">addQuantityBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeQuantityBuilder()">
 <h3>changeQuantityBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryChangeQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryChangeQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.49">changeQuantityBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryChangeQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryChangeQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.55">changeQuantityBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeQuantityBuilder()">
 <h3>removeQuantityBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryRemoveQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryRemoveQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.53">removeQuantityBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryRemoveQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryRemoveQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.59">removeQuantityBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomFieldBuilder()">
 <h3>setCustomFieldBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.57">setCustomFieldBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.63">setCustomFieldBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomTypeBuilder()">
 <h3>setCustomTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.61">setCustomTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.67">setCustomTypeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExpectedDeliveryBuilder()">
 <h3>setExpectedDeliveryBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetExpectedDeliveryActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetExpectedDeliveryActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.65">setExpectedDeliveryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetExpectedDeliveryActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetExpectedDeliveryActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.71">setExpectedDeliveryBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKeyBuilder()">
 <h3>setKeyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetKeyActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.69">setKeyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetKeyActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.75">setKeyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRestockableInDaysBuilder()">
 <h3>setRestockableInDaysBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetRestockableInDaysActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetRestockableInDaysActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.73">setRestockableInDaysBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetRestockableInDaysActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetRestockableInDaysActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.79">setRestockableInDaysBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSupplyChannelBuilder()">
 <h3>setSupplyChannelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.77">setSupplyChannelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.83">setSupplyChannelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInventoryEntryUpdateAction(java.util.function.Function)">
 <h3>withInventoryEntryUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.81">withInventoryEntryUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.87">withInventoryEntryUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.85">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryUpdateAction.html#line.91">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -87,23 +87,25 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="MessageDeliveryBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryBuilder</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.30">MessageDeliveryPayloadBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.32">MessageDeliveryPayloadBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">MessageDeliveryPayloadBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   MessageDeliveryPayload messageDeliveryPayload = MessageDeliveryPayload.builder()
-           .projectKey("{projectKey}")
-           .resource(resourceBuilder -> resourceBuilder)
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resourceVersion(0.3)
-           .payloadNotIncluded(payloadNotIncludedBuilder -> payloadNotIncludedBuilder)
-           .build()
+     MessageDeliveryPayload messageDeliveryPayload = MessageDeliveryPayload.builder()
+             .projectKey("{projectKey}")
+             .resource(resourceBuilder -> resourceBuilder)
+             .id("{id}")
+             .version(0.3)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .sequenceNumber(0.3)
+             .resourceVersion(0.3)
+             .payloadNotIncluded(payloadNotIncludedBuilder -> payloadNotIncludedBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -143,7 +145,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdAt(java.time.ZonedDateTime)">createdAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -176,10 +180,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#id(java.lang.String)">id</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedAt(java.time.ZonedDateTime)">lastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -188,38 +196,54 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#payloadNotIncluded(com.commercetools.api.models.subscription.PayloadNotIncluded)">payloadNotIncluded</a></span>&#8203;(<a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a>&nbsp;payloadNotIncluded)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#payloadNotIncluded(java.util.function.Function)">payloadNotIncluded</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>,&#8203;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#projectKey(java.lang.String)">projectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(com.commercetools.api.models.common.Reference)">resource</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(java.util.function.Function)">resource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(java.util.function.Function)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceVersion(java.lang.Long)">resourceVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#sequenceNumber(java.lang.Long)">sequenceNumber</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 </div>
 </div>
 </div>
@@ -240,7 +264,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MessageDeliveryPayloadBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.31">MessageDeliveryPayloadBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.33">MessageDeliveryPayloadBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -254,149 +278,160 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="projectKey(java.lang.String)">
 <h3>projectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.54">projectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.60">projectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resource(com.commercetools.api.models.common.Reference)">
 <h3>resource</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.63">resource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.69">resource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
+<div class="block"><*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resource(java.util.function.Function)">
 <h3>resource</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.72">resource</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.78">resource</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceUserProvidedIdentifiers(java.util.function.Function)">
 <h3>resourceUserProvidedIdentifiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.78">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.88">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="../message/UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">
 <h3>resourceUserProvidedIdentifiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.86">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.100">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.92">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.110">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.97">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.119">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.102">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.128">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.107">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.137">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="sequenceNumber(java.lang.Long)">
 <h3>sequenceNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.112">sequenceNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.146">sequenceNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceVersion(java.lang.Long)">
 <h3>resourceVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.117">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.155">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="payloadNotIncluded(java.util.function.Function)">
 <h3>payloadNotIncluded</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.122">payloadNotIncluded</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>,&#8203;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.164">payloadNotIncluded</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>,&#8203;<a href="PayloadNotIncludedBuilder.html" title="class in com.commercetools.api.models.subscription">PayloadNotIncludedBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="payloadNotIncluded(com.commercetools.api.models.subscription.PayloadNotIncluded)">
 <h3>payloadNotIncluded</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.130">payloadNotIncluded</a></span>&#8203;<span class="parameters">(<a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a>&nbsp;payloadNotIncluded)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.176">payloadNotIncluded</a></span>&#8203;<span class="parameters">(<a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a>&nbsp;payloadNotIncluded)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.136">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.182">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResource()">
 <h3>getResource</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.140">getResource</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.186">getResource</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceUserProvidedIdentifiers()">
 <h3>getResourceUserProvidedIdentifiers</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.144">getResourceUserProvidedIdentifiers</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.190">getResourceUserProvidedIdentifiers</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.149">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.195">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.153">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.199">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.157">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.203">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.161">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.207">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSequenceNumber()">
 <h3>getSequenceNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.165">getSequenceNumber</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.211">getSequenceNumber</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceVersion()">
 <h3>getResourceVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.169">getResourceVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.215">getResourceVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPayloadNotIncluded()">
 <h3>getPayloadNotIncluded</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.173">getPayloadNotIncluded</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.219">getPayloadNotIncluded</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.177">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.223">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>&gt;</code></dd>
@@ -406,20 +441,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.194">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.240">buildUnchecked</a></span>()</div>
 <div class="block">builds MessageDeliveryPayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.199">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.245">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.subscription.MessageDeliveryPayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.203">of</a></span>&#8203;<span class="parameters">(<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#line.249">of</a></span>&#8203;<span class="parameters">(<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

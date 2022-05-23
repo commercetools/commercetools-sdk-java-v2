@@ -83,19 +83,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.24">TermFacetResultBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.26">TermFacetResultBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">TermFacetResultBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   TermFacetResult termFacetResult = TermFacetResult.builder()
-           .dataType(TermFacetResultType.TEXT)
-           .missing(0.3)
-           .total(0.3)
-           .other(0.3)
-           .plusTerms(termsBuilder -> termsBuilder)
-           .build()
+     TermFacetResult termFacetResult = TermFacetResult.builder()
+             .dataType(TermFacetResultType.TEXT)
+             .missing(0.3)
+             .total(0.3)
+             .other(0.3)
+             .plusTerms(termsBuilder -> termsBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -135,7 +137,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#dataType(com.commercetools.api.models.product.TermFacetResultType)">dataType</a></span>&#8203;(<a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a>&nbsp;dataType)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDataType()">getDataType</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -153,7 +157,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#missing(java.lang.Long)">missing</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;missing)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -162,25 +168,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#other(java.lang.Long)">other</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;other)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTerms(com.commercetools.api.models.product.FacetTerm...)">plusTerms</a></span>&#8203;(<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>...&nbsp;terms)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTerms(java.util.function.Function)">plusTerms</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>,&#8203;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#terms(com.commercetools.api.models.product.FacetTerm...)">terms</a></span>&#8203;(<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>...&nbsp;terms)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#terms(java.util.List)">terms</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;&nbsp;terms)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#total(java.lang.Long)">total</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTerms(java.util.function.Function)">withTerms</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>,&#8203;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 </div>
 </div>
 </div>
@@ -201,7 +221,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TermFacetResultBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.25">TermFacetResultBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.27">TermFacetResultBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -215,91 +235,100 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="dataType(com.commercetools.api.models.product.TermFacetResultType)">
 <h3>dataType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.37">dataType</a></span>&#8203;<span class="parameters">(<a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a>&nbsp;dataType)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.43">dataType</a></span>&#8203;<span class="parameters">(<a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a>&nbsp;dataType)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="missing(java.lang.Long)">
 <h3>missing</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.42">missing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;missing)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.52">missing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;missing)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="total(java.lang.Long)">
 <h3>total</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.47">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.61">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="other(java.lang.Long)">
 <h3>other</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.52">other</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;other)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.70">other</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;other)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="terms(com.commercetools.api.models.product.FacetTerm...)">
 <h3>terms</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.57">terms</a></span>&#8203;<span class="parameters">(<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>...&nbsp;terms)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.79">terms</a></span>&#8203;<span class="parameters">(<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>...&nbsp;terms)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="terms(java.util.List)">
 <h3>terms</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.62">terms</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;&nbsp;terms)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.88">terms</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;&nbsp;terms)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusTerms(com.commercetools.api.models.product.FacetTerm...)">
 <h3>plusTerms</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.67">plusTerms</a></span>&#8203;<span class="parameters">(<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>...&nbsp;terms)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.97">plusTerms</a></span>&#8203;<span class="parameters">(<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>...&nbsp;terms)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusTerms(java.util.function.Function)">
 <h3>plusTerms</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.75">plusTerms</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>,&#8203;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.109">plusTerms</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>,&#8203;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTerms(java.util.function.Function)">
 <h3>withTerms</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.84">withTerms</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>,&#8203;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.122">withTerms</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>,&#8203;<a href="FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDataType()">
 <h3>getDataType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.91">getDataType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.129">getDataType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMissing()">
 <h3>getMissing</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.95">getMissing</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.133">getMissing</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.99">getTotal</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.137">getTotal</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOther()">
 <h3>getOther</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.103">getOther</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.141">getOther</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTerms()">
 <h3>getTerms</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.107">getTerms</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.145">getTerms</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.111">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.149">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&gt;</code></dd>
@@ -309,20 +338,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.123">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.161">buildUnchecked</a></span>()</div>
 <div class="block">builds TermFacetResult without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.127">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.165">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product.TermFacetResult)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.131">of</a></span>&#8203;<span class="parameters">(<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResultBuilder.html#line.169">of</a></span>&#8203;<span class="parameters">(<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -32,166 +32,170 @@
 <span class="source-line-no">019</span><span id="line.19">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">/**</span>
-<span class="source-line-no">022</span><span id="line.22"> &lt;p&gt;The data representation for a Category to be imported that is persisted as a Category in the Project.&lt;/p&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">025</span><span id="line.25"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">027</span><span id="line.27">   CategoryImport categoryImport = CategoryImport.builder()</span>
-<span class="source-line-no">028</span><span id="line.28">           .key("{key}")</span>
-<span class="source-line-no">029</span><span id="line.29">           .name(nameBuilder -&gt; nameBuilder)</span>
-<span class="source-line-no">030</span><span id="line.30">           .slug(slugBuilder -&gt; slugBuilder)</span>
-<span class="source-line-no">031</span><span id="line.31">           .build()</span>
-<span class="source-line-no">032</span><span id="line.32"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">033</span><span id="line.33"> &lt;/div&gt;</span>
-<span class="source-line-no">034</span><span id="line.34"> */</span>
-<span class="source-line-no">035</span><span id="line.35">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">036</span><span id="line.36">@JsonDeserialize(as = CategoryImportImpl.class)</span>
-<span class="source-line-no">037</span><span id="line.37">public interface CategoryImport extends ImportResource {</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    /**</span>
-<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;Maps to &lt;code&gt;Category.name&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">041</span><span id="line.41">     */</span>
-<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
-<span class="source-line-no">043</span><span id="line.43">    @Valid</span>
-<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("name")</span>
-<span class="source-line-no">045</span><span id="line.45">    public LocalizedString getName();</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Maps to &lt;code&gt;Category.slug&lt;/code&gt;. Must match the pattern &lt;code&gt;[-a-zA-Z0-9_]{2,256}&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">049</span><span id="line.49">     */</span>
-<span class="source-line-no">050</span><span id="line.50">    @NotNull</span>
-<span class="source-line-no">051</span><span id="line.51">    @Valid</span>
-<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("slug")</span>
-<span class="source-line-no">053</span><span id="line.53">    public LocalizedString getSlug();</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    /**</span>
-<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;Maps to &lt;code&gt;Category.description&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">057</span><span id="line.57">     */</span>
-<span class="source-line-no">058</span><span id="line.58">    @Valid</span>
-<span class="source-line-no">059</span><span id="line.59">    @JsonProperty("description")</span>
-<span class="source-line-no">060</span><span id="line.60">    public LocalizedString getDescription();</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    /**</span>
-<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Maps to &lt;code&gt;Category.parent&lt;/code&gt;. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Category is created.&lt;/p&gt;</span>
-<span class="source-line-no">064</span><span id="line.64">     */</span>
-<span class="source-line-no">065</span><span id="line.65">    @Valid</span>
-<span class="source-line-no">066</span><span id="line.66">    @JsonProperty("parent")</span>
-<span class="source-line-no">067</span><span id="line.67">    public CategoryKeyReference getParent();</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;Maps to &lt;code&gt;Category.orderHint&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">071</span><span id="line.71">     */</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("orderHint")</span>
-<span class="source-line-no">074</span><span id="line.74">    public String getOrderHint();</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;Maps to &lt;code&gt;Category.externalId&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">078</span><span id="line.78">     */</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @JsonProperty("externalId")</span>
-<span class="source-line-no">081</span><span id="line.81">    public String getExternalId();</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    /**</span>
-<span class="source-line-no">084</span><span id="line.84">     *  &lt;p&gt;Maps to &lt;code&gt;Category.metaTitle&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">085</span><span id="line.85">     */</span>
-<span class="source-line-no">086</span><span id="line.86">    @Valid</span>
-<span class="source-line-no">087</span><span id="line.87">    @JsonProperty("metaTitle")</span>
-<span class="source-line-no">088</span><span id="line.88">    public LocalizedString getMetaTitle();</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    /**</span>
-<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;Maps to &lt;code&gt;Category.metaDescription&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">092</span><span id="line.92">     */</span>
-<span class="source-line-no">093</span><span id="line.93">    @Valid</span>
-<span class="source-line-no">094</span><span id="line.94">    @JsonProperty("metaDescription")</span>
-<span class="source-line-no">095</span><span id="line.95">    public LocalizedString getMetaDescription();</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    /**</span>
-<span class="source-line-no">098</span><span id="line.98">     *  &lt;p&gt;Maps to &lt;code&gt;Category.metaKeywords&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">099</span><span id="line.99">     */</span>
-<span class="source-line-no">100</span><span id="line.100">    @Valid</span>
-<span class="source-line-no">101</span><span id="line.101">    @JsonProperty("metaKeywords")</span>
-<span class="source-line-no">102</span><span id="line.102">    public LocalizedString getMetaKeywords();</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    @Valid</span>
-<span class="source-line-no">105</span><span id="line.105">    @JsonProperty("assets")</span>
-<span class="source-line-no">106</span><span id="line.106">    public List&lt;Asset&gt; getAssets();</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">     *  &lt;p&gt;The custom fields for this Category.&lt;/p&gt;</span>
-<span class="source-line-no">110</span><span id="line.110">     */</span>
-<span class="source-line-no">111</span><span id="line.111">    @Valid</span>
-<span class="source-line-no">112</span><span id="line.112">    @JsonProperty("custom")</span>
-<span class="source-line-no">113</span><span id="line.113">    public Custom getCustom();</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public void setSlug(final LocalizedString slug);</span>
+<span class="source-line-no">022</span><span id="line.22"> *  &lt;p&gt;The data representation for a Category to be imported that is persisted as a Category in the Project.&lt;/p&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;hr&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> *     CategoryImport categoryImport = CategoryImport.builder()</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .key("{key}")</span>
+<span class="source-line-no">030</span><span id="line.30"> *             .name(nameBuilder -&gt; nameBuilder)</span>
+<span class="source-line-no">031</span><span id="line.31"> *             .slug(slugBuilder -&gt; slugBuilder)</span>
+<span class="source-line-no">032</span><span id="line.32"> *             .build()</span>
+<span class="source-line-no">033</span><span id="line.33"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">034</span><span id="line.34"> * &lt;/div&gt;</span>
+<span class="source-line-no">035</span><span id="line.35"> */</span>
+<span class="source-line-no">036</span><span id="line.36">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">037</span><span id="line.37">@JsonDeserialize(as = CategoryImportImpl.class)</span>
+<span class="source-line-no">038</span><span id="line.38">public interface CategoryImport extends ImportResource {</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    /**</span>
+<span class="source-line-no">041</span><span id="line.41">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.name&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">042</span><span id="line.42">     */</span>
+<span class="source-line-no">043</span><span id="line.43">    @NotNull</span>
+<span class="source-line-no">044</span><span id="line.44">    @Valid</span>
+<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("name")</span>
+<span class="source-line-no">046</span><span id="line.46">    public LocalizedString getName();</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    /**</span>
+<span class="source-line-no">049</span><span id="line.49">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.slug&lt;/code&gt;. Must match the pattern &lt;code&gt;[-a-zA-Z0-9_]{2,256}&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     */</span>
+<span class="source-line-no">051</span><span id="line.51">    @NotNull</span>
+<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("slug")</span>
+<span class="source-line-no">054</span><span id="line.54">    public LocalizedString getSlug();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.description&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
+<span class="source-line-no">059</span><span id="line.59">    @Valid</span>
+<span class="source-line-no">060</span><span id="line.60">    @JsonProperty("description")</span>
+<span class="source-line-no">061</span><span id="line.61">    public LocalizedString getDescription();</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    /**</span>
+<span class="source-line-no">064</span><span id="line.64">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.parent&lt;/code&gt;. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Category is created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     */</span>
+<span class="source-line-no">066</span><span id="line.66">    @Valid</span>
+<span class="source-line-no">067</span><span id="line.67">    @JsonProperty("parent")</span>
+<span class="source-line-no">068</span><span id="line.68">    public CategoryKeyReference getParent();</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    /**</span>
+<span class="source-line-no">071</span><span id="line.71">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.orderHint&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("orderHint")</span>
+<span class="source-line-no">075</span><span id="line.75">    public String getOrderHint();</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    /**</span>
+<span class="source-line-no">078</span><span id="line.78">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.externalId&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    @JsonProperty("externalId")</span>
+<span class="source-line-no">082</span><span id="line.82">    public String getExternalId();</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    /**</span>
+<span class="source-line-no">085</span><span id="line.85">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.metaTitle&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
+<span class="source-line-no">087</span><span id="line.87">    @Valid</span>
+<span class="source-line-no">088</span><span id="line.88">    @JsonProperty("metaTitle")</span>
+<span class="source-line-no">089</span><span id="line.89">    public LocalizedString getMetaTitle();</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    /**</span>
+<span class="source-line-no">092</span><span id="line.92">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.metaDescription&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">094</span><span id="line.94">    @Valid</span>
+<span class="source-line-no">095</span><span id="line.95">    @JsonProperty("metaDescription")</span>
+<span class="source-line-no">096</span><span id="line.96">    public LocalizedString getMetaDescription();</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    /**</span>
+<span class="source-line-no">099</span><span id="line.99">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Category.metaKeywords&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101">    @Valid</span>
+<span class="source-line-no">102</span><span id="line.102">    @JsonProperty("metaKeywords")</span>
+<span class="source-line-no">103</span><span id="line.103">    public LocalizedString getMetaKeywords();</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     &lt;&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">     */</span>
+<span class="source-line-no">108</span><span id="line.108">    @Valid</span>
+<span class="source-line-no">109</span><span id="line.109">    @JsonProperty("assets")</span>
+<span class="source-line-no">110</span><span id="line.110">    public List&lt;Asset&gt; getAssets();</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    /**</span>
+<span class="source-line-no">113</span><span id="line.113">     &lt;*  &lt;p&gt;The custom fields for this Category.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
+<span class="source-line-no">115</span><span id="line.115">    @Valid</span>
+<span class="source-line-no">116</span><span id="line.116">    @JsonProperty("custom")</span>
+<span class="source-line-no">117</span><span id="line.117">    public Custom getCustom();</span>
 <span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public void setDescription(final LocalizedString description);</span>
+<span class="source-line-no">119</span><span id="line.119">    public void setName(final LocalizedString name);</span>
 <span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public void setParent(final CategoryKeyReference parent);</span>
+<span class="source-line-no">121</span><span id="line.121">    public void setSlug(final LocalizedString slug);</span>
 <span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public void setOrderHint(final String orderHint);</span>
+<span class="source-line-no">123</span><span id="line.123">    public void setDescription(final LocalizedString description);</span>
 <span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    public void setExternalId(final String externalId);</span>
+<span class="source-line-no">125</span><span id="line.125">    public void setParent(final CategoryKeyReference parent);</span>
 <span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    public void setMetaTitle(final LocalizedString metaTitle);</span>
+<span class="source-line-no">127</span><span id="line.127">    public void setOrderHint(final String orderHint);</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    public void setMetaDescription(final LocalizedString metaDescription);</span>
+<span class="source-line-no">129</span><span id="line.129">    public void setExternalId(final String externalId);</span>
 <span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    public void setMetaKeywords(final LocalizedString metaKeywords);</span>
+<span class="source-line-no">131</span><span id="line.131">    public void setMetaTitle(final LocalizedString metaTitle);</span>
 <span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    @JsonIgnore</span>
-<span class="source-line-no">134</span><span id="line.134">    public void setAssets(final Asset... assets);</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public void setAssets(final List&lt;Asset&gt; assets);</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    public void setCustom(final Custom custom);</span>
+<span class="source-line-no">133</span><span id="line.133">    public void setMetaDescription(final LocalizedString metaDescription);</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public void setMetaKeywords(final LocalizedString metaKeywords);</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    @JsonIgnore</span>
+<span class="source-line-no">138</span><span id="line.138">    public void setAssets(final Asset... assets);</span>
 <span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public static CategoryImport of() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return new CategoryImportImpl();</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">140</span><span id="line.140">    public void setAssets(final List&lt;Asset&gt; assets);</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public void setCustom(final Custom custom);</span>
 <span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    public static CategoryImport of(final CategoryImport template) {</span>
-<span class="source-line-no">145</span><span id="line.145">        CategoryImportImpl instance = new CategoryImportImpl();</span>
-<span class="source-line-no">146</span><span id="line.146">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">147</span><span id="line.147">        instance.setName(template.getName());</span>
-<span class="source-line-no">148</span><span id="line.148">        instance.setSlug(template.getSlug());</span>
-<span class="source-line-no">149</span><span id="line.149">        instance.setDescription(template.getDescription());</span>
-<span class="source-line-no">150</span><span id="line.150">        instance.setParent(template.getParent());</span>
-<span class="source-line-no">151</span><span id="line.151">        instance.setOrderHint(template.getOrderHint());</span>
-<span class="source-line-no">152</span><span id="line.152">        instance.setExternalId(template.getExternalId());</span>
-<span class="source-line-no">153</span><span id="line.153">        instance.setMetaTitle(template.getMetaTitle());</span>
-<span class="source-line-no">154</span><span id="line.154">        instance.setMetaDescription(template.getMetaDescription());</span>
-<span class="source-line-no">155</span><span id="line.155">        instance.setMetaKeywords(template.getMetaKeywords());</span>
-<span class="source-line-no">156</span><span id="line.156">        instance.setAssets(template.getAssets());</span>
-<span class="source-line-no">157</span><span id="line.157">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">158</span><span id="line.158">        return instance;</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    public static CategoryImportBuilder builder() {</span>
-<span class="source-line-no">162</span><span id="line.162">        return CategoryImportBuilder.of();</span>
+<span class="source-line-no">144</span><span id="line.144">    public static CategoryImport of() {</span>
+<span class="source-line-no">145</span><span id="line.145">        return new CategoryImportImpl();</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public static CategoryImport of(final CategoryImport template) {</span>
+<span class="source-line-no">149</span><span id="line.149">        CategoryImportImpl instance = new CategoryImportImpl();</span>
+<span class="source-line-no">150</span><span id="line.150">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">151</span><span id="line.151">        instance.setName(template.getName());</span>
+<span class="source-line-no">152</span><span id="line.152">        instance.setSlug(template.getSlug());</span>
+<span class="source-line-no">153</span><span id="line.153">        instance.setDescription(template.getDescription());</span>
+<span class="source-line-no">154</span><span id="line.154">        instance.setParent(template.getParent());</span>
+<span class="source-line-no">155</span><span id="line.155">        instance.setOrderHint(template.getOrderHint());</span>
+<span class="source-line-no">156</span><span id="line.156">        instance.setExternalId(template.getExternalId());</span>
+<span class="source-line-no">157</span><span id="line.157">        instance.setMetaTitle(template.getMetaTitle());</span>
+<span class="source-line-no">158</span><span id="line.158">        instance.setMetaDescription(template.getMetaDescription());</span>
+<span class="source-line-no">159</span><span id="line.159">        instance.setMetaKeywords(template.getMetaKeywords());</span>
+<span class="source-line-no">160</span><span id="line.160">        instance.setAssets(template.getAssets());</span>
+<span class="source-line-no">161</span><span id="line.161">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">162</span><span id="line.162">        return instance;</span>
 <span class="source-line-no">163</span><span id="line.163">    }</span>
 <span class="source-line-no">164</span><span id="line.164"></span>
-<span class="source-line-no">165</span><span id="line.165">    public static CategoryImportBuilder builder(final CategoryImport template) {</span>
-<span class="source-line-no">166</span><span id="line.166">        return CategoryImportBuilder.of(template);</span>
+<span class="source-line-no">165</span><span id="line.165">    public static CategoryImportBuilder builder() {</span>
+<span class="source-line-no">166</span><span id="line.166">        return CategoryImportBuilder.of();</span>
 <span class="source-line-no">167</span><span id="line.167">    }</span>
 <span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    default &lt;T&gt; T withCategoryImport(Function&lt;CategoryImport, T&gt; helper) {</span>
-<span class="source-line-no">170</span><span id="line.170">        return helper.apply(this);</span>
+<span class="source-line-no">169</span><span id="line.169">    public static CategoryImportBuilder builder(final CategoryImport template) {</span>
+<span class="source-line-no">170</span><span id="line.170">        return CategoryImportBuilder.of(template);</span>
 <span class="source-line-no">171</span><span id="line.171">    }</span>
 <span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CategoryImport&gt; typeReference() {</span>
-<span class="source-line-no">174</span><span id="line.174">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CategoryImport&gt;() {</span>
-<span class="source-line-no">175</span><span id="line.175">            @Override</span>
-<span class="source-line-no">176</span><span id="line.176">            public String toString() {</span>
-<span class="source-line-no">177</span><span id="line.177">                return "TypeReference&lt;CategoryImport&gt;";</span>
-<span class="source-line-no">178</span><span id="line.178">            }</span>
-<span class="source-line-no">179</span><span id="line.179">        };</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181">}</span>
+<span class="source-line-no">173</span><span id="line.173">    default &lt;T&gt; T withCategoryImport(Function&lt;CategoryImport, T&gt; helper) {</span>
+<span class="source-line-no">174</span><span id="line.174">        return helper.apply(this);</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CategoryImport&gt; typeReference() {</span>
+<span class="source-line-no">178</span><span id="line.178">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CategoryImport&gt;() {</span>
+<span class="source-line-no">179</span><span id="line.179">            @Override</span>
+<span class="source-line-no">180</span><span id="line.180">            public String toString() {</span>
+<span class="source-line-no">181</span><span id="line.181">                return "TypeReference&lt;CategoryImport&gt;";</span>
+<span class="source-line-no">182</span><span id="line.182">            }</span>
+<span class="source-line-no">183</span><span id="line.183">        };</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185">}</span>
 
 
 

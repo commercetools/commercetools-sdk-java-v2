@@ -26,58 +26,64 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16"> Example to create a subtype instance using the builder pattern</span>
-<span class="source-line-no">017</span><span id="line.17"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">   ChangeValueChangeValue changeValueChangeValue = ChangeValueChangeValue.absoluteBuilder()</span>
-<span class="source-line-no">020</span><span id="line.20">           plusMoney(moneyBuilder -&gt; moneyBuilder)</span>
-<span class="source-line-no">021</span><span id="line.21">           .build()</span>
-<span class="source-line-no">022</span><span id="line.22"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> &lt;/div&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> */</span>
-<span class="source-line-no">025</span><span id="line.25">@JsonSubTypes({</span>
-<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueImpl.class, name = ChangeValueAbsoluteChangeValue.ABSOLUTE),</span>
-<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueExternalChangeValueImpl.class, name = ChangeValueExternalChangeValue.EXTERNAL),</span>
-<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueImpl.class, name = ChangeValueGiftLineItemChangeValue.GIFT_LINE_ITEM),</span>
-<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueImpl.class, name = ChangeValueRelativeChangeValue.RELATIVE) })</span>
-<span class="source-line-no">030</span><span id="line.30">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeValueChangeValueImpl.class, visible = true)</span>
-<span class="source-line-no">031</span><span id="line.31">@JsonDeserialize(as = ChangeValueChangeValueImpl.class)</span>
-<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">033</span><span id="line.33">public interface ChangeValueChangeValue {</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    @NotNull</span>
-<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("type")</span>
-<span class="source-line-no">037</span><span id="line.37">    public String getType();</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public static com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder absoluteBuilder() {</span>
-<span class="source-line-no">040</span><span id="line.40">        return com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder.of();</span>
-<span class="source-line-no">041</span><span id="line.41">    }</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public static com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder externalBuilder() {</span>
-<span class="source-line-no">044</span><span id="line.44">        return com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder.of();</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public static com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder giftLineItemBuilder() {</span>
-<span class="source-line-no">048</span><span id="line.48">        return com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder.of();</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public static com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder relativeBuilder() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder.of();</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    default &lt;T&gt; T withChangeValueChangeValue(Function&lt;ChangeValueChangeValue, T&gt; helper) {</span>
-<span class="source-line-no">056</span><span id="line.56">        return helper.apply(this);</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ChangeValueChangeValue&gt; typeReference() {</span>
-<span class="source-line-no">060</span><span id="line.60">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ChangeValueChangeValue&gt;() {</span>
-<span class="source-line-no">061</span><span id="line.61">            @Override</span>
-<span class="source-line-no">062</span><span id="line.62">            public String toString() {</span>
-<span class="source-line-no">063</span><span id="line.63">                return "TypeReference&lt;ChangeValueChangeValue&gt;";</span>
-<span class="source-line-no">064</span><span id="line.64">            }</span>
-<span class="source-line-no">065</span><span id="line.65">        };</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67">}</span>
+<span class="source-line-no">016</span><span id="line.16"> * ChangeValueChangeValue</span>
+<span class="source-line-no">017</span><span id="line.17"> *</span>
+<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> * Example to create a subtype instance using the builder pattern</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *     ChangeValueChangeValue changeValueChangeValue = ChangeValueChangeValue.absoluteBuilder()</span>
+<span class="source-line-no">023</span><span id="line.23"> *             plusMoney(moneyBuilder -&gt; moneyBuilder)</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .build()</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;/div&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> */</span>
+<span class="source-line-no">028</span><span id="line.28">@JsonSubTypes({</span>
+<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueImpl.class, name = ChangeValueAbsoluteChangeValue.ABSOLUTE),</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueExternalChangeValueImpl.class, name = ChangeValueExternalChangeValue.EXTERNAL),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueImpl.class, name = ChangeValueGiftLineItemChangeValue.GIFT_LINE_ITEM),</span>
+<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueImpl.class, name = ChangeValueRelativeChangeValue.RELATIVE) })</span>
+<span class="source-line-no">033</span><span id="line.33">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeValueChangeValueImpl.class, visible = true)</span>
+<span class="source-line-no">034</span><span id="line.34">@JsonDeserialize(as = ChangeValueChangeValueImpl.class)</span>
+<span class="source-line-no">035</span><span id="line.35">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">036</span><span id="line.36">public interface ChangeValueChangeValue {</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    /**</span>
+<span class="source-line-no">039</span><span id="line.39">     &lt;&gt;</span>
+<span class="source-line-no">040</span><span id="line.40">     */</span>
+<span class="source-line-no">041</span><span id="line.41">    @NotNull</span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("type")</span>
+<span class="source-line-no">043</span><span id="line.43">    public String getType();</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    public static com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder absoluteBuilder() {</span>
+<span class="source-line-no">046</span><span id="line.46">        return com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder.of();</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public static com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder externalBuilder() {</span>
+<span class="source-line-no">050</span><span id="line.50">        return com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder.of();</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    public static com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder giftLineItemBuilder() {</span>
+<span class="source-line-no">054</span><span id="line.54">        return com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder.of();</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    public static com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder relativeBuilder() {</span>
+<span class="source-line-no">058</span><span id="line.58">        return com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder.of();</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    default &lt;T&gt; T withChangeValueChangeValue(Function&lt;ChangeValueChangeValue, T&gt; helper) {</span>
+<span class="source-line-no">062</span><span id="line.62">        return helper.apply(this);</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ChangeValueChangeValue&gt; typeReference() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ChangeValueChangeValue&gt;() {</span>
+<span class="source-line-no">067</span><span id="line.67">            @Override</span>
+<span class="source-line-no">068</span><span id="line.68">            public String toString() {</span>
+<span class="source-line-no">069</span><span id="line.69">                return "TypeReference&lt;ChangeValueChangeValue&gt;";</span>
+<span class="source-line-no">070</span><span id="line.70">            }</span>
+<span class="source-line-no">071</span><span id="line.71">        };</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73">}</span>
 
 
 

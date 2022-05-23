@@ -83,17 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.22">AddEnumValueChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.24">AddEnumValueChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">AddEnumValueChangeBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   AddEnumValueChange addEnumValueChange = AddEnumValueChange.builder()
-           .change("{change}")
-           .fieldName("{fieldName}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
+     AddEnumValueChange addEnumValueChange = AddEnumValueChange.builder()
+             .change("{change}")
+             .fieldName("{fieldName}")
+             .nextValue(nextValueBuilder -> nextValueBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -134,12 +136,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#change(java.lang.String)">change</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Update action for <code>addEnumValue</code> on types</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fieldName(java.lang.String)">fieldName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The name of the field/attribute definition updated.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getChange()">getChange</a></span>()</code></div>
@@ -152,10 +154,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#nextValue(com.commercetools.history.models.change_value.EnumValue)">nextValue</a></span>&#8203;(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&nbsp;nextValue)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#nextValue(java.util.function.Function)">nextValue</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,&#8203;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -182,7 +188,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AddEnumValueChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.23">AddEnumValueChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.25">AddEnumValueChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -196,51 +202,53 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.35">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
-<div class="block"><p>Update action for <code>addEnumValue</code> on types</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.37">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="block"><*  <p>Update action for <code>addEnumValue</code> on types</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="fieldName(java.lang.String)">
 <h3>fieldName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.44">fieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
-<div class="block"><p>The name of the field/attribute definition updated.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.46">fieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
+<div class="block"><*  <p>The name of the field/attribute definition updated.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.49">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,&#8203;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.55">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>,&#8203;<a href="../change_value/EnumValueBuilder.html" title="class in com.commercetools.history.models.change_value">EnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.change_value.EnumValue)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.55">nextValue</a></span>&#8203;<span class="parameters">(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.65">nextValue</a></span>&#8203;<span class="parameters">(<a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a>&nbsp;nextValue)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.61">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.71">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFieldName()">
 <h3>getFieldName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.65">getFieldName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.75">getFieldName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.69">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../change_value/EnumValue.html" title="interface in com.commercetools.history.models.change_value">EnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.79">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.73">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.83">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a>&gt;</code></dd>
@@ -250,20 +258,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.83">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.93">buildUnchecked</a></span>()</div>
 <div class="block">builds AddEnumValueChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.87">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.97">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.AddEnumValueChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.91">of</a></span>&#8203;<span class="parameters">(<a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddEnumValueChangeBuilder.html" title="class in com.commercetools.history.models.change">AddEnumValueChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddEnumValueChangeBuilder.html#line.101">of</a></span>&#8203;<span class="parameters">(<a href="AddEnumValueChange.html" title="interface in com.commercetools.history.models.change">AddEnumValueChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

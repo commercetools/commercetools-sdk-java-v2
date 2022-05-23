@@ -84,14 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StagedOrderSetParcelMeasurementsActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.28">StagedOrderSetParcelMeasurementsAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.31">StagedOrderSetParcelMeasurementsAction</a></span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">StagedOrderSetParcelMeasurementsAction
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   StagedOrderSetParcelMeasurementsAction stagedOrderSetParcelMeasurementsAction = StagedOrderSetParcelMeasurementsAction.builder()
-           .parcelId("{parcelId}")
-           .build()
+     StagedOrderSetParcelMeasurementsAction stagedOrderSetParcelMeasurementsAction = StagedOrderSetParcelMeasurementsAction.builder()
+             .parcelId("{parcelId}")
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -131,10 +134,14 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../order/ParcelMeasurements.html" title="interface in com.commercetools.api.models.order">ParcelMeasurements</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMeasurements()">getMeasurements</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getParcelId()">getParcelId</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -176,7 +183,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <li>
 <section class="detail" id="SET_PARCEL_MEASUREMENTS">
 <h3>SET_PARCEL_MEASUREMENTS</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.32">SET_PARCEL_MEASUREMENTS</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.35">SET_PARCEL_MEASUREMENTS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsAction.SET_PARCEL_MEASUREMENTS">Constant Field Values</a></dd>
@@ -195,62 +202,64 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="getParcelId()">
 <h3>getParcelId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.34">getParcelId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.40">getParcelId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMeasurements()">
 <h3>getMeasurements</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../order/ParcelMeasurements.html" title="interface in com.commercetools.api.models.order">ParcelMeasurements</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.38">getMeasurements</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../order/ParcelMeasurements.html" title="interface in com.commercetools.api.models.order">ParcelMeasurements</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.47">getMeasurements</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setParcelId(java.lang.String)">
 <h3>setParcelId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.42">setParcelId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parcelId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.51">setParcelId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parcelId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMeasurements(com.commercetools.api.models.order.ParcelMeasurements)">
 <h3>setMeasurements</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.44">setMeasurements</a></span>&#8203;<span class="parameters">(<a href="../order/ParcelMeasurements.html" title="interface in com.commercetools.api.models.order">ParcelMeasurements</a>&nbsp;measurements)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.53">setMeasurements</a></span>&#8203;<span class="parameters">(<a href="../order/ParcelMeasurements.html" title="interface in com.commercetools.api.models.order">ParcelMeasurements</a>&nbsp;measurements)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.46">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.55">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetParcelMeasurementsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.57">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetParcelMeasurementsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.66">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetParcelMeasurementsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.61">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetParcelMeasurementsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedOrderSetParcelMeasurementsAction(java.util.function.Function)">
 <h3>withStagedOrderSetParcelMeasurementsAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.66">withStagedOrderSetParcelMeasurementsAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.75">withStagedOrderSetParcelMeasurementsAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.71">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderSetParcelMeasurementsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetParcelMeasurementsAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetParcelMeasurementsAction.html#line.80">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

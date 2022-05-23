@@ -83,20 +83,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.27">TaxCategoryBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.29">TaxCategoryBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">TaxCategoryBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   TaxCategory taxCategory = TaxCategory.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .name("{name}")
-           .plusRates(ratesBuilder -> ratesBuilder)
-           .build()
+     TaxCategory taxCategory = TaxCategory.builder()
+             .id("{id}")
+             .version(0.3)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .name("{name}")
+             .plusRates(ratesBuilder -> ratesBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -137,22 +139,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdAt(java.time.ZonedDateTime)">createdAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Date and time (UTC) the TaxCategory was initially created.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdBy(com.commercetools.api.models.common.CreatedBy)">createdBy</a></span>&#8203;(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdBy(java.util.function.Function)">createdBy</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#description(java.lang.String)">description</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Description of the TaxCategory.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
@@ -187,32 +189,32 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#id(java.lang.String)">id</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Platform-generated unique identifier of the TaxCategory.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#key(java.lang.String)">key</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">User-defined unique identifier of the TaxCategory.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedAt(java.time.ZonedDateTime)">lastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Date and time (UTC) the TaxCategory was last updated.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">lastModifiedBy</a></span>&#8203;(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedBy(java.util.function.Function)">lastModifiedBy</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(java.lang.String)">name</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Name of the TaxCategory.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -223,32 +225,32 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusRates(com.commercetools.api.models.tax_category.TaxRate...)">plusRates</a></span>&#8203;(<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>...&nbsp;rates)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Tax rates and subrates of states and countries.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusRates(java.util.function.Function)">plusRates</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,&#8203;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Tax rates and subrates of states and countries.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#rates(com.commercetools.api.models.tax_category.TaxRate...)">rates</a></span>&#8203;(<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>...&nbsp;rates)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Tax rates and subrates of states and countries.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#rates(java.util.List)">rates</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&gt;&nbsp;rates)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Tax rates and subrates of states and countries.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Current version of the TaxCategory.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withRates(java.util.function.Function)">withRates</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,&#8203;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Tax rates and subrates of states and countries.</div>
+<div class="block"><*</div>
 </div>
 </div>
 </div>
@@ -270,7 +272,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TaxCategoryBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.28">TaxCategoryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.30">TaxCategoryBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -284,187 +286,187 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.58">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block"><p>Platform-generated unique identifier of the TaxCategory.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.60">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="block"><*  <p>Platform-generated unique identifier of the TaxCategory.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.67">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
-<div class="block"><p>Current version of the TaxCategory.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.69">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="block"><*  <p>Current version of the TaxCategory.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.76">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
-<div class="block"><p>Date and time (UTC) the TaxCategory was initially created.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.78">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="block"><*  <p>Date and time (UTC) the TaxCategory was initially created.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.85">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
-<div class="block"><p>Date and time (UTC) the TaxCategory was last updated.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.87">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="block"><*  <p>Date and time (UTC) the TaxCategory was last updated.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(java.util.function.Function)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.94">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.96">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.104">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.106">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="block"><*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdBy(java.util.function.Function)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.114">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.116">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.124">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.126">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="block"><*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.133">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block"><p>Name of the TaxCategory.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.135">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="block"><*  <p>Name of the TaxCategory.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(java.lang.String)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.142">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.144">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</span></div>
-<div class="block"><p>Description of the TaxCategory.</p></div>
+<div class="block"><*  <p>Description of the TaxCategory.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="rates(com.commercetools.api.models.tax_category.TaxRate...)">
 <h3>rates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.151">rates</a></span>&#8203;<span class="parameters">(<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>...&nbsp;rates)</span></div>
-<div class="block"><p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.153">rates</a></span>&#8203;<span class="parameters">(<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>...&nbsp;rates)</span></div>
+<div class="block"><*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="rates(java.util.List)">
 <h3>rates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.160">rates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&gt;&nbsp;rates)</span></div>
-<div class="block"><p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.162">rates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&gt;&nbsp;rates)</span></div>
+<div class="block"><*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusRates(com.commercetools.api.models.tax_category.TaxRate...)">
 <h3>plusRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.169">plusRates</a></span>&#8203;<span class="parameters">(<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>...&nbsp;rates)</span></div>
-<div class="block"><p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.171">plusRates</a></span>&#8203;<span class="parameters">(<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>...&nbsp;rates)</span></div>
+<div class="block"><*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusRates(java.util.function.Function)">
 <h3>plusRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.181">plusRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,&#8203;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.183">plusRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,&#8203;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRates(java.util.function.Function)">
 <h3>withRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.194">withRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,&#8203;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.196">withRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,&#8203;<a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.205">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.207">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier of the TaxCategory.</p></div>
+<div class="block"><*  <p>User-defined unique identifier of the TaxCategory.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.210">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.212">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.214">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.216">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.218">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.220">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.222">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.224">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.226">getLastModifiedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.228">getLastModifiedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.231">getCreatedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.233">getCreatedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.236">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.238">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.240">getDescription</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.242">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRates()">
 <h3>getRates</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.245">getRates</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.247">getRates</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.249">getKey</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.251">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.254">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.256">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</code></dd>
@@ -474,20 +476,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.268">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.270">buildUnchecked</a></span>()</div>
 <div class="block">builds TaxCategory without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.273">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.275">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.tax_category.TaxCategory)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.277">of</a></span>&#8203;<span class="parameters">(<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#line.279">of</a></span>&#8203;<span class="parameters">(<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

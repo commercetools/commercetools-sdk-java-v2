@@ -27,260 +27,311 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">018</span><span id="line.18">public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    private String email;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    private String password;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    private String firstName;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private String lastName;</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    private String middleName;</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private String title;</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    private java.time.LocalDate dateOfBirth;</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    private String companyName;</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    private String vatId;</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    private java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses;</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    private Long defaultShippingAddress;</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    private Long defaultBillingAddress;</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    private String locale;</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    private java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores;</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    @JsonCreator</span>
-<span class="source-line-no">051</span><span id="line.51">    MyCustomerDraftImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password,</span>
-<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,</span>
-<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("middleName") final String middleName, @JsonProperty("title") final String title,</span>
-<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth,</span>
-<span class="source-line-no">055</span><span id="line.55">            @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId,</span>
-<span class="source-line-no">056</span><span id="line.56">            @JsonProperty("addresses") final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses,</span>
-<span class="source-line-no">057</span><span id="line.57">            @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress,</span>
-<span class="source-line-no">058</span><span id="line.58">            @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress,</span>
-<span class="source-line-no">059</span><span id="line.59">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,</span>
-<span class="source-line-no">060</span><span id="line.60">            @JsonProperty("locale") final String locale,</span>
-<span class="source-line-no">061</span><span id="line.61">            @JsonProperty("stores") final java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores) {</span>
-<span class="source-line-no">062</span><span id="line.62">        this.email = email;</span>
-<span class="source-line-no">063</span><span id="line.63">        this.password = password;</span>
-<span class="source-line-no">064</span><span id="line.64">        this.firstName = firstName;</span>
-<span class="source-line-no">065</span><span id="line.65">        this.lastName = lastName;</span>
-<span class="source-line-no">066</span><span id="line.66">        this.middleName = middleName;</span>
-<span class="source-line-no">067</span><span id="line.67">        this.title = title;</span>
-<span class="source-line-no">068</span><span id="line.68">        this.dateOfBirth = dateOfBirth;</span>
-<span class="source-line-no">069</span><span id="line.69">        this.companyName = companyName;</span>
-<span class="source-line-no">070</span><span id="line.70">        this.vatId = vatId;</span>
-<span class="source-line-no">071</span><span id="line.71">        this.addresses = addresses;</span>
-<span class="source-line-no">072</span><span id="line.72">        this.defaultShippingAddress = defaultShippingAddress;</span>
-<span class="source-line-no">073</span><span id="line.73">        this.defaultBillingAddress = defaultBillingAddress;</span>
-<span class="source-line-no">074</span><span id="line.74">        this.custom = custom;</span>
-<span class="source-line-no">075</span><span id="line.75">        this.locale = locale;</span>
-<span class="source-line-no">076</span><span id="line.76">        this.stores = stores;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public MyCustomerDraftImpl() {</span>
+<span class="source-line-no">017</span><span id="line.17">/**</span>
+<span class="source-line-no">018</span><span id="line.18"> * MyCustomerDraft</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">021</span><span id="line.21">public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    private String email;</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    private String password;</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    private String firstName;</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    private String lastName;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    private String middleName;</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    private String title;</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    private java.time.LocalDate dateOfBirth;</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    private String companyName;</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    private String vatId;</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    private java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses;</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    private Long defaultShippingAddress;</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    private Long defaultBillingAddress;</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    private String locale;</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    private java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores;</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonCreator</span>
+<span class="source-line-no">054</span><span id="line.54">    MyCustomerDraftImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password,</span>
+<span class="source-line-no">055</span><span id="line.55">            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,</span>
+<span class="source-line-no">056</span><span id="line.56">            @JsonProperty("middleName") final String middleName, @JsonProperty("title") final String title,</span>
+<span class="source-line-no">057</span><span id="line.57">            @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth,</span>
+<span class="source-line-no">058</span><span id="line.58">            @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId,</span>
+<span class="source-line-no">059</span><span id="line.59">            @JsonProperty("addresses") final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses,</span>
+<span class="source-line-no">060</span><span id="line.60">            @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress,</span>
+<span class="source-line-no">061</span><span id="line.61">            @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress,</span>
+<span class="source-line-no">062</span><span id="line.62">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,</span>
+<span class="source-line-no">063</span><span id="line.63">            @JsonProperty("locale") final String locale,</span>
+<span class="source-line-no">064</span><span id="line.64">            @JsonProperty("stores") final java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores) {</span>
+<span class="source-line-no">065</span><span id="line.65">        this.email = email;</span>
+<span class="source-line-no">066</span><span id="line.66">        this.password = password;</span>
+<span class="source-line-no">067</span><span id="line.67">        this.firstName = firstName;</span>
+<span class="source-line-no">068</span><span id="line.68">        this.lastName = lastName;</span>
+<span class="source-line-no">069</span><span id="line.69">        this.middleName = middleName;</span>
+<span class="source-line-no">070</span><span id="line.70">        this.title = title;</span>
+<span class="source-line-no">071</span><span id="line.71">        this.dateOfBirth = dateOfBirth;</span>
+<span class="source-line-no">072</span><span id="line.72">        this.companyName = companyName;</span>
+<span class="source-line-no">073</span><span id="line.73">        this.vatId = vatId;</span>
+<span class="source-line-no">074</span><span id="line.74">        this.addresses = addresses;</span>
+<span class="source-line-no">075</span><span id="line.75">        this.defaultShippingAddress = defaultShippingAddress;</span>
+<span class="source-line-no">076</span><span id="line.76">        this.defaultBillingAddress = defaultBillingAddress;</span>
+<span class="source-line-no">077</span><span id="line.77">        this.custom = custom;</span>
+<span class="source-line-no">078</span><span id="line.78">        this.locale = locale;</span>
+<span class="source-line-no">079</span><span id="line.79">        this.stores = stores;</span>
 <span class="source-line-no">080</span><span id="line.80">    }</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public String getEmail() {</span>
-<span class="source-line-no">083</span><span id="line.83">        return this.email;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public String getPassword() {</span>
-<span class="source-line-no">087</span><span id="line.87">        return this.password;</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public String getFirstName() {</span>
-<span class="source-line-no">091</span><span id="line.91">        return this.firstName;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public String getLastName() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return this.lastName;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public String getMiddleName() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return this.middleName;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public String getTitle() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return this.title;</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    public java.time.LocalDate getDateOfBirth() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return this.dateOfBirth;</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public String getCompanyName() {</span>
-<span class="source-line-no">111</span><span id="line.111">        return this.companyName;</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public String getVatId() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return this.vatId;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    /**</span>
-<span class="source-line-no">119</span><span id="line.119">     *  &lt;p&gt;Sets the ID of each address to be unique in the addresses list.&lt;/p&gt;</span>
-<span class="source-line-no">120</span><span id="line.120">     */</span>
-<span class="source-line-no">121</span><span id="line.121">    public java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; getAddresses() {</span>
-<span class="source-line-no">122</span><span id="line.122">        return this.addresses;</span>
+<span class="source-line-no">082</span><span id="line.82">    public MyCustomerDraftImpl() {</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    /**</span>
+<span class="source-line-no">086</span><span id="line.86">     &lt;&gt;</span>
+<span class="source-line-no">087</span><span id="line.87">     */</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public String getEmail() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return this.email;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    /**</span>
+<span class="source-line-no">094</span><span id="line.94">     &lt;&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public String getPassword() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.password;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     &lt;&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public String getFirstName() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return this.firstName;</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    /**</span>
+<span class="source-line-no">110</span><span id="line.110">     &lt;&gt;</span>
+<span class="source-line-no">111</span><span id="line.111">     */</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public String getLastName() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.lastName;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    /**</span>
+<span class="source-line-no">118</span><span id="line.118">     &lt;&gt;</span>
+<span class="source-line-no">119</span><span id="line.119">     */</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    public String getMiddleName() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return this.middleName;</span>
 <span class="source-line-no">123</span><span id="line.123">    }</span>
 <span class="source-line-no">124</span><span id="line.124"></span>
 <span class="source-line-no">125</span><span id="line.125">    /**</span>
-<span class="source-line-no">126</span><span id="line.126">     *  &lt;p&gt;The index of the address in the addresses array. The &lt;code&gt;defaultShippingAddressId&lt;/code&gt; of the customer will be set to the ID of that address.&lt;/p&gt;</span>
+<span class="source-line-no">126</span><span id="line.126">     &lt;&gt;</span>
 <span class="source-line-no">127</span><span id="line.127">     */</span>
-<span class="source-line-no">128</span><span id="line.128">    public Long getDefaultShippingAddress() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return this.defaultShippingAddress;</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    /**</span>
-<span class="source-line-no">133</span><span id="line.133">     *  &lt;p&gt;The index of the address in the addresses array. The &lt;code&gt;defaultBillingAddressId&lt;/code&gt; of the customer will be set to the ID of that address.&lt;/p&gt;</span>
-<span class="source-line-no">134</span><span id="line.134">     */</span>
-<span class="source-line-no">135</span><span id="line.135">    public Long getDefaultBillingAddress() {</span>
-<span class="source-line-no">136</span><span id="line.136">        return this.defaultBillingAddress;</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    /**</span>
-<span class="source-line-no">140</span><span id="line.140">     *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
-<span class="source-line-no">141</span><span id="line.141">     */</span>
-<span class="source-line-no">142</span><span id="line.142">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">143</span><span id="line.143">        return this.custom;</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public String getLocale() {</span>
-<span class="source-line-no">147</span><span id="line.147">        return this.locale;</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; getStores() {</span>
-<span class="source-line-no">151</span><span id="line.151">        return this.stores;</span>
-<span class="source-line-no">152</span><span id="line.152">    }</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public void setEmail(final String email) {</span>
-<span class="source-line-no">155</span><span id="line.155">        this.email = email;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public void setPassword(final String password) {</span>
-<span class="source-line-no">159</span><span id="line.159">        this.password = password;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    public void setFirstName(final String firstName) {</span>
-<span class="source-line-no">163</span><span id="line.163">        this.firstName = firstName;</span>
-<span class="source-line-no">164</span><span id="line.164">    }</span>
-<span class="source-line-no">165</span><span id="line.165"></span>
-<span class="source-line-no">166</span><span id="line.166">    public void setLastName(final String lastName) {</span>
-<span class="source-line-no">167</span><span id="line.167">        this.lastName = lastName;</span>
-<span class="source-line-no">168</span><span id="line.168">    }</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    public void setMiddleName(final String middleName) {</span>
-<span class="source-line-no">171</span><span id="line.171">        this.middleName = middleName;</span>
-<span class="source-line-no">172</span><span id="line.172">    }</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    public void setTitle(final String title) {</span>
-<span class="source-line-no">175</span><span id="line.175">        this.title = title;</span>
-<span class="source-line-no">176</span><span id="line.176">    }</span>
-<span class="source-line-no">177</span><span id="line.177"></span>
-<span class="source-line-no">178</span><span id="line.178">    public void setDateOfBirth(final java.time.LocalDate dateOfBirth) {</span>
-<span class="source-line-no">179</span><span id="line.179">        this.dateOfBirth = dateOfBirth;</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    public void setCompanyName(final String companyName) {</span>
-<span class="source-line-no">183</span><span id="line.183">        this.companyName = companyName;</span>
-<span class="source-line-no">184</span><span id="line.184">    }</span>
-<span class="source-line-no">185</span><span id="line.185"></span>
-<span class="source-line-no">186</span><span id="line.186">    public void setVatId(final String vatId) {</span>
-<span class="source-line-no">187</span><span id="line.187">        this.vatId = vatId;</span>
-<span class="source-line-no">188</span><span id="line.188">    }</span>
-<span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">    public void setAddresses(final com.commercetools.api.models.common.BaseAddress... addresses) {</span>
-<span class="source-line-no">191</span><span id="line.191">        this.addresses = new ArrayList&lt;&gt;(Arrays.asList(addresses));</span>
-<span class="source-line-no">192</span><span id="line.192">    }</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">    public void setAddresses(final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses) {</span>
-<span class="source-line-no">195</span><span id="line.195">        this.addresses = addresses;</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    public void setDefaultShippingAddress(final Long defaultShippingAddress) {</span>
-<span class="source-line-no">199</span><span id="line.199">        this.defaultShippingAddress = defaultShippingAddress;</span>
-<span class="source-line-no">200</span><span id="line.200">    }</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    public void setDefaultBillingAddress(final Long defaultBillingAddress) {</span>
-<span class="source-line-no">203</span><span id="line.203">        this.defaultBillingAddress = defaultBillingAddress;</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">207</span><span id="line.207">        this.custom = custom;</span>
-<span class="source-line-no">208</span><span id="line.208">    }</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    public void setLocale(final String locale) {</span>
-<span class="source-line-no">211</span><span id="line.211">        this.locale = locale;</span>
-<span class="source-line-no">212</span><span id="line.212">    }</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">    public void setStores(final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {</span>
-<span class="source-line-no">215</span><span id="line.215">        this.stores = new ArrayList&lt;&gt;(Arrays.asList(stores));</span>
-<span class="source-line-no">216</span><span id="line.216">    }</span>
-<span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    public void setStores(final java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores) {</span>
-<span class="source-line-no">219</span><span id="line.219">        this.stores = stores;</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    @Override</span>
-<span class="source-line-no">223</span><span id="line.223">    public boolean equals(Object o) {</span>
-<span class="source-line-no">224</span><span id="line.224">        if (this == o)</span>
-<span class="source-line-no">225</span><span id="line.225">            return true;</span>
-<span class="source-line-no">226</span><span id="line.226"></span>
-<span class="source-line-no">227</span><span id="line.227">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">228</span><span id="line.228">            return false;</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">        MyCustomerDraftImpl that = (MyCustomerDraftImpl) o;</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">        return new EqualsBuilder().append(email, that.email)</span>
-<span class="source-line-no">233</span><span id="line.233">                .append(password, that.password)</span>
-<span class="source-line-no">234</span><span id="line.234">                .append(firstName, that.firstName)</span>
-<span class="source-line-no">235</span><span id="line.235">                .append(lastName, that.lastName)</span>
-<span class="source-line-no">236</span><span id="line.236">                .append(middleName, that.middleName)</span>
-<span class="source-line-no">237</span><span id="line.237">                .append(title, that.title)</span>
-<span class="source-line-no">238</span><span id="line.238">                .append(dateOfBirth, that.dateOfBirth)</span>
-<span class="source-line-no">239</span><span id="line.239">                .append(companyName, that.companyName)</span>
-<span class="source-line-no">240</span><span id="line.240">                .append(vatId, that.vatId)</span>
-<span class="source-line-no">241</span><span id="line.241">                .append(addresses, that.addresses)</span>
-<span class="source-line-no">242</span><span id="line.242">                .append(defaultShippingAddress, that.defaultShippingAddress)</span>
-<span class="source-line-no">243</span><span id="line.243">                .append(defaultBillingAddress, that.defaultBillingAddress)</span>
-<span class="source-line-no">244</span><span id="line.244">                .append(custom, that.custom)</span>
-<span class="source-line-no">245</span><span id="line.245">                .append(locale, that.locale)</span>
-<span class="source-line-no">246</span><span id="line.246">                .append(stores, that.stores)</span>
-<span class="source-line-no">247</span><span id="line.247">                .isEquals();</span>
-<span class="source-line-no">248</span><span id="line.248">    }</span>
-<span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">    @Override</span>
-<span class="source-line-no">251</span><span id="line.251">    public int hashCode() {</span>
-<span class="source-line-no">252</span><span id="line.252">        return new HashCodeBuilder(17, 37).append(email)</span>
-<span class="source-line-no">253</span><span id="line.253">                .append(password)</span>
-<span class="source-line-no">254</span><span id="line.254">                .append(firstName)</span>
-<span class="source-line-no">255</span><span id="line.255">                .append(lastName)</span>
-<span class="source-line-no">256</span><span id="line.256">                .append(middleName)</span>
-<span class="source-line-no">257</span><span id="line.257">                .append(title)</span>
-<span class="source-line-no">258</span><span id="line.258">                .append(dateOfBirth)</span>
-<span class="source-line-no">259</span><span id="line.259">                .append(companyName)</span>
-<span class="source-line-no">260</span><span id="line.260">                .append(vatId)</span>
-<span class="source-line-no">261</span><span id="line.261">                .append(addresses)</span>
-<span class="source-line-no">262</span><span id="line.262">                .append(defaultShippingAddress)</span>
-<span class="source-line-no">263</span><span id="line.263">                .append(defaultBillingAddress)</span>
-<span class="source-line-no">264</span><span id="line.264">                .append(custom)</span>
-<span class="source-line-no">265</span><span id="line.265">                .append(locale)</span>
-<span class="source-line-no">266</span><span id="line.266">                .append(stores)</span>
-<span class="source-line-no">267</span><span id="line.267">                .toHashCode();</span>
-<span class="source-line-no">268</span><span id="line.268">    }</span>
-<span class="source-line-no">269</span><span id="line.269"></span>
-<span class="source-line-no">270</span><span id="line.270">}</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public String getTitle() {</span>
+<span class="source-line-no">130</span><span id="line.130">        return this.title;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    /**</span>
+<span class="source-line-no">134</span><span id="line.134">     &lt;&gt;</span>
+<span class="source-line-no">135</span><span id="line.135">     */</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    public java.time.LocalDate getDateOfBirth() {</span>
+<span class="source-line-no">138</span><span id="line.138">        return this.dateOfBirth;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    /**</span>
+<span class="source-line-no">142</span><span id="line.142">     &lt;&gt;</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    public String getCompanyName() {</span>
+<span class="source-line-no">146</span><span id="line.146">        return this.companyName;</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    /**</span>
+<span class="source-line-no">150</span><span id="line.150">     &lt;&gt;</span>
+<span class="source-line-no">151</span><span id="line.151">     */</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public String getVatId() {</span>
+<span class="source-line-no">154</span><span id="line.154">        return this.vatId;</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    /**</span>
+<span class="source-line-no">158</span><span id="line.158">     &lt;*  &lt;p&gt;Sets the ID of each address to be unique in the addresses list.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">159</span><span id="line.159">     */</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; getAddresses() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return this.addresses;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    /**</span>
+<span class="source-line-no">166</span><span id="line.166">     &lt;*  &lt;p&gt;The index of the address in the addresses array. The &lt;code&gt;defaultShippingAddressId&lt;/code&gt; of the customer will be set to the ID of that address.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">167</span><span id="line.167">     */</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public Long getDefaultShippingAddress() {</span>
+<span class="source-line-no">170</span><span id="line.170">        return this.defaultShippingAddress;</span>
+<span class="source-line-no">171</span><span id="line.171">    }</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    /**</span>
+<span class="source-line-no">174</span><span id="line.174">     &lt;*  &lt;p&gt;The index of the address in the addresses array. The &lt;code&gt;defaultBillingAddressId&lt;/code&gt; of the customer will be set to the ID of that address.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">175</span><span id="line.175">     */</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public Long getDefaultBillingAddress() {</span>
+<span class="source-line-no">178</span><span id="line.178">        return this.defaultBillingAddress;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    /**</span>
+<span class="source-line-no">182</span><span id="line.182">     &lt;*  &lt;p&gt;The custom fields.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">183</span><span id="line.183">     */</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">186</span><span id="line.186">        return this.custom;</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    /**</span>
+<span class="source-line-no">190</span><span id="line.190">     &lt;&gt;</span>
+<span class="source-line-no">191</span><span id="line.191">     */</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    public String getLocale() {</span>
+<span class="source-line-no">194</span><span id="line.194">        return this.locale;</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    /**</span>
+<span class="source-line-no">198</span><span id="line.198">     &lt;&gt;</span>
+<span class="source-line-no">199</span><span id="line.199">     */</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    public java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; getStores() {</span>
+<span class="source-line-no">202</span><span id="line.202">        return this.stores;</span>
+<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    public void setEmail(final String email) {</span>
+<span class="source-line-no">206</span><span id="line.206">        this.email = email;</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    public void setPassword(final String password) {</span>
+<span class="source-line-no">210</span><span id="line.210">        this.password = password;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public void setFirstName(final String firstName) {</span>
+<span class="source-line-no">214</span><span id="line.214">        this.firstName = firstName;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public void setLastName(final String lastName) {</span>
+<span class="source-line-no">218</span><span id="line.218">        this.lastName = lastName;</span>
+<span class="source-line-no">219</span><span id="line.219">    }</span>
+<span class="source-line-no">220</span><span id="line.220"></span>
+<span class="source-line-no">221</span><span id="line.221">    public void setMiddleName(final String middleName) {</span>
+<span class="source-line-no">222</span><span id="line.222">        this.middleName = middleName;</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    public void setTitle(final String title) {</span>
+<span class="source-line-no">226</span><span id="line.226">        this.title = title;</span>
+<span class="source-line-no">227</span><span id="line.227">    }</span>
+<span class="source-line-no">228</span><span id="line.228"></span>
+<span class="source-line-no">229</span><span id="line.229">    public void setDateOfBirth(final java.time.LocalDate dateOfBirth) {</span>
+<span class="source-line-no">230</span><span id="line.230">        this.dateOfBirth = dateOfBirth;</span>
+<span class="source-line-no">231</span><span id="line.231">    }</span>
+<span class="source-line-no">232</span><span id="line.232"></span>
+<span class="source-line-no">233</span><span id="line.233">    public void setCompanyName(final String companyName) {</span>
+<span class="source-line-no">234</span><span id="line.234">        this.companyName = companyName;</span>
+<span class="source-line-no">235</span><span id="line.235">    }</span>
+<span class="source-line-no">236</span><span id="line.236"></span>
+<span class="source-line-no">237</span><span id="line.237">    public void setVatId(final String vatId) {</span>
+<span class="source-line-no">238</span><span id="line.238">        this.vatId = vatId;</span>
+<span class="source-line-no">239</span><span id="line.239">    }</span>
+<span class="source-line-no">240</span><span id="line.240"></span>
+<span class="source-line-no">241</span><span id="line.241">    public void setAddresses(final com.commercetools.api.models.common.BaseAddress... addresses) {</span>
+<span class="source-line-no">242</span><span id="line.242">        this.addresses = new ArrayList&lt;&gt;(Arrays.asList(addresses));</span>
+<span class="source-line-no">243</span><span id="line.243">    }</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    public void setAddresses(final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; addresses) {</span>
+<span class="source-line-no">246</span><span id="line.246">        this.addresses = addresses;</span>
+<span class="source-line-no">247</span><span id="line.247">    }</span>
+<span class="source-line-no">248</span><span id="line.248"></span>
+<span class="source-line-no">249</span><span id="line.249">    public void setDefaultShippingAddress(final Long defaultShippingAddress) {</span>
+<span class="source-line-no">250</span><span id="line.250">        this.defaultShippingAddress = defaultShippingAddress;</span>
+<span class="source-line-no">251</span><span id="line.251">    }</span>
+<span class="source-line-no">252</span><span id="line.252"></span>
+<span class="source-line-no">253</span><span id="line.253">    public void setDefaultBillingAddress(final Long defaultBillingAddress) {</span>
+<span class="source-line-no">254</span><span id="line.254">        this.defaultBillingAddress = defaultBillingAddress;</span>
+<span class="source-line-no">255</span><span id="line.255">    }</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">258</span><span id="line.258">        this.custom = custom;</span>
+<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">260</span><span id="line.260"></span>
+<span class="source-line-no">261</span><span id="line.261">    public void setLocale(final String locale) {</span>
+<span class="source-line-no">262</span><span id="line.262">        this.locale = locale;</span>
+<span class="source-line-no">263</span><span id="line.263">    }</span>
+<span class="source-line-no">264</span><span id="line.264"></span>
+<span class="source-line-no">265</span><span id="line.265">    public void setStores(final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {</span>
+<span class="source-line-no">266</span><span id="line.266">        this.stores = new ArrayList&lt;&gt;(Arrays.asList(stores));</span>
+<span class="source-line-no">267</span><span id="line.267">    }</span>
+<span class="source-line-no">268</span><span id="line.268"></span>
+<span class="source-line-no">269</span><span id="line.269">    public void setStores(final java.util.List&lt;com.commercetools.api.models.store.StoreResourceIdentifier&gt; stores) {</span>
+<span class="source-line-no">270</span><span id="line.270">        this.stores = stores;</span>
+<span class="source-line-no">271</span><span id="line.271">    }</span>
+<span class="source-line-no">272</span><span id="line.272"></span>
+<span class="source-line-no">273</span><span id="line.273">    @Override</span>
+<span class="source-line-no">274</span><span id="line.274">    public boolean equals(Object o) {</span>
+<span class="source-line-no">275</span><span id="line.275">        if (this == o)</span>
+<span class="source-line-no">276</span><span id="line.276">            return true;</span>
+<span class="source-line-no">277</span><span id="line.277"></span>
+<span class="source-line-no">278</span><span id="line.278">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">279</span><span id="line.279">            return false;</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">        MyCustomerDraftImpl that = (MyCustomerDraftImpl) o;</span>
+<span class="source-line-no">282</span><span id="line.282"></span>
+<span class="source-line-no">283</span><span id="line.283">        return new EqualsBuilder().append(email, that.email)</span>
+<span class="source-line-no">284</span><span id="line.284">                .append(password, that.password)</span>
+<span class="source-line-no">285</span><span id="line.285">                .append(firstName, that.firstName)</span>
+<span class="source-line-no">286</span><span id="line.286">                .append(lastName, that.lastName)</span>
+<span class="source-line-no">287</span><span id="line.287">                .append(middleName, that.middleName)</span>
+<span class="source-line-no">288</span><span id="line.288">                .append(title, that.title)</span>
+<span class="source-line-no">289</span><span id="line.289">                .append(dateOfBirth, that.dateOfBirth)</span>
+<span class="source-line-no">290</span><span id="line.290">                .append(companyName, that.companyName)</span>
+<span class="source-line-no">291</span><span id="line.291">                .append(vatId, that.vatId)</span>
+<span class="source-line-no">292</span><span id="line.292">                .append(addresses, that.addresses)</span>
+<span class="source-line-no">293</span><span id="line.293">                .append(defaultShippingAddress, that.defaultShippingAddress)</span>
+<span class="source-line-no">294</span><span id="line.294">                .append(defaultBillingAddress, that.defaultBillingAddress)</span>
+<span class="source-line-no">295</span><span id="line.295">                .append(custom, that.custom)</span>
+<span class="source-line-no">296</span><span id="line.296">                .append(locale, that.locale)</span>
+<span class="source-line-no">297</span><span id="line.297">                .append(stores, that.stores)</span>
+<span class="source-line-no">298</span><span id="line.298">                .isEquals();</span>
+<span class="source-line-no">299</span><span id="line.299">    }</span>
+<span class="source-line-no">300</span><span id="line.300"></span>
+<span class="source-line-no">301</span><span id="line.301">    @Override</span>
+<span class="source-line-no">302</span><span id="line.302">    public int hashCode() {</span>
+<span class="source-line-no">303</span><span id="line.303">        return new HashCodeBuilder(17, 37).append(email)</span>
+<span class="source-line-no">304</span><span id="line.304">                .append(password)</span>
+<span class="source-line-no">305</span><span id="line.305">                .append(firstName)</span>
+<span class="source-line-no">306</span><span id="line.306">                .append(lastName)</span>
+<span class="source-line-no">307</span><span id="line.307">                .append(middleName)</span>
+<span class="source-line-no">308</span><span id="line.308">                .append(title)</span>
+<span class="source-line-no">309</span><span id="line.309">                .append(dateOfBirth)</span>
+<span class="source-line-no">310</span><span id="line.310">                .append(companyName)</span>
+<span class="source-line-no">311</span><span id="line.311">                .append(vatId)</span>
+<span class="source-line-no">312</span><span id="line.312">                .append(addresses)</span>
+<span class="source-line-no">313</span><span id="line.313">                .append(defaultShippingAddress)</span>
+<span class="source-line-no">314</span><span id="line.314">                .append(defaultBillingAddress)</span>
+<span class="source-line-no">315</span><span id="line.315">                .append(custom)</span>
+<span class="source-line-no">316</span><span id="line.316">                .append(locale)</span>
+<span class="source-line-no">317</span><span id="line.317">                .append(stores)</span>
+<span class="source-line-no">318</span><span id="line.318">                .toHashCode();</span>
+<span class="source-line-no">319</span><span id="line.319">    }</span>
+<span class="source-line-no">320</span><span id="line.320"></span>
+<span class="source-line-no">321</span><span id="line.321">}</span>
 
 
 

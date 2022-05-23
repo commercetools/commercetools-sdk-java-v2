@@ -84,18 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SetLineItemDiscountedPricePerQuantityChangeImpl.html" title="class in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.32">SetLineItemDiscountedPricePerQuantityChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.35">SetLineItemDiscountedPricePerQuantityChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">SetLineItemDiscountedPricePerQuantityChange
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   SetLineItemDiscountedPricePerQuantityChange setLineItemDiscountedPricePerQuantityChange = SetLineItemDiscountedPricePerQuantityChange.builder()
-           .change("{change}")
-           .lineItem(lineItemBuilder -> lineItemBuilder)
-           .variant("{variant}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
+     SetLineItemDiscountedPricePerQuantityChange setLineItemDiscountedPricePerQuantityChange = SetLineItemDiscountedPricePerQuantityChange.builder()
+             .change("{change}")
+             .lineItem(lineItemBuilder -> lineItemBuilder)
+             .variant("{variant}")
+             .nextValue(nextValueBuilder -> nextValueBuilder)
+             .previousValue(previousValueBuilder -> previousValueBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -136,23 +139,33 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getChange()">getChange</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Update action for <code>setLineItemDiscountedPricePerQuantity</code></div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLineItem()">getLineItem</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNextValue()">getNextValue</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPreviousValue()">getPreviousValue</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getVariant()">getVariant</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -200,7 +213,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY_CHANGE">
 <h3>SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.36">SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.39">SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.SetLineItemDiscountedPricePerQuantityChange.SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY_CHANGE">Constant Field Values</a></dd>
@@ -219,7 +232,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.38">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.44">getType</a></span>()</div>
+<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -230,8 +244,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.45">getChange</a></span>()</div>
-<div class="block"><p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.51">getChange</a></span>()</div>
+<div class="block"><*  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getChange()">getChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -243,14 +257,16 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getLineItem</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.49">getLineItem</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.58">getLineItem</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariant()">
 <h3>getVariant</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.54">getVariant</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.66">getVariant</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -258,7 +274,8 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.58">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.73">getNextValue</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -266,13 +283,14 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.63">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.81">getPreviousValue</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.68">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.86">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -282,61 +300,61 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setLineItem(com.commercetools.history.models.common.LocalizedString)">
 <h3>setLineItem</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.70">setLineItem</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;lineItem)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.88">setLineItem</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;lineItem)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariant(java.lang.String)">
 <h3>setVariant</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.72">setVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.90">setVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.74">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.92">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.76">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.94">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPriceForQuantity</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.78">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.96">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetLineItemDiscountedPricePerQuantityChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.82">of</a></span>&#8203;<span class="parameters">(<a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.100">of</a></span>&#8203;<span class="parameters">(<a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemDiscountedPricePerQuantityChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.93">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemDiscountedPricePerQuantityChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.111">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.SetLineItemDiscountedPricePerQuantityChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemDiscountedPricePerQuantityChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.97">builder</a></span>&#8203;<span class="parameters">(<a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemDiscountedPricePerQuantityChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.115">builder</a></span>&#8203;<span class="parameters">(<a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSetLineItemDiscountedPricePerQuantityChange(java.util.function.Function)">
 <h3>withSetLineItemDiscountedPricePerQuantityChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.102">withSetLineItemDiscountedPricePerQuantityChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.120">withSetLineItemDiscountedPricePerQuantityChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.107">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetLineItemDiscountedPricePerQuantityChange.html" title="interface in com.commercetools.history.models.change">SetLineItemDiscountedPricePerQuantityChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemDiscountedPricePerQuantityChange.html#line.125">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

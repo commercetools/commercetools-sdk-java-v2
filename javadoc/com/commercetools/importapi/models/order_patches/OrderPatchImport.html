@@ -80,16 +80,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderPatchImportImpl.html" title="class in com.commercetools.importapi.models.order_patches">OrderPatchImportImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.29">OrderPatchImport</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.30">OrderPatchImport</a></span></div>
 <div class="block"><p>Representation for an update of an Order. Use this type to import updates for existing Orders in a commercetools Project.</p>
 
+ <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   OrderPatchImport orderPatchImport = OrderPatchImport.builder()
-           .orderNumber("{orderNumber}")
-           .fields(fieldsBuilder -> fieldsBuilder)
-           .build()
+     OrderPatchImport orderPatchImport = OrderPatchImport.builder()
+             .orderNumber("{orderNumber}")
+             .fields(fieldsBuilder -> fieldsBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -115,12 +116,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFields()">getFields</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getOrderNumber()">getOrderNumber</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -158,8 +159,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getOrderNumber()">
 <h3>getOrderNumber</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.36">getOrderNumber</a></span>()</div>
-<div class="block"><p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.37">getOrderNumber</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>></div>
 </section>
 </li>
 <li>
@@ -167,56 +168,56 @@ loadScripts(document, 'script');</script>
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.43">getFields</a></span>()</div>
-<div class="block"><p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.44">getFields</a></span>()</div>
+<div class="block"><*  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOrderNumber(java.lang.String)">
 <h3>setOrderNumber</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.48">setOrderNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderNumber)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.49">setOrderNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderNumber)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFields(com.commercetools.importapi.models.order_patches.OrderField)">
 <h3>setFields</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.50">setFields</a></span>&#8203;<span class="parameters">(<a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a>&nbsp;fields)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.51">setFields</a></span>&#8203;<span class="parameters">(<a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a>&nbsp;fields)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.52">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.53">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.order_patches.OrderPatchImport)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImportBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderPatchImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.63">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImportBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderPatchImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.64">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.order_patches.OrderPatchImport)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImportBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderPatchImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.67">builder</a></span>&#8203;<span class="parameters">(<a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImportBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderPatchImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderPatchImport(java.util.function.Function)">
 <h3>withOrderPatchImport</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.71">withOrderPatchImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.72">withOrderPatchImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.75">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImport.html#line.76">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -23,220 +23,242 @@
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">/**</span>
-<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">016</span><span id="line.16">   OrderFromCartDraft orderFromCartDraft = OrderFromCartDraft.builder()</span>
-<span class="source-line-no">017</span><span id="line.17">           .version(0.3)</span>
-<span class="source-line-no">018</span><span id="line.18">           .build()</span>
-<span class="source-line-no">019</span><span id="line.19"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> &lt;/div&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> */</span>
-<span class="source-line-no">022</span><span id="line.22">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">023</span><span id="line.23">public class OrderFromCartDraftBuilder implements Builder&lt;OrderFromCartDraft&gt; {</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    @Deprecated</span>
-<span class="source-line-no">026</span><span id="line.26">    @Nullable</span>
-<span class="source-line-no">027</span><span id="line.27">    private String id;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
-<span class="source-line-no">030</span><span id="line.30">    private com.commercetools.api.models.cart.CartResourceIdentifier cart;</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    private Long version;</span>
+<span class="source-line-no">013</span><span id="line.13"> * OrderFromCartDraftBuilder</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *     OrderFromCartDraft orderFromCartDraft = OrderFromCartDraft.builder()</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .version(0.3)</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .build()</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;/div&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> */</span>
+<span class="source-line-no">024</span><span id="line.24">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">025</span><span id="line.25">public class OrderFromCartDraftBuilder implements Builder&lt;OrderFromCartDraft&gt; {</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    @Deprecated</span>
+<span class="source-line-no">028</span><span id="line.28">    @Nullable</span>
+<span class="source-line-no">029</span><span id="line.29">    private String id;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    @Nullable</span>
+<span class="source-line-no">032</span><span id="line.32">    private com.commercetools.api.models.cart.CartResourceIdentifier cart;</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    @Nullable</span>
-<span class="source-line-no">035</span><span id="line.35">    private String orderNumber;</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @Nullable</span>
-<span class="source-line-no">038</span><span id="line.38">    private com.commercetools.api.models.order.PaymentState paymentState;</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    @Nullable</span>
-<span class="source-line-no">041</span><span id="line.41">    private com.commercetools.api.models.order.ShipmentState shipmentState;</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    @Nullable</span>
-<span class="source-line-no">044</span><span id="line.44">    private com.commercetools.api.models.order.OrderState orderState;</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    @Nullable</span>
-<span class="source-line-no">047</span><span id="line.47">    private com.commercetools.api.models.state.StateResourceIdentifier state;</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @Nullable</span>
-<span class="source-line-no">050</span><span id="line.50">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;Platform-generated unique identifier of the Cart from which you can create an Order.&lt;/p&gt;</span>
-<span class="source-line-no">054</span><span id="line.54">     */</span>
-<span class="source-line-no">055</span><span id="line.55">    @Deprecated</span>
-<span class="source-line-no">056</span><span id="line.56">    public OrderFromCartDraftBuilder id(@Nullable final String id) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.id = id;</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;ResourceIdentifier to the Cart from which this order is created.&lt;/p&gt;</span>
-<span class="source-line-no">063</span><span id="line.63">     */</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public OrderFromCartDraftBuilder cart(</span>
-<span class="source-line-no">066</span><span id="line.66">            Function&lt;com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.cart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of()).build();</span>
-<span class="source-line-no">068</span><span id="line.68">        return this;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;ResourceIdentifier to the Cart from which this order is created.&lt;/p&gt;</span>
-<span class="source-line-no">073</span><span id="line.73">     */</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public OrderFromCartDraftBuilder cart(</span>
-<span class="source-line-no">076</span><span id="line.76">            @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier cart) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.cart = cart;</span>
-<span class="source-line-no">078</span><span id="line.78">        return this;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public OrderFromCartDraftBuilder version(final Long version) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.version = version;</span>
-<span class="source-line-no">083</span><span id="line.83">        return this;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression &lt;code&gt;[a-z0-9_\-]{2,36}&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public OrderFromCartDraftBuilder orderNumber(@Nullable final String orderNumber) {</span>
-<span class="source-line-no">091</span><span id="line.91">        this.orderNumber = orderNumber;</span>
-<span class="source-line-no">092</span><span id="line.92">        return this;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public OrderFromCartDraftBuilder paymentState(</span>
-<span class="source-line-no">096</span><span id="line.96">            @Nullable final com.commercetools.api.models.order.PaymentState paymentState) {</span>
-<span class="source-line-no">097</span><span id="line.97">        this.paymentState = paymentState;</span>
+<span class="source-line-no">034</span><span id="line.34">    private Long version;</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
+<span class="source-line-no">037</span><span id="line.37">    private String orderNumber;</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    @Nullable</span>
+<span class="source-line-no">040</span><span id="line.40">    private com.commercetools.api.models.order.PaymentState paymentState;</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    @Nullable</span>
+<span class="source-line-no">043</span><span id="line.43">    private com.commercetools.api.models.order.ShipmentState shipmentState;</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    @Nullable</span>
+<span class="source-line-no">046</span><span id="line.46">    private com.commercetools.api.models.order.OrderState orderState;</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    @Nullable</span>
+<span class="source-line-no">049</span><span id="line.49">    private com.commercetools.api.models.state.StateResourceIdentifier state;</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    @Nullable</span>
+<span class="source-line-no">052</span><span id="line.52">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the Cart from which you can create an Order.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     */</span>
+<span class="source-line-no">057</span><span id="line.57">    @Deprecated</span>
+<span class="source-line-no">058</span><span id="line.58">    public OrderFromCartDraftBuilder id(@Nullable final String id) {</span>
+<span class="source-line-no">059</span><span id="line.59">        this.id = id;</span>
+<span class="source-line-no">060</span><span id="line.60">        return this;</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    /**</span>
+<span class="source-line-no">064</span><span id="line.64">     &lt;*  &lt;p&gt;ResourceIdentifier to the Cart from which this order is created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     */</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public OrderFromCartDraftBuilder cart(</span>
+<span class="source-line-no">068</span><span id="line.68">            Function&lt;com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">069</span><span id="line.69">        this.cart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of()).build();</span>
+<span class="source-line-no">070</span><span id="line.70">        return this;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    /**</span>
+<span class="source-line-no">074</span><span id="line.74">     &lt;*  &lt;p&gt;ResourceIdentifier to the Cart from which this order is created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">075</span><span id="line.75">     */</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public OrderFromCartDraftBuilder cart(</span>
+<span class="source-line-no">078</span><span id="line.78">            @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier cart) {</span>
+<span class="source-line-no">079</span><span id="line.79">        this.cart = cart;</span>
+<span class="source-line-no">080</span><span id="line.80">        return this;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     &lt;&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     */</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public OrderFromCartDraftBuilder version(final Long version) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.version = version;</span>
+<span class="source-line-no">089</span><span id="line.89">        return this;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    /**</span>
+<span class="source-line-no">093</span><span id="line.93">     &lt;*  &lt;p&gt;String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression &lt;code&gt;[a-z0-9_\-]{2,36}&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     */</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public OrderFromCartDraftBuilder orderNumber(@Nullable final String orderNumber) {</span>
+<span class="source-line-no">097</span><span id="line.97">        this.orderNumber = orderNumber;</span>
 <span class="source-line-no">098</span><span id="line.98">        return this;</span>
 <span class="source-line-no">099</span><span id="line.99">    }</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public OrderFromCartDraftBuilder shipmentState(</span>
-<span class="source-line-no">102</span><span id="line.102">            @Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {</span>
-<span class="source-line-no">103</span><span id="line.103">        this.shipmentState = shipmentState;</span>
-<span class="source-line-no">104</span><span id="line.104">        return this;</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;Order will be created with &lt;code&gt;Open&lt;/code&gt; status by default.&lt;/p&gt;</span>
-<span class="source-line-no">109</span><span id="line.109">     */</span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     &lt;&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public OrderFromCartDraftBuilder paymentState(</span>
+<span class="source-line-no">106</span><span id="line.106">            @Nullable final com.commercetools.api.models.order.PaymentState paymentState) {</span>
+<span class="source-line-no">107</span><span id="line.107">        this.paymentState = paymentState;</span>
+<span class="source-line-no">108</span><span id="line.108">        return this;</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public OrderFromCartDraftBuilder orderState(</span>
-<span class="source-line-no">112</span><span id="line.112">            @Nullable final com.commercetools.api.models.order.OrderState orderState) {</span>
-<span class="source-line-no">113</span><span id="line.113">        this.orderState = orderState;</span>
-<span class="source-line-no">114</span><span id="line.114">        return this;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public OrderFromCartDraftBuilder state(</span>
-<span class="source-line-no">118</span><span id="line.118">            Function&lt;com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">119</span><span id="line.119">        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();</span>
-<span class="source-line-no">120</span><span id="line.120">        return this;</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public OrderFromCartDraftBuilder state(</span>
-<span class="source-line-no">124</span><span id="line.124">            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {</span>
-<span class="source-line-no">125</span><span id="line.125">        this.state = state;</span>
-<span class="source-line-no">126</span><span id="line.126">        return this;</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    /**</span>
-<span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.&lt;/p&gt;</span>
-<span class="source-line-no">131</span><span id="line.131">     */</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    public OrderFromCartDraftBuilder custom(</span>
-<span class="source-line-no">134</span><span id="line.134">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">135</span><span id="line.135">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
-<span class="source-line-no">136</span><span id="line.136">        return this;</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    /**</span>
-<span class="source-line-no">140</span><span id="line.140">     *  &lt;p&gt;Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.&lt;/p&gt;</span>
-<span class="source-line-no">141</span><span id="line.141">     */</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    public OrderFromCartDraftBuilder custom(</span>
-<span class="source-line-no">144</span><span id="line.144">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">145</span><span id="line.145">        this.custom = custom;</span>
-<span class="source-line-no">146</span><span id="line.146">        return this;</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    @Deprecated</span>
-<span class="source-line-no">150</span><span id="line.150">    @Nullable</span>
-<span class="source-line-no">151</span><span id="line.151">    public String getId() {</span>
-<span class="source-line-no">152</span><span id="line.152">        return this.id;</span>
-<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">111</span><span id="line.111">    /**</span>
+<span class="source-line-no">112</span><span id="line.112">     &lt;&gt;</span>
+<span class="source-line-no">113</span><span id="line.113">     */</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public OrderFromCartDraftBuilder shipmentState(</span>
+<span class="source-line-no">116</span><span id="line.116">            @Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {</span>
+<span class="source-line-no">117</span><span id="line.117">        this.shipmentState = shipmentState;</span>
+<span class="source-line-no">118</span><span id="line.118">        return this;</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    /**</span>
+<span class="source-line-no">122</span><span id="line.122">     &lt;*  &lt;p&gt;Order will be created with &lt;code&gt;Open&lt;/code&gt; status by default.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">123</span><span id="line.123">     */</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public OrderFromCartDraftBuilder orderState(</span>
+<span class="source-line-no">126</span><span id="line.126">            @Nullable final com.commercetools.api.models.order.OrderState orderState) {</span>
+<span class="source-line-no">127</span><span id="line.127">        this.orderState = orderState;</span>
+<span class="source-line-no">128</span><span id="line.128">        return this;</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    /**</span>
+<span class="source-line-no">132</span><span id="line.132">     &lt;&gt;</span>
+<span class="source-line-no">133</span><span id="line.133">     */</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public OrderFromCartDraftBuilder state(</span>
+<span class="source-line-no">136</span><span id="line.136">            Function&lt;com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">137</span><span id="line.137">        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();</span>
+<span class="source-line-no">138</span><span id="line.138">        return this;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    /**</span>
+<span class="source-line-no">142</span><span id="line.142">     &lt;&gt;</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    public OrderFromCartDraftBuilder state(</span>
+<span class="source-line-no">146</span><span id="line.146">            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {</span>
+<span class="source-line-no">147</span><span id="line.147">        this.state = state;</span>
+<span class="source-line-no">148</span><span id="line.148">        return this;</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    /**</span>
+<span class="source-line-no">152</span><span id="line.152">     &lt;*  &lt;p&gt;Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">153</span><span id="line.153">     */</span>
 <span class="source-line-no">154</span><span id="line.154"></span>
-<span class="source-line-no">155</span><span id="line.155">    @Nullable</span>
-<span class="source-line-no">156</span><span id="line.156">    public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {</span>
-<span class="source-line-no">157</span><span id="line.157">        return this.cart;</span>
-<span class="source-line-no">158</span><span id="line.158">    }</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public Long getVersion() {</span>
-<span class="source-line-no">161</span><span id="line.161">        return this.version;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    @Nullable</span>
-<span class="source-line-no">165</span><span id="line.165">    public String getOrderNumber() {</span>
-<span class="source-line-no">166</span><span id="line.166">        return this.orderNumber;</span>
-<span class="source-line-no">167</span><span id="line.167">    }</span>
-<span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    @Nullable</span>
-<span class="source-line-no">170</span><span id="line.170">    public com.commercetools.api.models.order.PaymentState getPaymentState() {</span>
-<span class="source-line-no">171</span><span id="line.171">        return this.paymentState;</span>
-<span class="source-line-no">172</span><span id="line.172">    }</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    @Nullable</span>
-<span class="source-line-no">175</span><span id="line.175">    public com.commercetools.api.models.order.ShipmentState getShipmentState() {</span>
-<span class="source-line-no">176</span><span id="line.176">        return this.shipmentState;</span>
-<span class="source-line-no">177</span><span id="line.177">    }</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    @Nullable</span>
-<span class="source-line-no">180</span><span id="line.180">    public com.commercetools.api.models.order.OrderState getOrderState() {</span>
-<span class="source-line-no">181</span><span id="line.181">        return this.orderState;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    @Nullable</span>
-<span class="source-line-no">185</span><span id="line.185">    public com.commercetools.api.models.state.StateResourceIdentifier getState() {</span>
-<span class="source-line-no">186</span><span id="line.186">        return this.state;</span>
-<span class="source-line-no">187</span><span id="line.187">    }</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    @Nullable</span>
-<span class="source-line-no">190</span><span id="line.190">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">191</span><span id="line.191">        return this.custom;</span>
-<span class="source-line-no">192</span><span id="line.192">    }</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">    public OrderFromCartDraft build() {</span>
-<span class="source-line-no">195</span><span id="line.195">        Objects.requireNonNull(version, OrderFromCartDraft.class + ": version is missing");</span>
-<span class="source-line-no">196</span><span id="line.196">        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,</span>
-<span class="source-line-no">197</span><span id="line.197">            state, custom);</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    /**</span>
-<span class="source-line-no">201</span><span id="line.201">     * builds OrderFromCartDraft without checking for non null required values</span>
-<span class="source-line-no">202</span><span id="line.202">     */</span>
-<span class="source-line-no">203</span><span id="line.203">    public OrderFromCartDraft buildUnchecked() {</span>
-<span class="source-line-no">204</span><span id="line.204">        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,</span>
-<span class="source-line-no">205</span><span id="line.205">            state, custom);</span>
-<span class="source-line-no">206</span><span id="line.206">    }</span>
-<span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    public static OrderFromCartDraftBuilder of() {</span>
-<span class="source-line-no">209</span><span id="line.209">        return new OrderFromCartDraftBuilder();</span>
-<span class="source-line-no">210</span><span id="line.210">    }</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    public static OrderFromCartDraftBuilder of(final OrderFromCartDraft template) {</span>
-<span class="source-line-no">213</span><span id="line.213">        OrderFromCartDraftBuilder builder = new OrderFromCartDraftBuilder();</span>
-<span class="source-line-no">214</span><span id="line.214">        builder.id = template.getId();</span>
-<span class="source-line-no">215</span><span id="line.215">        builder.cart = template.getCart();</span>
-<span class="source-line-no">216</span><span id="line.216">        builder.version = template.getVersion();</span>
-<span class="source-line-no">217</span><span id="line.217">        builder.orderNumber = template.getOrderNumber();</span>
-<span class="source-line-no">218</span><span id="line.218">        builder.paymentState = template.getPaymentState();</span>
-<span class="source-line-no">219</span><span id="line.219">        builder.shipmentState = template.getShipmentState();</span>
-<span class="source-line-no">220</span><span id="line.220">        builder.orderState = template.getOrderState();</span>
-<span class="source-line-no">221</span><span id="line.221">        builder.state = template.getState();</span>
-<span class="source-line-no">222</span><span id="line.222">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">223</span><span id="line.223">        return builder;</span>
-<span class="source-line-no">224</span><span id="line.224">    }</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">}</span>
+<span class="source-line-no">155</span><span id="line.155">    public OrderFromCartDraftBuilder custom(</span>
+<span class="source-line-no">156</span><span id="line.156">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">157</span><span id="line.157">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
+<span class="source-line-no">158</span><span id="line.158">        return this;</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    /**</span>
+<span class="source-line-no">162</span><span id="line.162">     &lt;*  &lt;p&gt;Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">163</span><span id="line.163">     */</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public OrderFromCartDraftBuilder custom(</span>
+<span class="source-line-no">166</span><span id="line.166">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">167</span><span id="line.167">        this.custom = custom;</span>
+<span class="source-line-no">168</span><span id="line.168">        return this;</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    @Deprecated</span>
+<span class="source-line-no">172</span><span id="line.172">    @Nullable</span>
+<span class="source-line-no">173</span><span id="line.173">    public String getId() {</span>
+<span class="source-line-no">174</span><span id="line.174">        return this.id;</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    @Nullable</span>
+<span class="source-line-no">178</span><span id="line.178">    public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {</span>
+<span class="source-line-no">179</span><span id="line.179">        return this.cart;</span>
+<span class="source-line-no">180</span><span id="line.180">    }</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public Long getVersion() {</span>
+<span class="source-line-no">183</span><span id="line.183">        return this.version;</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    @Nullable</span>
+<span class="source-line-no">187</span><span id="line.187">    public String getOrderNumber() {</span>
+<span class="source-line-no">188</span><span id="line.188">        return this.orderNumber;</span>
+<span class="source-line-no">189</span><span id="line.189">    }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    @Nullable</span>
+<span class="source-line-no">192</span><span id="line.192">    public com.commercetools.api.models.order.PaymentState getPaymentState() {</span>
+<span class="source-line-no">193</span><span id="line.193">        return this.paymentState;</span>
+<span class="source-line-no">194</span><span id="line.194">    }</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">    @Nullable</span>
+<span class="source-line-no">197</span><span id="line.197">    public com.commercetools.api.models.order.ShipmentState getShipmentState() {</span>
+<span class="source-line-no">198</span><span id="line.198">        return this.shipmentState;</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    @Nullable</span>
+<span class="source-line-no">202</span><span id="line.202">    public com.commercetools.api.models.order.OrderState getOrderState() {</span>
+<span class="source-line-no">203</span><span id="line.203">        return this.orderState;</span>
+<span class="source-line-no">204</span><span id="line.204">    }</span>
+<span class="source-line-no">205</span><span id="line.205"></span>
+<span class="source-line-no">206</span><span id="line.206">    @Nullable</span>
+<span class="source-line-no">207</span><span id="line.207">    public com.commercetools.api.models.state.StateResourceIdentifier getState() {</span>
+<span class="source-line-no">208</span><span id="line.208">        return this.state;</span>
+<span class="source-line-no">209</span><span id="line.209">    }</span>
+<span class="source-line-no">210</span><span id="line.210"></span>
+<span class="source-line-no">211</span><span id="line.211">    @Nullable</span>
+<span class="source-line-no">212</span><span id="line.212">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">213</span><span id="line.213">        return this.custom;</span>
+<span class="source-line-no">214</span><span id="line.214">    }</span>
+<span class="source-line-no">215</span><span id="line.215"></span>
+<span class="source-line-no">216</span><span id="line.216">    public OrderFromCartDraft build() {</span>
+<span class="source-line-no">217</span><span id="line.217">        Objects.requireNonNull(version, OrderFromCartDraft.class + ": version is missing");</span>
+<span class="source-line-no">218</span><span id="line.218">        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,</span>
+<span class="source-line-no">219</span><span id="line.219">            state, custom);</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    /**</span>
+<span class="source-line-no">223</span><span id="line.223">     * builds OrderFromCartDraft without checking for non null required values</span>
+<span class="source-line-no">224</span><span id="line.224">     */</span>
+<span class="source-line-no">225</span><span id="line.225">    public OrderFromCartDraft buildUnchecked() {</span>
+<span class="source-line-no">226</span><span id="line.226">        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,</span>
+<span class="source-line-no">227</span><span id="line.227">            state, custom);</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">    public static OrderFromCartDraftBuilder of() {</span>
+<span class="source-line-no">231</span><span id="line.231">        return new OrderFromCartDraftBuilder();</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    public static OrderFromCartDraftBuilder of(final OrderFromCartDraft template) {</span>
+<span class="source-line-no">235</span><span id="line.235">        OrderFromCartDraftBuilder builder = new OrderFromCartDraftBuilder();</span>
+<span class="source-line-no">236</span><span id="line.236">        builder.id = template.getId();</span>
+<span class="source-line-no">237</span><span id="line.237">        builder.cart = template.getCart();</span>
+<span class="source-line-no">238</span><span id="line.238">        builder.version = template.getVersion();</span>
+<span class="source-line-no">239</span><span id="line.239">        builder.orderNumber = template.getOrderNumber();</span>
+<span class="source-line-no">240</span><span id="line.240">        builder.paymentState = template.getPaymentState();</span>
+<span class="source-line-no">241</span><span id="line.241">        builder.shipmentState = template.getShipmentState();</span>
+<span class="source-line-no">242</span><span id="line.242">        builder.orderState = template.getOrderState();</span>
+<span class="source-line-no">243</span><span id="line.243">        builder.state = template.getState();</span>
+<span class="source-line-no">244</span><span id="line.244">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">245</span><span id="line.245">        return builder;</span>
+<span class="source-line-no">246</span><span id="line.246">    }</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">}</span>
 
 
 

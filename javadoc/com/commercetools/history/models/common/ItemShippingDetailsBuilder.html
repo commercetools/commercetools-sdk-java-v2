@@ -83,16 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.21">ItemShippingDetailsBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.23">ItemShippingDetailsBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ItemShippingDetailsBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ItemShippingDetails itemShippingDetails = ItemShippingDetails.builder()
-           .plusTargets(targetsBuilder -> targetsBuilder)
-           .valid(true)
-           .build()
+     ItemShippingDetails itemShippingDetails = ItemShippingDetails.builder()
+             .plusTargets(targetsBuilder -> targetsBuilder)
+             .valid(true)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -144,24 +146,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTargets(com.commercetools.history.models.common.ItemShippingTarget...)">plusTargets</a></span>&#8203;(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>...&nbsp;targets)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTargets(java.util.function.Function)">plusTargets</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#targets(com.commercetools.history.models.common.ItemShippingTarget...)">targets</a></span>&#8203;(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>...&nbsp;targets)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#targets(java.util.List)">targets</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;&nbsp;targets)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#valid(java.lang.Boolean)">valid</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;valid)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTargets(java.util.function.Function)">withTargets</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 </div>
 </div>
 </div>
@@ -182,7 +194,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ItemShippingDetailsBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.22">ItemShippingDetailsBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.24">ItemShippingDetailsBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -196,56 +208,61 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="targets(com.commercetools.history.models.common.ItemShippingTarget...)">
 <h3>targets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.28">targets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.34">targets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="targets(java.util.List)">
 <h3>targets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.34">targets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;&nbsp;targets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.44">targets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;&nbsp;targets)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusTargets(com.commercetools.history.models.common.ItemShippingTarget...)">
 <h3>plusTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.40">plusTargets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.54">plusTargets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusTargets(java.util.function.Function)">
 <h3>plusTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.49">plusTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.67">plusTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTargets(java.util.function.Function)">
 <h3>withTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.58">withTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.80">withTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="valid(java.lang.Boolean)">
 <h3>valid</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.69">valid</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;valid)</span></div>
-<div class="block"><p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.91">valid</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;valid)</span></div>
+<div class="block"><*  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTargets()">
 <h3>getTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.74">getTargets</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.96">getTargets</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValid()">
 <h3>getValid</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.78">getValid</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.100">getValid</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.82">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.104">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&gt;</code></dd>
@@ -255,20 +272,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.91">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.113">buildUnchecked</a></span>()</div>
 <div class="block">builds ItemShippingDetails without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.95">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.117">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.ItemShippingDetails)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.99">of</a></span>&#8203;<span class="parameters">(<a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingDetailsBuilder.html#line.121">of</a></span>&#8203;<span class="parameters">(<a href="ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

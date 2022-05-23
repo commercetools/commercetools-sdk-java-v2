@@ -85,20 +85,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ConflictingTrait.html" title="interface in com.commercetools.api.client">ConflictingTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code>, <code><a href="DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code>, <code><a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code>, <code><a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code>, <code><a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code>, <code><a href="VersionedTrait.html" title="interface in com.commercetools.api.client">VersionedTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../models/discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.34">ByProjectKeyDiscountCodesByIDDelete</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.35">ByProjectKeyDiscountCodesByIDDelete</a></span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>,&#8203;<a href="../models/discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;
 implements <a href="DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;, <a href="VersionedTrait.html" title="interface in com.commercetools.api.client">VersionedTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;, <a href="ConflictingTrait.html" title="interface in com.commercetools.api.client">ConflictingTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</span></div>
 <div class="block"><p>Deprecated scope: <code>manage_orders:{projectKey}</code></p>
 
+ <hr>
  <div class=code-example>
  <pre><code class='java'><code>
    CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.discount_code.DiscountCode&gt;&gt; result = apiRoot
-           .withProjectKey("{projectKey}")
-           .discountCodes()
-           .withId("{ID}")
-           .delete()
-           .withVersion(version)
-           .execute()
+            .withProjectKey("{projectKey}")
+            .discountCodes()
+            .withId("{ID}")
+            .delete()
+            .withVersion(version)
+            .execute()
  </code></code></pre>
  </div></div>
 </section>
@@ -342,7 +343,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="&lt;init&gt;(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String,java.lang.String)">
 <h3>ByProjectKeyDiscountCodesByIDDelete</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.47">ByProjectKeyDiscountCodesByIDDelete</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.48">ByProjectKeyDiscountCodesByIDDelete</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;ID)</span></div>
 </section>
@@ -350,7 +351,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="&lt;init&gt;(com.commercetools.api.client.ByProjectKeyDiscountCodesByIDDelete)">
 <h3>ByProjectKeyDiscountCodesByIDDelete</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.53">ByProjectKeyDiscountCodesByIDDelete</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&nbsp;t)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.54">ByProjectKeyDiscountCodesByIDDelete</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&nbsp;t)</span></div>
 </section>
 </li>
 </ul>
@@ -364,7 +365,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">
 <h3>executeBlocking</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.69">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.70">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -377,7 +378,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.75">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.76">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code></dd>
@@ -389,19 +390,19 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.81">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.82">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getID()">
 <h3>getID</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.85">getID</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.86">getID</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDataErasure()">
 <h3>getDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.89">getDataErasure</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.90">getDataErasure</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DataerasureTrait.html#getDataErasure()">getDataErasure</a></code>&nbsp;in interface&nbsp;<code><a href="DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code></dd>
@@ -411,7 +412,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.93">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.94">getVersion</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="VersionedTrait.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="VersionedTrait.html" title="interface in com.commercetools.api.client">VersionedTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code></dd>
@@ -421,7 +422,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="getExpand()">
 <h3>getExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.97">getExpand</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.98">getExpand</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExpandableTrait.html#getExpand()">getExpand</a></code>&nbsp;in interface&nbsp;<code><a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a>&gt;</code></dd>
@@ -431,19 +432,19 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.101">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.102">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setID(java.lang.String)">
 <h3>setID</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.105">setID</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;ID)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.106">setID</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;ID)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDataErasure(TValue)">
 <h3 id="withDataErasure(java.lang.Object)">withDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.112">withDataErasure</a></span>&#8203;<span class="parameters">(TValue&nbsp;dataErasure)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.113">withDataErasure</a></span>&#8203;<span class="parameters">(TValue&nbsp;dataErasure)</span></div>
 <div class="block">set dataErasure with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -454,7 +455,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="addDataErasure(TValue)">
 <h3 id="addDataErasure(java.lang.Object)">addDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.119">addDataErasure</a></span>&#8203;<span class="parameters">(TValue&nbsp;dataErasure)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.120">addDataErasure</a></span>&#8203;<span class="parameters">(TValue&nbsp;dataErasure)</span></div>
 <div class="block">add additional dataErasure query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -465,49 +466,49 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="withDataErasure(java.util.function.Supplier)">
 <h3>withDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.126">withDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.127">withDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set dataErasure with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addDataErasure(java.util.function.Supplier)">
 <h3>addDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.133">addDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.134">addDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional dataErasure query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDataErasure(java.util.function.Function)">
 <h3>withDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.140">withDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.141">withDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set dataErasure with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addDataErasure(java.util.function.Function)">
 <h3>addDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.147">addDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.148">addDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional dataErasure query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDataErasure(java.util.List)">
 <h3>withDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.154">withDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;dataErasure)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.155">withDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;dataErasure)</span></div>
 <div class="block">set dataErasure with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addDataErasure(java.util.List)">
 <h3>addDataErasure</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.164">addDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;dataErasure)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.165">addDataErasure</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;dataErasure)</span></div>
 <div class="block">add additional dataErasure query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withVersion(TValue)">
 <h3 id="withVersion(java.lang.Object)">withVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.172">withVersion</a></span>&#8203;<span class="parameters">(TValue&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.173">withVersion</a></span>&#8203;<span class="parameters">(TValue&nbsp;version)</span></div>
 <div class="block">set version with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -518,7 +519,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="addVersion(TValue)">
 <h3 id="addVersion(java.lang.Object)">addVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.179">addVersion</a></span>&#8203;<span class="parameters">(TValue&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.180">addVersion</a></span>&#8203;<span class="parameters">(TValue&nbsp;version)</span></div>
 <div class="block">add additional version query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -529,49 +530,49 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="withVersion(java.util.function.Supplier)">
 <h3>withVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.186">withVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.187">withVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set version with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addVersion(java.util.function.Supplier)">
 <h3>addVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.193">addVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.194">addVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional version query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withVersion(java.util.function.Function)">
 <h3>withVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.200">withVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.201">withVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set version with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addVersion(java.util.function.Function)">
 <h3>addVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.207">addVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.208">addVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional version query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withVersion(java.util.List)">
 <h3>withVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.214">withVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.215">withVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;version)</span></div>
 <div class="block">set version with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addVersion(java.util.List)">
 <h3>addVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.223">addVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.224">addVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;version)</span></div>
 <div class="block">add additional version query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExpand(TValue)">
 <h3 id="withExpand(java.lang.Object)">withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.231">withExpand</a></span>&#8203;<span class="parameters">(TValue&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.232">withExpand</a></span>&#8203;<span class="parameters">(TValue&nbsp;expand)</span></div>
 <div class="block">set expand with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -582,7 +583,7 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="addExpand(TValue)">
 <h3 id="addExpand(java.lang.Object)">addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.238">addExpand</a></span>&#8203;<span class="parameters">(TValue&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.239">addExpand</a></span>&#8203;<span class="parameters">(TValue&nbsp;expand)</span></div>
 <div class="block">add additional expand query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -593,55 +594,55 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="withExpand(java.util.function.Supplier)">
 <h3>withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.245">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.246">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set expand with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addExpand(java.util.function.Supplier)">
 <h3>addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.252">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.253">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional expand query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExpand(java.util.function.Function)">
 <h3>withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.259">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.260">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set expand with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addExpand(java.util.function.Function)">
 <h3>addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.266">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.267">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional expand query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExpand(java.util.List)">
 <h3>withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.273">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.274">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;expand)</span></div>
 <div class="block">set expand with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addExpand(java.util.List)">
 <h3>addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.282">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyDiscountCodesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyDiscountCodesByIDDelete</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.283">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;expand)</span></div>
 <div class="block">add additional expand query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.287">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.288">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.300">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyDiscountCodesByIDDelete.html#line.301">hashCode</a></span>()</div>
 </section>
 </li>
 <li>

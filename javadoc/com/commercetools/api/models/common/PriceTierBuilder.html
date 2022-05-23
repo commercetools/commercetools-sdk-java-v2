@@ -83,16 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.21">PriceTierBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.23">PriceTierBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">PriceTierBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   PriceTier priceTier = PriceTier.builder()
-           .minimumQuantity(0.3)
-           .value(valueBuilder -> valueBuilder)
-           .build()
+     PriceTier priceTier = PriceTier.builder()
+             .minimumQuantity(0.3)
+             .value(valueBuilder -> valueBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -139,7 +141,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#minimumQuantity(java.lang.Long)">minimumQuantity</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;minimumQuantity)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Minimum quantity this Price tier is valid for.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -150,12 +152,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#value(com.commercetools.api.models.common.TypedMoney)">value</a></span>&#8203;(<a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#value(java.util.function.Function)">value</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</div>
+<div class="block"><*</div>
 </div>
 </div>
 </div>
@@ -177,7 +179,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>PriceTierBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.22">PriceTierBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.24">PriceTierBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -191,43 +193,43 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="minimumQuantity(java.lang.Long)">
 <h3>minimumQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.33">minimumQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;minimumQuantity)</span></div>
-<div class="block"><p>Minimum quantity this Price tier is valid for.</p>
-  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.35">minimumQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;minimumQuantity)</span></div>
+<div class="block"><*  <p>Minimum quantity this Price tier is valid for.</p>
+  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(com.commercetools.api.models.common.TypedMoney)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.43">value</a></span>&#8203;<span class="parameters">(<a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;value)</span></div>
-<div class="block"><p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
-  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.45">value</a></span>&#8203;<span class="parameters">(<a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;value)</span></div>
+<div class="block"><*  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(java.util.function.Function)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.53">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
-  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.55">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMinimumQuantity()">
 <h3>getMinimumQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.59">getMinimumQuantity</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.61">getMinimumQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.63">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.65">getValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.67">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.69">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;</code></dd>
@@ -237,20 +239,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.76">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.78">buildUnchecked</a></span>()</div>
 <div class="block">builds PriceTier without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.80">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.82">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.common.PriceTier)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.84">of</a></span>&#8203;<span class="parameters">(<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceTierBuilder.html#line.86">of</a></span>&#8203;<span class="parameters">(<a href="PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

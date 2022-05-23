@@ -80,14 +80,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ExtensionDraftImpl.html" title="class in com.commercetools.api.models.extension">ExtensionDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.27">ExtensionDraft</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.30">ExtensionDraft</a></span></div>
+<div class="block">ExtensionDraft
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ExtensionDraft extensionDraft = ExtensionDraft.builder()
-           .destination(destinationBuilder -> destinationBuilder)
-           .plusTriggers(triggersBuilder -> triggersBuilder)
-           .build()
+     ExtensionDraft extensionDraft = ExtensionDraft.builder()
+             .destination(destinationBuilder -> destinationBuilder)
+             .plusTriggers(triggersBuilder -> triggersBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -113,22 +116,22 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDestination()">getDestination</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Defines where the Extension can be reached.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">User-defined unique identifier for the Extension.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTimeoutInMs()">getTimeoutInMs</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTriggers()">getTriggers</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Describes what triggers the Extension.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -174,8 +177,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.35">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier for the Extension.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.38">getKey</a></span>()</div>
+<div class="block"><*  <p>User-defined unique identifier for the Extension.</p>></div>
 </section>
 </li>
 <li>
@@ -183,8 +186,8 @@ loadScripts(document, 'script');</script>
 <h3>getDestination</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.41">getDestination</a></span>()</div>
-<div class="block"><p>Defines where the Extension can be reached.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.44">getDestination</a></span>()</div>
+<div class="block"><*  <p>Defines where the Extension can be reached.</p>></div>
 </section>
 </li>
 <li>
@@ -192,82 +195,82 @@ loadScripts(document, 'script');</script>
 <h3>getTriggers</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.49">getTriggers</a></span>()</div>
-<div class="block"><p>Describes what triggers the Extension.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.52">getTriggers</a></span>()</div>
+<div class="block"><*  <p>Describes what triggers the Extension.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTimeoutInMs()">
 <h3>getTimeoutInMs</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.59">getTimeoutInMs</a></span>()</div>
-<div class="block"><p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the support portal and provide the Region, Project key, and use case.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.62">getTimeoutInMs</a></span>()</div>
+<div class="block"><*  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the support portal and provide the Region, Project key, and use case.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.62">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.65">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDestination(com.commercetools.api.models.extension.ExtensionDestination)">
 <h3>setDestination</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.64">setDestination</a></span>&#8203;<span class="parameters">(<a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>&nbsp;destination)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.67">setDestination</a></span>&#8203;<span class="parameters">(<a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>&nbsp;destination)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTriggers(com.commercetools.api.models.extension.ExtensionTrigger...)">
 <h3>setTriggers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.66">setTriggers</a></span>&#8203;<span class="parameters">(<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>...&nbsp;triggers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.69">setTriggers</a></span>&#8203;<span class="parameters">(<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>...&nbsp;triggers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTriggers(java.util.List)">
 <h3>setTriggers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.69">setTriggers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;&nbsp;triggers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.72">setTriggers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;&nbsp;triggers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTimeoutInMs(java.lang.Integer)">
 <h3>setTimeoutInMs</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.71">setTimeoutInMs</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeoutInMs)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.74">setTimeoutInMs</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;timeoutInMs)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.73">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.76">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.extension.ExtensionDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.80">of</a></span>&#8203;<span class="parameters">(<a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.86">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.89">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.extension.ExtensionDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.90">builder</a></span>&#8203;<span class="parameters">(<a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionDraftBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.93">builder</a></span>&#8203;<span class="parameters">(<a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExtensionDraft(java.util.function.Function)">
 <h3>withExtensionDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.94">withExtensionDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.97">withExtensionDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.98">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExtensionDraft.html" title="interface in com.commercetools.api.models.extension">ExtensionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDraft.html#line.101">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

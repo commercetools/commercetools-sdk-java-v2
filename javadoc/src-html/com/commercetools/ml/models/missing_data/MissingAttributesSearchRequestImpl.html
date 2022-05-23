@@ -27,244 +27,259 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">018</span><span id="line.18">public class MissingAttributesSearchRequestImpl implements MissingAttributesSearchRequest, ModelBase {</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    private Integer limit;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    private Integer offset;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    private Boolean staged;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private Integer productSetLimit;</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    private Boolean includeVariants;</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private Double coverageMin;</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    private Double coverageMax;</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    private String sortBy;</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    private Boolean showMissingAttributeNames;</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    private java.util.List&lt;String&gt; productIds;</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    private java.util.List&lt;String&gt; productTypeIds;</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    private String attributeName;</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    @JsonCreator</span>
-<span class="source-line-no">045</span><span id="line.45">    MissingAttributesSearchRequestImpl(@JsonProperty("limit") final Integer limit,</span>
-<span class="source-line-no">046</span><span id="line.46">            @JsonProperty("offset") final Integer offset, @JsonProperty("staged") final Boolean staged,</span>
-<span class="source-line-no">047</span><span id="line.47">            @JsonProperty("productSetLimit") final Integer productSetLimit,</span>
-<span class="source-line-no">048</span><span id="line.48">            @JsonProperty("includeVariants") final Boolean includeVariants,</span>
-<span class="source-line-no">049</span><span id="line.49">            @JsonProperty("coverageMin") final Double coverageMin,</span>
-<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("coverageMax") final Double coverageMax, @JsonProperty("sortBy") final String sortBy,</span>
-<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("showMissingAttributeNames") final Boolean showMissingAttributeNames,</span>
-<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("productIds") final java.util.List&lt;String&gt; productIds,</span>
-<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("productTypeIds") final java.util.List&lt;String&gt; productTypeIds,</span>
-<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("attributeName") final String attributeName) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.limit = limit;</span>
-<span class="source-line-no">056</span><span id="line.56">        this.offset = offset;</span>
-<span class="source-line-no">057</span><span id="line.57">        this.staged = staged;</span>
-<span class="source-line-no">058</span><span id="line.58">        this.productSetLimit = productSetLimit;</span>
-<span class="source-line-no">059</span><span id="line.59">        this.includeVariants = includeVariants;</span>
-<span class="source-line-no">060</span><span id="line.60">        this.coverageMin = coverageMin;</span>
-<span class="source-line-no">061</span><span id="line.61">        this.coverageMax = coverageMax;</span>
-<span class="source-line-no">062</span><span id="line.62">        this.sortBy = sortBy;</span>
-<span class="source-line-no">063</span><span id="line.63">        this.showMissingAttributeNames = showMissingAttributeNames;</span>
-<span class="source-line-no">064</span><span id="line.64">        this.productIds = productIds;</span>
-<span class="source-line-no">065</span><span id="line.65">        this.productTypeIds = productTypeIds;</span>
-<span class="source-line-no">066</span><span id="line.66">        this.attributeName = attributeName;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public MissingAttributesSearchRequestImpl() {</span>
+<span class="source-line-no">017</span><span id="line.17">/**</span>
+<span class="source-line-no">018</span><span id="line.18"> * MissingAttributesSearchRequest</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">021</span><span id="line.21">public class MissingAttributesSearchRequestImpl implements MissingAttributesSearchRequest, ModelBase {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    private Integer limit;</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    private Integer offset;</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    private Boolean staged;</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    private Integer productSetLimit;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    private Boolean includeVariants;</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    private Double coverageMin;</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    private Double coverageMax;</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    private String sortBy;</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    private Boolean showMissingAttributeNames;</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    private java.util.List&lt;String&gt; productIds;</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    private java.util.List&lt;String&gt; productTypeIds;</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    private String attributeName;</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    @JsonCreator</span>
+<span class="source-line-no">048</span><span id="line.48">    MissingAttributesSearchRequestImpl(@JsonProperty("limit") final Integer limit,</span>
+<span class="source-line-no">049</span><span id="line.49">            @JsonProperty("offset") final Integer offset, @JsonProperty("staged") final Boolean staged,</span>
+<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("productSetLimit") final Integer productSetLimit,</span>
+<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("includeVariants") final Boolean includeVariants,</span>
+<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("coverageMin") final Double coverageMin,</span>
+<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("coverageMax") final Double coverageMax, @JsonProperty("sortBy") final String sortBy,</span>
+<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("showMissingAttributeNames") final Boolean showMissingAttributeNames,</span>
+<span class="source-line-no">055</span><span id="line.55">            @JsonProperty("productIds") final java.util.List&lt;String&gt; productIds,</span>
+<span class="source-line-no">056</span><span id="line.56">            @JsonProperty("productTypeIds") final java.util.List&lt;String&gt; productTypeIds,</span>
+<span class="source-line-no">057</span><span id="line.57">            @JsonProperty("attributeName") final String attributeName) {</span>
+<span class="source-line-no">058</span><span id="line.58">        this.limit = limit;</span>
+<span class="source-line-no">059</span><span id="line.59">        this.offset = offset;</span>
+<span class="source-line-no">060</span><span id="line.60">        this.staged = staged;</span>
+<span class="source-line-no">061</span><span id="line.61">        this.productSetLimit = productSetLimit;</span>
+<span class="source-line-no">062</span><span id="line.62">        this.includeVariants = includeVariants;</span>
+<span class="source-line-no">063</span><span id="line.63">        this.coverageMin = coverageMin;</span>
+<span class="source-line-no">064</span><span id="line.64">        this.coverageMax = coverageMax;</span>
+<span class="source-line-no">065</span><span id="line.65">        this.sortBy = sortBy;</span>
+<span class="source-line-no">066</span><span id="line.66">        this.showMissingAttributeNames = showMissingAttributeNames;</span>
+<span class="source-line-no">067</span><span id="line.67">        this.productIds = productIds;</span>
+<span class="source-line-no">068</span><span id="line.68">        this.productTypeIds = productTypeIds;</span>
+<span class="source-line-no">069</span><span id="line.69">        this.attributeName = attributeName;</span>
 <span class="source-line-no">070</span><span id="line.70">    }</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Number of results requested.&lt;/p&gt;</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    public Integer getLimit() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return this.limit;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">072</span><span id="line.72">    public MissingAttributesSearchRequestImpl() {</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    /**</span>
+<span class="source-line-no">076</span><span id="line.76">     &lt;*  &lt;p&gt;Number of results requested.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     */</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
-<span class="source-line-no">081</span><span id="line.81">     */</span>
-<span class="source-line-no">082</span><span id="line.82">    public Integer getOffset() {</span>
-<span class="source-line-no">083</span><span id="line.83">        return this.offset;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;If true, searches data from staged products in addition to published products.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89">    public Boolean getStaged() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return this.staged;</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;Maximum number of products to scan.&lt;/p&gt;</span>
-<span class="source-line-no">095</span><span id="line.95">     */</span>
-<span class="source-line-no">096</span><span id="line.96">    public Integer getProductSetLimit() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return this.productSetLimit;</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;If true, searches all product variants. If false, only searches master variants.&lt;/p&gt;</span>
-<span class="source-line-no">102</span><span id="line.102">     */</span>
-<span class="source-line-no">103</span><span id="line.103">    public Boolean getIncludeVariants() {</span>
-<span class="source-line-no">104</span><span id="line.104">        return this.includeVariants;</span>
+<span class="source-line-no">079</span><span id="line.79">    public Integer getLimit() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return this.limit;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     &lt;*  &lt;p&gt;Number of elements skipped.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     */</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public Integer getOffset() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return this.offset;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    /**</span>
+<span class="source-line-no">092</span><span id="line.92">     &lt;*  &lt;p&gt;If true, searches data from staged products in addition to published products.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public Boolean getStaged() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return this.staged;</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    /**</span>
+<span class="source-line-no">100</span><span id="line.100">     &lt;*  &lt;p&gt;Maximum number of products to scan.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">101</span><span id="line.101">     */</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public Integer getProductSetLimit() {</span>
+<span class="source-line-no">104</span><span id="line.104">        return this.productSetLimit;</span>
 <span class="source-line-no">105</span><span id="line.105">    }</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;Minimum attribute coverage of variants to display, applied to both coverage types.&lt;/p&gt;</span>
+<span class="source-line-no">108</span><span id="line.108">     &lt;*  &lt;p&gt;If true, searches all product variants. If false, only searches master variants.&lt;/p&gt;&gt;</span>
 <span class="source-line-no">109</span><span id="line.109">     */</span>
-<span class="source-line-no">110</span><span id="line.110">    public Double getCoverageMin() {</span>
-<span class="source-line-no">111</span><span id="line.111">        return this.coverageMin;</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    /**</span>
-<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;Maximum attribute coverage of variants to display, applied to both coverage types.&lt;/p&gt;</span>
-<span class="source-line-no">116</span><span id="line.116">     */</span>
-<span class="source-line-no">117</span><span id="line.117">    public Double getCoverageMax() {</span>
-<span class="source-line-no">118</span><span id="line.118">        return this.coverageMax;</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    /**</span>
-<span class="source-line-no">122</span><span id="line.122">     *  &lt;p&gt;Default value: &lt;code&gt;coverageAttributeValues&lt;/code&gt; - Allowed values: [&lt;code&gt;coverageAttributeValues&lt;/code&gt;, &lt;code&gt;coverageAttributeNames&lt;/code&gt;] &lt;code&gt;coverageAttributeValues&lt;/code&gt; shows the product variants with the most missing attribute values first and &lt;code&gt;coverageAttributeNames&lt;/code&gt; the ones with the most missing attribute names.&lt;/p&gt;</span>
-<span class="source-line-no">123</span><span id="line.123">     */</span>
-<span class="source-line-no">124</span><span id="line.124">    public String getSortBy() {</span>
-<span class="source-line-no">125</span><span id="line.125">        return this.sortBy;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    /**</span>
-<span class="source-line-no">129</span><span id="line.129">     *  &lt;p&gt;If true, the &lt;code&gt;missingAttributeNames&lt;/code&gt; will be included in the results.&lt;/p&gt;</span>
-<span class="source-line-no">130</span><span id="line.130">     */</span>
-<span class="source-line-no">131</span><span id="line.131">    public Boolean getShowMissingAttributeNames() {</span>
-<span class="source-line-no">132</span><span id="line.132">        return this.showMissingAttributeNames;</span>
-<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    public Boolean getIncludeVariants() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return this.includeVariants;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    /**</span>
+<span class="source-line-no">116</span><span id="line.116">     &lt;*  &lt;p&gt;Minimum attribute coverage of variants to display, applied to both coverage types.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public Double getCoverageMin() {</span>
+<span class="source-line-no">120</span><span id="line.120">        return this.coverageMin;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    /**</span>
+<span class="source-line-no">124</span><span id="line.124">     &lt;*  &lt;p&gt;Maximum attribute coverage of variants to display, applied to both coverage types.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">125</span><span id="line.125">     */</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public Double getCoverageMax() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return this.coverageMax;</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    /**</span>
+<span class="source-line-no">132</span><span id="line.132">     &lt;*  &lt;p&gt;Default value: &lt;code&gt;coverageAttributeValues&lt;/code&gt; - Allowed values: [&lt;code&gt;coverageAttributeValues&lt;/code&gt;, &lt;code&gt;coverageAttributeNames&lt;/code&gt;] &lt;code&gt;coverageAttributeValues&lt;/code&gt; shows the product variants with the most missing attribute values first and &lt;code&gt;coverageAttributeNames&lt;/code&gt; the ones with the most missing attribute names.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">133</span><span id="line.133">     */</span>
 <span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    /**</span>
-<span class="source-line-no">136</span><span id="line.136">     *  &lt;p&gt;Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.&lt;/p&gt;</span>
-<span class="source-line-no">137</span><span id="line.137">     */</span>
-<span class="source-line-no">138</span><span id="line.138">    public java.util.List&lt;String&gt; getProductIds() {</span>
-<span class="source-line-no">139</span><span id="line.139">        return this.productIds;</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    /**</span>
-<span class="source-line-no">143</span><span id="line.143">     *  &lt;p&gt;Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.&lt;/p&gt;</span>
-<span class="source-line-no">144</span><span id="line.144">     */</span>
-<span class="source-line-no">145</span><span id="line.145">    public java.util.List&lt;String&gt; getProductTypeIds() {</span>
-<span class="source-line-no">146</span><span id="line.146">        return this.productTypeIds;</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    /**</span>
-<span class="source-line-no">150</span><span id="line.150">     *  &lt;p&gt;Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in &lt;code&gt;MissingAttributesMeta&lt;/code&gt;. The &lt;code&gt;attributeCount&lt;/code&gt; and &lt;code&gt;attributeCoverage&lt;/code&gt; fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.&lt;/p&gt;</span>
-<span class="source-line-no">151</span><span id="line.151">     */</span>
-<span class="source-line-no">152</span><span id="line.152">    public String getAttributeName() {</span>
-<span class="source-line-no">153</span><span id="line.153">        return this.attributeName;</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public void setLimit(final Integer limit) {</span>
-<span class="source-line-no">157</span><span id="line.157">        this.limit = limit;</span>
-<span class="source-line-no">158</span><span id="line.158">    }</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public void setOffset(final Integer offset) {</span>
-<span class="source-line-no">161</span><span id="line.161">        this.offset = offset;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public void setStaged(final Boolean staged) {</span>
-<span class="source-line-no">165</span><span id="line.165">        this.staged = staged;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public void setProductSetLimit(final Integer productSetLimit) {</span>
-<span class="source-line-no">169</span><span id="line.169">        this.productSetLimit = productSetLimit;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public void setIncludeVariants(final Boolean includeVariants) {</span>
-<span class="source-line-no">173</span><span id="line.173">        this.includeVariants = includeVariants;</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public void setCoverageMin(final Double coverageMin) {</span>
-<span class="source-line-no">177</span><span id="line.177">        this.coverageMin = coverageMin;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public void setCoverageMax(final Double coverageMax) {</span>
-<span class="source-line-no">181</span><span id="line.181">        this.coverageMax = coverageMax;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public void setSortBy(final String sortBy) {</span>
-<span class="source-line-no">185</span><span id="line.185">        this.sortBy = sortBy;</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public void setShowMissingAttributeNames(final Boolean showMissingAttributeNames) {</span>
-<span class="source-line-no">189</span><span id="line.189">        this.showMissingAttributeNames = showMissingAttributeNames;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public void setProductIds(final String... productIds) {</span>
-<span class="source-line-no">193</span><span id="line.193">        this.productIds = new ArrayList&lt;&gt;(Arrays.asList(productIds));</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public void setProductIds(final java.util.List&lt;String&gt; productIds) {</span>
-<span class="source-line-no">197</span><span id="line.197">        this.productIds = productIds;</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    public void setProductTypeIds(final String... productTypeIds) {</span>
-<span class="source-line-no">201</span><span id="line.201">        this.productTypeIds = new ArrayList&lt;&gt;(Arrays.asList(productTypeIds));</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public void setProductTypeIds(final java.util.List&lt;String&gt; productTypeIds) {</span>
-<span class="source-line-no">205</span><span id="line.205">        this.productTypeIds = productTypeIds;</span>
-<span class="source-line-no">206</span><span id="line.206">    }</span>
-<span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    public void setAttributeName(final String attributeName) {</span>
-<span class="source-line-no">209</span><span id="line.209">        this.attributeName = attributeName;</span>
-<span class="source-line-no">210</span><span id="line.210">    }</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    @Override</span>
-<span class="source-line-no">213</span><span id="line.213">    public boolean equals(Object o) {</span>
-<span class="source-line-no">214</span><span id="line.214">        if (this == o)</span>
-<span class="source-line-no">215</span><span id="line.215">            return true;</span>
-<span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">218</span><span id="line.218">            return false;</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">        MissingAttributesSearchRequestImpl that = (MissingAttributesSearchRequestImpl) o;</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">        return new EqualsBuilder().append(limit, that.limit)</span>
-<span class="source-line-no">223</span><span id="line.223">                .append(offset, that.offset)</span>
-<span class="source-line-no">224</span><span id="line.224">                .append(staged, that.staged)</span>
-<span class="source-line-no">225</span><span id="line.225">                .append(productSetLimit, that.productSetLimit)</span>
-<span class="source-line-no">226</span><span id="line.226">                .append(includeVariants, that.includeVariants)</span>
-<span class="source-line-no">227</span><span id="line.227">                .append(coverageMin, that.coverageMin)</span>
-<span class="source-line-no">228</span><span id="line.228">                .append(coverageMax, that.coverageMax)</span>
-<span class="source-line-no">229</span><span id="line.229">                .append(sortBy, that.sortBy)</span>
-<span class="source-line-no">230</span><span id="line.230">                .append(showMissingAttributeNames, that.showMissingAttributeNames)</span>
-<span class="source-line-no">231</span><span id="line.231">                .append(productIds, that.productIds)</span>
-<span class="source-line-no">232</span><span id="line.232">                .append(productTypeIds, that.productTypeIds)</span>
-<span class="source-line-no">233</span><span id="line.233">                .append(attributeName, that.attributeName)</span>
-<span class="source-line-no">234</span><span id="line.234">                .isEquals();</span>
-<span class="source-line-no">235</span><span id="line.235">    }</span>
+<span class="source-line-no">135</span><span id="line.135">    public String getSortBy() {</span>
+<span class="source-line-no">136</span><span id="line.136">        return this.sortBy;</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    /**</span>
+<span class="source-line-no">140</span><span id="line.140">     &lt;*  &lt;p&gt;If true, the &lt;code&gt;missingAttributeNames&lt;/code&gt; will be included in the results.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">141</span><span id="line.141">     */</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public Boolean getShowMissingAttributeNames() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return this.showMissingAttributeNames;</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     &lt;*  &lt;p&gt;Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public java.util.List&lt;String&gt; getProductIds() {</span>
+<span class="source-line-no">152</span><span id="line.152">        return this.productIds;</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    /**</span>
+<span class="source-line-no">156</span><span id="line.156">     &lt;*  &lt;p&gt;Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">157</span><span id="line.157">     */</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    public java.util.List&lt;String&gt; getProductTypeIds() {</span>
+<span class="source-line-no">160</span><span id="line.160">        return this.productTypeIds;</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    /**</span>
+<span class="source-line-no">164</span><span id="line.164">     &lt;*  &lt;p&gt;Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in &lt;code&gt;MissingAttributesMeta&lt;/code&gt;. The &lt;code&gt;attributeCount&lt;/code&gt; and &lt;code&gt;attributeCoverage&lt;/code&gt; fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">165</span><span id="line.165">     */</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    public String getAttributeName() {</span>
+<span class="source-line-no">168</span><span id="line.168">        return this.attributeName;</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    public void setLimit(final Integer limit) {</span>
+<span class="source-line-no">172</span><span id="line.172">        this.limit = limit;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    public void setOffset(final Integer offset) {</span>
+<span class="source-line-no">176</span><span id="line.176">        this.offset = offset;</span>
+<span class="source-line-no">177</span><span id="line.177">    }</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">    public void setStaged(final Boolean staged) {</span>
+<span class="source-line-no">180</span><span id="line.180">        this.staged = staged;</span>
+<span class="source-line-no">181</span><span id="line.181">    }</span>
+<span class="source-line-no">182</span><span id="line.182"></span>
+<span class="source-line-no">183</span><span id="line.183">    public void setProductSetLimit(final Integer productSetLimit) {</span>
+<span class="source-line-no">184</span><span id="line.184">        this.productSetLimit = productSetLimit;</span>
+<span class="source-line-no">185</span><span id="line.185">    }</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    public void setIncludeVariants(final Boolean includeVariants) {</span>
+<span class="source-line-no">188</span><span id="line.188">        this.includeVariants = includeVariants;</span>
+<span class="source-line-no">189</span><span id="line.189">    }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    public void setCoverageMin(final Double coverageMin) {</span>
+<span class="source-line-no">192</span><span id="line.192">        this.coverageMin = coverageMin;</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    public void setCoverageMax(final Double coverageMax) {</span>
+<span class="source-line-no">196</span><span id="line.196">        this.coverageMax = coverageMax;</span>
+<span class="source-line-no">197</span><span id="line.197">    }</span>
+<span class="source-line-no">198</span><span id="line.198"></span>
+<span class="source-line-no">199</span><span id="line.199">    public void setSortBy(final String sortBy) {</span>
+<span class="source-line-no">200</span><span id="line.200">        this.sortBy = sortBy;</span>
+<span class="source-line-no">201</span><span id="line.201">    }</span>
+<span class="source-line-no">202</span><span id="line.202"></span>
+<span class="source-line-no">203</span><span id="line.203">    public void setShowMissingAttributeNames(final Boolean showMissingAttributeNames) {</span>
+<span class="source-line-no">204</span><span id="line.204">        this.showMissingAttributeNames = showMissingAttributeNames;</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    public void setProductIds(final String... productIds) {</span>
+<span class="source-line-no">208</span><span id="line.208">        this.productIds = new ArrayList&lt;&gt;(Arrays.asList(productIds));</span>
+<span class="source-line-no">209</span><span id="line.209">    }</span>
+<span class="source-line-no">210</span><span id="line.210"></span>
+<span class="source-line-no">211</span><span id="line.211">    public void setProductIds(final java.util.List&lt;String&gt; productIds) {</span>
+<span class="source-line-no">212</span><span id="line.212">        this.productIds = productIds;</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    public void setProductTypeIds(final String... productTypeIds) {</span>
+<span class="source-line-no">216</span><span id="line.216">        this.productTypeIds = new ArrayList&lt;&gt;(Arrays.asList(productTypeIds));</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    public void setProductTypeIds(final java.util.List&lt;String&gt; productTypeIds) {</span>
+<span class="source-line-no">220</span><span id="line.220">        this.productTypeIds = productTypeIds;</span>
+<span class="source-line-no">221</span><span id="line.221">    }</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">    public void setAttributeName(final String attributeName) {</span>
+<span class="source-line-no">224</span><span id="line.224">        this.attributeName = attributeName;</span>
+<span class="source-line-no">225</span><span id="line.225">    }</span>
+<span class="source-line-no">226</span><span id="line.226"></span>
+<span class="source-line-no">227</span><span id="line.227">    @Override</span>
+<span class="source-line-no">228</span><span id="line.228">    public boolean equals(Object o) {</span>
+<span class="source-line-no">229</span><span id="line.229">        if (this == o)</span>
+<span class="source-line-no">230</span><span id="line.230">            return true;</span>
+<span class="source-line-no">231</span><span id="line.231"></span>
+<span class="source-line-no">232</span><span id="line.232">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">233</span><span id="line.233">            return false;</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">        MissingAttributesSearchRequestImpl that = (MissingAttributesSearchRequestImpl) o;</span>
 <span class="source-line-no">236</span><span id="line.236"></span>
-<span class="source-line-no">237</span><span id="line.237">    @Override</span>
-<span class="source-line-no">238</span><span id="line.238">    public int hashCode() {</span>
-<span class="source-line-no">239</span><span id="line.239">        return new HashCodeBuilder(17, 37).append(limit)</span>
-<span class="source-line-no">240</span><span id="line.240">                .append(offset)</span>
-<span class="source-line-no">241</span><span id="line.241">                .append(staged)</span>
-<span class="source-line-no">242</span><span id="line.242">                .append(productSetLimit)</span>
-<span class="source-line-no">243</span><span id="line.243">                .append(includeVariants)</span>
-<span class="source-line-no">244</span><span id="line.244">                .append(coverageMin)</span>
-<span class="source-line-no">245</span><span id="line.245">                .append(coverageMax)</span>
-<span class="source-line-no">246</span><span id="line.246">                .append(sortBy)</span>
-<span class="source-line-no">247</span><span id="line.247">                .append(showMissingAttributeNames)</span>
-<span class="source-line-no">248</span><span id="line.248">                .append(productIds)</span>
-<span class="source-line-no">249</span><span id="line.249">                .append(productTypeIds)</span>
-<span class="source-line-no">250</span><span id="line.250">                .append(attributeName)</span>
-<span class="source-line-no">251</span><span id="line.251">                .toHashCode();</span>
-<span class="source-line-no">252</span><span id="line.252">    }</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">}</span>
+<span class="source-line-no">237</span><span id="line.237">        return new EqualsBuilder().append(limit, that.limit)</span>
+<span class="source-line-no">238</span><span id="line.238">                .append(offset, that.offset)</span>
+<span class="source-line-no">239</span><span id="line.239">                .append(staged, that.staged)</span>
+<span class="source-line-no">240</span><span id="line.240">                .append(productSetLimit, that.productSetLimit)</span>
+<span class="source-line-no">241</span><span id="line.241">                .append(includeVariants, that.includeVariants)</span>
+<span class="source-line-no">242</span><span id="line.242">                .append(coverageMin, that.coverageMin)</span>
+<span class="source-line-no">243</span><span id="line.243">                .append(coverageMax, that.coverageMax)</span>
+<span class="source-line-no">244</span><span id="line.244">                .append(sortBy, that.sortBy)</span>
+<span class="source-line-no">245</span><span id="line.245">                .append(showMissingAttributeNames, that.showMissingAttributeNames)</span>
+<span class="source-line-no">246</span><span id="line.246">                .append(productIds, that.productIds)</span>
+<span class="source-line-no">247</span><span id="line.247">                .append(productTypeIds, that.productTypeIds)</span>
+<span class="source-line-no">248</span><span id="line.248">                .append(attributeName, that.attributeName)</span>
+<span class="source-line-no">249</span><span id="line.249">                .isEquals();</span>
+<span class="source-line-no">250</span><span id="line.250">    }</span>
+<span class="source-line-no">251</span><span id="line.251"></span>
+<span class="source-line-no">252</span><span id="line.252">    @Override</span>
+<span class="source-line-no">253</span><span id="line.253">    public int hashCode() {</span>
+<span class="source-line-no">254</span><span id="line.254">        return new HashCodeBuilder(17, 37).append(limit)</span>
+<span class="source-line-no">255</span><span id="line.255">                .append(offset)</span>
+<span class="source-line-no">256</span><span id="line.256">                .append(staged)</span>
+<span class="source-line-no">257</span><span id="line.257">                .append(productSetLimit)</span>
+<span class="source-line-no">258</span><span id="line.258">                .append(includeVariants)</span>
+<span class="source-line-no">259</span><span id="line.259">                .append(coverageMin)</span>
+<span class="source-line-no">260</span><span id="line.260">                .append(coverageMax)</span>
+<span class="source-line-no">261</span><span id="line.261">                .append(sortBy)</span>
+<span class="source-line-no">262</span><span id="line.262">                .append(showMissingAttributeNames)</span>
+<span class="source-line-no">263</span><span id="line.263">                .append(productIds)</span>
+<span class="source-line-no">264</span><span id="line.264">                .append(productTypeIds)</span>
+<span class="source-line-no">265</span><span id="line.265">                .append(attributeName)</span>
+<span class="source-line-no">266</span><span id="line.266">                .toHashCode();</span>
+<span class="source-line-no">267</span><span id="line.267">    }</span>
+<span class="source-line-no">268</span><span id="line.268"></span>
+<span class="source-line-no">269</span><span id="line.269">}</span>
 
 
 

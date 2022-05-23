@@ -83,17 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.22">ReturnInfoBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.24">ReturnInfoBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ReturnInfoBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ReturnInfo returnInfo = ReturnInfo.builder()
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .returnTrackingId("{returnTrackingId}")
-           .returnDate("{returnDate}")
-           .build()
+     ReturnInfo returnInfo = ReturnInfo.builder()
+             .plusItems(itemsBuilder -> itemsBuilder)
+             .returnTrackingId("{returnTrackingId}")
+             .returnDate("{returnDate}")
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -142,10 +144,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#items(com.commercetools.history.models.common.ReturnItem...)">items</a></span>&#8203;(<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>...&nbsp;items)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#items(java.util.List)">items</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;&nbsp;items)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -154,21 +160,29 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusItems(com.commercetools.history.models.common.ReturnItem...)">plusItems</a></span>&#8203;(<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>...&nbsp;items)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusItems(java.util.function.Function)">plusItems</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>,&#8203;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#returnDate(java.lang.String)">returnDate</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnDate)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#returnTrackingId(java.lang.String)">returnTrackingId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnTrackingId)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Identifies, which return tracking ID is connected to this particular return.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withItems(java.util.function.Function)">withItems</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>,&#8203;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 </div>
 </div>
 </div>
@@ -189,7 +203,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ReturnInfoBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.23">ReturnInfoBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.25">ReturnInfoBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -203,68 +217,74 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="items(com.commercetools.history.models.common.ReturnItem...)">
 <h3>items</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.31">items</a></span>&#8203;<span class="parameters">(<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.37">items</a></span>&#8203;<span class="parameters">(<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>...&nbsp;items)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="items(java.util.List)">
 <h3>items</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.36">items</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.46">items</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;&nbsp;items)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusItems(com.commercetools.history.models.common.ReturnItem...)">
 <h3>plusItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.41">plusItems</a></span>&#8203;<span class="parameters">(<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.55">plusItems</a></span>&#8203;<span class="parameters">(<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>...&nbsp;items)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusItems(java.util.function.Function)">
 <h3>plusItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.49">plusItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>,&#8203;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.67">plusItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>,&#8203;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withItems(java.util.function.Function)">
 <h3>withItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.58">withItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>,&#8203;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.80">withItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>,&#8203;<a href="ReturnItemBuilder.html" title="class in com.commercetools.history.models.common">ReturnItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="returnTrackingId(java.lang.String)">
 <h3>returnTrackingId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.69">returnTrackingId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnTrackingId)</span></div>
-<div class="block"><p>Identifies, which return tracking ID is connected to this particular return.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.91">returnTrackingId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnTrackingId)</span></div>
+<div class="block"><*  <p>Identifies, which return tracking ID is connected to this particular return.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="returnDate(java.lang.String)">
 <h3>returnDate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.74">returnDate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnDate)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.100">returnDate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnDate)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getItems()">
 <h3>getItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.79">getItems</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnItem.html" title="interface in com.commercetools.history.models.common">ReturnItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.105">getItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getReturnTrackingId()">
 <h3>getReturnTrackingId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.83">getReturnTrackingId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.109">getReturnTrackingId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getReturnDate()">
 <h3>getReturnDate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.87">getReturnDate</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.113">getReturnDate</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.91">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.117">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a>&gt;</code></dd>
@@ -274,20 +294,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.101">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.127">buildUnchecked</a></span>()</div>
 <div class="block">builds ReturnInfo without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.105">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.131">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.ReturnInfo)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.109">of</a></span>&#8203;<span class="parameters">(<a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ReturnInfoBuilder.html" title="class in com.commercetools.history.models.common">ReturnInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReturnInfoBuilder.html#line.135">of</a></span>&#8203;<span class="parameters">(<a href="ReturnInfo.html" title="interface in com.commercetools.history.models.common">ReturnInfo</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

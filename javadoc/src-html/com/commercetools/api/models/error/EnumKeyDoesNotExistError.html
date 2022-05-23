@@ -26,69 +26,78 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">017</span><span id="line.17"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">   EnumKeyDoesNotExistError enumKeyDoesNotExistError = EnumKeyDoesNotExistError.builder()</span>
-<span class="source-line-no">020</span><span id="line.20">           .message("{message}")</span>
-<span class="source-line-no">021</span><span id="line.21">           .conflictingEnumKey("{conflictingEnumKey}")</span>
-<span class="source-line-no">022</span><span id="line.22">           .conflictingAttributeName("{conflictingAttributeName}")</span>
-<span class="source-line-no">023</span><span id="line.23">           .build()</span>
-<span class="source-line-no">024</span><span id="line.24"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"> &lt;/div&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> */</span>
-<span class="source-line-no">027</span><span id="line.27">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">028</span><span id="line.28">@JsonDeserialize(as = EnumKeyDoesNotExistErrorImpl.class)</span>
-<span class="source-line-no">029</span><span id="line.29">public interface EnumKeyDoesNotExistError extends ErrorObject {</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    String ENUM_KEY_DOES_NOT_EXIST = "EnumKeyDoesNotExist";</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
-<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("conflictingEnumKey")</span>
-<span class="source-line-no">035</span><span id="line.35">    public String getConflictingEnumKey();</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("conflictingAttributeName")</span>
-<span class="source-line-no">039</span><span id="line.39">    public String getConflictingAttributeName();</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public void setConflictingEnumKey(final String conflictingEnumKey);</span>
+<span class="source-line-no">016</span><span id="line.16"> * EnumKeyDoesNotExistError</span>
+<span class="source-line-no">017</span><span id="line.17"> *</span>
+<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *     EnumKeyDoesNotExistError enumKeyDoesNotExistError = EnumKeyDoesNotExistError.builder()</span>
+<span class="source-line-no">023</span><span id="line.23"> *             .message("{message}")</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .conflictingEnumKey("{conflictingEnumKey}")</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .conflictingAttributeName("{conflictingAttributeName}")</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .build()</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;/div&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> */</span>
+<span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">031</span><span id="line.31">@JsonDeserialize(as = EnumKeyDoesNotExistErrorImpl.class)</span>
+<span class="source-line-no">032</span><span id="line.32">public interface EnumKeyDoesNotExistError extends ErrorObject {</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    String ENUM_KEY_DOES_NOT_EXIST = "EnumKeyDoesNotExist";</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    /**</span>
+<span class="source-line-no">037</span><span id="line.37">     &lt;&gt;</span>
+<span class="source-line-no">038</span><span id="line.38">     */</span>
+<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
+<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("conflictingEnumKey")</span>
+<span class="source-line-no">041</span><span id="line.41">    public String getConflictingEnumKey();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public void setConflictingAttributeName(final String conflictingAttributeName);</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public static EnumKeyDoesNotExistError of() {</span>
-<span class="source-line-no">046</span><span id="line.46">        return new EnumKeyDoesNotExistErrorImpl();</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public static EnumKeyDoesNotExistError of(final EnumKeyDoesNotExistError template) {</span>
-<span class="source-line-no">050</span><span id="line.50">        EnumKeyDoesNotExistErrorImpl instance = new EnumKeyDoesNotExistErrorImpl();</span>
-<span class="source-line-no">051</span><span id="line.51">        instance.setMessage(template.getMessage());</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">        instance.setConflictingEnumKey(template.getConflictingEnumKey());</span>
-<span class="source-line-no">054</span><span id="line.54">        instance.setConflictingAttributeName(template.getConflictingAttributeName());</span>
-<span class="source-line-no">055</span><span id="line.55">        return instance;</span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     &lt;&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
+<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("conflictingAttributeName")</span>
+<span class="source-line-no">048</span><span id="line.48">    public String getConflictingAttributeName();</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    public void setConflictingEnumKey(final String conflictingEnumKey);</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public void setConflictingAttributeName(final String conflictingAttributeName);</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public static EnumKeyDoesNotExistError of() {</span>
+<span class="source-line-no">055</span><span id="line.55">        return new EnumKeyDoesNotExistErrorImpl();</span>
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static EnumKeyDoesNotExistErrorBuilder builder() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return EnumKeyDoesNotExistErrorBuilder.of();</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">058</span><span id="line.58">    public static EnumKeyDoesNotExistError of(final EnumKeyDoesNotExistError template) {</span>
+<span class="source-line-no">059</span><span id="line.59">        EnumKeyDoesNotExistErrorImpl instance = new EnumKeyDoesNotExistErrorImpl();</span>
+<span class="source-line-no">060</span><span id="line.60">        instance.setMessage(template.getMessage());</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public static EnumKeyDoesNotExistErrorBuilder builder(final EnumKeyDoesNotExistError template) {</span>
-<span class="source-line-no">063</span><span id="line.63">        return EnumKeyDoesNotExistErrorBuilder.of(template);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    default &lt;T&gt; T withEnumKeyDoesNotExistError(Function&lt;EnumKeyDoesNotExistError, T&gt; helper) {</span>
-<span class="source-line-no">067</span><span id="line.67">        return helper.apply(this);</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public static com.fasterxml.jackson.core.type.TypeReference&lt;EnumKeyDoesNotExistError&gt; typeReference() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return new com.fasterxml.jackson.core.type.TypeReference&lt;EnumKeyDoesNotExistError&gt;() {</span>
-<span class="source-line-no">072</span><span id="line.72">            @Override</span>
-<span class="source-line-no">073</span><span id="line.73">            public String toString() {</span>
-<span class="source-line-no">074</span><span id="line.74">                return "TypeReference&lt;EnumKeyDoesNotExistError&gt;";</span>
-<span class="source-line-no">075</span><span id="line.75">            }</span>
-<span class="source-line-no">076</span><span id="line.76">        };</span>
+<span class="source-line-no">062</span><span id="line.62">        instance.setConflictingEnumKey(template.getConflictingEnumKey());</span>
+<span class="source-line-no">063</span><span id="line.63">        instance.setConflictingAttributeName(template.getConflictingAttributeName());</span>
+<span class="source-line-no">064</span><span id="line.64">        return instance;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public static EnumKeyDoesNotExistErrorBuilder builder() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return EnumKeyDoesNotExistErrorBuilder.of();</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public static EnumKeyDoesNotExistErrorBuilder builder(final EnumKeyDoesNotExistError template) {</span>
+<span class="source-line-no">072</span><span id="line.72">        return EnumKeyDoesNotExistErrorBuilder.of(template);</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    default &lt;T&gt; T withEnumKeyDoesNotExistError(Function&lt;EnumKeyDoesNotExistError, T&gt; helper) {</span>
+<span class="source-line-no">076</span><span id="line.76">        return helper.apply(this);</span>
 <span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78">}</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public static com.fasterxml.jackson.core.type.TypeReference&lt;EnumKeyDoesNotExistError&gt; typeReference() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return new com.fasterxml.jackson.core.type.TypeReference&lt;EnumKeyDoesNotExistError&gt;() {</span>
+<span class="source-line-no">081</span><span id="line.81">            @Override</span>
+<span class="source-line-no">082</span><span id="line.82">            public String toString() {</span>
+<span class="source-line-no">083</span><span id="line.83">                return "TypeReference&lt;EnumKeyDoesNotExistError&gt;";</span>
+<span class="source-line-no">084</span><span id="line.84">            }</span>
+<span class="source-line-no">085</span><span id="line.85">        };</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87">}</span>
 
 
 

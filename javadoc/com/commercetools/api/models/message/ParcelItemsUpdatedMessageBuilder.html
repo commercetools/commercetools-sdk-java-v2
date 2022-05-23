@@ -83,24 +83,26 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.31">ParcelItemsUpdatedMessageBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.33">ParcelItemsUpdatedMessageBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ParcelItemsUpdatedMessageBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ParcelItemsUpdatedMessage parcelItemsUpdatedMessage = ParcelItemsUpdatedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .parcelId("{parcelId}")
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
-           .build()
+     ParcelItemsUpdatedMessage parcelItemsUpdatedMessage = ParcelItemsUpdatedMessage.builder()
+             .id("{id}")
+             .version(0.3)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .sequenceNumber(0.3)
+             .resource(resourceBuilder -> resourceBuilder)
+             .resourceVersion(0.3)
+             .parcelId("{parcelId}")
+             .plusItems(itemsBuilder -> itemsBuilder)
+             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -140,20 +142,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdAt(java.time.ZonedDateTime)">createdAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdBy(com.commercetools.api.models.common.CreatedBy)">createdBy</a></span>&#8203;(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdBy(java.util.function.Function)">createdBy</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#deliveryId(java.lang.String)">deliveryId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;deliveryId)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -199,26 +205,32 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#id(java.lang.String)">id</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Platform-generated unique identifier of the Message.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#items(com.commercetools.api.models.order.DeliveryItem...)">items</a></span>&#8203;(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#items(java.util.List)">items</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;items)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedAt(java.time.ZonedDateTime)">lastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">lastModifiedBy</a></span>&#8203;(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedBy(java.util.function.Function)">lastModifiedBy</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -228,56 +240,84 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#oldItems(com.commercetools.api.models.order.DeliveryItem...)">oldItems</a></span>&#8203;(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;oldItems)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#oldItems(java.util.List)">oldItems</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;oldItems)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#parcelId(java.lang.String)">parcelId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parcelId)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusItems(com.commercetools.api.models.order.DeliveryItem...)">plusItems</a></span>&#8203;(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusItems(java.util.function.Function)">plusItems</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusOldItems(com.commercetools.api.models.order.DeliveryItem...)">plusOldItems</a></span>&#8203;(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;oldItems)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusOldItems(java.util.function.Function)">plusOldItems</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(com.commercetools.api.models.common.Reference)">resource</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(java.util.function.Function)">resource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(java.util.function.Function)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceVersion(java.lang.Long)">resourceVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#sequenceNumber(java.lang.Long)">sequenceNumber</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withItems(java.util.function.Function)">withItems</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOldItems(java.util.function.Function)">withOldItems</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 </div>
 </div>
 </div>
@@ -298,7 +338,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ParcelItemsUpdatedMessageBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.32">ParcelItemsUpdatedMessageBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.34">ParcelItemsUpdatedMessageBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -312,262 +352,281 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.70">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block"><p>Platform-generated unique identifier of the Message.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.72">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="block"><*  <p>Platform-generated unique identifier of the Message.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.75">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.81">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.80">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.90">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.85">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.99">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(java.util.function.Function)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.94">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.108">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.104">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.118">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="block"><*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdBy(java.util.function.Function)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.114">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.128">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.124">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.138">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="block"><*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="sequenceNumber(java.lang.Long)">
 <h3>sequenceNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.130">sequenceNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.148">sequenceNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resource(com.commercetools.api.models.common.Reference)">
 <h3>resource</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.139">resource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.157">resource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
+<div class="block"><*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resource(java.util.function.Function)">
 <h3>resource</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.148">resource</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.166">resource</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceVersion(java.lang.Long)">
 <h3>resourceVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.154">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.176">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceUserProvidedIdentifiers(java.util.function.Function)">
 <h3>resourceUserProvidedIdentifiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.159">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.185">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">
 <h3>resourceUserProvidedIdentifiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.167">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.197">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="parcelId(java.lang.String)">
 <h3>parcelId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.173">parcelId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parcelId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.207">parcelId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parcelId)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="deliveryId(java.lang.String)">
 <h3>deliveryId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.178">deliveryId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.216">deliveryId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;deliveryId)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="items(com.commercetools.api.models.order.DeliveryItem...)">
 <h3>items</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.183">items</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.225">items</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="items(java.util.List)">
 <h3>items</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.188">items</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.234">items</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;items)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusItems(com.commercetools.api.models.order.DeliveryItem...)">
 <h3>plusItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.194">plusItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.244">plusItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusItems(java.util.function.Function)">
 <h3>plusItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.202">plusItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.256">plusItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withItems(java.util.function.Function)">
 <h3>withItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.211">withItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.269">withItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="oldItems(com.commercetools.api.models.order.DeliveryItem...)">
 <h3>oldItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.218">oldItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;oldItems)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.280">oldItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;oldItems)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="oldItems(java.util.List)">
 <h3>oldItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.224">oldItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;oldItems)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.290">oldItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;oldItems)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusOldItems(com.commercetools.api.models.order.DeliveryItem...)">
 <h3>plusOldItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.230">plusOldItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;oldItems)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.300">plusOldItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;oldItems)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusOldItems(java.util.function.Function)">
 <h3>plusOldItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.239">plusOldItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.313">plusOldItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOldItems(java.util.function.Function)">
 <h3>withOldItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.248">withOldItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.326">withOldItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="../order/DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.255">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.333">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.259">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.337">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.263">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.341">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.267">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.345">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.271">getLastModifiedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.349">getLastModifiedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.276">getCreatedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.354">getCreatedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSequenceNumber()">
 <h3>getSequenceNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.281">getSequenceNumber</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.359">getSequenceNumber</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResource()">
 <h3>getResource</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.285">getResource</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.363">getResource</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceVersion()">
 <h3>getResourceVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.289">getResourceVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.367">getResourceVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceUserProvidedIdentifiers()">
 <h3>getResourceUserProvidedIdentifiers</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.293">getResourceUserProvidedIdentifiers</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.371">getResourceUserProvidedIdentifiers</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getParcelId()">
 <h3>getParcelId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.298">getParcelId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.376">getParcelId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDeliveryId()">
 <h3>getDeliveryId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.302">getDeliveryId</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.380">getDeliveryId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getItems()">
 <h3>getItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.307">getItems</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.385">getItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOldItems()">
 <h3>getOldItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.311">getOldItems</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.389">getOldItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.315">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.393">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a>&gt;</code></dd>
@@ -577,20 +636,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.334">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.412">buildUnchecked</a></span>()</div>
 <div class="block">builds ParcelItemsUpdatedMessage without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.340">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.418">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ParcelItemsUpdatedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.344">of</a></span>&#8203;<span class="parameters">(<a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelItemsUpdatedMessageBuilder.html#line.422">of</a></span>&#8203;<span class="parameters">(<a href="ParcelItemsUpdatedMessage.html" title="interface in com.commercetools.api.models.message">ParcelItemsUpdatedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

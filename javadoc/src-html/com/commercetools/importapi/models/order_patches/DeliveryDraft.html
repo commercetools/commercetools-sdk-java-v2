@@ -29,79 +29,91 @@
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">020</span><span id="line.20"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">022</span><span id="line.22">   DeliveryDraft deliveryDraft = DeliveryDraft.builder()</span>
-<span class="source-line-no">023</span><span id="line.23">           .plusItems(itemsBuilder -&gt; itemsBuilder)</span>
-<span class="source-line-no">024</span><span id="line.24">           .plusParcels(parcelsBuilder -&gt; parcelsBuilder)</span>
-<span class="source-line-no">025</span><span id="line.25">           .build()</span>
-<span class="source-line-no">026</span><span id="line.26"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> &lt;/div&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> */</span>
-<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = DeliveryDraftImpl.class)</span>
-<span class="source-line-no">031</span><span id="line.31">public interface DeliveryDraft {</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
-<span class="source-line-no">034</span><span id="line.34">    @Valid</span>
-<span class="source-line-no">035</span><span id="line.35">    @JsonProperty("items")</span>
-<span class="source-line-no">036</span><span id="line.36">    public List&lt;DeliveryItem&gt; getItems();</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    @Valid</span>
-<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("address")</span>
-<span class="source-line-no">040</span><span id="line.40">    public Address getAddress();</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
-<span class="source-line-no">043</span><span id="line.43">    @Valid</span>
-<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("parcels")</span>
-<span class="source-line-no">045</span><span id="line.45">    public List&lt;DeliveryParcelDraft&gt; getParcels();</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonIgnore</span>
-<span class="source-line-no">048</span><span id="line.48">    public void setItems(final DeliveryItem... items);</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public void setItems(final List&lt;DeliveryItem&gt; items);</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public void setAddress(final Address address);</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonIgnore</span>
-<span class="source-line-no">055</span><span id="line.55">    public void setParcels(final DeliveryParcelDraft... parcels);</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public void setParcels(final List&lt;DeliveryParcelDraft&gt; parcels);</span>
+<span class="source-line-no">019</span><span id="line.19"> * DeliveryDraft</span>
+<span class="source-line-no">020</span><span id="line.20"> *</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> *     DeliveryDraft deliveryDraft = DeliveryDraft.builder()</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .plusItems(itemsBuilder -&gt; itemsBuilder)</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .plusParcels(parcelsBuilder -&gt; parcelsBuilder)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .build()</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/div&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> */</span>
+<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = DeliveryDraftImpl.class)</span>
+<span class="source-line-no">034</span><span id="line.34">public interface DeliveryDraft {</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    /**</span>
+<span class="source-line-no">037</span><span id="line.37">     &lt;&gt;</span>
+<span class="source-line-no">038</span><span id="line.38">     */</span>
+<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
+<span class="source-line-no">040</span><span id="line.40">    @Valid</span>
+<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("items")</span>
+<span class="source-line-no">042</span><span id="line.42">    public List&lt;DeliveryItem&gt; getItems();</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">     &lt;&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">     */</span>
+<span class="source-line-no">047</span><span id="line.47">    @Valid</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("address")</span>
+<span class="source-line-no">049</span><span id="line.49">    public Address getAddress();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     &lt;&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54">    @NotNull</span>
+<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("parcels")</span>
+<span class="source-line-no">057</span><span id="line.57">    public List&lt;DeliveryParcelDraft&gt; getParcels();</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public static DeliveryDraft of() {</span>
-<span class="source-line-no">060</span><span id="line.60">        return new DeliveryDraftImpl();</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public static DeliveryDraft of(final DeliveryDraft template) {</span>
-<span class="source-line-no">064</span><span id="line.64">        DeliveryDraftImpl instance = new DeliveryDraftImpl();</span>
-<span class="source-line-no">065</span><span id="line.65">        instance.setItems(template.getItems());</span>
-<span class="source-line-no">066</span><span id="line.66">        instance.setAddress(template.getAddress());</span>
-<span class="source-line-no">067</span><span id="line.67">        instance.setParcels(template.getParcels());</span>
-<span class="source-line-no">068</span><span id="line.68">        return instance;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">059</span><span id="line.59">    @JsonIgnore</span>
+<span class="source-line-no">060</span><span id="line.60">    public void setItems(final DeliveryItem... items);</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public void setItems(final List&lt;DeliveryItem&gt; items);</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public void setAddress(final Address address);</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    @JsonIgnore</span>
+<span class="source-line-no">067</span><span id="line.67">    public void setParcels(final DeliveryParcelDraft... parcels);</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public void setParcels(final List&lt;DeliveryParcelDraft&gt; parcels);</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public static DeliveryDraftBuilder builder() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return DeliveryDraftBuilder.of();</span>
+<span class="source-line-no">071</span><span id="line.71">    public static DeliveryDraft of() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return new DeliveryDraftImpl();</span>
 <span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public static DeliveryDraftBuilder builder(final DeliveryDraft template) {</span>
-<span class="source-line-no">076</span><span id="line.76">        return DeliveryDraftBuilder.of(template);</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    default &lt;T&gt; T withDeliveryDraft(Function&lt;DeliveryDraft, T&gt; helper) {</span>
-<span class="source-line-no">080</span><span id="line.80">        return helper.apply(this);</span>
+<span class="source-line-no">075</span><span id="line.75">    public static DeliveryDraft of(final DeliveryDraft template) {</span>
+<span class="source-line-no">076</span><span id="line.76">        DeliveryDraftImpl instance = new DeliveryDraftImpl();</span>
+<span class="source-line-no">077</span><span id="line.77">        instance.setItems(template.getItems());</span>
+<span class="source-line-no">078</span><span id="line.78">        instance.setAddress(template.getAddress());</span>
+<span class="source-line-no">079</span><span id="line.79">        instance.setParcels(template.getParcels());</span>
+<span class="source-line-no">080</span><span id="line.80">        return instance;</span>
 <span class="source-line-no">081</span><span id="line.81">    }</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DeliveryDraft&gt; typeReference() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DeliveryDraft&gt;() {</span>
-<span class="source-line-no">085</span><span id="line.85">            @Override</span>
-<span class="source-line-no">086</span><span id="line.86">            public String toString() {</span>
-<span class="source-line-no">087</span><span id="line.87">                return "TypeReference&lt;DeliveryDraft&gt;";</span>
-<span class="source-line-no">088</span><span id="line.88">            }</span>
-<span class="source-line-no">089</span><span id="line.89">        };</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91">}</span>
+<span class="source-line-no">083</span><span id="line.83">    public static DeliveryDraftBuilder builder() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return DeliveryDraftBuilder.of();</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public static DeliveryDraftBuilder builder(final DeliveryDraft template) {</span>
+<span class="source-line-no">088</span><span id="line.88">        return DeliveryDraftBuilder.of(template);</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    default &lt;T&gt; T withDeliveryDraft(Function&lt;DeliveryDraft, T&gt; helper) {</span>
+<span class="source-line-no">092</span><span id="line.92">        return helper.apply(this);</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DeliveryDraft&gt; typeReference() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DeliveryDraft&gt;() {</span>
+<span class="source-line-no">097</span><span id="line.97">            @Override</span>
+<span class="source-line-no">098</span><span id="line.98">            public String toString() {</span>
+<span class="source-line-no">099</span><span id="line.99">                return "TypeReference&lt;DeliveryDraft&gt;";</span>
+<span class="source-line-no">100</span><span id="line.100">            }</span>
+<span class="source-line-no">101</span><span id="line.101">        };</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103">}</span>
 
 
 

@@ -84,19 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StatePagedQueryResponseImpl.html" title="class in com.commercetools.api.models.state">StatePagedQueryResponseImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.31">StatePagedQueryResponse</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.32">StatePagedQueryResponse</a></span><span class="extends-implements">
 extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</span></div>
 <div class="block"><p>PagedQueryResult with <code>results</code> containing an array of State.</p>
 
+ <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   StatePagedQueryResponse statePagedQueryResponse = StatePagedQueryResponse.builder()
-           .limit(0.3)
-           .offset(0.3)
-           .count(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
+     StatePagedQueryResponse statePagedQueryResponse = StatePagedQueryResponse.builder()
+             .limit(0.3)
+             .offset(0.3)
+             .count(0.3)
+             .plusResults(resultsBuilder -> resultsBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -122,27 +123,27 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCount()">getCount</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Actual number of results returned.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Number of results requested.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Number of elements skipped.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getResults()">getResults</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">States matching the query.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTotal()">getTotal</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Total number of results matching the query.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -192,8 +193,8 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.38">getLimit</a></span>()</div>
-<div class="block"><p>Number of results requested.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.39">getLimit</a></span>()</div>
+<div class="block"><*  <p>Number of results requested.</p>></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getLimit()">getLimit</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
@@ -204,8 +205,8 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.45">getOffset</a></span>()</div>
-<div class="block"><p>Number of elements skipped.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.46">getOffset</a></span>()</div>
+<div class="block"><*  <p>Number of elements skipped.</p>></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getOffset()">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
@@ -216,8 +217,8 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.52">getCount</a></span>()</div>
-<div class="block"><p>Actual number of results returned.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.53">getCount</a></span>()</div>
+<div class="block"><*  <p>Actual number of results returned.</p>></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getCount()">getCount</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
@@ -227,8 +228,8 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.60">getTotal</a></span>()</div>
-<div class="block"><p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.61">getTotal</a></span>()</div>
+<div class="block"><*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getTotal()">getTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
@@ -240,8 +241,8 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <h3>getResults</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.66">getResults</a></span>()</div>
-<div class="block"><p>States matching the query.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.67">getResults</a></span>()</div>
+<div class="block"><*  <p>States matching the query.</p>></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getResults()">getResults</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
@@ -251,73 +252,73 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <li>
 <section class="detail" id="setLimit(java.lang.Long)">
 <h3>setLimit</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.71">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.72">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOffset(java.lang.Long)">
 <h3>setOffset</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.73">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.74">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCount(java.lang.Long)">
 <h3>setCount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.75">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.76">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTotal(java.lang.Long)">
 <h3>setTotal</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.77">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.78">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResults(com.commercetools.api.models.state.State...)">
 <h3>setResults</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.79">setResults</a></span>&#8203;<span class="parameters">(<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.80">setResults</a></span>&#8203;<span class="parameters">(<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>...&nbsp;results)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResults(java.util.List)">
 <h3>setResults</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.82">setResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;&nbsp;results)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.83">setResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;&nbsp;results)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.84">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.85">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.state.StatePagedQueryResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.88">of</a></span>&#8203;<span class="parameters">(<a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.89">of</a></span>&#8203;<span class="parameters">(<a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StatePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.state">StatePagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.98">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StatePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.state">StatePagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.99">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.state.StatePagedQueryResponse)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StatePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.state">StatePagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.102">builder</a></span>&#8203;<span class="parameters">(<a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StatePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.state">StatePagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.103">builder</a></span>&#8203;<span class="parameters">(<a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStatePagedQueryResponse(java.util.function.Function)">
 <h3>withStatePagedQueryResponse</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.106">withStatePagedQueryResponse</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.107">withStatePagedQueryResponse</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.110">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StatePagedQueryResponse.html" title="interface in com.commercetools.api.models.state">StatePagedQueryResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StatePagedQueryResponse.html#line.111">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -84,14 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ReviewCreatedMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">ReviewCreatedMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.27">ReviewCreatedMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.30">ReviewCreatedMessagePayload</a></span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ReviewCreatedMessagePayload
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ReviewCreatedMessagePayload reviewCreatedMessagePayload = ReviewCreatedMessagePayload.builder()
-           .review(reviewBuilder -> reviewBuilder)
-           .build()
+     ReviewCreatedMessagePayload reviewCreatedMessagePayload = ReviewCreatedMessagePayload.builder()
+             .review(reviewBuilder -> reviewBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -131,7 +134,9 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../review/Review.html" title="interface in com.commercetools.api.models.review">Review</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getReview()">getReview</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -167,7 +172,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="REVIEW_CREATED">
 <h3>REVIEW_CREATED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.31">REVIEW_CREATED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.34">REVIEW_CREATED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ReviewCreatedMessagePayload.REVIEW_CREATED">Constant Field Values</a></dd>
@@ -187,49 +192,50 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getReview</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../review/Review.html" title="interface in com.commercetools.api.models.review">Review</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.33">getReview</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../review/Review.html" title="interface in com.commercetools.api.models.review">Review</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.39">getReview</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setReview(com.commercetools.api.models.review.Review)">
 <h3>setReview</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.38">setReview</a></span>&#8203;<span class="parameters">(<a href="../review/Review.html" title="interface in com.commercetools.api.models.review">Review</a>&nbsp;review)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.44">setReview</a></span>&#8203;<span class="parameters">(<a href="../review/Review.html" title="interface in com.commercetools.api.models.review">Review</a>&nbsp;review)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.40">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ReviewCreatedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.44">of</a></span>&#8203;<span class="parameters">(<a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.50">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ReviewCreatedMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withReviewCreatedMessagePayload(java.util.function.Function)">
 <h3>withReviewCreatedMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.58">withReviewCreatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.64">withReviewCreatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.62">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewCreatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewCreatedMessagePayload.html#line.68">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

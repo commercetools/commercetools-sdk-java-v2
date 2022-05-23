@@ -83,15 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.20">CustomerCreatedMessagePayloadBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.22">CustomerCreatedMessagePayloadBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">CustomerCreatedMessagePayloadBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   CustomerCreatedMessagePayload customerCreatedMessagePayload = CustomerCreatedMessagePayload.builder()
-           .customer(customerBuilder -> customerBuilder)
-           .build()
+     CustomerCreatedMessagePayload customerCreatedMessagePayload = CustomerCreatedMessagePayload.builder()
+             .customer(customerBuilder -> customerBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -131,10 +133,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#customer(com.commercetools.api.models.customer.Customer)">customer</a></span>&#8203;(<a href="../customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;customer)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#customer(java.util.function.Function)">customer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>,&#8203;<a href="../customer/CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCustomer()">getCustomer</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -164,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomerCreatedMessagePayloadBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.21">CustomerCreatedMessagePayloadBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.23">CustomerCreatedMessagePayloadBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -178,25 +184,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="customer(java.util.function.Function)">
 <h3>customer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.25">customer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>,&#8203;<a href="../customer/CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.31">customer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>,&#8203;<a href="../customer/CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customer(com.commercetools.api.models.customer.Customer)">
 <h3>customer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.31">customer</a></span>&#8203;<span class="parameters">(<a href="../customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;customer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.41">customer</a></span>&#8203;<span class="parameters">(<a href="../customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;customer)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.37">getCustomer</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.47">getCustomer</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.41">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.51">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a>&gt;</code></dd>
@@ -206,20 +214,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.49">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds CustomerCreatedMessagePayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.53">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.CustomerCreatedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerCreatedMessagePayloadBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="CustomerCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

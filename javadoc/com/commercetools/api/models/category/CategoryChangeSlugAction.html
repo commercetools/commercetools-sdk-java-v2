@@ -84,14 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CategoryChangeSlugActionImpl.html" title="class in com.commercetools.api.models.category">CategoryChangeSlugActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.27">CategoryChangeSlugAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.30">CategoryChangeSlugAction</a></span><span class="extends-implements">
 extends <a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">CategoryChangeSlugAction
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   CategoryChangeSlugAction categoryChangeSlugAction = CategoryChangeSlugAction.builder()
-           .slug(slugBuilder -> slugBuilder)
-           .build()
+     CategoryChangeSlugAction categoryChangeSlugAction = CategoryChangeSlugAction.builder()
+             .slug(slugBuilder -> slugBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -132,7 +135,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSlug()">getSlug</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -172,7 +175,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="CHANGE_SLUG">
 <h3>CHANGE_SLUG</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.31">CHANGE_SLUG</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.34">CHANGE_SLUG</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.category.CategoryChangeSlugAction.CHANGE_SLUG">Constant Field Values</a></dd>
@@ -192,50 +195,50 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <h3>getSlug</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.36">getSlug</a></span>()</div>
-<div class="block"><p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.39">getSlug</a></span>()</div>
+<div class="block"><*  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSlug(com.commercetools.api.models.common.LocalizedString)">
 <h3>setSlug</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.41">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.44">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.category.CategoryChangeSlugAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeSlugActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeSlugActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeSlugActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeSlugActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.category.CategoryChangeSlugAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeSlugActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeSlugActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeSlugActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeSlugActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCategoryChangeSlugAction(java.util.function.Function)">
 <h3>withCategoryChangeSlugAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.61">withCategoryChangeSlugAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.64">withCategoryChangeSlugAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.65">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryChangeSlugAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeSlugAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeSlugAction.html#line.68">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -27,112 +27,113 @@
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17"> &lt;p&gt;PagedQueryResult containing an array of AssignedProductReference.&lt;/p&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">020</span><span id="line.20"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">022</span><span id="line.22">   ProductSelectionProductPagedQueryResponse productSelectionProductPagedQueryResponse = ProductSelectionProductPagedQueryResponse.builder()</span>
-<span class="source-line-no">023</span><span id="line.23">           .limit(0.3)</span>
-<span class="source-line-no">024</span><span id="line.24">           .offset(0.3)</span>
-<span class="source-line-no">025</span><span id="line.25">           .count(0.3)</span>
-<span class="source-line-no">026</span><span id="line.26">           .plusResults(resultsBuilder -&gt; resultsBuilder)</span>
-<span class="source-line-no">027</span><span id="line.27">           .build()</span>
-<span class="source-line-no">028</span><span id="line.28"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> &lt;/div&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> */</span>
-<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">032</span><span id="line.32">@JsonDeserialize(as = ProductSelectionProductPagedQueryResponseImpl.class)</span>
-<span class="source-line-no">033</span><span id="line.33">public interface ProductSelectionProductPagedQueryResponse</span>
-<span class="source-line-no">034</span><span id="line.34">        extends com.commercetools.api.models.ResourcePagedQueryResponse&lt;AssignedProductReference&gt; {</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;Number of results requested.&lt;/p&gt;</span>
-<span class="source-line-no">038</span><span id="line.38">     */</span>
-<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
-<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("limit")</span>
-<span class="source-line-no">041</span><span id="line.41">    public Long getLimit();</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
-<span class="source-line-no">045</span><span id="line.45">     */</span>
-<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("offset")</span>
-<span class="source-line-no">048</span><span id="line.48">    public Long getOffset();</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Actual number of results returned.&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("count")</span>
-<span class="source-line-no">055</span><span id="line.55">    public Long getCount();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get &lt;code&gt;total&lt;/code&gt;, pass the query parameter &lt;code&gt;withTotal&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. When the results are filtered with a Query Predicate, &lt;code&gt;total&lt;/code&gt; is subject to a limit.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">     */</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("total")</span>
-<span class="source-line-no">062</span><span id="line.62">    public Long getTotal();</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;References to Products that are assigned to the ProductSelection.&lt;/p&gt;</span>
-<span class="source-line-no">066</span><span id="line.66">     */</span>
-<span class="source-line-no">067</span><span id="line.67">    @NotNull</span>
-<span class="source-line-no">068</span><span id="line.68">    @Valid</span>
-<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("results")</span>
-<span class="source-line-no">070</span><span id="line.70">    public List&lt;AssignedProductReference&gt; getResults();</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setLimit(final Long limit);</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setOffset(final Long offset);</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setCount(final Long count);</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setTotal(final Long total);</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @JsonIgnore</span>
-<span class="source-line-no">081</span><span id="line.81">    public void setResults(final AssignedProductReference... results);</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public void setResults(final List&lt;AssignedProductReference&gt; results);</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public static ProductSelectionProductPagedQueryResponse of() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return new ProductSelectionProductPagedQueryResponseImpl();</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public static ProductSelectionProductPagedQueryResponse of(</span>
-<span class="source-line-no">090</span><span id="line.90">            final ProductSelectionProductPagedQueryResponse template) {</span>
-<span class="source-line-no">091</span><span id="line.91">        ProductSelectionProductPagedQueryResponseImpl instance = new ProductSelectionProductPagedQueryResponseImpl();</span>
-<span class="source-line-no">092</span><span id="line.92">        instance.setLimit(template.getLimit());</span>
-<span class="source-line-no">093</span><span id="line.93">        instance.setOffset(template.getOffset());</span>
-<span class="source-line-no">094</span><span id="line.94">        instance.setCount(template.getCount());</span>
-<span class="source-line-no">095</span><span id="line.95">        instance.setTotal(template.getTotal());</span>
-<span class="source-line-no">096</span><span id="line.96">        instance.setResults(template.getResults());</span>
-<span class="source-line-no">097</span><span id="line.97">        return instance;</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public static ProductSelectionProductPagedQueryResponseBuilder builder() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return ProductSelectionProductPagedQueryResponseBuilder.of();</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public static ProductSelectionProductPagedQueryResponseBuilder builder(</span>
-<span class="source-line-no">105</span><span id="line.105">            final ProductSelectionProductPagedQueryResponse template) {</span>
-<span class="source-line-no">106</span><span id="line.106">        return ProductSelectionProductPagedQueryResponseBuilder.of(template);</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    default &lt;T&gt; T withProductSelectionProductPagedQueryResponse(</span>
-<span class="source-line-no">110</span><span id="line.110">            Function&lt;ProductSelectionProductPagedQueryResponse, T&gt; helper) {</span>
-<span class="source-line-no">111</span><span id="line.111">        return helper.apply(this);</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductSelectionProductPagedQueryResponse&gt; typeReference() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductSelectionProductPagedQueryResponse&gt;() {</span>
-<span class="source-line-no">116</span><span id="line.116">            @Override</span>
-<span class="source-line-no">117</span><span id="line.117">            public String toString() {</span>
-<span class="source-line-no">118</span><span id="line.118">                return "TypeReference&lt;ProductSelectionProductPagedQueryResponse&gt;";</span>
-<span class="source-line-no">119</span><span id="line.119">            }</span>
-<span class="source-line-no">120</span><span id="line.120">        };</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122">}</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;PagedQueryResult containing an array of AssignedProductReference.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *</span>
+<span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *     ProductSelectionProductPagedQueryResponse productSelectionProductPagedQueryResponse = ProductSelectionProductPagedQueryResponse.builder()</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .limit(0.3)</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .offset(0.3)</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .count(0.3)</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .plusResults(resultsBuilder -&gt; resultsBuilder)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .build()</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/div&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> */</span>
+<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = ProductSelectionProductPagedQueryResponseImpl.class)</span>
+<span class="source-line-no">034</span><span id="line.34">public interface ProductSelectionProductPagedQueryResponse</span>
+<span class="source-line-no">035</span><span id="line.35">        extends com.commercetools.api.models.ResourcePagedQueryResponse&lt;AssignedProductReference&gt; {</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    /**</span>
+<span class="source-line-no">038</span><span id="line.38">     &lt;*  &lt;p&gt;Number of results requested.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">039</span><span id="line.39">     */</span>
+<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
+<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("limit")</span>
+<span class="source-line-no">042</span><span id="line.42">    public Long getLimit();</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">     &lt;*  &lt;p&gt;Number of elements skipped.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">     */</span>
+<span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("offset")</span>
+<span class="source-line-no">049</span><span id="line.49">    public Long getOffset();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     &lt;*  &lt;p&gt;Actual number of results returned.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54">    @NotNull</span>
+<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("count")</span>
+<span class="source-line-no">056</span><span id="line.56">    public Long getCount();</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     &lt;*  &lt;p&gt;Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get &lt;code&gt;total&lt;/code&gt;, pass the query parameter &lt;code&gt;withTotal&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. When the results are filtered with a Query Predicate, &lt;code&gt;total&lt;/code&gt; is subject to a limit.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     */</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("total")</span>
+<span class="source-line-no">063</span><span id="line.63">    public Long getTotal();</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">     &lt;*  &lt;p&gt;References to Products that are assigned to the ProductSelection.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     */</span>
+<span class="source-line-no">068</span><span id="line.68">    @NotNull</span>
+<span class="source-line-no">069</span><span id="line.69">    @Valid</span>
+<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("results")</span>
+<span class="source-line-no">071</span><span id="line.71">    public List&lt;AssignedProductReference&gt; getResults();</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setLimit(final Long limit);</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setOffset(final Long offset);</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setCount(final Long count);</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setTotal(final Long total);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    @JsonIgnore</span>
+<span class="source-line-no">082</span><span id="line.82">    public void setResults(final AssignedProductReference... results);</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public void setResults(final List&lt;AssignedProductReference&gt; results);</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public static ProductSelectionProductPagedQueryResponse of() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return new ProductSelectionProductPagedQueryResponseImpl();</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public static ProductSelectionProductPagedQueryResponse of(</span>
+<span class="source-line-no">091</span><span id="line.91">            final ProductSelectionProductPagedQueryResponse template) {</span>
+<span class="source-line-no">092</span><span id="line.92">        ProductSelectionProductPagedQueryResponseImpl instance = new ProductSelectionProductPagedQueryResponseImpl();</span>
+<span class="source-line-no">093</span><span id="line.93">        instance.setLimit(template.getLimit());</span>
+<span class="source-line-no">094</span><span id="line.94">        instance.setOffset(template.getOffset());</span>
+<span class="source-line-no">095</span><span id="line.95">        instance.setCount(template.getCount());</span>
+<span class="source-line-no">096</span><span id="line.96">        instance.setTotal(template.getTotal());</span>
+<span class="source-line-no">097</span><span id="line.97">        instance.setResults(template.getResults());</span>
+<span class="source-line-no">098</span><span id="line.98">        return instance;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public static ProductSelectionProductPagedQueryResponseBuilder builder() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return ProductSelectionProductPagedQueryResponseBuilder.of();</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public static ProductSelectionProductPagedQueryResponseBuilder builder(</span>
+<span class="source-line-no">106</span><span id="line.106">            final ProductSelectionProductPagedQueryResponse template) {</span>
+<span class="source-line-no">107</span><span id="line.107">        return ProductSelectionProductPagedQueryResponseBuilder.of(template);</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    default &lt;T&gt; T withProductSelectionProductPagedQueryResponse(</span>
+<span class="source-line-no">111</span><span id="line.111">            Function&lt;ProductSelectionProductPagedQueryResponse, T&gt; helper) {</span>
+<span class="source-line-no">112</span><span id="line.112">        return helper.apply(this);</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductSelectionProductPagedQueryResponse&gt; typeReference() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductSelectionProductPagedQueryResponse&gt;() {</span>
+<span class="source-line-no">117</span><span id="line.117">            @Override</span>
+<span class="source-line-no">118</span><span id="line.118">            public String toString() {</span>
+<span class="source-line-no">119</span><span id="line.119">                return "TypeReference&lt;ProductSelectionProductPagedQueryResponse&gt;";</span>
+<span class="source-line-no">120</span><span id="line.120">            }</span>
+<span class="source-line-no">121</span><span id="line.121">        };</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123">}</span>
 
 
 

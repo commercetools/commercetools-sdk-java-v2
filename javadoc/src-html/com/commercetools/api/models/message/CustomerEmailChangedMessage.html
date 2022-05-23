@@ -26,75 +26,81 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">017</span><span id="line.17"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">   CustomerEmailChangedMessage customerEmailChangedMessage = CustomerEmailChangedMessage.builder()</span>
-<span class="source-line-no">020</span><span id="line.20">           .id("{id}")</span>
-<span class="source-line-no">021</span><span id="line.21">           .version(0.3)</span>
-<span class="source-line-no">022</span><span id="line.22">           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">023</span><span id="line.23">           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">024</span><span id="line.24">           .sequenceNumber(0.3)</span>
-<span class="source-line-no">025</span><span id="line.25">           .resource(resourceBuilder -&gt; resourceBuilder)</span>
-<span class="source-line-no">026</span><span id="line.26">           .resourceVersion(0.3)</span>
-<span class="source-line-no">027</span><span id="line.27">           .email("{email}")</span>
-<span class="source-line-no">028</span><span id="line.28">           .build()</span>
-<span class="source-line-no">029</span><span id="line.29"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> &lt;/div&gt;</span>
-<span class="source-line-no">031</span><span id="line.31"> */</span>
-<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = CustomerEmailChangedMessageImpl.class)</span>
-<span class="source-line-no">034</span><span id="line.34">public interface CustomerEmailChangedMessage extends Message {</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    @NotNull</span>
-<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("email")</span>
-<span class="source-line-no">040</span><span id="line.40">    public String getEmail();</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public void setEmail(final String email);</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    public static CustomerEmailChangedMessage of() {</span>
-<span class="source-line-no">045</span><span id="line.45">        return new CustomerEmailChangedMessageImpl();</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">016</span><span id="line.16"> * CustomerEmailChangedMessage</span>
+<span class="source-line-no">017</span><span id="line.17"> *</span>
+<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *     CustomerEmailChangedMessage customerEmailChangedMessage = CustomerEmailChangedMessage.builder()</span>
+<span class="source-line-no">023</span><span id="line.23"> *             .id("{id}")</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .version(0.3)</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .sequenceNumber(0.3)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .resource(resourceBuilder -&gt; resourceBuilder)</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .resourceVersion(0.3)</span>
+<span class="source-line-no">030</span><span id="line.30"> *             .email("{email}")</span>
+<span class="source-line-no">031</span><span id="line.31"> *             .build()</span>
+<span class="source-line-no">032</span><span id="line.32"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">033</span><span id="line.33"> * &lt;/div&gt;</span>
+<span class="source-line-no">034</span><span id="line.34"> */</span>
+<span class="source-line-no">035</span><span id="line.35">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">036</span><span id="line.36">@JsonDeserialize(as = CustomerEmailChangedMessageImpl.class)</span>
+<span class="source-line-no">037</span><span id="line.37">public interface CustomerEmailChangedMessage extends Message {</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    /**</span>
+<span class="source-line-no">042</span><span id="line.42">     &lt;&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">     */</span>
+<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
+<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("email")</span>
+<span class="source-line-no">046</span><span id="line.46">    public String getEmail();</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public static CustomerEmailChangedMessage of(final CustomerEmailChangedMessage template) {</span>
-<span class="source-line-no">049</span><span id="line.49">        CustomerEmailChangedMessageImpl instance = new CustomerEmailChangedMessageImpl();</span>
-<span class="source-line-no">050</span><span id="line.50">        instance.setId(template.getId());</span>
-<span class="source-line-no">051</span><span id="line.51">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">052</span><span id="line.52">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">053</span><span id="line.53">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">054</span><span id="line.54">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">055</span><span id="line.55">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">056</span><span id="line.56">        instance.setSequenceNumber(template.getSequenceNumber());</span>
-<span class="source-line-no">057</span><span id="line.57">        instance.setResource(template.getResource());</span>
-<span class="source-line-no">058</span><span id="line.58">        instance.setResourceVersion(template.getResourceVersion());</span>
-<span class="source-line-no">059</span><span id="line.59">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
-<span class="source-line-no">060</span><span id="line.60">        instance.setEmail(template.getEmail());</span>
-<span class="source-line-no">061</span><span id="line.61">        return instance;</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public static CustomerEmailChangedMessageBuilder builder() {</span>
-<span class="source-line-no">065</span><span id="line.65">        return CustomerEmailChangedMessageBuilder.of();</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public static CustomerEmailChangedMessageBuilder builder(final CustomerEmailChangedMessage template) {</span>
-<span class="source-line-no">069</span><span id="line.69">        return CustomerEmailChangedMessageBuilder.of(template);</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    default &lt;T&gt; T withCustomerEmailChangedMessage(Function&lt;CustomerEmailChangedMessage, T&gt; helper) {</span>
-<span class="source-line-no">073</span><span id="line.73">        return helper.apply(this);</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomerEmailChangedMessage&gt; typeReference() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomerEmailChangedMessage&gt;() {</span>
-<span class="source-line-no">078</span><span id="line.78">            @Override</span>
-<span class="source-line-no">079</span><span id="line.79">            public String toString() {</span>
-<span class="source-line-no">080</span><span id="line.80">                return "TypeReference&lt;CustomerEmailChangedMessage&gt;";</span>
-<span class="source-line-no">081</span><span id="line.81">            }</span>
-<span class="source-line-no">082</span><span id="line.82">        };</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84">}</span>
+<span class="source-line-no">048</span><span id="line.48">    public void setEmail(final String email);</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    public static CustomerEmailChangedMessage of() {</span>
+<span class="source-line-no">051</span><span id="line.51">        return new CustomerEmailChangedMessageImpl();</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public static CustomerEmailChangedMessage of(final CustomerEmailChangedMessage template) {</span>
+<span class="source-line-no">055</span><span id="line.55">        CustomerEmailChangedMessageImpl instance = new CustomerEmailChangedMessageImpl();</span>
+<span class="source-line-no">056</span><span id="line.56">        instance.setId(template.getId());</span>
+<span class="source-line-no">057</span><span id="line.57">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">058</span><span id="line.58">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">059</span><span id="line.59">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">060</span><span id="line.60">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">061</span><span id="line.61">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">062</span><span id="line.62">        instance.setSequenceNumber(template.getSequenceNumber());</span>
+<span class="source-line-no">063</span><span id="line.63">        instance.setResource(template.getResource());</span>
+<span class="source-line-no">064</span><span id="line.64">        instance.setResourceVersion(template.getResourceVersion());</span>
+<span class="source-line-no">065</span><span id="line.65">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
+<span class="source-line-no">066</span><span id="line.66">        instance.setEmail(template.getEmail());</span>
+<span class="source-line-no">067</span><span id="line.67">        return instance;</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    public static CustomerEmailChangedMessageBuilder builder() {</span>
+<span class="source-line-no">071</span><span id="line.71">        return CustomerEmailChangedMessageBuilder.of();</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public static CustomerEmailChangedMessageBuilder builder(final CustomerEmailChangedMessage template) {</span>
+<span class="source-line-no">075</span><span id="line.75">        return CustomerEmailChangedMessageBuilder.of(template);</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    default &lt;T&gt; T withCustomerEmailChangedMessage(Function&lt;CustomerEmailChangedMessage, T&gt; helper) {</span>
+<span class="source-line-no">079</span><span id="line.79">        return helper.apply(this);</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomerEmailChangedMessage&gt; typeReference() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomerEmailChangedMessage&gt;() {</span>
+<span class="source-line-no">084</span><span id="line.84">            @Override</span>
+<span class="source-line-no">085</span><span id="line.85">            public String toString() {</span>
+<span class="source-line-no">086</span><span id="line.86">                return "TypeReference&lt;CustomerEmailChangedMessage&gt;";</span>
+<span class="source-line-no">087</span><span id="line.87">            }</span>
+<span class="source-line-no">088</span><span id="line.88">        };</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90">}</span>
 
 
 

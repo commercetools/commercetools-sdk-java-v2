@@ -83,17 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.22">OrderEditAppliedBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.24">OrderEditAppliedBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">OrderEditAppliedBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   OrderEditApplied orderEditApplied = OrderEditApplied.builder()
-           .appliedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .excerptBeforeEdit(excerptBeforeEditBuilder -> excerptBeforeEditBuilder)
-           .excerptAfterEdit(excerptAfterEditBuilder -> excerptAfterEditBuilder)
-           .build()
+     OrderEditApplied orderEditApplied = OrderEditApplied.builder()
+             .appliedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .excerptBeforeEdit(excerptBeforeEditBuilder -> excerptBeforeEditBuilder)
+             .excerptAfterEdit(excerptAfterEditBuilder -> excerptAfterEditBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -125,7 +127,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#appliedAt(java.time.ZonedDateTime)">appliedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;appliedAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -136,16 +140,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#excerptAfterEdit(com.commercetools.api.models.order_edit.OrderExcerpt)">excerptAfterEdit</a></span>&#8203;(<a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a>&nbsp;excerptAfterEdit)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#excerptAfterEdit(java.util.function.Function)">excerptAfterEdit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>,&#8203;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#excerptBeforeEdit(com.commercetools.api.models.order_edit.OrderExcerpt)">excerptBeforeEdit</a></span>&#8203;(<a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a>&nbsp;excerptBeforeEdit)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#excerptBeforeEdit(java.util.function.Function)">excerptBeforeEdit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>,&#8203;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getAppliedAt()">getAppliedAt</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -181,7 +193,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderEditAppliedBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.23">OrderEditAppliedBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.25">OrderEditAppliedBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -195,55 +207,60 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="appliedAt(java.time.ZonedDateTime)">
 <h3>appliedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.31">appliedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;appliedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.37">appliedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;appliedAt)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="excerptBeforeEdit(java.util.function.Function)">
 <h3>excerptBeforeEdit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.36">excerptBeforeEdit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>,&#8203;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.46">excerptBeforeEdit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>,&#8203;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="excerptBeforeEdit(com.commercetools.api.models.order_edit.OrderExcerpt)">
 <h3>excerptBeforeEdit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.43">excerptBeforeEdit</a></span>&#8203;<span class="parameters">(<a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a>&nbsp;excerptBeforeEdit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.57">excerptBeforeEdit</a></span>&#8203;<span class="parameters">(<a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a>&nbsp;excerptBeforeEdit)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="excerptAfterEdit(java.util.function.Function)">
 <h3>excerptAfterEdit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.49">excerptAfterEdit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>,&#8203;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.67">excerptAfterEdit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>,&#8203;<a href="OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="excerptAfterEdit(com.commercetools.api.models.order_edit.OrderExcerpt)">
 <h3>excerptAfterEdit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.55">excerptAfterEdit</a></span>&#8203;<span class="parameters">(<a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a>&nbsp;excerptAfterEdit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.77">excerptAfterEdit</a></span>&#8203;<span class="parameters">(<a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a>&nbsp;excerptAfterEdit)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAppliedAt()">
 <h3>getAppliedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.61">getAppliedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.83">getAppliedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExcerptBeforeEdit()">
 <h3>getExcerptBeforeEdit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.65">getExcerptBeforeEdit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.87">getExcerptBeforeEdit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExcerptAfterEdit()">
 <h3>getExcerptAfterEdit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.69">getExcerptAfterEdit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderExcerpt.html" title="interface in com.commercetools.api.models.order_edit">OrderExcerpt</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.91">getExcerptAfterEdit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.73">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.95">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&gt;</code></dd>
@@ -253,20 +270,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.83">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.105">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderEditApplied without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.87">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.109">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.OrderEditApplied)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.91">of</a></span>&#8203;<span class="parameters">(<a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditAppliedBuilder.html#line.113">of</a></span>&#8203;<span class="parameters">(<a href="OrderEditApplied.html" title="interface in com.commercetools.api.models.order_edit">OrderEditApplied</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

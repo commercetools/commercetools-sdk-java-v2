@@ -83,15 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.22">GraphQLRequestBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.24">GraphQLRequestBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">GraphQLRequestBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   GraphQLRequest graphQLRequest = GraphQLRequest.builder()
-           .query("{query}")
-           .build()
+     GraphQLRequest graphQLRequest = GraphQLRequest.builder()
+             .query("{query}")
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -146,16 +148,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#operationName(java.lang.String)">operationName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;operationName)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#query(java.lang.String)">query</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;query)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#variables(com.commercetools.api.models.graph_ql.GraphQLVariablesMap)">variables</a></span>&#8203;(<a href="GraphQLVariablesMap.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLVariablesMap</a>&nbsp;variables)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#variables(java.util.function.Function)">variables</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLVariablesMapBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLVariablesMapBuilder</a>,&#8203;<a href="GraphQLVariablesMapBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLVariablesMapBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 </div>
 </div>
 </div>
@@ -176,7 +186,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>GraphQLRequestBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.23">GraphQLRequestBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.25">GraphQLRequestBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -190,53 +200,57 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="query(java.lang.String)">
 <h3>query</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.33">query</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;query)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.39">query</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;query)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="operationName(java.lang.String)">
 <h3>operationName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.38">operationName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.48">operationName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;operationName)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variables(java.util.function.Function)">
 <h3>variables</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.43">variables</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLVariablesMapBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLVariablesMapBuilder</a>,&#8203;<a href="GraphQLVariablesMapBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLVariablesMapBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.57">variables</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLVariablesMapBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLVariablesMapBuilder</a>,&#8203;<a href="GraphQLVariablesMapBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLVariablesMapBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variables(com.commercetools.api.models.graph_ql.GraphQLVariablesMap)">
 <h3>variables</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.49">variables</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.67">variables</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="GraphQLVariablesMap.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLVariablesMap</a>&nbsp;variables)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuery()">
 <h3>getQuery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.55">getQuery</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.73">getQuery</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOperationName()">
 <h3>getOperationName</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.59">getOperationName</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.77">getOperationName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariables()">
 <h3>getVariables</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLVariablesMap.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLVariablesMap</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.64">getVariables</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLVariablesMap.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLVariablesMap</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.82">getVariables</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.69">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.87">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a>&gt;</code></dd>
@@ -246,20 +260,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.77">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.95">buildUnchecked</a></span>()</div>
 <div class="block">builds GraphQLRequest without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.81">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.99">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.graph_ql.GraphQLRequest)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.85">of</a></span>&#8203;<span class="parameters">(<a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GraphQLRequestBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLRequestBuilder.html#line.103">of</a></span>&#8203;<span class="parameters">(<a href="GraphQLRequest.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLRequest</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -88,14 +88,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductTypeAddAttributeDefinitionActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionActionImpl</a></code>, <code><a href="ProductTypeAddLocalizedEnumValueActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddLocalizedEnumValueActionImpl</a></code>, <code><a href="ProductTypeAddPlainEnumValueActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddPlainEnumValueActionImpl</a></code>, <code><a href="ProductTypeChangeAttributeConstraintActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeConstraintActionImpl</a></code>, <code><a href="ProductTypeChangeAttributeNameActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeNameActionImpl</a></code>, <code><a href="ProductTypeChangeAttributeOrderActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderActionImpl</a></code>, <code><a href="ProductTypeChangeAttributeOrderByNameActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameActionImpl</a></code>, <code><a href="ProductTypeChangeDescriptionActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeDescriptionActionImpl</a></code>, <code><a href="ProductTypeChangeEnumKeyActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeEnumKeyActionImpl</a></code>, <code><a href="ProductTypeChangeInputHintActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeInputHintActionImpl</a></code>, <code><a href="ProductTypeChangeIsSearchableActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeIsSearchableActionImpl</a></code>, <code><a href="ProductTypeChangeLabelActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLabelActionImpl</a></code>, <code><a href="ProductTypeChangeLocalizedEnumValueLabelActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueLabelActionImpl</a></code>, <code><a href="ProductTypeChangeLocalizedEnumValueOrderActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderActionImpl</a></code>, <code><a href="ProductTypeChangeNameActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeNameActionImpl</a></code>, <code><a href="ProductTypeChangePlainEnumValueLabelActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangePlainEnumValueLabelActionImpl</a></code>, <code><a href="ProductTypeChangePlainEnumValueOrderActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangePlainEnumValueOrderActionImpl</a></code>, <code><a href="ProductTypeRemoveAttributeDefinitionActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionActionImpl</a></code>, <code><a href="ProductTypeRemoveEnumValuesActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeRemoveEnumValuesActionImpl</a></code>, <code><a href="ProductTypeSetInputTipActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeSetInputTipActionImpl</a></code>, <code><a href="ProductTypeSetKeyActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeSetKeyActionImpl</a></code>, <code><a href="ProductTypeUpdateActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.25">ProductTypeUpdateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.28">ProductTypeUpdateAction</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a>&gt;</span></div>
-<div class="block">Example to create a subtype instance using the builder pattern
+<div class="block">ProductTypeUpdateAction
+
+ <hr>
+ Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ProductTypeUpdateAction productTypeUpdateAction = ProductTypeUpdateAction.addAttributeDefinitionBuilder()
-           attribute(attributeBuilder -> attributeBuilder)
-           .build()
+     ProductTypeUpdateAction productTypeUpdateAction = ProductTypeUpdateAction.addAttributeDefinitionBuilder()
+             attribute(attributeBuilder -> attributeBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -165,7 +168,9 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAction()">getAction</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductTypeRemoveAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#removeAttributeDefinitionBuilder()">removeAttributeDefinitionBuilder</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -205,7 +210,8 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.53">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.59">getAction</a></span>()</div>
+<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a>&gt;</code></dd>
@@ -215,139 +221,139 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="addAttributeDefinitionBuilder()">
 <h3>addAttributeDefinitionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.57">addAttributeDefinitionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.63">addAttributeDefinitionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addLocalizedEnumValueBuilder()">
 <h3>addLocalizedEnumValueBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddLocalizedEnumValueActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddLocalizedEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.61">addLocalizedEnumValueBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddLocalizedEnumValueActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddLocalizedEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.67">addLocalizedEnumValueBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPlainEnumValueBuilder()">
 <h3>addPlainEnumValueBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddPlainEnumValueActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddPlainEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.65">addPlainEnumValueBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddPlainEnumValueActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddPlainEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.71">addPlainEnumValueBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeAttributeConstraintBuilder()">
 <h3>changeAttributeConstraintBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeConstraintActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeConstraintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.69">changeAttributeConstraintBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeConstraintActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeConstraintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.75">changeAttributeConstraintBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeAttributeNameBuilder()">
 <h3>changeAttributeNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.73">changeAttributeNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.79">changeAttributeNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeAttributeOrderBuilder()">
 <h3>changeAttributeOrderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.77">changeAttributeOrderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.83">changeAttributeOrderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeAttributeOrderByNameBuilder()">
 <h3>changeAttributeOrderByNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.81">changeAttributeOrderByNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.87">changeAttributeOrderByNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeDescriptionBuilder()">
 <h3>changeDescriptionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeDescriptionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.85">changeDescriptionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeDescriptionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.91">changeDescriptionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeEnumKeyBuilder()">
 <h3>changeEnumKeyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeEnumKeyActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeEnumKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.89">changeEnumKeyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeEnumKeyActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeEnumKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.95">changeEnumKeyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeInputHintBuilder()">
 <h3>changeInputHintBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.93">changeInputHintBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.99">changeInputHintBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeIsSearchableBuilder()">
 <h3>changeIsSearchableBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeIsSearchableActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeIsSearchableActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.97">changeIsSearchableBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeIsSearchableActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeIsSearchableActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.103">changeIsSearchableBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeLabelBuilder()">
 <h3>changeLabelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.101">changeLabelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.107">changeLabelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeLocalizedEnumValueLabelBuilder()">
 <h3>changeLocalizedEnumValueLabelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.105">changeLocalizedEnumValueLabelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.111">changeLocalizedEnumValueLabelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeLocalizedEnumValueOrderBuilder()">
 <h3>changeLocalizedEnumValueOrderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.109">changeLocalizedEnumValueOrderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.115">changeLocalizedEnumValueOrderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeNameBuilder()">
 <h3>changeNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.113">changeNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.119">changeNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changePlainEnumValueLabelBuilder()">
 <h3>changePlainEnumValueLabelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangePlainEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangePlainEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.117">changePlainEnumValueLabelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangePlainEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangePlainEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.123">changePlainEnumValueLabelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changePlainEnumValueOrderBuilder()">
 <h3>changePlainEnumValueOrderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangePlainEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangePlainEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.121">changePlainEnumValueOrderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangePlainEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangePlainEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.127">changePlainEnumValueOrderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeAttributeDefinitionBuilder()">
 <h3>removeAttributeDefinitionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeRemoveAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.125">removeAttributeDefinitionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeRemoveAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.131">removeAttributeDefinitionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeEnumValuesBuilder()">
 <h3>removeEnumValuesBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeRemoveEnumValuesActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeRemoveEnumValuesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.129">removeEnumValuesBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeRemoveEnumValuesActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeRemoveEnumValuesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.135">removeEnumValuesBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInputTipBuilder()">
 <h3>setInputTipBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeSetInputTipActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeSetInputTipActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.133">setInputTipBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeSetInputTipActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeSetInputTipActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.139">setInputTipBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKeyBuilder()">
 <h3>setKeyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.137">setKeyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.143">setKeyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductTypeUpdateAction(java.util.function.Function)">
 <h3>withProductTypeUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.141">withProductTypeUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.147">withProductTypeUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.145">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeUpdateAction.html#line.151">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

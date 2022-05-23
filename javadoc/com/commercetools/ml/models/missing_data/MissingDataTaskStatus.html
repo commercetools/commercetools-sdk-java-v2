@@ -80,17 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="MissingDataTaskStatusImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingDataTaskStatusImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.32">MissingDataTaskStatus</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.33">MissingDataTaskStatus</a></span></div>
 <div class="block"><p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
 
+ <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   MissingDataTaskStatus missingDataTaskStatus = MissingDataTaskStatus.builder()
-           .state(TaskStatusEnum.PENDING)
-           .expires(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .result(resultBuilder -> resultBuilder)
-           .build()
+     MissingDataTaskStatus missingDataTaskStatus = MissingDataTaskStatus.builder()
+             .state(TaskStatusEnum.PENDING)
+             .expires(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .result(resultBuilder -> resultBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -116,16 +117,18 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getExpires()">getExpires</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The expiry date of the result.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="MissingAttributesPagedQueryResult.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributesPagedQueryResult</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getResult()">getResult</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The response to an asynchronous request.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -165,15 +168,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.36">getState</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.40">getState</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExpires()">
 <h3>getExpires</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.43">getExpires</a></span>()</div>
-<div class="block"><p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.47">getExpires</a></span>()</div>
+<div class="block"><*  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>></div>
 </section>
 </li>
 <li>
@@ -181,62 +185,62 @@ loadScripts(document, 'script');</script>
 <h3>getResult</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="MissingAttributesPagedQueryResult.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributesPagedQueryResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.50">getResult</a></span>()</div>
-<div class="block"><p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="MissingAttributesPagedQueryResult.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributesPagedQueryResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.54">getResult</a></span>()</div>
+<div class="block"><*  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.ml.models.common.TaskStatusEnum)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.55">setState</a></span>&#8203;<span class="parameters">(<a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.59">setState</a></span>&#8203;<span class="parameters">(<a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExpires(java.time.ZonedDateTime)">
 <h3>setExpires</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.57">setExpires</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expires)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.61">setExpires</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expires)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResult(com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResult)">
 <h3>setResult</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.59">setResult</a></span>&#8203;<span class="parameters">(<a href="MissingAttributesPagedQueryResult.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributesPagedQueryResult</a>&nbsp;result)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.63">setResult</a></span>&#8203;<span class="parameters">(<a href="MissingAttributesPagedQueryResult.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributesPagedQueryResult</a>&nbsp;result)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.61">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.65">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.missing_data.MissingDataTaskStatus)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.65">of</a></span>&#8203;<span class="parameters">(<a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.69">of</a></span>&#8203;<span class="parameters">(<a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingDataTaskStatusBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingDataTaskStatusBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.73">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingDataTaskStatusBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingDataTaskStatusBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.77">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.ml.models.missing_data.MissingDataTaskStatus)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingDataTaskStatusBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingDataTaskStatusBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.77">builder</a></span>&#8203;<span class="parameters">(<a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingDataTaskStatusBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingDataTaskStatusBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.81">builder</a></span>&#8203;<span class="parameters">(<a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMissingDataTaskStatus(java.util.function.Function)">
 <h3>withMissingDataTaskStatus</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.81">withMissingDataTaskStatus</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.85">withMissingDataTaskStatus</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.85">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MissingDataTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingDataTaskStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingDataTaskStatus.html#line.89">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

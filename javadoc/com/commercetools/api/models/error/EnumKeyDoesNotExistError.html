@@ -84,16 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="EnumKeyDoesNotExistErrorImpl.html" title="class in com.commercetools.api.models.error">EnumKeyDoesNotExistErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.27">EnumKeyDoesNotExistError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.30">EnumKeyDoesNotExistError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">EnumKeyDoesNotExistError
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   EnumKeyDoesNotExistError enumKeyDoesNotExistError = EnumKeyDoesNotExistError.builder()
-           .message("{message}")
-           .conflictingEnumKey("{conflictingEnumKey}")
-           .conflictingAttributeName("{conflictingAttributeName}")
-           .build()
+     EnumKeyDoesNotExistError enumKeyDoesNotExistError = EnumKeyDoesNotExistError.builder()
+             .message("{message}")
+             .conflictingEnumKey("{conflictingEnumKey}")
+             .conflictingAttributeName("{conflictingAttributeName}")
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -133,10 +136,14 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getConflictingAttributeName()">getConflictingAttributeName</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getConflictingEnumKey()">getConflictingEnumKey</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -175,7 +182,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="ENUM_KEY_DOES_NOT_EXIST">
 <h3>ENUM_KEY_DOES_NOT_EXIST</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.31">ENUM_KEY_DOES_NOT_EXIST</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.34">ENUM_KEY_DOES_NOT_EXIST</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.EnumKeyDoesNotExistError.ENUM_KEY_DOES_NOT_EXIST">Constant Field Values</a></dd>
@@ -194,62 +201,64 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getConflictingEnumKey()">
 <h3>getConflictingEnumKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.33">getConflictingEnumKey</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.39">getConflictingEnumKey</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getConflictingAttributeName()">
 <h3>getConflictingAttributeName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.37">getConflictingAttributeName</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.46">getConflictingAttributeName</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setConflictingEnumKey(java.lang.String)">
 <h3>setConflictingEnumKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.41">setConflictingEnumKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conflictingEnumKey)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.50">setConflictingEnumKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conflictingEnumKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setConflictingAttributeName(java.lang.String)">
 <h3>setConflictingAttributeName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.43">setConflictingAttributeName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conflictingAttributeName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.52">setConflictingAttributeName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conflictingAttributeName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.45">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.54">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.EnumKeyDoesNotExistError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumKeyDoesNotExistErrorBuilder.html" title="class in com.commercetools.api.models.error">EnumKeyDoesNotExistErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.58">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumKeyDoesNotExistErrorBuilder.html" title="class in com.commercetools.api.models.error">EnumKeyDoesNotExistErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.67">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.EnumKeyDoesNotExistError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumKeyDoesNotExistErrorBuilder.html" title="class in com.commercetools.api.models.error">EnumKeyDoesNotExistErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.62">builder</a></span>&#8203;<span class="parameters">(<a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumKeyDoesNotExistErrorBuilder.html" title="class in com.commercetools.api.models.error">EnumKeyDoesNotExistErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.71">builder</a></span>&#8203;<span class="parameters">(<a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withEnumKeyDoesNotExistError(java.util.function.Function)">
 <h3>withEnumKeyDoesNotExistError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.66">withEnumKeyDoesNotExistError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.75">withEnumKeyDoesNotExistError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.70">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="EnumKeyDoesNotExistError.html" title="interface in com.commercetools.api.models.error">EnumKeyDoesNotExistError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/EnumKeyDoesNotExistError.html#line.79">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

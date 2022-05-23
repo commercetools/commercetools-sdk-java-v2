@@ -23,264 +23,286 @@
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">/**</span>
-<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">016</span><span id="line.16">   ScopedPrice scopedPrice = ScopedPrice.builder()</span>
-<span class="source-line-no">017</span><span id="line.17">           .id("{id}")</span>
-<span class="source-line-no">018</span><span id="line.18">           .value(valueBuilder -&gt; valueBuilder)</span>
-<span class="source-line-no">019</span><span id="line.19">           .currentValue(currentValueBuilder -&gt; currentValueBuilder)</span>
-<span class="source-line-no">020</span><span id="line.20">           .build()</span>
-<span class="source-line-no">021</span><span id="line.21"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> &lt;/div&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> */</span>
-<span class="source-line-no">024</span><span id="line.24">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">025</span><span id="line.25">public class ScopedPriceBuilder implements Builder&lt;ScopedPrice&gt; {</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    private String id;</span>
+<span class="source-line-no">013</span><span id="line.13"> * ScopedPriceBuilder</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *     ScopedPrice scopedPrice = ScopedPrice.builder()</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .id("{id}")</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .value(valueBuilder -&gt; valueBuilder)</span>
+<span class="source-line-no">021</span><span id="line.21"> *             .currentValue(currentValueBuilder -&gt; currentValueBuilder)</span>
+<span class="source-line-no">022</span><span id="line.22"> *             .build()</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;/div&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> */</span>
+<span class="source-line-no">026</span><span id="line.26">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">027</span><span id="line.27">public class ScopedPriceBuilder implements Builder&lt;ScopedPrice&gt; {</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.common.TypedMoney value;</span>
+<span class="source-line-no">029</span><span id="line.29">    private String id;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.api.models.common.TypedMoney currentValue;</span>
+<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.api.models.common.TypedMoney value;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
-<span class="source-line-no">034</span><span id="line.34">    private String country;</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
-<span class="source-line-no">037</span><span id="line.37">    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    @Nullable</span>
-<span class="source-line-no">040</span><span id="line.40">    private com.commercetools.api.models.channel.ChannelReference channel;</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    @Nullable</span>
-<span class="source-line-no">043</span><span id="line.43">    private java.time.ZonedDateTime validFrom;</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @Nullable</span>
-<span class="source-line-no">046</span><span id="line.46">    private java.time.ZonedDateTime validUntil;</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    @Nullable</span>
-<span class="source-line-no">049</span><span id="line.49">    private com.commercetools.api.models.common.DiscountedPrice discounted;</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    @Nullable</span>
-<span class="source-line-no">052</span><span id="line.52">    private com.commercetools.api.models.type.CustomFields custom;</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public ScopedPriceBuilder id(final String id) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.id = id;</span>
-<span class="source-line-no">056</span><span id="line.56">        return this;</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">061</span><span id="line.61">     */</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public ScopedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {</span>
-<span class="source-line-no">064</span><span id="line.64">        this.value = value;</span>
-<span class="source-line-no">065</span><span id="line.65">        return this;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    /**</span>
-<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">070</span><span id="line.70">     */</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public ScopedPriceBuilder value(</span>
-<span class="source-line-no">073</span><span id="line.73">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
-<span class="source-line-no">074</span><span id="line.74">        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();</span>
-<span class="source-line-no">075</span><span id="line.75">        return this;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">033</span><span id="line.33">    private com.commercetools.api.models.common.TypedMoney currentValue;</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    @Nullable</span>
+<span class="source-line-no">036</span><span id="line.36">    private String country;</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    @Nullable</span>
+<span class="source-line-no">039</span><span id="line.39">    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    @Nullable</span>
+<span class="source-line-no">042</span><span id="line.42">    private com.commercetools.api.models.channel.ChannelReference channel;</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    @Nullable</span>
+<span class="source-line-no">045</span><span id="line.45">    private java.time.ZonedDateTime validFrom;</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    @Nullable</span>
+<span class="source-line-no">048</span><span id="line.48">    private java.time.ZonedDateTime validUntil;</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    @Nullable</span>
+<span class="source-line-no">051</span><span id="line.51">    private com.commercetools.api.models.common.DiscountedPrice discounted;</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    @Nullable</span>
+<span class="source-line-no">054</span><span id="line.54">    private com.commercetools.api.models.type.CustomFields custom;</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">     &lt;&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public ScopedPriceBuilder id(final String id) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.id = id;</span>
+<span class="source-line-no">062</span><span id="line.62">        return this;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">     &lt;*  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     */</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public ScopedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.value = value;</span>
+<span class="source-line-no">071</span><span id="line.71">        return this;</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     &lt;*  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    /**</span>
-<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">080</span><span id="line.80">     */</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public ScopedPriceBuilder currentValue(final com.commercetools.api.models.common.TypedMoney currentValue) {</span>
-<span class="source-line-no">083</span><span id="line.83">        this.currentValue = currentValue;</span>
-<span class="source-line-no">084</span><span id="line.84">        return this;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">089</span><span id="line.89">     */</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public ScopedPriceBuilder currentValue(</span>
-<span class="source-line-no">092</span><span id="line.92">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
-<span class="source-line-no">093</span><span id="line.93">        this.currentValue = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();</span>
-<span class="source-line-no">094</span><span id="line.94">        return this;</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">078</span><span id="line.78">    public ScopedPriceBuilder value(</span>
+<span class="source-line-no">079</span><span id="line.79">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
+<span class="source-line-no">080</span><span id="line.80">        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();</span>
+<span class="source-line-no">081</span><span id="line.81">        return this;</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    /**</span>
+<span class="source-line-no">085</span><span id="line.85">     &lt;*  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public ScopedPriceBuilder currentValue(final com.commercetools.api.models.common.TypedMoney currentValue) {</span>
+<span class="source-line-no">089</span><span id="line.89">        this.currentValue = currentValue;</span>
+<span class="source-line-no">090</span><span id="line.90">        return this;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    /**</span>
+<span class="source-line-no">094</span><span id="line.94">     &lt;*  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    /**</span>
-<span class="source-line-no">098</span><span id="line.98">     *  &lt;p&gt;Two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
-<span class="source-line-no">099</span><span id="line.99">     */</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public ScopedPriceBuilder country(@Nullable final String country) {</span>
-<span class="source-line-no">102</span><span id="line.102">        this.country = country;</span>
-<span class="source-line-no">103</span><span id="line.103">        return this;</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    /**</span>
-<span class="source-line-no">107</span><span id="line.107">     *  &lt;p&gt;Reference to a CustomerGroup.&lt;/p&gt;</span>
-<span class="source-line-no">108</span><span id="line.108">     */</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public ScopedPriceBuilder customerGroup(</span>
-<span class="source-line-no">111</span><span id="line.111">            Function&lt;com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">112</span><span id="line.112">        this.customerGroup = builder</span>
-<span class="source-line-no">113</span><span id="line.113">                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())</span>
-<span class="source-line-no">114</span><span id="line.114">                .build();</span>
-<span class="source-line-no">115</span><span id="line.115">        return this;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    /**</span>
-<span class="source-line-no">119</span><span id="line.119">     *  &lt;p&gt;Reference to a CustomerGroup.&lt;/p&gt;</span>
-<span class="source-line-no">120</span><span id="line.120">     */</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public ScopedPriceBuilder customerGroup(</span>
-<span class="source-line-no">123</span><span id="line.123">            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {</span>
-<span class="source-line-no">124</span><span id="line.124">        this.customerGroup = customerGroup;</span>
-<span class="source-line-no">125</span><span id="line.125">        return this;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">097</span><span id="line.97">    public ScopedPriceBuilder currentValue(</span>
+<span class="source-line-no">098</span><span id="line.98">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
+<span class="source-line-no">099</span><span id="line.99">        this.currentValue = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();</span>
+<span class="source-line-no">100</span><span id="line.100">        return this;</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    /**</span>
+<span class="source-line-no">104</span><span id="line.104">     &lt;*  &lt;p&gt;Two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">105</span><span id="line.105">     */</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    public ScopedPriceBuilder country(@Nullable final String country) {</span>
+<span class="source-line-no">108</span><span id="line.108">        this.country = country;</span>
+<span class="source-line-no">109</span><span id="line.109">        return this;</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    /**</span>
+<span class="source-line-no">113</span><span id="line.113">     &lt;*  &lt;p&gt;Reference to a CustomerGroup.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    public ScopedPriceBuilder customerGroup(</span>
+<span class="source-line-no">117</span><span id="line.117">            Function&lt;com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">118</span><span id="line.118">        this.customerGroup = builder</span>
+<span class="source-line-no">119</span><span id="line.119">                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())</span>
+<span class="source-line-no">120</span><span id="line.120">                .build();</span>
+<span class="source-line-no">121</span><span id="line.121">        return this;</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    /**</span>
+<span class="source-line-no">125</span><span id="line.125">     &lt;*  &lt;p&gt;Reference to a CustomerGroup.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
 <span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    /**</span>
-<span class="source-line-no">129</span><span id="line.129">     *  &lt;p&gt;Reference to a Channel.&lt;/p&gt;</span>
-<span class="source-line-no">130</span><span id="line.130">     */</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public ScopedPriceBuilder channel(</span>
-<span class="source-line-no">133</span><span id="line.133">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">134</span><span id="line.134">        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();</span>
-<span class="source-line-no">135</span><span id="line.135">        return this;</span>
-<span class="source-line-no">136</span><span id="line.136">    }</span>
+<span class="source-line-no">128</span><span id="line.128">    public ScopedPriceBuilder customerGroup(</span>
+<span class="source-line-no">129</span><span id="line.129">            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {</span>
+<span class="source-line-no">130</span><span id="line.130">        this.customerGroup = customerGroup;</span>
+<span class="source-line-no">131</span><span id="line.131">        return this;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    /**</span>
+<span class="source-line-no">135</span><span id="line.135">     &lt;*  &lt;p&gt;Reference to a Channel.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">136</span><span id="line.136">     */</span>
 <span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    /**</span>
-<span class="source-line-no">139</span><span id="line.139">     *  &lt;p&gt;Reference to a Channel.&lt;/p&gt;</span>
-<span class="source-line-no">140</span><span id="line.140">     */</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public ScopedPriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {</span>
-<span class="source-line-no">143</span><span id="line.143">        this.channel = channel;</span>
-<span class="source-line-no">144</span><span id="line.144">        return this;</span>
-<span class="source-line-no">145</span><span id="line.145">    }</span>
-<span class="source-line-no">146</span><span id="line.146"></span>
-<span class="source-line-no">147</span><span id="line.147">    public ScopedPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {</span>
-<span class="source-line-no">148</span><span id="line.148">        this.validFrom = validFrom;</span>
-<span class="source-line-no">149</span><span id="line.149">        return this;</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    public ScopedPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {</span>
-<span class="source-line-no">153</span><span id="line.153">        this.validUntil = validUntil;</span>
-<span class="source-line-no">154</span><span id="line.154">        return this;</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">138</span><span id="line.138">    public ScopedPriceBuilder channel(</span>
+<span class="source-line-no">139</span><span id="line.139">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">140</span><span id="line.140">        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();</span>
+<span class="source-line-no">141</span><span id="line.141">        return this;</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    /**</span>
+<span class="source-line-no">145</span><span id="line.145">     &lt;*  &lt;p&gt;Reference to a Channel.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">146</span><span id="line.146">     */</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public ScopedPriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {</span>
+<span class="source-line-no">149</span><span id="line.149">        this.channel = channel;</span>
+<span class="source-line-no">150</span><span id="line.150">        return this;</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    /**</span>
+<span class="source-line-no">154</span><span id="line.154">     &lt;&gt;</span>
+<span class="source-line-no">155</span><span id="line.155">     */</span>
 <span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    public ScopedPriceBuilder discounted(</span>
-<span class="source-line-no">158</span><span id="line.158">            Function&lt;com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder&gt; builder) {</span>
-<span class="source-line-no">159</span><span id="line.159">        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();</span>
-<span class="source-line-no">160</span><span id="line.160">        return this;</span>
-<span class="source-line-no">161</span><span id="line.161">    }</span>
-<span class="source-line-no">162</span><span id="line.162"></span>
-<span class="source-line-no">163</span><span id="line.163">    public ScopedPriceBuilder discounted(</span>
-<span class="source-line-no">164</span><span id="line.164">            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {</span>
-<span class="source-line-no">165</span><span id="line.165">        this.discounted = discounted;</span>
-<span class="source-line-no">166</span><span id="line.166">        return this;</span>
-<span class="source-line-no">167</span><span id="line.167">    }</span>
-<span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    /**</span>
-<span class="source-line-no">170</span><span id="line.170">     *  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a Type.&lt;/p&gt;</span>
-<span class="source-line-no">171</span><span id="line.171">     */</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public ScopedPriceBuilder custom(</span>
-<span class="source-line-no">174</span><span id="line.174">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">175</span><span id="line.175">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
-<span class="source-line-no">176</span><span id="line.176">        return this;</span>
-<span class="source-line-no">177</span><span id="line.177">    }</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    /**</span>
-<span class="source-line-no">180</span><span id="line.180">     *  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a Type.&lt;/p&gt;</span>
-<span class="source-line-no">181</span><span id="line.181">     */</span>
-<span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    public ScopedPriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
-<span class="source-line-no">184</span><span id="line.184">        this.custom = custom;</span>
-<span class="source-line-no">185</span><span id="line.185">        return this;</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public String getId() {</span>
-<span class="source-line-no">189</span><span id="line.189">        return this.id;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public com.commercetools.api.models.common.TypedMoney getValue() {</span>
-<span class="source-line-no">193</span><span id="line.193">        return this.value;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public com.commercetools.api.models.common.TypedMoney getCurrentValue() {</span>
-<span class="source-line-no">197</span><span id="line.197">        return this.currentValue;</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    @Nullable</span>
-<span class="source-line-no">201</span><span id="line.201">    public String getCountry() {</span>
-<span class="source-line-no">202</span><span id="line.202">        return this.country;</span>
-<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">157</span><span id="line.157">    public ScopedPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {</span>
+<span class="source-line-no">158</span><span id="line.158">        this.validFrom = validFrom;</span>
+<span class="source-line-no">159</span><span id="line.159">        return this;</span>
+<span class="source-line-no">160</span><span id="line.160">    }</span>
+<span class="source-line-no">161</span><span id="line.161"></span>
+<span class="source-line-no">162</span><span id="line.162">    /**</span>
+<span class="source-line-no">163</span><span id="line.163">     &lt;&gt;</span>
+<span class="source-line-no">164</span><span id="line.164">     */</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    public ScopedPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {</span>
+<span class="source-line-no">167</span><span id="line.167">        this.validUntil = validUntil;</span>
+<span class="source-line-no">168</span><span id="line.168">        return this;</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    /**</span>
+<span class="source-line-no">172</span><span id="line.172">     &lt;&gt;</span>
+<span class="source-line-no">173</span><span id="line.173">     */</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    public ScopedPriceBuilder discounted(</span>
+<span class="source-line-no">176</span><span id="line.176">            Function&lt;com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder&gt; builder) {</span>
+<span class="source-line-no">177</span><span id="line.177">        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();</span>
+<span class="source-line-no">178</span><span id="line.178">        return this;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    /**</span>
+<span class="source-line-no">182</span><span id="line.182">     &lt;&gt;</span>
+<span class="source-line-no">183</span><span id="line.183">     */</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public ScopedPriceBuilder discounted(</span>
+<span class="source-line-no">186</span><span id="line.186">            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {</span>
+<span class="source-line-no">187</span><span id="line.187">        this.discounted = discounted;</span>
+<span class="source-line-no">188</span><span id="line.188">        return this;</span>
+<span class="source-line-no">189</span><span id="line.189">    }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    /**</span>
+<span class="source-line-no">192</span><span id="line.192">     &lt;*  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a Type.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">193</span><span id="line.193">     */</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    public ScopedPriceBuilder custom(</span>
+<span class="source-line-no">196</span><span id="line.196">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
+<span class="source-line-no">197</span><span id="line.197">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
+<span class="source-line-no">198</span><span id="line.198">        return this;</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    /**</span>
+<span class="source-line-no">202</span><span id="line.202">     &lt;*  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a Type.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">203</span><span id="line.203">     */</span>
 <span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    @Nullable</span>
-<span class="source-line-no">206</span><span id="line.206">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
-<span class="source-line-no">207</span><span id="line.207">        return this.customerGroup;</span>
+<span class="source-line-no">205</span><span id="line.205">    public ScopedPriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
+<span class="source-line-no">206</span><span id="line.206">        this.custom = custom;</span>
+<span class="source-line-no">207</span><span id="line.207">        return this;</span>
 <span class="source-line-no">208</span><span id="line.208">    }</span>
 <span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    @Nullable</span>
-<span class="source-line-no">211</span><span id="line.211">    public com.commercetools.api.models.channel.ChannelReference getChannel() {</span>
-<span class="source-line-no">212</span><span id="line.212">        return this.channel;</span>
-<span class="source-line-no">213</span><span id="line.213">    }</span>
-<span class="source-line-no">214</span><span id="line.214"></span>
-<span class="source-line-no">215</span><span id="line.215">    @Nullable</span>
-<span class="source-line-no">216</span><span id="line.216">    public java.time.ZonedDateTime getValidFrom() {</span>
-<span class="source-line-no">217</span><span id="line.217">        return this.validFrom;</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    @Nullable</span>
-<span class="source-line-no">221</span><span id="line.221">    public java.time.ZonedDateTime getValidUntil() {</span>
-<span class="source-line-no">222</span><span id="line.222">        return this.validUntil;</span>
-<span class="source-line-no">223</span><span id="line.223">    }</span>
-<span class="source-line-no">224</span><span id="line.224"></span>
-<span class="source-line-no">225</span><span id="line.225">    @Nullable</span>
-<span class="source-line-no">226</span><span id="line.226">    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {</span>
-<span class="source-line-no">227</span><span id="line.227">        return this.discounted;</span>
-<span class="source-line-no">228</span><span id="line.228">    }</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">    @Nullable</span>
-<span class="source-line-no">231</span><span id="line.231">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
-<span class="source-line-no">232</span><span id="line.232">        return this.custom;</span>
-<span class="source-line-no">233</span><span id="line.233">    }</span>
-<span class="source-line-no">234</span><span id="line.234"></span>
-<span class="source-line-no">235</span><span id="line.235">    public ScopedPrice build() {</span>
-<span class="source-line-no">236</span><span id="line.236">        Objects.requireNonNull(id, ScopedPrice.class + ": id is missing");</span>
-<span class="source-line-no">237</span><span id="line.237">        Objects.requireNonNull(value, ScopedPrice.class + ": value is missing");</span>
-<span class="source-line-no">238</span><span id="line.238">        Objects.requireNonNull(currentValue, ScopedPrice.class + ": currentValue is missing");</span>
-<span class="source-line-no">239</span><span id="line.239">        return new ScopedPriceImpl(id, value, currentValue, country, customerGroup, channel, validFrom, validUntil,</span>
-<span class="source-line-no">240</span><span id="line.240">            discounted, custom);</span>
-<span class="source-line-no">241</span><span id="line.241">    }</span>
-<span class="source-line-no">242</span><span id="line.242"></span>
-<span class="source-line-no">243</span><span id="line.243">    /**</span>
-<span class="source-line-no">244</span><span id="line.244">     * builds ScopedPrice without checking for non null required values</span>
-<span class="source-line-no">245</span><span id="line.245">     */</span>
-<span class="source-line-no">246</span><span id="line.246">    public ScopedPrice buildUnchecked() {</span>
-<span class="source-line-no">247</span><span id="line.247">        return new ScopedPriceImpl(id, value, currentValue, country, customerGroup, channel, validFrom, validUntil,</span>
-<span class="source-line-no">248</span><span id="line.248">            discounted, custom);</span>
-<span class="source-line-no">249</span><span id="line.249">    }</span>
-<span class="source-line-no">250</span><span id="line.250"></span>
-<span class="source-line-no">251</span><span id="line.251">    public static ScopedPriceBuilder of() {</span>
-<span class="source-line-no">252</span><span id="line.252">        return new ScopedPriceBuilder();</span>
-<span class="source-line-no">253</span><span id="line.253">    }</span>
-<span class="source-line-no">254</span><span id="line.254"></span>
-<span class="source-line-no">255</span><span id="line.255">    public static ScopedPriceBuilder of(final ScopedPrice template) {</span>
-<span class="source-line-no">256</span><span id="line.256">        ScopedPriceBuilder builder = new ScopedPriceBuilder();</span>
-<span class="source-line-no">257</span><span id="line.257">        builder.id = template.getId();</span>
-<span class="source-line-no">258</span><span id="line.258">        builder.value = template.getValue();</span>
-<span class="source-line-no">259</span><span id="line.259">        builder.currentValue = template.getCurrentValue();</span>
-<span class="source-line-no">260</span><span id="line.260">        builder.country = template.getCountry();</span>
-<span class="source-line-no">261</span><span id="line.261">        builder.customerGroup = template.getCustomerGroup();</span>
-<span class="source-line-no">262</span><span id="line.262">        builder.channel = template.getChannel();</span>
-<span class="source-line-no">263</span><span id="line.263">        builder.validFrom = template.getValidFrom();</span>
-<span class="source-line-no">264</span><span id="line.264">        builder.validUntil = template.getValidUntil();</span>
-<span class="source-line-no">265</span><span id="line.265">        builder.discounted = template.getDiscounted();</span>
-<span class="source-line-no">266</span><span id="line.266">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">267</span><span id="line.267">        return builder;</span>
-<span class="source-line-no">268</span><span id="line.268">    }</span>
-<span class="source-line-no">269</span><span id="line.269"></span>
-<span class="source-line-no">270</span><span id="line.270">}</span>
+<span class="source-line-no">210</span><span id="line.210">    public String getId() {</span>
+<span class="source-line-no">211</span><span id="line.211">        return this.id;</span>
+<span class="source-line-no">212</span><span id="line.212">    }</span>
+<span class="source-line-no">213</span><span id="line.213"></span>
+<span class="source-line-no">214</span><span id="line.214">    public com.commercetools.api.models.common.TypedMoney getValue() {</span>
+<span class="source-line-no">215</span><span id="line.215">        return this.value;</span>
+<span class="source-line-no">216</span><span id="line.216">    }</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">    public com.commercetools.api.models.common.TypedMoney getCurrentValue() {</span>
+<span class="source-line-no">219</span><span id="line.219">        return this.currentValue;</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    @Nullable</span>
+<span class="source-line-no">223</span><span id="line.223">    public String getCountry() {</span>
+<span class="source-line-no">224</span><span id="line.224">        return this.country;</span>
+<span class="source-line-no">225</span><span id="line.225">    }</span>
+<span class="source-line-no">226</span><span id="line.226"></span>
+<span class="source-line-no">227</span><span id="line.227">    @Nullable</span>
+<span class="source-line-no">228</span><span id="line.228">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
+<span class="source-line-no">229</span><span id="line.229">        return this.customerGroup;</span>
+<span class="source-line-no">230</span><span id="line.230">    }</span>
+<span class="source-line-no">231</span><span id="line.231"></span>
+<span class="source-line-no">232</span><span id="line.232">    @Nullable</span>
+<span class="source-line-no">233</span><span id="line.233">    public com.commercetools.api.models.channel.ChannelReference getChannel() {</span>
+<span class="source-line-no">234</span><span id="line.234">        return this.channel;</span>
+<span class="source-line-no">235</span><span id="line.235">    }</span>
+<span class="source-line-no">236</span><span id="line.236"></span>
+<span class="source-line-no">237</span><span id="line.237">    @Nullable</span>
+<span class="source-line-no">238</span><span id="line.238">    public java.time.ZonedDateTime getValidFrom() {</span>
+<span class="source-line-no">239</span><span id="line.239">        return this.validFrom;</span>
+<span class="source-line-no">240</span><span id="line.240">    }</span>
+<span class="source-line-no">241</span><span id="line.241"></span>
+<span class="source-line-no">242</span><span id="line.242">    @Nullable</span>
+<span class="source-line-no">243</span><span id="line.243">    public java.time.ZonedDateTime getValidUntil() {</span>
+<span class="source-line-no">244</span><span id="line.244">        return this.validUntil;</span>
+<span class="source-line-no">245</span><span id="line.245">    }</span>
+<span class="source-line-no">246</span><span id="line.246"></span>
+<span class="source-line-no">247</span><span id="line.247">    @Nullable</span>
+<span class="source-line-no">248</span><span id="line.248">    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {</span>
+<span class="source-line-no">249</span><span id="line.249">        return this.discounted;</span>
+<span class="source-line-no">250</span><span id="line.250">    }</span>
+<span class="source-line-no">251</span><span id="line.251"></span>
+<span class="source-line-no">252</span><span id="line.252">    @Nullable</span>
+<span class="source-line-no">253</span><span id="line.253">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
+<span class="source-line-no">254</span><span id="line.254">        return this.custom;</span>
+<span class="source-line-no">255</span><span id="line.255">    }</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    public ScopedPrice build() {</span>
+<span class="source-line-no">258</span><span id="line.258">        Objects.requireNonNull(id, ScopedPrice.class + ": id is missing");</span>
+<span class="source-line-no">259</span><span id="line.259">        Objects.requireNonNull(value, ScopedPrice.class + ": value is missing");</span>
+<span class="source-line-no">260</span><span id="line.260">        Objects.requireNonNull(currentValue, ScopedPrice.class + ": currentValue is missing");</span>
+<span class="source-line-no">261</span><span id="line.261">        return new ScopedPriceImpl(id, value, currentValue, country, customerGroup, channel, validFrom, validUntil,</span>
+<span class="source-line-no">262</span><span id="line.262">            discounted, custom);</span>
+<span class="source-line-no">263</span><span id="line.263">    }</span>
+<span class="source-line-no">264</span><span id="line.264"></span>
+<span class="source-line-no">265</span><span id="line.265">    /**</span>
+<span class="source-line-no">266</span><span id="line.266">     * builds ScopedPrice without checking for non null required values</span>
+<span class="source-line-no">267</span><span id="line.267">     */</span>
+<span class="source-line-no">268</span><span id="line.268">    public ScopedPrice buildUnchecked() {</span>
+<span class="source-line-no">269</span><span id="line.269">        return new ScopedPriceImpl(id, value, currentValue, country, customerGroup, channel, validFrom, validUntil,</span>
+<span class="source-line-no">270</span><span id="line.270">            discounted, custom);</span>
+<span class="source-line-no">271</span><span id="line.271">    }</span>
+<span class="source-line-no">272</span><span id="line.272"></span>
+<span class="source-line-no">273</span><span id="line.273">    public static ScopedPriceBuilder of() {</span>
+<span class="source-line-no">274</span><span id="line.274">        return new ScopedPriceBuilder();</span>
+<span class="source-line-no">275</span><span id="line.275">    }</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    public static ScopedPriceBuilder of(final ScopedPrice template) {</span>
+<span class="source-line-no">278</span><span id="line.278">        ScopedPriceBuilder builder = new ScopedPriceBuilder();</span>
+<span class="source-line-no">279</span><span id="line.279">        builder.id = template.getId();</span>
+<span class="source-line-no">280</span><span id="line.280">        builder.value = template.getValue();</span>
+<span class="source-line-no">281</span><span id="line.281">        builder.currentValue = template.getCurrentValue();</span>
+<span class="source-line-no">282</span><span id="line.282">        builder.country = template.getCountry();</span>
+<span class="source-line-no">283</span><span id="line.283">        builder.customerGroup = template.getCustomerGroup();</span>
+<span class="source-line-no">284</span><span id="line.284">        builder.channel = template.getChannel();</span>
+<span class="source-line-no">285</span><span id="line.285">        builder.validFrom = template.getValidFrom();</span>
+<span class="source-line-no">286</span><span id="line.286">        builder.validUntil = template.getValidUntil();</span>
+<span class="source-line-no">287</span><span id="line.287">        builder.discounted = template.getDiscounted();</span>
+<span class="source-line-no">288</span><span id="line.288">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">289</span><span id="line.289">        return builder;</span>
+<span class="source-line-no">290</span><span id="line.290">    }</span>
+<span class="source-line-no">291</span><span id="line.291"></span>
+<span class="source-line-no">292</span><span id="line.292">}</span>
 
 
 

@@ -83,19 +83,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.26">ProductProjectionPagedSearchResponseBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.28">ProductProjectionPagedSearchResponseBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ProductProjectionPagedSearchResponseBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ProductProjectionPagedSearchResponse productProjectionPagedSearchResponse = ProductProjectionPagedSearchResponse.builder()
-           .limit(0.3)
-           .count(0.3)
-           .offset(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .facets(facetsBuilder -> facetsBuilder)
-           .build()
+     ProductProjectionPagedSearchResponse productProjectionPagedSearchResponse = ProductProjectionPagedSearchResponse.builder()
+             .limit(0.3)
+             .count(0.3)
+             .offset(0.3)
+             .plusResults(resultsBuilder -> resultsBuilder)
+             .facets(facetsBuilder -> facetsBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -135,13 +137,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#count(java.lang.Long)">count</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#facets(com.commercetools.api.models.product.FacetResults)">facets</a></span>&#8203;(<a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a>&nbsp;facets)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#facets(java.util.function.Function)">facets</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>,&#8203;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCount()">getCount</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -163,7 +171,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#limit(java.lang.Long)">limit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of results requested.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -174,26 +182,38 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#offset(java.lang.Long)">offset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of elements skipped.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusResults(com.commercetools.api.models.product.ProductProjection...)">plusResults</a></span>&#8203;(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusResults(java.util.function.Function)">plusResults</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,&#8203;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#results(com.commercetools.api.models.product.ProductProjection...)">results</a></span>&#8203;(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#results(java.util.List)">results</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;results)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#total(java.lang.Long)">total</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withResults(java.util.function.Function)">withResults</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,&#8203;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 </div>
 </div>
 </div>
@@ -214,7 +234,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProductProjectionPagedSearchResponseBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.27">ProductProjectionPagedSearchResponseBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.29">ProductProjectionPagedSearchResponseBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -228,113 +248,122 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="limit(java.lang.Long)">
 <h3>limit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.46">limit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
-<div class="block"><p>Number of results requested.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.48">limit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
+<div class="block"><*  <p>Number of results requested.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="count(java.lang.Long)">
 <h3>count</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.51">count</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.57">count</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="total(java.lang.Long)">
 <h3>total</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.56">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.66">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="offset(java.lang.Long)">
 <h3>offset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.65">offset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
-<div class="block"><p>Number of elements skipped.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.75">offset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="block"><*  <p>Number of elements skipped.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="results(com.commercetools.api.models.product.ProductProjection...)">
 <h3>results</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.70">results</a></span>&#8203;<span class="parameters">(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.84">results</a></span>&#8203;<span class="parameters">(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="results(java.util.List)">
 <h3>results</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.76">results</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.94">results</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;results)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusResults(com.commercetools.api.models.product.ProductProjection...)">
 <h3>plusResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.82">plusResults</a></span>&#8203;<span class="parameters">(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.104">plusResults</a></span>&#8203;<span class="parameters">(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusResults(java.util.function.Function)">
 <h3>plusResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.91">plusResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,&#8203;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.117">plusResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,&#8203;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withResults(java.util.function.Function)">
 <h3>withResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.100">withResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,&#8203;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.130">withResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,&#8203;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="facets(java.util.function.Function)">
 <h3>facets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.107">facets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>,&#8203;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.141">facets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>,&#8203;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="facets(com.commercetools.api.models.product.FacetResults)">
 <h3>facets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.113">facets</a></span>&#8203;<span class="parameters">(<a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a>&nbsp;facets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.151">facets</a></span>&#8203;<span class="parameters">(<a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a>&nbsp;facets)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.119">getLimit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.157">getLimit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.123">getCount</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.161">getCount</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.127">getTotal</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.165">getTotal</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.132">getOffset</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.170">getOffset</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResults()">
 <h3>getResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.136">getResults</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.174">getResults</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFacets()">
 <h3>getFacets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.140">getFacets</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.178">getFacets</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.144">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.182">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;</code></dd>
@@ -344,20 +373,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.156">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.194">buildUnchecked</a></span>()</div>
 <div class="block">builds ProductProjectionPagedSearchResponse without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.160">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.198">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product.ProductProjectionPagedSearchResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.164">of</a></span>&#8203;<span class="parameters">(<a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#line.202">of</a></span>&#8203;<span class="parameters">(<a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

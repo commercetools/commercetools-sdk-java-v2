@@ -22,202 +22,204 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
 <span class="source-line-no">011</span><span id="line.11">/**</span>
-<span class="source-line-no">012</span><span id="line.12"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">013</span><span id="line.13"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">014</span><span id="line.14"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">015</span><span id="line.15">   ApiClient apiClient = ApiClient.builder()</span>
-<span class="source-line-no">016</span><span id="line.16">           .id("{id}")</span>
-<span class="source-line-no">017</span><span id="line.17">           .name("{name}")</span>
-<span class="source-line-no">018</span><span id="line.18">           .scope("{scope}")</span>
-<span class="source-line-no">019</span><span id="line.19">           .build()</span>
-<span class="source-line-no">020</span><span id="line.20"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> &lt;/div&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> */</span>
-<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">024</span><span id="line.24">public class ApiClientBuilder implements Builder&lt;ApiClient&gt; {</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private String id;</span>
+<span class="source-line-no">012</span><span id="line.12"> * ApiClientBuilder</span>
+<span class="source-line-no">013</span><span id="line.13"> * &lt;hr&gt;</span>
+<span class="source-line-no">014</span><span id="line.14"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">015</span><span id="line.15"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> *     ApiClient apiClient = ApiClient.builder()</span>
+<span class="source-line-no">018</span><span id="line.18"> *             .id("{id}")</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .name("{name}")</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .scope("{scope}")</span>
+<span class="source-line-no">021</span><span id="line.21"> *             .build()</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;/div&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> */</span>
+<span class="source-line-no">025</span><span id="line.25">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">026</span><span id="line.26">public class ApiClientBuilder implements Builder&lt;ApiClient&gt; {</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    private String name;</span>
+<span class="source-line-no">028</span><span id="line.28">    private String id;</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private String scope;</span>
+<span class="source-line-no">030</span><span id="line.30">    private String name;</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    @Nullable</span>
-<span class="source-line-no">033</span><span id="line.33">    private String secret;</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    @Nullable</span>
-<span class="source-line-no">036</span><span id="line.36">    private java.time.LocalDate lastUsedAt;</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    @Nullable</span>
-<span class="source-line-no">039</span><span id="line.39">    private java.time.ZonedDateTime deleteAt;</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    @Nullable</span>
-<span class="source-line-no">042</span><span id="line.42">    private java.time.ZonedDateTime createdAt;</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    @Nullable</span>
-<span class="source-line-no">045</span><span id="line.45">    private Integer accessTokenValiditySeconds;</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    @Nullable</span>
-<span class="source-line-no">048</span><span id="line.48">    private Integer refreshTokenValiditySeconds;</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Platform-generated unique identifier of the APIClient. This is the OAuth2 &lt;code&gt;client_id&lt;/code&gt; that can be used to obtain an access token.&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public ApiClientBuilder id(final String id) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.id = id;</span>
-<span class="source-line-no">056</span><span id="line.56">        return this;</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Name of the APIClient.&lt;/p&gt;</span>
-<span class="source-line-no">061</span><span id="line.61">     */</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public ApiClientBuilder name(final String name) {</span>
-<span class="source-line-no">064</span><span id="line.64">        this.name = name;</span>
-<span class="source-line-no">065</span><span id="line.65">        return this;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    /**</span>
-<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.&lt;/p&gt;</span>
-<span class="source-line-no">070</span><span id="line.70">     */</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public ApiClientBuilder scope(final String scope) {</span>
-<span class="source-line-no">073</span><span id="line.73">        this.scope = scope;</span>
-<span class="source-line-no">074</span><span id="line.74">        return this;</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;Only shown once in the response of creating the APIClient. This is the OAuth2 &lt;code&gt;client_secret&lt;/code&gt; that can be used to obtain an access token.&lt;/p&gt;</span>
-<span class="source-line-no">079</span><span id="line.79">     */</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public ApiClientBuilder secret(@Nullable final String secret) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.secret = secret;</span>
-<span class="source-line-no">083</span><span id="line.83">        return this;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Date of the last day this APIClient was used to obtain an access token.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public ApiClientBuilder lastUsedAt(@Nullable final java.time.LocalDate lastUsedAt) {</span>
-<span class="source-line-no">091</span><span id="line.91">        this.lastUsedAt = lastUsedAt;</span>
-<span class="source-line-no">092</span><span id="line.92">        return this;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;If set, the Client will be deleted on (or shortly after) this point in time.&lt;/p&gt;</span>
-<span class="source-line-no">097</span><span id="line.97">     */</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public ApiClientBuilder deleteAt(@Nullable final java.time.ZonedDateTime deleteAt) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.deleteAt = deleteAt;</span>
-<span class="source-line-no">101</span><span id="line.101">        return this;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     *  &lt;p&gt;Date and time (UTC) the APIClient was initially created at.&lt;/p&gt;</span>
-<span class="source-line-no">106</span><span id="line.106">     */</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">109</span><span id="line.109">        this.createdAt = createdAt;</span>
-<span class="source-line-no">110</span><span id="line.110">        return this;</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.&lt;/p&gt;</span>
-<span class="source-line-no">115</span><span id="line.115">     */</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public ApiClientBuilder accessTokenValiditySeconds(@Nullable final Integer accessTokenValiditySeconds) {</span>
-<span class="source-line-no">118</span><span id="line.118">        this.accessTokenValiditySeconds = accessTokenValiditySeconds;</span>
-<span class="source-line-no">119</span><span id="line.119">        return this;</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    /**</span>
-<span class="source-line-no">123</span><span id="line.123">     *  &lt;p&gt;Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.&lt;/p&gt;</span>
-<span class="source-line-no">124</span><span id="line.124">     */</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public ApiClientBuilder refreshTokenValiditySeconds(@Nullable final Integer refreshTokenValiditySeconds) {</span>
-<span class="source-line-no">127</span><span id="line.127">        this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;</span>
-<span class="source-line-no">128</span><span id="line.128">        return this;</span>
-<span class="source-line-no">129</span><span id="line.129">    }</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    public String getId() {</span>
-<span class="source-line-no">132</span><span id="line.132">        return this.id;</span>
-<span class="source-line-no">133</span><span id="line.133">    }</span>
-<span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    public String getName() {</span>
-<span class="source-line-no">136</span><span id="line.136">        return this.name;</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public String getScope() {</span>
-<span class="source-line-no">140</span><span id="line.140">        return this.scope;</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    @Nullable</span>
-<span class="source-line-no">144</span><span id="line.144">    public String getSecret() {</span>
-<span class="source-line-no">145</span><span id="line.145">        return this.secret;</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    @Nullable</span>
-<span class="source-line-no">149</span><span id="line.149">    public java.time.LocalDate getLastUsedAt() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return this.lastUsedAt;</span>
-<span class="source-line-no">151</span><span id="line.151">    }</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    @Nullable</span>
-<span class="source-line-no">154</span><span id="line.154">    public java.time.ZonedDateTime getDeleteAt() {</span>
-<span class="source-line-no">155</span><span id="line.155">        return this.deleteAt;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    @Nullable</span>
-<span class="source-line-no">159</span><span id="line.159">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">160</span><span id="line.160">        return this.createdAt;</span>
-<span class="source-line-no">161</span><span id="line.161">    }</span>
-<span class="source-line-no">162</span><span id="line.162"></span>
-<span class="source-line-no">163</span><span id="line.163">    @Nullable</span>
-<span class="source-line-no">164</span><span id="line.164">    public Integer getAccessTokenValiditySeconds() {</span>
-<span class="source-line-no">165</span><span id="line.165">        return this.accessTokenValiditySeconds;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    @Nullable</span>
-<span class="source-line-no">169</span><span id="line.169">    public Integer getRefreshTokenValiditySeconds() {</span>
-<span class="source-line-no">170</span><span id="line.170">        return this.refreshTokenValiditySeconds;</span>
-<span class="source-line-no">171</span><span id="line.171">    }</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public ApiClient build() {</span>
-<span class="source-line-no">174</span><span id="line.174">        Objects.requireNonNull(id, ApiClient.class + ": id is missing");</span>
-<span class="source-line-no">175</span><span id="line.175">        Objects.requireNonNull(name, ApiClient.class + ": name is missing");</span>
-<span class="source-line-no">176</span><span id="line.176">        Objects.requireNonNull(scope, ApiClient.class + ": scope is missing");</span>
-<span class="source-line-no">177</span><span id="line.177">        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt, accessTokenValiditySeconds,</span>
-<span class="source-line-no">178</span><span id="line.178">            refreshTokenValiditySeconds);</span>
-<span class="source-line-no">179</span><span id="line.179">    }</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    /**</span>
-<span class="source-line-no">182</span><span id="line.182">     * builds ApiClient without checking for non null required values</span>
-<span class="source-line-no">183</span><span id="line.183">     */</span>
-<span class="source-line-no">184</span><span id="line.184">    public ApiClient buildUnchecked() {</span>
-<span class="source-line-no">185</span><span id="line.185">        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt, accessTokenValiditySeconds,</span>
-<span class="source-line-no">186</span><span id="line.186">            refreshTokenValiditySeconds);</span>
-<span class="source-line-no">187</span><span id="line.187">    }</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public static ApiClientBuilder of() {</span>
-<span class="source-line-no">190</span><span id="line.190">        return new ApiClientBuilder();</span>
-<span class="source-line-no">191</span><span id="line.191">    }</span>
-<span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    public static ApiClientBuilder of(final ApiClient template) {</span>
-<span class="source-line-no">194</span><span id="line.194">        ApiClientBuilder builder = new ApiClientBuilder();</span>
-<span class="source-line-no">195</span><span id="line.195">        builder.id = template.getId();</span>
-<span class="source-line-no">196</span><span id="line.196">        builder.name = template.getName();</span>
-<span class="source-line-no">197</span><span id="line.197">        builder.scope = template.getScope();</span>
-<span class="source-line-no">198</span><span id="line.198">        builder.secret = template.getSecret();</span>
-<span class="source-line-no">199</span><span id="line.199">        builder.lastUsedAt = template.getLastUsedAt();</span>
-<span class="source-line-no">200</span><span id="line.200">        builder.deleteAt = template.getDeleteAt();</span>
-<span class="source-line-no">201</span><span id="line.201">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">202</span><span id="line.202">        builder.accessTokenValiditySeconds = template.getAccessTokenValiditySeconds();</span>
-<span class="source-line-no">203</span><span id="line.203">        builder.refreshTokenValiditySeconds = template.getRefreshTokenValiditySeconds();</span>
-<span class="source-line-no">204</span><span id="line.204">        return builder;</span>
-<span class="source-line-no">205</span><span id="line.205">    }</span>
-<span class="source-line-no">206</span><span id="line.206"></span>
-<span class="source-line-no">207</span><span id="line.207">}</span>
+<span class="source-line-no">032</span><span id="line.32">    private String scope;</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    @Nullable</span>
+<span class="source-line-no">035</span><span id="line.35">    private String secret;</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    @Nullable</span>
+<span class="source-line-no">038</span><span id="line.38">    private java.time.LocalDate lastUsedAt;</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    @Nullable</span>
+<span class="source-line-no">041</span><span id="line.41">    private java.time.ZonedDateTime deleteAt;</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    @Nullable</span>
+<span class="source-line-no">044</span><span id="line.44">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    @Nullable</span>
+<span class="source-line-no">047</span><span id="line.47">    private Integer accessTokenValiditySeconds;</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    @Nullable</span>
+<span class="source-line-no">050</span><span id="line.50">    private Integer refreshTokenValiditySeconds;</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    /**</span>
+<span class="source-line-no">053</span><span id="line.53">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the APIClient. This is the OAuth2 &lt;code&gt;client_id&lt;/code&gt; that can be used to obtain an access token.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">054</span><span id="line.54">     */</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public ApiClientBuilder id(final String id) {</span>
+<span class="source-line-no">057</span><span id="line.57">        this.id = id;</span>
+<span class="source-line-no">058</span><span id="line.58">        return this;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    /**</span>
+<span class="source-line-no">062</span><span id="line.62">     &lt;*  &lt;p&gt;Name of the APIClient.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     */</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public ApiClientBuilder name(final String name) {</span>
+<span class="source-line-no">066</span><span id="line.66">        this.name = name;</span>
+<span class="source-line-no">067</span><span id="line.67">        return this;</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    /**</span>
+<span class="source-line-no">071</span><span id="line.71">     &lt;*  &lt;p&gt;Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public ApiClientBuilder scope(final String scope) {</span>
+<span class="source-line-no">075</span><span id="line.75">        this.scope = scope;</span>
+<span class="source-line-no">076</span><span id="line.76">        return this;</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    /**</span>
+<span class="source-line-no">080</span><span id="line.80">     &lt;*  &lt;p&gt;Only shown once in the response of creating the APIClient. This is the OAuth2 &lt;code&gt;client_secret&lt;/code&gt; that can be used to obtain an access token.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">     */</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public ApiClientBuilder secret(@Nullable final String secret) {</span>
+<span class="source-line-no">084</span><span id="line.84">        this.secret = secret;</span>
+<span class="source-line-no">085</span><span id="line.85">        return this;</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    /**</span>
+<span class="source-line-no">089</span><span id="line.89">     &lt;*  &lt;p&gt;Date of the last day this APIClient was used to obtain an access token.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public ApiClientBuilder lastUsedAt(@Nullable final java.time.LocalDate lastUsedAt) {</span>
+<span class="source-line-no">093</span><span id="line.93">        this.lastUsedAt = lastUsedAt;</span>
+<span class="source-line-no">094</span><span id="line.94">        return this;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    /**</span>
+<span class="source-line-no">098</span><span id="line.98">     &lt;*  &lt;p&gt;If set, the Client will be deleted on (or shortly after) this point in time.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">099</span><span id="line.99">     */</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public ApiClientBuilder deleteAt(@Nullable final java.time.ZonedDateTime deleteAt) {</span>
+<span class="source-line-no">102</span><span id="line.102">        this.deleteAt = deleteAt;</span>
+<span class="source-line-no">103</span><span id="line.103">        return this;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    /**</span>
+<span class="source-line-no">107</span><span id="line.107">     &lt;*  &lt;p&gt;Date and time (UTC) the APIClient was initially created at.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">111</span><span id="line.111">        this.createdAt = createdAt;</span>
+<span class="source-line-no">112</span><span id="line.112">        return this;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    /**</span>
+<span class="source-line-no">116</span><span id="line.116">     &lt;*  &lt;p&gt;Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public ApiClientBuilder accessTokenValiditySeconds(@Nullable final Integer accessTokenValiditySeconds) {</span>
+<span class="source-line-no">120</span><span id="line.120">        this.accessTokenValiditySeconds = accessTokenValiditySeconds;</span>
+<span class="source-line-no">121</span><span id="line.121">        return this;</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    /**</span>
+<span class="source-line-no">125</span><span id="line.125">     &lt;*  &lt;p&gt;Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">    public ApiClientBuilder refreshTokenValiditySeconds(@Nullable final Integer refreshTokenValiditySeconds) {</span>
+<span class="source-line-no">129</span><span id="line.129">        this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;</span>
+<span class="source-line-no">130</span><span id="line.130">        return this;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public String getId() {</span>
+<span class="source-line-no">134</span><span id="line.134">        return this.id;</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    public String getName() {</span>
+<span class="source-line-no">138</span><span id="line.138">        return this.name;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    public String getScope() {</span>
+<span class="source-line-no">142</span><span id="line.142">        return this.scope;</span>
+<span class="source-line-no">143</span><span id="line.143">    }</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    @Nullable</span>
+<span class="source-line-no">146</span><span id="line.146">    public String getSecret() {</span>
+<span class="source-line-no">147</span><span id="line.147">        return this.secret;</span>
+<span class="source-line-no">148</span><span id="line.148">    }</span>
+<span class="source-line-no">149</span><span id="line.149"></span>
+<span class="source-line-no">150</span><span id="line.150">    @Nullable</span>
+<span class="source-line-no">151</span><span id="line.151">    public java.time.LocalDate getLastUsedAt() {</span>
+<span class="source-line-no">152</span><span id="line.152">        return this.lastUsedAt;</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    @Nullable</span>
+<span class="source-line-no">156</span><span id="line.156">    public java.time.ZonedDateTime getDeleteAt() {</span>
+<span class="source-line-no">157</span><span id="line.157">        return this.deleteAt;</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    @Nullable</span>
+<span class="source-line-no">161</span><span id="line.161">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return this.createdAt;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    @Nullable</span>
+<span class="source-line-no">166</span><span id="line.166">    public Integer getAccessTokenValiditySeconds() {</span>
+<span class="source-line-no">167</span><span id="line.167">        return this.accessTokenValiditySeconds;</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    @Nullable</span>
+<span class="source-line-no">171</span><span id="line.171">    public Integer getRefreshTokenValiditySeconds() {</span>
+<span class="source-line-no">172</span><span id="line.172">        return this.refreshTokenValiditySeconds;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    public ApiClient build() {</span>
+<span class="source-line-no">176</span><span id="line.176">        Objects.requireNonNull(id, ApiClient.class + ": id is missing");</span>
+<span class="source-line-no">177</span><span id="line.177">        Objects.requireNonNull(name, ApiClient.class + ": name is missing");</span>
+<span class="source-line-no">178</span><span id="line.178">        Objects.requireNonNull(scope, ApiClient.class + ": scope is missing");</span>
+<span class="source-line-no">179</span><span id="line.179">        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt, accessTokenValiditySeconds,</span>
+<span class="source-line-no">180</span><span id="line.180">            refreshTokenValiditySeconds);</span>
+<span class="source-line-no">181</span><span id="line.181">    }</span>
+<span class="source-line-no">182</span><span id="line.182"></span>
+<span class="source-line-no">183</span><span id="line.183">    /**</span>
+<span class="source-line-no">184</span><span id="line.184">     * builds ApiClient without checking for non null required values</span>
+<span class="source-line-no">185</span><span id="line.185">     */</span>
+<span class="source-line-no">186</span><span id="line.186">    public ApiClient buildUnchecked() {</span>
+<span class="source-line-no">187</span><span id="line.187">        return new ApiClientImpl(id, name, scope, secret, lastUsedAt, deleteAt, createdAt, accessTokenValiditySeconds,</span>
+<span class="source-line-no">188</span><span id="line.188">            refreshTokenValiditySeconds);</span>
+<span class="source-line-no">189</span><span id="line.189">    }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    public static ApiClientBuilder of() {</span>
+<span class="source-line-no">192</span><span id="line.192">        return new ApiClientBuilder();</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    public static ApiClientBuilder of(final ApiClient template) {</span>
+<span class="source-line-no">196</span><span id="line.196">        ApiClientBuilder builder = new ApiClientBuilder();</span>
+<span class="source-line-no">197</span><span id="line.197">        builder.id = template.getId();</span>
+<span class="source-line-no">198</span><span id="line.198">        builder.name = template.getName();</span>
+<span class="source-line-no">199</span><span id="line.199">        builder.scope = template.getScope();</span>
+<span class="source-line-no">200</span><span id="line.200">        builder.secret = template.getSecret();</span>
+<span class="source-line-no">201</span><span id="line.201">        builder.lastUsedAt = template.getLastUsedAt();</span>
+<span class="source-line-no">202</span><span id="line.202">        builder.deleteAt = template.getDeleteAt();</span>
+<span class="source-line-no">203</span><span id="line.203">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">204</span><span id="line.204">        builder.accessTokenValiditySeconds = template.getAccessTokenValiditySeconds();</span>
+<span class="source-line-no">205</span><span id="line.205">        builder.refreshTokenValiditySeconds = template.getRefreshTokenValiditySeconds();</span>
+<span class="source-line-no">206</span><span id="line.206">        return builder;</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">}</span>
 
 
 

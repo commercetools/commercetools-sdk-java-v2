@@ -84,18 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomLineItemStateTransitionMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.32">CustomLineItemStateTransitionMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.35">CustomLineItemStateTransitionMessagePayload</a></span><span class="extends-implements">
 extends <a href="OrderMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderMessagePayload</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">CustomLineItemStateTransitionMessagePayload
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   CustomLineItemStateTransitionMessagePayload customLineItemStateTransitionMessagePayload = CustomLineItemStateTransitionMessagePayload.builder()
-           .customLineItemId("{customLineItemId}")
-           .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .quantity(0.3)
-           .fromState(fromStateBuilder -> fromStateBuilder)
-           .toState(toStateBuilder -> toStateBuilder)
-           .build()
+     CustomLineItemStateTransitionMessagePayload customLineItemStateTransitionMessagePayload = CustomLineItemStateTransitionMessagePayload.builder()
+             .customLineItemId("{customLineItemId}")
+             .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .quantity(0.3)
+             .fromState(fromStateBuilder -> fromStateBuilder)
+             .toState(toStateBuilder -> toStateBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -135,23 +138,29 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustomLineItemId()">getCustomLineItemId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFromState()">getFromState</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Reference to a State.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getQuantity()">getQuantity</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getToState()">getToState</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Reference to a State.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTransitionDate()">getTransitionDate</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -202,7 +211,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="CUSTOM_LINE_ITEM_STATE_TRANSITION">
 <h3>CUSTOM_LINE_ITEM_STATE_TRANSITION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.36">CUSTOM_LINE_ITEM_STATE_TRANSITION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.39">CUSTOM_LINE_ITEM_STATE_TRANSITION</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload.CUSTOM_LINE_ITEM_STATE_TRANSITION">Constant Field Values</a></dd>
@@ -221,21 +230,24 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <section class="detail" id="getCustomLineItemId()">
 <h3>getCustomLineItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.38">getCustomLineItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.44">getCustomLineItemId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTransitionDate()">
 <h3>getTransitionDate</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.42">getTransitionDate</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.51">getTransitionDate</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.46">getQuantity</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.58">getQuantity</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -243,8 +255,8 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <h3>getFromState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.53">getFromState</a></span>()</div>
-<div class="block"><p>Reference to a State.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.65">getFromState</a></span>()</div>
+<div class="block"><*  <p>Reference to a State.</p>></div>
 </section>
 </li>
 <li>
@@ -252,74 +264,74 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <h3>getToState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.61">getToState</a></span>()</div>
-<div class="block"><p>Reference to a State.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.73">getToState</a></span>()</div>
+<div class="block"><*  <p>Reference to a State.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomLineItemId(java.lang.String)">
 <h3>setCustomLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.66">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.78">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransitionDate(java.time.ZonedDateTime)">
 <h3>setTransitionDate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.68">setTransitionDate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;transitionDate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.80">setTransitionDate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;transitionDate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setQuantity(java.lang.Long)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.70">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.82">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFromState(com.commercetools.api.models.state.StateReference)">
 <h3>setFromState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.72">setFromState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;fromState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.84">setFromState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;fromState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setToState(com.commercetools.api.models.state.StateReference)">
 <h3>setToState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.74">setToState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;toState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.86">setToState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;toState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.76">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.88">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.80">of</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.92">of</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.91">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.103">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.95">builder</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.107">builder</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCustomLineItemStateTransitionMessagePayload(java.util.function.Function)">
 <h3>withCustomLineItemStateTransitionMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.100">withCustomLineItemStateTransitionMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.112">withCustomLineItemStateTransitionMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.105">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomLineItemStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomLineItemStateTransitionMessagePayload.html#line.117">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

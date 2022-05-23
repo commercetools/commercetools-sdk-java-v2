@@ -84,18 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CategoryImportImpl.html" title="class in com.commercetools.importapi.models.categories">CategoryImportImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.35">CategoryImport</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.36">CategoryImport</a></span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
 <div class="block"><p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
 
+ <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   CategoryImport categoryImport = CategoryImport.builder()
-           .key("{key}")
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .build()
+     CategoryImport categoryImport = CategoryImport.builder()
+             .key("{key}")
+             .name(nameBuilder -> nameBuilder)
+             .slug(slugBuilder -> slugBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -120,56 +121,58 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAssets()">getAssets</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The custom fields for this Category.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.description</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getExternalId()">getExternalId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.externalId</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaDescription()">getMetaDescription</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.metaDescription</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaKeywords()">getMetaKeywords</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.metaKeywords</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaTitle()">getMetaTitle</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.metaTitle</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.name</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getOrderHint()">getOrderHint</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.orderHint</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getParent()">getParent</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.parent</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSlug()">getSlug</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Maps to <code>Category.slug</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -241,8 +244,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.42">getName</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.name</code>.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.43">getName</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.name</code>.</p>></div>
 </section>
 </li>
 <li>
@@ -250,185 +253,186 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getSlug</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.50">getSlug</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.51">getSlug</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.58">getDescription</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.description</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.59">getDescription</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.description</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getParent()">
 <h3>getParent</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.65">getParent</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p></div>
+</span><span class="return-type">@Valid <a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.66">getParent</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOrderHint()">
 <h3>getOrderHint</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.73">getOrderHint</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.orderHint</code>.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.74">getOrderHint</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.orderHint</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalId()">
 <h3>getExternalId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.80">getExternalId</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.externalId</code>.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.81">getExternalId</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.externalId</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMetaTitle()">
 <h3>getMetaTitle</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.86">getMetaTitle</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.metaTitle</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.87">getMetaTitle</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.metaTitle</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMetaDescription()">
 <h3>getMetaDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.93">getMetaDescription</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.metaDescription</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.94">getMetaDescription</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.metaDescription</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMetaKeywords()">
 <h3>getMetaKeywords</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.100">getMetaKeywords</a></span>()</div>
-<div class="block"><p>Maps to <code>Category.metaKeywords</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.101">getMetaKeywords</a></span>()</div>
+<div class="block"><*  <p>Maps to <code>Category.metaKeywords</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAssets()">
 <h3>getAssets</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.104">getAssets</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.108">getAssets</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.111">getCustom</a></span>()</div>
-<div class="block"><p>The custom fields for this Category.</p></div>
+</span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.115">getCustom</a></span>()</div>
+<div class="block"><*  <p>The custom fields for this Category.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.115">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.119">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSlug(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setSlug</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.117">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.121">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescription(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.119">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.123">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setParent(com.commercetools.importapi.models.common.CategoryKeyReference)">
 <h3>setParent</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.121">setParent</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&nbsp;parent)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.125">setParent</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&nbsp;parent)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOrderHint(java.lang.String)">
 <h3>setOrderHint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.123">setOrderHint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderHint)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.127">setOrderHint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderHint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalId(java.lang.String)">
 <h3>setExternalId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.125">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.129">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMetaTitle(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaTitle</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.127">setMetaTitle</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.131">setMetaTitle</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMetaDescription(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.129">setMetaDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.133">setMetaDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMetaKeywords(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaKeywords</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.131">setMetaKeywords</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.135">setMetaKeywords</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssets(com.commercetools.importapi.models.common.Asset...)">
 <h3>setAssets</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.133">setAssets</a></span>&#8203;<span class="parameters">(<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>...&nbsp;assets)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.137">setAssets</a></span>&#8203;<span class="parameters">(<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>...&nbsp;assets)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssets(java.util.List)">
 <h3>setAssets</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.136">setAssets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;&nbsp;assets)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.140">setAssets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;&nbsp;assets)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.importapi.models.customfields.Custom)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.138">setCustom</a></span>&#8203;<span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.142">setCustom</a></span>&#8203;<span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.140">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.144">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.categories.CategoryImport)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.144">of</a></span>&#8203;<span class="parameters">(<a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.148">of</a></span>&#8203;<span class="parameters">(<a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.161">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.165">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.categories.CategoryImport)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.165">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.169">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCategoryImport(java.util.function.Function)">
 <h3>withCategoryImport</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.169">withCategoryImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.173">withCategoryImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.173">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/categories/CategoryImport.html#line.177">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

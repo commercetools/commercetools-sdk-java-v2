@@ -83,17 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.22">GraphQLErrorBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.24">GraphQLErrorBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">GraphQLErrorBuilder
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   GraphQLError graphQLError = GraphQLError.builder()
-           .message("{message}")
-           .plusLocations(locationsBuilder -> locationsBuilder)
-           .plusPath(pathBuilder -> pathBuilder)
-           .build()
+     GraphQLError graphQLError = GraphQLError.builder()
+             .message("{message}")
+             .plusLocations(locationsBuilder -> locationsBuilder)
+             .plusPath(pathBuilder -> pathBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -142,13 +144,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#locations(com.commercetools.api.models.graph_ql.GraphQLErrorLocation...)">locations</a></span>&#8203;(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#locations(java.util.List)">locations</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;locations)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#message(java.lang.String)">message</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -157,22 +165,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#path(java.lang.Object...)">path</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#path(java.util.List)">path</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;path)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusLocations(com.commercetools.api.models.graph_ql.GraphQLErrorLocation...)">plusLocations</a></span>&#8203;(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusLocations(java.util.function.Function)">plusLocations</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,&#8203;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusPath(java.lang.Object...)">plusPath</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withLocations(java.util.function.Function)">withLocations</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,&#8203;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><></div>
+</div>
 </div>
 </div>
 </div>
@@ -193,7 +213,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>GraphQLErrorBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.23">GraphQLErrorBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.25">GraphQLErrorBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -207,79 +227,88 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="message(java.lang.String)">
 <h3>message</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.31">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.37">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="locations(com.commercetools.api.models.graph_ql.GraphQLErrorLocation...)">
 <h3>locations</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.36">locations</a></span>&#8203;<span class="parameters">(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.46">locations</a></span>&#8203;<span class="parameters">(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="locations(java.util.List)">
 <h3>locations</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.42">locations</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;locations)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.56">locations</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;locations)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusLocations(com.commercetools.api.models.graph_ql.GraphQLErrorLocation...)">
 <h3>plusLocations</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.48">plusLocations</a></span>&#8203;<span class="parameters">(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.66">plusLocations</a></span>&#8203;<span class="parameters">(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusLocations(java.util.function.Function)">
 <h3>plusLocations</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.57">plusLocations</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,&#8203;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.79">plusLocations</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,&#8203;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withLocations(java.util.function.Function)">
 <h3>withLocations</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.67">withLocations</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,&#8203;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.93">withLocations</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,&#8203;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="path(java.lang.Object...)">
 <h3>path</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.75">path</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.105">path</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="path(java.util.List)">
 <h3>path</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.80">path</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;path)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.114">path</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;path)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPath(java.lang.Object...)">
 <h3>plusPath</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.85">plusPath</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.123">plusPath</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</span></div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.93">getMessage</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.131">getMessage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLocations()">
 <h3>getLocations</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.97">getLocations</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.135">getLocations</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPath()">
 <h3>getPath</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.101">getPath</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.139">getPath</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.105">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.143">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&gt;</code></dd>
@@ -289,20 +318,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.115">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.153">buildUnchecked</a></span>()</div>
 <div class="block">builds GraphQLError without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.119">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.157">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.graph_ql.GraphQLError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.123">of</a></span>&#8203;<span class="parameters">(<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/graph_ql/GraphQLErrorBuilder.html#line.161">of</a></span>&#8203;<span class="parameters">(<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

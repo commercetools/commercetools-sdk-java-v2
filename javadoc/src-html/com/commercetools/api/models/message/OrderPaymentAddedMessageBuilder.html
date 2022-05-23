@@ -23,266 +23,296 @@
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">/**</span>
-<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">016</span><span id="line.16">   OrderPaymentAddedMessage orderPaymentAddedMessage = OrderPaymentAddedMessage.builder()</span>
-<span class="source-line-no">017</span><span id="line.17">           .id("{id}")</span>
-<span class="source-line-no">018</span><span id="line.18">           .version(0.3)</span>
-<span class="source-line-no">019</span><span id="line.19">           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">020</span><span id="line.20">           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">021</span><span id="line.21">           .sequenceNumber(0.3)</span>
-<span class="source-line-no">022</span><span id="line.22">           .resource(resourceBuilder -&gt; resourceBuilder)</span>
-<span class="source-line-no">023</span><span id="line.23">           .resourceVersion(0.3)</span>
-<span class="source-line-no">024</span><span id="line.24">           .payment(paymentBuilder -&gt; paymentBuilder)</span>
-<span class="source-line-no">025</span><span id="line.25">           .build()</span>
-<span class="source-line-no">026</span><span id="line.26"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> &lt;/div&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> */</span>
-<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">030</span><span id="line.30">public class OrderPaymentAddedMessageBuilder implements Builder&lt;OrderPaymentAddedMessage&gt; {</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    private String id;</span>
+<span class="source-line-no">013</span><span id="line.13"> * OrderPaymentAddedMessageBuilder</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *     OrderPaymentAddedMessage orderPaymentAddedMessage = OrderPaymentAddedMessage.builder()</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .id("{id}")</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .version(0.3)</span>
+<span class="source-line-no">021</span><span id="line.21"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">022</span><span id="line.22"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">023</span><span id="line.23"> *             .sequenceNumber(0.3)</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .resource(resourceBuilder -&gt; resourceBuilder)</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .resourceVersion(0.3)</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .payment(paymentBuilder -&gt; paymentBuilder)</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .build()</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;/div&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> */</span>
+<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">032</span><span id="line.32">public class OrderPaymentAddedMessageBuilder implements Builder&lt;OrderPaymentAddedMessage&gt; {</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    private Long version;</span>
+<span class="source-line-no">034</span><span id="line.34">    private String id;</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">036</span><span id="line.36">    private Long version;</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">038</span><span id="line.38">    private java.time.ZonedDateTime createdAt;</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    @Nullable</span>
-<span class="source-line-no">041</span><span id="line.41">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    @Nullable</span>
-<span class="source-line-no">044</span><span id="line.44">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    private Long sequenceNumber;</span>
+<span class="source-line-no">040</span><span id="line.40">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    @Nullable</span>
+<span class="source-line-no">043</span><span id="line.43">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    @Nullable</span>
+<span class="source-line-no">046</span><span id="line.46">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    private com.commercetools.api.models.common.Reference resource;</span>
+<span class="source-line-no">048</span><span id="line.48">    private Long sequenceNumber;</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    private Long resourceVersion;</span>
+<span class="source-line-no">050</span><span id="line.50">    private com.commercetools.api.models.common.Reference resource;</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    @Nullable</span>
-<span class="source-line-no">053</span><span id="line.53">    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    private com.commercetools.api.models.payment.PaymentReference payment;</span>
+<span class="source-line-no">052</span><span id="line.52">    private Long resourceVersion;</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    @Nullable</span>
+<span class="source-line-no">055</span><span id="line.55">    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Platform-generated unique identifier of the Message.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">     */</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public OrderPaymentAddedMessageBuilder id(final String id) {</span>
-<span class="source-line-no">062</span><span id="line.62">        this.id = id;</span>
-<span class="source-line-no">063</span><span id="line.63">        return this;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public OrderPaymentAddedMessageBuilder version(final Long version) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.version = version;</span>
-<span class="source-line-no">068</span><span id="line.68">        return this;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public OrderPaymentAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">072</span><span id="line.72">        this.createdAt = createdAt;</span>
-<span class="source-line-no">073</span><span id="line.73">        return this;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public OrderPaymentAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.lastModifiedAt = lastModifiedAt;</span>
-<span class="source-line-no">078</span><span id="line.78">        return this;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">057</span><span id="line.57">    private com.commercetools.api.models.payment.PaymentReference payment;</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the Message.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public OrderPaymentAddedMessageBuilder id(final String id) {</span>
+<span class="source-line-no">064</span><span id="line.64">        this.id = id;</span>
+<span class="source-line-no">065</span><span id="line.65">        return this;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    /**</span>
+<span class="source-line-no">069</span><span id="line.69">     &lt;&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">     */</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public OrderPaymentAddedMessageBuilder version(final Long version) {</span>
+<span class="source-line-no">073</span><span id="line.73">        this.version = version;</span>
+<span class="source-line-no">074</span><span id="line.74">        return this;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    /**</span>
+<span class="source-line-no">078</span><span id="line.78">     &lt;&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    /**</span>
-<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">083</span><span id="line.83">     */</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public OrderPaymentAddedMessageBuilder lastModifiedBy(</span>
-<span class="source-line-no">086</span><span id="line.86">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
-<span class="source-line-no">087</span><span id="line.87">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
-<span class="source-line-no">088</span><span id="line.88">        return this;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">081</span><span id="line.81">    public OrderPaymentAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.createdAt = createdAt;</span>
+<span class="source-line-no">083</span><span id="line.83">        return this;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    /**</span>
+<span class="source-line-no">087</span><span id="line.87">     &lt;&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public OrderPaymentAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
+<span class="source-line-no">091</span><span id="line.91">        this.lastModifiedAt = lastModifiedAt;</span>
+<span class="source-line-no">092</span><span id="line.92">        return this;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public OrderPaymentAddedMessageBuilder lastModifiedBy(</span>
-<span class="source-line-no">096</span><span id="line.96">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
-<span class="source-line-no">097</span><span id="line.97">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="source-line-no">098</span><span id="line.98">        return this;</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    /**</span>
-<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">095</span><span id="line.95">    /**</span>
+<span class="source-line-no">096</span><span id="line.96">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">097</span><span id="line.97">     */</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public OrderPaymentAddedMessageBuilder lastModifiedBy(</span>
+<span class="source-line-no">100</span><span id="line.100">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
+<span class="source-line-no">101</span><span id="line.101">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
+<span class="source-line-no">102</span><span id="line.102">        return this;</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public OrderPaymentAddedMessageBuilder createdBy(</span>
-<span class="source-line-no">106</span><span id="line.106">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
-<span class="source-line-no">107</span><span id="line.107">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
-<span class="source-line-no">108</span><span id="line.108">        return this;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    /**</span>
-<span class="source-line-no">112</span><span id="line.112">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">113</span><span id="line.113">     */</span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">     */</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public OrderPaymentAddedMessageBuilder lastModifiedBy(</span>
+<span class="source-line-no">110</span><span id="line.110">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
+<span class="source-line-no">111</span><span id="line.111">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="source-line-no">112</span><span id="line.112">        return this;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public OrderPaymentAddedMessageBuilder createdBy(</span>
-<span class="source-line-no">116</span><span id="line.116">            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
-<span class="source-line-no">117</span><span id="line.117">        this.createdBy = createdBy;</span>
-<span class="source-line-no">118</span><span id="line.118">        return this;</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public OrderPaymentAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {</span>
-<span class="source-line-no">122</span><span id="line.122">        this.sequenceNumber = sequenceNumber;</span>
-<span class="source-line-no">123</span><span id="line.123">        return this;</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    /**</span>
-<span class="source-line-no">127</span><span id="line.127">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
-<span class="source-line-no">128</span><span id="line.128">     */</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    public OrderPaymentAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {</span>
-<span class="source-line-no">131</span><span id="line.131">        this.resource = resource;</span>
+<span class="source-line-no">115</span><span id="line.115">    /**</span>
+<span class="source-line-no">116</span><span id="line.116">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public OrderPaymentAddedMessageBuilder createdBy(</span>
+<span class="source-line-no">120</span><span id="line.120">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
+<span class="source-line-no">121</span><span id="line.121">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
+<span class="source-line-no">122</span><span id="line.122">        return this;</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    /**</span>
+<span class="source-line-no">126</span><span id="line.126">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public OrderPaymentAddedMessageBuilder createdBy(</span>
+<span class="source-line-no">130</span><span id="line.130">            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
+<span class="source-line-no">131</span><span id="line.131">        this.createdBy = createdBy;</span>
 <span class="source-line-no">132</span><span id="line.132">        return this;</span>
 <span class="source-line-no">133</span><span id="line.133">    }</span>
 <span class="source-line-no">134</span><span id="line.134"></span>
 <span class="source-line-no">135</span><span id="line.135">    /**</span>
-<span class="source-line-no">136</span><span id="line.136">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
+<span class="source-line-no">136</span><span id="line.136">     &lt;&gt;</span>
 <span class="source-line-no">137</span><span id="line.137">     */</span>
 <span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public OrderPaymentAddedMessageBuilder resource(</span>
-<span class="source-line-no">140</span><span id="line.140">            Function&lt;com.commercetools.api.models.common.ReferenceBuilder, Builder&lt;? extends com.commercetools.api.models.common.Reference&gt;&gt; builder) {</span>
-<span class="source-line-no">141</span><span id="line.141">        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();</span>
-<span class="source-line-no">142</span><span id="line.142">        return this;</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    public OrderPaymentAddedMessageBuilder resourceVersion(final Long resourceVersion) {</span>
-<span class="source-line-no">146</span><span id="line.146">        this.resourceVersion = resourceVersion;</span>
-<span class="source-line-no">147</span><span id="line.147">        return this;</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public OrderPaymentAddedMessageBuilder resourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">151</span><span id="line.151">            Function&lt;com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder&gt; builder) {</span>
-<span class="source-line-no">152</span><span id="line.152">        this.resourceUserProvidedIdentifiers = builder</span>
-<span class="source-line-no">153</span><span id="line.153">                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())</span>
-<span class="source-line-no">154</span><span id="line.154">                .build();</span>
-<span class="source-line-no">155</span><span id="line.155">        return this;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public OrderPaymentAddedMessageBuilder resourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">159</span><span id="line.159">            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
-<span class="source-line-no">160</span><span id="line.160">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">161</span><span id="line.161">        return this;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">     *  &lt;p&gt;Reference to a Payment.&lt;/p&gt;</span>
-<span class="source-line-no">166</span><span id="line.166">     */</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public OrderPaymentAddedMessageBuilder payment(</span>
-<span class="source-line-no">169</span><span id="line.169">            Function&lt;com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">170</span><span id="line.170">        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build();</span>
-<span class="source-line-no">171</span><span id="line.171">        return this;</span>
-<span class="source-line-no">172</span><span id="line.172">    }</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    /**</span>
-<span class="source-line-no">175</span><span id="line.175">     *  &lt;p&gt;Reference to a Payment.&lt;/p&gt;</span>
-<span class="source-line-no">176</span><span id="line.176">     */</span>
-<span class="source-line-no">177</span><span id="line.177"></span>
-<span class="source-line-no">178</span><span id="line.178">    public OrderPaymentAddedMessageBuilder payment(</span>
-<span class="source-line-no">179</span><span id="line.179">            final com.commercetools.api.models.payment.PaymentReference payment) {</span>
-<span class="source-line-no">180</span><span id="line.180">        this.payment = payment;</span>
+<span class="source-line-no">139</span><span id="line.139">    public OrderPaymentAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {</span>
+<span class="source-line-no">140</span><span id="line.140">        this.sequenceNumber = sequenceNumber;</span>
+<span class="source-line-no">141</span><span id="line.141">        return this;</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    /**</span>
+<span class="source-line-no">145</span><span id="line.145">     &lt;*  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">146</span><span id="line.146">     */</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public OrderPaymentAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {</span>
+<span class="source-line-no">149</span><span id="line.149">        this.resource = resource;</span>
+<span class="source-line-no">150</span><span id="line.150">        return this;</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    /**</span>
+<span class="source-line-no">154</span><span id="line.154">     &lt;*  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">155</span><span id="line.155">     */</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    public OrderPaymentAddedMessageBuilder resource(</span>
+<span class="source-line-no">158</span><span id="line.158">            Function&lt;com.commercetools.api.models.common.ReferenceBuilder, Builder&lt;? extends com.commercetools.api.models.common.Reference&gt;&gt; builder) {</span>
+<span class="source-line-no">159</span><span id="line.159">        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();</span>
+<span class="source-line-no">160</span><span id="line.160">        return this;</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    /**</span>
+<span class="source-line-no">164</span><span id="line.164">     &lt;&gt;</span>
+<span class="source-line-no">165</span><span id="line.165">     */</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    public OrderPaymentAddedMessageBuilder resourceVersion(final Long resourceVersion) {</span>
+<span class="source-line-no">168</span><span id="line.168">        this.resourceVersion = resourceVersion;</span>
+<span class="source-line-no">169</span><span id="line.169">        return this;</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    /**</span>
+<span class="source-line-no">173</span><span id="line.173">     &lt;&gt;</span>
+<span class="source-line-no">174</span><span id="line.174">     */</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    public OrderPaymentAddedMessageBuilder resourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">177</span><span id="line.177">            Function&lt;com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder&gt; builder) {</span>
+<span class="source-line-no">178</span><span id="line.178">        this.resourceUserProvidedIdentifiers = builder</span>
+<span class="source-line-no">179</span><span id="line.179">                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())</span>
+<span class="source-line-no">180</span><span id="line.180">                .build();</span>
 <span class="source-line-no">181</span><span id="line.181">        return this;</span>
 <span class="source-line-no">182</span><span id="line.182">    }</span>
 <span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public String getId() {</span>
-<span class="source-line-no">185</span><span id="line.185">        return this.id;</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
+<span class="source-line-no">184</span><span id="line.184">    /**</span>
+<span class="source-line-no">185</span><span id="line.185">     &lt;&gt;</span>
+<span class="source-line-no">186</span><span id="line.186">     */</span>
 <span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public Long getVersion() {</span>
-<span class="source-line-no">189</span><span id="line.189">        return this.version;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">193</span><span id="line.193">        return this.createdAt;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">197</span><span id="line.197">        return this.lastModifiedAt;</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    @Nullable</span>
-<span class="source-line-no">201</span><span id="line.201">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">202</span><span id="line.202">        return this.lastModifiedBy;</span>
-<span class="source-line-no">203</span><span id="line.203">    }</span>
-<span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    @Nullable</span>
-<span class="source-line-no">206</span><span id="line.206">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">207</span><span id="line.207">        return this.createdBy;</span>
-<span class="source-line-no">208</span><span id="line.208">    }</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    public Long getSequenceNumber() {</span>
-<span class="source-line-no">211</span><span id="line.211">        return this.sequenceNumber;</span>
+<span class="source-line-no">188</span><span id="line.188">    public OrderPaymentAddedMessageBuilder resourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">189</span><span id="line.189">            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
+<span class="source-line-no">190</span><span id="line.190">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">191</span><span id="line.191">        return this;</span>
+<span class="source-line-no">192</span><span id="line.192">    }</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    /**</span>
+<span class="source-line-no">195</span><span id="line.195">     &lt;*  &lt;p&gt;Reference to a Payment.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">196</span><span id="line.196">     */</span>
+<span class="source-line-no">197</span><span id="line.197"></span>
+<span class="source-line-no">198</span><span id="line.198">    public OrderPaymentAddedMessageBuilder payment(</span>
+<span class="source-line-no">199</span><span id="line.199">            Function&lt;com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">200</span><span id="line.200">        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build();</span>
+<span class="source-line-no">201</span><span id="line.201">        return this;</span>
+<span class="source-line-no">202</span><span id="line.202">    }</span>
+<span class="source-line-no">203</span><span id="line.203"></span>
+<span class="source-line-no">204</span><span id="line.204">    /**</span>
+<span class="source-line-no">205</span><span id="line.205">     &lt;*  &lt;p&gt;Reference to a Payment.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">206</span><span id="line.206">     */</span>
+<span class="source-line-no">207</span><span id="line.207"></span>
+<span class="source-line-no">208</span><span id="line.208">    public OrderPaymentAddedMessageBuilder payment(</span>
+<span class="source-line-no">209</span><span id="line.209">            final com.commercetools.api.models.payment.PaymentReference payment) {</span>
+<span class="source-line-no">210</span><span id="line.210">        this.payment = payment;</span>
+<span class="source-line-no">211</span><span id="line.211">        return this;</span>
 <span class="source-line-no">212</span><span id="line.212">    }</span>
 <span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">    public com.commercetools.api.models.common.Reference getResource() {</span>
-<span class="source-line-no">215</span><span id="line.215">        return this.resource;</span>
+<span class="source-line-no">214</span><span id="line.214">    public String getId() {</span>
+<span class="source-line-no">215</span><span id="line.215">        return this.id;</span>
 <span class="source-line-no">216</span><span id="line.216">    }</span>
 <span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    public Long getResourceVersion() {</span>
-<span class="source-line-no">219</span><span id="line.219">        return this.resourceVersion;</span>
+<span class="source-line-no">218</span><span id="line.218">    public Long getVersion() {</span>
+<span class="source-line-no">219</span><span id="line.219">        return this.version;</span>
 <span class="source-line-no">220</span><span id="line.220">    }</span>
 <span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    @Nullable</span>
-<span class="source-line-no">223</span><span id="line.223">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
-<span class="source-line-no">224</span><span id="line.224">        return this.resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">225</span><span id="line.225">    }</span>
-<span class="source-line-no">226</span><span id="line.226"></span>
-<span class="source-line-no">227</span><span id="line.227">    public com.commercetools.api.models.payment.PaymentReference getPayment() {</span>
-<span class="source-line-no">228</span><span id="line.228">        return this.payment;</span>
-<span class="source-line-no">229</span><span id="line.229">    }</span>
-<span class="source-line-no">230</span><span id="line.230"></span>
-<span class="source-line-no">231</span><span id="line.231">    public OrderPaymentAddedMessage build() {</span>
-<span class="source-line-no">232</span><span id="line.232">        Objects.requireNonNull(id, OrderPaymentAddedMessage.class + ": id is missing");</span>
-<span class="source-line-no">233</span><span id="line.233">        Objects.requireNonNull(version, OrderPaymentAddedMessage.class + ": version is missing");</span>
-<span class="source-line-no">234</span><span id="line.234">        Objects.requireNonNull(createdAt, OrderPaymentAddedMessage.class + ": createdAt is missing");</span>
-<span class="source-line-no">235</span><span id="line.235">        Objects.requireNonNull(lastModifiedAt, OrderPaymentAddedMessage.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">236</span><span id="line.236">        Objects.requireNonNull(sequenceNumber, OrderPaymentAddedMessage.class + ": sequenceNumber is missing");</span>
-<span class="source-line-no">237</span><span id="line.237">        Objects.requireNonNull(resource, OrderPaymentAddedMessage.class + ": resource is missing");</span>
-<span class="source-line-no">238</span><span id="line.238">        Objects.requireNonNull(resourceVersion, OrderPaymentAddedMessage.class + ": resourceVersion is missing");</span>
-<span class="source-line-no">239</span><span id="line.239">        Objects.requireNonNull(payment, OrderPaymentAddedMessage.class + ": payment is missing");</span>
-<span class="source-line-no">240</span><span id="line.240">        return new OrderPaymentAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">241</span><span id="line.241">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, payment);</span>
+<span class="source-line-no">222</span><span id="line.222">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">223</span><span id="line.223">        return this.createdAt;</span>
+<span class="source-line-no">224</span><span id="line.224">    }</span>
+<span class="source-line-no">225</span><span id="line.225"></span>
+<span class="source-line-no">226</span><span id="line.226">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">227</span><span id="line.227">        return this.lastModifiedAt;</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">    @Nullable</span>
+<span class="source-line-no">231</span><span id="line.231">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">232</span><span id="line.232">        return this.lastModifiedBy;</span>
+<span class="source-line-no">233</span><span id="line.233">    }</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">    @Nullable</span>
+<span class="source-line-no">236</span><span id="line.236">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">237</span><span id="line.237">        return this.createdBy;</span>
+<span class="source-line-no">238</span><span id="line.238">    }</span>
+<span class="source-line-no">239</span><span id="line.239"></span>
+<span class="source-line-no">240</span><span id="line.240">    public Long getSequenceNumber() {</span>
+<span class="source-line-no">241</span><span id="line.241">        return this.sequenceNumber;</span>
 <span class="source-line-no">242</span><span id="line.242">    }</span>
 <span class="source-line-no">243</span><span id="line.243"></span>
-<span class="source-line-no">244</span><span id="line.244">    /**</span>
-<span class="source-line-no">245</span><span id="line.245">     * builds OrderPaymentAddedMessage without checking for non null required values</span>
-<span class="source-line-no">246</span><span id="line.246">     */</span>
-<span class="source-line-no">247</span><span id="line.247">    public OrderPaymentAddedMessage buildUnchecked() {</span>
-<span class="source-line-no">248</span><span id="line.248">        return new OrderPaymentAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">249</span><span id="line.249">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, payment);</span>
+<span class="source-line-no">244</span><span id="line.244">    public com.commercetools.api.models.common.Reference getResource() {</span>
+<span class="source-line-no">245</span><span id="line.245">        return this.resource;</span>
+<span class="source-line-no">246</span><span id="line.246">    }</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">    public Long getResourceVersion() {</span>
+<span class="source-line-no">249</span><span id="line.249">        return this.resourceVersion;</span>
 <span class="source-line-no">250</span><span id="line.250">    }</span>
 <span class="source-line-no">251</span><span id="line.251"></span>
-<span class="source-line-no">252</span><span id="line.252">    public static OrderPaymentAddedMessageBuilder of() {</span>
-<span class="source-line-no">253</span><span id="line.253">        return new OrderPaymentAddedMessageBuilder();</span>
-<span class="source-line-no">254</span><span id="line.254">    }</span>
-<span class="source-line-no">255</span><span id="line.255"></span>
-<span class="source-line-no">256</span><span id="line.256">    public static OrderPaymentAddedMessageBuilder of(final OrderPaymentAddedMessage template) {</span>
-<span class="source-line-no">257</span><span id="line.257">        OrderPaymentAddedMessageBuilder builder = new OrderPaymentAddedMessageBuilder();</span>
-<span class="source-line-no">258</span><span id="line.258">        builder.id = template.getId();</span>
-<span class="source-line-no">259</span><span id="line.259">        builder.version = template.getVersion();</span>
-<span class="source-line-no">260</span><span id="line.260">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">261</span><span id="line.261">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">262</span><span id="line.262">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">263</span><span id="line.263">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">264</span><span id="line.264">        builder.sequenceNumber = template.getSequenceNumber();</span>
-<span class="source-line-no">265</span><span id="line.265">        builder.resource = template.getResource();</span>
-<span class="source-line-no">266</span><span id="line.266">        builder.resourceVersion = template.getResourceVersion();</span>
-<span class="source-line-no">267</span><span id="line.267">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
-<span class="source-line-no">268</span><span id="line.268">        builder.payment = template.getPayment();</span>
-<span class="source-line-no">269</span><span id="line.269">        return builder;</span>
-<span class="source-line-no">270</span><span id="line.270">    }</span>
-<span class="source-line-no">271</span><span id="line.271"></span>
-<span class="source-line-no">272</span><span id="line.272">}</span>
+<span class="source-line-no">252</span><span id="line.252">    @Nullable</span>
+<span class="source-line-no">253</span><span id="line.253">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
+<span class="source-line-no">254</span><span id="line.254">        return this.resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">255</span><span id="line.255">    }</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    public com.commercetools.api.models.payment.PaymentReference getPayment() {</span>
+<span class="source-line-no">258</span><span id="line.258">        return this.payment;</span>
+<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">260</span><span id="line.260"></span>
+<span class="source-line-no">261</span><span id="line.261">    public OrderPaymentAddedMessage build() {</span>
+<span class="source-line-no">262</span><span id="line.262">        Objects.requireNonNull(id, OrderPaymentAddedMessage.class + ": id is missing");</span>
+<span class="source-line-no">263</span><span id="line.263">        Objects.requireNonNull(version, OrderPaymentAddedMessage.class + ": version is missing");</span>
+<span class="source-line-no">264</span><span id="line.264">        Objects.requireNonNull(createdAt, OrderPaymentAddedMessage.class + ": createdAt is missing");</span>
+<span class="source-line-no">265</span><span id="line.265">        Objects.requireNonNull(lastModifiedAt, OrderPaymentAddedMessage.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">266</span><span id="line.266">        Objects.requireNonNull(sequenceNumber, OrderPaymentAddedMessage.class + ": sequenceNumber is missing");</span>
+<span class="source-line-no">267</span><span id="line.267">        Objects.requireNonNull(resource, OrderPaymentAddedMessage.class + ": resource is missing");</span>
+<span class="source-line-no">268</span><span id="line.268">        Objects.requireNonNull(resourceVersion, OrderPaymentAddedMessage.class + ": resourceVersion is missing");</span>
+<span class="source-line-no">269</span><span id="line.269">        Objects.requireNonNull(payment, OrderPaymentAddedMessage.class + ": payment is missing");</span>
+<span class="source-line-no">270</span><span id="line.270">        return new OrderPaymentAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">271</span><span id="line.271">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, payment);</span>
+<span class="source-line-no">272</span><span id="line.272">    }</span>
+<span class="source-line-no">273</span><span id="line.273"></span>
+<span class="source-line-no">274</span><span id="line.274">    /**</span>
+<span class="source-line-no">275</span><span id="line.275">     * builds OrderPaymentAddedMessage without checking for non null required values</span>
+<span class="source-line-no">276</span><span id="line.276">     */</span>
+<span class="source-line-no">277</span><span id="line.277">    public OrderPaymentAddedMessage buildUnchecked() {</span>
+<span class="source-line-no">278</span><span id="line.278">        return new OrderPaymentAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">279</span><span id="line.279">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, payment);</span>
+<span class="source-line-no">280</span><span id="line.280">    }</span>
+<span class="source-line-no">281</span><span id="line.281"></span>
+<span class="source-line-no">282</span><span id="line.282">    public static OrderPaymentAddedMessageBuilder of() {</span>
+<span class="source-line-no">283</span><span id="line.283">        return new OrderPaymentAddedMessageBuilder();</span>
+<span class="source-line-no">284</span><span id="line.284">    }</span>
+<span class="source-line-no">285</span><span id="line.285"></span>
+<span class="source-line-no">286</span><span id="line.286">    public static OrderPaymentAddedMessageBuilder of(final OrderPaymentAddedMessage template) {</span>
+<span class="source-line-no">287</span><span id="line.287">        OrderPaymentAddedMessageBuilder builder = new OrderPaymentAddedMessageBuilder();</span>
+<span class="source-line-no">288</span><span id="line.288">        builder.id = template.getId();</span>
+<span class="source-line-no">289</span><span id="line.289">        builder.version = template.getVersion();</span>
+<span class="source-line-no">290</span><span id="line.290">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">291</span><span id="line.291">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">292</span><span id="line.292">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">293</span><span id="line.293">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">294</span><span id="line.294">        builder.sequenceNumber = template.getSequenceNumber();</span>
+<span class="source-line-no">295</span><span id="line.295">        builder.resource = template.getResource();</span>
+<span class="source-line-no">296</span><span id="line.296">        builder.resourceVersion = template.getResourceVersion();</span>
+<span class="source-line-no">297</span><span id="line.297">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
+<span class="source-line-no">298</span><span id="line.298">        builder.payment = template.getPayment();</span>
+<span class="source-line-no">299</span><span id="line.299">        return builder;</span>
+<span class="source-line-no">300</span><span id="line.300">    }</span>
+<span class="source-line-no">301</span><span id="line.301"></span>
+<span class="source-line-no">302</span><span id="line.302">}</span>
 
 
 

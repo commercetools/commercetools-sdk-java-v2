@@ -84,15 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../cart_discount/CartDiscountReferenceImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceImpl</a></code>, <code><a href="../cart/CartReferenceImpl.html" title="class in com.commercetools.api.models.cart">CartReferenceImpl</a></code>, <code><a href="../category/CategoryReferenceImpl.html" title="class in com.commercetools.api.models.category">CategoryReferenceImpl</a></code>, <code><a href="../channel/ChannelReferenceImpl.html" title="class in com.commercetools.api.models.channel">ChannelReferenceImpl</a></code>, <code><a href="../customer_group/CustomerGroupReferenceImpl.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceImpl</a></code>, <code><a href="../customer/CustomerReferenceImpl.html" title="class in com.commercetools.api.models.customer">CustomerReferenceImpl</a></code>, <code><a href="../custom_object/CustomObjectReferenceImpl.html" title="class in com.commercetools.api.models.custom_object">CustomObjectReferenceImpl</a></code>, <code><a href="../discount_code/DiscountCodeReferenceImpl.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceImpl</a></code>, <code><a href="GenericReferenceImpl.html" title="class in com.commercetools.api.models.common">GenericReferenceImpl</a></code>, <code><a href="../inventory/InventoryEntryReferenceImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntryReferenceImpl</a></code>, <code><a href="../order_edit/OrderEditReferenceImpl.html" title="class in com.commercetools.api.models.order_edit">OrderEditReferenceImpl</a></code>, <code><a href="../order/OrderReferenceImpl.html" title="class in com.commercetools.api.models.order">OrderReferenceImpl</a></code>, <code><a href="../payment/PaymentReferenceImpl.html" title="class in com.commercetools.api.models.payment">PaymentReferenceImpl</a></code>, <code><a href="../product_discount/ProductDiscountReferenceImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountReferenceImpl</a></code>, <code><a href="../product/ProductReferenceImpl.html" title="class in com.commercetools.api.models.product">ProductReferenceImpl</a></code>, <code><a href="../product_selection/ProductSelectionReferenceImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceImpl</a></code>, <code><a href="../product_type/ProductTypeReferenceImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeReferenceImpl</a></code>, <code><a href="ReferenceImpl.html" title="class in com.commercetools.api.models.common">ReferenceImpl</a></code>, <code><a href="../review/ReviewReferenceImpl.html" title="class in com.commercetools.api.models.review">ReviewReferenceImpl</a></code>, <code><a href="../shipping_method/ShippingMethodReferenceImpl.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodReferenceImpl</a></code>, <code><a href="../shopping_list/ShoppingListReferenceImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListReferenceImpl</a></code>, <code><a href="../standalone_price/StandalonePriceReferenceImpl.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceReferenceImpl</a></code>, <code><a href="../state/StateReferenceImpl.html" title="class in com.commercetools.api.models.state">StateReferenceImpl</a></code>, <code><a href="../store/StoreReferenceImpl.html" title="class in com.commercetools.api.models.store">StoreReferenceImpl</a></code>, <code><a href="../tax_category/TaxCategoryReferenceImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceImpl</a></code>, <code><a href="../type/TypeReferenceImpl.html" title="class in com.commercetools.api.models.type">TypeReferenceImpl</a></code>, <code><a href="../zone/ZoneReferenceImpl.html" title="class in com.commercetools.api.models.zone">ZoneReferenceImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.52">Reference</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.53">Reference</a></span></div>
 <div class="block"><p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
 
+ <hr>
  Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   Reference reference = Reference.cartDiscountBuilder()
-           id("{id}")
-           .build()
+     Reference reference = Reference.cartDiscountBuilder()
+             id("{id}")
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -133,12 +134,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Unique ID of the referenced resource.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTypeId()">getTypeId</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Type of referenced resource.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="../inventory/InventoryEntryReferenceBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryReferenceBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#inventoryEntryBuilder()">inventoryEntryBuilder</a></span>()</code></div>
@@ -221,184 +222,184 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getTypeId()">
 <h3>getTypeId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.86">getTypeId</a></span>()</div>
-<div class="block"><p>Type of referenced resource.</p></div>
+</span><span class="return-type">@NotNull <a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.87">getTypeId</a></span>()</div>
+<div class="block"><*  <p>Type of referenced resource.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.93">getId</a></span>()</div>
-<div class="block"><p>Unique ID of the referenced resource.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.94">getId</a></span>()</div>
+<div class="block"><*  <p>Unique ID of the referenced resource.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.97">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.98">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="cartDiscountBuilder()">
 <h3>cartDiscountBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.99">cartDiscountBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.100">cartDiscountBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="cartBuilder()">
 <h3>cartBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../cart/CartReferenceBuilder.html" title="class in com.commercetools.api.models.cart">CartReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.103">cartBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../cart/CartReferenceBuilder.html" title="class in com.commercetools.api.models.cart">CartReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.104">cartBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="categoryBuilder()">
 <h3>categoryBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.107">categoryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.108">categoryBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="channelBuilder()">
 <h3>channelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.111">channelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.112">channelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="keyValueDocumentBuilder()">
 <h3>keyValueDocumentBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../custom_object/CustomObjectReferenceBuilder.html" title="class in com.commercetools.api.models.custom_object">CustomObjectReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.115">keyValueDocumentBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../custom_object/CustomObjectReferenceBuilder.html" title="class in com.commercetools.api.models.custom_object">CustomObjectReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.116">keyValueDocumentBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerGroupBuilder()">
 <h3>customerGroupBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.119">customerGroupBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.120">customerGroupBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerBuilder()">
 <h3>customerBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.123">customerBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.124">customerBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="discountCodeBuilder()">
 <h3>discountCodeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../discount_code/DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.127">discountCodeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../discount_code/DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.128">discountCodeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="inventoryEntryBuilder()">
 <h3>inventoryEntryBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../inventory/InventoryEntryReferenceBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.131">inventoryEntryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../inventory/InventoryEntryReferenceBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.132">inventoryEntryBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="orderEditBuilder()">
 <h3>orderEditBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../order_edit/OrderEditReferenceBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.135">orderEditBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../order_edit/OrderEditReferenceBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.136">orderEditBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="orderBuilder()">
 <h3>orderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.139">orderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.140">orderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="paymentBuilder()">
 <h3>paymentBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.143">paymentBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.144">paymentBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productDiscountBuilder()">
 <h3>productDiscountBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_discount/ProductDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.147">productDiscountBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_discount/ProductDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.148">productDiscountBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productBuilder()">
 <h3>productBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.151">productBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.152">productBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productSelectionBuilder()">
 <h3>productSelectionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.155">productSelectionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.156">productSelectionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productTypeBuilder()">
 <h3>productTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_type/ProductTypeReferenceBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.159">productTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_type/ProductTypeReferenceBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.160">productTypeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="reviewBuilder()">
 <h3>reviewBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../review/ReviewReferenceBuilder.html" title="class in com.commercetools.api.models.review">ReviewReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.163">reviewBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../review/ReviewReferenceBuilder.html" title="class in com.commercetools.api.models.review">ReviewReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.164">reviewBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingMethodBuilder()">
 <h3>shippingMethodBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingMethodReferenceBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.167">shippingMethodBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingMethodReferenceBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.168">shippingMethodBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="shoppingListBuilder()">
 <h3>shoppingListBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../shopping_list/ShoppingListReferenceBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.171">shoppingListBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../shopping_list/ShoppingListReferenceBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.172">shoppingListBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="standalonePriceBuilder()">
 <h3>standalonePriceBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../standalone_price/StandalonePriceReferenceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.175">standalonePriceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../standalone_price/StandalonePriceReferenceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.176">standalonePriceBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="stateBuilder()">
 <h3>stateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.179">stateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.180">stateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="storeBuilder()">
 <h3>storeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../store/StoreReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.183">storeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../store/StoreReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.184">storeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="taxCategoryBuilder()">
 <h3>taxCategoryBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.187">taxCategoryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.188">taxCategoryBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeBuilder()">
 <h3>typeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../type/TypeReferenceBuilder.html" title="class in com.commercetools.api.models.type">TypeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.191">typeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../type/TypeReferenceBuilder.html" title="class in com.commercetools.api.models.type">TypeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.192">typeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="zoneBuilder()">
 <h3>zoneBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../zone/ZoneReferenceBuilder.html" title="class in com.commercetools.api.models.zone">ZoneReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.195">zoneBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../zone/ZoneReferenceBuilder.html" title="class in com.commercetools.api.models.zone">ZoneReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.196">zoneBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withReference(java.util.function.Function)">
 <h3>withReference</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.199">withReference</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.200">withReference</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.203">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Reference.html#line.204">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

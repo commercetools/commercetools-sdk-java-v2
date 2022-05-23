@@ -88,18 +88,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AWSLambdaDestinationImpl.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.29">AWSLambdaDestination</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.30">AWSLambdaDestination</a></span><span class="extends-implements">
 extends <a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a></span></div>
 <div class="block"><p>We recommend creating an Identify and Access Management (IAM) user with an <code>accessKey</code> and <code>accessSecret</code> pair, specifically for each Extension that only has the <code>lambda:InvokeFunction</code> permission on this function.</p>
 
+ <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   AWSLambdaDestination aWSLambdaDestination = AWSLambdaDestination.builder()
-           .arn("{arn}")
-           .accessKey("{accessKey}")
-           .accessSecret("{accessSecret}")
-           .build()
+     AWSLambdaDestination aWSLambdaDestination = AWSLambdaDestination.builder()
+             .arn("{arn}")
+             .accessKey("{accessKey}")
+             .accessSecret("{accessSecret}")
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -140,17 +141,17 @@ extends <a href="ExtensionDestination.html" title="interface in com.commercetool
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAccessKey()">getAccessKey</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Partially hidden on retrieval for security reasons.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAccessSecret()">getAccessSecret</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Partially hidden on retrieval for security reasons.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getArn()">getArn</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -193,7 +194,7 @@ extends <a href="ExtensionDestination.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="AWS_LAMBDA">
 <h3>AWS_LAMBDA</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.33">AWS_LAMBDA</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.34">AWS_LAMBDA</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.extension.AWSLambdaDestination.AWS_LAMBDA">Constant Field Values</a></dd>
@@ -212,78 +213,78 @@ extends <a href="ExtensionDestination.html" title="interface in com.commercetool
 <section class="detail" id="getArn()">
 <h3>getArn</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.38">getArn</a></span>()</div>
-<div class="block"><p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.39">getArn</a></span>()</div>
+<div class="block"><*  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAccessKey()">
 <h3>getAccessKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.45">getAccessKey</a></span>()</div>
-<div class="block"><p>Partially hidden on retrieval for security reasons.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.46">getAccessKey</a></span>()</div>
+<div class="block"><*  <p>Partially hidden on retrieval for security reasons.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAccessSecret()">
 <h3>getAccessSecret</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.52">getAccessSecret</a></span>()</div>
-<div class="block"><p>Partially hidden on retrieval for security reasons.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.53">getAccessSecret</a></span>()</div>
+<div class="block"><*  <p>Partially hidden on retrieval for security reasons.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setArn(java.lang.String)">
 <h3>setArn</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.56">setArn</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;arn)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.57">setArn</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;arn)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAccessKey(java.lang.String)">
 <h3>setAccessKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.58">setAccessKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accessKey)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.59">setAccessKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accessKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAccessSecret(java.lang.String)">
 <h3>setAccessSecret</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.60">setAccessSecret</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accessSecret)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.61">setAccessSecret</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accessSecret)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.62">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.extension.AWSLambdaDestination)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.66">of</a></span>&#8203;<span class="parameters">(<a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestinationBuilder.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.74">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestinationBuilder.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.75">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.extension.AWSLambdaDestination)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestinationBuilder.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.78">builder</a></span>&#8203;<span class="parameters">(<a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestinationBuilder.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.79">builder</a></span>&#8203;<span class="parameters">(<a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAWSLambdaDestination(java.util.function.Function)">
 <h3>withAWSLambdaDestination</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.82">withAWSLambdaDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.83">withAWSLambdaDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.86">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AWSLambdaDestination.html" title="interface in com.commercetools.api.models.extension">AWSLambdaDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AWSLambdaDestination.html#line.87">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

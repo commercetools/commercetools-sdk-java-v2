@@ -84,16 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DeliveryItemsUpdatedMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.29">DeliveryItemsUpdatedMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.32">DeliveryItemsUpdatedMessagePayload</a></span><span class="extends-implements">
 extends <a href="OrderMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderMessagePayload</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">DeliveryItemsUpdatedMessagePayload
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   DeliveryItemsUpdatedMessagePayload deliveryItemsUpdatedMessagePayload = DeliveryItemsUpdatedMessagePayload.builder()
-           .deliveryId("{deliveryId}")
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
-           .build()
+     DeliveryItemsUpdatedMessagePayload deliveryItemsUpdatedMessagePayload = DeliveryItemsUpdatedMessagePayload.builder()
+             .deliveryId("{deliveryId}")
+             .plusItems(itemsBuilder -> itemsBuilder)
+             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -133,13 +136,19 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDeliveryId()">getDeliveryId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getItems()">getItems</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getOldItems()">getOldItems</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -190,7 +199,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="DELIVERY_ITEMS_UPDATED">
 <h3>DELIVERY_ITEMS_UPDATED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.33">DELIVERY_ITEMS_UPDATED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.36">DELIVERY_ITEMS_UPDATED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload.DELIVERY_ITEMS_UPDATED">Constant Field Values</a></dd>
@@ -209,7 +218,8 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <section class="detail" id="getDeliveryId()">
 <h3>getDeliveryId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.35">getDeliveryId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.41">getDeliveryId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -217,7 +227,8 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <h3>getItems</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.39">getItems</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.48">getItems</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -225,73 +236,74 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <h3>getOldItems</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.44">getOldItems</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.56">getOldItems</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDeliveryId(java.lang.String)">
 <h3>setDeliveryId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.49">setDeliveryId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;deliveryId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.61">setDeliveryId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;deliveryId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setItems(com.commercetools.api.models.order.DeliveryItem...)">
 <h3>setItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.51">setItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.63">setItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setItems(java.util.List)">
 <h3>setItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.54">setItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;items)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.66">setItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOldItems(com.commercetools.api.models.order.DeliveryItem...)">
 <h3>setOldItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.56">setOldItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;oldItems)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.68">setOldItems</a></span>&#8203;<span class="parameters">(<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;oldItems)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOldItems(java.util.List)">
 <h3>setOldItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.59">setOldItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;oldItems)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.71">setOldItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;oldItems)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.61">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.73">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.65">of</a></span>&#8203;<span class="parameters">(<a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.73">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.85">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.77">builder</a></span>&#8203;<span class="parameters">(<a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.89">builder</a></span>&#8203;<span class="parameters">(<a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDeliveryItemsUpdatedMessagePayload(java.util.function.Function)">
 <h3>withDeliveryItemsUpdatedMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.81">withDeliveryItemsUpdatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.93">withDeliveryItemsUpdatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.85">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DeliveryItemsUpdatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/DeliveryItemsUpdatedMessagePayload.html#line.97">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

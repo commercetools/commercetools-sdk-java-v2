@@ -30,163 +30,165 @@
 <span class="source-line-no">017</span><span id="line.17">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
 <span class="source-line-no">019</span><span id="line.19">/**</span>
-<span class="source-line-no">020</span><span id="line.20"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> &lt;pre&gt;&lt;code class='java'&gt;{@code</span>
-<span class="source-line-no">022</span><span id="line.22">   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.type.Type&gt;&gt; result = apiRoot</span>
-<span class="source-line-no">023</span><span id="line.23">           .withProjectKey("{projectKey}")</span>
-<span class="source-line-no">024</span><span id="line.24">           .types()</span>
-<span class="source-line-no">025</span><span id="line.25">           .withKey("{key}")</span>
-<span class="source-line-no">026</span><span id="line.26">           .get()</span>
-<span class="source-line-no">027</span><span id="line.27">           .execute()</span>
-<span class="source-line-no">028</span><span id="line.28"> }&lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> &lt;/div&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> */</span>
-<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">032</span><span id="line.32">public class ByProjectKeyTypesKeyByKeyGet</span>
-<span class="source-line-no">033</span><span id="line.33">        extends ApiMethod&lt;ByProjectKeyTypesKeyByKeyGet, com.commercetools.api.models.type.Type&gt;</span>
-<span class="source-line-no">034</span><span id="line.34">        implements com.commercetools.api.client.ExpandableTrait&lt;ByProjectKeyTypesKeyByKeyGet&gt;,</span>
-<span class="source-line-no">035</span><span id="line.35">        com.commercetools.api.client.ErrorableTrait&lt;ByProjectKeyTypesKeyByKeyGet&gt;,</span>
-<span class="source-line-no">036</span><span id="line.36">        com.commercetools.api.client.Deprecatable200Trait&lt;ByProjectKeyTypesKeyByKeyGet&gt; {</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    private String projectKey;</span>
-<span class="source-line-no">039</span><span id="line.39">    private String key;</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public ByProjectKeyTypesKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key) {</span>
-<span class="source-line-no">042</span><span id="line.42">        super(apiHttpClient);</span>
-<span class="source-line-no">043</span><span id="line.43">        this.projectKey = projectKey;</span>
-<span class="source-line-no">044</span><span id="line.44">        this.key = key;</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public ByProjectKeyTypesKeyByKeyGet(ByProjectKeyTypesKeyByKeyGet t) {</span>
-<span class="source-line-no">048</span><span id="line.48">        super(t);</span>
-<span class="source-line-no">049</span><span id="line.49">        this.projectKey = t.projectKey;</span>
-<span class="source-line-no">050</span><span id="line.50">        this.key = t.key;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    @Override</span>
-<span class="source-line-no">054</span><span id="line.54">    protected ApiHttpRequest buildHttpRequest() {</span>
-<span class="source-line-no">055</span><span id="line.55">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
-<span class="source-line-no">056</span><span id="line.56">        String httpRequestPath = String.format("/%s/types/key=%s", this.projectKey, this.key);</span>
-<span class="source-line-no">057</span><span id="line.57">        if (!params.isEmpty()) {</span>
-<span class="source-line-no">058</span><span id="line.58">            httpRequestPath += "?" + String.join("&amp;", params);</span>
-<span class="source-line-no">059</span><span id="line.59">        }</span>
-<span class="source-line-no">060</span><span id="line.60">        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    @Override</span>
-<span class="source-line-no">064</span><span id="line.64">    public ApiHttpResponse&lt;com.commercetools.api.models.type.Type&gt; executeBlocking(final ApiHttpClient client,</span>
-<span class="source-line-no">065</span><span id="line.65">            final Duration timeout) {</span>
-<span class="source-line-no">066</span><span id="line.66">        return executeBlocking(client, timeout, com.commercetools.api.models.type.Type.class);</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    @Override</span>
-<span class="source-line-no">070</span><span id="line.70">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.type.Type&gt;&gt; execute(</span>
-<span class="source-line-no">071</span><span id="line.71">            final ApiHttpClient client) {</span>
-<span class="source-line-no">072</span><span id="line.72">        return execute(client, com.commercetools.api.models.type.Type.class);</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public String getProjectKey() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return this.projectKey;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public String getKey() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return this.key;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public List&lt;String&gt; getExpand() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.getQueryParam("expand");</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setProjectKey(final String projectKey) {</span>
-<span class="source-line-no">088</span><span id="line.88">        this.projectKey = projectKey;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setKey(final String key) {</span>
-<span class="source-line-no">092</span><span id="line.92">        this.key = key;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     * set expand with the specified value</span>
-<span class="source-line-no">097</span><span id="line.97">     */</span>
-<span class="source-line-no">098</span><span id="line.98">    public &lt;TValue&gt; ByProjectKeyTypesKeyByKeyGet withExpand(final TValue expand) {</span>
-<span class="source-line-no">099</span><span id="line.99">        return copy().withQueryParam("expand", expand);</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     * add additional expand query parameter</span>
-<span class="source-line-no">104</span><span id="line.104">     */</span>
-<span class="source-line-no">105</span><span id="line.105">    public &lt;TValue&gt; ByProjectKeyTypesKeyByKeyGet addExpand(final TValue expand) {</span>
-<span class="source-line-no">106</span><span id="line.106">        return copy().addQueryParam("expand", expand);</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    /**</span>
-<span class="source-line-no">110</span><span id="line.110">     * set expand with the specified value</span>
-<span class="source-line-no">111</span><span id="line.111">     */</span>
-<span class="source-line-no">112</span><span id="line.112">    public ByProjectKeyTypesKeyByKeyGet withExpand(final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">113</span><span id="line.113">        return copy().withQueryParam("expand", supplier.get());</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    /**</span>
-<span class="source-line-no">117</span><span id="line.117">     * add additional expand query parameter</span>
-<span class="source-line-no">118</span><span id="line.118">     */</span>
-<span class="source-line-no">119</span><span id="line.119">    public ByProjectKeyTypesKeyByKeyGet addExpand(final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">120</span><span id="line.120">        return copy().addQueryParam("expand", supplier.get());</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    /**</span>
-<span class="source-line-no">124</span><span id="line.124">     * set expand with the specified value</span>
-<span class="source-line-no">125</span><span id="line.125">     */</span>
-<span class="source-line-no">126</span><span id="line.126">    public ByProjectKeyTypesKeyByKeyGet withExpand(final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">127</span><span id="line.127">        return copy().withQueryParam("expand", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">128</span><span id="line.128">    }</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    /**</span>
-<span class="source-line-no">131</span><span id="line.131">     * add additional expand query parameter</span>
-<span class="source-line-no">132</span><span id="line.132">     */</span>
-<span class="source-line-no">133</span><span id="line.133">    public ByProjectKeyTypesKeyByKeyGet addExpand(final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">134</span><span id="line.134">        return copy().addQueryParam("expand", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    /**</span>
-<span class="source-line-no">138</span><span id="line.138">     * set expand with the specified values</span>
-<span class="source-line-no">139</span><span id="line.139">     */</span>
-<span class="source-line-no">140</span><span id="line.140">    public &lt;TValue&gt; ByProjectKeyTypesKeyByKeyGet withExpand(final List&lt;TValue&gt; expand) {</span>
-<span class="source-line-no">141</span><span id="line.141">        return copy().withoutQueryParam("expand")</span>
-<span class="source-line-no">142</span><span id="line.142">                .addQueryParams(</span>
-<span class="source-line-no">143</span><span id="line.143">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    /**</span>
-<span class="source-line-no">147</span><span id="line.147">     * add additional expand query parameters</span>
-<span class="source-line-no">148</span><span id="line.148">     */</span>
-<span class="source-line-no">149</span><span id="line.149">    public &lt;TValue&gt; ByProjectKeyTypesKeyByKeyGet addExpand(final List&lt;TValue&gt; expand) {</span>
-<span class="source-line-no">150</span><span id="line.150">        return copy().addQueryParams(</span>
-<span class="source-line-no">151</span><span id="line.151">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">152</span><span id="line.152">    }</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    @Override</span>
-<span class="source-line-no">155</span><span id="line.155">    public boolean equals(Object o) {</span>
-<span class="source-line-no">156</span><span id="line.156">        if (this == o)</span>
-<span class="source-line-no">157</span><span id="line.157">            return true;</span>
-<span class="source-line-no">158</span><span id="line.158"></span>
-<span class="source-line-no">159</span><span id="line.159">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">160</span><span id="line.160">            return false;</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">        ByProjectKeyTypesKeyByKeyGet that = (ByProjectKeyTypesKeyByKeyGet) o;</span>
+<span class="source-line-no">020</span><span id="line.20"> *</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;pre&gt;&lt;code class='java'&gt;{@code</span>
+<span class="source-line-no">024</span><span id="line.24"> *   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.type.Type&gt;&gt; result = apiRoot</span>
+<span class="source-line-no">025</span><span id="line.25"> *            .withProjectKey("{projectKey}")</span>
+<span class="source-line-no">026</span><span id="line.26"> *            .types()</span>
+<span class="source-line-no">027</span><span id="line.27"> *            .withKey("{key}")</span>
+<span class="source-line-no">028</span><span id="line.28"> *            .get()</span>
+<span class="source-line-no">029</span><span id="line.29"> *            .execute()</span>
+<span class="source-line-no">030</span><span id="line.30"> * }&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> * &lt;/div&gt;</span>
+<span class="source-line-no">032</span><span id="line.32"> */</span>
+<span class="source-line-no">033</span><span id="line.33">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">034</span><span id="line.34">public class ByProjectKeyTypesKeyByKeyGet</span>
+<span class="source-line-no">035</span><span id="line.35">        extends ApiMethod&lt;ByProjectKeyTypesKeyByKeyGet, com.commercetools.api.models.type.Type&gt;</span>
+<span class="source-line-no">036</span><span id="line.36">        implements com.commercetools.api.client.ExpandableTrait&lt;ByProjectKeyTypesKeyByKeyGet&gt;,</span>
+<span class="source-line-no">037</span><span id="line.37">        com.commercetools.api.client.ErrorableTrait&lt;ByProjectKeyTypesKeyByKeyGet&gt;,</span>
+<span class="source-line-no">038</span><span id="line.38">        com.commercetools.api.client.Deprecatable200Trait&lt;ByProjectKeyTypesKeyByKeyGet&gt; {</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    private String projectKey;</span>
+<span class="source-line-no">041</span><span id="line.41">    private String key;</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public ByProjectKeyTypesKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key) {</span>
+<span class="source-line-no">044</span><span id="line.44">        super(apiHttpClient);</span>
+<span class="source-line-no">045</span><span id="line.45">        this.projectKey = projectKey;</span>
+<span class="source-line-no">046</span><span id="line.46">        this.key = key;</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public ByProjectKeyTypesKeyByKeyGet(ByProjectKeyTypesKeyByKeyGet t) {</span>
+<span class="source-line-no">050</span><span id="line.50">        super(t);</span>
+<span class="source-line-no">051</span><span id="line.51">        this.projectKey = t.projectKey;</span>
+<span class="source-line-no">052</span><span id="line.52">        this.key = t.key;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    @Override</span>
+<span class="source-line-no">056</span><span id="line.56">    protected ApiHttpRequest buildHttpRequest() {</span>
+<span class="source-line-no">057</span><span id="line.57">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
+<span class="source-line-no">058</span><span id="line.58">        String httpRequestPath = String.format("/%s/types/key=%s", this.projectKey, this.key);</span>
+<span class="source-line-no">059</span><span id="line.59">        if (!params.isEmpty()) {</span>
+<span class="source-line-no">060</span><span id="line.60">            httpRequestPath += "?" + String.join("&amp;", params);</span>
+<span class="source-line-no">061</span><span id="line.61">        }</span>
+<span class="source-line-no">062</span><span id="line.62">        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    @Override</span>
+<span class="source-line-no">066</span><span id="line.66">    public ApiHttpResponse&lt;com.commercetools.api.models.type.Type&gt; executeBlocking(final ApiHttpClient client,</span>
+<span class="source-line-no">067</span><span id="line.67">            final Duration timeout) {</span>
+<span class="source-line-no">068</span><span id="line.68">        return executeBlocking(client, timeout, com.commercetools.api.models.type.Type.class);</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    @Override</span>
+<span class="source-line-no">072</span><span id="line.72">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.type.Type&gt;&gt; execute(</span>
+<span class="source-line-no">073</span><span id="line.73">            final ApiHttpClient client) {</span>
+<span class="source-line-no">074</span><span id="line.74">        return execute(client, com.commercetools.api.models.type.Type.class);</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public String getProjectKey() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return this.projectKey;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public String getKey() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return this.key;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public List&lt;String&gt; getExpand() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return this.getQueryParam("expand");</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public void setProjectKey(final String projectKey) {</span>
+<span class="source-line-no">090</span><span id="line.90">        this.projectKey = projectKey;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public void setKey(final String key) {</span>
+<span class="source-line-no">094</span><span id="line.94">        this.key = key;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    /**</span>
+<span class="source-line-no">098</span><span id="line.98">     * set expand with the specified value</span>
+<span class="source-line-no">099</span><span id="line.99">     */</span>
+<span class="source-line-no">100</span><span id="line.100">    public &lt;TValue&gt; ByProjectKeyTypesKeyByKeyGet withExpand(final TValue expand) {</span>
+<span class="source-line-no">101</span><span id="line.101">        return copy().withQueryParam("expand", expand);</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    /**</span>
+<span class="source-line-no">105</span><span id="line.105">     * add additional expand query parameter</span>
+<span class="source-line-no">106</span><span id="line.106">     */</span>
+<span class="source-line-no">107</span><span id="line.107">    public &lt;TValue&gt; ByProjectKeyTypesKeyByKeyGet addExpand(final TValue expand) {</span>
+<span class="source-line-no">108</span><span id="line.108">        return copy().addQueryParam("expand", expand);</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    /**</span>
+<span class="source-line-no">112</span><span id="line.112">     * set expand with the specified value</span>
+<span class="source-line-no">113</span><span id="line.113">     */</span>
+<span class="source-line-no">114</span><span id="line.114">    public ByProjectKeyTypesKeyByKeyGet withExpand(final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">115</span><span id="line.115">        return copy().withQueryParam("expand", supplier.get());</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    /**</span>
+<span class="source-line-no">119</span><span id="line.119">     * add additional expand query parameter</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
+<span class="source-line-no">121</span><span id="line.121">    public ByProjectKeyTypesKeyByKeyGet addExpand(final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">122</span><span id="line.122">        return copy().addQueryParam("expand", supplier.get());</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    /**</span>
+<span class="source-line-no">126</span><span id="line.126">     * set expand with the specified value</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
+<span class="source-line-no">128</span><span id="line.128">    public ByProjectKeyTypesKeyByKeyGet withExpand(final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">129</span><span id="line.129">        return copy().withQueryParam("expand", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    /**</span>
+<span class="source-line-no">133</span><span id="line.133">     * add additional expand query parameter</span>
+<span class="source-line-no">134</span><span id="line.134">     */</span>
+<span class="source-line-no">135</span><span id="line.135">    public ByProjectKeyTypesKeyByKeyGet addExpand(final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">136</span><span id="line.136">        return copy().addQueryParam("expand", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    /**</span>
+<span class="source-line-no">140</span><span id="line.140">     * set expand with the specified values</span>
+<span class="source-line-no">141</span><span id="line.141">     */</span>
+<span class="source-line-no">142</span><span id="line.142">    public &lt;TValue&gt; ByProjectKeyTypesKeyByKeyGet withExpand(final List&lt;TValue&gt; expand) {</span>
+<span class="source-line-no">143</span><span id="line.143">        return copy().withoutQueryParam("expand")</span>
+<span class="source-line-no">144</span><span id="line.144">                .addQueryParams(</span>
+<span class="source-line-no">145</span><span id="line.145">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    /**</span>
+<span class="source-line-no">149</span><span id="line.149">     * add additional expand query parameters</span>
+<span class="source-line-no">150</span><span id="line.150">     */</span>
+<span class="source-line-no">151</span><span id="line.151">    public &lt;TValue&gt; ByProjectKeyTypesKeyByKeyGet addExpand(final List&lt;TValue&gt; expand) {</span>
+<span class="source-line-no">152</span><span id="line.152">        return copy().addQueryParams(</span>
+<span class="source-line-no">153</span><span id="line.153">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">154</span><span id="line.154">    }</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">    @Override</span>
+<span class="source-line-no">157</span><span id="line.157">    public boolean equals(Object o) {</span>
+<span class="source-line-no">158</span><span id="line.158">        if (this == o)</span>
+<span class="source-line-no">159</span><span id="line.159">            return true;</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">162</span><span id="line.162">            return false;</span>
 <span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">        return new EqualsBuilder().append(projectKey, that.projectKey).append(key, that.key).isEquals();</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    @Override</span>
-<span class="source-line-no">168</span><span id="line.168">    public int hashCode() {</span>
-<span class="source-line-no">169</span><span id="line.169">        return new HashCodeBuilder(17, 37).append(projectKey).append(key).toHashCode();</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    @Override</span>
-<span class="source-line-no">173</span><span id="line.173">    protected ByProjectKeyTypesKeyByKeyGet copy() {</span>
-<span class="source-line-no">174</span><span id="line.174">        return new ByProjectKeyTypesKeyByKeyGet(this);</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176">}</span>
+<span class="source-line-no">164</span><span id="line.164">        ByProjectKeyTypesKeyByKeyGet that = (ByProjectKeyTypesKeyByKeyGet) o;</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">        return new EqualsBuilder().append(projectKey, that.projectKey).append(key, that.key).isEquals();</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    @Override</span>
+<span class="source-line-no">170</span><span id="line.170">    public int hashCode() {</span>
+<span class="source-line-no">171</span><span id="line.171">        return new HashCodeBuilder(17, 37).append(projectKey).append(key).toHashCode();</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    @Override</span>
+<span class="source-line-no">175</span><span id="line.175">    protected ByProjectKeyTypesKeyByKeyGet copy() {</span>
+<span class="source-line-no">176</span><span id="line.176">        return new ByProjectKeyTypesKeyByKeyGet(this);</span>
+<span class="source-line-no">177</span><span id="line.177">    }</span>
+<span class="source-line-no">178</span><span id="line.178">}</span>
 
 
 

@@ -84,17 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomLineItemDraftImpl.html" title="class in com.commercetools.api.models.cart">CustomLineItemDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.33">CustomLineItemDraft</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.36">CustomLineItemDraft</a></span><span class="extends-implements">
 extends <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&gt;</span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">CustomLineItemDraft
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
-           .name(nameBuilder -> nameBuilder)
-           .quantity(0.3)
-           .money(moneyBuilder -> moneyBuilder)
-           .slug("{slug}")
-           .build()
+     CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
+             .name(nameBuilder -> nameBuilder)
+             .quantity(0.3)
+             .money(moneyBuilder -> moneyBuilder)
+             .slug("{slug}")
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -120,36 +123,42 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The custom fields.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getExternalTaxRate()">getExternalTaxRate</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">An external tax rate can be set if the cart has the <code>External</code> TaxMode.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMoney()">getMoney</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getQuantity()">getQuantity</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The amount of a CustomLineItemin the cart.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getShippingDetails()">getShippingDetails</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Container for custom line item specific address(es).</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSlug()">getSlug</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTaxCategory()">getTaxCategory</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -209,15 +218,16 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.37">getName</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.43">getName</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.45">getQuantity</a></span>()</div>
-<div class="block"><p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.51">getQuantity</a></span>()</div>
+<div class="block"><*  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>></div>
 </section>
 </li>
 <li>
@@ -225,38 +235,40 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getMoney</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.49">getMoney</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.58">getMoney</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSlug()">
 <h3>getSlug</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.54">getSlug</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.66">getSlug</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxCategory()">
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.61">getTaxCategory</a></span>()</div>
-<div class="block"><p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.73">getTaxCategory</a></span>()</div>
+<div class="block"><*  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalTaxRate()">
 <h3>getExternalTaxRate</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.68">getExternalTaxRate</a></span>()</div>
-<div class="block"><p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p></div>
+</span><span class="return-type">@Valid <a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.80">getExternalTaxRate</a></span>()</div>
+<div class="block"><*  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.75">getCustom</a></span>()</div>
-<div class="block"><p>The custom fields.</p></div>
+</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.87">getCustom</a></span>()</div>
+<div class="block"><*  <p>The custom fields.</p>></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&gt;</code></dd>
@@ -267,50 +279,50 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getShippingDetails()">
 <h3>getShippingDetails</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.82">getShippingDetails</a></span>()</div>
-<div class="block"><p>Container for custom line item specific address(es).</p></div>
+</span><span class="return-type">@Valid <a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.94">getShippingDetails</a></span>()</div>
+<div class="block"><*  <p>Container for custom line item specific address(es).</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.86">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.98">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setQuantity(java.lang.Long)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.88">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.100">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMoney(com.commercetools.api.models.common.Money)">
 <h3>setMoney</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.90">setMoney</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;money)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.102">setMoney</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;money)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSlug(java.lang.String)">
 <h3>setSlug</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.92">setSlug</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;slug)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.104">setSlug</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;slug)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier)">
 <h3>setTaxCategory</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.94">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a>&nbsp;taxCategory)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.106">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a>&nbsp;taxCategory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft)">
 <h3>setExternalTaxRate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.96">setExternalTaxRate</a></span>&#8203;<span class="parameters">(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.108">setExternalTaxRate</a></span>&#8203;<span class="parameters">(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.98">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.110">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&gt;</code></dd>
@@ -320,43 +332,43 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setShippingDetails(com.commercetools.api.models.cart.ItemShippingDetailsDraft)">
 <h3>setShippingDetails</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.100">setShippingDetails</a></span>&#8203;<span class="parameters">(<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.112">setShippingDetails</a></span>&#8203;<span class="parameters">(<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.102">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.114">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.CustomLineItemDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.106">of</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.118">of</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.119">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.131">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart.CustomLineItemDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.123">builder</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.135">builder</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCustomLineItemDraft(java.util.function.Function)">
 <h3>withCustomLineItemDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.127">withCustomLineItemDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.139">withCustomLineItemDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.131">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CustomLineItemDraft.html#line.143">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

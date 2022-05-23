@@ -84,15 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CategoryImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">CategoryImportRequestImpl</a></code>, <code><a href="CustomerImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestImpl</a></code>, <code><a href="ImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">ImportRequestImpl</a></code>, <code><a href="OrderImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">OrderImportRequestImpl</a></code>, <code><a href="OrderPatchImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">OrderPatchImportRequestImpl</a></code>, <code><a href="PriceImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">PriceImportRequestImpl</a></code>, <code><a href="ProductDraftImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">ProductDraftImportRequestImpl</a></code>, <code><a href="ProductImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">ProductImportRequestImpl</a></code>, <code><a href="ProductTypeImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">ProductTypeImportRequestImpl</a></code>, <code><a href="ProductVariantImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantImportRequestImpl</a></code>, <code><a href="ProductVariantPatchRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.28">ImportRequest</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.29">ImportRequest</a></span></div>
 <div class="block"><p>An import request batches multiple import resources of the same import resource type for processing by an import container.</p>
 
+ <hr>
  Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ImportRequest importRequest = ImportRequest.categoryBuilder()
-           plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
+     ImportRequest importRequest = ImportRequest.categoryBuilder()
+             plusResources(resourcesBuilder -> resourcesBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -118,7 +119,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The type of the import resource.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">OrderImportRequestBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderBuilder()">orderBuilder</a></span>()</code></div>
@@ -168,80 +169,80 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.47">getType</a></span>()</div>
-<div class="block"><p>The type of the import resource.</p></div>
+</span><span class="return-type">@NotNull <a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.48">getType</a></span>()</div>
+<div class="block"><*  <p>The type of the import resource.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="categoryBuilder()">
 <h3>categoryBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CategoryImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.51">categoryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CategoryImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.52">categoryBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerBuilder()">
 <h3>customerBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.55">customerBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.56">customerBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="orderBuilder()">
 <h3>orderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">OrderImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.59">orderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">OrderImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.60">orderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="orderPatchBuilder()">
 <h3>orderPatchBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">OrderPatchImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.63">orderPatchBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPatchImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">OrderPatchImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.64">orderPatchBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="priceBuilder()">
 <h3>priceBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">PriceImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.67">priceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">PriceImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.68">priceBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productDraftBuilder()">
 <h3>productDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductDraftImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.71">productDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductDraftImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.72">productDraftBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productBuilder()">
 <h3>productBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.75">productBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.76">productBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productTypeBuilder()">
 <h3>productTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductTypeImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.79">productTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductTypeImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.80">productTypeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productVariantBuilder()">
 <h3>productVariantBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.83">productVariantBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.84">productVariantBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productVariantPatchBuilder()">
 <h3>productVariantPatchBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.87">productVariantPatchBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.88">productVariantPatchBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withImportRequest(java.util.function.Function)">
 <h3>withImportRequest</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.91">withImportRequest</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ImportRequest</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.92">withImportRequest</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ImportRequest</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ImportRequest</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.95">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ImportRequest</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportRequest.html#line.96">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

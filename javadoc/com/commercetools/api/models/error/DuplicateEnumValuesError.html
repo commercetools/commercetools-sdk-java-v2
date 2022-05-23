@@ -84,15 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DuplicateEnumValuesErrorImpl.html" title="class in com.commercetools.api.models.error">DuplicateEnumValuesErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.26">DuplicateEnumValuesError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.29">DuplicateEnumValuesError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">DuplicateEnumValuesError
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   DuplicateEnumValuesError duplicateEnumValuesError = DuplicateEnumValuesError.builder()
-           .message("{message}")
-           .plusDuplicates(duplicatesBuilder -> duplicatesBuilder)
-           .build()
+     DuplicateEnumValuesError duplicateEnumValuesError = DuplicateEnumValuesError.builder()
+             .message("{message}")
+             .plusDuplicates(duplicatesBuilder -> duplicatesBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -132,7 +135,9 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDuplicates()">getDuplicates</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -171,7 +176,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="DUPLICATE_ENUM_VALUES">
 <h3>DUPLICATE_ENUM_VALUES</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.30">DUPLICATE_ENUM_VALUES</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.33">DUPLICATE_ENUM_VALUES</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.DuplicateEnumValuesError.DUPLICATE_ENUM_VALUES">Constant Field Values</a></dd>
@@ -190,55 +195,56 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getDuplicates()">
 <h3>getDuplicates</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.32">getDuplicates</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.38">getDuplicates</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDuplicates(java.lang.String...)">
 <h3>setDuplicates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.36">setDuplicates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;duplicates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.42">setDuplicates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;duplicates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDuplicates(java.util.List)">
 <h3>setDuplicates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.39">setDuplicates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;duplicates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.45">setDuplicates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;duplicates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.41">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.47">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.DuplicateEnumValuesError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.51">of</a></span>&#8203;<span class="parameters">(<a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateEnumValuesErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateEnumValuesErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateEnumValuesErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateEnumValuesErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.59">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.DuplicateEnumValuesError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateEnumValuesErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateEnumValuesErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateEnumValuesErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateEnumValuesErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.63">builder</a></span>&#8203;<span class="parameters">(<a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDuplicateEnumValuesError(java.util.function.Function)">
 <h3>withDuplicateEnumValuesError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.61">withDuplicateEnumValuesError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.67">withDuplicateEnumValuesError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.65">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DuplicateEnumValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateEnumValuesError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateEnumValuesError.html#line.71">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

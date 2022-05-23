@@ -28,122 +28,132 @@
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">019</span><span id="line.19"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">021</span><span id="line.21">   Asset asset = Asset.builder()</span>
-<span class="source-line-no">022</span><span id="line.22">           .key("{key}")</span>
-<span class="source-line-no">023</span><span id="line.23">           .plusSources(sourcesBuilder -&gt; sourcesBuilder)</span>
-<span class="source-line-no">024</span><span id="line.24">           .name(nameBuilder -&gt; nameBuilder)</span>
-<span class="source-line-no">025</span><span id="line.25">           .build()</span>
-<span class="source-line-no">026</span><span id="line.26"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> &lt;/div&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> */</span>
-<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = AssetImpl.class)</span>
-<span class="source-line-no">031</span><span id="line.31">public interface Asset {</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    /**</span>
-<span class="source-line-no">034</span><span id="line.34">     *  &lt;p&gt;User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).&lt;/p&gt;</span>
-<span class="source-line-no">035</span><span id="line.35">     */</span>
-<span class="source-line-no">036</span><span id="line.36">    @NotNull</span>
-<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("key")</span>
-<span class="source-line-no">038</span><span id="line.38">    public String getKey();</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
-<span class="source-line-no">041</span><span id="line.41">    @Valid</span>
-<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("sources")</span>
-<span class="source-line-no">043</span><span id="line.43">    public List&lt;AssetSource&gt; getSources();</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">     *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">048</span><span id="line.48">     *    "de": "Hundefutter",</span>
-<span class="source-line-no">049</span><span id="line.49">     *    "en": "dog food"</span>
-<span class="source-line-no">050</span><span id="line.50">     *  }</span>
-<span class="source-line-no">051</span><span id="line.51">     *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
-<span class="source-line-no">054</span><span id="line.54">    @Valid</span>
-<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("name")</span>
-<span class="source-line-no">056</span><span id="line.56">    public LocalizedString getName();</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">061</span><span id="line.61">     *    "de": "Hundefutter",</span>
-<span class="source-line-no">062</span><span id="line.62">     *    "en": "dog food"</span>
-<span class="source-line-no">063</span><span id="line.63">     *  }</span>
-<span class="source-line-no">064</span><span id="line.64">     *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">065</span><span id="line.65">     */</span>
-<span class="source-line-no">066</span><span id="line.66">    @Valid</span>
-<span class="source-line-no">067</span><span id="line.67">    @JsonProperty("description")</span>
-<span class="source-line-no">068</span><span id="line.68">    public LocalizedString getDescription();</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("tags")</span>
-<span class="source-line-no">071</span><span id="line.71">    public List&lt;String&gt; getTags();</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;The representation to be sent to the server when creating a resource with custom fields.&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">     */</span>
-<span class="source-line-no">076</span><span id="line.76">    @Valid</span>
-<span class="source-line-no">077</span><span id="line.77">    @JsonProperty("custom")</span>
-<span class="source-line-no">078</span><span id="line.78">    public Custom getCustom();</span>
+<span class="source-line-no">018</span><span id="line.18"> * Asset</span>
+<span class="source-line-no">019</span><span id="line.19"> *</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> *     Asset asset = Asset.builder()</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .key("{key}")</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .plusSources(sourcesBuilder -&gt; sourcesBuilder)</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .name(nameBuilder -&gt; nameBuilder)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .build()</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/div&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> */</span>
+<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = AssetImpl.class)</span>
+<span class="source-line-no">034</span><span id="line.34">public interface Asset {</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    /**</span>
+<span class="source-line-no">037</span><span id="line.37">     &lt;*  &lt;p&gt;User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).&lt;/p&gt;&gt;</span>
+<span class="source-line-no">038</span><span id="line.38">     */</span>
+<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
+<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("key")</span>
+<span class="source-line-no">041</span><span id="line.41">    public String getKey();</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     &lt;&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
+<span class="source-line-no">047</span><span id="line.47">    @Valid</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("sources")</span>
+<span class="source-line-no">049</span><span id="line.49">    public List&lt;AssetSource&gt; getSources();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     &lt;*  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">    *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">054</span><span id="line.54">    *    "de": "Hundefutter",</span>
+<span class="source-line-no">055</span><span id="line.55">    *    "en": "dog food"</span>
+<span class="source-line-no">056</span><span id="line.56">    *  }</span>
+<span class="source-line-no">057</span><span id="line.57">    *  &lt;/code&gt;&lt;/pre&gt;&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
+<span class="source-line-no">059</span><span id="line.59">    @NotNull</span>
+<span class="source-line-no">060</span><span id="line.60">    @Valid</span>
+<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("name")</span>
+<span class="source-line-no">062</span><span id="line.62">    public LocalizedString getName();</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    /**</span>
+<span class="source-line-no">065</span><span id="line.65">     &lt;*  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">    *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">067</span><span id="line.67">    *    "de": "Hundefutter",</span>
+<span class="source-line-no">068</span><span id="line.68">    *    "en": "dog food"</span>
+<span class="source-line-no">069</span><span id="line.69">    *  }</span>
+<span class="source-line-no">070</span><span id="line.70">    *  &lt;/code&gt;&lt;/pre&gt;&gt;</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">072</span><span id="line.72">    @Valid</span>
+<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("description")</span>
+<span class="source-line-no">074</span><span id="line.74">    public LocalizedString getDescription();</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    /**</span>
+<span class="source-line-no">077</span><span id="line.77">     &lt;&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     */</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public void setKey(final String key);</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    @JsonIgnore</span>
-<span class="source-line-no">083</span><span id="line.83">    public void setSources(final AssetSource... sources);</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setSources(final List&lt;AssetSource&gt; sources);</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public void setDescription(final LocalizedString description);</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    @JsonIgnore</span>
-<span class="source-line-no">092</span><span id="line.92">    public void setTags(final String... tags);</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public void setTags(final List&lt;String&gt; tags);</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public void setCustom(final Custom custom);</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public static Asset of() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return new AssetImpl();</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public static Asset of(final Asset template) {</span>
-<span class="source-line-no">103</span><span id="line.103">        AssetImpl instance = new AssetImpl();</span>
-<span class="source-line-no">104</span><span id="line.104">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">105</span><span id="line.105">        instance.setSources(template.getSources());</span>
-<span class="source-line-no">106</span><span id="line.106">        instance.setName(template.getName());</span>
-<span class="source-line-no">107</span><span id="line.107">        instance.setDescription(template.getDescription());</span>
-<span class="source-line-no">108</span><span id="line.108">        instance.setTags(template.getTags());</span>
-<span class="source-line-no">109</span><span id="line.109">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">110</span><span id="line.110">        return instance;</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public static AssetBuilder builder() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return AssetBuilder.of();</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public static AssetBuilder builder(final Asset template) {</span>
-<span class="source-line-no">118</span><span id="line.118">        return AssetBuilder.of(template);</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    default &lt;T&gt; T withAsset(Function&lt;Asset, T&gt; helper) {</span>
-<span class="source-line-no">122</span><span id="line.122">        return helper.apply(this);</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Asset&gt; typeReference() {</span>
-<span class="source-line-no">126</span><span id="line.126">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Asset&gt;() {</span>
-<span class="source-line-no">127</span><span id="line.127">            @Override</span>
-<span class="source-line-no">128</span><span id="line.128">            public String toString() {</span>
-<span class="source-line-no">129</span><span id="line.129">                return "TypeReference&lt;Asset&gt;";</span>
-<span class="source-line-no">130</span><span id="line.130">            }</span>
-<span class="source-line-no">131</span><span id="line.131">        };</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133">}</span>
+<span class="source-line-no">080</span><span id="line.80">    @JsonProperty("tags")</span>
+<span class="source-line-no">081</span><span id="line.81">    public List&lt;String&gt; getTags();</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     &lt;*  &lt;p&gt;The representation to be sent to the server when creating a resource with custom fields.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     */</span>
+<span class="source-line-no">086</span><span id="line.86">    @Valid</span>
+<span class="source-line-no">087</span><span id="line.87">    @JsonProperty("custom")</span>
+<span class="source-line-no">088</span><span id="line.88">    public Custom getCustom();</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setKey(final String key);</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    @JsonIgnore</span>
+<span class="source-line-no">093</span><span id="line.93">    public void setSources(final AssetSource... sources);</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public void setSources(final List&lt;AssetSource&gt; sources);</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public void setName(final LocalizedString name);</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public void setDescription(final LocalizedString description);</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    @JsonIgnore</span>
+<span class="source-line-no">102</span><span id="line.102">    public void setTags(final String... tags);</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    public void setTags(final List&lt;String&gt; tags);</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public void setCustom(final Custom custom);</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public static Asset of() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return new AssetImpl();</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public static Asset of(final Asset template) {</span>
+<span class="source-line-no">113</span><span id="line.113">        AssetImpl instance = new AssetImpl();</span>
+<span class="source-line-no">114</span><span id="line.114">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">115</span><span id="line.115">        instance.setSources(template.getSources());</span>
+<span class="source-line-no">116</span><span id="line.116">        instance.setName(template.getName());</span>
+<span class="source-line-no">117</span><span id="line.117">        instance.setDescription(template.getDescription());</span>
+<span class="source-line-no">118</span><span id="line.118">        instance.setTags(template.getTags());</span>
+<span class="source-line-no">119</span><span id="line.119">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">120</span><span id="line.120">        return instance;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    public static AssetBuilder builder() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return AssetBuilder.of();</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public static AssetBuilder builder(final Asset template) {</span>
+<span class="source-line-no">128</span><span id="line.128">        return AssetBuilder.of(template);</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    default &lt;T&gt; T withAsset(Function&lt;Asset, T&gt; helper) {</span>
+<span class="source-line-no">132</span><span id="line.132">        return helper.apply(this);</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Asset&gt; typeReference() {</span>
+<span class="source-line-no">136</span><span id="line.136">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Asset&gt;() {</span>
+<span class="source-line-no">137</span><span id="line.137">            @Override</span>
+<span class="source-line-no">138</span><span id="line.138">            public String toString() {</span>
+<span class="source-line-no">139</span><span id="line.139">                return "TypeReference&lt;Asset&gt;";</span>
+<span class="source-line-no">140</span><span id="line.140">            }</span>
+<span class="source-line-no">141</span><span id="line.141">        };</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143">}</span>
 
 
 

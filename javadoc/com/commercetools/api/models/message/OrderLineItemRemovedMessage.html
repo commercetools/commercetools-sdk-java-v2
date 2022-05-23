@@ -84,25 +84,28 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderLineItemRemovedMessageImpl.html" title="class in com.commercetools.api.models.message">OrderLineItemRemovedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.42">OrderLineItemRemovedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.45">OrderLineItemRemovedMessage</a></span><span class="extends-implements">
 extends <a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">OrderLineItemRemovedMessage
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   OrderLineItemRemovedMessage orderLineItemRemovedMessage = OrderLineItemRemovedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .lineItemId("{lineItemId}")
-           .removedQuantity(0.3)
-           .newQuantity(0.3)
-           .plusNewState(newStateBuilder -> newStateBuilder)
-           .newTotalPrice(newTotalPriceBuilder -> newTotalPriceBuilder)
-           .build()
+     OrderLineItemRemovedMessage orderLineItemRemovedMessage = OrderLineItemRemovedMessage.builder()
+             .id("{id}")
+             .version(0.3)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .sequenceNumber(0.3)
+             .resource(resourceBuilder -> resourceBuilder)
+             .resourceVersion(0.3)
+             .lineItemId("{lineItemId}")
+             .removedQuantity(0.3)
+             .newQuantity(0.3)
+             .plusNewState(newStateBuilder -> newStateBuilder)
+             .newTotalPrice(newTotalPriceBuilder -> newTotalPriceBuilder)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -142,30 +145,44 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLineItemId()">getLineItemId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNewPrice()">getNewPrice</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNewQuantity()">getNewQuantity</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNewShippingDetail()">getNewShippingDetail</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNewState()">getNewState</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNewTaxedPrice()">getNewTaxedPrice</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNewTotalPrice()">getNewTotalPrice</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Base polymorphic read-only Money type which is stored in cent precision or high precision.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getRemovedQuantity()">getRemovedQuantity</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -234,7 +251,7 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <li>
 <section class="detail" id="ORDER_LINE_ITEM_REMOVED">
 <h3>ORDER_LINE_ITEM_REMOVED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.46">ORDER_LINE_ITEM_REMOVED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.49">ORDER_LINE_ITEM_REMOVED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderLineItemRemovedMessage.ORDER_LINE_ITEM_REMOVED">Constant Field Values</a></dd>
@@ -253,21 +270,24 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <section class="detail" id="getLineItemId()">
 <h3>getLineItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.48">getLineItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.54">getLineItemId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRemovedQuantity()">
 <h3>getRemovedQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.52">getRemovedQuantity</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.61">getRemovedQuantity</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNewQuantity()">
 <h3>getNewQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.56">getNewQuantity</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.68">getNewQuantity</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -275,7 +295,8 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <h3>getNewState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.60">getNewState</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.75">getNewState</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -283,119 +304,122 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <h3>getNewTotalPrice</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.68">getNewTotalPrice</a></span>()</div>
-<div class="block"><p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.83">getNewTotalPrice</a></span>()</div>
+<div class="block"><*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNewTaxedPrice()">
 <h3>getNewTaxedPrice</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.73">getNewTaxedPrice</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.91">getNewTaxedPrice</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNewPrice()">
 <h3>getNewPrice</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.77">getNewPrice</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.98">getNewPrice</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNewShippingDetail()">
 <h3>getNewShippingDetail</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.81">getNewShippingDetail</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.105">getNewShippingDetail</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItemId(java.lang.String)">
 <h3>setLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.85">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.109">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedQuantity(java.lang.Long)">
 <h3>setRemovedQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.87">setRemovedQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;removedQuantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.111">setRemovedQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;removedQuantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewQuantity(java.lang.Long)">
 <h3>setNewQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.89">setNewQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;newQuantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.113">setNewQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;newQuantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewState(com.commercetools.api.models.order.ItemState...)">
 <h3>setNewState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.91">setNewState</a></span>&#8203;<span class="parameters">(<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>...&nbsp;newState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.115">setNewState</a></span>&#8203;<span class="parameters">(<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>...&nbsp;newState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewState(java.util.List)">
 <h3>setNewState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.94">setNewState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;&nbsp;newState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.118">setNewState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;&nbsp;newState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewTotalPrice(com.commercetools.api.models.common.TypedMoney)">
 <h3>setNewTotalPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.96">setNewTotalPrice</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;newTotalPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.120">setNewTotalPrice</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;newTotalPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice)">
 <h3>setNewTaxedPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.98">setNewTaxedPrice</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;newTaxedPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.122">setNewTaxedPrice</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;newTaxedPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewPrice(com.commercetools.api.models.common.Price)">
 <h3>setNewPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.100">setNewPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&nbsp;newPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.124">setNewPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&nbsp;newPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewShippingDetail(com.commercetools.api.models.cart.ItemShippingDetails)">
 <h3>setNewShippingDetail</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.102">setNewShippingDetail</a></span>&#8203;<span class="parameters">(<a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a>&nbsp;newShippingDetail)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.126">setNewShippingDetail</a></span>&#8203;<span class="parameters">(<a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a>&nbsp;newShippingDetail)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.104">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.128">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderLineItemRemovedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.108">of</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.132">of</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemRemovedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.131">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemRemovedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.155">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.OrderLineItemRemovedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemRemovedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.135">builder</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemRemovedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.159">builder</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderLineItemRemovedMessage(java.util.function.Function)">
 <h3>withOrderLineItemRemovedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.139">withOrderLineItemRemovedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.163">withOrderLineItemRemovedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.143">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderLineItemRemovedMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessage.html#line.167">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

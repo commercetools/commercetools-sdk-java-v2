@@ -84,15 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../cart_discount/CartDiscountResourceIdentifierImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifierImpl</a></code>, <code><a href="../cart/CartResourceIdentifierImpl.html" title="class in com.commercetools.api.models.cart">CartResourceIdentifierImpl</a></code>, <code><a href="../category/CategoryResourceIdentifierImpl.html" title="class in com.commercetools.api.models.category">CategoryResourceIdentifierImpl</a></code>, <code><a href="../channel/ChannelResourceIdentifierImpl.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierImpl</a></code>, <code><a href="../customer_group/CustomerGroupResourceIdentifierImpl.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierImpl</a></code>, <code><a href="../customer/CustomerResourceIdentifierImpl.html" title="class in com.commercetools.api.models.customer">CustomerResourceIdentifierImpl</a></code>, <code><a href="../discount_code/DiscountCodeResourceIdentifierImpl.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifierImpl</a></code>, <code><a href="../inventory/InventoryEntryResourceIdentifierImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifierImpl</a></code>, <code><a href="../order_edit/OrderEditResourceIdentifierImpl.html" title="class in com.commercetools.api.models.order_edit">OrderEditResourceIdentifierImpl</a></code>, <code><a href="../order/OrderResourceIdentifierImpl.html" title="class in com.commercetools.api.models.order">OrderResourceIdentifierImpl</a></code>, <code><a href="../payment/PaymentResourceIdentifierImpl.html" title="class in com.commercetools.api.models.payment">PaymentResourceIdentifierImpl</a></code>, <code><a href="../product_discount/ProductDiscountResourceIdentifierImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountResourceIdentifierImpl</a></code>, <code><a href="../product/ProductResourceIdentifierImpl.html" title="class in com.commercetools.api.models.product">ProductResourceIdentifierImpl</a></code>, <code><a href="../product_selection/ProductSelectionResourceIdentifierImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierImpl</a></code>, <code><a href="../product_type/ProductTypeResourceIdentifierImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeResourceIdentifierImpl</a></code>, <code><a href="ResourceIdentifierImpl.html" title="class in com.commercetools.api.models.common">ResourceIdentifierImpl</a></code>, <code><a href="../review/ReviewResourceIdentifierImpl.html" title="class in com.commercetools.api.models.review">ReviewResourceIdentifierImpl</a></code>, <code><a href="../shipping_method/ShippingMethodResourceIdentifierImpl.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierImpl</a></code>, <code><a href="../shopping_list/ShoppingListResourceIdentifierImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListResourceIdentifierImpl</a></code>, <code><a href="../standalone_price/StandalonePriceResourceIdentifierImpl.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceResourceIdentifierImpl</a></code>, <code><a href="../state/StateResourceIdentifierImpl.html" title="class in com.commercetools.api.models.state">StateResourceIdentifierImpl</a></code>, <code><a href="../store/StoreResourceIdentifierImpl.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierImpl</a></code>, <code><a href="../tax_category/TaxCategoryResourceIdentifierImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifierImpl</a></code>, <code><a href="../type/TypeResourceIdentifierImpl.html" title="class in com.commercetools.api.models.type">TypeResourceIdentifierImpl</a></code>, <code><a href="../zone/ZoneResourceIdentifierImpl.html" title="class in com.commercetools.api.models.zone">ZoneResourceIdentifierImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.49">ResourceIdentifier</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.50">ResourceIdentifier</a></span></div>
 <div class="block"><p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
- <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
 
+ <hr>
  Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ResourceIdentifier resourceIdentifier = ResourceIdentifier.cartDiscountBuilder()
-           .build()
+     ResourceIdentifier resourceIdentifier = ResourceIdentifier.cartDiscountBuilder()
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -133,17 +134,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Platform-generated unique identifier of the referenced resource.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">User-defined unique identifier of the referenced resource.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTypeId()">getTypeId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Type of referenced resource.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="../inventory/InventoryEntryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifierBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#inventoryEntryBuilder()">inventoryEntryBuilder</a></span>()</code></div>
@@ -225,190 +226,190 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getTypeId()">
 <h3>getTypeId</h3>
-<div class="member-signature"><span class="return-type"><a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.83">getTypeId</a></span>()</div>
-<div class="block"><p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p></div>
+<div class="member-signature"><span class="return-type"><a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.84">getTypeId</a></span>()</div>
+<div class="block"><*  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.90">getId</a></span>()</div>
-<div class="block"><p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.91">getId</a></span>()</div>
+<div class="block"><*  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.97">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.98">getKey</a></span>()</div>
+<div class="block"><*  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.100">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.101">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.102">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.103">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="cartDiscountBuilder()">
 <h3>cartDiscountBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../cart_discount/CartDiscountResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.104">cartDiscountBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../cart_discount/CartDiscountResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.105">cartDiscountBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="cartBuilder()">
 <h3>cartBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../cart/CartResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart">CartResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.108">cartBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../cart/CartResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart">CartResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.109">cartBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="categoryBuilder()">
 <h3>categoryBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../category/CategoryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.category">CategoryResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.112">categoryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../category/CategoryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.category">CategoryResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.113">categoryBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="channelBuilder()">
 <h3>channelBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.116">channelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.117">channelBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerGroupBuilder()">
 <h3>customerGroupBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.120">customerGroupBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.121">customerGroupBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerBuilder()">
 <h3>customerBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../customer/CustomerResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer">CustomerResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.124">customerBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../customer/CustomerResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer">CustomerResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.125">customerBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="discountCodeBuilder()">
 <h3>discountCodeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../discount_code/DiscountCodeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.128">discountCodeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../discount_code/DiscountCodeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.129">discountCodeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="inventoryEntryBuilder()">
 <h3>inventoryEntryBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../inventory/InventoryEntryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.132">inventoryEntryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../inventory/InventoryEntryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.133">inventoryEntryBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="orderEditBuilder()">
 <h3>orderEditBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../order_edit/OrderEditResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.136">orderEditBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../order_edit/OrderEditResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.137">orderEditBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="orderBuilder()">
 <h3>orderBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../order/OrderResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.order">OrderResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.140">orderBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../order/OrderResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.order">OrderResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.141">orderBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="paymentBuilder()">
 <h3>paymentBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../payment/PaymentResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.payment">PaymentResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.144">paymentBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../payment/PaymentResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.payment">PaymentResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.145">paymentBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productDiscountBuilder()">
 <h3>productDiscountBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_discount/ProductDiscountResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.148">productDiscountBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_discount/ProductDiscountResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.149">productDiscountBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productBuilder()">
 <h3>productBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product/ProductResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product">ProductResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.152">productBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product/ProductResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product">ProductResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.153">productBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productSelectionBuilder()">
 <h3>productSelectionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductSelectionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.156">productSelectionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductSelectionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.157">productSelectionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="productTypeBuilder()">
 <h3>productTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_type/ProductTypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.160">productTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../product_type/ProductTypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.161">productTypeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="reviewBuilder()">
 <h3>reviewBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../review/ReviewResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.review">ReviewResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.164">reviewBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../review/ReviewResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.review">ReviewResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.165">reviewBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingMethodBuilder()">
 <h3>shippingMethodBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.168">shippingMethodBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.169">shippingMethodBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="shoppingListBuilder()">
 <h3>shoppingListBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../shopping_list/ShoppingListResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.172">shoppingListBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../shopping_list/ShoppingListResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.173">shoppingListBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="standalonePriceBuilder()">
 <h3>standalonePriceBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../standalone_price/StandalonePriceResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.176">standalonePriceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../standalone_price/StandalonePriceResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.177">standalonePriceBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="stateBuilder()">
 <h3>stateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../state/StateResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.state">StateResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.180">stateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../state/StateResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.state">StateResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.181">stateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="storeBuilder()">
 <h3>storeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../store/StoreResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.184">storeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../store/StoreResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.185">storeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="taxCategoryBuilder()">
 <h3>taxCategoryBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxCategoryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.188">taxCategoryBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxCategoryResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.189">taxCategoryBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeBuilder()">
 <h3>typeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../type/TypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.type">TypeResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.192">typeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../type/TypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.type">TypeResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.193">typeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="zoneBuilder()">
 <h3>zoneBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../zone/ZoneResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.zone">ZoneResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.196">zoneBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../zone/ZoneResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.zone">ZoneResourceIdentifierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.197">zoneBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withResourceIdentifier(java.util.function.Function)">
 <h3>withResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.200">withResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.201">withResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.204">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/ResourceIdentifier.html#line.205">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

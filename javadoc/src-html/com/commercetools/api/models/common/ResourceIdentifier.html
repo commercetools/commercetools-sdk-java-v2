@@ -48,181 +48,182 @@
 <span class="source-line-no">035</span><span id="line.35">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
 <span class="source-line-no">037</span><span id="line.37">/**</span>
-<span class="source-line-no">038</span><span id="line.38"> &lt;p&gt;Draft type to create a Reference or a KeyReference to a resource. Provide either the &lt;code&gt;id&lt;/code&gt; or (wherever supported) the &lt;code&gt;key&lt;/code&gt; of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field &lt;code&gt;parent&lt;/code&gt; of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.&lt;/p&gt;</span>
-<span class="source-line-no">039</span><span id="line.39"> &lt;p&gt;Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.&lt;/p&gt;</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41"> Example to create a subtype instance using the builder pattern</span>
-<span class="source-line-no">042</span><span id="line.42"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">043</span><span id="line.43"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">   ResourceIdentifier resourceIdentifier = ResourceIdentifier.cartDiscountBuilder()</span>
-<span class="source-line-no">045</span><span id="line.45">           .build()</span>
-<span class="source-line-no">046</span><span id="line.46"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">047</span><span id="line.47"> &lt;/div&gt;</span>
-<span class="source-line-no">048</span><span id="line.48"> */</span>
-<span class="source-line-no">049</span><span id="line.49">@JsonSubTypes({</span>
-<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl.class, name = CartDiscountResourceIdentifier.CART_DISCOUNT),</span>
-<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartResourceIdentifierImpl.class, name = CartResourceIdentifier.CART),</span>
-<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryResourceIdentifierImpl.class, name = CategoryResourceIdentifier.CATEGORY),</span>
-<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelResourceIdentifierImpl.class, name = ChannelResourceIdentifier.CHANNEL),</span>
-<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl.class, name = CustomerGroupResourceIdentifier.CUSTOMER_GROUP),</span>
-<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerResourceIdentifierImpl.class, name = CustomerResourceIdentifier.CUSTOMER),</span>
-<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierImpl.class, name = DiscountCodeResourceIdentifier.DISCOUNT_CODE),</span>
-<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierImpl.class, name = InventoryEntryResourceIdentifier.INVENTORY_ENTRY),</span>
-<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditResourceIdentifierImpl.class, name = OrderEditResourceIdentifier.ORDER_EDIT),</span>
-<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderResourceIdentifierImpl.class, name = OrderResourceIdentifier.ORDER),</span>
-<span class="source-line-no">060</span><span id="line.60">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentResourceIdentifierImpl.class, name = PaymentResourceIdentifier.PAYMENT),</span>
-<span class="source-line-no">061</span><span id="line.61">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierImpl.class, name = ProductDiscountResourceIdentifier.PRODUCT_DISCOUNT),</span>
-<span class="source-line-no">062</span><span id="line.62">        @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductResourceIdentifierImpl.class, name = ProductResourceIdentifier.PRODUCT),</span>
-<span class="source-line-no">063</span><span id="line.63">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierImpl.class, name = ProductSelectionResourceIdentifier.PRODUCT_SELECTION),</span>
-<span class="source-line-no">064</span><span id="line.64">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeResourceIdentifierImpl.class, name = ProductTypeResourceIdentifier.PRODUCT_TYPE),</span>
-<span class="source-line-no">065</span><span id="line.65">        @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewResourceIdentifierImpl.class, name = ReviewResourceIdentifier.REVIEW),</span>
-<span class="source-line-no">066</span><span id="line.66">        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl.class, name = ShippingMethodResourceIdentifier.SHIPPING_METHOD),</span>
-<span class="source-line-no">067</span><span id="line.67">        @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl.class, name = ShoppingListResourceIdentifier.SHOPPING_LIST),</span>
-<span class="source-line-no">068</span><span id="line.68">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierImpl.class, name = StandalonePriceResourceIdentifier.STANDALONE_PRICE),</span>
-<span class="source-line-no">069</span><span id="line.69">        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateResourceIdentifierImpl.class, name = StateResourceIdentifier.STATE),</span>
-<span class="source-line-no">070</span><span id="line.70">        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreResourceIdentifierImpl.class, name = StoreResourceIdentifier.STORE),</span>
-<span class="source-line-no">071</span><span id="line.71">        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl.class, name = TaxCategoryResourceIdentifier.TAX_CATEGORY),</span>
-<span class="source-line-no">072</span><span id="line.72">        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeResourceIdentifierImpl.class, name = TypeResourceIdentifier.TYPE),</span>
-<span class="source-line-no">073</span><span id="line.73">        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneResourceIdentifierImpl.class, name = ZoneResourceIdentifier.ZONE) })</span>
-<span class="source-line-no">074</span><span id="line.74">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ResourceIdentifierImpl.class, visible = true)</span>
-<span class="source-line-no">075</span><span id="line.75">@JsonDeserialize(as = ResourceIdentifierImpl.class)</span>
-<span class="source-line-no">076</span><span id="line.76">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">077</span><span id="line.77">public interface ResourceIdentifier {</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.&lt;/p&gt;</span>
-<span class="source-line-no">081</span><span id="line.81">     */</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    @JsonProperty("typeId")</span>
-<span class="source-line-no">084</span><span id="line.84">    public ReferenceTypeId getTypeId();</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Platform-generated unique identifier of the referenced resource. Required if &lt;code&gt;key&lt;/code&gt; is absent.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    @JsonProperty("id")</span>
-<span class="source-line-no">091</span><span id="line.91">    public String getId();</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;User-defined unique identifier of the referenced resource. Required if &lt;code&gt;id&lt;/code&gt; is absent.&lt;/p&gt;</span>
-<span class="source-line-no">095</span><span id="line.95">     */</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    @JsonProperty("key")</span>
-<span class="source-line-no">098</span><span id="line.98">    public String getKey();</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public void setId(final String id);</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public void setKey(final String key);</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public static com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder cartDiscountBuilder() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public static com.commercetools.api.models.cart.CartResourceIdentifierBuilder cartBuilder() {</span>
-<span class="source-line-no">109</span><span id="line.109">        return com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public static com.commercetools.api.models.category.CategoryResourceIdentifierBuilder categoryBuilder() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public static com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder channelBuilder() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">118</span><span id="line.118">    }</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    public static com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder customerGroupBuilder() {</span>
-<span class="source-line-no">121</span><span id="line.121">        return com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public static com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder customerBuilder() {</span>
-<span class="source-line-no">125</span><span id="line.125">        return com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public static com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierBuilder discountCodeBuilder() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public static com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder inventoryEntryBuilder() {</span>
-<span class="source-line-no">133</span><span id="line.133">        return com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public static com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder orderEditBuilder() {</span>
-<span class="source-line-no">137</span><span id="line.137">        return com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">138</span><span id="line.138">    }</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public static com.commercetools.api.models.order.OrderResourceIdentifierBuilder orderBuilder() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return com.commercetools.api.models.order.OrderResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    public static com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder paymentBuilder() {</span>
-<span class="source-line-no">145</span><span id="line.145">        return com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public static com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierBuilder productDiscountBuilder() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    public static com.commercetools.api.models.product.ProductResourceIdentifierBuilder productBuilder() {</span>
-<span class="source-line-no">153</span><span id="line.153">        return com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public static com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder productSelectionBuilder() {</span>
-<span class="source-line-no">157</span><span id="line.157">        return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">158</span><span id="line.158">    }</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public static com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder productTypeBuilder() {</span>
-<span class="source-line-no">161</span><span id="line.161">        return com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public static com.commercetools.api.models.review.ReviewResourceIdentifierBuilder reviewBuilder() {</span>
-<span class="source-line-no">165</span><span id="line.165">        return com.commercetools.api.models.review.ReviewResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public static com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder shippingMethodBuilder() {</span>
-<span class="source-line-no">169</span><span id="line.169">        return com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public static com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder shoppingListBuilder() {</span>
-<span class="source-line-no">173</span><span id="line.173">        return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public static com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder standalonePriceBuilder() {</span>
-<span class="source-line-no">177</span><span id="line.177">        return com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public static com.commercetools.api.models.state.StateResourceIdentifierBuilder stateBuilder() {</span>
-<span class="source-line-no">181</span><span id="line.181">        return com.commercetools.api.models.state.StateResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public static com.commercetools.api.models.store.StoreResourceIdentifierBuilder storeBuilder() {</span>
-<span class="source-line-no">185</span><span id="line.185">        return com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public static com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder taxCategoryBuilder() {</span>
-<span class="source-line-no">189</span><span id="line.189">        return com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public static com.commercetools.api.models.type.TypeResourceIdentifierBuilder typeBuilder() {</span>
-<span class="source-line-no">193</span><span id="line.193">        return com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public static com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder zoneBuilder() {</span>
-<span class="source-line-no">197</span><span id="line.197">        return com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    default &lt;T&gt; T withResourceIdentifier(Function&lt;ResourceIdentifier, T&gt; helper) {</span>
-<span class="source-line-no">201</span><span id="line.201">        return helper.apply(this);</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ResourceIdentifier&gt; typeReference() {</span>
-<span class="source-line-no">205</span><span id="line.205">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ResourceIdentifier&gt;() {</span>
-<span class="source-line-no">206</span><span id="line.206">            @Override</span>
-<span class="source-line-no">207</span><span id="line.207">            public String toString() {</span>
-<span class="source-line-no">208</span><span id="line.208">                return "TypeReference&lt;ResourceIdentifier&gt;";</span>
-<span class="source-line-no">209</span><span id="line.209">            }</span>
-<span class="source-line-no">210</span><span id="line.210">        };</span>
-<span class="source-line-no">211</span><span id="line.211">    }</span>
-<span class="source-line-no">212</span><span id="line.212">}</span>
+<span class="source-line-no">038</span><span id="line.38"> *  &lt;p&gt;Draft type to create a Reference or a KeyReference to a resource. Provide either the &lt;code&gt;id&lt;/code&gt; or (wherever supported) the &lt;code&gt;key&lt;/code&gt; of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field &lt;code&gt;parent&lt;/code&gt; of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39"> *  &lt;p&gt;Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.&lt;/p&gt;</span>
+<span class="source-line-no">040</span><span id="line.40"> *</span>
+<span class="source-line-no">041</span><span id="line.41"> * &lt;hr&gt;</span>
+<span class="source-line-no">042</span><span id="line.42"> * Example to create a subtype instance using the builder pattern</span>
+<span class="source-line-no">043</span><span id="line.43"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">044</span><span id="line.44"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">045</span><span id="line.45"> *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.cartDiscountBuilder()</span>
+<span class="source-line-no">046</span><span id="line.46"> *             .build()</span>
+<span class="source-line-no">047</span><span id="line.47"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">048</span><span id="line.48"> * &lt;/div&gt;</span>
+<span class="source-line-no">049</span><span id="line.49"> */</span>
+<span class="source-line-no">050</span><span id="line.50">@JsonSubTypes({</span>
+<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl.class, name = CartDiscountResourceIdentifier.CART_DISCOUNT),</span>
+<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartResourceIdentifierImpl.class, name = CartResourceIdentifier.CART),</span>
+<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryResourceIdentifierImpl.class, name = CategoryResourceIdentifier.CATEGORY),</span>
+<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelResourceIdentifierImpl.class, name = ChannelResourceIdentifier.CHANNEL),</span>
+<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl.class, name = CustomerGroupResourceIdentifier.CUSTOMER_GROUP),</span>
+<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerResourceIdentifierImpl.class, name = CustomerResourceIdentifier.CUSTOMER),</span>
+<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierImpl.class, name = DiscountCodeResourceIdentifier.DISCOUNT_CODE),</span>
+<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierImpl.class, name = InventoryEntryResourceIdentifier.INVENTORY_ENTRY),</span>
+<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditResourceIdentifierImpl.class, name = OrderEditResourceIdentifier.ORDER_EDIT),</span>
+<span class="source-line-no">060</span><span id="line.60">        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderResourceIdentifierImpl.class, name = OrderResourceIdentifier.ORDER),</span>
+<span class="source-line-no">061</span><span id="line.61">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentResourceIdentifierImpl.class, name = PaymentResourceIdentifier.PAYMENT),</span>
+<span class="source-line-no">062</span><span id="line.62">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierImpl.class, name = ProductDiscountResourceIdentifier.PRODUCT_DISCOUNT),</span>
+<span class="source-line-no">063</span><span id="line.63">        @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductResourceIdentifierImpl.class, name = ProductResourceIdentifier.PRODUCT),</span>
+<span class="source-line-no">064</span><span id="line.64">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierImpl.class, name = ProductSelectionResourceIdentifier.PRODUCT_SELECTION),</span>
+<span class="source-line-no">065</span><span id="line.65">        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeResourceIdentifierImpl.class, name = ProductTypeResourceIdentifier.PRODUCT_TYPE),</span>
+<span class="source-line-no">066</span><span id="line.66">        @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewResourceIdentifierImpl.class, name = ReviewResourceIdentifier.REVIEW),</span>
+<span class="source-line-no">067</span><span id="line.67">        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl.class, name = ShippingMethodResourceIdentifier.SHIPPING_METHOD),</span>
+<span class="source-line-no">068</span><span id="line.68">        @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl.class, name = ShoppingListResourceIdentifier.SHOPPING_LIST),</span>
+<span class="source-line-no">069</span><span id="line.69">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierImpl.class, name = StandalonePriceResourceIdentifier.STANDALONE_PRICE),</span>
+<span class="source-line-no">070</span><span id="line.70">        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateResourceIdentifierImpl.class, name = StateResourceIdentifier.STATE),</span>
+<span class="source-line-no">071</span><span id="line.71">        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreResourceIdentifierImpl.class, name = StoreResourceIdentifier.STORE),</span>
+<span class="source-line-no">072</span><span id="line.72">        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl.class, name = TaxCategoryResourceIdentifier.TAX_CATEGORY),</span>
+<span class="source-line-no">073</span><span id="line.73">        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeResourceIdentifierImpl.class, name = TypeResourceIdentifier.TYPE),</span>
+<span class="source-line-no">074</span><span id="line.74">        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneResourceIdentifierImpl.class, name = ZoneResourceIdentifier.ZONE) })</span>
+<span class="source-line-no">075</span><span id="line.75">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ResourceIdentifierImpl.class, visible = true)</span>
+<span class="source-line-no">076</span><span id="line.76">@JsonDeserialize(as = ResourceIdentifierImpl.class)</span>
+<span class="source-line-no">077</span><span id="line.77">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">078</span><span id="line.78">public interface ResourceIdentifier {</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    /**</span>
+<span class="source-line-no">081</span><span id="line.81">     &lt;*  &lt;p&gt;Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    @JsonProperty("typeId")</span>
+<span class="source-line-no">085</span><span id="line.85">    public ReferenceTypeId getTypeId();</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    /**</span>
+<span class="source-line-no">088</span><span id="line.88">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the referenced resource. Required if &lt;code&gt;key&lt;/code&gt; is absent.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">089</span><span id="line.89">     */</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    @JsonProperty("id")</span>
+<span class="source-line-no">092</span><span id="line.92">    public String getId();</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    /**</span>
+<span class="source-line-no">095</span><span id="line.95">     &lt;*  &lt;p&gt;User-defined unique identifier of the referenced resource. Required if &lt;code&gt;id&lt;/code&gt; is absent.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">     */</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    @JsonProperty("key")</span>
+<span class="source-line-no">099</span><span id="line.99">    public String getKey();</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public void setId(final String id);</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public void setKey(final String key);</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public static com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder cartDiscountBuilder() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public static com.commercetools.api.models.cart.CartResourceIdentifierBuilder cartBuilder() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public static com.commercetools.api.models.category.CategoryResourceIdentifierBuilder categoryBuilder() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    public static com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder channelBuilder() {</span>
+<span class="source-line-no">118</span><span id="line.118">        return com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    public static com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder customerGroupBuilder() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public static com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder customerBuilder() {</span>
+<span class="source-line-no">126</span><span id="line.126">        return com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">127</span><span id="line.127">    }</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public static com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierBuilder discountCodeBuilder() {</span>
+<span class="source-line-no">130</span><span id="line.130">        return com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public static com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder inventoryEntryBuilder() {</span>
+<span class="source-line-no">134</span><span id="line.134">        return com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    public static com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder orderEditBuilder() {</span>
+<span class="source-line-no">138</span><span id="line.138">        return com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    public static com.commercetools.api.models.order.OrderResourceIdentifierBuilder orderBuilder() {</span>
+<span class="source-line-no">142</span><span id="line.142">        return com.commercetools.api.models.order.OrderResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">143</span><span id="line.143">    }</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    public static com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder paymentBuilder() {</span>
+<span class="source-line-no">146</span><span id="line.146">        return com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    public static com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierBuilder productDiscountBuilder() {</span>
+<span class="source-line-no">150</span><span id="line.150">        return com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public static com.commercetools.api.models.product.ProductResourceIdentifierBuilder productBuilder() {</span>
+<span class="source-line-no">154</span><span id="line.154">        return com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    public static com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder productSelectionBuilder() {</span>
+<span class="source-line-no">158</span><span id="line.158">        return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public static com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder productTypeBuilder() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public static com.commercetools.api.models.review.ReviewResourceIdentifierBuilder reviewBuilder() {</span>
+<span class="source-line-no">166</span><span id="line.166">        return com.commercetools.api.models.review.ReviewResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public static com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder shippingMethodBuilder() {</span>
+<span class="source-line-no">170</span><span id="line.170">        return com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">171</span><span id="line.171">    }</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    public static com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder shoppingListBuilder() {</span>
+<span class="source-line-no">174</span><span id="line.174">        return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public static com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder standalonePriceBuilder() {</span>
+<span class="source-line-no">178</span><span id="line.178">        return com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public static com.commercetools.api.models.state.StateResourceIdentifierBuilder stateBuilder() {</span>
+<span class="source-line-no">182</span><span id="line.182">        return com.commercetools.api.models.state.StateResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public static com.commercetools.api.models.store.StoreResourceIdentifierBuilder storeBuilder() {</span>
+<span class="source-line-no">186</span><span id="line.186">        return com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public static com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder taxCategoryBuilder() {</span>
+<span class="source-line-no">190</span><span id="line.190">        return com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    public static com.commercetools.api.models.type.TypeResourceIdentifierBuilder typeBuilder() {</span>
+<span class="source-line-no">194</span><span id="line.194">        return com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    public static com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder zoneBuilder() {</span>
+<span class="source-line-no">198</span><span id="line.198">        return com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    default &lt;T&gt; T withResourceIdentifier(Function&lt;ResourceIdentifier, T&gt; helper) {</span>
+<span class="source-line-no">202</span><span id="line.202">        return helper.apply(this);</span>
+<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ResourceIdentifier&gt; typeReference() {</span>
+<span class="source-line-no">206</span><span id="line.206">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ResourceIdentifier&gt;() {</span>
+<span class="source-line-no">207</span><span id="line.207">            @Override</span>
+<span class="source-line-no">208</span><span id="line.208">            public String toString() {</span>
+<span class="source-line-no">209</span><span id="line.209">                return "TypeReference&lt;ResourceIdentifier&gt;";</span>
+<span class="source-line-no">210</span><span id="line.210">            }</span>
+<span class="source-line-no">211</span><span id="line.211">        };</span>
+<span class="source-line-no">212</span><span id="line.212">    }</span>
+<span class="source-line-no">213</span><span id="line.213">}</span>
 
 
 

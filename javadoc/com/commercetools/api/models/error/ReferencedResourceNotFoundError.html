@@ -84,15 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ReferencedResourceNotFoundErrorImpl.html" title="class in com.commercetools.api.models.error">ReferencedResourceNotFoundErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.27">ReferencedResourceNotFoundError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.30">ReferencedResourceNotFoundError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ReferencedResourceNotFoundError
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ReferencedResourceNotFoundError referencedResourceNotFoundError = ReferencedResourceNotFoundError.builder()
-           .message("{message}")
-           .typeId(ReferenceTypeId.CART)
-           .build()
+     ReferencedResourceNotFoundError referencedResourceNotFoundError = ReferencedResourceNotFoundError.builder()
+             .message("{message}")
+             .typeId(ReferenceTypeId.CART)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -132,14 +135,18 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTypeId()">getTypeId</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">supported resource type identifiers:</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -182,7 +189,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="REFERENCED_RESOURCE_NOT_FOUND">
 <h3>REFERENCED_RESOURCE_NOT_FOUND</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.31">REFERENCED_RESOURCE_NOT_FOUND</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.34">REFERENCED_RESOURCE_NOT_FOUND</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.ReferencedResourceNotFoundError.REFERENCED_RESOURCE_NOT_FOUND">Constant Field Values</a></dd>
@@ -201,74 +208,76 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getTypeId()">
 <h3>getTypeId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.36">getTypeId</a></span>()</div>
-<div class="block"><p>supported resource type identifiers:</p></div>
+</span><span class="return-type">@NotNull <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.39">getTypeId</a></span>()</div>
+<div class="block"><*  <p>supported resource type identifiers:</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.40">getId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.47">getId</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.43">getKey</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.54">getKey</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTypeId(com.commercetools.api.models.common.ReferenceTypeId)">
 <h3>setTypeId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.46">setTypeId</a></span>&#8203;<span class="parameters">(<a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;typeId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.57">setTypeId</a></span>&#8203;<span class="parameters">(<a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;typeId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.48">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.59">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.50">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.61">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.52">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.ReferencedResourceNotFoundError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferencedResourceNotFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">ReferencedResourceNotFoundErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.66">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferencedResourceNotFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">ReferencedResourceNotFoundErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.77">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.ReferencedResourceNotFoundError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferencedResourceNotFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">ReferencedResourceNotFoundErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferencedResourceNotFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">ReferencedResourceNotFoundErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.81">builder</a></span>&#8203;<span class="parameters">(<a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withReferencedResourceNotFoundError(java.util.function.Function)">
 <h3>withReferencedResourceNotFoundError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.74">withReferencedResourceNotFoundError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.85">withReferencedResourceNotFoundError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.78">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReferencedResourceNotFoundError.html" title="interface in com.commercetools.api.models.error">ReferencedResourceNotFoundError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ReferencedResourceNotFoundError.html#line.89">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

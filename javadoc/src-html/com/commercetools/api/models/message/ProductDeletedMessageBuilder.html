@@ -23,288 +23,338 @@
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">/**</span>
-<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
-<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">016</span><span id="line.16">   ProductDeletedMessage productDeletedMessage = ProductDeletedMessage.builder()</span>
-<span class="source-line-no">017</span><span id="line.17">           .id("{id}")</span>
-<span class="source-line-no">018</span><span id="line.18">           .version(0.3)</span>
-<span class="source-line-no">019</span><span id="line.19">           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">020</span><span id="line.20">           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">021</span><span id="line.21">           .sequenceNumber(0.3)</span>
-<span class="source-line-no">022</span><span id="line.22">           .resource(resourceBuilder -&gt; resourceBuilder)</span>
-<span class="source-line-no">023</span><span id="line.23">           .resourceVersion(0.3)</span>
-<span class="source-line-no">024</span><span id="line.24">           .plusRemovedImageUrls(removedImageUrlsBuilder -&gt; removedImageUrlsBuilder)</span>
-<span class="source-line-no">025</span><span id="line.25">           .currentProjection(currentProjectionBuilder -&gt; currentProjectionBuilder)</span>
-<span class="source-line-no">026</span><span id="line.26">           .build()</span>
-<span class="source-line-no">027</span><span id="line.27"> &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> &lt;/div&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> */</span>
-<span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">031</span><span id="line.31">public class ProductDeletedMessageBuilder implements Builder&lt;ProductDeletedMessage&gt; {</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    private String id;</span>
+<span class="source-line-no">013</span><span id="line.13"> * ProductDeletedMessageBuilder</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *     ProductDeletedMessage productDeletedMessage = ProductDeletedMessage.builder()</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .id("{id}")</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .version(0.3)</span>
+<span class="source-line-no">021</span><span id="line.21"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">022</span><span id="line.22"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">023</span><span id="line.23"> *             .sequenceNumber(0.3)</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .resource(resourceBuilder -&gt; resourceBuilder)</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .resourceVersion(0.3)</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .plusRemovedImageUrls(removedImageUrlsBuilder -&gt; removedImageUrlsBuilder)</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .currentProjection(currentProjectionBuilder -&gt; currentProjectionBuilder)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .build()</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/div&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> */</span>
+<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">033</span><span id="line.33">public class ProductDeletedMessageBuilder implements Builder&lt;ProductDeletedMessage&gt; {</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    private Long version;</span>
+<span class="source-line-no">035</span><span id="line.35">    private String id;</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">037</span><span id="line.37">    private Long version;</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">039</span><span id="line.39">    private java.time.ZonedDateTime createdAt;</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    @Nullable</span>
-<span class="source-line-no">042</span><span id="line.42">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    @Nullable</span>
-<span class="source-line-no">045</span><span id="line.45">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    private Long sequenceNumber;</span>
+<span class="source-line-no">041</span><span id="line.41">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    @Nullable</span>
+<span class="source-line-no">044</span><span id="line.44">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    @Nullable</span>
+<span class="source-line-no">047</span><span id="line.47">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    private com.commercetools.api.models.common.Reference resource;</span>
+<span class="source-line-no">049</span><span id="line.49">    private Long sequenceNumber;</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    private Long resourceVersion;</span>
+<span class="source-line-no">051</span><span id="line.51">    private com.commercetools.api.models.common.Reference resource;</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    @Nullable</span>
-<span class="source-line-no">054</span><span id="line.54">    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    private java.util.List&lt;String&gt; removedImageUrls;</span>
+<span class="source-line-no">053</span><span id="line.53">    private Long resourceVersion;</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    @Nullable</span>
+<span class="source-line-no">056</span><span id="line.56">    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    private com.commercetools.api.models.product.ProductProjection currentProjection;</span>
+<span class="source-line-no">058</span><span id="line.58">    private java.util.List&lt;String&gt; removedImageUrls;</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    /**</span>
-<span class="source-line-no">061</span><span id="line.61">     *  &lt;p&gt;Platform-generated unique identifier of the Message.&lt;/p&gt;</span>
-<span class="source-line-no">062</span><span id="line.62">     */</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public ProductDeletedMessageBuilder id(final String id) {</span>
-<span class="source-line-no">065</span><span id="line.65">        this.id = id;</span>
-<span class="source-line-no">066</span><span id="line.66">        return this;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public ProductDeletedMessageBuilder version(final Long version) {</span>
-<span class="source-line-no">070</span><span id="line.70">        this.version = version;</span>
-<span class="source-line-no">071</span><span id="line.71">        return this;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public ProductDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">075</span><span id="line.75">        this.createdAt = createdAt;</span>
-<span class="source-line-no">076</span><span id="line.76">        return this;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public ProductDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
-<span class="source-line-no">080</span><span id="line.80">        this.lastModifiedAt = lastModifiedAt;</span>
-<span class="source-line-no">081</span><span id="line.81">        return this;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">060</span><span id="line.60">    private com.commercetools.api.models.product.ProductProjection currentProjection;</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    /**</span>
+<span class="source-line-no">063</span><span id="line.63">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the Message.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     */</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public ProductDeletedMessageBuilder id(final String id) {</span>
+<span class="source-line-no">067</span><span id="line.67">        this.id = id;</span>
+<span class="source-line-no">068</span><span id="line.68">        return this;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">     &lt;&gt;</span>
+<span class="source-line-no">073</span><span id="line.73">     */</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public ProductDeletedMessageBuilder version(final Long version) {</span>
+<span class="source-line-no">076</span><span id="line.76">        this.version = version;</span>
+<span class="source-line-no">077</span><span id="line.77">        return this;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    /**</span>
+<span class="source-line-no">081</span><span id="line.81">     &lt;&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">086</span><span id="line.86">     */</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public ProductDeletedMessageBuilder lastModifiedBy(</span>
-<span class="source-line-no">089</span><span id="line.89">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
-<span class="source-line-no">090</span><span id="line.90">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
-<span class="source-line-no">091</span><span id="line.91">        return this;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    /**</span>
-<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">096</span><span id="line.96">     */</span>
+<span class="source-line-no">084</span><span id="line.84">    public ProductDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">085</span><span id="line.85">        this.createdAt = createdAt;</span>
+<span class="source-line-no">086</span><span id="line.86">        return this;</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    /**</span>
+<span class="source-line-no">090</span><span id="line.90">     &lt;&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">     */</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public ProductDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
+<span class="source-line-no">094</span><span id="line.94">        this.lastModifiedAt = lastModifiedAt;</span>
+<span class="source-line-no">095</span><span id="line.95">        return this;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public ProductDeletedMessageBuilder lastModifiedBy(</span>
-<span class="source-line-no">099</span><span id="line.99">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="source-line-no">101</span><span id="line.101">        return this;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">106</span><span id="line.106">     */</span>
+<span class="source-line-no">098</span><span id="line.98">    /**</span>
+<span class="source-line-no">099</span><span id="line.99">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public ProductDeletedMessageBuilder lastModifiedBy(</span>
+<span class="source-line-no">103</span><span id="line.103">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
+<span class="source-line-no">104</span><span id="line.104">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
+<span class="source-line-no">105</span><span id="line.105">        return this;</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public ProductDeletedMessageBuilder createdBy(</span>
-<span class="source-line-no">109</span><span id="line.109">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
-<span class="source-line-no">110</span><span id="line.110">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
-<span class="source-line-no">111</span><span id="line.111">        return this;</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    /**</span>
-<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">116</span><span id="line.116">     */</span>
+<span class="source-line-no">108</span><span id="line.108">    /**</span>
+<span class="source-line-no">109</span><span id="line.109">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">110</span><span id="line.110">     */</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public ProductDeletedMessageBuilder lastModifiedBy(</span>
+<span class="source-line-no">113</span><span id="line.113">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
+<span class="source-line-no">114</span><span id="line.114">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="source-line-no">115</span><span id="line.115">        return this;</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
 <span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    public ProductDeletedMessageBuilder createdBy(</span>
-<span class="source-line-no">119</span><span id="line.119">            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
-<span class="source-line-no">120</span><span id="line.120">        this.createdBy = createdBy;</span>
-<span class="source-line-no">121</span><span id="line.121">        return this;</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public ProductDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {</span>
-<span class="source-line-no">125</span><span id="line.125">        this.sequenceNumber = sequenceNumber;</span>
-<span class="source-line-no">126</span><span id="line.126">        return this;</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    /**</span>
-<span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
-<span class="source-line-no">131</span><span id="line.131">     */</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    public ProductDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {</span>
-<span class="source-line-no">134</span><span id="line.134">        this.resource = resource;</span>
+<span class="source-line-no">118</span><span id="line.118">    /**</span>
+<span class="source-line-no">119</span><span id="line.119">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    public ProductDeletedMessageBuilder createdBy(</span>
+<span class="source-line-no">123</span><span id="line.123">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
+<span class="source-line-no">124</span><span id="line.124">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
+<span class="source-line-no">125</span><span id="line.125">        return this;</span>
+<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">    /**</span>
+<span class="source-line-no">129</span><span id="line.129">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">130</span><span id="line.130">     */</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    public ProductDeletedMessageBuilder createdBy(</span>
+<span class="source-line-no">133</span><span id="line.133">            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
+<span class="source-line-no">134</span><span id="line.134">        this.createdBy = createdBy;</span>
 <span class="source-line-no">135</span><span id="line.135">        return this;</span>
 <span class="source-line-no">136</span><span id="line.136">    }</span>
 <span class="source-line-no">137</span><span id="line.137"></span>
 <span class="source-line-no">138</span><span id="line.138">    /**</span>
-<span class="source-line-no">139</span><span id="line.139">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
+<span class="source-line-no">139</span><span id="line.139">     &lt;&gt;</span>
 <span class="source-line-no">140</span><span id="line.140">     */</span>
 <span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public ProductDeletedMessageBuilder resource(</span>
-<span class="source-line-no">143</span><span id="line.143">            Function&lt;com.commercetools.api.models.common.ReferenceBuilder, Builder&lt;? extends com.commercetools.api.models.common.Reference&gt;&gt; builder) {</span>
-<span class="source-line-no">144</span><span id="line.144">        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();</span>
-<span class="source-line-no">145</span><span id="line.145">        return this;</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public ProductDeletedMessageBuilder resourceVersion(final Long resourceVersion) {</span>
-<span class="source-line-no">149</span><span id="line.149">        this.resourceVersion = resourceVersion;</span>
-<span class="source-line-no">150</span><span id="line.150">        return this;</span>
-<span class="source-line-no">151</span><span id="line.151">    }</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">154</span><span id="line.154">            Function&lt;com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder&gt; builder) {</span>
-<span class="source-line-no">155</span><span id="line.155">        this.resourceUserProvidedIdentifiers = builder</span>
-<span class="source-line-no">156</span><span id="line.156">                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())</span>
-<span class="source-line-no">157</span><span id="line.157">                .build();</span>
-<span class="source-line-no">158</span><span id="line.158">        return this;</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">162</span><span id="line.162">            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
-<span class="source-line-no">163</span><span id="line.163">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">164</span><span id="line.164">        return this;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public ProductDeletedMessageBuilder removedImageUrls(final String... removedImageUrls) {</span>
-<span class="source-line-no">168</span><span id="line.168">        this.removedImageUrls = new ArrayList&lt;&gt;(Arrays.asList(removedImageUrls));</span>
-<span class="source-line-no">169</span><span id="line.169">        return this;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public ProductDeletedMessageBuilder removedImageUrls(final java.util.List&lt;String&gt; removedImageUrls) {</span>
-<span class="source-line-no">173</span><span id="line.173">        this.removedImageUrls = removedImageUrls;</span>
-<span class="source-line-no">174</span><span id="line.174">        return this;</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    public ProductDeletedMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {</span>
-<span class="source-line-no">178</span><span id="line.178">        if (this.removedImageUrls == null) {</span>
-<span class="source-line-no">179</span><span id="line.179">            this.removedImageUrls = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">180</span><span id="line.180">        }</span>
-<span class="source-line-no">181</span><span id="line.181">        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));</span>
-<span class="source-line-no">182</span><span id="line.182">        return this;</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    public ProductDeletedMessageBuilder currentProjection(</span>
-<span class="source-line-no">186</span><span id="line.186">            Function&lt;com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder&gt; builder) {</span>
-<span class="source-line-no">187</span><span id="line.187">        this.currentProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())</span>
-<span class="source-line-no">188</span><span id="line.188">                .build();</span>
-<span class="source-line-no">189</span><span id="line.189">        return this;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public ProductDeletedMessageBuilder currentProjection(</span>
-<span class="source-line-no">193</span><span id="line.193">            final com.commercetools.api.models.product.ProductProjection currentProjection) {</span>
-<span class="source-line-no">194</span><span id="line.194">        this.currentProjection = currentProjection;</span>
-<span class="source-line-no">195</span><span id="line.195">        return this;</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    public String getId() {</span>
-<span class="source-line-no">199</span><span id="line.199">        return this.id;</span>
-<span class="source-line-no">200</span><span id="line.200">    }</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    public Long getVersion() {</span>
-<span class="source-line-no">203</span><span id="line.203">        return this.version;</span>
+<span class="source-line-no">142</span><span id="line.142">    public ProductDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {</span>
+<span class="source-line-no">143</span><span id="line.143">        this.sequenceNumber = sequenceNumber;</span>
+<span class="source-line-no">144</span><span id="line.144">        return this;</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     &lt;*  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public ProductDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {</span>
+<span class="source-line-no">152</span><span id="line.152">        this.resource = resource;</span>
+<span class="source-line-no">153</span><span id="line.153">        return this;</span>
+<span class="source-line-no">154</span><span id="line.154">    }</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">    /**</span>
+<span class="source-line-no">157</span><span id="line.157">     &lt;*  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">158</span><span id="line.158">     */</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    public ProductDeletedMessageBuilder resource(</span>
+<span class="source-line-no">161</span><span id="line.161">            Function&lt;com.commercetools.api.models.common.ReferenceBuilder, Builder&lt;? extends com.commercetools.api.models.common.Reference&gt;&gt; builder) {</span>
+<span class="source-line-no">162</span><span id="line.162">        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();</span>
+<span class="source-line-no">163</span><span id="line.163">        return this;</span>
+<span class="source-line-no">164</span><span id="line.164">    }</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    /**</span>
+<span class="source-line-no">167</span><span id="line.167">     &lt;&gt;</span>
+<span class="source-line-no">168</span><span id="line.168">     */</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    public ProductDeletedMessageBuilder resourceVersion(final Long resourceVersion) {</span>
+<span class="source-line-no">171</span><span id="line.171">        this.resourceVersion = resourceVersion;</span>
+<span class="source-line-no">172</span><span id="line.172">        return this;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    /**</span>
+<span class="source-line-no">176</span><span id="line.176">     &lt;&gt;</span>
+<span class="source-line-no">177</span><span id="line.177">     */</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">    public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">180</span><span id="line.180">            Function&lt;com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder&gt; builder) {</span>
+<span class="source-line-no">181</span><span id="line.181">        this.resourceUserProvidedIdentifiers = builder</span>
+<span class="source-line-no">182</span><span id="line.182">                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())</span>
+<span class="source-line-no">183</span><span id="line.183">                .build();</span>
+<span class="source-line-no">184</span><span id="line.184">        return this;</span>
+<span class="source-line-no">185</span><span id="line.185">    }</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    /**</span>
+<span class="source-line-no">188</span><span id="line.188">     &lt;&gt;</span>
+<span class="source-line-no">189</span><span id="line.189">     */</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">192</span><span id="line.192">            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
+<span class="source-line-no">193</span><span id="line.193">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">194</span><span id="line.194">        return this;</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    /**</span>
+<span class="source-line-no">198</span><span id="line.198">     &lt;&gt;</span>
+<span class="source-line-no">199</span><span id="line.199">     */</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    public ProductDeletedMessageBuilder removedImageUrls(final String... removedImageUrls) {</span>
+<span class="source-line-no">202</span><span id="line.202">        this.removedImageUrls = new ArrayList&lt;&gt;(Arrays.asList(removedImageUrls));</span>
+<span class="source-line-no">203</span><span id="line.203">        return this;</span>
 <span class="source-line-no">204</span><span id="line.204">    }</span>
 <span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">207</span><span id="line.207">        return this.createdAt;</span>
-<span class="source-line-no">208</span><span id="line.208">    }</span>
+<span class="source-line-no">206</span><span id="line.206">    /**</span>
+<span class="source-line-no">207</span><span id="line.207">     &lt;&gt;</span>
+<span class="source-line-no">208</span><span id="line.208">     */</span>
 <span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">211</span><span id="line.211">        return this.lastModifiedAt;</span>
-<span class="source-line-no">212</span><span id="line.212">    }</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">    @Nullable</span>
-<span class="source-line-no">215</span><span id="line.215">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">216</span><span id="line.216">        return this.lastModifiedBy;</span>
-<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">210</span><span id="line.210">    public ProductDeletedMessageBuilder removedImageUrls(final java.util.List&lt;String&gt; removedImageUrls) {</span>
+<span class="source-line-no">211</span><span id="line.211">        this.removedImageUrls = removedImageUrls;</span>
+<span class="source-line-no">212</span><span id="line.212">        return this;</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    /**</span>
+<span class="source-line-no">216</span><span id="line.216">     &lt;&gt;</span>
+<span class="source-line-no">217</span><span id="line.217">     */</span>
 <span class="source-line-no">218</span><span id="line.218"></span>
-<span class="source-line-no">219</span><span id="line.219">    @Nullable</span>
-<span class="source-line-no">220</span><span id="line.220">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">221</span><span id="line.221">        return this.createdBy;</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">    public Long getSequenceNumber() {</span>
-<span class="source-line-no">225</span><span id="line.225">        return this.sequenceNumber;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    public com.commercetools.api.models.common.Reference getResource() {</span>
-<span class="source-line-no">229</span><span id="line.229">        return this.resource;</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    public Long getResourceVersion() {</span>
-<span class="source-line-no">233</span><span id="line.233">        return this.resourceVersion;</span>
-<span class="source-line-no">234</span><span id="line.234">    }</span>
-<span class="source-line-no">235</span><span id="line.235"></span>
-<span class="source-line-no">236</span><span id="line.236">    @Nullable</span>
-<span class="source-line-no">237</span><span id="line.237">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
-<span class="source-line-no">238</span><span id="line.238">        return this.resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">    public java.util.List&lt;String&gt; getRemovedImageUrls() {</span>
-<span class="source-line-no">242</span><span id="line.242">        return this.removedImageUrls;</span>
-<span class="source-line-no">243</span><span id="line.243">    }</span>
-<span class="source-line-no">244</span><span id="line.244"></span>
-<span class="source-line-no">245</span><span id="line.245">    public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {</span>
-<span class="source-line-no">246</span><span id="line.246">        return this.currentProjection;</span>
-<span class="source-line-no">247</span><span id="line.247">    }</span>
-<span class="source-line-no">248</span><span id="line.248"></span>
-<span class="source-line-no">249</span><span id="line.249">    public ProductDeletedMessage build() {</span>
-<span class="source-line-no">250</span><span id="line.250">        Objects.requireNonNull(id, ProductDeletedMessage.class + ": id is missing");</span>
-<span class="source-line-no">251</span><span id="line.251">        Objects.requireNonNull(version, ProductDeletedMessage.class + ": version is missing");</span>
-<span class="source-line-no">252</span><span id="line.252">        Objects.requireNonNull(createdAt, ProductDeletedMessage.class + ": createdAt is missing");</span>
-<span class="source-line-no">253</span><span id="line.253">        Objects.requireNonNull(lastModifiedAt, ProductDeletedMessage.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">254</span><span id="line.254">        Objects.requireNonNull(sequenceNumber, ProductDeletedMessage.class + ": sequenceNumber is missing");</span>
-<span class="source-line-no">255</span><span id="line.255">        Objects.requireNonNull(resource, ProductDeletedMessage.class + ": resource is missing");</span>
-<span class="source-line-no">256</span><span id="line.256">        Objects.requireNonNull(resourceVersion, ProductDeletedMessage.class + ": resourceVersion is missing");</span>
-<span class="source-line-no">257</span><span id="line.257">        Objects.requireNonNull(removedImageUrls, ProductDeletedMessage.class + ": removedImageUrls is missing");</span>
-<span class="source-line-no">258</span><span id="line.258">        Objects.requireNonNull(currentProjection, ProductDeletedMessage.class + ": currentProjection is missing");</span>
-<span class="source-line-no">259</span><span id="line.259">        return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">260</span><span id="line.260">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,</span>
-<span class="source-line-no">261</span><span id="line.261">            currentProjection);</span>
+<span class="source-line-no">219</span><span id="line.219">    public ProductDeletedMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {</span>
+<span class="source-line-no">220</span><span id="line.220">        if (this.removedImageUrls == null) {</span>
+<span class="source-line-no">221</span><span id="line.221">            this.removedImageUrls = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">222</span><span id="line.222">        }</span>
+<span class="source-line-no">223</span><span id="line.223">        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));</span>
+<span class="source-line-no">224</span><span id="line.224">        return this;</span>
+<span class="source-line-no">225</span><span id="line.225">    }</span>
+<span class="source-line-no">226</span><span id="line.226"></span>
+<span class="source-line-no">227</span><span id="line.227">    /**</span>
+<span class="source-line-no">228</span><span id="line.228">     &lt;&gt;</span>
+<span class="source-line-no">229</span><span id="line.229">     */</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">    public ProductDeletedMessageBuilder currentProjection(</span>
+<span class="source-line-no">232</span><span id="line.232">            Function&lt;com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder&gt; builder) {</span>
+<span class="source-line-no">233</span><span id="line.233">        this.currentProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())</span>
+<span class="source-line-no">234</span><span id="line.234">                .build();</span>
+<span class="source-line-no">235</span><span id="line.235">        return this;</span>
+<span class="source-line-no">236</span><span id="line.236">    }</span>
+<span class="source-line-no">237</span><span id="line.237"></span>
+<span class="source-line-no">238</span><span id="line.238">    /**</span>
+<span class="source-line-no">239</span><span id="line.239">     &lt;&gt;</span>
+<span class="source-line-no">240</span><span id="line.240">     */</span>
+<span class="source-line-no">241</span><span id="line.241"></span>
+<span class="source-line-no">242</span><span id="line.242">    public ProductDeletedMessageBuilder currentProjection(</span>
+<span class="source-line-no">243</span><span id="line.243">            final com.commercetools.api.models.product.ProductProjection currentProjection) {</span>
+<span class="source-line-no">244</span><span id="line.244">        this.currentProjection = currentProjection;</span>
+<span class="source-line-no">245</span><span id="line.245">        return this;</span>
+<span class="source-line-no">246</span><span id="line.246">    }</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">    public String getId() {</span>
+<span class="source-line-no">249</span><span id="line.249">        return this.id;</span>
+<span class="source-line-no">250</span><span id="line.250">    }</span>
+<span class="source-line-no">251</span><span id="line.251"></span>
+<span class="source-line-no">252</span><span id="line.252">    public Long getVersion() {</span>
+<span class="source-line-no">253</span><span id="line.253">        return this.version;</span>
+<span class="source-line-no">254</span><span id="line.254">    }</span>
+<span class="source-line-no">255</span><span id="line.255"></span>
+<span class="source-line-no">256</span><span id="line.256">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">257</span><span id="line.257">        return this.createdAt;</span>
+<span class="source-line-no">258</span><span id="line.258">    }</span>
+<span class="source-line-no">259</span><span id="line.259"></span>
+<span class="source-line-no">260</span><span id="line.260">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">261</span><span id="line.261">        return this.lastModifiedAt;</span>
 <span class="source-line-no">262</span><span id="line.262">    }</span>
 <span class="source-line-no">263</span><span id="line.263"></span>
-<span class="source-line-no">264</span><span id="line.264">    /**</span>
-<span class="source-line-no">265</span><span id="line.265">     * builds ProductDeletedMessage without checking for non null required values</span>
-<span class="source-line-no">266</span><span id="line.266">     */</span>
-<span class="source-line-no">267</span><span id="line.267">    public ProductDeletedMessage buildUnchecked() {</span>
-<span class="source-line-no">268</span><span id="line.268">        return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">269</span><span id="line.269">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,</span>
-<span class="source-line-no">270</span><span id="line.270">            currentProjection);</span>
-<span class="source-line-no">271</span><span id="line.271">    }</span>
-<span class="source-line-no">272</span><span id="line.272"></span>
-<span class="source-line-no">273</span><span id="line.273">    public static ProductDeletedMessageBuilder of() {</span>
-<span class="source-line-no">274</span><span id="line.274">        return new ProductDeletedMessageBuilder();</span>
-<span class="source-line-no">275</span><span id="line.275">    }</span>
-<span class="source-line-no">276</span><span id="line.276"></span>
-<span class="source-line-no">277</span><span id="line.277">    public static ProductDeletedMessageBuilder of(final ProductDeletedMessage template) {</span>
-<span class="source-line-no">278</span><span id="line.278">        ProductDeletedMessageBuilder builder = new ProductDeletedMessageBuilder();</span>
-<span class="source-line-no">279</span><span id="line.279">        builder.id = template.getId();</span>
-<span class="source-line-no">280</span><span id="line.280">        builder.version = template.getVersion();</span>
-<span class="source-line-no">281</span><span id="line.281">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">282</span><span id="line.282">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">283</span><span id="line.283">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">284</span><span id="line.284">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">285</span><span id="line.285">        builder.sequenceNumber = template.getSequenceNumber();</span>
-<span class="source-line-no">286</span><span id="line.286">        builder.resource = template.getResource();</span>
-<span class="source-line-no">287</span><span id="line.287">        builder.resourceVersion = template.getResourceVersion();</span>
-<span class="source-line-no">288</span><span id="line.288">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
-<span class="source-line-no">289</span><span id="line.289">        builder.removedImageUrls = template.getRemovedImageUrls();</span>
-<span class="source-line-no">290</span><span id="line.290">        builder.currentProjection = template.getCurrentProjection();</span>
-<span class="source-line-no">291</span><span id="line.291">        return builder;</span>
-<span class="source-line-no">292</span><span id="line.292">    }</span>
-<span class="source-line-no">293</span><span id="line.293"></span>
-<span class="source-line-no">294</span><span id="line.294">}</span>
+<span class="source-line-no">264</span><span id="line.264">    @Nullable</span>
+<span class="source-line-no">265</span><span id="line.265">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">266</span><span id="line.266">        return this.lastModifiedBy;</span>
+<span class="source-line-no">267</span><span id="line.267">    }</span>
+<span class="source-line-no">268</span><span id="line.268"></span>
+<span class="source-line-no">269</span><span id="line.269">    @Nullable</span>
+<span class="source-line-no">270</span><span id="line.270">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">271</span><span id="line.271">        return this.createdBy;</span>
+<span class="source-line-no">272</span><span id="line.272">    }</span>
+<span class="source-line-no">273</span><span id="line.273"></span>
+<span class="source-line-no">274</span><span id="line.274">    public Long getSequenceNumber() {</span>
+<span class="source-line-no">275</span><span id="line.275">        return this.sequenceNumber;</span>
+<span class="source-line-no">276</span><span id="line.276">    }</span>
+<span class="source-line-no">277</span><span id="line.277"></span>
+<span class="source-line-no">278</span><span id="line.278">    public com.commercetools.api.models.common.Reference getResource() {</span>
+<span class="source-line-no">279</span><span id="line.279">        return this.resource;</span>
+<span class="source-line-no">280</span><span id="line.280">    }</span>
+<span class="source-line-no">281</span><span id="line.281"></span>
+<span class="source-line-no">282</span><span id="line.282">    public Long getResourceVersion() {</span>
+<span class="source-line-no">283</span><span id="line.283">        return this.resourceVersion;</span>
+<span class="source-line-no">284</span><span id="line.284">    }</span>
+<span class="source-line-no">285</span><span id="line.285"></span>
+<span class="source-line-no">286</span><span id="line.286">    @Nullable</span>
+<span class="source-line-no">287</span><span id="line.287">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
+<span class="source-line-no">288</span><span id="line.288">        return this.resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">289</span><span id="line.289">    }</span>
+<span class="source-line-no">290</span><span id="line.290"></span>
+<span class="source-line-no">291</span><span id="line.291">    public java.util.List&lt;String&gt; getRemovedImageUrls() {</span>
+<span class="source-line-no">292</span><span id="line.292">        return this.removedImageUrls;</span>
+<span class="source-line-no">293</span><span id="line.293">    }</span>
+<span class="source-line-no">294</span><span id="line.294"></span>
+<span class="source-line-no">295</span><span id="line.295">    public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {</span>
+<span class="source-line-no">296</span><span id="line.296">        return this.currentProjection;</span>
+<span class="source-line-no">297</span><span id="line.297">    }</span>
+<span class="source-line-no">298</span><span id="line.298"></span>
+<span class="source-line-no">299</span><span id="line.299">    public ProductDeletedMessage build() {</span>
+<span class="source-line-no">300</span><span id="line.300">        Objects.requireNonNull(id, ProductDeletedMessage.class + ": id is missing");</span>
+<span class="source-line-no">301</span><span id="line.301">        Objects.requireNonNull(version, ProductDeletedMessage.class + ": version is missing");</span>
+<span class="source-line-no">302</span><span id="line.302">        Objects.requireNonNull(createdAt, ProductDeletedMessage.class + ": createdAt is missing");</span>
+<span class="source-line-no">303</span><span id="line.303">        Objects.requireNonNull(lastModifiedAt, ProductDeletedMessage.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">304</span><span id="line.304">        Objects.requireNonNull(sequenceNumber, ProductDeletedMessage.class + ": sequenceNumber is missing");</span>
+<span class="source-line-no">305</span><span id="line.305">        Objects.requireNonNull(resource, ProductDeletedMessage.class + ": resource is missing");</span>
+<span class="source-line-no">306</span><span id="line.306">        Objects.requireNonNull(resourceVersion, ProductDeletedMessage.class + ": resourceVersion is missing");</span>
+<span class="source-line-no">307</span><span id="line.307">        Objects.requireNonNull(removedImageUrls, ProductDeletedMessage.class + ": removedImageUrls is missing");</span>
+<span class="source-line-no">308</span><span id="line.308">        Objects.requireNonNull(currentProjection, ProductDeletedMessage.class + ": currentProjection is missing");</span>
+<span class="source-line-no">309</span><span id="line.309">        return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">310</span><span id="line.310">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,</span>
+<span class="source-line-no">311</span><span id="line.311">            currentProjection);</span>
+<span class="source-line-no">312</span><span id="line.312">    }</span>
+<span class="source-line-no">313</span><span id="line.313"></span>
+<span class="source-line-no">314</span><span id="line.314">    /**</span>
+<span class="source-line-no">315</span><span id="line.315">     * builds ProductDeletedMessage without checking for non null required values</span>
+<span class="source-line-no">316</span><span id="line.316">     */</span>
+<span class="source-line-no">317</span><span id="line.317">    public ProductDeletedMessage buildUnchecked() {</span>
+<span class="source-line-no">318</span><span id="line.318">        return new ProductDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">319</span><span id="line.319">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls,</span>
+<span class="source-line-no">320</span><span id="line.320">            currentProjection);</span>
+<span class="source-line-no">321</span><span id="line.321">    }</span>
+<span class="source-line-no">322</span><span id="line.322"></span>
+<span class="source-line-no">323</span><span id="line.323">    public static ProductDeletedMessageBuilder of() {</span>
+<span class="source-line-no">324</span><span id="line.324">        return new ProductDeletedMessageBuilder();</span>
+<span class="source-line-no">325</span><span id="line.325">    }</span>
+<span class="source-line-no">326</span><span id="line.326"></span>
+<span class="source-line-no">327</span><span id="line.327">    public static ProductDeletedMessageBuilder of(final ProductDeletedMessage template) {</span>
+<span class="source-line-no">328</span><span id="line.328">        ProductDeletedMessageBuilder builder = new ProductDeletedMessageBuilder();</span>
+<span class="source-line-no">329</span><span id="line.329">        builder.id = template.getId();</span>
+<span class="source-line-no">330</span><span id="line.330">        builder.version = template.getVersion();</span>
+<span class="source-line-no">331</span><span id="line.331">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">332</span><span id="line.332">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">333</span><span id="line.333">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">334</span><span id="line.334">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">335</span><span id="line.335">        builder.sequenceNumber = template.getSequenceNumber();</span>
+<span class="source-line-no">336</span><span id="line.336">        builder.resource = template.getResource();</span>
+<span class="source-line-no">337</span><span id="line.337">        builder.resourceVersion = template.getResourceVersion();</span>
+<span class="source-line-no">338</span><span id="line.338">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
+<span class="source-line-no">339</span><span id="line.339">        builder.removedImageUrls = template.getRemovedImageUrls();</span>
+<span class="source-line-no">340</span><span id="line.340">        builder.currentProjection = template.getCurrentProjection();</span>
+<span class="source-line-no">341</span><span id="line.341">        return builder;</span>
+<span class="source-line-no">342</span><span id="line.342">    }</span>
+<span class="source-line-no">343</span><span id="line.343"></span>
+<span class="source-line-no">344</span><span id="line.344">}</span>
 
 
 

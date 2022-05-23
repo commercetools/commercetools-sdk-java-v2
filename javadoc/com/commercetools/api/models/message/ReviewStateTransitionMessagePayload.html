@@ -84,19 +84,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ReviewStateTransitionMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">ReviewStateTransitionMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.33">ReviewStateTransitionMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.36">ReviewStateTransitionMessagePayload</a></span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
-<div class="block">Example to create an instance using the builder pattern
+<div class="block">ReviewStateTransitionMessagePayload
+
+ <hr>
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-   ReviewStateTransitionMessagePayload reviewStateTransitionMessagePayload = ReviewStateTransitionMessagePayload.builder()
-           .oldState(oldStateBuilder -> oldStateBuilder)
-           .newState(newStateBuilder -> newStateBuilder)
-           .oldIncludedInStatistics(true)
-           .newIncludedInStatistics(true)
-           .target(targetBuilder -> targetBuilder)
-           .force(true)
-           .build()
+     ReviewStateTransitionMessagePayload reviewStateTransitionMessagePayload = ReviewStateTransitionMessagePayload.builder()
+             .oldState(oldStateBuilder -> oldStateBuilder)
+             .newState(newStateBuilder -> newStateBuilder)
+             .oldIncludedInStatistics(true)
+             .newIncludedInStatistics(true)
+             .target(targetBuilder -> targetBuilder)
+             .force(true)
+             .build()
  </code></pre>
  </div></div>
 </section>
@@ -136,27 +139,33 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getForce()">getForce</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNewIncludedInStatistics()">getNewIncludedInStatistics</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNewState()">getNewState</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Reference to a State.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getOldIncludedInStatistics()">getOldIncludedInStatistics</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block"><></div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getOldState()">getOldState</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Reference to a State.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTarget()">getTarget</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>.</div>
+<div class="block"><*</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -208,7 +217,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="REVIEW_STATE_TRANSITION">
 <h3>REVIEW_STATE_TRANSITION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.37">REVIEW_STATE_TRANSITION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.40">REVIEW_STATE_TRANSITION</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ReviewStateTransitionMessagePayload.REVIEW_STATE_TRANSITION">Constant Field Values</a></dd>
@@ -228,8 +237,8 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getOldState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.42">getOldState</a></span>()</div>
-<div class="block"><p>Reference to a State.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.45">getOldState</a></span>()</div>
+<div class="block"><*  <p>Reference to a State.</p>></div>
 </section>
 </li>
 <li>
@@ -237,22 +246,24 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getNewState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.50">getNewState</a></span>()</div>
-<div class="block"><p>Reference to a State.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.53">getNewState</a></span>()</div>
+<div class="block"><*  <p>Reference to a State.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOldIncludedInStatistics()">
 <h3>getOldIncludedInStatistics</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.55">getOldIncludedInStatistics</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.61">getOldIncludedInStatistics</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNewIncludedInStatistics()">
 <h3>getNewIncludedInStatistics</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.59">getNewIncludedInStatistics</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.68">getNewIncludedInStatistics</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
@@ -260,87 +271,88 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getTarget</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.66">getTarget</a></span>()</div>
-<div class="block"><p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.75">getTarget</a></span>()</div>
+<div class="block"><*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getForce()">
 <h3>getForce</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.71">getForce</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.83">getForce</a></span>()</div>
+<div class="block"><></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOldState(com.commercetools.api.models.state.StateReference)">
 <h3>setOldState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.75">setOldState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;oldState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.87">setOldState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;oldState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewState(com.commercetools.api.models.state.StateReference)">
 <h3>setNewState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.77">setNewState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;newState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.89">setNewState</a></span>&#8203;<span class="parameters">(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;newState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOldIncludedInStatistics(java.lang.Boolean)">
 <h3>setOldIncludedInStatistics</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.79">setOldIncludedInStatistics</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;oldIncludedInStatistics)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.91">setOldIncludedInStatistics</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;oldIncludedInStatistics)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNewIncludedInStatistics(java.lang.Boolean)">
 <h3>setNewIncludedInStatistics</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.81">setNewIncludedInStatistics</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;newIncludedInStatistics)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.93">setNewIncludedInStatistics</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;newIncludedInStatistics)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTarget(com.commercetools.api.models.common.Reference)">
 <h3>setTarget</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.83">setTarget</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;target)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.95">setTarget</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;target)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setForce(java.lang.Boolean)">
 <h3>setForce</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.85">setForce</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;force)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.97">setForce</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;force)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.87">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.99">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ReviewStateTransitionMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.91">of</a></span>&#8203;<span class="parameters">(<a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.103">of</a></span>&#8203;<span class="parameters">(<a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.102">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.114">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ReviewStateTransitionMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.106">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.118">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withReviewStateTransitionMessagePayload(java.util.function.Function)">
 <h3>withReviewStateTransitionMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.111">withReviewStateTransitionMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.123">withReviewStateTransitionMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.115">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewStateTransitionMessagePayload.html" title="interface in com.commercetools.api.models.message">ReviewStateTransitionMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ReviewStateTransitionMessagePayload.html#line.127">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

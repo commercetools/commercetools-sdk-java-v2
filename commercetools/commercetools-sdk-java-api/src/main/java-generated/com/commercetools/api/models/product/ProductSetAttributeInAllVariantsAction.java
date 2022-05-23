@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetAttributeInAllVariantsAction productSetAttributeInAllVariantsAction = ProductSetAttributeInAllVariantsAction.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * ProductSetAttributeInAllVariantsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAttributeInAllVariantsAction productSetAttributeInAllVariantsAction = ProductSetAttributeInAllVariantsAction.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAttributeInAllVariantsActionImpl.class)
@@ -28,16 +31,23 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
 
     String SET_ATTRIBUTE_IN_ALL_VARIANTS = "setAttributeInAllVariants";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     *  <p>The same update behavior as for Set Attribute applies.</p>
+     <*  <p>The same update behavior as for Set Attribute applies.</p>>
      */
 
     @JsonProperty("value")
     public Object getValue();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

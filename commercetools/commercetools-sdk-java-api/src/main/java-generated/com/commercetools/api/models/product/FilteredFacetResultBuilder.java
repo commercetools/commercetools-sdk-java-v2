@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   FilteredFacetResult filteredFacetResult = FilteredFacetResult.builder()
-           .count(0.3)
-           .build()
- </code></pre>
- </div>
+ * FilteredFacetResultBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FilteredFacetResult filteredFacetResult = FilteredFacetResult.builder()
+ *             .count(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> {
@@ -26,10 +28,18 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     @Nullable
     private Long productCount;
 
+    /**
+     <>
+     */
+
     public FilteredFacetResultBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public FilteredFacetResultBuilder productCount(@Nullable final Long productCount) {
         this.productCount = productCount;

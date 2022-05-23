@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AddReturnInfoChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
 
@@ -35,16 +38,25 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
         this.type = ADD_RETURN_INFO_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>addReturnInfo</code></p>
+     <*  <p>Update action for <code>addReturnInfo</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.ReturnInfo getNextValue() {
         return this.nextValue;

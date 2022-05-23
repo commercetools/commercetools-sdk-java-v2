@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeChangeDescriptionAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeDescriptionActionImpl implements ProductTypeChangeDescriptionAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class ProductTypeChangeDescriptionActionImpl implements ProductTypeChange
         this.action = CHANGE_DESCRIPTION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getDescription() {
         return this.description;

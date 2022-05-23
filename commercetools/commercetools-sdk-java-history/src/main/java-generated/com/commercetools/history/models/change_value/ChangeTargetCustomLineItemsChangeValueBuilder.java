@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeTargetCustomLineItemsChangeValue changeTargetCustomLineItemsChangeValue = ChangeTargetCustomLineItemsChangeValue.builder()
-           .predicate("{predicate}")
-           .build()
- </code></pre>
- </div>
+ * ChangeTargetCustomLineItemsChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTargetCustomLineItemsChangeValue changeTargetCustomLineItemsChangeValue = ChangeTargetCustomLineItemsChangeValue.builder()
+ *             .predicate("{predicate}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<ChangeTargetCustomLineItemsChangeValue> {
 
     private String predicate;
+
+    /**
+     <>
+     */
 
     public ChangeTargetCustomLineItemsChangeValueBuilder predicate(final String predicate) {
         this.predicate = predicate;

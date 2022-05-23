@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MissingAttributesSearchRequest
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesSearchRequestImpl implements MissingAttributesSearchRequest, ModelBase {
 
@@ -70,85 +73,97 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
+
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
+
     public Integer getOffset() {
         return this.offset;
     }
 
     /**
-     *  <p>If true, searches data from staged products in addition to published products.</p>
+     <*  <p>If true, searches data from staged products in addition to published products.</p>>
      */
+
     public Boolean getStaged() {
         return this.staged;
     }
 
     /**
-     *  <p>Maximum number of products to scan.</p>
+     <*  <p>Maximum number of products to scan.</p>>
      */
+
     public Integer getProductSetLimit() {
         return this.productSetLimit;
     }
 
     /**
-     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
+     <*  <p>If true, searches all product variants. If false, only searches master variants.</p>>
      */
+
     public Boolean getIncludeVariants() {
         return this.includeVariants;
     }
 
     /**
-     *  <p>Minimum attribute coverage of variants to display, applied to both coverage types.</p>
+     <*  <p>Minimum attribute coverage of variants to display, applied to both coverage types.</p>>
      */
+
     public Double getCoverageMin() {
         return this.coverageMin;
     }
 
     /**
-     *  <p>Maximum attribute coverage of variants to display, applied to both coverage types.</p>
+     <*  <p>Maximum attribute coverage of variants to display, applied to both coverage types.</p>>
      */
+
     public Double getCoverageMax() {
         return this.coverageMax;
     }
 
     /**
-     *  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>] <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>
+     <*  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>] <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>>
      */
+
     public String getSortBy() {
         return this.sortBy;
     }
 
     /**
-     *  <p>If true, the <code>missingAttributeNames</code> will be included in the results.</p>
+     <*  <p>If true, the <code>missingAttributeNames</code> will be included in the results.</p>>
      */
+
     public Boolean getShowMissingAttributeNames() {
         return this.showMissingAttributeNames;
     }
 
     /**
-     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>>
      */
+
     public java.util.List<String> getProductIds() {
         return this.productIds;
     }
 
     /**
-     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>>
      */
+
     public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }
 
     /**
-     *  <p>Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in <code>MissingAttributesMeta</code>. The <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in <code>MissingAttributesMeta</code>. The <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>>
      */
+
     public String getAttributeName() {
         return this.attributeName;
     }

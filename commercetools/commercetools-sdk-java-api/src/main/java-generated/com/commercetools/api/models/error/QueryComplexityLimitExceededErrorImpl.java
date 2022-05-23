@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * QueryComplexityLimitExceededError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QueryComplexityLimitExceededErrorImpl implements QueryComplexityLimitExceededError, ModelBase {
 
@@ -35,13 +38,25 @@ public class QueryComplexityLimitExceededErrorImpl implements QueryComplexityLim
         this.code = QUERY_COMPLEXITY_LIMIT_EXCEEDED;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     <>
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     <>
+     */
 
     public Map<String, java.lang.Object> values() {
         return values;

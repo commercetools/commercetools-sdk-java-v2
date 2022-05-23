@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetAnonymousIdChange setAnonymousIdChange = SetAnonymousIdChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetAnonymousIdChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAnonymousIdChange setAnonymousIdChange = SetAnonymousIdChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange> {
@@ -28,7 +30,7 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setAnonymousId</code></p>
+     <*  <p>Shape of the action for <code>setAnonymousId</code></p>>
      */
 
     public SetAnonymousIdChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAnonymousIdChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetAnonymousIdChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

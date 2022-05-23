@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetTextLineItemDescriptionChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDescriptionChange, ModelBase {
 
@@ -43,21 +46,41 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
         this.type = SET_TEXT_LINE_ITEM_DESCRIPTION_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
         return this.textLineItem;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;

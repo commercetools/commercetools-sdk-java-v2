@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntryDeletedMessagePayload inventoryEntryDeletedMessagePayload = InventoryEntryDeletedMessagePayload.builder()
-           .sku("{sku}")
-           .build()
- </code></pre>
- </div>
+ * InventoryEntryDeletedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryDeletedMessagePayload inventoryEntryDeletedMessagePayload = InventoryEntryDeletedMessagePayload.builder()
+ *             .sku("{sku}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<InventoryEntryDeletedMessagePayload> {
@@ -27,13 +29,17 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
+    /**
+     <>
+     */
+
     public InventoryEntryDeletedMessagePayloadBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
@@ -43,7 +49,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(

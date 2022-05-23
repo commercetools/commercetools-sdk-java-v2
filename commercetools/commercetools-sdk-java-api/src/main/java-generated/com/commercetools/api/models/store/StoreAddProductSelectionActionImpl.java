@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StoreAddProductSelectionAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreAddProductSelectionActionImpl implements StoreAddProductSelectionAction, ModelBase {
 
@@ -36,20 +39,26 @@ public class StoreAddProductSelectionActionImpl implements StoreAddProductSelect
         this.action = ADD_PRODUCT_SELECTION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Resource Identifier of a Product Selection</p>
+     <*  <p>Resource Identifier of a Product Selection</p>>
      */
+
     public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+     <*  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>>
      */
+
     public Boolean getActive() {
         return this.active;
     }

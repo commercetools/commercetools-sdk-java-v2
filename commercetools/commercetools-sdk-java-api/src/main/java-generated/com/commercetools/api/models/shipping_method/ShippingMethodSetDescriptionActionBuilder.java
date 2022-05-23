@@ -9,19 +9,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodSetDescriptionAction shippingMethodSetDescriptionAction = ShippingMethodSetDescriptionAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodSetDescriptionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodSetDescriptionAction shippingMethodSetDescriptionAction = ShippingMethodSetDescriptionAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodSetDescriptionActionBuilder implements Builder<ShippingMethodSetDescriptionAction> {
 
     @Nullable
     private String description;
+
+    /**
+     <>
+     */
 
     public ShippingMethodSetDescriptionActionBuilder description(@Nullable final String description) {
         this.description = description;

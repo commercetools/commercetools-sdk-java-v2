@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetCustomFieldAction orderSetCustomFieldAction = OrderSetCustomFieldAction.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * OrderSetCustomFieldActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetCustomFieldAction orderSetCustomFieldAction = OrderSetCustomFieldAction.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetCustomFieldActionBuilder implements Builder<OrderSetCustomFieldAction> {
@@ -27,7 +29,7 @@ public class OrderSetCustomFieldActionBuilder implements Builder<OrderSetCustomF
     private java.lang.Object value;
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     <*  <p>Name of the Custom Field.</p>>
      */
 
     public OrderSetCustomFieldActionBuilder name(final String name) {
@@ -36,7 +38,7 @@ public class OrderSetCustomFieldActionBuilder implements Builder<OrderSetCustomF
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
      */
 
     public OrderSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductVariant
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImpl implements ProductVariant, ModelBase {
 
@@ -71,54 +74,96 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
+     <*  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>>
      */
+
     public Long getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public String getSku() {
         return this.sku;
     }
 
     /**
-     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     <*  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>>
      */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
         return this.prices;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.Price getPrice() {
         return this.price;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
         return this.assets;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.product.ProductVariantAvailability getAvailability() {
         return this.availability;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getIsMatchingVariant() {
         return this.isMatchingVariant;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {
         return this.scopedPrice;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getScopedPriceDiscounted() {
         return this.scopedPriceDiscounted;

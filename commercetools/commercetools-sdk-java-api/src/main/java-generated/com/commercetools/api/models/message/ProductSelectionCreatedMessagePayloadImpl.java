@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSelectionCreatedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelectionCreatedMessagePayload, ModelBase {
 
@@ -32,9 +35,17 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
         this.type = PRODUCT_SELECTION_CREATED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
         return this.productSelection;

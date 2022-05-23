@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StandalonePriceChangeValueAction standalonePriceChangeValueAction = StandalonePriceChangeValueAction.builder()
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * StandalonePriceChangeValueActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePriceChangeValueAction standalonePriceChangeValueAction = StandalonePriceChangeValueAction.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceChangeValueActionBuilder implements Builder<StandalonePriceChangeValueAction> {
@@ -23,7 +25,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
     private com.commercetools.api.models.common.Money value;
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public StandalonePriceChangeValueActionBuilder value(
@@ -33,7 +35,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public StandalonePriceChangeValueActionBuilder value(final com.commercetools.api.models.common.Money value) {

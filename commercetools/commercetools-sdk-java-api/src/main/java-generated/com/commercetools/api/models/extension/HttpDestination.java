@@ -14,16 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>We recommend an encrypted <code>HTTPS</code> connection for production setups. However, we also accept unencrypted <code>HTTP</code> connections for development purposes. HTTP redirects will not be followed and cache headers will be ignored.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   HttpDestination httpDestination = HttpDestination.builder()
-           .url("{url}")
-           .build()
- </code></pre>
- </div>
+ *  <p>We recommend an encrypted <code>HTTPS</code> connection for production setups. However, we also accept unencrypted <code>HTTP</code> connections for development purposes. HTTP redirects will not be followed and cache headers will be ignored.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     HttpDestination httpDestination = HttpDestination.builder()
+ *             .url("{url}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HttpDestinationImpl.class)
@@ -32,14 +33,14 @@ public interface HttpDestination extends ExtensionDestination {
     String HTTP = "HTTP";
 
     /**
-     *  <p>URL to the target destination.</p>
+     <*  <p>URL to the target destination.</p>>
      */
     @NotNull
     @JsonProperty("url")
     public String getUrl();
 
     /**
-     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     <*  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>>
      */
     @Valid
     @JsonProperty("authentication")

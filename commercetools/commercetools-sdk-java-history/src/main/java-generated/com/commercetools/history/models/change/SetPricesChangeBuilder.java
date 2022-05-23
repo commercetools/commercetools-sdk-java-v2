@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetPricesChange setPricesChange = SetPricesChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .variant("{variant}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetPricesChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetPricesChange setPricesChange = SetPricesChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
@@ -35,7 +37,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     private java.util.List<com.commercetools.history.models.common.Price> nextValue;
 
     /**
-     *  <p>Update action for <code>setPrices</code></p>
+     <*  <p>Update action for <code>setPrices</code></p>>
      */
 
     public SetPricesChangeBuilder change(final String change) {
@@ -43,26 +45,46 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetPricesChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetPricesChangeBuilder variant(final String variant) {
         this.variant = variant;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetPricesChangeBuilder previousValue(final com.commercetools.history.models.common.Price... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetPricesChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Price> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetPricesChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Price... previousValue) {
@@ -73,6 +95,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetPricesChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         if (this.previousValue == null) {
@@ -82,6 +108,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetPricesChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -89,16 +119,28 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetPricesChangeBuilder nextValue(final com.commercetools.history.models.common.Price... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetPricesChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Price> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetPricesChangeBuilder plusNextValue(final com.commercetools.history.models.common.Price... nextValue) {
         if (this.nextValue == null) {
@@ -108,6 +150,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetPricesChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         if (this.nextValue == null) {
@@ -116,6 +162,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetPricesChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {

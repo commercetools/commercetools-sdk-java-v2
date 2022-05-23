@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomLineItemImportDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft, ModelBase {
 
@@ -59,46 +62,73 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     public CustomLineItemImportDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
      */
+
     public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     <*  <p>The cost to add to the cart. The amount can be negative.</p>>
      */
+
     public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
+
+    /**
+     <>
+     */
 
     public String getSlug() {
         return this.slug;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;

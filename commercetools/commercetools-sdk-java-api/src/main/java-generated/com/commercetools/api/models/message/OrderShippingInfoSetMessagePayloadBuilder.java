@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderShippingInfoSetMessagePayload orderShippingInfoSetMessagePayload = OrderShippingInfoSetMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderShippingInfoSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderShippingInfoSetMessagePayload orderShippingInfoSetMessagePayload = OrderShippingInfoSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderShippingInfoSetMessagePayload> {
@@ -27,11 +29,19 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     @Nullable
     private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
 
+    /**
+     <>
+     */
+
     public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(
             Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
         this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(
             @Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
@@ -39,11 +49,19 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(
             Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
         this.oldShippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(
             @Nullable final com.commercetools.api.models.cart.ShippingInfo oldShippingInfo) {

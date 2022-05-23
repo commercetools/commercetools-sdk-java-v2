@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ItemState itemState = ItemState.builder()
-           .quantity(0.3)
-           .state(stateBuilder -> stateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ItemStateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemState itemState = ItemState.builder()
+ *             .quantity(0.3)
+ *             .state(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemStateBuilder implements Builder<ItemState> {
@@ -25,13 +27,17 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     private com.commercetools.importapi.models.common.StateKeyReference state;
 
+    /**
+     <>
+     */
+
     public ItemStateBuilder quantity(final Double quantity) {
         this.quantity = quantity;
         return this;
     }
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     <*  <p>Maps to <code>ItemState.state</code>.</p>>
      */
 
     public ItemStateBuilder state(
@@ -41,7 +47,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     <*  <p>Maps to <code>ItemState.state</code>.</p>>
      */
 
     public ItemStateBuilder state(final com.commercetools.importapi.models.common.StateKeyReference state) {

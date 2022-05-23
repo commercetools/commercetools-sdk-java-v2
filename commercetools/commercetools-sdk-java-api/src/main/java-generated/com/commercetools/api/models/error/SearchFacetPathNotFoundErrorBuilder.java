@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SearchFacetPathNotFoundError searchFacetPathNotFoundError = SearchFacetPathNotFoundError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * SearchFacetPathNotFoundErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SearchFacetPathNotFoundError searchFacetPathNotFoundError = SearchFacetPathNotFoundError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetPathNotFoundError> {
@@ -23,15 +25,27 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public SearchFacetPathNotFoundErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SearchFacetPathNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SearchFacetPathNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

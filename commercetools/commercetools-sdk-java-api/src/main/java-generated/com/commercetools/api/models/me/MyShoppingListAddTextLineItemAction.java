@@ -17,14 +17,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListAddTextLineItemAction myShoppingListAddTextLineItemAction = MyShoppingListAddTextLineItemAction.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListAddTextLineItemAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListAddTextLineItemAction myShoppingListAddTextLineItemAction = MyShoppingListAddTextLineItemAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListAddTextLineItemActionImpl.class)
@@ -34,7 +37,7 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     String ADD_TEXT_LINE_ITEM = "addTextLineItem";
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @NotNull
     @Valid
@@ -42,20 +45,28 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     public LocalizedString getName();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     <>
+     */
+
     @JsonProperty("quantity")
     public Long getQuantity();
+
+    /**
+     <>
+     */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
     @Valid
     @JsonProperty("custom")

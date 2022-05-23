@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionSettingDraft productSelectionSettingDraft = ProductSelectionSettingDraft.builder()
-           .productSelection(productSelectionBuilder -> productSelectionBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionSettingDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionSettingDraft productSelectionSettingDraft = ProductSelectionSettingDraft.builder()
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelectionSettingDraft> {
@@ -28,7 +30,7 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
     private Boolean active;
 
     /**
-     *  <p>Resource Identifier of a Product Selection</p>
+     <*  <p>Resource Identifier of a Product Selection</p>>
      */
 
     public ProductSelectionSettingDraftBuilder productSelection(
@@ -40,7 +42,7 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
     }
 
     /**
-     *  <p>Resource Identifier of a Product Selection</p>
+     <*  <p>Resource Identifier of a Product Selection</p>>
      */
 
     public ProductSelectionSettingDraftBuilder productSelection(
@@ -50,7 +52,7 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+     <*  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>>
      */
 
     public ProductSelectionSettingDraftBuilder active(@Nullable final Boolean active) {

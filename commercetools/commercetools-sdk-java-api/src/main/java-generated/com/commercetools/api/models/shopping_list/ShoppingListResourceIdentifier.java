@@ -12,15 +12,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>ResourceIdentifier to a ShoppingList.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListResourceIdentifier shoppingListResourceIdentifier = ShoppingListResourceIdentifier.builder()
-           .build()
- </code></pre>
- </div>
+ *  <p>ResourceIdentifier to a ShoppingList.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListResourceIdentifier shoppingListResourceIdentifier = ShoppingListResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListResourceIdentifierImpl.class)
@@ -30,14 +31,14 @@ public interface ShoppingListResourceIdentifier
     String SHOPPING_LIST = "shopping-list";
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>Platform-generated unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("key")

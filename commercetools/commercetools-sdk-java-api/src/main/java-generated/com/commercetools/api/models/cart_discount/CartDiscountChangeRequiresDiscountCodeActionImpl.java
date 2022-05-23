@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountChangeRequiresDiscountCodeAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeRequiresDiscountCodeActionImpl
         implements CartDiscountChangeRequiresDiscountCodeAction, ModelBase {
@@ -33,9 +36,17 @@ public class CartDiscountChangeRequiresDiscountCodeActionImpl
         this.action = CHANGE_REQUIRES_DISCOUNT_CODE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getRequiresDiscountCode() {
         return this.requiresDiscountCode;

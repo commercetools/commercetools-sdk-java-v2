@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SimilarProductMeta similarProductMeta = SimilarProductMeta.builder()
-           .build()
- </code></pre>
- </div>
+ * SimilarProductMetaBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SimilarProductMeta similarProductMeta = SimilarProductMeta.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
@@ -34,7 +36,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     private Long variantCount;
 
     /**
-     *  <p>Localized product name used for similarity estimation.</p>
+     <*  <p>Localized product name used for similarity estimation.</p>>
      */
 
     public SimilarProductMetaBuilder name(
@@ -44,7 +46,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     }
 
     /**
-     *  <p>Localized product name used for similarity estimation.</p>
+     <*  <p>Localized product name used for similarity estimation.</p>>
      */
 
     public SimilarProductMetaBuilder name(@Nullable final com.commercetools.ml.models.common.LocalizedString name) {
@@ -53,7 +55,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     }
 
     /**
-     *  <p>Localized product description used for similarity estimation.</p>
+     <*  <p>Localized product description used for similarity estimation.</p>>
      */
 
     public SimilarProductMetaBuilder description(
@@ -63,7 +65,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     }
 
     /**
-     *  <p>Localized product description used for similarity estimation.</p>
+     <*  <p>Localized product description used for similarity estimation.</p>>
      */
 
     public SimilarProductMetaBuilder description(
@@ -73,7 +75,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     }
 
     /**
-     *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     <*  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>>
      */
 
     public SimilarProductMetaBuilder price(
@@ -83,7 +85,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     }
 
     /**
-     *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     <*  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>>
      */
 
     public SimilarProductMetaBuilder price(@Nullable final com.commercetools.ml.models.common.Money price) {
@@ -92,7 +94,7 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     }
 
     /**
-     *  <p>Total number of variants associated with the product.</p>
+     <*  <p>Total number of variants associated with the product.</p>>
      */
 
     public SimilarProductMetaBuilder variantCount(@Nullable final Long variantCount) {

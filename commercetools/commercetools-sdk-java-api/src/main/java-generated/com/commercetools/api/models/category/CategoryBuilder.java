@@ -10,21 +10,23 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Category category = Category.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .plusAncestors(ancestorsBuilder -> ancestorsBuilder)
-           .orderHint("{orderHint}")
-           .build()
- </code></pre>
- </div>
+ * CategoryBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Category category = Category.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .plusAncestors(ancestorsBuilder -> ancestorsBuilder)
+ *             .orderHint("{orderHint}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryBuilder implements Builder<Category> {
@@ -79,7 +81,7 @@ public class CategoryBuilder implements Builder<Category> {
     private String key;
 
     /**
-     *  <p>Platform-generated unique identifier of the Category.</p>
+     <*  <p>Platform-generated unique identifier of the Category.</p>>
      */
 
     public CategoryBuilder id(final String id) {
@@ -88,7 +90,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>The current version of the category.</p>
+     <*  <p>The current version of the category.</p>>
      */
 
     public CategoryBuilder version(final Long version) {
@@ -96,10 +98,18 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -107,7 +117,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CategoryBuilder lastModifiedBy(
@@ -117,7 +127,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CategoryBuilder lastModifiedBy(
@@ -127,7 +137,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CategoryBuilder createdBy(
@@ -137,7 +147,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CategoryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -145,11 +155,19 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -157,7 +175,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+     <*  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>>
      */
 
     public CategoryBuilder slug(
@@ -167,7 +185,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+     <*  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>>
      */
 
     public CategoryBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -175,11 +193,19 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -188,7 +214,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     <*  <p>Contains the parent path towards the root category.</p>>
      */
 
     public CategoryBuilder ancestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
@@ -197,7 +223,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     <*  <p>Contains the parent path towards the root category.</p>>
      */
 
     public CategoryBuilder ancestors(
@@ -207,7 +233,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     <*  <p>Contains the parent path towards the root category.</p>>
      */
 
     public CategoryBuilder plusAncestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
@@ -219,7 +245,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     <*  <p>Contains the parent path towards the root category.</p>>
      */
 
     public CategoryBuilder plusAncestors(
@@ -232,7 +258,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     <*  <p>Contains the parent path towards the root category.</p>>
      */
 
     public CategoryBuilder withAncestors(
@@ -243,7 +269,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>A category that is the parent of this category in the category tree.</p>
+     <*  <p>A category that is the parent of this category in the category tree.</p>>
      */
 
     public CategoryBuilder parent(
@@ -253,7 +279,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>A category that is the parent of this category in the category tree.</p>
+     <*  <p>A category that is the parent of this category in the category tree.</p>>
      */
 
     public CategoryBuilder parent(@Nullable final com.commercetools.api.models.category.CategoryReference parent) {
@@ -262,7 +288,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>An attribute as base for a custom category order in one level.</p>
+     <*  <p>An attribute as base for a custom category order in one level.</p>>
      */
 
     public CategoryBuilder orderHint(final String orderHint) {
@@ -270,10 +296,18 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryBuilder metaTitle(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -281,10 +315,18 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -292,11 +334,19 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryBuilder metaDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryBuilder metaKeywords(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -304,11 +354,19 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryBuilder metaKeywords(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -316,13 +374,17 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     <*  <p>Can be used to store images, icons or movies related to this category.</p>>
      */
 
     public CategoryBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -331,7 +393,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     <*  <p>Can be used to store images, icons or movies related to this category.</p>>
      */
 
     public CategoryBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
@@ -340,7 +402,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     <*  <p>Can be used to store images, icons or movies related to this category.</p>>
      */
 
     public CategoryBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -352,7 +414,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     <*  <p>Can be used to store images, icons or movies related to this category.</p>>
      */
 
     public CategoryBuilder plusAssets(
@@ -365,7 +427,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     <*  <p>Can be used to store images, icons or movies related to this category.</p>>
      */
 
     public CategoryBuilder withAssets(
@@ -376,7 +438,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Category.</p>
+     <*  <p>User-defined unique identifier of the Category.</p>>
      */
 
     public CategoryBuilder key(@Nullable final String key) {

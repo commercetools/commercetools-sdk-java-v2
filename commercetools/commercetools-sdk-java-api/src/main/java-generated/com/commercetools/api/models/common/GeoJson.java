@@ -13,16 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>GeoJSON Geometry represents a Geometry Object as defined in the GeoJSON standard.</p>
-
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   GeoJson geoJson = GeoJson.pointBuilder()
-           plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>GeoJSON Geometry represents a Geometry Object as defined in the GeoJSON standard.</p>
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GeoJson geoJson = GeoJson.pointBuilder()
+ *             plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.common.GeoJsonPointImpl.class, name = GeoJsonPoint.POINT) })
@@ -31,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface GeoJson {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderLabel orderLabel = OrderLabel.builder()
-           .customerEmail("{customerEmail}")
-           .orderNumber("{orderNumber}")
-           .build()
- </code></pre>
- </div>
+ * OrderLabelBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLabel orderLabel = OrderLabel.builder()
+ *             .customerEmail("{customerEmail}")
+ *             .orderNumber("{orderNumber}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLabelBuilder implements Builder<OrderLabel> {
@@ -24,10 +26,18 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
 
     private String orderNumber;
 
+    /**
+     <>
+     */
+
     public OrderLabelBuilder customerEmail(final String customerEmail) {
         this.customerEmail = customerEmail;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderLabelBuilder orderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;

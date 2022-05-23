@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomFieldChange setCustomFieldChange = SetCustomFieldChange.builder()
-           .change("{change}")
-           .name("{name}")
-           .customTypeId("{customTypeId}")
-           .build()
- </code></pre>
- </div>
+ * SetCustomFieldChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomFieldChange setCustomFieldChange = SetCustomFieldChange.builder()
+ *             .change("{change}")
+ *             .name("{name}")
+ *             .customTypeId("{customTypeId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange> {
@@ -32,7 +34,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     private java.lang.Object previousValue;
 
     /**
-     *  <p>Update action for setting a custom field</p>
+     <*  <p>Update action for setting a custom field</p>>
      */
 
     public SetCustomFieldChangeBuilder change(final String change) {
@@ -41,7 +43,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     }
 
     /**
-     *  <p>Custom field name</p>
+     <*  <p>Custom field name</p>>
      */
 
     public SetCustomFieldChangeBuilder name(final String name) {
@@ -49,15 +51,27 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomFieldChangeBuilder customTypeId(final String customTypeId) {
         this.customTypeId = customTypeId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;

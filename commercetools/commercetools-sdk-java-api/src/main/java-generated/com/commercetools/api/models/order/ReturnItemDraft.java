@@ -15,39 +15,60 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReturnItemDraft returnItemDraft = ReturnItemDraft.builder()
-           .quantity(0.3)
-           .shipmentState(ReturnShipmentState.ADVISED)
-           .build()
- </code></pre>
- </div>
+ * ReturnItemDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReturnItemDraft returnItemDraft = ReturnItemDraft.builder()
+ *             .quantity(0.3)
+ *             .shipmentState(ReturnShipmentState.ADVISED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReturnItemDraftImpl.class)
 public interface ReturnItemDraft extends com.commercetools.api.models.CustomizableDraft<ReturnItemDraft> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     <>
+     */
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     <>
+     */
+
     @JsonProperty("comment")
     public String getComment();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     <*  <p>Custom Fields of this return item.</p>>
      */
     @Valid
     @JsonProperty("custom")

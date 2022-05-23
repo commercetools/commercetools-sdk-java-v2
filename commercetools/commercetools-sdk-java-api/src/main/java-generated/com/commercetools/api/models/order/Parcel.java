@@ -16,48 +16,60 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Parcel parcel = Parcel.builder()
-           .id("{id}")
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ * Parcel
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Parcel parcel = Parcel.builder()
+ *             .id("{id}")
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelImpl.class)
 public interface Parcel extends com.commercetools.api.models.Customizable<Parcel> {
 
     /**
-     *  <p>Platform-generated unique identifier of the Parcel.</p>
+     <*  <p>Platform-generated unique identifier of the Parcel.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     <*  <p>The delivery items contained in this parcel.</p>>
      */
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     <*  <p>Custom Fields of this parcel.</p>>
      */
     @Valid
     @JsonProperty("custom")

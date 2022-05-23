@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountValueAbsolute
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute, ModelBase {
 
@@ -32,9 +35,17 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
         this.type = ABSOLUTE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney() {
         return this.money;

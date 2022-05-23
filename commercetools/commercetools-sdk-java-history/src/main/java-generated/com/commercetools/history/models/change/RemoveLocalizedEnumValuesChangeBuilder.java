@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveLocalizedEnumValuesChange removeLocalizedEnumValuesChange = RemoveLocalizedEnumValuesChange.builder()
-           .change("{change}")
-           .attributeName("{attributeName}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveLocalizedEnumValuesChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveLocalizedEnumValuesChange removeLocalizedEnumValuesChange = RemoveLocalizedEnumValuesChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLocalizedEnumValuesChange> {
@@ -29,7 +31,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
 
     /**
-     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+     <*  <p>Update action for <code>removeEnumValues</code> on product types</p>>
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder change(final String change) {
@@ -38,7 +40,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     <*  <p>The name of the attribute updated.</p>>
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder attributeName(final String attributeName) {
@@ -46,12 +48,20 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveLocalizedEnumValuesChangeBuilder previousValue(
             Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveLocalizedEnumValuesChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.LocalizedEnumValue previousValue) {

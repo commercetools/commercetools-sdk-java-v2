@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountSetValidFromAndUntilAction cartDiscountSetValidFromAndUntilAction = CartDiscountSetValidFromAndUntilAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartDiscountSetValidFromAndUntilActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountSetValidFromAndUntilAction cartDiscountSetValidFromAndUntilAction = CartDiscountSetValidFromAndUntilAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<CartDiscountSetValidFromAndUntilAction> {
@@ -27,7 +29,7 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
     private java.time.ZonedDateTime validUntil;
 
     /**
-     *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+     <*  <p>If absent, the field with the value is removed in case a value was set before.</p>>
      */
 
     public CartDiscountSetValidFromAndUntilActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -36,7 +38,7 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+     <*  <p>If absent, the field with the value is removed in case a value was set before.</p>>
      */
 
     public CartDiscountSetValidFromAndUntilActionBuilder validUntil(

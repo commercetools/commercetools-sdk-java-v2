@@ -13,16 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>References a resource by key.</p>
-
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   KeyReference keyReference = KeyReference.cartDiscountBuilder()
-           key("{key}")
-           .build()
- </code></pre>
- </div>
+ *  <p>References a resource by key.</p>
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     KeyReference keyReference = KeyReference.cartDiscountBuilder()
+ *             key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.CartDiscountKeyReferenceImpl.class, name = CartDiscountKeyReference.CART_DISCOUNT),
@@ -50,12 +51,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface KeyReference {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     <*  <p>The type of the referenced resource.</p>>
      */
     @NotNull
     @JsonProperty("typeId")

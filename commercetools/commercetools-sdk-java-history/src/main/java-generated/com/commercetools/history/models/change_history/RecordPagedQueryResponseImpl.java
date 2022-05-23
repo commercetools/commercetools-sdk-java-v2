@@ -45,32 +45,40 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
+
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-     *  <p>Actual number of results returned.</p>
+     <*  <p>Actual number of results returned.</p>>
      */
+
     public Integer getCount() {
         return this.count;
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     <*  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>>
      */
+
     public Integer getTotal() {
         return this.total;
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
+
     public Integer getOffset() {
         return this.offset;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.change_history.Record> getResults() {
         return this.results;

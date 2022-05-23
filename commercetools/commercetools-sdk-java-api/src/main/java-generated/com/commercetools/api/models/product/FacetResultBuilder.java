@@ -5,6 +5,9 @@ import java.util.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * FacetResultBuilder
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FacetResultBuilder {
 

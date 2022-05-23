@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TextLineItem
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemImpl implements TextLineItem, ModelBase {
 
@@ -47,25 +50,49 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     public TextLineItemImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     <>
+     */
 
     public String getId() {
         return this.id;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     <>
+     */
 
     public Integer getQuantity() {
         return this.quantity;

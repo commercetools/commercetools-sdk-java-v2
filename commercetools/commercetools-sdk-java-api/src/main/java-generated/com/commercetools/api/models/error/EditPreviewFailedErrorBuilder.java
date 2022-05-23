@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   EditPreviewFailedError editPreviewFailedError = EditPreviewFailedError.builder()
-           .message("{message}")
-           .result(resultBuilder -> resultBuilder)
-           .build()
- </code></pre>
- </div>
+ * EditPreviewFailedErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EditPreviewFailedError editPreviewFailedError = EditPreviewFailedError.builder()
+ *             .message("{message}")
+ *             .result(resultBuilder -> resultBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedError> {
@@ -27,15 +29,27 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
 
     private com.commercetools.api.models.order_edit.OrderEditPreviewFailure result;
 
+    /**
+     <>
+     */
+
     public EditPreviewFailedErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public EditPreviewFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public EditPreviewFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -45,12 +59,20 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
         return this;
     }
 
+    /**
+     <>
+     */
+
     public EditPreviewFailedErrorBuilder result(
             Function<com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder, com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public EditPreviewFailedErrorBuilder result(
             final com.commercetools.api.models.order_edit.OrderEditPreviewFailure result) {

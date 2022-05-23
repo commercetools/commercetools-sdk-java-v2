@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductPriceExternalDiscountSetMessagePayload productPriceExternalDiscountSetMessagePayload = ProductPriceExternalDiscountSetMessagePayload.builder()
-           .variantId(1)
-           .priceId("{priceId}")
-           .staged(true)
-           .build()
- </code></pre>
- </div>
+ * ProductPriceExternalDiscountSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPriceExternalDiscountSetMessagePayload productPriceExternalDiscountSetMessagePayload = ProductPriceExternalDiscountSetMessagePayload.builder()
+ *             .variantId(1)
+ *             .priceId("{priceId}")
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceExternalDiscountSetMessagePayloadBuilder
@@ -40,25 +42,45 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
 
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductPriceExternalDiscountSetMessagePayloadBuilder variantId(final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder variantKey(@Nullable final String variantKey) {
         this.variantKey = variantKey;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPriceExternalDiscountSetMessagePayloadBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPriceExternalDiscountSetMessagePayloadBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
@@ -66,11 +88,19 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder staged(final Boolean staged) {
         this.staged = staged;

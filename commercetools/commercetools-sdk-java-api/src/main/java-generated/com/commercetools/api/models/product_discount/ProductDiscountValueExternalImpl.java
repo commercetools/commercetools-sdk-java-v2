@@ -26,6 +26,10 @@ public class ProductDiscountValueExternalImpl implements ProductDiscountValueExt
         this.type = EXTERNAL;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }

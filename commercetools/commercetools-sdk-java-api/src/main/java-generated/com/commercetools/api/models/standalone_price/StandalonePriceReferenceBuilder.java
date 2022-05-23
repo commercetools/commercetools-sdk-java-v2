@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StandalonePriceReference standalonePriceReference = StandalonePriceReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * StandalonePriceReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePriceReference standalonePriceReference = StandalonePriceReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceReference> {
@@ -28,7 +30,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
     private com.commercetools.api.models.standalone_price.StandalonePrice obj;
 
     /**
-     *  <p>Unique ID of the referenced resource.</p>
+     <*  <p>Unique ID of the referenced resource.</p>>
      */
 
     public StandalonePriceReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
     }
 
     /**
-     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     <*  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>>
      */
 
     public StandalonePriceReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
     }
 
     /**
-     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     <*  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>>
      */
 
     public StandalonePriceReferenceBuilder obj(

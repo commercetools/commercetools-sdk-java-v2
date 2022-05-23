@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductProjectionPagedSearchResponse
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductProjectionPagedSearchResponseImpl implements ProductProjectionPagedSearchResponse, ModelBase {
 
@@ -47,30 +50,48 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
+
     public Long getLimit() {
         return this.limit;
     }
 
+    /**
+     <>
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     <>
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
+
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {
         return this.results;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.FacetResults getFacets() {
         return this.facets;

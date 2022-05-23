@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelSetCustomTypeAction channelSetCustomTypeAction = ChannelSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ChannelSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelSetCustomTypeAction channelSetCustomTypeAction = ChannelSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>
+     <*  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>>
      */
 
     public ChannelSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     }
 
     /**
-     *  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>
+     <*  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>>
      */
 
     public ChannelSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Channel.</p>
+     <*  <p>Sets the Custom Fields fields for the Channel.</p>>
      */
 
     public ChannelSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Channel.</p>
+     <*  <p>Sets the Custom Fields fields for the Channel.</p>>
      */
 
     public ChannelSetCustomTypeActionBuilder fields(

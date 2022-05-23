@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerResourceIdentifier customerResourceIdentifier = CustomerResourceIdentifier.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerResourceIdentifierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerResourceIdentifier customerResourceIdentifier = CustomerResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerResourceIdentifierBuilder implements Builder<CustomerResourceIdentifier> {
@@ -27,7 +29,7 @@ public class CustomerResourceIdentifierBuilder implements Builder<CustomerResour
     private String key;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Customer. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Customer. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public CustomerResourceIdentifierBuilder id(@Nullable final String id) {
@@ -36,7 +38,7 @@ public class CustomerResourceIdentifierBuilder implements Builder<CustomerResour
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced Customer. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>User-defined unique identifier of the referenced Customer. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public CustomerResourceIdentifierBuilder key(@Nullable final String key) {

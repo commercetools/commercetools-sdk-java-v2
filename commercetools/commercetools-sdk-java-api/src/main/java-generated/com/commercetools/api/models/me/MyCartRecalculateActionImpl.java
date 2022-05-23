@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCartRecalculateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartRecalculateActionImpl implements MyCartRecalculateAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class MyCartRecalculateActionImpl implements MyCartRecalculateAction, Mod
         this.action = RECALCULATE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getUpdateProductData() {
         return this.updateProductData;

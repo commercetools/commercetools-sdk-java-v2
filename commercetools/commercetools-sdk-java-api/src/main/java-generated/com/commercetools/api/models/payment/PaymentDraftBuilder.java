@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentDraft paymentDraft = PaymentDraft.builder()
-           .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
-           .build()
- </code></pre>
- </div>
+ * PaymentDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentDraft paymentDraft = PaymentDraft.builder()
+ *             .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentDraftBuilder implements Builder<PaymentDraft> {
@@ -68,7 +70,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     private String key;
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     <*  <p>A reference to the customer this payment belongs to.</p>>
      */
 
     public PaymentDraftBuilder customer(
@@ -79,7 +81,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>A reference to the customer this payment belongs to.</p>
+     <*  <p>A reference to the customer this payment belongs to.</p>>
      */
 
     public PaymentDraftBuilder customer(
@@ -89,7 +91,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     <*  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>>
      */
 
     public PaymentDraftBuilder anonymousId(@Nullable final String anonymousId) {
@@ -97,6 +99,9 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
     @Deprecated
     public PaymentDraftBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
@@ -104,7 +109,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+     <*  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>>
      */
 
     public PaymentDraftBuilder interfaceId(@Nullable final String interfaceId) {
@@ -113,7 +118,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     <*  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>>
      */
 
     public PaymentDraftBuilder amountPlanned(
@@ -123,7 +128,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     <*  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>>
      */
 
     public PaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
@@ -132,8 +137,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentDraftBuilder amountAuthorized(
@@ -143,8 +148,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentDraftBuilder amountAuthorized(
@@ -153,14 +158,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PaymentDraftBuilder authorizedUntil(@Nullable final String authorizedUntil) {
         this.authorizedUntil = authorizedUntil;
         return this;
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentDraftBuilder amountPaid(
@@ -170,8 +179,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentDraftBuilder amountPaid(@Nullable final com.commercetools.api.models.common.Money amountPaid) {
@@ -180,8 +189,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentDraftBuilder amountRefunded(
@@ -191,8 +200,8 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentDraftBuilder amountRefunded(
@@ -201,6 +210,10 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PaymentDraftBuilder paymentMethodInfo(
             Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
         this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())
@@ -208,17 +221,29 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PaymentDraftBuilder paymentMethodInfo(
             @Nullable final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PaymentDraftBuilder paymentStatus(
             Function<com.commercetools.api.models.payment.PaymentStatusDraftBuilder, com.commercetools.api.models.payment.PaymentStatusDraftBuilder> builder) {
         this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentDraftBuilder paymentStatus(
             @Nullable final com.commercetools.api.models.payment.PaymentStatusDraft paymentStatus) {
@@ -227,7 +252,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
      */
 
     public PaymentDraftBuilder transactions(
@@ -237,7 +262,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
      */
 
     public PaymentDraftBuilder transactions(
@@ -247,7 +272,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
      */
 
     public PaymentDraftBuilder plusTransactions(
@@ -260,7 +285,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
      */
 
     public PaymentDraftBuilder plusTransactions(
@@ -273,7 +298,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
      */
 
     public PaymentDraftBuilder withTransactions(
@@ -284,7 +309,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     <*  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>>
      */
 
     public PaymentDraftBuilder interfaceInteractions(
@@ -294,7 +319,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     <*  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>>
      */
 
     public PaymentDraftBuilder interfaceInteractions(
@@ -304,7 +329,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     <*  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>>
      */
 
     public PaymentDraftBuilder plusInterfaceInteractions(
@@ -317,7 +342,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     <*  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>>
      */
 
     public PaymentDraftBuilder plusInterfaceInteractions(
@@ -331,7 +356,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+     <*  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>>
      */
 
     public PaymentDraftBuilder withInterfaceInteractions(
@@ -342,11 +367,19 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PaymentDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -354,7 +387,7 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Payment.</p>
+     <*  <p>User-defined unique identifier for the Payment.</p>>
      */
 
     public PaymentDraftBuilder key(@Nullable final String key) {

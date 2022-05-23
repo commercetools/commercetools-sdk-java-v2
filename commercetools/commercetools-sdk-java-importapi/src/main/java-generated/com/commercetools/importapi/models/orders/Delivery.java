@@ -16,40 +16,58 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Delivery delivery = Delivery.builder()
-           .id("{id}")
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .plusParcels(parcelsBuilder -> parcelsBuilder)
-           .build()
- </code></pre>
- </div>
+ * Delivery
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Delivery delivery = Delivery.builder()
+ *             .id("{id}")
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .plusParcels(parcelsBuilder -> parcelsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryImpl.class)
 public interface Delivery {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("parcels")
     public List<Parcel> getParcels();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("address")
     public Address getAddress();

@@ -15,27 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneRate zoneRate = ZoneRate.builder()
-           .zone(zoneBuilder -> zoneBuilder)
-           .plusShippingRates(shippingRatesBuilder -> shippingRatesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ZoneRate
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneRate zoneRate = ZoneRate.builder()
+ *             .zone(zoneBuilder -> zoneBuilder)
+ *             .plusShippingRates(shippingRatesBuilder -> shippingRatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneRateImpl.class)
 public interface ZoneRate {
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("zone")
     public ZoneReference getZone();
 
     /**
-     *  <p>The array does not contain two shipping rates with the same currency.</p>
+     <*  <p>The array does not contain two shipping rates with the same currency.</p>>
      */
     @NotNull
     @Valid

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * EnumKeyDoesNotExistError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, ModelBase {
 
@@ -43,21 +46,41 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
         this.code = ENUM_KEY_DOES_NOT_EXIST;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
+    /**
+     <>
+     */
+
     public String getConflictingEnumKey() {
         return this.conflictingEnumKey;
     }
+
+    /**
+     <>
+     */
 
     public String getConflictingAttributeName() {
         return this.conflictingAttributeName;

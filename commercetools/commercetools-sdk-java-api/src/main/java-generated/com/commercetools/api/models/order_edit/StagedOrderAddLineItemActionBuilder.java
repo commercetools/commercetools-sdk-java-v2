@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderAddLineItemAction stagedOrderAddLineItemAction = StagedOrderAddLineItemAction.builder()
-           .build()
- </code></pre>
- </div>
+ * StagedOrderAddLineItemActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderAddLineItemAction stagedOrderAddLineItemAction = StagedOrderAddLineItemAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderAddLineItemAction> {
@@ -58,7 +60,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public StagedOrderAddLineItemActionBuilder custom(
@@ -68,7 +70,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
      */
 
     public StagedOrderAddLineItemActionBuilder custom(
@@ -78,7 +80,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderAddLineItemActionBuilder distributionChannel(
@@ -90,7 +92,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderAddLineItemActionBuilder distributionChannel(
@@ -99,6 +101,10 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderAddLineItemActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
@@ -106,31 +112,55 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderAddLineItemActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderAddLineItemActionBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderAddLineItemActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
@@ -138,7 +168,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderAddLineItemActionBuilder supplyChannel(
@@ -149,7 +179,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderAddLineItemActionBuilder supplyChannel(
@@ -159,8 +189,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public StagedOrderAddLineItemActionBuilder externalPrice(
@@ -170,8 +200,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public StagedOrderAddLineItemActionBuilder externalPrice(
@@ -179,6 +209,10 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
         this.externalPrice = externalPrice;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderAddLineItemActionBuilder externalTotalPrice(
             Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
@@ -188,11 +222,19 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderAddLineItemActionBuilder externalTotalPrice(
             @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderAddLineItemActionBuilder shippingDetails(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
@@ -200,6 +242,10 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderAddLineItemActionBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {

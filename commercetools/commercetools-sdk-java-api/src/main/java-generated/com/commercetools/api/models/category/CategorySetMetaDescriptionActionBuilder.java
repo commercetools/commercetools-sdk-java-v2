@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategorySetMetaDescriptionAction categorySetMetaDescriptionAction = CategorySetMetaDescriptionAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CategorySetMetaDescriptionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetMetaDescriptionAction categorySetMetaDescriptionAction = CategorySetMetaDescriptionAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetMetaDescriptionActionBuilder implements Builder<CategorySetMetaDescriptionAction> {
@@ -24,11 +26,19 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaDescription;
 
+    /**
+     <>
+     */
+
     public CategorySetMetaDescriptionActionBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategorySetMetaDescriptionActionBuilder metaDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {

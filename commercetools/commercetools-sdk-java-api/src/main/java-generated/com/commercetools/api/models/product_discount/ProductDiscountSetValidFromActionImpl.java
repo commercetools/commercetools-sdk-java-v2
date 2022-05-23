@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductDiscountSetValidFromAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountSetValidFromActionImpl implements ProductDiscountSetValidFromAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ProductDiscountSetValidFromActionImpl implements ProductDiscountSet
         this.action = SET_VALID_FROM;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>>
      */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }

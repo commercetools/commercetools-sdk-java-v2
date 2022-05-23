@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AttributeTimeType
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeTimeTypeImpl implements AttributeTimeType, ModelBase {
 
@@ -22,6 +25,10 @@ public class AttributeTimeTypeImpl implements AttributeTimeType, ModelBase {
     AttributeTimeTypeImpl() {
         this.name = TIME;
     }
+
+    /**
+     <>
+     */
 
     public String getName() {
         return this.name;

@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ConcurrentModificationError concurrentModificationError = ConcurrentModificationError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ConcurrentModificationErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ConcurrentModificationError concurrentModificationError = ConcurrentModificationError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentModificationError> {
@@ -28,15 +30,27 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     @Nullable
     private Long currentVersion;
 
+    /**
+     <>
+     */
+
     public ConcurrentModificationErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ConcurrentModificationErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ConcurrentModificationErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -45,6 +59,10 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         values.put(key, value);
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ConcurrentModificationErrorBuilder currentVersion(@Nullable final Long currentVersion) {
         this.currentVersion = currentVersion;

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartSetLineItemShippingDetailsAction myCartSetLineItemShippingDetailsAction = MyCartSetLineItemShippingDetailsAction.builder()
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * MyCartSetLineItemShippingDetailsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartSetLineItemShippingDetailsAction myCartSetLineItemShippingDetailsAction = MyCartSetLineItemShippingDetailsAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<MyCartSetLineItemShippingDetailsAction> {
@@ -27,10 +29,18 @@ public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<My
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     <>
+     */
+
     public MyCartSetLineItemShippingDetailsActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartSetLineItemShippingDetailsActionBuilder shippingDetails(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
@@ -38,6 +48,10 @@ public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<My
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartSetLineItemShippingDetailsActionBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {

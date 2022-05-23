@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   EditPreviewFailedError editPreviewFailedError = EditPreviewFailedError.builder()
-           .message("{message}")
-           .result(resultBuilder -> resultBuilder)
-           .build()
- </code></pre>
- </div>
+ * EditPreviewFailedError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EditPreviewFailedError editPreviewFailedError = EditPreviewFailedError.builder()
+ *             .message("{message}")
+ *             .result(resultBuilder -> resultBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EditPreviewFailedErrorImpl.class)
@@ -31,6 +34,9 @@ public interface EditPreviewFailedError extends ErrorObject {
 
     String EDIT_PREVIEW_FAILED = "EditPreviewFailed";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("result")

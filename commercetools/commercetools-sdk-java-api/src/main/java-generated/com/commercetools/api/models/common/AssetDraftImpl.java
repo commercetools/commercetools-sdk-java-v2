@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AssetDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetDraftImpl implements AssetDraft, ModelBase {
 
@@ -48,41 +51,50 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
     public AssetDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
         return this.sources;
     }
 
     /**
-     *  <p>Name of the Asset.</p>
+     <*  <p>Name of the Asset.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-     *  <p>Description of the Asset.</p>
+     <*  <p>Description of the Asset.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-     *  <p>Keywords for categorizing and organizing Assets.</p>
+     <*  <p>Keywords for categorizing and organizing Assets.</p>>
      */
+
     public java.util.List<String> getTags() {
         return this.tags;
     }
 
     /**
-     *  <p>Custom Fields defined for the Asset.</p>
+     <*  <p>Custom Fields defined for the Asset.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-     *  <p>User-defined unique identifier for the Asset.</p>
+     <*  <p>User-defined unique identifier for the Asset.</p>>
      */
+
     public String getKey() {
         return this.key;
     }

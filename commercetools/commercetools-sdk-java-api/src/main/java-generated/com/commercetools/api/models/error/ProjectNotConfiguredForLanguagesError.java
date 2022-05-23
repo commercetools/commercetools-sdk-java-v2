@@ -11,20 +11,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectNotConfiguredForLanguagesError projectNotConfiguredForLanguagesError = ProjectNotConfiguredForLanguagesError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ProjectNotConfiguredForLanguagesError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectNotConfiguredForLanguagesError projectNotConfiguredForLanguagesError = ProjectNotConfiguredForLanguagesError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectNotConfiguredForLanguagesErrorImpl.class)
 public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
 
     String PROJECT_NOT_CONFIGURED_FOR_LANGUAGES = "ProjectNotConfiguredForLanguages";
+
+    /**
+     <>
+     */
 
     @JsonProperty("languages")
     public List<String> getLanguages();

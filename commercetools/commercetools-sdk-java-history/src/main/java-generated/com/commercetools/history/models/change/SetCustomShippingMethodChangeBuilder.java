@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomShippingMethodChange setCustomShippingMethodChange = SetCustomShippingMethodChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCustomShippingMethodChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomShippingMethodChange setCustomShippingMethodChange = SetCustomShippingMethodChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomShippingMethodChange> {
@@ -29,13 +31,17 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
     private com.commercetools.history.models.change_value.CustomShippingMethodChangeValue previousValue;
 
     /**
-     *  <p>Update action for <code>setCustomShippingMethod</code></p>
+     <*  <p>Update action for <code>setCustomShippingMethod</code></p>>
      */
 
     public SetCustomShippingMethodChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomShippingMethodChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder> builder) {
@@ -45,11 +51,19 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomShippingMethodChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.CustomShippingMethodChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomShippingMethodChangeBuilder previousValue(
             Function<com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.CustomShippingMethodChangeValueBuilder> builder) {
@@ -58,6 +72,10 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomShippingMethodChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.CustomShippingMethodChangeValue previousValue) {

@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetLocalizedDescriptionChange setLocalizedDescriptionChange = SetLocalizedDescriptionChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetLocalizedDescriptionChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLocalizedDescriptionChange setLocalizedDescriptionChange = SetLocalizedDescriptionChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLocalizedDescriptionChangeImpl.class)
@@ -32,22 +35,31 @@ public interface SetLocalizedDescriptionChange extends Change {
 
     String SET_LOCALIZED_DESCRIPTION_CHANGE = "SetLocalizedDescriptionChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Shape of the action for <code>setDescription</code></p>
+     <*  <p>Shape of the action for <code>setDescription</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

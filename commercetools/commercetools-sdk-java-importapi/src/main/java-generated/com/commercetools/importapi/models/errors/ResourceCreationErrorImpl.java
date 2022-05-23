@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ResourceCreationError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceCreationErrorImpl implements ResourceCreationError, ModelBase {
 
@@ -35,13 +38,25 @@ public class ResourceCreationErrorImpl implements ResourceCreationError, ModelBa
         this.code = RESOURCE_CREATION;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     <>
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     <>
+     */
 
     public java.lang.Object getResource() {
         return this.resource;

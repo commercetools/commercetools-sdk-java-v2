@@ -10,22 +10,24 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Project project = Project.builder()
-           .version(0.3)
-           .key("{key}")
-           .name("{name}")
-           .plusCountries(countriesBuilder -> countriesBuilder)
-           .plusCurrencies(currenciesBuilder -> currenciesBuilder)
-           .plusLanguages(languagesBuilder -> languagesBuilder)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .messages(messagesBuilder -> messagesBuilder)
-           .carts(cartsBuilder -> cartsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProjectBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Project project = Project.builder()
+ *             .version(0.3)
+ *             .key("{key}")
+ *             .name("{name}")
+ *             .plusCountries(countriesBuilder -> countriesBuilder)
+ *             .plusCurrencies(currenciesBuilder -> currenciesBuilder)
+ *             .plusLanguages(languagesBuilder -> languagesBuilder)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .messages(messagesBuilder -> messagesBuilder)
+ *             .carts(cartsBuilder -> cartsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectBuilder implements Builder<Project> {
@@ -64,7 +66,7 @@ public class ProjectBuilder implements Builder<Project> {
     private com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing;
 
     /**
-     *  <p>Current version of the Project.</p>
+     <*  <p>Current version of the Project.</p>>
      */
 
     public ProjectBuilder version(final Long version) {
@@ -73,7 +75,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Project.</p>
+     <*  <p>User-defined unique identifier of the Project.</p>>
      */
 
     public ProjectBuilder key(final String key) {
@@ -82,7 +84,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Name of the Project.</p>
+     <*  <p>Name of the Project.</p>>
      */
 
     public ProjectBuilder name(final String name) {
@@ -91,7 +93,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Country code of the geographic location.</p>
+     <*  <p>Country code of the geographic location.</p>>
      */
 
     public ProjectBuilder countries(final String... countries) {
@@ -100,7 +102,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Country code of the geographic location.</p>
+     <*  <p>Country code of the geographic location.</p>>
      */
 
     public ProjectBuilder countries(final java.util.List<String> countries) {
@@ -109,7 +111,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Country code of the geographic location.</p>
+     <*  <p>Country code of the geographic location.</p>>
      */
 
     public ProjectBuilder plusCountries(final String... countries) {
@@ -121,7 +123,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     <*  <p>Currency code of the country. A Project must have at least one currency.</p>>
      */
 
     public ProjectBuilder currencies(final String... currencies) {
@@ -130,7 +132,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     <*  <p>Currency code of the country. A Project must have at least one currency.</p>>
      */
 
     public ProjectBuilder currencies(final java.util.List<String> currencies) {
@@ -139,7 +141,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     <*  <p>Currency code of the country. A Project must have at least one currency.</p>>
      */
 
     public ProjectBuilder plusCurrencies(final String... currencies) {
@@ -151,7 +153,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Language of the country. A Project must have at least one language.</p>
+     <*  <p>Language of the country. A Project must have at least one language.</p>>
      */
 
     public ProjectBuilder languages(final String... languages) {
@@ -160,7 +162,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Language of the country. A Project must have at least one language.</p>
+     <*  <p>Language of the country. A Project must have at least one language.</p>>
      */
 
     public ProjectBuilder languages(final java.util.List<String> languages) {
@@ -169,7 +171,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Language of the country. A Project must have at least one language.</p>
+     <*  <p>Language of the country. A Project must have at least one language.</p>>
      */
 
     public ProjectBuilder plusLanguages(final String... languages) {
@@ -181,7 +183,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Project was initially created.</p>
+     <*  <p>Date and time (UTC) the Project was initially created.</p>>
      */
 
     public ProjectBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -190,7 +192,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
+     <*  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>>
      */
 
     public ProjectBuilder trialUntil(@Nullable final String trialUntil) {
@@ -199,7 +201,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     <*  <p>Holds the configuration for the Messages Query feature.</p>>
      */
 
     public ProjectBuilder messages(
@@ -209,7 +211,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     <*  <p>Holds the configuration for the Messages Query feature.</p>>
      */
 
     public ProjectBuilder messages(final com.commercetools.api.models.message.MessagesConfiguration messages) {
@@ -218,7 +220,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     <*  <p>Holds the configuration for the Carts feature.</p>>
      */
 
     public ProjectBuilder carts(
@@ -228,7 +230,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     <*  <p>Holds the configuration for the Carts feature.</p>>
      */
 
     public ProjectBuilder carts(final com.commercetools.api.models.project.CartsConfiguration carts) {
@@ -237,7 +239,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     <*  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>>
      */
 
     public ProjectBuilder shoppingLists(
@@ -248,7 +250,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     <*  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>>
      */
 
     public ProjectBuilder shoppingLists(
@@ -258,7 +260,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     <*  <p>Holds the configuration for the tiered shipping rates feature.</p>>
      */
 
     public ProjectBuilder shippingRateInputType(
@@ -268,7 +270,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     <*  <p>Holds the configuration for the tiered shipping rates feature.</p>>
      */
 
     public ProjectBuilder shippingRateInputType(
@@ -280,7 +282,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     <*  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>>
      */
 
     public ProjectBuilder externalOAuth(
@@ -290,7 +292,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     <*  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>>
      */
 
     public ProjectBuilder externalOAuth(
@@ -300,7 +302,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     <*  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>>
      */
 
     public ProjectBuilder searchIndexing(
@@ -312,7 +314,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     <*  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>>
      */
 
     public ProjectBuilder searchIndexing(

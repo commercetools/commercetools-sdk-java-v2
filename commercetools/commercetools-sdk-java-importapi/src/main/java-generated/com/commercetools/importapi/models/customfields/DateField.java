@@ -14,16 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>A field with a date value.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DateField dateField = DateField.builder()
-           .value(LocalDate.parse("2022-01-01"))
-           .build()
- </code></pre>
- </div>
+ *  <p>A field with a date value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DateField dateField = DateField.builder()
+ *             .value(LocalDate.parse("2022-01-01"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateFieldImpl.class)
@@ -31,6 +32,9 @@ public interface DateField extends CustomField {
 
     String DATE = "Date";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("value")
     public LocalDate getValue();

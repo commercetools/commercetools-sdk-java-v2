@@ -46,36 +46,41 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     *  <p>The http status code of the response.</p>
+     <*  <p>The http status code of the response.</p>>
      */
+
     public Integer getStatusCode() {
         return this.statusCode;
     }
 
     /**
-     *  <p>Describes the error.</p>
+     <*  <p>Describes the error.</p>>
      */
+
     public String getMessage() {
         return this.message;
     }
 
     /**
-     *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
+     <*  <p>This property is only used for OAuth2 errors. Contains the error code.</p>>
      */
+
     public String getError() {
         return this.error;
     }
 
     /**
-     *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
+     <*  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>>
      */
+
     public String getErrorDescription() {
         return this.errorDescription;
     }
 
     /**
-     *  <p>The errors that caused this error response.</p>
+     <*  <p>The errors that caused this error response.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;
     }

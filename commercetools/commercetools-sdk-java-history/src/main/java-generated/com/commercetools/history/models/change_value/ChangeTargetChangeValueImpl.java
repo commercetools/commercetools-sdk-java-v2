@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeTargetChangeValue
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetChangeValueImpl implements ChangeTargetChangeValue, ModelBase {
 
@@ -26,6 +29,10 @@ public class ChangeTargetChangeValueImpl implements ChangeTargetChangeValue, Mod
 
     public ChangeTargetChangeValueImpl() {
     }
+
+    /**
+     <>
+     */
 
     public String getType() {
         return this.type;

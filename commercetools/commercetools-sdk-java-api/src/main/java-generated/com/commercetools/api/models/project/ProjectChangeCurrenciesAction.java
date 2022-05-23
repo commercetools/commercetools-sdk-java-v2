@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectChangeCurrenciesAction projectChangeCurrenciesAction = ProjectChangeCurrenciesAction.builder()
-           .plusCurrencies(currenciesBuilder -> currenciesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProjectChangeCurrenciesAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectChangeCurrenciesAction projectChangeCurrenciesAction = ProjectChangeCurrenciesAction.builder()
+ *             .plusCurrencies(currenciesBuilder -> currenciesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeCurrenciesActionImpl.class)
@@ -29,7 +32,7 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     String CHANGE_CURRENCIES = "changeCurrencies";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
     @NotNull
     @JsonProperty("currencies")

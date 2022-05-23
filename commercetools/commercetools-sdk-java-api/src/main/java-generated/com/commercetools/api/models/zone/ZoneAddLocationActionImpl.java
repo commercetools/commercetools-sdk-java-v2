@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ZoneAddLocationAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneAddLocationActionImpl implements ZoneAddLocationAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ZoneAddLocationActionImpl implements ZoneAddLocationAction, ModelBa
         this.action = ADD_LOCATION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Location to be added to the Zone.</p>
+     <*  <p>Location to be added to the Zone.</p>>
      */
+
     public com.commercetools.api.models.zone.Location getLocation() {
         return this.location;
     }

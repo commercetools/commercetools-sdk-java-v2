@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderEditUpdate orderEditUpdate = OrderEditUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderEditUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditUpdate orderEditUpdate = OrderEditUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
@@ -30,10 +32,18 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     @Nullable
     private Boolean dryRun;
 
+    /**
+     <>
+     */
+
     public OrderEditUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditUpdateBuilder actions(
             final com.commercetools.api.models.order_edit.OrderEditUpdateAction... actions) {
@@ -41,11 +51,19 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderEditUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditUpdateBuilder plusActions(
             final com.commercetools.api.models.order_edit.OrderEditUpdateAction... actions) {
@@ -56,6 +74,10 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderEditUpdateBuilder plusActions(
             Function<com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order_edit.OrderEditUpdateAction>> builder) {
         if (this.actions == null) {
@@ -66,6 +88,10 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderEditUpdateBuilder withActions(
             Function<com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order_edit.OrderEditUpdateAction>> builder) {
         this.actions = new ArrayList<>();
@@ -73,6 +99,10 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
                 .add(builder.apply(com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderEditUpdateBuilder dryRun(@Nullable final Boolean dryRun) {
         this.dryRun = dryRun;

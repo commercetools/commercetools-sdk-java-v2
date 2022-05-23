@@ -15,21 +15,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DeliveryAddressSetMessage deliveryAddressSetMessage = DeliveryAddressSetMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .deliveryId("{deliveryId}")
-           .build()
- </code></pre>
- </div>
+ * DeliveryAddressSetMessage
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryAddressSetMessage deliveryAddressSetMessage = DeliveryAddressSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .deliveryId("{deliveryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryAddressSetMessageImpl.class)
@@ -37,14 +40,23 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
 
     String DELIVERY_ADDRESS_SET = "DeliveryAddressSet";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("oldAddress")
     public Address getOldAddress();

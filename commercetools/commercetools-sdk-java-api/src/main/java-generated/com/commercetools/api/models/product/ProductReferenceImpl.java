@@ -40,22 +40,25 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Product.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Product.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     <*  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>>
      */
+
     public com.commercetools.api.models.product.Product getObj() {
         return this.obj;
     }

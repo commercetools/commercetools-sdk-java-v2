@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueDraft.absoluteBuilder()
-           plusMoney(moneyBuilder -> moneyBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountValueDraft
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueDraft.absoluteBuilder()
+ *             plusMoney(moneyBuilder -> moneyBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftImpl.class, name = CartDiscountValueAbsoluteDraft.ABSOLUTE),
@@ -32,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CartDiscountValueDraft {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

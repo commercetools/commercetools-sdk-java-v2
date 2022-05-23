@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicateEnumValuesError duplicateEnumValuesError = DuplicateEnumValuesError.builder()
-           .message("{message}")
-           .plusDuplicates(duplicatesBuilder -> duplicatesBuilder)
-           .build()
- </code></pre>
- </div>
+ * DuplicateEnumValuesError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateEnumValuesError duplicateEnumValuesError = DuplicateEnumValuesError.builder()
+ *             .message("{message}")
+ *             .plusDuplicates(duplicatesBuilder -> duplicatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateEnumValuesErrorImpl.class)
@@ -29,6 +32,9 @@ public interface DuplicateEnumValuesError extends ErrorObject {
 
     String DUPLICATE_ENUM_VALUES = "DuplicateEnumValues";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("duplicates")
     public List<String> getDuplicates();

@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductLabel productLabel = ProductLabel.builder()
-           .slug(slugBuilder -> slugBuilder)
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductLabel
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductLabel productLabel = ProductLabel.builder()
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductLabelImpl.class)
@@ -31,15 +34,24 @@ public interface ProductLabel extends Label {
 
     String PRODUCT_LABEL = "ProductLabel";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")

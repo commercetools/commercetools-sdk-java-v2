@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ReturnItem
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemImpl implements ReturnItem, ModelBase {
 
@@ -53,33 +56,65 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     public ReturnItemImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public Integer getQuantity() {
         return this.quantity;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getComment() {
         return this.comment;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.ReturnPaymentState getPaymentState() {
         return this.paymentState;
     }
 
+    /**
+     <>
+     */
+
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     <>
+     */
 
     public String getCreatedAt() {
         return this.createdAt;

@@ -34,9 +34,17 @@ public class ChangeValueRelativeChangeValueImpl implements ChangeValueRelativeCh
         this.type = RELATIVE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public Integer getPermyriad() {
         return this.permyriad;

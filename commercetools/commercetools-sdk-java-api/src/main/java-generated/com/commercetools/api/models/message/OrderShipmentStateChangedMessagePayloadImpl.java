@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderShipmentStateChangedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmentStateChangedMessagePayload, ModelBase {
 
@@ -36,13 +39,25 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
         this.type = ORDER_SHIPMENT_STATE_CHANGED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order.ShipmentState getOldShipmentState() {
         return this.oldShipmentState;

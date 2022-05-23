@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderEditReference orderEditReference = OrderEditReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * OrderEditReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditReference orderEditReference = OrderEditReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
@@ -28,7 +30,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     private com.commercetools.api.models.order_edit.OrderEdit obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced OrderEdit.</p>
+     <*  <p>Platform-generated unique identifier of the referenced OrderEdit.</p>>
      */
 
     public OrderEditReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     <*  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>>
      */
 
     public OrderEditReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     <*  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>>
      */
 
     public OrderEditReferenceBuilder obj(@Nullable final com.commercetools.api.models.order_edit.OrderEdit obj) {

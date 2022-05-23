@@ -35,13 +35,18 @@ public class AuthorizationHeaderAuthenticationImpl implements AuthorizationHeade
         this.type = AUTHORIZATION_HEADER;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Partially hidden on retrieval for security reasons.</p>
+     <*  <p>Partially hidden on retrieval for security reasons.</p>>
      */
+
     public String getHeaderValue() {
         return this.headerValue;
     }

@@ -10,21 +10,23 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerAddressRemovedMessage customerAddressRemovedMessage = CustomerAddressRemovedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .address(addressBuilder -> addressBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomerAddressRemovedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerAddressRemovedMessage customerAddressRemovedMessage = CustomerAddressRemovedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .address(addressBuilder -> addressBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAddressRemovedMessage> {
@@ -55,7 +57,7 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
     private com.commercetools.api.models.common.Address address;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public CustomerAddressRemovedMessageBuilder id(final String id) {
@@ -63,15 +65,27 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressRemovedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressRemovedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressRemovedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -79,7 +93,7 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerAddressRemovedMessageBuilder lastModifiedBy(
@@ -89,7 +103,7 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerAddressRemovedMessageBuilder lastModifiedBy(
@@ -99,7 +113,7 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerAddressRemovedMessageBuilder createdBy(
@@ -109,7 +123,7 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerAddressRemovedMessageBuilder createdBy(
@@ -118,13 +132,17 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressRemovedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public CustomerAddressRemovedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -133,7 +151,7 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public CustomerAddressRemovedMessageBuilder resource(
@@ -142,10 +160,18 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressRemovedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressRemovedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -155,17 +181,29 @@ public class CustomerAddressRemovedMessageBuilder implements Builder<CustomerAdd
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressRemovedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressRemovedMessageBuilder address(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressRemovedMessageBuilder address(final com.commercetools.api.models.common.Address address) {
         this.address = address;

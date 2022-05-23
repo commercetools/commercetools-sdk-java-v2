@@ -38,20 +38,26 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
         this.action = ADD_ENUM_VALUE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     <*  <p><code>name</code> of the Field Definition to update.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-     *  <p>Value to append to the array.</p>
+     <*  <p>Value to append to the array.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldEnumValue getValue() {
         return this.value;
     }

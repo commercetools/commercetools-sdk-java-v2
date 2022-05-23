@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerDeletedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerDeletedMessagePayloadImpl implements CustomerDeletedMessagePayload, ModelBase {
 
@@ -22,6 +25,10 @@ public class CustomerDeletedMessagePayloadImpl implements CustomerDeletedMessage
     CustomerDeletedMessagePayloadImpl() {
         this.type = CUSTOMER_DELETED;
     }
+
+    /**
+     <>
+     */
 
     public String getType() {
         return this.type;

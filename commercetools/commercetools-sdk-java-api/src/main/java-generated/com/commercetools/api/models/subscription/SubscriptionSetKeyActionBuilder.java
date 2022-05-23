@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SubscriptionSetKeyAction subscriptionSetKeyAction = SubscriptionSetKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * SubscriptionSetKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionSetKeyAction subscriptionSetKeyAction = SubscriptionSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionSetKeyActionBuilder implements Builder<SubscriptionSetKeyAction> {
@@ -24,7 +26,7 @@ public class SubscriptionSetKeyActionBuilder implements Builder<SubscriptionSetK
     private String key;
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     <*  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
      */
 
     public SubscriptionSetKeyActionBuilder key(@Nullable final String key) {

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetAuthorizationAction paymentSetAuthorizationAction = PaymentSetAuthorizationAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetAuthorizationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetAuthorizationAction paymentSetAuthorizationAction = PaymentSetAuthorizationAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetAuthorizationActionBuilder implements Builder<PaymentSetAuthorizationAction> {
@@ -28,8 +30,8 @@ public class PaymentSetAuthorizationActionBuilder implements Builder<PaymentSetA
     private java.time.ZonedDateTime until;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentSetAuthorizationActionBuilder amount(
@@ -39,8 +41,8 @@ public class PaymentSetAuthorizationActionBuilder implements Builder<PaymentSetA
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentSetAuthorizationActionBuilder amount(
@@ -48,6 +50,10 @@ public class PaymentSetAuthorizationActionBuilder implements Builder<PaymentSetA
         this.amount = amount;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentSetAuthorizationActionBuilder until(@Nullable final java.time.ZonedDateTime until) {
         this.until = until;

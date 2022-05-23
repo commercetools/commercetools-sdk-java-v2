@@ -15,24 +15,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Specifies which Product is assigned to which ProductSelection.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionAssignment productSelectionAssignment = ProductSelectionAssignment.builder()
-           .product(productBuilder -> productBuilder)
-           .productSelection(productSelectionBuilder -> productSelectionBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>Specifies which Product is assigned to which ProductSelection.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionAssignment productSelectionAssignment = ProductSelectionAssignment.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionAssignmentImpl.class)
 public interface ProductSelectionAssignment {
 
     /**
-     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     <*  <p>Reference to a Product that is assigned to the ProductSelection.</p>>
      */
     @NotNull
     @Valid
@@ -40,7 +41,7 @@ public interface ProductSelectionAssignment {
     public ProductReference getProduct();
 
     /**
-     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     <*  <p>Reference to the ProductSelection that this assignment is part of.</p>>
      */
     @NotNull
     @Valid

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewSetCustomerAction reviewSetCustomerAction = ReviewSetCustomerAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ReviewSetCustomerActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewSetCustomerAction reviewSetCustomerAction = ReviewSetCustomerAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomerAction> {
@@ -25,7 +27,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
-     *  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     <*  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
      */
 
     public ReviewSetCustomerActionBuilder customer(
@@ -36,7 +38,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     }
 
     /**
-     *  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     <*  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
      */
 
     public ReviewSetCustomerActionBuilder customer(

@@ -20,28 +20,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingInfo shippingInfo = ShippingInfo.builder()
-           .shippingMethodName("{shippingMethodName}")
-           .price(priceBuilder -> priceBuilder)
-           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
-           .shippingMethodState(ShippingMethodState.DOES_NOT_MATCH_CART)
-           .build()
- </code></pre>
- </div>
+ * ShippingInfo
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingInfo shippingInfo = ShippingInfo.builder()
+ *             .shippingMethodName("{shippingMethodName}")
+ *             .price(priceBuilder -> priceBuilder)
+ *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+ *             .shippingMethodState(ShippingMethodState.DOES_NOT_MATCH_CART)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingInfoImpl.class)
 public interface ShippingInfo {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     <*  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>>
      */
     @NotNull
     @Valid
@@ -49,7 +55,7 @@ public interface ShippingInfo {
     public TypedMoney getPrice();
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     <*  <p>The shipping rate used to determine the price.</p>>
      */
     @NotNull
     @Valid
@@ -57,43 +63,49 @@ public interface ShippingInfo {
     public ShippingRate getShippingRate();
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
+     <*  <p>Set once the <code>taxRate</code> is set.</p>>
      */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     <*  <p>Not set if custom shipping method is used.</p>>
      */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodReference getShippingMethod();
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
     @Valid
     @JsonProperty("deliveries")
     public List<Delivery> getDeliveries();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("discountedPrice")
     public DiscountedLineItemPrice getDiscountedPrice();
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
+     <*  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>>
      */
     @NotNull
     @JsonProperty("shippingMethodState")

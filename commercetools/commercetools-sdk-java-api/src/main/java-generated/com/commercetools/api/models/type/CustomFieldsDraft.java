@@ -14,23 +14,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFieldsDraft customFieldsDraft = CustomFieldsDraft.builder()
-           .type(typeBuilder -> typeBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldsDraft customFieldsDraft = CustomFieldsDraft.builder()
+ *             .type(typeBuilder -> typeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldsDraftImpl.class)
 public interface CustomFieldsDraft {
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     <*  <p><code>id</code> or <code>key</code> of the Type.</p>>
      */
     @NotNull
     @Valid
@@ -38,7 +39,7 @@ public interface CustomFieldsDraft {
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
      */
     @Valid
     @JsonProperty("fields")

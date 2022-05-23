@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ZoneRateDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
 
@@ -31,13 +34,18 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
     public ZoneRateDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
         return this.zone;
     }
 
     /**
-     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     <*  <p>The array must not contain two shipping rates with the same currency.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> getShippingRates() {
         return this.shippingRates;
     }

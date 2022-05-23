@@ -21,20 +21,23 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderEdit orderEdit = OrderEdit.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .resource(resourceBuilder -> resourceBuilder)
-           .plusStagedActions(stagedActionsBuilder -> stagedActionsBuilder)
-           .result(resultBuilder -> resultBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderEdit
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEdit orderEdit = OrderEdit.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .plusStagedActions(stagedActionsBuilder -> stagedActionsBuilder)
+ *             .result(resultBuilder -> resultBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditImpl.class)
@@ -44,50 +47,56 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
         com.commercetools.api.models.Customizable<OrderEdit> {
 
     /**
-     *  <p>Platform-generated unique identifier of the OrderEdit.</p>
+     <*  <p>Platform-generated unique identifier of the OrderEdit.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>The current version of the OrderEdit.</p>
+     <*  <p>The current version of the OrderEdit.</p>>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>User-defined unique identifier of the OrderEdit.</p>
+     <*  <p>User-defined unique identifier of the OrderEdit.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     <*  <p>The order to be updated with this edit.</p>>
      */
     @NotNull
     @Valid
@@ -95,19 +104,22 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
     public OrderReference getResource();
 
     /**
-     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     <*  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("stagedActions")
     public List<StagedOrderUpdateAction> getStagedActions();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+     <*  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>>
      */
     @NotNull
     @Valid
@@ -115,7 +127,7 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
     public OrderEditResult getResult();
 
     /**
-     *  <p>This field can be used to add textual information regarding the edit.</p>
+     <*  <p>This field can be used to add textual information regarding the edit.</p>>
      */
 
     @JsonProperty("comment")

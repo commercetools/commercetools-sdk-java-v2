@@ -13,145 +13,217 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Address address = Address.builder()
-           .id("{id}")
-           .key("{key}")
-           .title("{title}")
-           .salutation("{salutation}")
-           .firstName("{firstName}")
-           .lastName("{lastName}")
-           .streetName("{streetName}")
-           .streetNumber("{streetNumber}")
-           .additionalStreetInfo("{additionalStreetInfo}")
-           .postalCode("{postalCode}")
-           .city("{city}")
-           .region("{region}")
-           .state("{state}")
-           .country("{country}")
-           .company("{company}")
-           .department("{department}")
-           .building("{building}")
-           .apartment("{apartment}")
-           .pOBox("{pOBox}")
-           .phone("{phone}")
-           .mobile("{mobile}")
-           .email("{email}")
-           .fax("{fax}")
-           .additionalAddressInfo("{additionalAddressInfo}")
-           .externalId("{externalId}")
-           .build()
- </code></pre>
- </div>
+ * Address
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Address address = Address.builder()
+ *             .id("{id}")
+ *             .key("{key}")
+ *             .title("{title}")
+ *             .salutation("{salutation}")
+ *             .firstName("{firstName}")
+ *             .lastName("{lastName}")
+ *             .streetName("{streetName}")
+ *             .streetNumber("{streetNumber}")
+ *             .additionalStreetInfo("{additionalStreetInfo}")
+ *             .postalCode("{postalCode}")
+ *             .city("{city}")
+ *             .region("{region}")
+ *             .state("{state}")
+ *             .country("{country}")
+ *             .company("{company}")
+ *             .department("{department}")
+ *             .building("{building}")
+ *             .apartment("{apartment}")
+ *             .pOBox("{pOBox}")
+ *             .phone("{phone}")
+ *             .mobile("{mobile}")
+ *             .email("{email}")
+ *             .fax("{fax}")
+ *             .additionalAddressInfo("{additionalAddressInfo}")
+ *             .externalId("{externalId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddressImpl.class)
 public interface Address {
 
     /**
-     *  <p>Unique ID of the Address.</p>
+     <*  <p>Unique ID of the Address.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("title")
     public String getTitle();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("salutation")
     public String getSalutation();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("firstName")
     public String getFirstName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lastName")
     public String getLastName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("streetName")
     public String getStreetName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("streetNumber")
     public String getStreetNumber();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("additionalStreetInfo")
     public String getAdditionalStreetInfo();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("postalCode")
     public String getPostalCode();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("city")
     public String getCity();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("region")
     public String getRegion();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("state")
     public String getState();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("company")
     public String getCompany();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("department")
     public String getDepartment();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("building")
     public String getBuilding();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("apartment")
     public String getApartment();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("pOBox")
     public String getPOBox();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("phone")
     public String getPhone();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("mobile")
     public String getMobile();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("fax")
     public String getFax();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("additionalAddressInfo")
     public String getAdditionalAddressInfo();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("externalId")
     public String getExternalId();

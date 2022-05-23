@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeChangeLocalizedEnumValueOrderAction productTypeChangeLocalizedEnumValueOrderAction = ProductTypeChangeLocalizedEnumValueOrderAction.builder()
-           .attributeName("{attributeName}")
-           .plusValues(valuesBuilder -> valuesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeChangeLocalizedEnumValueOrderActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeLocalizedEnumValueOrderAction productTypeChangeLocalizedEnumValueOrderAction = ProductTypeChangeLocalizedEnumValueOrderAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .plusValues(valuesBuilder -> valuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
@@ -26,10 +28,18 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
 
     private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
 
+    /**
+     <>
+     */
+
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
             final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue... values) {
@@ -37,11 +47,19 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
             final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
             final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue... values) {
@@ -52,6 +70,10 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
             Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
         if (this.values == null) {
@@ -61,6 +83,10 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
             builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder withValues(
             Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {

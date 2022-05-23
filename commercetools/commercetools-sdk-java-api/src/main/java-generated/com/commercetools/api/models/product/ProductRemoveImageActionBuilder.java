@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductRemoveImageAction productRemoveImageAction = ProductRemoveImageAction.builder()
-           .imageUrl("{imageUrl}")
-           .build()
- </code></pre>
- </div>
+ * ProductRemoveImageActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductRemoveImageAction productRemoveImageAction = ProductRemoveImageAction.builder()
+ *             .imageUrl("{imageUrl}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveImageAction> {
@@ -32,10 +34,18 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
     @Nullable
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductRemoveImageActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductRemoveImageActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
@@ -43,13 +53,17 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
     }
 
     /**
-     *  <p>The URL of the image.</p>
+     <*  <p>The URL of the image.</p>>
      */
 
     public ProductRemoveImageActionBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductRemoveImageActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

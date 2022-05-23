@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetSkuAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
 
@@ -38,20 +41,33 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
         this.action = SET_SKU;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
     /**
-     *  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>
+     <*  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>>
      */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

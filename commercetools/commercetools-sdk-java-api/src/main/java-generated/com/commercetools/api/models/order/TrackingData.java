@@ -11,40 +11,51 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TrackingData trackingData = TrackingData.builder()
-           .build()
- </code></pre>
- </div>
+ * TrackingData
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TrackingData trackingData = TrackingData.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TrackingDataImpl.class)
 public interface TrackingData {
 
     /**
-     *  <p>The ID to track one parcel.</p>
+     <*  <p>The ID to track one parcel.</p>>
      */
 
     @JsonProperty("trackingId")
     public String getTrackingId();
 
     /**
-     *  <p>The carrier that delivers the parcel.</p>
+     <*  <p>The carrier that delivers the parcel.</p>>
      */
 
     @JsonProperty("carrier")
     public String getCarrier();
 
+    /**
+     <>
+     */
+
     @JsonProperty("provider")
     public String getProvider();
+
+    /**
+     <>
+     */
 
     @JsonProperty("providerTransaction")
     public String getProviderTransaction();
 
     /**
-     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     <*  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>>
      */
 
     @JsonProperty("isReturn")

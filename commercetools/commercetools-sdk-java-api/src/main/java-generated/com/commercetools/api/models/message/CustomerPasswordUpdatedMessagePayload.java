@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerPasswordUpdatedMessagePayload customerPasswordUpdatedMessagePayload = CustomerPasswordUpdatedMessagePayload.builder()
-           .reset(true)
-           .build()
- </code></pre>
- </div>
+ * CustomerPasswordUpdatedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerPasswordUpdatedMessagePayload customerPasswordUpdatedMessagePayload = CustomerPasswordUpdatedMessagePayload.builder()
+ *             .reset(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerPasswordUpdatedMessagePayloadImpl.class)
@@ -29,7 +32,7 @@ public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
     String CUSTOMER_PASSWORD_UPDATED = "CustomerPasswordUpdated";
 
     /**
-     *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
+     <*  <p>true, if password has been updated during Customer's Password Reset workflow.</p>>
      */
     @NotNull
     @JsonProperty("reset")

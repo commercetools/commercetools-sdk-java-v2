@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * FacetResult
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FacetResultImpl implements FacetResult, ModelBase {
 
@@ -26,6 +29,10 @@ public class FacetResultImpl implements FacetResult, ModelBase {
 
     public FacetResultImpl() {
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;

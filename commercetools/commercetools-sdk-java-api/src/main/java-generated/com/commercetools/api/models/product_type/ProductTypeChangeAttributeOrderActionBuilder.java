@@ -8,19 +8,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeChangeAttributeOrderAction productTypeChangeAttributeOrderAction = ProductTypeChangeAttributeOrderAction.builder()
-           .plusAttributes(attributesBuilder -> attributesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeChangeAttributeOrderActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeAttributeOrderAction productTypeChangeAttributeOrderAction = ProductTypeChangeAttributeOrderAction.builder()
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeOrderActionBuilder implements Builder<ProductTypeChangeAttributeOrderAction> {
 
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
+
+    /**
+     <>
+     */
 
     public ProductTypeChangeAttributeOrderActionBuilder attributes(
             final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
@@ -28,11 +34,19 @@ public class ProductTypeChangeAttributeOrderActionBuilder implements Builder<Pro
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductTypeChangeAttributeOrderActionBuilder attributes(
             final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeChangeAttributeOrderActionBuilder plusAttributes(
             final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
@@ -43,6 +57,10 @@ public class ProductTypeChangeAttributeOrderActionBuilder implements Builder<Pro
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductTypeChangeAttributeOrderActionBuilder plusAttributes(
             Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
         if (this.attributes == null) {
@@ -52,6 +70,10 @@ public class ProductTypeChangeAttributeOrderActionBuilder implements Builder<Pro
                 .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeChangeAttributeOrderActionBuilder withAttributes(
             Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {

@@ -10,20 +10,22 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerLastNameSetMessage customerLastNameSetMessage = CustomerLastNameSetMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .build()
- </code></pre>
- </div>
+ * CustomerLastNameSetMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerLastNameSetMessage customerLastNameSetMessage = CustomerLastNameSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNameSetMessage> {
@@ -55,7 +57,7 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
     private String lastName;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public CustomerLastNameSetMessageBuilder id(final String id) {
@@ -63,15 +65,27 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerLastNameSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerLastNameSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerLastNameSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -79,7 +93,7 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerLastNameSetMessageBuilder lastModifiedBy(
@@ -89,7 +103,7 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerLastNameSetMessageBuilder lastModifiedBy(
@@ -99,7 +113,7 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerLastNameSetMessageBuilder createdBy(
@@ -109,7 +123,7 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public CustomerLastNameSetMessageBuilder createdBy(
@@ -118,13 +132,17 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerLastNameSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public CustomerLastNameSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -133,7 +151,7 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public CustomerLastNameSetMessageBuilder resource(
@@ -142,10 +160,18 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerLastNameSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerLastNameSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -155,11 +181,19 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerLastNameSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerLastNameSetMessageBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;

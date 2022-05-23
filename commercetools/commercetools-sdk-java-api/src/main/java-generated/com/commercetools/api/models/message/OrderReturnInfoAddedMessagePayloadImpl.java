@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderReturnInfoAddedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturnInfoAddedMessagePayload, ModelBase {
 
@@ -32,9 +35,17 @@ public class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturnInfoAd
         this.type = RETURN_INFO_ADDED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order.ReturnInfo getReturnInfo() {
         return this.returnInfo;

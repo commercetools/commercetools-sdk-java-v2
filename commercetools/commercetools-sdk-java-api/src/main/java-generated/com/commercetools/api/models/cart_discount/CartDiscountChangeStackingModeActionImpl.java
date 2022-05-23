@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountChangeStackingModeAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeStackingModeActionImpl implements CartDiscountChangeStackingModeAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CartDiscountChangeStackingModeActionImpl implements CartDiscountCha
         this.action = CHANGE_STACKING_MODE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
         return this.stackingMode;

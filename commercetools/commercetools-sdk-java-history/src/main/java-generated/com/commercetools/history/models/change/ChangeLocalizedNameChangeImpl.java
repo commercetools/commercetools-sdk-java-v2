@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeLocalizedNameChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
         this.type = CHANGE_LOCALIZED_NAME_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Shape of the action for <code>changeName</code></p>
+     <*  <p>Shape of the action for <code>changeName</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;

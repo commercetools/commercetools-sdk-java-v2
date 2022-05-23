@@ -13,16 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InvalidItemShippingDetailsError invalidItemShippingDetailsError = InvalidItemShippingDetailsError.builder()
-           .message("{message}")
-           .subject("{subject}")
-           .itemId("{itemId}")
-           .build()
- </code></pre>
- </div>
+ * InvalidItemShippingDetailsError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidItemShippingDetailsError invalidItemShippingDetailsError = InvalidItemShippingDetailsError.builder()
+ *             .message("{message}")
+ *             .subject("{subject}")
+ *             .itemId("{itemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidItemShippingDetailsErrorImpl.class)
@@ -30,10 +33,16 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
 
     String INVALID_ITEM_SHIPPING_DETAILS = "InvalidItemShippingDetails";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("subject")
     public String getSubject();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("itemId")
     public String getItemId();

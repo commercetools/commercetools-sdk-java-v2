@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountChangeCartPredicateAction cartDiscountChangeCartPredicateAction = CartDiscountChangeCartPredicateAction.builder()
-           .cartPredicate("{cartPredicate}")
-           .build()
- </code></pre>
- </div>
+ * CartDiscountChangeCartPredicateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeCartPredicateAction cartDiscountChangeCartPredicateAction = CartDiscountChangeCartPredicateAction.builder()
+ *             .cartPredicate("{cartPredicate}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeCartPredicateActionBuilder implements Builder<CartDiscountChangeCartPredicateAction> {
@@ -22,7 +24,7 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
     private String cartPredicate;
 
     /**
-     *  <p>A valid Cart predicate.</p>
+     <*  <p>A valid Cart predicate.</p>>
      */
 
     public CartDiscountChangeCartPredicateActionBuilder cartPredicate(final String cartPredicate) {

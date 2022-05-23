@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessagePayloadImpl implements MessagePayload, ModelBase {
 
@@ -26,6 +29,10 @@ public class MessagePayloadImpl implements MessagePayload, ModelBase {
 
     public MessagePayloadImpl() {
     }
+
+    /**
+     <>
+     */
 
     public String getType() {
         return this.type;

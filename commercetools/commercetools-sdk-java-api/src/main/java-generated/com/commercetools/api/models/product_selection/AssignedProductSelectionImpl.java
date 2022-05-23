@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AssignedProductSelection
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssignedProductSelectionImpl implements AssignedProductSelection, ModelBase {
 
@@ -29,8 +32,9 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
     }
 
     /**
-     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     <*  <p>Reference to the ProductSelection that this assignment is part of.</p>>
      */
+
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }

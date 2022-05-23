@@ -47,35 +47,43 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
     }
 
     /**
-     *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
-     *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
-     *  <p>If <code>centAmount</code> is not provided, the commercetools Platform calculates the value automatically using the default rounding mode half even.</p>
+     <*  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
+    *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
+    *  <p>If <code>centAmount</code> is not provided, the commercetools Platform calculates the value automatically using the default rounding mode half even.</p>>
      */
+
     public Long getCentAmount() {
         return this.centAmount;
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     <*  <p>Currency code compliant to ISO 4217.</p>>
      */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.MoneyType getType() {
         return this.type;
     }
 
     /**
-     *  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>
+     <*  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>>
      */
+
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
 
     /**
-     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     <*  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>>
      */
+
     public Long getPreciseAmount() {
         return this.preciseAmount;
     }

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ImportOperationStatus
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBase {
 
@@ -36,22 +39,25 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
     }
 
     /**
-     *  <p>The ID of the ImportOperation.</p>
+     <*  <p>The ID of the ImportOperation.</p>>
      */
+
     public String getOperationId() {
         return this.operationId;
     }
 
     /**
-     *  <p>The validation state of the ImportOperation.</p>
+     <*  <p>The validation state of the ImportOperation.</p>>
      */
+
     public com.commercetools.importapi.models.importoperations.ImportOperationState getState() {
         return this.state;
     }
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     <*  <p>The validation errors for the ImportOperation. See Errors.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;
     }

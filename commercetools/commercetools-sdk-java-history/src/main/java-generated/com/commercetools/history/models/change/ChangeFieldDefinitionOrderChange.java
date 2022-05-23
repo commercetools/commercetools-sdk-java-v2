@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeFieldDefinitionOrderChange changeFieldDefinitionOrderChange = ChangeFieldDefinitionOrderChange.builder()
-           .change("{change}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeFieldDefinitionOrderChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeFieldDefinitionOrderChange changeFieldDefinitionOrderChange = ChangeFieldDefinitionOrderChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeFieldDefinitionOrderChangeImpl.class)
@@ -32,22 +35,31 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
 
     String CHANGE_FIELD_DEFINITION_ORDER_CHANGE = "ChangeFieldDefinitionOrderChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     <*  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public List<FieldDefinitionOrderValue> getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

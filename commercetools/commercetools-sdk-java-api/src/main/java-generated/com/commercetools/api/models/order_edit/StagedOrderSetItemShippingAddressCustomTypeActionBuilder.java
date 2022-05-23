@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetItemShippingAddressCustomTypeAction stagedOrderSetItemShippingAddressCustomTypeAction = StagedOrderSetItemShippingAddressCustomTypeAction.builder()
-           .addressKey("{addressKey}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetItemShippingAddressCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetItemShippingAddressCustomTypeAction stagedOrderSetItemShippingAddressCustomTypeAction = StagedOrderSetItemShippingAddressCustomTypeAction.builder()
+ *             .addressKey("{addressKey}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
@@ -31,13 +33,17 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder addressKey(final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     <*  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>>
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(
@@ -47,7 +53,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     <*  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>>
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder type(
@@ -57,7 +63,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     <*  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>>
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(
@@ -67,7 +73,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     <*  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>>
      */
 
     public StagedOrderSetItemShippingAddressCustomTypeActionBuilder fields(

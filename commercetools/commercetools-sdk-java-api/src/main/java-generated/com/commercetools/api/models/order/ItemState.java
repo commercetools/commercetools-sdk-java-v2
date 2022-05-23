@@ -15,24 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ItemState itemState = ItemState.builder()
-           .quantity(0.3)
-           .state(stateBuilder -> stateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ItemState
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemState itemState = ItemState.builder()
+ *             .quantity(0.3)
+ *             .state(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ItemStateImpl.class)
 public interface ItemState {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("state")

@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListSetTextLineItemDescriptionAction myShoppingListSetTextLineItemDescriptionAction = MyShoppingListSetTextLineItemDescriptionAction.builder()
-           .textLineItemId("{textLineItemId}")
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListSetTextLineItemDescriptionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListSetTextLineItemDescriptionAction myShoppingListSetTextLineItemDescriptionAction = MyShoppingListSetTextLineItemDescriptionAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListSetTextLineItemDescriptionActionImpl.class)
@@ -30,12 +33,15 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
 
     String SET_TEXT_LINE_ITEM_DESCRIPTION = "setTextLineItemDescription";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("description")

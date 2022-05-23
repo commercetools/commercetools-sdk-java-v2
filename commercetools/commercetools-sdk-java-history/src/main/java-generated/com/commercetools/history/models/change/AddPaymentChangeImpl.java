@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AddPaymentChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
         this.type = ADD_PAYMENT_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+     <*  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.PaymentInfo getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.PaymentInfo getPreviousValue() {
         return this.previousValue;

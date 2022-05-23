@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShippingMethodSetLocalizedDescriptionAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodSetLocalizedDescriptionActionImpl
         implements ShippingMethodSetLocalizedDescriptionAction, ModelBase {
@@ -33,9 +36,17 @@ public class ShippingMethodSetLocalizedDescriptionActionImpl
         this.action = SET_LOCALIZED_DESCRIPTION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
         return this.localizedDescription;

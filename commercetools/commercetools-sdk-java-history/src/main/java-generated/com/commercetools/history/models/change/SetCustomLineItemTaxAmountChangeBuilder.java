@@ -8,19 +8,21 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomLineItemTaxAmountChange setCustomLineItemTaxAmountChange = SetCustomLineItemTaxAmountChange.builder()
-           .change("{change}")
-           .customLineItem(customLineItemBuilder -> customLineItemBuilder)
-           .customLineItemId("{customLineItemId}")
-           .taxMode(TaxMode.PLATFORM)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCustomLineItemTaxAmountChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemTaxAmountChange setCustomLineItemTaxAmountChange = SetCustomLineItemTaxAmountChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCustomLineItemTaxAmountChange> {
@@ -38,13 +40,17 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
     private com.commercetools.history.models.common.TaxRate previousValue;
 
     /**
-     *  <p>Update action for <code>setCustomLineItemTaxAmount</code></p>
+     <*  <p>Update action for <code>setCustomLineItemTaxAmount</code></p>>
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemTaxAmountChangeBuilder customLineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -53,16 +59,28 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemTaxAmountChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemTaxAmountChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemTaxAmountChangeBuilder taxMode(
             final com.commercetools.history.models.common.TaxMode taxMode) {
@@ -71,7 +89,7 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder nextValue(
@@ -81,7 +99,7 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder nextValue(
@@ -91,7 +109,7 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder previousValue(
@@ -101,7 +119,7 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
 
     public SetCustomLineItemTaxAmountChangeBuilder previousValue(

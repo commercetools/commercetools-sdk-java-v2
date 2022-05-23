@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentSetAnonymousIdAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymousIdAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymousIdAct
         this.action = SET_ANONYMOUS_ID;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Anonymous ID of the anonymous customer that this payment belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>
+     <*  <p>Anonymous ID of the anonymous customer that this payment belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>>
      */
+
     public String getAnonymousId() {
         return this.anonymousId;
     }

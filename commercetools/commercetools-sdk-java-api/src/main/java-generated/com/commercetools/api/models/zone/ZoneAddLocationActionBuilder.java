@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneAddLocationAction zoneAddLocationAction = ZoneAddLocationAction.builder()
-           .location(locationBuilder -> locationBuilder)
-           .build()
- </code></pre>
- </div>
+ * ZoneAddLocationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneAddLocationAction zoneAddLocationAction = ZoneAddLocationAction.builder()
+ *             .location(locationBuilder -> locationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationAction> {
@@ -23,7 +25,7 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
     private com.commercetools.api.models.zone.Location location;
 
     /**
-     *  <p>Location to be added to the Zone.</p>
+     <*  <p>Location to be added to the Zone.</p>>
      */
 
     public ZoneAddLocationActionBuilder location(
@@ -33,7 +35,7 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
     }
 
     /**
-     *  <p>Location to be added to the Zone.</p>
+     <*  <p>Location to be added to the Zone.</p>>
      */
 
     public ZoneAddLocationActionBuilder location(final com.commercetools.api.models.zone.Location location) {

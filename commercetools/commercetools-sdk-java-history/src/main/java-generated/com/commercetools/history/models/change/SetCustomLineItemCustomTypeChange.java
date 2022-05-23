@@ -16,18 +16,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomLineItemCustomTypeChange setCustomLineItemCustomTypeChange = SetCustomLineItemCustomTypeChange.builder()
-           .change("{change}")
-           .customLineItem(customLineItemBuilder -> customLineItemBuilder)
-           .customLineItemId("{customLineItemId}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCustomLineItemCustomTypeChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemCustomTypeChange setCustomLineItemCustomTypeChange = SetCustomLineItemCustomTypeChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetCustomLineItemCustomTypeChangeImpl.class)
@@ -35,31 +38,46 @@ public interface SetCustomLineItemCustomTypeChange extends Change {
 
     String SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE_CHANGE = "SetCustomLineItemCustomTypeChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
+     <*  <p>Update action for <code>setCustomLineItemCustomType</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("customLineItem")
     public LocalizedString getCustomLineItem();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public CustomFields getNextValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

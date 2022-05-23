@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveAddressChange removeAddressChange = RemoveAddressChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveAddressChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveAddressChange removeAddressChange = RemoveAddressChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveAddressChangeImpl.class)
@@ -32,16 +35,22 @@ public interface RemoveAddressChange extends Change {
     String REMOVE_ADDRESS_CHANGE = "RemoveAddressChange";
 
     /**
-     *  <p>Update action for <code>removeAddress</code> action.</p>
+     <*  <p>Update action for <code>removeAddress</code> action.</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

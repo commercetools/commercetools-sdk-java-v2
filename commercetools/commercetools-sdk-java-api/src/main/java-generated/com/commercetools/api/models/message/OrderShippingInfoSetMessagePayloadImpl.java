@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderShippingInfoSetMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfoSetMessagePayload, ModelBase {
 
@@ -36,13 +39,25 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
         this.type = ORDER_SHIPPING_INFO_SET;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ShippingInfo getOldShippingInfo() {
         return this.oldShippingInfo;

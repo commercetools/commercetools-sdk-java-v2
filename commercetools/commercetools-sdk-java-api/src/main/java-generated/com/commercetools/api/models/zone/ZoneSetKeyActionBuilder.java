@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneSetKeyAction zoneSetKeyAction = ZoneSetKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ZoneSetKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneSetKeyAction zoneSetKeyAction = ZoneSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneSetKeyActionBuilder implements Builder<ZoneSetKeyAction> {
@@ -24,7 +26,7 @@ public class ZoneSetKeyActionBuilder implements Builder<ZoneSetKeyAction> {
     private String key;
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     <*  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>>
      */
 
     public ZoneSetKeyActionBuilder key(@Nullable final String key) {

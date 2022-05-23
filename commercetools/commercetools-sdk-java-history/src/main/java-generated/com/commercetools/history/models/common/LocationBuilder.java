@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Location location = Location.builder()
-           .country("{country}")
-           .state("{state}")
-           .build()
- </code></pre>
- </div>
+ * LocationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Location location = Location.builder()
+ *             .country("{country}")
+ *             .state("{state}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocationBuilder implements Builder<Location> {
@@ -25,13 +27,17 @@ public class LocationBuilder implements Builder<Location> {
     private String state;
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
 
     public LocationBuilder country(final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LocationBuilder state(final String state) {
         this.state = state;

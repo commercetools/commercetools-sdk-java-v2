@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectCategoryRecommendationMeta projectCategoryRecommendationMeta = ProjectCategoryRecommendationMeta.builder()
-           .plusGeneralCategoryNames(generalCategoryNamesBuilder -> generalCategoryNamesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProjectCategoryRecommendationMetaBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectCategoryRecommendationMeta projectCategoryRecommendationMeta = ProjectCategoryRecommendationMeta.builder()
+ *             .plusGeneralCategoryNames(generalCategoryNamesBuilder -> generalCategoryNamesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectCategoryRecommendationMetaBuilder implements Builder<ProjectCategoryRecommendationMeta> {
@@ -30,7 +32,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
     private java.util.List<String> generalCategoryNames;
 
     /**
-     *  <p>The product name that was used to generate recommendations.</p>
+     <*  <p>The product name that was used to generate recommendations.</p>>
      */
 
     public ProjectCategoryRecommendationMetaBuilder productName(@Nullable final String productName) {
@@ -39,7 +41,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
     }
 
     /**
-     *  <p>The product image that was used to generate recommendations.</p>
+     <*  <p>The product image that was used to generate recommendations.</p>>
      */
 
     public ProjectCategoryRecommendationMetaBuilder productImageUrl(@Nullable final String productImageUrl) {
@@ -48,7 +50,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
     }
 
     /**
-     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+     <*  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>>
      */
 
     public ProjectCategoryRecommendationMetaBuilder generalCategoryNames(final String... generalCategoryNames) {
@@ -57,7 +59,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
     }
 
     /**
-     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+     <*  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>>
      */
 
     public ProjectCategoryRecommendationMetaBuilder generalCategoryNames(
@@ -67,7 +69,7 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
     }
 
     /**
-     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+     <*  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>>
      */
 
     public ProjectCategoryRecommendationMetaBuilder plusGeneralCategoryNames(final String... generalCategoryNames) {

@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExternalOAuth externalOAuth = ExternalOAuth.builder()
-           .url("{url}")
-           .authorizationHeader("{authorizationHeader}")
-           .build()
- </code></pre>
- </div>
+ * ExternalOAuthBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExternalOAuth externalOAuth = ExternalOAuth.builder()
+ *             .url("{url}")
+ *             .authorizationHeader("{authorizationHeader}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
@@ -25,7 +27,7 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
     private String authorizationHeader;
 
     /**
-     *  <p>URL with authorization header.</p>
+     <*  <p>URL with authorization header.</p>>
      */
 
     public ExternalOAuthBuilder url(final String url) {
@@ -34,7 +36,7 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
     }
 
     /**
-     *  <p>Partially hidden on retrieval.</p>
+     <*  <p>Partially hidden on retrieval.</p>>
      */
 
     public ExternalOAuthBuilder authorizationHeader(final String authorizationHeader) {

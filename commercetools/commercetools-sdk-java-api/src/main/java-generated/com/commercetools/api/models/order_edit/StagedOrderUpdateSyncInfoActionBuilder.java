@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderUpdateSyncInfoAction stagedOrderUpdateSyncInfoAction = StagedOrderUpdateSyncInfoAction.builder()
-           .channel(channelBuilder -> channelBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderUpdateSyncInfoActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderUpdateSyncInfoAction stagedOrderUpdateSyncInfoAction = StagedOrderUpdateSyncInfoAction.builder()
+ *             .channel(channelBuilder -> channelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrderUpdateSyncInfoAction> {
@@ -31,7 +33,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder channel(
@@ -42,7 +44,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder channel(
@@ -51,10 +53,18 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderUpdateSyncInfoActionBuilder syncedAt(@Nullable final java.time.ZonedDateTime syncedAt) {
         this.syncedAt = syncedAt;

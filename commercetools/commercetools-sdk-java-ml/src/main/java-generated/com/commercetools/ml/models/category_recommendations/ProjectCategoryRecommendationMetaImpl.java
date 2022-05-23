@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProjectCategoryRecommendationMeta
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectCategoryRecommendationMetaImpl implements ProjectCategoryRecommendationMeta, ModelBase {
 
@@ -36,22 +39,25 @@ public class ProjectCategoryRecommendationMetaImpl implements ProjectCategoryRec
     }
 
     /**
-     *  <p>The product name that was used to generate recommendations.</p>
+     <*  <p>The product name that was used to generate recommendations.</p>>
      */
+
     public String getProductName() {
         return this.productName;
     }
 
     /**
-     *  <p>The product image that was used to generate recommendations.</p>
+     <*  <p>The product image that was used to generate recommendations.</p>>
      */
+
     public String getProductImageUrl() {
         return this.productImageUrl;
     }
 
     /**
-     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+     <*  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>>
      */
+
     public java.util.List<String> getGeneralCategoryNames() {
         return this.generalCategoryNames;
     }

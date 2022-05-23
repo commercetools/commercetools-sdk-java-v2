@@ -15,17 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>The <code>CombinationUnique</code> Attribute Constraint was violated.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicateAttributeValuesError duplicateAttributeValuesError = DuplicateAttributeValuesError.builder()
-           .message("{message}")
-           .plusAttributes(attributesBuilder -> attributesBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>The <code>CombinationUnique</code> Attribute Constraint was violated.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateAttributeValuesError duplicateAttributeValuesError = DuplicateAttributeValuesError.builder()
+ *             .message("{message}")
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateAttributeValuesErrorImpl.class)
@@ -33,6 +34,9 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
 
     String DUPLICATE_ATTRIBUTE_VALUES = "DuplicateAttributeValues";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("attributes")

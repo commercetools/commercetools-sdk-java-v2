@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetDeliveryItemsChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
         this.type = SET_DELIVERY_ITEMS_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setDeliveryItems</code></p>
+     <*  <p>Update action for <code>setDeliveryItems</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getPreviousValue() {
         return this.previousValue;

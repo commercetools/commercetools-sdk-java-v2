@@ -8,25 +8,35 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionCreatedMessagePayload productSelectionCreatedMessagePayload = ProductSelectionCreatedMessagePayload.builder()
-           .productSelection(productSelectionBuilder -> productSelectionBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionCreatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionCreatedMessagePayload productSelectionCreatedMessagePayload = ProductSelectionCreatedMessagePayload.builder()
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<ProductSelectionCreatedMessagePayload> {
 
     private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
 
+    /**
+     <>
+     */
+
     public ProductSelectionCreatedMessagePayloadBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSelectionCreatedMessagePayloadBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionType>> builder) {

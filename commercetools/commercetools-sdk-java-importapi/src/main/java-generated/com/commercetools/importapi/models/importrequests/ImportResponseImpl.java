@@ -31,6 +31,10 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
     public ImportResponseImpl() {
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> getOperationStatus() {
         return this.operationStatus;
     }

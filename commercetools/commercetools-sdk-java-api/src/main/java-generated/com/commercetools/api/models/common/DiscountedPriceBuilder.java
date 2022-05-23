@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountedPrice discountedPrice = DiscountedPrice.builder()
-           .value(valueBuilder -> valueBuilder)
-           .discount(discountBuilder -> discountBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountedPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedPrice discountedPrice = DiscountedPrice.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .discount(discountBuilder -> discountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
@@ -26,7 +28,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
     /**
-     *  <p>Money value of the discounted price.</p>
+     <*  <p>Money value of the discounted price.</p>>
      */
 
     public DiscountedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -35,7 +37,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Money value of the discounted price.</p>
+     <*  <p>Money value of the discounted price.</p>>
      */
 
     public DiscountedPriceBuilder value(
@@ -45,7 +47,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     <*  <p>ProductDiscount related to the discounted price.</p>>
      */
 
     public DiscountedPriceBuilder discount(
@@ -57,7 +59,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>ProductDiscount related to the discounted price.</p>
+     <*  <p>ProductDiscount related to the discounted price.</p>>
      */
 
     public DiscountedPriceBuilder discount(

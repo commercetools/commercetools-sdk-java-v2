@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Address address = Address.builder()
-           .country("{country}")
-           .build()
- </code></pre>
- </div>
+ * AddressBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Address address = Address.builder()
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddressBuilder implements Builder<Address> {
@@ -99,13 +101,17 @@ public class AddressBuilder implements Builder<Address> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     <>
+     */
+
     public AddressBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
 
     /**
-     *  <p>User-defined unique identifier of the Address.</p>
+     <*  <p>User-defined unique identifier of the Address.</p>>
      */
 
     public AddressBuilder key(@Nullable final String key) {
@@ -114,7 +120,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
 
     public AddressBuilder country(final String country) {
@@ -123,7 +129,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Title of the contact, for example 'Dr.'</p>
+     <*  <p>Title of the contact, for example 'Dr.'</p>>
      */
 
     public AddressBuilder title(@Nullable final String title) {
@@ -132,7 +138,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     <*  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>>
      */
 
     public AddressBuilder salutation(@Nullable final String salutation) {
@@ -141,7 +147,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Given name (first name) of the contact.</p>
+     <*  <p>Given name (first name) of the contact.</p>>
      */
 
     public AddressBuilder firstName(@Nullable final String firstName) {
@@ -150,7 +156,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Family name (last name) of the contact.</p>
+     <*  <p>Family name (last name) of the contact.</p>>
      */
 
     public AddressBuilder lastName(@Nullable final String lastName) {
@@ -159,7 +165,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Name of the street.</p>
+     <*  <p>Name of the street.</p>>
      */
 
     public AddressBuilder streetName(@Nullable final String streetName) {
@@ -168,7 +174,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Street number.</p>
+     <*  <p>Street number.</p>>
      */
 
     public AddressBuilder streetNumber(@Nullable final String streetNumber) {
@@ -177,7 +183,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Further information on the street address.</p>
+     <*  <p>Further information on the street address.</p>>
      */
 
     public AddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
@@ -186,7 +192,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Postal code.</p>
+     <*  <p>Postal code.</p>>
      */
 
     public AddressBuilder postalCode(@Nullable final String postalCode) {
@@ -195,7 +201,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Name of the city.</p>
+     <*  <p>Name of the city.</p>>
      */
 
     public AddressBuilder city(@Nullable final String city) {
@@ -204,7 +210,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Name of the region.</p>
+     <*  <p>Name of the region.</p>>
      */
 
     public AddressBuilder region(@Nullable final String region) {
@@ -213,7 +219,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Name of the state, for example, Colorado.</p>
+     <*  <p>Name of the state, for example, Colorado.</p>>
      */
 
     public AddressBuilder state(@Nullable final String state) {
@@ -222,7 +228,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Name of the company.</p>
+     <*  <p>Name of the company.</p>>
      */
 
     public AddressBuilder company(@Nullable final String company) {
@@ -231,7 +237,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Name of the department.</p>
+     <*  <p>Name of the department.</p>>
      */
 
     public AddressBuilder department(@Nullable final String department) {
@@ -240,7 +246,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Number or name of the building.</p>
+     <*  <p>Number or name of the building.</p>>
      */
 
     public AddressBuilder building(@Nullable final String building) {
@@ -249,7 +255,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Number or name of the apartment.</p>
+     <*  <p>Number or name of the apartment.</p>>
      */
 
     public AddressBuilder apartment(@Nullable final String apartment) {
@@ -258,7 +264,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Post office box number.</p>
+     <*  <p>Post office box number.</p>>
      */
 
     public AddressBuilder pOBox(@Nullable final String pOBox) {
@@ -267,7 +273,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Phone number of the contact.</p>
+     <*  <p>Phone number of the contact.</p>>
      */
 
     public AddressBuilder phone(@Nullable final String phone) {
@@ -276,7 +282,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Mobile phone number of the contact.</p>
+     <*  <p>Mobile phone number of the contact.</p>>
      */
 
     public AddressBuilder mobile(@Nullable final String mobile) {
@@ -285,7 +291,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Email address of the contact.</p>
+     <*  <p>Email address of the contact.</p>>
      */
 
     public AddressBuilder email(@Nullable final String email) {
@@ -294,7 +300,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Fax number of the contact.</p>
+     <*  <p>Fax number of the contact.</p>>
      */
 
     public AddressBuilder fax(@Nullable final String fax) {
@@ -303,7 +309,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Further information on the Address.</p>
+     <*  <p>Further information on the Address.</p>>
      */
 
     public AddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
@@ -312,7 +318,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>ID for the contact used in an external system.</p>
+     <*  <p>ID for the contact used in an external system.</p>>
      */
 
     public AddressBuilder externalId(@Nullable final String externalId) {
@@ -321,7 +327,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address.</p>
+     <*  <p>Custom Fields defined for the Address.</p>>
      */
 
     public AddressBuilder custom(
@@ -331,7 +337,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address.</p>
+     <*  <p>Custom Fields defined for the Address.</p>>
      */
 
     public AddressBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

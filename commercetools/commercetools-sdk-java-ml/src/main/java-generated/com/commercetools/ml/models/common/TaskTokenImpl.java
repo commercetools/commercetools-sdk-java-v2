@@ -34,15 +34,17 @@ public class TaskTokenImpl implements TaskToken, ModelBase {
     }
 
     /**
-     *  <p>The ID for the task. Used to find the status of the task.</p>
+     <*  <p>The ID for the task. Used to find the status of the task.</p>>
      */
+
     public String getTaskId() {
         return this.taskId;
     }
 
     /**
-     *  <p>The URI path to poll for the status of the task.</p>
+     <*  <p>The URI path to poll for the status of the task.</p>>
      */
+
     public String getUriPath() {
         return this.uriPath;
     }

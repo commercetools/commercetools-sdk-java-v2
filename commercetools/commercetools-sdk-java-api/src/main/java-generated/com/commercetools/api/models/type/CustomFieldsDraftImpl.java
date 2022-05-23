@@ -35,15 +35,17 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     <*  <p><code>id</code> or <code>key</code> of the Type.</p>>
      */
+
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
      */
+
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

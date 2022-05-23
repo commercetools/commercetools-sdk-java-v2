@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCustomerRemoveShippingAddressIdAction myCustomerRemoveShippingAddressIdAction = MyCustomerRemoveShippingAddressIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCustomerRemoveShippingAddressIdAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerRemoveShippingAddressIdAction myCustomerRemoveShippingAddressIdAction = MyCustomerRemoveShippingAddressIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerRemoveShippingAddressIdActionImpl.class)
@@ -25,8 +28,16 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
 
     String REMOVE_SHIPPING_ADDRESS_ID = "removeShippingAddressId";
 
+    /**
+     <>
+     */
+
     @JsonProperty("addressId")
     public String getAddressId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("addressKey")
     public String getAddressKey();

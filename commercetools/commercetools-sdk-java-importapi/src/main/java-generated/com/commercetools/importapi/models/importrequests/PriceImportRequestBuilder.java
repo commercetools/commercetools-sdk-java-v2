@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PriceImportRequest priceImportRequest = PriceImportRequest.builder()
-           .plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
- </code></pre>
- </div>
+ * PriceImportRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PriceImportRequest priceImportRequest = PriceImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
@@ -23,7 +25,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     private java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources;
 
     /**
-     *  <p>The price import resources of this request.</p>
+     <*  <p>The price import resources of this request.</p>>
      */
 
     public PriceImportRequestBuilder resources(
@@ -33,7 +35,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     }
 
     /**
-     *  <p>The price import resources of this request.</p>
+     <*  <p>The price import resources of this request.</p>>
      */
 
     public PriceImportRequestBuilder resources(
@@ -43,7 +45,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     }
 
     /**
-     *  <p>The price import resources of this request.</p>
+     <*  <p>The price import resources of this request.</p>>
      */
 
     public PriceImportRequestBuilder plusResources(
@@ -56,7 +58,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     }
 
     /**
-     *  <p>The price import resources of this request.</p>
+     <*  <p>The price import resources of this request.</p>>
      */
 
     public PriceImportRequestBuilder plusResources(
@@ -69,7 +71,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     }
 
     /**
-     *  <p>The price import resources of this request.</p>
+     <*  <p>The price import resources of this request.</p>>
      */
 
     public PriceImportRequestBuilder withResources(

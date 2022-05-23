@@ -37,15 +37,17 @@ public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBa
     }
 
     /**
-     *  <p>The type of the import resource.</p>
+     <*  <p>The type of the import resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
         return this.type;
     }
 
     /**
-     *  <p>The customer import resources of this request.</p>
+     <*  <p>The customer import resources of this request.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.customers.CustomerImport> getResources() {
         return this.resources;
     }

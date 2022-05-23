@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InventoryEntryRemoveQuantityAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRemoveQuantityAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRem
         this.action = REMOVE_QUANTITY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Long getQuantity() {
         return this.quantity;

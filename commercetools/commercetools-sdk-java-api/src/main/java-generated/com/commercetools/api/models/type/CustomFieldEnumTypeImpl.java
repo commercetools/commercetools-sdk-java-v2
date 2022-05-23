@@ -35,13 +35,18 @@ public class CustomFieldEnumTypeImpl implements CustomFieldEnumType, ModelBase {
         this.name = ENUM;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> getValues() {
         return this.values;
     }

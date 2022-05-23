@@ -8,25 +8,35 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderReturnInfoAddedMessagePayload orderReturnInfoAddedMessagePayload = OrderReturnInfoAddedMessagePayload.builder()
-           .returnInfo(returnInfoBuilder -> returnInfoBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderReturnInfoAddedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderReturnInfoAddedMessagePayload orderReturnInfoAddedMessagePayload = OrderReturnInfoAddedMessagePayload.builder()
+ *             .returnInfo(returnInfoBuilder -> returnInfoBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnInfoAddedMessagePayloadBuilder implements Builder<OrderReturnInfoAddedMessagePayload> {
 
     private com.commercetools.api.models.order.ReturnInfo returnInfo;
 
+    /**
+     <>
+     */
+
     public OrderReturnInfoAddedMessagePayloadBuilder returnInfo(
             Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
         this.returnInfo = builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderReturnInfoAddedMessagePayloadBuilder returnInfo(
             final com.commercetools.api.models.order.ReturnInfo returnInfo) {

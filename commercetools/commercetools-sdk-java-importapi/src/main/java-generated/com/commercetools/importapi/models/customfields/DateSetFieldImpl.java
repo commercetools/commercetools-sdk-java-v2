@@ -35,11 +35,16 @@ public class DateSetFieldImpl implements DateSetField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<java.time.LocalDate> getValue() {
         return this.value;

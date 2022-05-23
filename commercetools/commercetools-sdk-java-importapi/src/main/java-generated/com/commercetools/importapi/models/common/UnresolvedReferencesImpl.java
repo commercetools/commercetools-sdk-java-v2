@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * UnresolvedReferences
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase {
 
@@ -31,13 +34,18 @@ public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase
     public UnresolvedReferencesImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     <*  <p>The type of the referenced resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }

@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangePredicateChange changePredicateChange = ChangePredicateChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * ChangePredicateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangePredicateChange changePredicateChange = ChangePredicateChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChange> {
@@ -28,7 +30,7 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changePredicate</code></p>
+     <*  <p>Shape of the action for <code>changePredicate</code></p>>
      */
 
     public ChangePredicateChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangePredicateChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangePredicateChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

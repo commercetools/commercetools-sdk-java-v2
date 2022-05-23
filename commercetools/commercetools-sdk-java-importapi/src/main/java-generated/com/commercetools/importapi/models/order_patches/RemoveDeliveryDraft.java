@@ -13,19 +13,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveDeliveryDraft removeDeliveryDraft = RemoveDeliveryDraft.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * RemoveDeliveryDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveDeliveryDraft removeDeliveryDraft = RemoveDeliveryDraft.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveDeliveryDraftImpl.class)
 public interface RemoveDeliveryDraft {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

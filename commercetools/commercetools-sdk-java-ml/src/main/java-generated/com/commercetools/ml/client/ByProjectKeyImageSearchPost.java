@@ -20,17 +20,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Accepts an image file and returns similar products from product catalogue.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .imageSearch()
-           .post(file)
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Accepts an image file and returns similar products from product catalogue.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .imageSearch()
+ *            .post(file)
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImageSearchPost extends

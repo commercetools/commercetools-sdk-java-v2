@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderTransitionStateAction orderTransitionStateAction = OrderTransitionStateAction.builder()
-           .state(stateBuilder -> stateBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderTransitionStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderTransitionStateAction orderTransitionStateAction = OrderTransitionStateAction.builder()
+ *             .state(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderTransitionStateActionBuilder implements Builder<OrderTransitionStateAction> {
@@ -28,7 +30,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     private Boolean force;
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
 
     public OrderTransitionStateActionBuilder state(
@@ -38,7 +40,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
 
     public OrderTransitionStateActionBuilder state(
@@ -46,6 +48,10 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
         this.state = state;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderTransitionStateActionBuilder force(@Nullable final Boolean force) {
         this.force = force;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderTransitionCustomLineItemStateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderTransitionCustomLineItemStateActionImpl
         implements StagedOrderTransitionCustomLineItemStateAction, ModelBase {
@@ -48,31 +51,49 @@ public class StagedOrderTransitionCustomLineItemStateActionImpl
         this.action = TRANSITION_CUSTOM_LINE_ITEM_STATE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     <>
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
         return this.fromState;
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
         return this.toState;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getActualTransitionDate() {
         return this.actualTransitionDate;

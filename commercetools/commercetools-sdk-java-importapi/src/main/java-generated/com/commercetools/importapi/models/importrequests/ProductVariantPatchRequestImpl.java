@@ -37,15 +37,17 @@ public class ProductVariantPatchRequestImpl implements ProductVariantPatchReques
     }
 
     /**
-     *  <p>The type of the import resource.</p>
+     <*  <p>The type of the import resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
         return this.type;
     }
 
     /**
-     *  <p>The product variant patches of this request.</p>
+     <*  <p>The product variant patches of this request.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> getPatches() {
         return this.patches;
     }

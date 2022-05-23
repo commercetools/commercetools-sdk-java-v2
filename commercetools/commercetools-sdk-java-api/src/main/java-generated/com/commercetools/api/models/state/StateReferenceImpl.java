@@ -40,22 +40,25 @@ public class StateReferenceImpl implements StateReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced State.</p>
+     <*  <p>Platform-generated unique identifier of the referenced State.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     <*  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>>
      */
+
     public com.commercetools.api.models.state.State getObj() {
         return this.obj;
     }

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetCustomerGroupAction customerSetCustomerGroupAction = CustomerSetCustomerGroupAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetCustomerGroupActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetCustomerGroupAction customerSetCustomerGroupAction = CustomerSetCustomerGroupAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSetCustomerGroupAction> {
@@ -25,7 +27,7 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
     /**
-     *  <p>If not defined, the customer group is unset.</p>
+     <*  <p>If not defined, the customer group is unset.</p>>
      */
 
     public CustomerSetCustomerGroupActionBuilder customerGroup(
@@ -37,7 +39,7 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
     }
 
     /**
-     *  <p>If not defined, the customer group is unset.</p>
+     <*  <p>If not defined, the customer group is unset.</p>>
      */
 
     public CustomerSetCustomerGroupActionBuilder customerGroup(

@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ErrorByExtension errorByExtension = ErrorByExtension.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * ErrorByExtensionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorByExtension errorByExtension = ErrorByExtension.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
@@ -27,7 +29,7 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
     private String key;
 
     /**
-     *  <p>Platform-generated unique identifier of the Extension.</p>
+     <*  <p>Platform-generated unique identifier of the Extension.</p>>
      */
 
     public ErrorByExtensionBuilder id(final String id) {
@@ -36,7 +38,7 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Extension.</p>
+     <*  <p>User-defined unique identifier of the Extension.</p>>
      */
 
     public ErrorByExtensionBuilder key(@Nullable final String key) {

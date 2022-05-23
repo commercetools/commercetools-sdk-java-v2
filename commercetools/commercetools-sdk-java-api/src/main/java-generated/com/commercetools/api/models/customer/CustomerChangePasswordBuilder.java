@@ -7,17 +7,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerChangePassword customerChangePassword = CustomerChangePassword.builder()
-           .id("{id}")
-           .version(0.3)
-           .currentPassword("{currentPassword}")
-           .newPassword("{newPassword}")
-           .build()
- </code></pre>
- </div>
+ * CustomerChangePasswordBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerChangePassword customerChangePassword = CustomerChangePassword.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .currentPassword("{currentPassword}")
+ *             .newPassword("{newPassword}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerChangePasswordBuilder implements Builder<CustomerChangePassword> {
@@ -31,7 +33,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     private String newPassword;
 
     /**
-     *  <p>Platform-generated unique identifier of the Customer.</p>
+     <*  <p>Platform-generated unique identifier of the Customer.</p>>
      */
 
     public CustomerChangePasswordBuilder id(final String id) {
@@ -39,15 +41,27 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerChangePasswordBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerChangePasswordBuilder currentPassword(final String currentPassword) {
         this.currentPassword = currentPassword;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerChangePasswordBuilder newPassword(final String newPassword) {
         this.newPassword = newPassword;

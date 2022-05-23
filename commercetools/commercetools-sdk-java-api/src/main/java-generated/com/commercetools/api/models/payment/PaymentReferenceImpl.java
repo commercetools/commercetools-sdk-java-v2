@@ -40,22 +40,25 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Payment.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Payment.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     <*  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>>
      */
+
     public com.commercetools.api.models.payment.Payment getObj() {
         return this.obj;
     }

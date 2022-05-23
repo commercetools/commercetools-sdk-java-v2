@@ -7,21 +7,23 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReturnItem returnItem = ReturnItem.builder()
-           .id("{id}")
-           .quantity(1)
-           .type("{type}")
-           .comment("{comment}")
-           .shipmentState(ReturnShipmentState.ADVISED)
-           .paymentState(ReturnPaymentState.NON_REFUNDABLE)
-           .lastModifiedAt("{lastModifiedAt}")
-           .createdAt("{createdAt}")
-           .build()
- </code></pre>
- </div>
+ * ReturnItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReturnItem returnItem = ReturnItem.builder()
+ *             .id("{id}")
+ *             .quantity(1)
+ *             .type("{type}")
+ *             .comment("{comment}")
+ *             .shipmentState(ReturnShipmentState.ADVISED)
+ *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+ *             .lastModifiedAt("{lastModifiedAt}")
+ *             .createdAt("{createdAt}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemBuilder implements Builder<ReturnItem> {
@@ -42,25 +44,45 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
 
     private String createdAt;
 
+    /**
+     <>
+     */
+
     public ReturnItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReturnItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReturnItemBuilder type(final String type) {
         this.type = type;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReturnItemBuilder comment(final String comment) {
         this.comment = comment;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReturnItemBuilder shipmentState(
             final com.commercetools.history.models.common.ReturnShipmentState shipmentState) {
@@ -68,16 +90,28 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReturnItemBuilder paymentState(
             final com.commercetools.history.models.common.ReturnPaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReturnItemBuilder lastModifiedAt(final String lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReturnItemBuilder createdAt(final String createdAt) {
         this.createdAt = createdAt;

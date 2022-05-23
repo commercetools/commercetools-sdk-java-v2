@@ -8,30 +8,44 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RangeFacetResult rangeFacetResult = RangeFacetResult.builder()
-           .plusRanges(rangesBuilder -> rangesBuilder)
-           .build()
- </code></pre>
- </div>
+ * RangeFacetResultBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RangeFacetResult rangeFacetResult = RangeFacetResult.builder()
+ *             .plusRanges(rangesBuilder -> rangesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
 
+    /**
+     <>
+     */
+
     public RangeFacetResultBuilder ranges(final com.commercetools.api.models.product.FacetRange... ranges) {
         this.ranges = new ArrayList<>(Arrays.asList(ranges));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RangeFacetResultBuilder ranges(
             final java.util.List<com.commercetools.api.models.product.FacetRange> ranges) {
         this.ranges = ranges;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RangeFacetResultBuilder plusRanges(final com.commercetools.api.models.product.FacetRange... ranges) {
         if (this.ranges == null) {
@@ -41,6 +55,10 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RangeFacetResultBuilder plusRanges(
             Function<com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRangeBuilder> builder) {
         if (this.ranges == null) {
@@ -49,6 +67,10 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
         this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RangeFacetResultBuilder withRanges(
             Function<com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRangeBuilder> builder) {

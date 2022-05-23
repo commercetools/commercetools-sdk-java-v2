@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AddTextLineItemChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBase {
 
@@ -35,13 +38,25 @@ public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBa
         this.type = ADD_TEXT_LINE_ITEM_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.TextLineItem getNextValue() {
         return this.nextValue;

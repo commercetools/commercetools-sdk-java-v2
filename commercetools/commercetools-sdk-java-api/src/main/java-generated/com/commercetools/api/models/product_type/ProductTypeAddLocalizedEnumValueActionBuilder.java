@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeAddLocalizedEnumValueAction productTypeAddLocalizedEnumValueAction = ProductTypeAddLocalizedEnumValueAction.builder()
-           .attributeName("{attributeName}")
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeAddLocalizedEnumValueActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeAddLocalizedEnumValueAction productTypeAddLocalizedEnumValueAction = ProductTypeAddLocalizedEnumValueAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<ProductTypeAddLocalizedEnumValueAction> {
@@ -25,10 +27,18 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     private com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value;
 
+    /**
+     <>
+     */
+
     public ProductTypeAddLocalizedEnumValueActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeAddLocalizedEnumValueActionBuilder value(
             Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
@@ -36,6 +46,10 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeAddLocalizedEnumValueActionBuilder value(
             final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value) {

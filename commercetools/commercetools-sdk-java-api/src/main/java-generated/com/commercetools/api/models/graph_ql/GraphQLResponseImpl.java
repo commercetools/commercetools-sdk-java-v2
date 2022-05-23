@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * GraphQLResponse
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
 
@@ -31,9 +34,17 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
     public GraphQLResponseImpl() {
     }
 
+    /**
+     <>
+     */
+
     public java.lang.Object getData() {
         return this.data;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> getErrors() {
         return this.errors;

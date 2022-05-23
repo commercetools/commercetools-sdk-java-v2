@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeReference discountCodeReference = DiscountCodeReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeReference discountCodeReference = DiscountCodeReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReference> {
@@ -28,7 +30,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     private com.commercetools.api.models.discount_code.DiscountCode obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced DiscountCode.</p>
+     <*  <p>Platform-generated unique identifier of the referenced DiscountCode.</p>>
      */
 
     public DiscountCodeReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     <*  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>>
      */
 
     public DiscountCodeReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     <*  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>>
      */
 
     public DiscountCodeReferenceBuilder obj(

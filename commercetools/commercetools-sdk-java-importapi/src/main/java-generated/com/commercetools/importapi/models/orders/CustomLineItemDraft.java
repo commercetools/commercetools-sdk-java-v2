@@ -18,81 +18,114 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
-           .name(nameBuilder -> nameBuilder)
-           .money(moneyBuilder -> moneyBuilder)
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .slug("{slug}")
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * CustomLineItemDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .slug("{slug}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemDraftImpl.class)
 public interface CustomLineItemDraft {
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("money")
     public TypedMoney getMoney();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("taxedPrice")
     public CustomLineItemTaxedPrice getTaxedPrice();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
     public TypedMoney getTotalPrice();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
 
     /**
-     *  <p>References a tax category by key.</p>
+     <*  <p>References a tax category by key.</p>>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryKeyReference getTaxCategory();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceDraft> getDiscountedPricePerQuantity();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();

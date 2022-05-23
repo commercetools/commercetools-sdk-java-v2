@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderSetBillingAddressAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetBillingAddressActionImpl implements StagedOrderSetBillingAddressAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class StagedOrderSetBillingAddressActionImpl implements StagedOrderSetBil
         this.action = SET_BILLING_ADDRESS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;

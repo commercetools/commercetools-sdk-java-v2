@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AddPlainEnumValueChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, ModelBase {
 
@@ -39,23 +42,33 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
         this.type = ADD_PLAIN_ENUM_VALUE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     <*  <p>Update action for <code>addPlainEnumValue</code> on product types</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     <*  <p>The name of the attribute updated.</p>>
      */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.change_value.EnumValue getNextValue() {
         return this.nextValue;

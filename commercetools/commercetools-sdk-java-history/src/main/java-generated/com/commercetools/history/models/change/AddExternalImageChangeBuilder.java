@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddExternalImageChange addExternalImageChange = AddExternalImageChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddExternalImageChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddExternalImageChange addExternalImageChange = AddExternalImageChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddExternalImageChangeBuilder implements Builder<AddExternalImageChange> {
@@ -32,7 +34,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
     /**
-     *  <p>Update actions for adding an external image</p>
+     <*  <p>Update actions for adding an external image</p>>
      */
 
     public AddExternalImageChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddExternalImageChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddExternalImageChangeBuilder previousValue(
             final com.commercetools.history.models.common.Image... previousValue) {
@@ -51,11 +61,19 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddExternalImageChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Image> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddExternalImageChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Image... previousValue) {
@@ -66,6 +84,10 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddExternalImageChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
         if (this.previousValue == null) {
@@ -75,6 +97,10 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddExternalImageChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -82,16 +108,28 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddExternalImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddExternalImageChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Image> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddExternalImageChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.Image... nextValue) {
@@ -102,6 +140,10 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddExternalImageChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
         if (this.nextValue == null) {
@@ -110,6 +152,10 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddExternalImageChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {

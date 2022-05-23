@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductAddAssetAction productAddAssetAction = ProductAddAssetAction.builder()
-           .asset(assetBuilder -> assetBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductAddAssetActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductAddAssetAction productAddAssetAction = ProductAddAssetAction.builder()
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetAction> {
@@ -36,20 +38,36 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     @Nullable
     private Integer position;
 
+    /**
+     <>
+     */
+
     public ProductAddAssetActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductAddAssetActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductAddAssetActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductAddAssetActionBuilder asset(
             Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
@@ -57,13 +75,17 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductAddAssetActionBuilder asset(final com.commercetools.api.models.common.AssetDraft asset) {
         this.asset = asset;
         return this;
     }
 
     /**
-     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+     <*  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>>
      */
 
     public ProductAddAssetActionBuilder position(@Nullable final Integer position) {

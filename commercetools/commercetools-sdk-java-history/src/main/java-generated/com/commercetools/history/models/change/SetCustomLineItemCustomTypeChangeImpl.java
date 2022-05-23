@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetCustomLineItemCustomTypeChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemCustomTypeChange, ModelBase {
 
@@ -47,28 +50,49 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
         this.type = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
+     <*  <p>Update action for <code>setCustomLineItemCustomType</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
         return this.customLineItem;
     }
 
+    /**
+     <>
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
         return this.previousValue;

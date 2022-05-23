@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductRemovedFromCategoryMessagePayload productRemovedFromCategoryMessagePayload = ProductRemovedFromCategoryMessagePayload.builder()
-           .category(categoryBuilder -> categoryBuilder)
-           .staged(true)
-           .build()
- </code></pre>
- </div>
+ * ProductRemovedFromCategoryMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductRemovedFromCategoryMessagePayload productRemovedFromCategoryMessagePayload = ProductRemovedFromCategoryMessagePayload.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemovedFromCategoryMessagePayloadBuilder
@@ -27,7 +29,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     private Boolean staged;
 
     /**
-     *  <p>Reference to a Category.</p>
+     <*  <p>Reference to a Category.</p>>
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
@@ -37,7 +39,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Reference to a Category.</p>
+     <*  <p>Reference to a Category.</p>>
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
@@ -45,6 +47,10 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
         this.category = category;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder staged(final Boolean staged) {
         this.staged = staged;

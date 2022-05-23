@@ -22,18 +22,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingList shoppingList = ShoppingList.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShoppingList
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingList shoppingList = ShoppingList.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListImpl.class)
@@ -43,94 +46,121 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
         com.commercetools.api.models.Customizable<ShoppingList> {
 
     /**
-     *  <p>Platform-generated unique identifier of the ShoppingList.</p>
+     <*  <p>Platform-generated unique identifier of the ShoppingList.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>The current version of the shopping list.</p>
+     <*  <p>The current version of the shopping list.</p>>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     <*  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>>
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>User-defined unique identifier of the ShoppingList.</p>
+     <*  <p>User-defined unique identifier of the ShoppingList.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("lineItems")
     public List<ShoppingListLineItem> getLineItems();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+     <*  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>>
      */
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("textLineItems")
     public List<TextLineItem> getTextLineItems();
 
     /**
-     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     <*  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>>
      */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("store")
     public StoreKeyReference getStore();

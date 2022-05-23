@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetShippingMethodAction cartSetShippingMethodAction = CartSetShippingMethodAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartSetShippingMethodActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetShippingMethodAction cartSetShippingMethodAction = CartSetShippingMethodAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippingMethodAction> {
@@ -28,7 +30,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
      */
 
     public CartSetShippingMethodActionBuilder shippingMethod(
@@ -40,7 +42,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
      */
 
     public CartSetShippingMethodActionBuilder shippingMethod(
@@ -49,12 +51,20 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartSetShippingMethodActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartSetShippingMethodActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {

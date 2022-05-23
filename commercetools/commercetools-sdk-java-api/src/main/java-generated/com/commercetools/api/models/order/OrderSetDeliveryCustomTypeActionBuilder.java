@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetDeliveryCustomTypeAction orderSetDeliveryCustomTypeAction = OrderSetDeliveryCustomTypeAction.builder()
-           .deliveryId("{deliveryId}")
-           .build()
- </code></pre>
- </div>
+ * OrderSetDeliveryCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetDeliveryCustomTypeAction orderSetDeliveryCustomTypeAction = OrderSetDeliveryCustomTypeAction.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSetDeliveryCustomTypeAction> {
@@ -30,13 +32,17 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public OrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     <*  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>>
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder type(
@@ -46,7 +52,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+     <*  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>>
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder type(
@@ -56,7 +62,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     <*  <p>Sets the Custom Fields fields for the Delivery.</p>>
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder fields(
@@ -66,7 +72,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Delivery.</p>
+     <*  <p>Sets the Custom Fields fields for the Delivery.</p>>
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder fields(

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetShippingAddressAndShippingMethodAction stagedOrderSetShippingAddressAndShippingMethodAction = StagedOrderSetShippingAddressAndShippingMethodAction.builder()
-           .address(addressBuilder -> addressBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetShippingAddressAndShippingMethodActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetShippingAddressAndShippingMethodAction stagedOrderSetShippingAddressAndShippingMethodAction = StagedOrderSetShippingAddressAndShippingMethodAction.builder()
+ *             .address(addressBuilder -> addressBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
@@ -31,11 +33,19 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    /**
+     <>
+     */
+
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
             final com.commercetools.api.models.common.BaseAddress address) {
@@ -44,7 +54,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
@@ -56,7 +66,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
@@ -65,12 +75,20 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {

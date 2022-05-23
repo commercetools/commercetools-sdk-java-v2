@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetShippingInfoTaxedPriceChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxedPriceChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
         this.type = SET_SHIPPING_INFO_TAXED_PRICE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
+     <*  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.TaxedPrice getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.TaxedPrice getPreviousValue() {
         return this.previousValue;

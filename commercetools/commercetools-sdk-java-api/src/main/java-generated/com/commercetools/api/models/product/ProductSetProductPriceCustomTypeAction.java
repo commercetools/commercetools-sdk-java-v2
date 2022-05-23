@@ -16,14 +16,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetProductPriceCustomTypeAction productSetProductPriceCustomTypeAction = ProductSetProductPriceCustomTypeAction.builder()
-           .priceId("{priceId}")
-           .build()
- </code></pre>
- </div>
+ * ProductSetProductPriceCustomTypeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetProductPriceCustomTypeAction productSetProductPriceCustomTypeAction = ProductSetProductPriceCustomTypeAction.builder()
+ *             .priceId("{priceId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetProductPriceCustomTypeActionImpl.class)
@@ -31,22 +34,29 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
 
     String SET_PRODUCT_PRICE_CUSTOM_TYPE = "setProductPriceCustomType";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
+     <*  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Price.</p>
+     <*  <p>Sets the Custom Fields fields for the Price.</p>>
      */
     @Valid
     @JsonProperty("fields")

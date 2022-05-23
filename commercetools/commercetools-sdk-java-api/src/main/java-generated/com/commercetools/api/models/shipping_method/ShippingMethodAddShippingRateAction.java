@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodAddShippingRateAction shippingMethodAddShippingRateAction = ShippingMethodAddShippingRateAction.builder()
-           .zone(zoneBuilder -> zoneBuilder)
-           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodAddShippingRateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodAddShippingRateAction shippingMethodAddShippingRateAction = ShippingMethodAddShippingRateAction.builder()
+ *             .zone(zoneBuilder -> zoneBuilder)
+ *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodAddShippingRateActionImpl.class)
@@ -31,11 +34,17 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
 
     String ADD_SHIPPING_RATE = "addShippingRate";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("zone")
     public ZoneResourceIdentifier getZone();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("shippingRate")

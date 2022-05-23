@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderCustomerGroupSetMessagePayload orderCustomerGroupSetMessagePayload = OrderCustomerGroupSetMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderCustomerGroupSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerGroupSetMessagePayload orderCustomerGroupSetMessagePayload = OrderCustomerGroupSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<OrderCustomerGroupSetMessagePayload> {
@@ -28,7 +30,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerGroupSetMessagePayloadBuilder customerGroup(
@@ -40,7 +42,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerGroupSetMessagePayloadBuilder customerGroup(
@@ -50,7 +52,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerGroupSetMessagePayloadBuilder oldCustomerGroup(
@@ -62,7 +64,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerGroupSetMessagePayloadBuilder oldCustomerGroup(

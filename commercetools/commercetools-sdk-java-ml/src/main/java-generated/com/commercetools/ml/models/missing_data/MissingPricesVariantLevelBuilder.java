@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingPricesVariantLevel missingPricesVariantLevel = MissingPricesVariantLevel.builder()
-           .total(0.3)
-           .missingPrices(0.3)
-           .build()
- </code></pre>
- </div>
+ * MissingPricesVariantLevelBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingPricesVariantLevel missingPricesVariantLevel = MissingPricesVariantLevel.builder()
+ *             .total(0.3)
+ *             .missingPrices(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesVariantLevelBuilder implements Builder<MissingPricesVariantLevel> {
@@ -25,7 +27,7 @@ public class MissingPricesVariantLevelBuilder implements Builder<MissingPricesVa
     private Long missingPrices;
 
     /**
-     *  <p>Number of product variants scanned.</p>
+     <*  <p>Number of product variants scanned.</p>>
      */
 
     public MissingPricesVariantLevelBuilder total(final Long total) {
@@ -34,7 +36,7 @@ public class MissingPricesVariantLevelBuilder implements Builder<MissingPricesVa
     }
 
     /**
-     *  <p>Number of product variants missing prices.</p>
+     <*  <p>Number of product variants missing prices.</p>>
      */
 
     public MissingPricesVariantLevelBuilder missingPrices(final Long missingPrices) {

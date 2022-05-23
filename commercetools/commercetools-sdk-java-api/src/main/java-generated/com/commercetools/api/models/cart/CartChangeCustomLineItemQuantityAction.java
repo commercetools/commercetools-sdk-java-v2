@@ -13,15 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartChangeCustomLineItemQuantityAction cartChangeCustomLineItemQuantityAction = CartChangeCustomLineItemQuantityAction.builder()
-           .customLineItemId("{customLineItemId}")
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * CartChangeCustomLineItemQuantityAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartChangeCustomLineItemQuantityAction cartChangeCustomLineItemQuantityAction = CartChangeCustomLineItemQuantityAction.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartChangeCustomLineItemQuantityActionImpl.class)
@@ -29,10 +32,16 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
 
     String CHANGE_CUSTOM_LINE_ITEM_QUANTITY = "changeCustomLineItemQuantity";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();

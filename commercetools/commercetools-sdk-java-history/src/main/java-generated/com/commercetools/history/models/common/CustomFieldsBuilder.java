@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFields customFields = CustomFields.builder()
-           .type(typeBuilder -> typeBuilder)
-           .fields(fieldsBuilder -> fieldsBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomFieldsBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFields customFields = CustomFields.builder()
+ *             .type(typeBuilder -> typeBuilder)
+ *             .fields(fieldsBuilder -> fieldsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsBuilder implements Builder<CustomFields> {
@@ -25,11 +27,19 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     private java.lang.Object fields;
 
+    /**
+     <>
+     */
+
     public CustomFieldsBuilder type(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.type = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomFieldsBuilder type(final com.commercetools.history.models.common.Reference type) {
         this.type = type;
@@ -37,7 +47,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *  <p>A valid JSON object, based on FieldDefinition.</p>
+     <*  <p>A valid JSON object, based on FieldDefinition.</p>>
      */
 
     public CustomFieldsBuilder fields(final java.lang.Object fields) {

@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetCustomLineItemTaxAmountAction cartSetCustomLineItemTaxAmountAction = CartSetCustomLineItemTaxAmountAction.builder()
-           .customLineItemId("{customLineItemId}")
-           .build()
- </code></pre>
- </div>
+ * CartSetCustomLineItemTaxAmountAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetCustomLineItemTaxAmountAction cartSetCustomLineItemTaxAmountAction = CartSetCustomLineItemTaxAmountAction.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetCustomLineItemTaxAmountActionImpl.class)
@@ -29,10 +32,16 @@ public interface CartSetCustomLineItemTaxAmountAction extends CartUpdateAction {
 
     String SET_CUSTOM_LINE_ITEM_TAX_AMOUNT = "setCustomLineItemTaxAmount";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("externalTaxAmount")
     public ExternalTaxAmountDraft getExternalTaxAmount();

@@ -17,14 +17,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetParcelCustomTypeAction stagedOrderSetParcelCustomTypeAction = StagedOrderSetParcelCustomTypeAction.builder()
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetParcelCustomTypeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetParcelCustomTypeAction stagedOrderSetParcelCustomTypeAction = StagedOrderSetParcelCustomTypeAction.builder()
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetParcelCustomTypeActionImpl.class)
@@ -32,19 +35,22 @@ public interface StagedOrderSetParcelCustomTypeAction extends StagedOrderUpdateA
 
     String SET_PARCEL_CUSTOM_TYPE = "setParcelCustomType";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     <*  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     <*  <p>Sets the Custom Fields fields for the Parcel.</p>>
      */
     @Valid
     @JsonProperty("fields")

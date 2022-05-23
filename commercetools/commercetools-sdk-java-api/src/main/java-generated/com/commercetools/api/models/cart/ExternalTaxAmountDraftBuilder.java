@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExternalTaxAmountDraft externalTaxAmountDraft = ExternalTaxAmountDraft.builder()
-           .totalGross(totalGrossBuilder -> totalGrossBuilder)
-           .taxRate(taxRateBuilder -> taxRateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExternalTaxAmountDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExternalTaxAmountDraft externalTaxAmountDraft = ExternalTaxAmountDraft.builder()
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .taxRate(taxRateBuilder -> taxRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountDraft> {
@@ -26,7 +28,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
     private com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate;
 
     /**
-     *  <p>The total gross amount of the item (totalNet + taxes).</p>
+     <*  <p>The total gross amount of the item (totalNet + taxes).</p>>
      */
 
     public ExternalTaxAmountDraftBuilder totalGross(
@@ -36,7 +38,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
     }
 
     /**
-     *  <p>The total gross amount of the item (totalNet + taxes).</p>
+     <*  <p>The total gross amount of the item (totalNet + taxes).</p>>
      */
 
     public ExternalTaxAmountDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
@@ -44,11 +46,19 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ExternalTaxAmountDraftBuilder taxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ExternalTaxAmountDraftBuilder taxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate) {
         this.taxRate = taxRate;

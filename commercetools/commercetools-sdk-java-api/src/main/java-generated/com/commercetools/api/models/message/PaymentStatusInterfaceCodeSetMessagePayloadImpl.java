@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentStatusInterfaceCodeSetMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
         implements PaymentStatusInterfaceCodeSetMessagePayload, ModelBase {
@@ -36,13 +39,25 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
         this.type = PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public String getPaymentId() {
         return this.paymentId;
     }
+
+    /**
+     <>
+     */
 
     public String getInterfaceCode() {
         return this.interfaceCode;

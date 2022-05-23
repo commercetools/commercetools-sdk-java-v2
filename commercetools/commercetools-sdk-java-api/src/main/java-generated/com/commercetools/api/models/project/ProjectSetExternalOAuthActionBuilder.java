@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectSetExternalOAuthAction projectSetExternalOAuthAction = ProjectSetExternalOAuthAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProjectSetExternalOAuthActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectSetExternalOAuthAction projectSetExternalOAuthAction = ProjectSetExternalOAuthAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetExternalOAuthAction> {
@@ -25,7 +27,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public ProjectSetExternalOAuthActionBuilder externalOAuth(
@@ -35,7 +37,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public ProjectSetExternalOAuthActionBuilder externalOAuth(

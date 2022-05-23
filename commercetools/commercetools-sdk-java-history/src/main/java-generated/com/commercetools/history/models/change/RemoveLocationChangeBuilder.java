@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveLocationChange removeLocationChange = RemoveLocationChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveLocationChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveLocationChange removeLocationChange = RemoveLocationChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange> {
@@ -29,7 +31,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     private com.commercetools.history.models.common.Location nextValue;
 
     /**
-     *  <p>Update action for <code>removeLocation</code> on zones</p>
+     <*  <p>Update action for <code>removeLocation</code> on zones</p>>
      */
 
     public RemoveLocationChangeBuilder change(final String change) {
@@ -38,7 +40,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     }
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
      */
 
     public RemoveLocationChangeBuilder previousValue(
@@ -48,7 +50,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     }
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
      */
 
     public RemoveLocationChangeBuilder previousValue(
@@ -58,7 +60,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     }
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
      */
 
     public RemoveLocationChangeBuilder nextValue(
@@ -68,7 +70,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     }
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
      */
 
     public RemoveLocationChangeBuilder nextValue(final com.commercetools.history.models.common.Location nextValue) {

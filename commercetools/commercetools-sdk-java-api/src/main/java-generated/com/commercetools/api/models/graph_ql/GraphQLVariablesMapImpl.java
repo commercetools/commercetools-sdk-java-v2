@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * GraphQLVariablesMap
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
 
@@ -26,6 +29,10 @@ public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
 
     public GraphQLVariablesMapImpl() {
     }
+
+    /**
+     <>
+     */
 
     public Map<String, java.lang.Object> values() {
         return values;

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetOrderTotalTaxAction stagedOrderSetOrderTotalTaxAction = StagedOrderSetOrderTotalTaxAction.builder()
-           .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetOrderTotalTaxActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetOrderTotalTaxAction stagedOrderSetOrderTotalTaxAction = StagedOrderSetOrderTotalTaxAction.builder()
+ *             .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedOrderSetOrderTotalTaxAction> {
@@ -28,8 +30,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTotalGross(
@@ -39,8 +41,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTotalGross(
@@ -49,17 +51,29 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(
             @Nullable final com.commercetools.api.models.cart.TaxPortionDraft... externalTaxPortions) {
         this.externalTaxPortions = new ArrayList<>(Arrays.asList(externalTaxPortions));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(
             @Nullable final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
         this.externalTaxPortions = externalTaxPortions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetOrderTotalTaxActionBuilder plusExternalTaxPortions(
             @Nullable final com.commercetools.api.models.cart.TaxPortionDraft... externalTaxPortions) {
@@ -70,6 +84,10 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderSetOrderTotalTaxActionBuilder plusExternalTaxPortions(
             Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
         if (this.externalTaxPortions == null) {
@@ -79,6 +97,10 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
                 .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetOrderTotalTaxActionBuilder withExternalTaxPortions(
             Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AssetSource
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetSourceImpl implements AssetSource, ModelBase {
 
@@ -38,17 +41,33 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     public AssetSourceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getUri() {
         return this.uri;
     }
+
+    /**
+     <>
+     */
 
     public String getKey() {
         return this.key;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
+
+    /**
+     <>
+     */
 
     public String getContentType() {
         return this.contentType;

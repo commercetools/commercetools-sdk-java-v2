@@ -41,24 +41,34 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
         this.code = DUPLICATE_FIELD;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-     *  <p>The name of the field.</p>
+     <*  <p>The name of the field.</p>>
      */
+
     public String getField() {
         return this.field;
     }
 
     /**
-     *  <p>The offending duplicate value.</p>
+     <*  <p>The offending duplicate value.</p>>
      */
+
     public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
     }

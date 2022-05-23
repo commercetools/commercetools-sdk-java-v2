@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryImport categoryImport = CategoryImport.builder()
-           .key("{key}")
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .build()
- </code></pre>
- </div>
+ * CategoryImportBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryImport categoryImport = CategoryImport.builder()
+ *             .key("{key}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryImportBuilder implements Builder<CategoryImport> {
@@ -57,13 +59,17 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     @Nullable
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     <>
+     */
+
     public CategoryImportBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
     /**
-     *  <p>Maps to <code>Category.name</code>.</p>
+     <*  <p>Maps to <code>Category.name</code>.</p>>
      */
 
     public CategoryImportBuilder name(
@@ -73,7 +79,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.name</code>.</p>
+     <*  <p>Maps to <code>Category.name</code>.</p>>
      */
 
     public CategoryImportBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -82,7 +88,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     <*  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>>
      */
 
     public CategoryImportBuilder slug(
@@ -92,7 +98,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     <*  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>>
      */
 
     public CategoryImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
@@ -101,7 +107,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.description</code>.</p>
+     <*  <p>Maps to <code>Category.description</code>.</p>>
      */
 
     public CategoryImportBuilder description(
@@ -111,7 +117,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.description</code>.</p>
+     <*  <p>Maps to <code>Category.description</code>.</p>>
      */
 
     public CategoryImportBuilder description(
@@ -121,7 +127,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     <*  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>>
      */
 
     public CategoryImportBuilder parent(
@@ -131,7 +137,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     <*  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>>
      */
 
     public CategoryImportBuilder parent(
@@ -141,7 +147,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.orderHint</code>.</p>
+     <*  <p>Maps to <code>Category.orderHint</code>.</p>>
      */
 
     public CategoryImportBuilder orderHint(@Nullable final String orderHint) {
@@ -150,7 +156,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.externalId</code>.</p>
+     <*  <p>Maps to <code>Category.externalId</code>.</p>>
      */
 
     public CategoryImportBuilder externalId(@Nullable final String externalId) {
@@ -159,7 +165,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     <*  <p>Maps to <code>Category.metaTitle</code>.</p>>
      */
 
     public CategoryImportBuilder metaTitle(
@@ -169,7 +175,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     <*  <p>Maps to <code>Category.metaTitle</code>.</p>>
      */
 
     public CategoryImportBuilder metaTitle(
@@ -179,7 +185,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     <*  <p>Maps to <code>Category.metaDescription</code>.</p>>
      */
 
     public CategoryImportBuilder metaDescription(
@@ -190,7 +196,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     <*  <p>Maps to <code>Category.metaDescription</code>.</p>>
      */
 
     public CategoryImportBuilder metaDescription(
@@ -200,7 +206,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     <*  <p>Maps to <code>Category.metaKeywords</code>.</p>>
      */
 
     public CategoryImportBuilder metaKeywords(
@@ -211,7 +217,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     <*  <p>Maps to <code>Category.metaKeywords</code>.</p>>
      */
 
     public CategoryImportBuilder metaKeywords(
@@ -220,16 +226,28 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryImportBuilder assets(@Nullable final com.commercetools.importapi.models.common.Asset... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryImportBuilder assets(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
         this.assets = assets;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryImportBuilder plusAssets(@Nullable final com.commercetools.importapi.models.common.Asset... assets) {
         if (this.assets == null) {
@@ -238,6 +256,10 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         this.assets.addAll(Arrays.asList(assets));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryImportBuilder plusAssets(
             Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
@@ -248,6 +270,10 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryImportBuilder withAssets(
             Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
         this.assets = new ArrayList<>();
@@ -256,7 +282,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     <*  <p>The custom fields for this Category.</p>>
      */
 
     public CategoryImportBuilder custom(
@@ -266,7 +292,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     <*  <p>The custom fields for this Category.</p>>
      */
 
     public CategoryImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {

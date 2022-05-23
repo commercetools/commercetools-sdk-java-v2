@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeLocalizedEnumValueLabelChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedEnumValueLabelChange, ModelBase {
 
@@ -50,41 +53,57 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
         this.type = CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+     <*  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
+     <*  <p>The name of the field definition updated.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     <*  <p>The name of the attribute updated.</p>>
      */
+
     public String getAttributeName() {
         return this.attributeName;
     }
 
     /**
-     *  <p>Key of the values that was updated</p>
+     <*  <p>Key of the values that was updated</p>>
      */
+
     public String getValueKey() {
         return this.valueKey;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;

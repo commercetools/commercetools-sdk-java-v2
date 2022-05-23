@@ -38,20 +38,26 @@ public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOr
         this.action = CHANGE_ENUM_VALUE_ORDER;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+     <*  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>>
      */
+
     public java.util.List<String> getKeys() {
         return this.keys;
     }

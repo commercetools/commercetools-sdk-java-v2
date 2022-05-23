@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * GraphQLRequest
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
 
@@ -35,13 +38,25 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
     public GraphQLRequestImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getQuery() {
         return this.query;
     }
 
+    /**
+     <>
+     */
+
     public String getOperationName() {
         return this.operationName;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.graph_ql.GraphQLVariablesMap getVariables() {
         return this.variables;

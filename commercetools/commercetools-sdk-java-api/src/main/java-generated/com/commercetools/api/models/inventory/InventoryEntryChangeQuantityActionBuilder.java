@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntryChangeQuantityAction inventoryEntryChangeQuantityAction = InventoryEntryChangeQuantityAction.builder()
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * InventoryEntryChangeQuantityActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryChangeQuantityAction inventoryEntryChangeQuantityAction = InventoryEntryChangeQuantityAction.builder()
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryChangeQuantityActionBuilder implements Builder<InventoryEntryChangeQuantityAction> {
 
     private Long quantity;
+
+    /**
+     <>
+     */
 
     public InventoryEntryChangeQuantityActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;

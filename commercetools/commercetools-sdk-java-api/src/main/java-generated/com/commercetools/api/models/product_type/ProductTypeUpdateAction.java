@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeUpdateAction productTypeUpdateAction = ProductTypeUpdateAction.addAttributeDefinitionBuilder()
-           attribute(attributeBuilder -> attributeBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeUpdateAction productTypeUpdateAction = ProductTypeUpdateAction.addAttributeDefinitionBuilder()
+ *             attribute(attributeBuilder -> attributeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionActionImpl.class, name = ProductTypeAddAttributeDefinitionAction.ADD_ATTRIBUTE_DEFINITION),
@@ -50,6 +53,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductTypeUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<ProductTypeUpdateAction> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

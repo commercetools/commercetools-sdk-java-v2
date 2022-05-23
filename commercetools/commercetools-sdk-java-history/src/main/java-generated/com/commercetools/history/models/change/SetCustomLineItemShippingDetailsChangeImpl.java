@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetCustomLineItemShippingDetailsChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLineItemShippingDetailsChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
         this.type = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>
+     <*  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.ItemShippingDetails getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.ItemShippingDetails getPreviousValue() {
         return this.previousValue;

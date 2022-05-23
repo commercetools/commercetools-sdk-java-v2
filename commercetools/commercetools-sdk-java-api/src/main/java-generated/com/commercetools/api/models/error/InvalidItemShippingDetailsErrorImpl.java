@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InvalidItemShippingDetailsError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingDetailsError, ModelBase {
 
@@ -42,21 +45,41 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
         this.code = INVALID_ITEM_SHIPPING_DETAILS;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
+    /**
+     <>
+     */
+
     public String getSubject() {
         return this.subject;
     }
+
+    /**
+     <>
+     */
 
     public String getItemId() {
         return this.itemId;

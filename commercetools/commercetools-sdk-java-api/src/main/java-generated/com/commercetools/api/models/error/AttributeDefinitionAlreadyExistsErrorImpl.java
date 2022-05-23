@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AttributeDefinitionAlreadyExistsError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefinitionAlreadyExistsError, ModelBase {
 
@@ -47,25 +50,49 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
         this.code = ATTRIBUTE_DEFINITION_ALREADY_EXISTS;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     <>
+     */
 
     public String getConflictingProductTypeId() {
         return this.conflictingProductTypeId;
     }
 
+    /**
+     <>
+     */
+
     public String getConflictingProductTypeName() {
         return this.conflictingProductTypeName;
     }
+
+    /**
+     <>
+     */
 
     public String getConflictingAttributeName() {
         return this.conflictingAttributeName;

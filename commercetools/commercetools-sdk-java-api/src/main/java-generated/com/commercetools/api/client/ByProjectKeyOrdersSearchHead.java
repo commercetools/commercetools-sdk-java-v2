@@ -14,18 +14,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Checks whether a search index for the Project's Orders exists.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .orders()
-           .search()
-           .head()
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Checks whether a search index for the Project's Orders exists.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .orders()
+ *            .search()
+ *            .head()
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersSearchHead

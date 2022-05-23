@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeSetNameAction discountCodeSetNameAction = DiscountCodeSetNameAction.builder()
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeSetNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeSetNameAction discountCodeSetNameAction = DiscountCodeSetNameAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSetNameAction> {
@@ -25,7 +27,7 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public DiscountCodeSetNameActionBuilder name(
@@ -35,7 +37,7 @@ public class DiscountCodeSetNameActionBuilder implements Builder<DiscountCodeSet
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public DiscountCodeSetNameActionBuilder name(

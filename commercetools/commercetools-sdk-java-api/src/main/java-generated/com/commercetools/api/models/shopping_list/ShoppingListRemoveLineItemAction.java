@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListRemoveLineItemAction shoppingListRemoveLineItemAction = ShoppingListRemoveLineItemAction.builder()
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * ShoppingListRemoveLineItemAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListRemoveLineItemAction shoppingListRemoveLineItemAction = ShoppingListRemoveLineItemAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListRemoveLineItemActionImpl.class)
@@ -28,9 +31,16 @@ public interface ShoppingListRemoveLineItemAction extends ShoppingListUpdateActi
 
     String REMOVE_LINE_ITEM = "removeLineItem";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("quantity")
     public Long getQuantity();

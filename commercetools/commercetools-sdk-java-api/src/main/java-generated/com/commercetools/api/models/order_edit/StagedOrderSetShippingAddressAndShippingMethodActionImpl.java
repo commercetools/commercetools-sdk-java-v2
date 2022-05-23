@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderSetShippingAddressAndShippingMethodAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingAddressAndShippingMethodActionImpl
         implements StagedOrderSetShippingAddressAndShippingMethodAction, ModelBase {
@@ -41,20 +44,33 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionImpl
         this.action = SET_SHIPPING_ADDRESS_AND_SHIPPING_METHOD;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
      */
+
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;

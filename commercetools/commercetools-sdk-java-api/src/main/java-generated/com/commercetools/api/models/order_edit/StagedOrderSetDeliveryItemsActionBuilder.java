@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetDeliveryItemsAction stagedOrderSetDeliveryItemsAction = StagedOrderSetDeliveryItemsAction.builder()
-           .deliveryId("{deliveryId}")
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetDeliveryItemsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetDeliveryItemsAction stagedOrderSetDeliveryItemsAction = StagedOrderSetDeliveryItemsAction.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedOrderSetDeliveryItemsAction> {
@@ -25,10 +27,18 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    /**
+     <>
+     */
+
     public StagedOrderSetDeliveryItemsActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetDeliveryItemsActionBuilder items(
             final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -36,11 +46,19 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderSetDeliveryItemsActionBuilder items(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetDeliveryItemsActionBuilder plusItems(
             final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -51,6 +69,10 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderSetDeliveryItemsActionBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -59,6 +81,10 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
         this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderSetDeliveryItemsActionBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {

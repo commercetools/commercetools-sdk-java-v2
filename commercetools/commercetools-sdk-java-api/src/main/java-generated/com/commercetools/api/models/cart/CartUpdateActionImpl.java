@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartUpdateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartUpdateActionImpl implements CartUpdateAction, ModelBase {
 
@@ -26,6 +29,10 @@ public class CartUpdateActionImpl implements CartUpdateAction, ModelBase {
 
     public CartUpdateActionImpl() {
     }
+
+    /**
+     <>
+     */
 
     public String getAction() {
         return this.action;

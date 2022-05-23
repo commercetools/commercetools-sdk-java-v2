@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ContainerAndKey containerAndKey = ContainerAndKey.builder()
-           .key("{key}")
-           .container("{container}")
-           .build()
- </code></pre>
- </div>
+ * ContainerAndKeyBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ContainerAndKey containerAndKey = ContainerAndKey.builder()
+ *             .key("{key}")
+ *             .container("{container}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
@@ -25,7 +27,7 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
     private String container;
 
     /**
-     *  <p>User-defined identifier that is unique within the given container.</p>
+     <*  <p>User-defined identifier that is unique within the given container.</p>>
      */
 
     public ContainerAndKeyBuilder key(final String key) {
@@ -34,7 +36,7 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
     }
 
     /**
-     *  <p>Namespace to group Custom Objects.</p>
+     <*  <p>Namespace to group Custom Objects.</p>>
      */
 
     public ContainerAndKeyBuilder container(final String container) {

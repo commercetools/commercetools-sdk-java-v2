@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerAddStoreAction customerAddStoreAction = CustomerAddStoreAction.builder()
-           .store(storeBuilder -> storeBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomerAddStoreAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerAddStoreAction customerAddStoreAction = CustomerAddStoreAction.builder()
+ *             .store(storeBuilder -> storeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerAddStoreActionImpl.class)
@@ -30,6 +33,9 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
 
     String ADD_STORE = "addStore";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("store")

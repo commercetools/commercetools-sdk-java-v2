@@ -38,20 +38,26 @@ public class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumValueLa
         this.action = CHANGE_ENUM_VALUE_LABEL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldEnumValue getValue() {
         return this.value;
     }

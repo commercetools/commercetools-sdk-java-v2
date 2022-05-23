@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderAddParcelToDeliveryAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddParcelToDeliveryAction, ModelBase {
 
@@ -43,21 +46,41 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
         this.action = ADD_PARCEL_TO_DELIVERY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;

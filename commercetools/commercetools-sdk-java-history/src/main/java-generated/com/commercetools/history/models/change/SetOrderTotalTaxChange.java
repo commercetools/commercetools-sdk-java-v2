@@ -16,17 +16,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetOrderTotalTaxChange setOrderTotalTaxChange = SetOrderTotalTaxChange.builder()
-           .change("{change}")
-           .taxMode(TaxMode.PLATFORM)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetOrderTotalTaxChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetOrderTotalTaxChange setOrderTotalTaxChange = SetOrderTotalTaxChange.builder()
+ *             .change("{change}")
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetOrderTotalTaxChangeImpl.class)
@@ -34,26 +37,38 @@ public interface SetOrderTotalTaxChange extends Change {
 
     String SET_ORDER_TOTAL_TAX_CHANGE = "SetOrderTotalTaxChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>setOrderTotalTax</code></p>
+     <*  <p>Update action for <code>setOrderTotalTax</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public Money getNextValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

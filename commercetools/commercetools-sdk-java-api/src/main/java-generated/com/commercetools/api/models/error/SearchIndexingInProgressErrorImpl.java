@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SearchIndexingInProgressError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgressError, ModelBase {
 
@@ -35,13 +38,25 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
         this.code = SEARCH_INDEXING_IN_PROGRESS;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     <>
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     <>
+     */
 
     public Map<String, java.lang.Object> values() {
         return values;

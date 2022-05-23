@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StandalonePriceUpdate standalonePriceUpdate = StandalonePriceUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * StandalonePriceUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePriceUpdate standalonePriceUpdate = StandalonePriceUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpdate> {
@@ -26,7 +28,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     private java.util.List<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     <*  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>>
      */
 
     public StandalonePriceUpdateBuilder version(final Long version) {
@@ -35,7 +37,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     }
 
     /**
-     *  <p>Update actions to be performed on the StandalonePrice.</p>
+     <*  <p>Update actions to be performed on the StandalonePrice.</p>>
      */
 
     public StandalonePriceUpdateBuilder actions(
@@ -45,7 +47,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     }
 
     /**
-     *  <p>Update actions to be performed on the StandalonePrice.</p>
+     <*  <p>Update actions to be performed on the StandalonePrice.</p>>
      */
 
     public StandalonePriceUpdateBuilder actions(
@@ -55,7 +57,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     }
 
     /**
-     *  <p>Update actions to be performed on the StandalonePrice.</p>
+     <*  <p>Update actions to be performed on the StandalonePrice.</p>>
      */
 
     public StandalonePriceUpdateBuilder plusActions(
@@ -68,7 +70,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     }
 
     /**
-     *  <p>Update actions to be performed on the StandalonePrice.</p>
+     <*  <p>Update actions to be performed on the StandalonePrice.</p>>
      */
 
     public StandalonePriceUpdateBuilder plusActions(
@@ -83,7 +85,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     }
 
     /**
-     *  <p>Update actions to be performed on the StandalonePrice.</p>
+     <*  <p>Update actions to be performed on the StandalonePrice.</p>>
      */
 
     public StandalonePriceUpdateBuilder withActions(

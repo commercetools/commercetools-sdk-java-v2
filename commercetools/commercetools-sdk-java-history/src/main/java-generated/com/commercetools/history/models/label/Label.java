@@ -13,17 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Provides descriptive information specific to the resource.</p>
-
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Label label = Label.customObjectLabelBuilder()
-           key("{key}")
-           container("{container}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Provides descriptive information specific to the resource.</p>
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Label label = Label.customObjectLabelBuilder()
+ *             key("{key}")
+ *             container("{container}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.CustomObjectLabelImpl.class, name = CustomObjectLabel.CUSTOM_OBJECT_LABEL),
@@ -39,6 +40,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Label {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

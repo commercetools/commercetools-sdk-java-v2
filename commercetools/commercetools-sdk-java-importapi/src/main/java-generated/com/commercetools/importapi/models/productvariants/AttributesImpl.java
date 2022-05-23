@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * Attributes
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributesImpl implements Attributes, ModelBase {
 
@@ -29,8 +32,9 @@ public class AttributesImpl implements Attributes, ModelBase {
     }
 
     /**
-     *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p>
+     <*  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p>>
      */
+
     public Map<String, com.commercetools.importapi.models.productvariants.Attribute> values() {
         return values;
     }

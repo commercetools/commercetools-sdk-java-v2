@@ -34,9 +34,17 @@ public class InvalidInputImpl implements InvalidInput, ModelBase {
         this.code = INVALID_INPUT;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;

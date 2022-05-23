@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderAddReturnInfoAction orderAddReturnInfoAction = OrderAddReturnInfoAction.builder()
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderAddReturnInfoActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderAddReturnInfoAction orderAddReturnInfoAction = OrderAddReturnInfoAction.builder()
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnInfoAction> {
@@ -30,21 +32,37 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     @Nullable
     private java.time.ZonedDateTime returnDate;
 
+    /**
+     <>
+     */
+
     public OrderAddReturnInfoActionBuilder returnTrackingId(@Nullable final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderAddReturnInfoActionBuilder items(final com.commercetools.api.models.order.ReturnItemDraft... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddReturnInfoActionBuilder items(
             final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderAddReturnInfoActionBuilder plusItems(
             final com.commercetools.api.models.order.ReturnItemDraft... items) {
@@ -55,6 +73,10 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddReturnInfoActionBuilder plusItems(
             Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
         if (this.items == null) {
@@ -64,12 +86,20 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderAddReturnInfoActionBuilder withItems(
             Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
         this.items = new ArrayList<>();
         this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderAddReturnInfoActionBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {
         this.returnDate = returnDate;

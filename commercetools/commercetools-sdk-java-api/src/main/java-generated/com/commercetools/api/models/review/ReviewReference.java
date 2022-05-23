@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Reference to a Review.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewReference reviewReference = ReviewReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Reference to a Review.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewReference reviewReference = ReviewReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewReferenceImpl.class)
@@ -33,14 +34,14 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     String REVIEW = "review";
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     <*  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>>
      */
     @Valid
     @JsonProperty("obj")
     public Review getObj();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Review.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Review.</p>>
      */
     @NotNull
     @JsonProperty("id")

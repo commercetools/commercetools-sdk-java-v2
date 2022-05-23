@@ -16,17 +16,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetTextLineItemDescriptionChange setTextLineItemDescriptionChange = SetTextLineItemDescriptionChange.builder()
-           .change("{change}")
-           .textLineItem(textLineItemBuilder -> textLineItemBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetTextLineItemDescriptionChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetTextLineItemDescriptionChange setTextLineItemDescriptionChange = SetTextLineItemDescriptionChange.builder()
+ *             .change("{change}")
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetTextLineItemDescriptionChangeImpl.class)
@@ -34,24 +37,39 @@ public interface SetTextLineItemDescriptionChange extends Change {
 
     String SET_TEXT_LINE_ITEM_DESCRIPTION_CHANGE = "SetTextLineItemDescriptionChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("textLineItem")
     public TextLineItemValue getTextLineItem();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

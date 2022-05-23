@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeLocalizedEnumValueOrderChange changeLocalizedEnumValueOrderChange = ChangeLocalizedEnumValueOrderChange.builder()
-           .change("{change}")
-           .fieldName("{fieldName}")
-           .attributeName("{attributeName}")
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeLocalizedEnumValueOrderChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeLocalizedEnumValueOrderChange changeLocalizedEnumValueOrderChange = ChangeLocalizedEnumValueOrderChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<ChangeLocalizedEnumValueOrderChange> {
@@ -35,7 +37,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     private java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue;
 
     /**
-     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
+     <*  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>>
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder change(final String change) {
@@ -44,7 +46,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
+     <*  <p>The name of the field definition updated.</p>>
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder fieldName(final String fieldName) {
@@ -53,7 +55,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     <*  <p>The name of the attribute updated.</p>>
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder attributeName(final String attributeName) {
@@ -61,17 +63,29 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.LocalizedEnumValue... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder plusNextValue(
             final com.commercetools.history.models.change_value.LocalizedEnumValue... nextValue) {
@@ -82,6 +96,10 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {
         if (this.nextValue == null) {
@@ -92,6 +110,10 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder withNextValue(
             Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {
         this.nextValue = new ArrayList<>();
@@ -100,17 +122,29 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.LocalizedEnumValue... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.change_value.LocalizedEnumValue... previousValue) {
@@ -121,6 +155,10 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {
         if (this.previousValue == null) {
@@ -130,6 +168,10 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
             builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValueBuilder> builder) {

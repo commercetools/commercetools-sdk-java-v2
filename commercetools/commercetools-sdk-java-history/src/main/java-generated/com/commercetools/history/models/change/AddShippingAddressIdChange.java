@@ -15,17 +15,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddShippingAddressIdChange addShippingAddressIdChange = AddShippingAddressIdChange.builder()
-           .change("{change}")
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .address(addressBuilder -> addressBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddShippingAddressIdChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddShippingAddressIdChange addShippingAddressIdChange = AddShippingAddressIdChange.builder()
+ *             .change("{change}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .address(addressBuilder -> addressBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddShippingAddressIdChangeImpl.class)
@@ -34,24 +37,36 @@ public interface AddShippingAddressIdChange extends Change {
     String ADD_SHIPPING_ADDRESS_ID_CHANGE = "AddShippingAddressIdChange";
 
     /**
-     *  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>
+     <*  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public List<String> getNextValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("address")

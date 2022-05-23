@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCustomerSetDefaultBillingAddressAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetDefaultBillingAddressActionImpl
         implements MyCustomerSetDefaultBillingAddressAction, ModelBase {
@@ -36,13 +39,25 @@ public class MyCustomerSetDefaultBillingAddressActionImpl
         this.action = SET_DEFAULT_BILLING_ADDRESS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     <>
+     */
 
     public String getAddressKey() {
         return this.addressKey;

@@ -16,14 +16,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetParcelMeasurementsAction stagedOrderSetParcelMeasurementsAction = StagedOrderSetParcelMeasurementsAction.builder()
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetParcelMeasurementsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetParcelMeasurementsAction stagedOrderSetParcelMeasurementsAction = StagedOrderSetParcelMeasurementsAction.builder()
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetParcelMeasurementsActionImpl.class)
@@ -31,10 +34,16 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
 
     String SET_PARCEL_MEASUREMENTS = "setParcelMeasurements";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();

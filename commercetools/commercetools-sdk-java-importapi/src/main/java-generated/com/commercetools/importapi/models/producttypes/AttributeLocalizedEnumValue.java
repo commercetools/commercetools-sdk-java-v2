@@ -15,31 +15,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeLocalizedEnumValue attributeLocalizedEnumValue = AttributeLocalizedEnumValue.builder()
-           .key("{key}")
-           .label(labelBuilder -> labelBuilder)
-           .build()
- </code></pre>
- </div>
+ * AttributeLocalizedEnumValue
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeLocalizedEnumValue attributeLocalizedEnumValue = AttributeLocalizedEnumValue.builder()
+ *             .key("{key}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeLocalizedEnumValueImpl.class)
 public interface AttributeLocalizedEnumValue {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
     @NotNull
     @Valid

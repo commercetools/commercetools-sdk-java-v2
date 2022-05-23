@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   NumberAttribute numberAttribute = NumberAttribute.builder()
-           .value(0.3)
-           .build()
- </code></pre>
- </div>
+ * NumberAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     NumberAttribute numberAttribute = NumberAttribute.builder()
+ *             .value(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class NumberAttributeBuilder implements Builder<NumberAttribute> {
@@ -27,13 +29,17 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
     private Double value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
      */
 
     public NumberAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public NumberAttributeBuilder value(final Double value) {
         this.value = value;

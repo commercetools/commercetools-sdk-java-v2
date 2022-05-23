@@ -13,17 +13,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeDefinitionAlreadyExistsError attributeDefinitionAlreadyExistsError = AttributeDefinitionAlreadyExistsError.builder()
-           .message("{message}")
-           .conflictingProductTypeId("{conflictingProductTypeId}")
-           .conflictingProductTypeName("{conflictingProductTypeName}")
-           .conflictingAttributeName("{conflictingAttributeName}")
-           .build()
- </code></pre>
- </div>
+ * AttributeDefinitionAlreadyExistsError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeDefinitionAlreadyExistsError attributeDefinitionAlreadyExistsError = AttributeDefinitionAlreadyExistsError.builder()
+ *             .message("{message}")
+ *             .conflictingProductTypeId("{conflictingProductTypeId}")
+ *             .conflictingProductTypeName("{conflictingProductTypeName}")
+ *             .conflictingAttributeName("{conflictingAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeDefinitionAlreadyExistsErrorImpl.class)
@@ -31,14 +34,23 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
 
     String ATTRIBUTE_DEFINITION_ALREADY_EXISTS = "AttributeDefinitionAlreadyExists";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("conflictingProductTypeId")
     public String getConflictingProductTypeId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("conflictingProductTypeName")
     public String getConflictingProductTypeName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();

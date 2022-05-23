@@ -13,16 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetMaxApplicationsChange setMaxApplicationsChange = SetMaxApplicationsChange.builder()
-           .change("{change}")
-           .previousValue(1)
-           .nextValue(1)
-           .build()
- </code></pre>
- </div>
+ * SetMaxApplicationsChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetMaxApplicationsChange setMaxApplicationsChange = SetMaxApplicationsChange.builder()
+ *             .change("{change}")
+ *             .previousValue(1)
+ *             .nextValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetMaxApplicationsChangeImpl.class)
@@ -30,21 +33,30 @@ public interface SetMaxApplicationsChange extends Change {
 
     String SET_MAX_APPLICATIONS_CHANGE = "SetMaxApplicationsChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Shape of the action for <code>setMaxApplications</code></p>
+     <*  <p>Shape of the action for <code>setMaxApplications</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();

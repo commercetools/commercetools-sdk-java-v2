@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomLineItemCustomFieldChange setCustomLineItemCustomFieldChange = SetCustomLineItemCustomFieldChange.builder()
-           .change("{change}")
-           .name("{name}")
-           .customLineItem(customLineItemBuilder -> customLineItemBuilder)
-           .customLineItemId("{customLineItemId}")
-           .build()
- </code></pre>
- </div>
+ * SetCustomLineItemCustomFieldChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemCustomFieldChange setCustomLineItemCustomFieldChange = SetCustomLineItemCustomFieldChange.builder()
+ *             .change("{change}")
+ *             .name("{name}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCustomLineItemCustomFieldChange> {
@@ -36,7 +38,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     private java.lang.Object previousValue;
 
     /**
-     *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+     <*  <p>Update action for <code>setCustomLineItemCustomField</code></p>>
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder change(final String change) {
@@ -44,10 +46,18 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemCustomFieldChangeBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemCustomFieldChangeBuilder customLineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -56,21 +66,37 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemCustomFieldChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemCustomFieldChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;

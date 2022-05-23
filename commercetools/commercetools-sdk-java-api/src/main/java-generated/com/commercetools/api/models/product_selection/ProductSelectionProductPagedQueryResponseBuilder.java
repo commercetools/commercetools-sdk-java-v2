@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionProductPagedQueryResponse productSelectionProductPagedQueryResponse = ProductSelectionProductPagedQueryResponse.builder()
-           .limit(0.3)
-           .offset(0.3)
-           .count(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionProductPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionProductPagedQueryResponse productSelectionProductPagedQueryResponse = ProductSelectionProductPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .offset(0.3)
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionProductPagedQueryResponseBuilder
@@ -38,7 +40,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     private java.util.List<com.commercetools.api.models.product_selection.AssignedProductReference> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder limit(final Long limit) {
@@ -47,7 +49,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder offset(final Long offset) {
@@ -56,7 +58,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>Actual number of results returned.</p>
+     <*  <p>Actual number of results returned.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder count(final Long count) {
@@ -65,7 +67,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     <*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -74,7 +76,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>References to Products that are assigned to the ProductSelection.</p>
+     <*  <p>References to Products that are assigned to the ProductSelection.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder results(
@@ -84,7 +86,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>References to Products that are assigned to the ProductSelection.</p>
+     <*  <p>References to Products that are assigned to the ProductSelection.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder results(
@@ -94,7 +96,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>References to Products that are assigned to the ProductSelection.</p>
+     <*  <p>References to Products that are assigned to the ProductSelection.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder plusResults(
@@ -107,7 +109,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>References to Products that are assigned to the ProductSelection.</p>
+     <*  <p>References to Products that are assigned to the ProductSelection.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder plusResults(
@@ -121,7 +123,7 @@ public class ProductSelectionProductPagedQueryResponseBuilder
     }
 
     /**
-     *  <p>References to Products that are assigned to the ProductSelection.</p>
+     <*  <p>References to Products that are assigned to the ProductSelection.</p>>
      */
 
     public ProductSelectionProductPagedQueryResponseBuilder withResults(

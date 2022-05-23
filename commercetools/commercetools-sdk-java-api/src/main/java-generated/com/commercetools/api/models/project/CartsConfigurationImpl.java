@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartsConfiguration
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
 
@@ -32,15 +35,17 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
     }
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft. This field may not be present on Projects created before January 2020.</p>
+     <*  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft. This field may not be present on Projects created before January 2020.</p>>
      */
+
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
     /**
-     *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
+     <*  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>>
      */
+
     public Boolean getCountryTaxRateFallbackEnabled() {
         return this.countryTaxRateFallbackEnabled;
     }

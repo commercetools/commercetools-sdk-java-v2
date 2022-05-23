@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   HttpDestination httpDestination = HttpDestination.builder()
-           .url("{url}")
-           .build()
- </code></pre>
- </div>
+ * HttpDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     HttpDestination httpDestination = HttpDestination.builder()
+ *             .url("{url}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HttpDestinationBuilder implements Builder<HttpDestination> {
@@ -28,7 +30,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     private com.commercetools.api.models.extension.HttpDestinationAuthentication authentication;
 
     /**
-     *  <p>URL to the target destination.</p>
+     <*  <p>URL to the target destination.</p>>
      */
 
     public HttpDestinationBuilder url(final String url) {
@@ -37,7 +39,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     }
 
     /**
-     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     <*  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>>
      */
 
     public HttpDestinationBuilder authentication(
@@ -47,7 +49,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     }
 
     /**
-     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     <*  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>>
      */
 
     public HttpDestinationBuilder authentication(

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeLocalizedEnumValue attributeLocalizedEnumValue = AttributeLocalizedEnumValue.builder()
-           .key("{key}")
-           .label(labelBuilder -> labelBuilder)
-           .build()
- </code></pre>
- </div>
+ * AttributeLocalizedEnumValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeLocalizedEnumValue attributeLocalizedEnumValue = AttributeLocalizedEnumValue.builder()
+ *             .key("{key}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLocalizedEnumValue> {
@@ -25,18 +27,22 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
 
     private com.commercetools.importapi.models.common.LocalizedString label;
 
+    /**
+     <>
+     */
+
     public AttributeLocalizedEnumValueBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
 
     public AttributeLocalizedEnumValueBuilder label(
@@ -46,12 +52,12 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>>
      */
 
     public AttributeLocalizedEnumValueBuilder label(

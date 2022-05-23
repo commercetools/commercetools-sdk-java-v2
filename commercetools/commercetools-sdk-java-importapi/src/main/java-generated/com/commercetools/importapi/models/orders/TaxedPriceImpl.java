@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TaxedPrice
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
@@ -40,29 +43,33 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.Money getTotalNet() {
         return this.totalNet;
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.Money getTotalGross() {
         return this.totalGross;
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.orders.TaxPortion> getTaxPortions() {
         return this.taxPortions;
     }
 
     /**
-     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
+     <*  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>>
      */
+
     public com.commercetools.importapi.models.common.Money getTotalTax() {
         return this.totalTax;
     }

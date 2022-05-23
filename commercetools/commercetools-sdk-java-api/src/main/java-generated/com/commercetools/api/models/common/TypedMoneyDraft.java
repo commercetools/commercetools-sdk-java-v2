@@ -11,15 +11,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypedMoneyDraft typedMoneyDraft = TypedMoneyDraft.centPrecisionBuilder()
-           centAmount(0.3)
-           currencyCode("{currencyCode}")
-           .build()
- </code></pre>
- </div>
+ * TypedMoneyDraft
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypedMoneyDraft typedMoneyDraft = TypedMoneyDraft.centPrecisionBuilder()
+ *             centAmount(0.3)
+ *             currencyCode("{currencyCode}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyDraftImpl.class, name = CentPrecisionMoneyDraft.CENT_PRECISION),
@@ -29,11 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TypedMoneyDraft extends Money {
 
+    /**
+     <>
+     */
+
     @JsonProperty("type")
     public MoneyType getType();
 
     /**
-     *  <p>Must be equal to the default number of fraction digits for the specified currency.</p>
+     <*  <p>Must be equal to the default number of fraction digits for the specified currency.</p>>
      */
 
     @JsonProperty("fractionDigits")

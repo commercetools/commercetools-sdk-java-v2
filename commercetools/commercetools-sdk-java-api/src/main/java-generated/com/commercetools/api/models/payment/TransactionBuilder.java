@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Transaction transaction = Transaction.builder()
-           .id("{id}")
-           .type(TransactionType.AUTHORIZATION)
-           .amount(amountBuilder -> amountBuilder)
-           .build()
- </code></pre>
- </div>
+ * TransactionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Transaction transaction = Transaction.builder()
+ *             .id("{id}")
+ *             .type(TransactionType.AUTHORIZATION)
+ *             .amount(amountBuilder -> amountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionBuilder implements Builder<Transaction> {
@@ -43,7 +45,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>Platform-generated unique identifier of the Transaction.</p>
+     <*  <p>Platform-generated unique identifier of the Transaction.</p>>
      */
 
     public TransactionBuilder id(final String id) {
@@ -52,7 +54,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The time at which the transaction took place.</p>
+     <*  <p>The time at which the transaction took place.</p>>
      */
 
     public TransactionBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
@@ -61,7 +63,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The type of this transaction.</p>
+     <*  <p>The type of this transaction.</p>>
      */
 
     public TransactionBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
@@ -69,10 +71,18 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TransactionBuilder amount(final com.commercetools.api.models.common.TypedMoney amount) {
         this.amount = amount;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TransactionBuilder amount(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -81,7 +91,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>>
      */
 
     public TransactionBuilder interactionId(@Nullable final String interactionId) {
@@ -90,7 +100,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>The state of this transaction.</p>
+     <*  <p>The state of this transaction.</p>>
      */
 
     public TransactionBuilder state(@Nullable final com.commercetools.api.models.payment.TransactionState state) {
@@ -99,7 +109,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     <*  <p>Custom Fields for the Transaction.</p>>
      */
 
     public TransactionBuilder custom(
@@ -109,7 +119,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     <*  <p>Custom Fields for the Transaction.</p>>
      */
 
     public TransactionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

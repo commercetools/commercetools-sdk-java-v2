@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderPatchImport orderPatchImport = OrderPatchImport.builder()
-           .orderNumber("{orderNumber}")
-           .fields(fieldsBuilder -> fieldsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderPatchImportBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderPatchImport orderPatchImport = OrderPatchImport.builder()
+ *             .orderNumber("{orderNumber}")
+ *             .fields(fieldsBuilder -> fieldsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
@@ -26,7 +28,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     private com.commercetools.importapi.models.order_patches.OrderField fields;
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     <*  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>>
      */
 
     public OrderPatchImportBuilder orderNumber(final String orderNumber) {
@@ -35,7 +37,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>
+     <*  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>>
      */
 
     public OrderPatchImportBuilder fields(
@@ -45,7 +47,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>
+     <*  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>>
      */
 
     public OrderPatchImportBuilder fields(final com.commercetools.importapi.models.order_patches.OrderField fields) {

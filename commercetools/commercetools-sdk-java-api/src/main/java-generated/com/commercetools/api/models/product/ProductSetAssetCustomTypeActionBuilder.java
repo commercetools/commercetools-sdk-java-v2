@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetAssetCustomTypeAction productSetAssetCustomTypeAction = ProductSetAssetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetAssetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAssetCustomTypeAction productSetAssetCustomTypeAction = ProductSetAssetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSetAssetCustomTypeAction> {
@@ -42,25 +44,45 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public ProductSetAssetCustomTypeActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetAssetCustomTypeActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductSetAssetCustomTypeActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductSetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
@@ -68,7 +90,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
      */
 
     public ProductSetAssetCustomTypeActionBuilder type(
@@ -78,7 +100,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
      */
 
     public ProductSetAssetCustomTypeActionBuilder type(
@@ -88,7 +110,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
      */
 
     public ProductSetAssetCustomTypeActionBuilder fields(
@@ -98,7 +120,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
      */
 
     public ProductSetAssetCustomTypeActionBuilder fields(

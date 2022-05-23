@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShippingMethodChangeValue
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodChangeValueImpl implements ShippingMethodChangeValue, ModelBase {
 
@@ -30,9 +33,17 @@ public class ShippingMethodChangeValueImpl implements ShippingMethodChangeValue,
     public ShippingMethodChangeValueImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public String getName() {
         return this.name;

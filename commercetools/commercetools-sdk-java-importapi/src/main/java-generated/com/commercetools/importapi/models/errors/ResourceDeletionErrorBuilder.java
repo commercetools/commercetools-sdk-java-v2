@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ResourceDeletionError resourceDeletionError = ResourceDeletionError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ResourceDeletionErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResourceDeletionError resourceDeletionError = ResourceDeletionError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionError> {
@@ -26,10 +28,18 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
     @Nullable
     private java.lang.Object resource;
 
+    /**
+     <>
+     */
+
     public ResourceDeletionErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ResourceDeletionErrorBuilder resource(@Nullable final java.lang.Object resource) {
         this.resource = resource;

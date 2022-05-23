@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChannelRemoveRolesAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
         this.action = REMOVE_ROLES;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Value to remove from the array.</p>
+     <*  <p>Value to remove from the array.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }

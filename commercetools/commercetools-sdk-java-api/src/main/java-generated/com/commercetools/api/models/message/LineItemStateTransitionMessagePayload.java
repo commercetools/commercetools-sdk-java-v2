@@ -16,18 +16,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LineItemStateTransitionMessagePayload lineItemStateTransitionMessagePayload = LineItemStateTransitionMessagePayload.builder()
-           .lineItemId("{lineItemId}")
-           .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .quantity(0.3)
-           .fromState(fromStateBuilder -> fromStateBuilder)
-           .toState(toStateBuilder -> toStateBuilder)
-           .build()
- </code></pre>
- </div>
+ * LineItemStateTransitionMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemStateTransitionMessagePayload lineItemStateTransitionMessagePayload = LineItemStateTransitionMessagePayload.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemStateTransitionMessagePayloadImpl.class)
@@ -35,20 +38,29 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
 
     String LINE_ITEM_STATE_TRANSITION = "LineItemStateTransition";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
     @NotNull
     @Valid
@@ -56,7 +68,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     public StateReference getFromState();
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
     @NotNull
     @Valid

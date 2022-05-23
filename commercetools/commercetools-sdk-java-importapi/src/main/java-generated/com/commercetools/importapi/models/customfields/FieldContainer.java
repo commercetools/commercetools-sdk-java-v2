@@ -14,23 +14,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Maps the custom field names to the actual values.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   FieldContainer fieldContainer = FieldContainer.builder()
-           .//(//Builder -> //Builder)
-           .build()
- </code></pre>
- </div>
+ *  <p>Maps the custom field names to the actual values.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FieldContainer fieldContainer = FieldContainer.builder()
+ *             .//(//Builder -> //Builder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FieldContainerImpl.class)
 public interface FieldContainer {
 
     /**
-     *  <p>Mapping from the custom field name to the actual value.</p>
+     <*  <p>Mapping from the custom field name to the actual value.</p>>
      */
     @NotNull
     @Valid

@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneUpdateAction zoneUpdateAction = ZoneUpdateAction.addLocationBuilder()
-           location(locationBuilder -> locationBuilder)
-           .build()
- </code></pre>
- </div>
+ * ZoneUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneUpdateAction zoneUpdateAction = ZoneUpdateAction.addLocationBuilder()
+ *             location(locationBuilder -> locationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneAddLocationActionImpl.class, name = ZoneAddLocationAction.ADD_LOCATION),
@@ -33,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ZoneUpdateAction> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

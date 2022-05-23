@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartSetLineItemDistributionChannelAction myCartSetLineItemDistributionChannelAction = MyCartSetLineItemDistributionChannelAction.builder()
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * MyCartSetLineItemDistributionChannelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartSetLineItemDistributionChannelAction myCartSetLineItemDistributionChannelAction = MyCartSetLineItemDistributionChannelAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetLineItemDistributionChannelActionBuilder
@@ -28,13 +30,17 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+     <>
+     */
+
     public MyCartSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(
@@ -46,7 +52,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerChangeAddressAction customerChangeAddressAction = CustomerChangeAddressAction.builder()
-           .address(addressBuilder -> addressBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomerChangeAddressActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerChangeAddressAction customerChangeAddressAction = CustomerChangeAddressAction.builder()
+ *             .address(addressBuilder -> addressBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerChangeAddressActionBuilder implements Builder<CustomerChangeAddressAction> {
@@ -30,21 +32,37 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
 
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     <>
+     */
+
     public CustomerChangeAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerChangeAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerChangeAddressActionBuilder address(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerChangeAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;

@@ -7,29 +7,43 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TimeSetField timeSetField = TimeSetField.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * TimeSetFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TimeSetField timeSetField = TimeSetField.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TimeSetFieldBuilder implements Builder<TimeSetField> {
 
     private java.util.List<java.time.LocalTime> value;
 
+    /**
+     <>
+     */
+
     public TimeSetFieldBuilder value(final java.time.LocalTime... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TimeSetFieldBuilder value(final java.util.List<java.time.LocalTime> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TimeSetFieldBuilder plusValue(final java.time.LocalTime... value) {
         if (this.value == null) {

@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectChangeOrderSearchStatusAction projectChangeOrderSearchStatusAction = ProjectChangeOrderSearchStatusAction.builder()
-           .status(OrderSearchStatus.ACTIVATED)
-           .build()
- </code></pre>
- </div>
+ * ProjectChangeOrderSearchStatusActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectChangeOrderSearchStatusAction projectChangeOrderSearchStatusAction = ProjectChangeOrderSearchStatusAction.builder()
+ *             .status(OrderSearchStatus.ACTIVATED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<ProjectChangeOrderSearchStatusAction> {
@@ -22,7 +24,7 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
     private com.commercetools.api.models.project.OrderSearchStatus status;
 
     /**
-     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     <*  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>>
      */
 
     public ProjectChangeOrderSearchStatusActionBuilder status(

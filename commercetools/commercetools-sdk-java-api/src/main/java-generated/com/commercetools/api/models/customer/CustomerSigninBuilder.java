@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSignin customerSignin = CustomerSignin.builder()
-           .email("{email}")
-           .password("{password}")
-           .build()
- </code></pre>
- </div>
+ * CustomerSigninBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSignin customerSignin = CustomerSignin.builder()
+ *             .email("{email}")
+ *             .password("{password}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSigninBuilder implements Builder<CustomerSignin> {
@@ -43,16 +45,27 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     @Nullable
     private Boolean updateProductData;
 
+    /**
+     <>
+     */
+
     public CustomerSigninBuilder email(final String email) {
         this.email = email;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerSigninBuilder password(final String password) {
         this.password = password;
         return this;
     }
 
+    /**
+     <>
+     */
     @Deprecated
     public CustomerSigninBuilder anonymousCartId(@Nullable final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
@@ -60,7 +73,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Cart.</p>
+     <*  <p>ResourceIdentifier to a Cart.</p>>
      */
 
     public CustomerSigninBuilder anonymousCart(
@@ -71,7 +84,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Cart.</p>
+     <*  <p>ResourceIdentifier to a Cart.</p>>
      */
 
     public CustomerSigninBuilder anonymousCart(
@@ -80,16 +93,28 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerSigninBuilder anonymousCartSignInMode(
             @Nullable final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode) {
         this.anonymousCartSignInMode = anonymousCartSignInMode;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerSigninBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {
         this.updateProductData = updateProductData;

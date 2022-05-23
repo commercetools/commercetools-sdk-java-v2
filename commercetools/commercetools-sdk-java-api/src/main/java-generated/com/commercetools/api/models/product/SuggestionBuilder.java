@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Suggestion suggestion = Suggestion.builder()
-           .text("{text}")
-           .build()
- </code></pre>
- </div>
+ * SuggestionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Suggestion suggestion = Suggestion.builder()
+ *             .text("{text}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SuggestionBuilder implements Builder<Suggestion> {
@@ -22,7 +24,7 @@ public class SuggestionBuilder implements Builder<Suggestion> {
     private String text;
 
     /**
-     *  <p>The suggested text.</p>
+     <*  <p>The suggested text.</p>>
      */
 
     public SuggestionBuilder text(final String text) {

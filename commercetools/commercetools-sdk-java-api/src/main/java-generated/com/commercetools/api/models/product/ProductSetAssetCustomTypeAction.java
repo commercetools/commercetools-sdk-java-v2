@@ -15,13 +15,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetAssetCustomTypeAction productSetAssetCustomTypeAction = ProductSetAssetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetAssetCustomTypeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAssetCustomTypeAction productSetAssetCustomTypeAction = ProductSetAssetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAssetCustomTypeActionImpl.class)
@@ -29,30 +32,50 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
 
     String SET_ASSET_CUSTOM_TYPE = "setAssetCustomType";
 
+    /**
+     <>
+     */
+
     @JsonProperty("variantId")
     public Long getVariantId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+     <>
+     */
+
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     <>
+     */
+
     @JsonProperty("assetId")
     public String getAssetId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
      */
     @Valid
     @JsonProperty("fields")

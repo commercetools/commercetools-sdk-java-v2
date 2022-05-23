@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartRemovePaymentAction cartRemovePaymentAction = CartRemovePaymentAction.builder()
-           .payment(paymentBuilder -> paymentBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartRemovePaymentAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartRemovePaymentAction cartRemovePaymentAction = CartRemovePaymentAction.builder()
+ *             .payment(paymentBuilder -> paymentBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartRemovePaymentActionImpl.class)
@@ -30,6 +33,9 @@ public interface CartRemovePaymentAction extends CartUpdateAction {
 
     String REMOVE_PAYMENT = "removePayment";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("payment")

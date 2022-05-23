@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AddShippingAddressIdChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
         this.type = ADD_SHIPPING_ADDRESS_ID_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>
+     <*  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Address getAddress() {
         return this.address;

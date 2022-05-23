@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountChangeNameAction productDiscountChangeNameAction = ProductDiscountChangeNameAction.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountChangeNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountChangeNameAction productDiscountChangeNameAction = ProductDiscountChangeNameAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDiscountChangeNameAction> {
@@ -23,7 +25,7 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ProductDiscountChangeNameActionBuilder name(
@@ -33,7 +35,7 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ProductDiscountChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MatchingPriceNotFoundError matchingPriceNotFoundError = MatchingPriceNotFoundError.builder()
-           .message("{message}")
-           .productId("{productId}")
-           .variantId(1)
-           .build()
- </code></pre>
- </div>
+ * MatchingPriceNotFoundErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MatchingPriceNotFoundError matchingPriceNotFoundError = MatchingPriceNotFoundError.builder()
+ *             .message("{message}")
+ *             .productId("{productId}")
+ *             .variantId(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceNotFoundError> {
@@ -44,15 +46,27 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference channel;
 
+    /**
+     <>
+     */
+
     public MatchingPriceNotFoundErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MatchingPriceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MatchingPriceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -62,20 +76,36 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MatchingPriceNotFoundErrorBuilder productId(final String productId) {
         this.productId = productId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MatchingPriceNotFoundErrorBuilder variantId(final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MatchingPriceNotFoundErrorBuilder currency(@Nullable final String currency) {
         this.currency = currency;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MatchingPriceNotFoundErrorBuilder country(@Nullable final String country) {
         this.country = country;
@@ -83,7 +113,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
@@ -95,7 +125,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
@@ -105,7 +135,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
 
     public MatchingPriceNotFoundErrorBuilder channel(
@@ -115,7 +145,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
 
     public MatchingPriceNotFoundErrorBuilder channel(

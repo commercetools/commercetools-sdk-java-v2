@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariantImport productVariantImport = ProductVariantImport.builder()
-           .key("{key}")
-           .isMasterVariant(true)
-           .product(productBuilder -> productBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductVariantImportBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantImport productVariantImport = ProductVariantImport.builder()
+ *             .key("{key}")
+ *             .isMasterVariant(true)
+ *             .product(productBuilder -> productBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImportBuilder implements Builder<ProductVariantImport> {
@@ -45,13 +47,17 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
+    /**
+     <>
+     */
+
     public ProductVariantImportBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.sku</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.sku</code>.</p>>
      */
 
     public ProductVariantImportBuilder sku(@Nullable final String sku) {
@@ -60,7 +66,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>>
      */
 
     public ProductVariantImportBuilder isMasterVariant(final Boolean isMasterVariant) {
@@ -69,7 +75,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantImportBuilder attributes(
@@ -79,7 +85,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantImportBuilder attributes(
@@ -89,7 +95,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantImportBuilder plusAttributes(
@@ -102,7 +108,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantImportBuilder plusAttributes(
@@ -116,7 +122,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantImportBuilder withAttributes(
@@ -128,7 +134,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.images</code>.</p>>
      */
 
     public ProductVariantImportBuilder images(
@@ -138,7 +144,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.images</code>.</p>>
      */
 
     public ProductVariantImportBuilder images(
@@ -148,7 +154,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.images</code>.</p>>
      */
 
     public ProductVariantImportBuilder plusImages(
@@ -161,7 +167,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.images</code>.</p>>
      */
 
     public ProductVariantImportBuilder plusImages(
@@ -174,7 +180,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.images</code>.</p>>
      */
 
     public ProductVariantImportBuilder withImages(
@@ -185,7 +191,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.assets</code>.</p>>
      */
 
     public ProductVariantImportBuilder assets(
@@ -195,7 +201,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.assets</code>.</p>>
      */
 
     public ProductVariantImportBuilder assets(
@@ -205,7 +211,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.assets</code>.</p>>
      */
 
     public ProductVariantImportBuilder plusAssets(
@@ -218,7 +224,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.assets</code>.</p>>
      */
 
     public ProductVariantImportBuilder plusAssets(
@@ -231,7 +237,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.assets</code>.</p>>
      */
 
     public ProductVariantImportBuilder withAssets(
@@ -242,7 +248,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     <*  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>>
      */
 
     public ProductVariantImportBuilder publish(@Nullable final Boolean publish) {
@@ -251,7 +257,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     <*  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>>
      */
 
     public ProductVariantImportBuilder product(
@@ -261,7 +267,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     <*  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>>
      */
 
     public ProductVariantImportBuilder product(

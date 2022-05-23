@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderImportLineItemStateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImportLineItemStateAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
         this.action = IMPORT_LINE_ITEM_STATE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;

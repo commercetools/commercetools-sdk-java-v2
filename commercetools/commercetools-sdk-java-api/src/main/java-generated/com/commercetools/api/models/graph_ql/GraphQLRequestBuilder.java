@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   GraphQLRequest graphQLRequest = GraphQLRequest.builder()
-           .query("{query}")
-           .build()
- </code></pre>
- </div>
+ * GraphQLRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GraphQLRequest graphQLRequest = GraphQLRequest.builder()
+ *             .query("{query}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
@@ -30,21 +32,37 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     @Nullable
     private com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables;
 
+    /**
+     <>
+     */
+
     public GraphQLRequestBuilder query(final String query) {
         this.query = query;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public GraphQLRequestBuilder operationName(@Nullable final String operationName) {
         this.operationName = operationName;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public GraphQLRequestBuilder variables(
             Function<com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder, com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder> builder) {
         this.variables = builder.apply(com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public GraphQLRequestBuilder variables(
             @Nullable final com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables) {

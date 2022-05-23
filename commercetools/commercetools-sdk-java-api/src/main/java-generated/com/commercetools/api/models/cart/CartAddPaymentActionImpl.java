@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartAddPaymentAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddPaymentActionImpl implements CartAddPaymentAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CartAddPaymentActionImpl implements CartAddPaymentAction, ModelBase
         this.action = ADD_PAYMENT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
         return this.payment;

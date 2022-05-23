@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetCustomerIdAction cartSetCustomerIdAction = CartSetCustomerIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartSetCustomerIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetCustomerIdAction cartSetCustomerIdAction = CartSetCustomerIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerIdAction> {
@@ -24,7 +26,7 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
     private String customerId;
 
     /**
-     *  <p>If set, a customer with the given ID must exist in the project.</p>
+     <*  <p>If set, a customer with the given ID must exist in the project.</p>>
      */
 
     public CartSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {

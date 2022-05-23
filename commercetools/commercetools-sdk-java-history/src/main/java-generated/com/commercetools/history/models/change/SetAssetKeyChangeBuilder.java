@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetAssetKeyChange setAssetKeyChange = SetAssetKeyChange.builder()
-           .change("{change}")
-           .asset(assetBuilder -> assetBuilder)
-           .nextValue("{nextValue}")
-           .previousValue("{previousValue}")
-           .build()
- </code></pre>
- </div>
+ * SetAssetKeyChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAssetKeyChange setAssetKeyChange = SetAssetKeyChange.builder()
+ *             .change("{change}")
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .nextValue("{nextValue}")
+ *             .previousValue("{previousValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
@@ -32,7 +34,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     private String previousValue;
 
     /**
-     *  <p>Update action for <code>setAssetKey</code></p>
+     <*  <p>Update action for <code>setAssetKey</code></p>>
      */
 
     public SetAssetKeyChangeBuilder change(final String change) {
@@ -40,21 +42,37 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAssetKeyChangeBuilder asset(
             Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
         this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAssetKeyChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAssetKeyChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetAssetKeyChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;

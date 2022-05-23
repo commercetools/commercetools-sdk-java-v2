@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AddDiscountCodeChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddDiscountCodeChangeImpl implements AddDiscountCodeChange, ModelBase {
 
@@ -35,16 +38,25 @@ public class AddDiscountCodeChangeImpl implements AddDiscountCodeChange, ModelBa
         this.type = ADD_DISCOUNT_CODE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>addDiscountCode</code></p>
+     <*  <p>Update action for <code>addDiscountCode</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.DiscountCodeInfo getNextValue() {
         return this.nextValue;

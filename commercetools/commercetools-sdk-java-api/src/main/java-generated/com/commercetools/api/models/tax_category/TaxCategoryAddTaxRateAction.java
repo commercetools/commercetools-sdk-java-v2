@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxCategoryAddTaxRateAction taxCategoryAddTaxRateAction = TaxCategoryAddTaxRateAction.builder()
-           .taxRate(taxRateBuilder -> taxRateBuilder)
-           .build()
- </code></pre>
- </div>
+ * TaxCategoryAddTaxRateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategoryAddTaxRateAction taxCategoryAddTaxRateAction = TaxCategoryAddTaxRateAction.builder()
+ *             .taxRate(taxRateBuilder -> taxRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryAddTaxRateActionImpl.class)
@@ -30,7 +33,7 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
     String ADD_TAX_RATE = "addTaxRate";
 
     /**
-     *  <p>Value to append to the <code>rates</code> array.</p>
+     <*  <p>Value to append to the <code>rates</code> array.</p>>
      */
     @NotNull
     @Valid

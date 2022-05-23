@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodSetKeyAction shippingMethodSetKeyAction = ShippingMethodSetKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodSetKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodSetKeyAction shippingMethodSetKeyAction = ShippingMethodSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetKeyActionImpl.class)
@@ -26,7 +29,7 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     <*  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>>
      */
 
     @JsonProperty("key")

@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderImportRequest orderImportRequest = OrderImportRequest.builder()
-           .plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderImportRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderImportRequest orderImportRequest = OrderImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
@@ -23,7 +25,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     private java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources;
 
     /**
-     *  <p>The order import resources of this request.</p>
+     <*  <p>The order import resources of this request.</p>>
      */
 
     public OrderImportRequestBuilder resources(
@@ -33,7 +35,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-     *  <p>The order import resources of this request.</p>
+     <*  <p>The order import resources of this request.</p>>
      */
 
     public OrderImportRequestBuilder resources(
@@ -43,7 +45,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-     *  <p>The order import resources of this request.</p>
+     <*  <p>The order import resources of this request.</p>>
      */
 
     public OrderImportRequestBuilder plusResources(
@@ -56,7 +58,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-     *  <p>The order import resources of this request.</p>
+     <*  <p>The order import resources of this request.</p>>
      */
 
     public OrderImportRequestBuilder plusResources(
@@ -69,7 +71,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-     *  <p>The order import resources of this request.</p>
+     <*  <p>The order import resources of this request.</p>>
      */
 
     public OrderImportRequestBuilder withResources(

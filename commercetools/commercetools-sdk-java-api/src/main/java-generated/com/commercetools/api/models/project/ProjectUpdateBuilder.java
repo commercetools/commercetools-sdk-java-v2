@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectUpdate projectUpdate = ProjectUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProjectUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectUpdate projectUpdate = ProjectUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
@@ -26,7 +28,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     private java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     <*  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
      */
 
     public ProjectUpdateBuilder version(final Long version) {
@@ -35,7 +37,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Project.</p>
+     <*  <p>Update actions to be performed on the Project.</p>>
      */
 
     public ProjectUpdateBuilder actions(final com.commercetools.api.models.project.ProjectUpdateAction... actions) {
@@ -44,7 +46,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Project.</p>
+     <*  <p>Update actions to be performed on the Project.</p>>
      */
 
     public ProjectUpdateBuilder actions(
@@ -54,7 +56,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Project.</p>
+     <*  <p>Update actions to be performed on the Project.</p>>
      */
 
     public ProjectUpdateBuilder plusActions(final com.commercetools.api.models.project.ProjectUpdateAction... actions) {
@@ -66,7 +68,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Project.</p>
+     <*  <p>Update actions to be performed on the Project.</p>>
      */
 
     public ProjectUpdateBuilder plusActions(
@@ -79,7 +81,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     *  <p>Update actions to be performed on the Project.</p>
+     <*  <p>Update actions to be performed on the Project.</p>>
      */
 
     public ProjectUpdateBuilder withActions(

@@ -13,24 +13,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCustomerResetPassword myCustomerResetPassword = MyCustomerResetPassword.builder()
-           .tokenValue("{tokenValue}")
-           .newPassword("{newPassword}")
-           .build()
- </code></pre>
- </div>
+ * MyCustomerResetPassword
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerResetPassword myCustomerResetPassword = MyCustomerResetPassword.builder()
+ *             .tokenValue("{tokenValue}")
+ *             .newPassword("{newPassword}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerResetPasswordImpl.class)
 public interface MyCustomerResetPassword {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("tokenValue")
     public String getTokenValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("newPassword")
     public String getNewPassword();

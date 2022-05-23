@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProjectNotConfiguredForLanguagesError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConfiguredForLanguagesError, ModelBase {
 
@@ -39,17 +42,33 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
         this.code = PROJECT_NOT_CONFIGURED_FOR_LANGUAGES;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getLanguages() {
         return this.languages;

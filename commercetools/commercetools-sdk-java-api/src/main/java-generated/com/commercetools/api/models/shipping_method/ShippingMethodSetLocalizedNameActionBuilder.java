@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodSetLocalizedNameAction shippingMethodSetLocalizedNameAction = ShippingMethodSetLocalizedNameAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodSetLocalizedNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodSetLocalizedNameAction shippingMethodSetLocalizedNameAction = ShippingMethodSetLocalizedNameAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<ShippingMethodSetLocalizedNameAction> {
@@ -24,11 +26,19 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedName;
 
+    /**
+     <>
+     */
+
     public ShippingMethodSetLocalizedNameActionBuilder localizedName(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodSetLocalizedNameActionBuilder localizedName(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {

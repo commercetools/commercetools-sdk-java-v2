@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InventoryEntryDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
@@ -50,36 +53,58 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     public InventoryEntryDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
 
     /**
-     *  <p>User-defined unique identifier for the InventoryEntry.</p>
+     <*  <p>User-defined unique identifier for the InventoryEntry.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
+    /**
+     <>
+     */
+
     public Long getQuantityOnStock() {
         return this.quantityOnStock;
     }
 
+    /**
+     <>
+     */
+
     public Long getRestockableInDays() {
         return this.restockableInDays;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getExpectedDelivery() {
         return this.expectedDelivery;
     }
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

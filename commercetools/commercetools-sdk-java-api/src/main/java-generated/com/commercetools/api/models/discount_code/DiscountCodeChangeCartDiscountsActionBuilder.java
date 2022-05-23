@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeChangeCartDiscountsAction discountCodeChangeCartDiscountsAction = DiscountCodeChangeCartDiscountsAction.builder()
-           .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeChangeCartDiscountsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeChangeCartDiscountsAction discountCodeChangeCartDiscountsAction = DiscountCodeChangeCartDiscountsAction.builder()
+ *             .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<DiscountCodeChangeCartDiscountsAction> {
@@ -23,7 +25,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
     /**
-     *  <p>New value to set.</p>
+     <*  <p>New value to set.</p>>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
@@ -33,7 +35,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     *  <p>New value to set.</p>
+     <*  <p>New value to set.</p>>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
@@ -43,7 +45,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     *  <p>New value to set.</p>
+     <*  <p>New value to set.</p>>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
@@ -56,7 +58,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     *  <p>New value to set.</p>
+     <*  <p>New value to set.</p>>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
@@ -71,7 +73,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     *  <p>New value to set.</p>
+     <*  <p>New value to set.</p>>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(

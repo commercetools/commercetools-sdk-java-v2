@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreCreatedMessagePayload storeCreatedMessagePayload = StoreCreatedMessagePayload.builder()
-           .plusLanguages(languagesBuilder -> languagesBuilder)
-           .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
-           .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
-           .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * StoreCreatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreCreatedMessagePayload storeCreatedMessagePayload = StoreCreatedMessagePayload.builder()
+ *             .plusLanguages(languagesBuilder -> languagesBuilder)
+ *             .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
+ *             .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
+ *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMessagePayload> {
@@ -40,7 +42,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public StoreCreatedMessagePayloadBuilder name(
@@ -50,7 +52,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public StoreCreatedMessagePayloadBuilder name(
@@ -59,15 +61,27 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder languages(final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder languages(final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreCreatedMessagePayloadBuilder plusLanguages(final String... languages) {
         if (this.languages == null) {
@@ -77,17 +91,29 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder distributionChannels(
             final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
         this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder distributionChannels(
             final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
         this.distributionChannels = distributionChannels;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreCreatedMessagePayloadBuilder plusDistributionChannels(
             final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
@@ -98,6 +124,10 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder plusDistributionChannels(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         if (this.distributionChannels == null) {
@@ -108,6 +138,10 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder withDistributionChannels(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.distributionChannels = new ArrayList<>();
@@ -116,17 +150,29 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder supplyChannels(
             final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {
         this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder supplyChannels(
             final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
         this.supplyChannels = supplyChannels;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreCreatedMessagePayloadBuilder plusSupplyChannels(
             final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {
@@ -137,6 +183,10 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder plusSupplyChannels(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         if (this.supplyChannels == null) {
@@ -147,6 +197,10 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder withSupplyChannels(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannels = new ArrayList<>();
@@ -155,17 +209,29 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder productSelections(
             final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
         this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder productSelections(
             final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
         this.productSelections = productSelections;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreCreatedMessagePayloadBuilder plusProductSelections(
             final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
@@ -176,6 +242,10 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder plusProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         if (this.productSelections == null) {
@@ -186,6 +256,10 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreCreatedMessagePayloadBuilder withProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         this.productSelections = new ArrayList<>();
@@ -195,7 +269,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
 
     public StoreCreatedMessagePayloadBuilder custom(
@@ -205,7 +279,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
 
     public StoreCreatedMessagePayloadBuilder custom(

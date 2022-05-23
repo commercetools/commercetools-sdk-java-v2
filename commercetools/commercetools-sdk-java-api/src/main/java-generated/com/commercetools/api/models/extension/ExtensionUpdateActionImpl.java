@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ExtensionUpdateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionUpdateActionImpl implements ExtensionUpdateAction, ModelBase {
 
@@ -26,6 +29,10 @@ public class ExtensionUpdateActionImpl implements ExtensionUpdateAction, ModelBa
 
     public ExtensionUpdateActionImpl() {
     }
+
+    /**
+     <>
+     */
 
     public String getAction() {
         return this.action;

@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomLineItemTaxedPriceChange setCustomLineItemTaxedPriceChange = SetCustomLineItemTaxedPriceChange.builder()
-           .change("{change}")
-           .customLineItem(customLineItemBuilder -> customLineItemBuilder)
-           .customLineItemId("{customLineItemId}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCustomLineItemTaxedPriceChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemTaxedPriceChange setCustomLineItemTaxedPriceChange = SetCustomLineItemTaxedPriceChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCustomLineItemTaxedPriceChange> {
@@ -35,13 +37,17 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     private com.commercetools.history.models.common.Money previousValue;
 
     /**
-     *  <p>Update action for <code>setCustomLineItemTaxedPrice</code></p>
+     <*  <p>Update action for <code>setCustomLineItemTaxedPrice</code></p>>
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemTaxedPriceChangeBuilder customLineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -50,16 +56,28 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemTaxedPriceChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemTaxedPriceChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemTaxedPriceChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -67,17 +85,29 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemTaxedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.Money nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemTaxedPriceChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemTaxedPriceChangeBuilder previousValue(
             final com.commercetools.history.models.common.Money previousValue) {

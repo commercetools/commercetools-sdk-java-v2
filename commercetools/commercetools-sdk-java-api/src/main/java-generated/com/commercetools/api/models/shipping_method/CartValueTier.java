@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartValueTier cartValueTier = CartValueTier.builder()
-           .minimumCentAmount(1)
-           .price(priceBuilder -> priceBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartValueTier
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartValueTier cartValueTier = CartValueTier.builder()
+ *             .minimumCentAmount(1)
+ *             .price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartValueTierImpl.class)
@@ -31,18 +34,25 @@ public interface CartValueTier extends ShippingRatePriceTier {
 
     String CART_VALUE = "CartValue";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("minimumCentAmount")
     public Long getMinimumCentAmount();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("price")
     public Money getPrice();
+
+    /**
+     <>
+     */
 
     @JsonProperty("isMatching")
     public Boolean getIsMatching();

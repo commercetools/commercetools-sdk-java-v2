@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   GeoJsonPoint geoJsonPoint = GeoJsonPoint.builder()
-           .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
-           .build()
- </code></pre>
- </div>
+ * GeoJsonPoint
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GeoJsonPoint geoJsonPoint = GeoJsonPoint.builder()
+ *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GeoJsonPointImpl.class)
@@ -29,7 +32,7 @@ public interface GeoJsonPoint extends GeoJson {
     String POINT = "Point";
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     <*  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>>
      */
     @NotNull
     @JsonProperty("coordinates")

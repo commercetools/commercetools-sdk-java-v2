@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AccessDeniedError accessDeniedError = AccessDeniedError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * AccessDeniedErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AccessDeniedError accessDeniedError = AccessDeniedError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
 
     private String message;
+
+    /**
+     <>
+     */
 
     public AccessDeniedErrorBuilder message(final String message) {
         this.message = message;

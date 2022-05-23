@@ -36,11 +36,16 @@ public class ReferenceSetFieldImpl implements ReferenceSetField, ModelBase {
     }
 
     /**
-     *  <p>The type of this field.</p>
+     <*  <p>The type of this field.</p>>
      */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.KeyReference> getValue() {
         return this.value;

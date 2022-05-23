@@ -15,19 +15,22 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetDiscountedPriceChange setDiscountedPriceChange = SetDiscountedPriceChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .variant("{variant}")
-           .priceId("{priceId}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetDiscountedPriceChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetDiscountedPriceChange setDiscountedPriceChange = SetDiscountedPriceChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
+ *             .priceId("{priceId}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetDiscountedPriceChangeImpl.class)
@@ -35,34 +38,52 @@ public interface SetDiscountedPriceChange extends Change {
 
     String SET_DISCOUNTED_PRICE_CHANGE = "SetDiscountedPriceChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>setDiscountedPrice</code></p>
+     <*  <p>Update action for <code>setDiscountedPrice</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public Price getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

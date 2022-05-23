@@ -16,22 +16,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderCustomLineItemDiscountSetMessage orderCustomLineItemDiscountSetMessage = OrderCustomLineItemDiscountSetMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .customLineItemId("{customLineItemId}")
-           .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderCustomLineItemDiscountSetMessage
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomLineItemDiscountSetMessage orderCustomLineItemDiscountSetMessage = OrderCustomLineItemDiscountSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .customLineItemId("{customLineItemId}")
+ *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomLineItemDiscountSetMessageImpl.class)
@@ -39,15 +42,24 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
 
     String ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET = "OrderCustomLineItemDiscountSet";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();

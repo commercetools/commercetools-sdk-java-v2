@@ -10,23 +10,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductPublishedMessage productPublishedMessage = ProductPublishedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
-           .productProjection(productProjectionBuilder -> productProjectionBuilder)
-           .scope(ProductPublishScope.ALL)
-           .build()
- </code></pre>
- </div>
+ * ProductPublishedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPublishedMessage productPublishedMessage = ProductPublishedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .productProjection(productProjectionBuilder -> productProjectionBuilder)
+ *             .scope(ProductPublishScope.ALL)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPublishedMessageBuilder implements Builder<ProductPublishedMessage> {
@@ -61,7 +63,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public ProductPublishedMessageBuilder id(final String id) {
@@ -69,15 +71,27 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPublishedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -85,7 +99,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ProductPublishedMessageBuilder lastModifiedBy(
@@ -95,7 +109,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ProductPublishedMessageBuilder lastModifiedBy(
@@ -105,7 +119,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ProductPublishedMessageBuilder createdBy(
@@ -115,7 +129,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ProductPublishedMessageBuilder createdBy(
@@ -124,13 +138,17 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public ProductPublishedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -139,7 +157,7 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public ProductPublishedMessageBuilder resource(
@@ -148,10 +166,18 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPublishedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -161,21 +187,37 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder removedImageUrls(final String... removedImageUrls) {
         this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPublishedMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {
         if (this.removedImageUrls == null) {
@@ -185,6 +227,10 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder productProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
@@ -192,11 +238,19 @@ public class ProductPublishedMessageBuilder implements Builder<ProductPublishedM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductPublishedMessageBuilder productProjection(
             final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductPublishedMessageBuilder scope(final com.commercetools.api.models.cart.ProductPublishScope scope) {
         this.scope = scope;

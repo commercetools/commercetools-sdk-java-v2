@@ -34,9 +34,17 @@ public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShipp
     public SetCartScoreShippingRateInputValueImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public Integer getScore() {
         return this.score;

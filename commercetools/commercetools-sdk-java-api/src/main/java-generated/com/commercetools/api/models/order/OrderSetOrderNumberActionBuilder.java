@@ -9,19 +9,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetOrderNumberAction orderSetOrderNumberAction = OrderSetOrderNumberAction.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderSetOrderNumberActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetOrderNumberAction orderSetOrderNumberAction = OrderSetOrderNumberAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNumberAction> {
 
     @Nullable
     private String orderNumber;
+
+    /**
+     <>
+     */
 
     public OrderSetOrderNumberActionBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;

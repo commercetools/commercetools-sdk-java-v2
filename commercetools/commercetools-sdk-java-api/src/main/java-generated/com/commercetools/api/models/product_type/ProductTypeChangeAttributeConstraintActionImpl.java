@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeChangeAttributeConstraintAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeConstraintActionImpl
         implements ProductTypeChangeAttributeConstraintAction, ModelBase {
@@ -36,13 +39,25 @@ public class ProductTypeChangeAttributeConstraintActionImpl
         this.action = CHANGE_ATTRIBUTE_CONSTRAINT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product_type.AttributeConstraintEnumDraft getNewValue() {
         return this.newValue;

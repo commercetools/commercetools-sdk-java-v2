@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AWSLambdaDestination aWSLambdaDestination = AWSLambdaDestination.builder()
-           .arn("{arn}")
-           .accessKey("{accessKey}")
-           .accessSecret("{accessSecret}")
-           .build()
- </code></pre>
- </div>
+ * AWSLambdaDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AWSLambdaDestination aWSLambdaDestination = AWSLambdaDestination.builder()
+ *             .arn("{arn}")
+ *             .accessKey("{accessKey}")
+ *             .accessSecret("{accessSecret}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination> {
@@ -28,7 +30,7 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
     private String accessSecret;
 
     /**
-     *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>
+     <*  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>>
      */
 
     public AWSLambdaDestinationBuilder arn(final String arn) {
@@ -37,7 +39,7 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
     }
 
     /**
-     *  <p>Partially hidden on retrieval for security reasons.</p>
+     <*  <p>Partially hidden on retrieval for security reasons.</p>>
      */
 
     public AWSLambdaDestinationBuilder accessKey(final String accessKey) {
@@ -46,7 +48,7 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
     }
 
     /**
-     *  <p>Partially hidden on retrieval for security reasons.</p>
+     <*  <p>Partially hidden on retrieval for security reasons.</p>>
      */
 
     public AWSLambdaDestinationBuilder accessSecret(final String accessSecret) {

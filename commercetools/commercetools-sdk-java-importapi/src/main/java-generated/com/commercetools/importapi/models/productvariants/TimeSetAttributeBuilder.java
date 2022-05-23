@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TimeSetAttribute timeSetAttribute = TimeSetAttribute.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * TimeSetAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TimeSetAttribute timeSetAttribute = TimeSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
@@ -27,7 +29,7 @@ public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
     private java.util.List<java.time.LocalTime> value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
      */
 
     public TimeSetAttributeBuilder name(@Nullable final String name) {
@@ -35,15 +37,27 @@ public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TimeSetAttributeBuilder value(final java.time.LocalTime... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public TimeSetAttributeBuilder value(final java.util.List<java.time.LocalTime> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public TimeSetAttributeBuilder plusValue(final java.time.LocalTime... value) {
         if (this.value == null) {

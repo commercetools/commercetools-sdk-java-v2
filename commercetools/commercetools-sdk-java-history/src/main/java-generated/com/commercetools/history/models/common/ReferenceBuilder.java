@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Reference reference = Reference.builder()
-           .id("{id}")
-           .typeId(ReferenceTypeId.CART)
-           .build()
- </code></pre>
- </div>
+ * ReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Reference reference = Reference.builder()
+ *             .id("{id}")
+ *             .typeId(ReferenceTypeId.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceBuilder implements Builder<Reference> {
@@ -24,10 +26,18 @@ public class ReferenceBuilder implements Builder<Reference> {
 
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
 
+    /**
+     <>
+     */
+
     public ReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReferenceBuilder typeId(final com.commercetools.history.models.common.ReferenceTypeId typeId) {
         this.typeId = typeId;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartUpdateItemShippingAddressAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartUpdateItemShippingAddressActionImpl implements CartUpdateItemShippingAddressAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CartUpdateItemShippingAddressActionImpl implements CartUpdateItemSh
         this.action = UPDATE_ITEM_SHIPPING_ADDRESS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;

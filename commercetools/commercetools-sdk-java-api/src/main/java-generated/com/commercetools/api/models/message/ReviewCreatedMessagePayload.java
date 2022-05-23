@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewCreatedMessagePayload reviewCreatedMessagePayload = ReviewCreatedMessagePayload.builder()
-           .review(reviewBuilder -> reviewBuilder)
-           .build()
- </code></pre>
- </div>
+ * ReviewCreatedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewCreatedMessagePayload reviewCreatedMessagePayload = ReviewCreatedMessagePayload.builder()
+ *             .review(reviewBuilder -> reviewBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewCreatedMessagePayloadImpl.class)
@@ -30,6 +33,9 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
 
     String REVIEW_CREATED = "ReviewCreated";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("review")

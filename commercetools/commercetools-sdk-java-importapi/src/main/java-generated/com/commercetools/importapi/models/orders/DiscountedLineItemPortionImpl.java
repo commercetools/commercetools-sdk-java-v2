@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DiscountedLineItemPortion
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion, ModelBase {
 
@@ -33,11 +36,16 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *  <p>References a cart discount by key.</p>
+     <*  <p>References a cart discount by key.</p>>
      */
+
     public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount() {
         return this.discount;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.importapi.models.common.Money getDiscountedAmount() {
         return this.discountedAmount;

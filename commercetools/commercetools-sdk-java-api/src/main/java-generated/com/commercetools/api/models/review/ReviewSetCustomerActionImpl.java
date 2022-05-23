@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ReviewSetCustomerAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetCustomerActionImpl implements ReviewSetCustomerAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ReviewSetCustomerActionImpl implements ReviewSetCustomerAction, Mod
         this.action = SET_CUSTOMER;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     <*  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
      */
+
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
     }

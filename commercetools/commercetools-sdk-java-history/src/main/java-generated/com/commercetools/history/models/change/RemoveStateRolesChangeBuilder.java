@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveStateRolesChange removeStateRolesChange = RemoveStateRolesChange.builder()
-           .change("{change}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveStateRolesChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveStateRolesChange removeStateRolesChange = RemoveStateRolesChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesChange> {
@@ -27,10 +29,18 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
 
     private java.util.List<com.commercetools.history.models.common.StateRole> nextValue;
 
+    /**
+     <>
+     */
+
     public RemoveStateRolesChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveStateRolesChangeBuilder previousValue(
             final com.commercetools.history.models.common.StateRole... previousValue) {
@@ -38,11 +48,19 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveStateRolesChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.StateRole> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveStateRolesChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.StateRole... previousValue) {
@@ -53,17 +71,29 @@ public class RemoveStateRolesChangeBuilder implements Builder<RemoveStateRolesCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveStateRolesChangeBuilder nextValue(
             final com.commercetools.history.models.common.StateRole... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveStateRolesChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.StateRole> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveStateRolesChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.StateRole... nextValue) {

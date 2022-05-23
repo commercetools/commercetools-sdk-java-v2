@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetSearchKeywordsChange setSearchKeywordsChange = SetSearchKeywordsChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetSearchKeywordsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetSearchKeywordsChange setSearchKeywordsChange = SetSearchKeywordsChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywordsChange> {
@@ -32,7 +34,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     private com.commercetools.history.models.common.SearchKeywords nextValue;
 
     /**
-     *  <p>Update action for <code>setSearchKeywords</code></p>
+     <*  <p>Update action for <code>setSearchKeywords</code></p>>
      */
 
     public SetSearchKeywordsChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSearchKeywordsChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetSearchKeywordsChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywordsBuilder> builder) {
@@ -51,17 +61,29 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSearchKeywordsChangeBuilder previousValue(
             final com.commercetools.history.models.common.SearchKeywords previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetSearchKeywordsChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywordsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.SearchKeywordsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetSearchKeywordsChangeBuilder nextValue(
             final com.commercetools.history.models.common.SearchKeywords nextValue) {

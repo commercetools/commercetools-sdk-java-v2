@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeChangeEnumValueLabelAction typeChangeEnumValueLabelAction = TypeChangeEnumValueLabelAction.builder()
-           .fieldName("{fieldName}")
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeChangeEnumValueLabelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeEnumValueLabelAction typeChangeEnumValueLabelAction = TypeChangeEnumValueLabelAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChangeEnumValueLabelAction> {
@@ -26,7 +28,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
      */
 
     public TypeChangeEnumValueLabelActionBuilder fieldName(final String fieldName) {
@@ -35,7 +37,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public TypeChangeEnumValueLabelActionBuilder value(
@@ -45,7 +47,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public TypeChangeEnumValueLabelActionBuilder value(

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddTextLineItemChange addTextLineItemChange = AddTextLineItemChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddTextLineItemChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddTextLineItemChange addTextLineItemChange = AddTextLineItemChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChange> {
@@ -25,16 +27,28 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
 
     private com.commercetools.history.models.common.TextLineItem nextValue;
 
+    /**
+     <>
+     */
+
     public AddTextLineItemChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddTextLineItemChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItemBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TextLineItemBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddTextLineItemChangeBuilder nextValue(
             final com.commercetools.history.models.common.TextLineItem nextValue) {

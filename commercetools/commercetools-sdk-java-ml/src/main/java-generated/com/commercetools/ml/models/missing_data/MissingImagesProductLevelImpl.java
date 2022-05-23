@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MissingImagesProductLevel
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingImagesProductLevelImpl implements MissingImagesProductLevel, ModelBase {
 
@@ -32,15 +35,17 @@ public class MissingImagesProductLevelImpl implements MissingImagesProductLevel,
     }
 
     /**
-     *  <p>Number of products missing images.</p>
+     <*  <p>Number of products missing images.</p>>
      */
+
     public Long getMissingImages() {
         return this.missingImages;
     }
 
     /**
-     *  <p>Number of products scanned.</p>
+     <*  <p>Number of products scanned.</p>>
      */
+
     public Long getTotal() {
         return this.total;
     }

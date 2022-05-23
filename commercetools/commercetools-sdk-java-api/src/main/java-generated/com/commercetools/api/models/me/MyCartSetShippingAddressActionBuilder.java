@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartSetShippingAddressAction myCartSetShippingAddressAction = MyCartSetShippingAddressAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCartSetShippingAddressActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartSetShippingAddressAction myCartSetShippingAddressAction = MyCartSetShippingAddressAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetShippingAddressActionBuilder implements Builder<MyCartSetShippingAddressAction> {
@@ -24,11 +26,19 @@ public class MyCartSetShippingAddressActionBuilder implements Builder<MyCartSetS
     @Nullable
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     <>
+     */
+
     public MyCartSetShippingAddressActionBuilder address(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartSetShippingAddressActionBuilder address(
             @Nullable final com.commercetools.api.models.common.BaseAddress address) {

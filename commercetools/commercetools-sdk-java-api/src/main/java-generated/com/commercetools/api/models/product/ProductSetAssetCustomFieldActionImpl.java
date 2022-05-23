@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetAssetCustomFieldAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCustomFieldAction, ModelBase {
 
@@ -52,40 +55,66 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
         this.action = SET_ASSET_CUSTOM_FIELD;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetId() {
         return this.assetId;
     }
+
+    /**
+     <>
+     */
 
     public String getAssetKey() {
         return this.assetKey;
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     <*  <p>Name of the Custom Field.</p>>
      */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
      */
+
     public java.lang.Object getValue() {
         return this.value;
     }

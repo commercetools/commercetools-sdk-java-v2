@@ -13,78 +13,79 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Order fields that needs to be added or updated.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderField orderField = OrderField.builder()
-           .build()
- </code></pre>
- </div>
+ *  <p>Order fields that needs to be added or updated.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderField orderField = OrderField.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderFieldImpl.class)
 public interface OrderField {
 
     /**
-     *  <p>Maps to <code>Order.returnInfo</code></p>
+     <*  <p>Maps to <code>Order.returnInfo</code></p>>
      */
     @Valid
     @JsonProperty("addReturnInfo")
     public ReturnInfo getAddReturnInfo();
 
     /**
-     *  <p>Maps to <code>Order.delivery</code></p>
+     <*  <p>Maps to <code>Order.delivery</code></p>>
      */
     @Valid
     @JsonProperty("addParcelToDelivery")
     public DeliveryParcel getAddParcelToDelivery();
 
     /**
-     *  <p>Maps to <code>Order.delivery</code></p>
+     <*  <p>Maps to <code>Order.delivery</code></p>>
      */
     @Valid
     @JsonProperty("addDeliveries")
     public List<DeliveryDraft> getAddDeliveries();
 
     /**
-     *  <p>Maps to <code>Order.removeDelivery</code></p>
+     <*  <p>Maps to <code>Order.removeDelivery</code></p>>
      */
     @Valid
     @JsonProperty("removeDelivery")
     public RemoveDeliveryDraft getRemoveDelivery();
 
     /**
-     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     <*  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>>
      */
     @Valid
     @JsonProperty("removeParcelFromDelivery")
     public RemoveParcelFromDeliveryDraft getRemoveParcelFromDelivery();
 
     /**
-     *  <p>Maps to <code>Order.addressDraft</code></p>
+     <*  <p>Maps to <code>Order.addressDraft</code></p>>
      */
     @Valid
     @JsonProperty("setDeliveryAddress")
     public DeliveryAddressDraft getSetDeliveryAddress();
 
     /**
-     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     <*  <p>Maps to <code>Order.parcelMeasurements</code></p>>
      */
     @Valid
     @JsonProperty("setParcelMeasurements")
     public ParcelMeasurementDraft getSetParcelMeasurements();
 
     /**
-     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     <*  <p>Maps to <code>Order.parcelTrackingData</code></p>>
      */
     @Valid
     @JsonProperty("setParcelTrackingData")
     public ParcelTrackingData getSetParcelTrackingData();
 
     /**
-     *  <p>Maps to <code>Order.parcelItems</code></p>
+     <*  <p>Maps to <code>Order.parcelItems</code></p>>
      */
     @Valid
     @JsonProperty("setParcelItems")

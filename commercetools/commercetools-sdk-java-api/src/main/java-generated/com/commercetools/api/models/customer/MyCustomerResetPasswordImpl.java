@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCustomerResetPassword
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerResetPasswordImpl implements MyCustomerResetPassword, ModelBase {
 
@@ -31,9 +34,17 @@ public class MyCustomerResetPasswordImpl implements MyCustomerResetPassword, Mod
     public MyCustomerResetPasswordImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getTokenValue() {
         return this.tokenValue;
     }
+
+    /**
+     <>
+     */
 
     public String getNewPassword() {
         return this.newPassword;

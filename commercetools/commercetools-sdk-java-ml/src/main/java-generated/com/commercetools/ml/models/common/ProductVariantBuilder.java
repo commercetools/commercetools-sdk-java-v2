@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariant productVariant = ProductVariant.builder()
-           .product(productBuilder -> productBuilder)
-           .staged(true)
-           .variantId(0.3)
-           .build()
- </code></pre>
- </div>
+ * ProductVariantBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariant productVariant = ProductVariant.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .staged(true)
+ *             .variantId(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantBuilder implements Builder<ProductVariant> {
@@ -29,7 +31,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     private Integer variantId;
 
     /**
-     *  <p>The product that contains this variant.</p>
+     <*  <p>The product that contains this variant.</p>>
      */
 
     public ProductVariantBuilder product(
@@ -39,7 +41,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The product that contains this variant.</p>
+     <*  <p>The product that contains this variant.</p>>
      */
 
     public ProductVariantBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
@@ -48,7 +50,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The state of the product variant.</p>
+     <*  <p>The state of the product variant.</p>>
      */
 
     public ProductVariantBuilder staged(final Boolean staged) {
@@ -57,7 +59,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>The id of the product variant.</p>
+     <*  <p>The id of the product variant.</p>>
      */
 
     public ProductVariantBuilder variantId(final Integer variantId) {

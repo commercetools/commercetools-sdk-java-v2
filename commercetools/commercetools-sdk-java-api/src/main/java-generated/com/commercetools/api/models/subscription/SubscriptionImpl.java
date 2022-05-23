@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * Subscription
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionImpl implements Subscription, ModelBase {
 
@@ -71,60 +74,96 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the Subscription.</p>
+     <*  <p>Platform-generated unique identifier of the Subscription.</p>>
      */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     <*  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>>
      */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     <*  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>>
      */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
         return this.changes;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {
         return this.destination;
     }
 
     /**
-     *  <p>User-defined unique identifier of the Subscription.</p>
+     <*  <p>User-defined unique identifier of the Subscription.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
         return this.messages;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {
         return this.format;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.subscription.SubscriptionHealthStatus getStatus() {
         return this.status;

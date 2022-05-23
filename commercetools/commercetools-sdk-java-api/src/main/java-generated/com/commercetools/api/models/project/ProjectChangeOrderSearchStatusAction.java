@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectChangeOrderSearchStatusAction projectChangeOrderSearchStatusAction = ProjectChangeOrderSearchStatusAction.builder()
-           .status(OrderSearchStatus.ACTIVATED)
-           .build()
- </code></pre>
- </div>
+ * ProjectChangeOrderSearchStatusAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectChangeOrderSearchStatusAction projectChangeOrderSearchStatusAction = ProjectChangeOrderSearchStatusAction.builder()
+ *             .status(OrderSearchStatus.ACTIVATED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeOrderSearchStatusActionImpl.class)
@@ -29,7 +32,7 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     String CHANGE_ORDER_SEARCH_STATUS = "changeOrderSearchStatus";
 
     /**
-     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     <*  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>>
      */
     @NotNull
     @JsonProperty("status")

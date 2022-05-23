@@ -7,29 +7,43 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   NumberSetField numberSetField = NumberSetField.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * NumberSetFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     NumberSetField numberSetField = NumberSetField.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class NumberSetFieldBuilder implements Builder<NumberSetField> {
 
     private java.util.List<Double> value;
 
+    /**
+     <>
+     */
+
     public NumberSetFieldBuilder value(final Double... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public NumberSetFieldBuilder value(final java.util.List<Double> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public NumberSetFieldBuilder plusValue(final Double... value) {
         if (this.value == null) {

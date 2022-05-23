@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeImportRequest productTypeImportRequest = ProductTypeImportRequest.builder()
-           .plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeImportRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeImportRequest productTypeImportRequest = ProductTypeImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImportRequest> {
@@ -23,7 +25,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
     private java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources;
 
     /**
-     *  <p>The product type import resources of this request.</p>
+     <*  <p>The product type import resources of this request.</p>>
      */
 
     public ProductTypeImportRequestBuilder resources(
@@ -33,7 +35,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
     }
 
     /**
-     *  <p>The product type import resources of this request.</p>
+     <*  <p>The product type import resources of this request.</p>>
      */
 
     public ProductTypeImportRequestBuilder resources(
@@ -43,7 +45,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
     }
 
     /**
-     *  <p>The product type import resources of this request.</p>
+     <*  <p>The product type import resources of this request.</p>>
      */
 
     public ProductTypeImportRequestBuilder plusResources(
@@ -56,7 +58,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
     }
 
     /**
-     *  <p>The product type import resources of this request.</p>
+     <*  <p>The product type import resources of this request.</p>>
      */
 
     public ProductTypeImportRequestBuilder plusResources(
@@ -70,7 +72,7 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
     }
 
     /**
-     *  <p>The product type import resources of this request.</p>
+     <*  <p>The product type import resources of this request.</p>>
      */
 
     public ProductTypeImportRequestBuilder withResources(

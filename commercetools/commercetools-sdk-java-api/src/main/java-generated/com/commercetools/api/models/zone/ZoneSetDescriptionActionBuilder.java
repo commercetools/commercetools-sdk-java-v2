@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneSetDescriptionAction zoneSetDescriptionAction = ZoneSetDescriptionAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ZoneSetDescriptionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneSetDescriptionAction zoneSetDescriptionAction = ZoneSetDescriptionAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneSetDescriptionActionBuilder implements Builder<ZoneSetDescriptionAction> {
@@ -24,7 +26,7 @@ public class ZoneSetDescriptionActionBuilder implements Builder<ZoneSetDescripti
     private String description;
 
     /**
-     *  <p>Description of the Zone.</p>
+     <*  <p>Description of the Zone.</p>>
      */
 
     public ZoneSetDescriptionActionBuilder description(@Nullable final String description) {

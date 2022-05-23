@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PayloadNotIncluded payloadNotIncluded = PayloadNotIncluded.builder()
-           .reason("{reason}")
-           .payloadType("{payloadType}")
-           .build()
- </code></pre>
- </div>
+ * PayloadNotIncludedBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PayloadNotIncluded payloadNotIncluded = PayloadNotIncluded.builder()
+ *             .reason("{reason}")
+ *             .payloadType("{payloadType}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
@@ -24,10 +26,18 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
 
     private String payloadType;
 
+    /**
+     <>
+     */
+
     public PayloadNotIncludedBuilder reason(final String reason) {
         this.reason = reason;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PayloadNotIncludedBuilder payloadType(final String payloadType) {
         this.payloadType = payloadType;

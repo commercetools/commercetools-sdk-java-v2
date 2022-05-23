@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StoreAddDistributionChannelAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreAddDistributionChannelActionImpl implements StoreAddDistributionChannelAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class StoreAddDistributionChannelActionImpl implements StoreAddDistributi
         this.action = ADD_DISTRIBUTION_CHANNEL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;

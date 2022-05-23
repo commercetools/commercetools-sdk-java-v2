@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeChangeAttributeOrderAction productTypeChangeAttributeOrderAction = ProductTypeChangeAttributeOrderAction.builder()
-           .plusAttributes(attributesBuilder -> attributesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeChangeAttributeOrderAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeAttributeOrderAction productTypeChangeAttributeOrderAction = ProductTypeChangeAttributeOrderAction.builder()
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeAttributeOrderActionImpl.class)
@@ -29,6 +32,9 @@ public interface ProductTypeChangeAttributeOrderAction extends ProductTypeUpdate
 
     String CHANGE_ATTRIBUTE_ORDER = "changeAttributeOrder";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("attributes")

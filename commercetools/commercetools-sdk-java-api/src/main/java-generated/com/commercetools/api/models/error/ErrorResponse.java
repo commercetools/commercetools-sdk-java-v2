@@ -14,34 +14,54 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ErrorResponse errorResponse = ErrorResponse.builder()
-           .statusCode(1)
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ErrorResponse
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorResponse errorResponse = ErrorResponse.builder()
+ *             .statusCode(1)
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ErrorResponseImpl.class)
 public interface ErrorResponse {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("statusCode")
     public Integer getStatusCode();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     <>
+     */
+
     @JsonProperty("error")
     public String getError();
+
+    /**
+     <>
+     */
 
     @JsonProperty("error_description")
     public String getErrorDescription();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("errors")
     public List<ErrorObject> getErrors();

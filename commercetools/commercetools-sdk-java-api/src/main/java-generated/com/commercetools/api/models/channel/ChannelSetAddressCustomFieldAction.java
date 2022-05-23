@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelSetAddressCustomFieldAction channelSetAddressCustomFieldAction = ChannelSetAddressCustomFieldAction.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * ChannelSetAddressCustomFieldAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelSetAddressCustomFieldAction channelSetAddressCustomFieldAction = ChannelSetAddressCustomFieldAction.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelSetAddressCustomFieldActionImpl.class)
@@ -29,14 +32,14 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     String SET_ADDRESS_CUSTOM_FIELD = "setAddressCustomField";
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     <*  <p>Name of the Custom Field.</p>>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
+     <*  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>>
      */
 
     @JsonProperty("value")

@@ -13,16 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   EnumKeyAlreadyExistsError enumKeyAlreadyExistsError = EnumKeyAlreadyExistsError.builder()
-           .message("{message}")
-           .conflictingEnumKey("{conflictingEnumKey}")
-           .conflictingAttributeName("{conflictingAttributeName}")
-           .build()
- </code></pre>
- </div>
+ * EnumKeyAlreadyExistsError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EnumKeyAlreadyExistsError enumKeyAlreadyExistsError = EnumKeyAlreadyExistsError.builder()
+ *             .message("{message}")
+ *             .conflictingEnumKey("{conflictingEnumKey}")
+ *             .conflictingAttributeName("{conflictingAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EnumKeyAlreadyExistsErrorImpl.class)
@@ -30,10 +33,16 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
 
     String ENUM_KEY_ALREADY_EXISTS = "EnumKeyAlreadyExists";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();

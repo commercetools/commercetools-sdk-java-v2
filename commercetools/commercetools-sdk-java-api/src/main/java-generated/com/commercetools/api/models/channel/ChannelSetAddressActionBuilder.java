@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelSetAddressAction channelSetAddressAction = ChannelSetAddressAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ChannelSetAddressActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelSetAddressAction channelSetAddressAction = ChannelSetAddressAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddressAction> {
@@ -25,7 +27,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public ChannelSetAddressActionBuilder address(
@@ -35,7 +37,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public ChannelSetAddressActionBuilder address(

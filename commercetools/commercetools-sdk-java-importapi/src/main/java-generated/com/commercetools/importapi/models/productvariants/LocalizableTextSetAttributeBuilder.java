@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LocalizableTextSetAttribute localizableTextSetAttribute = LocalizableTextSetAttribute.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * LocalizableTextSetAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LocalizableTextSetAttribute localizableTextSetAttribute = LocalizableTextSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTextSetAttribute> {
@@ -28,7 +30,7 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
     private java.util.List<com.commercetools.importapi.models.common.LocalizedString> value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
      */
 
     public LocalizableTextSetAttributeBuilder name(@Nullable final String name) {
@@ -36,17 +38,29 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LocalizableTextSetAttributeBuilder value(
             final com.commercetools.importapi.models.common.LocalizedString... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LocalizableTextSetAttributeBuilder value(
             final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LocalizableTextSetAttributeBuilder plusValue(
             final com.commercetools.importapi.models.common.LocalizedString... value) {
@@ -57,6 +71,10 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LocalizableTextSetAttributeBuilder plusValue(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         if (this.value == null) {
@@ -65,6 +83,10 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
         this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LocalizableTextSetAttributeBuilder withValue(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {

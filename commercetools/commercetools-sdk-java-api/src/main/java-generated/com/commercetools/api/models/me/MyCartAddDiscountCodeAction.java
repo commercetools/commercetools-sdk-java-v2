@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartAddDiscountCodeAction myCartAddDiscountCodeAction = MyCartAddDiscountCodeAction.builder()
-           .code("{code}")
-           .build()
- </code></pre>
- </div>
+ * MyCartAddDiscountCodeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartAddDiscountCodeAction myCartAddDiscountCodeAction = MyCartAddDiscountCodeAction.builder()
+ *             .code("{code}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartAddDiscountCodeActionImpl.class)
@@ -28,6 +31,9 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
 
     String ADD_DISCOUNT_CODE = "addDiscountCode";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("code")
     public String getCode();

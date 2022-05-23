@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ResourceNotFoundError resourceNotFoundError = ResourceNotFoundError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ResourceNotFoundErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResourceNotFoundError resourceNotFoundError = ResourceNotFoundError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundError> {
@@ -23,15 +25,27 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public ResourceNotFoundErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

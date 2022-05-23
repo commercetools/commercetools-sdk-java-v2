@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Reference to a CartDiscount.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountReference cartDiscountReference = CartDiscountReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Reference to a CartDiscount.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountReference cartDiscountReference = CartDiscountReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountReferenceImpl.class)
@@ -33,14 +34,14 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     String CART_DISCOUNT = "cart-discount";
 
     /**
-     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     <*  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>>
      */
     @Valid
     @JsonProperty("obj")
     public CartDiscount getObj();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>
+     <*  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>>
      */
     @NotNull
     @JsonProperty("id")

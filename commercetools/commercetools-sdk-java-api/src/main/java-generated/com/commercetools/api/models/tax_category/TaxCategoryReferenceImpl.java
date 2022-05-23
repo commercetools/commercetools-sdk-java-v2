@@ -40,22 +40,25 @@ public class TaxCategoryReferenceImpl implements TaxCategoryReference, ModelBase
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>
+     <*  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     <*  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>>
      */
+
     public com.commercetools.api.models.tax_category.TaxCategory getObj() {
         return this.obj;
     }

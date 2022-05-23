@@ -9,19 +9,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductPublishAction productPublishAction = ProductPublishAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductPublishActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPublishAction productPublishAction = ProductPublishAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPublishActionBuilder implements Builder<ProductPublishAction> {
 
     @Nullable
     private com.commercetools.api.models.cart.ProductPublishScope scope;
+
+    /**
+     <>
+     */
 
     public ProductPublishActionBuilder scope(
             @Nullable final com.commercetools.api.models.cart.ProductPublishScope scope) {

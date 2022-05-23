@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShoppingListLineItem
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase {
 
@@ -67,60 +70,89 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     public ShoppingListLineItemImpl() {
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getDeactivatedAt() {
         return this.deactivatedAt;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>
+     <*  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     <>
+     */
 
     public String getProductId() {
         return this.productId;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getProductSlug() {
         return this.productSlug;
     }
 
     /**
-     *  <p>Reference to a ProductType.</p>
+     <*  <p>Reference to a ProductType.</p>>
      */
+
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
+
+    /**
+     <>
+     */
 
     public Integer getQuantity() {
         return this.quantity;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;

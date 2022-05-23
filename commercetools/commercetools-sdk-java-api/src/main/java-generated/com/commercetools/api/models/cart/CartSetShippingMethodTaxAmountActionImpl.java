@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartSetShippingMethodTaxAmountAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShippingMethodTaxAmountAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
         this.action = SET_SHIPPING_METHOD_TAX_AMOUNT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
         return this.externalTaxAmount;

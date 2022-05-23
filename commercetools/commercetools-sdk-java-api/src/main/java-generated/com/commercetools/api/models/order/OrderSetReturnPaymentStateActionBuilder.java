@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetReturnPaymentStateAction orderSetReturnPaymentStateAction = OrderSetReturnPaymentStateAction.builder()
-           .returnItemId("{returnItemId}")
-           .paymentState(ReturnPaymentState.NON_REFUNDABLE)
-           .build()
- </code></pre>
- </div>
+ * OrderSetReturnPaymentStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetReturnPaymentStateAction orderSetReturnPaymentStateAction = OrderSetReturnPaymentStateAction.builder()
+ *             .returnItemId("{returnItemId}")
+ *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSetReturnPaymentStateAction> {
@@ -24,10 +26,18 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
 
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
+    /**
+     <>
+     */
+
     public OrderSetReturnPaymentStateActionBuilder returnItemId(final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderSetReturnPaymentStateActionBuilder paymentState(
             final com.commercetools.api.models.order.ReturnPaymentState paymentState) {

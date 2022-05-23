@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionChangeNameAction productSelectionChangeNameAction = ProductSelectionChangeNameAction.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionChangeNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionChangeNameAction productSelectionChangeNameAction = ProductSelectionChangeNameAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionChangeNameActionBuilder implements Builder<ProductSelectionChangeNameAction> {
@@ -23,7 +25,7 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>The new name to be set for the ProductSelection.</p>
+     <*  <p>The new name to be set for the ProductSelection.</p>>
      */
 
     public ProductSelectionChangeNameActionBuilder name(
@@ -33,7 +35,7 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>The new name to be set for the ProductSelection.</p>
+     <*  <p>The new name to be set for the ProductSelection.</p>>
      */
 
     public ProductSelectionChangeNameActionBuilder name(

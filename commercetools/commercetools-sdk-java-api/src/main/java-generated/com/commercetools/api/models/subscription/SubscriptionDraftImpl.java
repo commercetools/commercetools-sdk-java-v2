@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SubscriptionDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
 
@@ -44,24 +47,41 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     public SubscriptionDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
         return this.changes;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {
         return this.destination;
     }
 
     /**
-     *  <p>User-defined unique identifier for the Subscription.</p>
+     <*  <p>User-defined unique identifier for the Subscription.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
         return this.messages;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {
         return this.format;

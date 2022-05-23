@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetPricesChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
 
@@ -46,28 +49,49 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
         this.type = SET_PRICES_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setPrices</code></p>
+     <*  <p>Update action for <code>setPrices</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     <>
+     */
+
     public String getVariant() {
         return this.variant;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.common.Price> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.Price> getNextValue() {
         return this.nextValue;

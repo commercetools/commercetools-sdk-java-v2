@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   WeakPasswordError weakPasswordError = WeakPasswordError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * WeakPasswordErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     WeakPasswordError weakPasswordError = WeakPasswordError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class WeakPasswordErrorBuilder implements Builder<WeakPasswordError> {
@@ -23,15 +25,27 @@ public class WeakPasswordErrorBuilder implements Builder<WeakPasswordError> {
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public WeakPasswordErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public WeakPasswordErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public WeakPasswordErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SubRate subRate = SubRate.builder()
-           .name("{name}")
-           .amount(1)
-           .build()
- </code></pre>
- </div>
+ * SubRateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubRate subRate = SubRate.builder()
+ *             .name("{name}")
+ *             .amount(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubRateBuilder implements Builder<SubRate> {
@@ -24,10 +26,18 @@ public class SubRateBuilder implements Builder<SubRate> {
 
     private Integer amount;
 
+    /**
+     <>
+     */
+
     public SubRateBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SubRateBuilder amount(final Integer amount) {
         this.amount = amount;

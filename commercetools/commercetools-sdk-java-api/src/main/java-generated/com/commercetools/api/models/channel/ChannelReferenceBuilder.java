@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelReference channelReference = ChannelReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * ChannelReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelReference channelReference = ChannelReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelReferenceBuilder implements Builder<ChannelReference> {
@@ -28,7 +30,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     private com.commercetools.api.models.channel.Channel obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Channel.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Channel.</p>>
      */
 
     public ChannelReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     <*  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>>
      */
 
     public ChannelReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     <*  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>>
      */
 
     public ChannelReferenceBuilder obj(@Nullable final com.commercetools.api.models.channel.Channel obj) {

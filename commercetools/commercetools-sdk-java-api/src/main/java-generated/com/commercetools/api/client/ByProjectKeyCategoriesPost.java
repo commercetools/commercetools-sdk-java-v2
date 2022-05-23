@@ -17,17 +17,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Creating a category produces the CategoryCreated message.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.category.Category>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .categories()
-           .post(null)
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Creating a category produces the CategoryCreated message.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.category.Category>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .categories()
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCategoriesPost extends

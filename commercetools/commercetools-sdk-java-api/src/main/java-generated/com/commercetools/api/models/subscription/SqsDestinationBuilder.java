@@ -7,17 +7,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SqsDestination sqsDestination = SqsDestination.builder()
-           .accessKey("{accessKey}")
-           .accessSecret("{accessSecret}")
-           .queueUrl("{queueUrl}")
-           .region("{region}")
-           .build()
- </code></pre>
- </div>
+ * SqsDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SqsDestination sqsDestination = SqsDestination.builder()
+ *             .accessKey("{accessKey}")
+ *             .accessSecret("{accessSecret}")
+ *             .queueUrl("{queueUrl}")
+ *             .region("{region}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SqsDestinationBuilder implements Builder<SqsDestination> {
@@ -30,20 +32,36 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
 
     private String region;
 
+    /**
+     <>
+     */
+
     public SqsDestinationBuilder accessKey(final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SqsDestinationBuilder accessSecret(final String accessSecret) {
         this.accessSecret = accessSecret;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SqsDestinationBuilder queueUrl(final String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SqsDestinationBuilder region(final String region) {
         this.region = region;

@@ -10,16 +10,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeDraft typeDraft = TypeDraft.builder()
-           .key("{key}")
-           .name(nameBuilder -> nameBuilder)
-           .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeDraft typeDraft = TypeDraft.builder()
+ *             .key("{key}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeDraftBuilder implements Builder<TypeDraft> {
@@ -37,7 +39,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
     /**
-     *  <p>User-defined unique identifier for the Type.</p>
+     <*  <p>User-defined unique identifier for the Type.</p>>
      */
 
     public TypeDraftBuilder key(final String key) {
@@ -46,7 +48,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Name of the Type.</p>
+     <*  <p>Name of the Type.</p>>
      */
 
     public TypeDraftBuilder name(
@@ -56,7 +58,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Name of the Type.</p>
+     <*  <p>Name of the Type.</p>>
      */
 
     public TypeDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -65,7 +67,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Description of the Type.</p>
+     <*  <p>Description of the Type.</p>>
      */
 
     public TypeDraftBuilder description(
@@ -75,7 +77,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Description of the Type.</p>
+     <*  <p>Description of the Type.</p>>
      */
 
     public TypeDraftBuilder description(
@@ -85,7 +87,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Resources and/or data types for which the Type is defined.</p>
+     <*  <p>Resources and/or data types for which the Type is defined.</p>>
      */
 
     public TypeDraftBuilder resourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
@@ -94,7 +96,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Resources and/or data types for which the Type is defined.</p>
+     <*  <p>Resources and/or data types for which the Type is defined.</p>>
      */
 
     public TypeDraftBuilder resourceTypeIds(
@@ -104,7 +106,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Resources and/or data types for which the Type is defined.</p>
+     <*  <p>Resources and/or data types for which the Type is defined.</p>>
      */
 
     public TypeDraftBuilder plusResourceTypeIds(
@@ -117,7 +119,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeDraftBuilder fieldDefinitions(
@@ -127,7 +129,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeDraftBuilder fieldDefinitions(
@@ -137,7 +139,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeDraftBuilder plusFieldDefinitions(
@@ -150,7 +152,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeDraftBuilder plusFieldDefinitions(
@@ -163,7 +165,7 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
 
     public TypeDraftBuilder withFieldDefinitions(

@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingInfo shippingInfo = ShippingInfo.builder()
-           .shippingMethodName("{shippingMethodName}")
-           .price(priceBuilder -> priceBuilder)
-           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
-           .shippingMethodState(ShippingMethodState.DOES_NOT_MATCH_CART)
-           .build()
- </code></pre>
- </div>
+ * ShippingInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingInfo shippingInfo = ShippingInfo.builder()
+ *             .shippingMethodName("{shippingMethodName}")
+ *             .price(priceBuilder -> priceBuilder)
+ *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+ *             .shippingMethodState(ShippingMethodState.DOES_NOT_MATCH_CART)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoBuilder implements Builder<ShippingInfo> {
@@ -51,13 +53,17 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
+    /**
+     <>
+     */
+
     public ShippingInfoBuilder shippingMethodName(final String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
         return this;
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     <*  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>>
      */
 
     public ShippingInfoBuilder price(final com.commercetools.api.models.common.TypedMoney price) {
@@ -66,7 +72,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     <*  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>>
      */
 
     public ShippingInfoBuilder price(
@@ -76,7 +82,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     <*  <p>The shipping rate used to determine the price.</p>>
      */
 
     public ShippingInfoBuilder shippingRate(
@@ -87,7 +93,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     <*  <p>The shipping rate used to determine the price.</p>>
      */
 
     public ShippingInfoBuilder shippingRate(
@@ -97,7 +103,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
+     <*  <p>Set once the <code>taxRate</code> is set.</p>>
      */
 
     public ShippingInfoBuilder taxedPrice(
@@ -107,7 +113,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
+     <*  <p>Set once the <code>taxRate</code> is set.</p>>
      */
 
     public ShippingInfoBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
@@ -116,7 +122,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
      */
 
     public ShippingInfoBuilder taxRate(
@@ -126,13 +132,17 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
      */
 
     public ShippingInfoBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingInfoBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
@@ -141,6 +151,10 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
@@ -148,7 +162,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     <*  <p>Not set if custom shipping method is used.</p>>
      */
 
     public ShippingInfoBuilder shippingMethod(
@@ -160,7 +174,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     <*  <p>Not set if custom shipping method is used.</p>>
      */
 
     public ShippingInfoBuilder shippingMethod(
@@ -170,7 +184,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoBuilder deliveries(@Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
@@ -179,7 +193,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoBuilder deliveries(
@@ -189,7 +203,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoBuilder plusDeliveries(
@@ -202,7 +216,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoBuilder plusDeliveries(
@@ -215,7 +229,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
      */
 
     public ShippingInfoBuilder withDeliveries(
@@ -225,12 +239,20 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingInfoBuilder discountedPrice(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder> builder) {
         this.discountedPrice = builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingInfoBuilder discountedPrice(
             @Nullable final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice) {
@@ -239,7 +261,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
+     <*  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>>
      */
 
     public ShippingInfoBuilder shippingMethodState(

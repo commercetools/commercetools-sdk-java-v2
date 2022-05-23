@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TaxedPrice
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
@@ -31,9 +34,17 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     public TaxedPriceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Money getTotalNet() {
         return this.totalNet;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Money getTotalGross() {
         return this.totalGross;

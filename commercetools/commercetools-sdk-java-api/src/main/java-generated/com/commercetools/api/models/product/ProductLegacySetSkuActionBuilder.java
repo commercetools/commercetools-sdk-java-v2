@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductLegacySetSkuAction productLegacySetSkuAction = ProductLegacySetSkuAction.builder()
-           .variantId(1)
-           .build()
- </code></pre>
- </div>
+ * ProductLegacySetSkuActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductLegacySetSkuAction productLegacySetSkuAction = ProductLegacySetSkuAction.builder()
+ *             .variantId(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySetSkuAction> {
@@ -26,10 +28,18 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
 
     private Integer variantId;
 
+    /**
+     <>
+     */
+
     public ProductLegacySetSkuActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductLegacySetSkuActionBuilder variantId(final Integer variantId) {
         this.variantId = variantId;

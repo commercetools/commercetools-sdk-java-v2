@@ -11,19 +11,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerTitleSetMessagePayload customerTitleSetMessagePayload = CustomerTitleSetMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerTitleSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerTitleSetMessagePayload customerTitleSetMessagePayload = CustomerTitleSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerTitleSetMessagePayloadImpl.class)
 public interface CustomerTitleSetMessagePayload extends MessagePayload {
 
     String CUSTOMER_TITLE_SET = "CustomerTitleSet";
+
+    /**
+     <>
+     */
 
     @JsonProperty("title")
     public String getTitle();

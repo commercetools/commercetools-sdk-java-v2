@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChannelChangeKeyAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction, Model
         this.action = CHANGE_KEY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
+
     public String getKey() {
         return this.key;
     }

@@ -10,19 +10,21 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StandalonePrice standalonePrice = StandalonePrice.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sku("{sku}")
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * StandalonePriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePrice standalonePrice = StandalonePrice.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sku("{sku}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceBuilder implements Builder<StandalonePrice> {
@@ -73,7 +75,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>Platform-generated unique identifier of the StandalonePrice.</p>
+     <*  <p>Platform-generated unique identifier of the StandalonePrice.</p>>
      */
 
     public StandalonePriceBuilder id(final String id) {
@@ -82,7 +84,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Current version of the StandalonePrice.</p>
+     <*  <p>Current version of the StandalonePrice.</p>>
      */
 
     public StandalonePriceBuilder version(final Long version) {
@@ -91,7 +93,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
+     <*  <p>Date and time (UTC) the StandalonePrice was initially created.</p>>
      */
 
     public StandalonePriceBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -100,7 +102,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
+     <*  <p>Date and time (UTC) the StandalonePrice was last updated.</p>>
      */
 
     public StandalonePriceBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -109,7 +111,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public StandalonePriceBuilder lastModifiedBy(
@@ -119,7 +121,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public StandalonePriceBuilder lastModifiedBy(
@@ -129,7 +131,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public StandalonePriceBuilder createdBy(
@@ -139,7 +141,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public StandalonePriceBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -148,7 +150,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the StandalonePrice.</p>
+     <*  <p>User-defined unique identifier of the StandalonePrice.</p>>
      */
 
     public StandalonePriceBuilder key(@Nullable final String key) {
@@ -157,7 +159,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     <*  <p>SKU of the ProductVariant to which this Price is associated.</p>>
      */
 
     public StandalonePriceBuilder sku(final String sku) {
@@ -166,7 +168,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Money value of this Price.</p>
+     <*  <p>Money value of this Price.</p>>
      */
 
     public StandalonePriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -175,7 +177,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Money value of this Price.</p>
+     <*  <p>Money value of this Price.</p>>
      */
 
     public StandalonePriceBuilder value(
@@ -185,7 +187,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Country for which this Price is valid.</p>
+     <*  <p>Country for which this Price is valid.</p>>
      */
 
     public StandalonePriceBuilder country(@Nullable final String country) {
@@ -194,7 +196,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     <*  <p>CustomerGroup for which this Price is valid.</p>>
      */
 
     public StandalonePriceBuilder customerGroup(
@@ -206,7 +208,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     <*  <p>CustomerGroup for which this Price is valid.</p>>
      */
 
     public StandalonePriceBuilder customerGroup(
@@ -216,7 +218,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Product distribution Channel for which this Price is valid.</p>
+     <*  <p>Product distribution Channel for which this Price is valid.</p>>
      */
 
     public StandalonePriceBuilder channel(
@@ -226,7 +228,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Product distribution Channel for which this Price is valid.</p>
+     <*  <p>Product distribution Channel for which this Price is valid.</p>>
      */
 
     public StandalonePriceBuilder channel(
@@ -236,7 +238,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Date from which the Price is valid.</p>
+     <*  <p>Date from which the Price is valid.</p>>
      */
 
     public StandalonePriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -245,7 +247,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Date until the Price is valid.</p>
+     <*  <p>Date until the Price is valid.</p>>
      */
 
     public StandalonePriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -254,7 +256,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Price tiers if any are defined.</p>
+     <*  <p>Price tiers if any are defined.</p>>
      */
 
     public StandalonePriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
@@ -263,7 +265,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Price tiers if any are defined.</p>
+     <*  <p>Price tiers if any are defined.</p>>
      */
 
     public StandalonePriceBuilder tiers(
@@ -273,7 +275,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Price tiers if any are defined.</p>
+     <*  <p>Price tiers if any are defined.</p>>
      */
 
     public StandalonePriceBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
@@ -285,7 +287,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Price tiers if any are defined.</p>
+     <*  <p>Price tiers if any are defined.</p>>
      */
 
     public StandalonePriceBuilder plusTiers(
@@ -298,7 +300,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Price tiers if any are defined.</p>
+     <*  <p>Price tiers if any are defined.</p>>
      */
 
     public StandalonePriceBuilder withTiers(
@@ -309,7 +311,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     <*  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
      */
 
     public StandalonePriceBuilder discounted(
@@ -319,7 +321,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     <*  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
      */
 
     public StandalonePriceBuilder discounted(
@@ -329,7 +331,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     <*  <p>Custom Fields for the StandalonePrice.</p>>
      */
 
     public StandalonePriceBuilder custom(
@@ -339,7 +341,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     <*  <p>Custom Fields for the StandalonePrice.</p>>
      */
 
     public StandalonePriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

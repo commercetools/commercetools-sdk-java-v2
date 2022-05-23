@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountValueFixedDraft cartDiscountValueFixedDraft = CartDiscountValueFixedDraft.builder()
-           .plusMoney(moneyBuilder -> moneyBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountValueFixedDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountValueFixedDraft cartDiscountValueFixedDraft = CartDiscountValueFixedDraft.builder()
+ *             .plusMoney(moneyBuilder -> moneyBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueFixedDraftImpl.class)
@@ -30,6 +33,9 @@ public interface CartDiscountValueFixedDraft extends CartDiscountValueDraft {
 
     String FIXED = "fixed";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("money")

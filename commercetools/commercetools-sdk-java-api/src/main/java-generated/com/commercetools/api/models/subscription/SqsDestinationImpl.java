@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SqsDestination
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SqsDestinationImpl implements SqsDestination, ModelBase {
 
@@ -42,21 +45,41 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
         this.type = SQS;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getAccessKey() {
         return this.accessKey;
     }
 
+    /**
+     <>
+     */
+
     public String getAccessSecret() {
         return this.accessSecret;
     }
 
+    /**
+     <>
+     */
+
     public String getQueueUrl() {
         return this.queueUrl;
     }
+
+    /**
+     <>
+     */
 
     public String getRegion() {
         return this.region;

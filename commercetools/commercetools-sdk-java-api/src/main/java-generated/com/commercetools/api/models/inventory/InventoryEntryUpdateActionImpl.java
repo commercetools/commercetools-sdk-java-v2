@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InventoryEntryUpdateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryUpdateActionImpl implements InventoryEntryUpdateAction, ModelBase {
 
@@ -26,6 +29,10 @@ public class InventoryEntryUpdateActionImpl implements InventoryEntryUpdateActio
 
     public InventoryEntryUpdateActionImpl() {
     }
+
+    /**
+     <>
+     */
 
     public String getAction() {
         return this.action;

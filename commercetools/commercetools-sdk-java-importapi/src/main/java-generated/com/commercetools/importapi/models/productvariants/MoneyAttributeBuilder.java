@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MoneyAttribute moneyAttribute = MoneyAttribute.builder()
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * MoneyAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MoneyAttribute moneyAttribute = MoneyAttribute.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
@@ -28,7 +30,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
      */
 
     public MoneyAttributeBuilder name(@Nullable final String name) {
@@ -36,10 +38,18 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MoneyAttributeBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MoneyAttributeBuilder value(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {

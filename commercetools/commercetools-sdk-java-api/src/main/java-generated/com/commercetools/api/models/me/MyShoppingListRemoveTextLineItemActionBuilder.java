@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListRemoveTextLineItemAction myShoppingListRemoveTextLineItemAction = MyShoppingListRemoveTextLineItemAction.builder()
-           .textLineItemId("{textLineItemId}")
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListRemoveTextLineItemActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListRemoveTextLineItemAction myShoppingListRemoveTextLineItemAction = MyShoppingListRemoveTextLineItemAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<MyShoppingListRemoveTextLineItemAction> {
@@ -26,10 +28,18 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
     @Nullable
     private Long quantity;
 
+    /**
+     <>
+     */
+
     public MyShoppingListRemoveTextLineItemActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyShoppingListRemoveTextLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;

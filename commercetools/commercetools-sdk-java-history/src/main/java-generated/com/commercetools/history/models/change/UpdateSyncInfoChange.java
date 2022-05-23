@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   UpdateSyncInfoChange updateSyncInfoChange = UpdateSyncInfoChange.builder()
-           .change("{change}")
-           .channelId("{channelId}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * UpdateSyncInfoChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     UpdateSyncInfoChange updateSyncInfoChange = UpdateSyncInfoChange.builder()
+ *             .change("{change}")
+ *             .channelId("{channelId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = UpdateSyncInfoChangeImpl.class)
@@ -32,21 +35,30 @@ public interface UpdateSyncInfoChange extends Change {
 
     String UPDATE_SYNC_INFO_CHANGE = "UpdateSyncInfoChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>updateSyncInfo</code></p>
+     <*  <p>Update action for <code>updateSyncInfo</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("channelId")
     public String getChannelId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

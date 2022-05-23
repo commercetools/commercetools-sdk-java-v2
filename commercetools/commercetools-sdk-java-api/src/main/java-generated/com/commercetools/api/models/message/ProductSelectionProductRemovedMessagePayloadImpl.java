@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSelectionProductRemovedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionProductRemovedMessagePayloadImpl
         implements ProductSelectionProductRemovedMessagePayload, ModelBase {
@@ -33,13 +36,18 @@ public class ProductSelectionProductRemovedMessagePayloadImpl
         this.type = PRODUCT_SELECTION_PRODUCT_REMOVED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     <*  <p>Reference to a Product.</p>>
      */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }

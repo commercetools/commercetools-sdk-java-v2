@@ -35,15 +35,17 @@ public class ResultItemImpl implements ResultItem, ModelBase {
     }
 
     /**
-     *  <p>The URL of the image.</p>
+     <*  <p>The URL of the image.</p>>
      */
+
     public String getImageUrl() {
         return this.imageUrl;
     }
 
     /**
-     *  <p>An array of product variants containing the image URL.</p>
+     <*  <p>An array of product variants containing the image URL.</p>>
      */
+
     public java.util.List<com.commercetools.ml.models.common.ProductVariant> getProductVariants() {
         return this.productVariants;
     }

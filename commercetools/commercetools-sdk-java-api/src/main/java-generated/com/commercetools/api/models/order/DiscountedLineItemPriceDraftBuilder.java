@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountedLineItemPriceDraft discountedLineItemPriceDraft = DiscountedLineItemPriceDraft.builder()
-           .value(valueBuilder -> valueBuilder)
-           .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountedLineItemPriceDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPriceDraft discountedLineItemPriceDraft = DiscountedLineItemPriceDraft.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLineItemPriceDraft> {
@@ -26,8 +28,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public DiscountedLineItemPriceDraftBuilder value(
@@ -37,8 +39,8 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
@@ -46,17 +48,29 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
             final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
         this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
             final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
         this.includedDiscounts = includedDiscounts;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
             final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
@@ -67,6 +81,10 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
         if (this.includedDiscounts == null) {
@@ -76,6 +94,10 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
                 .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {

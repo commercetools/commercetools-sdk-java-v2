@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderSetShippingRateInputAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSetShippingRateInputAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
         this.action = SET_SHIPPING_RATE_INPUT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
         return this.shippingRateInput;

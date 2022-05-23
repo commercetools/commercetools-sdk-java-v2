@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductPriceExternalDiscountSetMessagePayload productPriceExternalDiscountSetMessagePayload = ProductPriceExternalDiscountSetMessagePayload.builder()
-           .variantId(1)
-           .priceId("{priceId}")
-           .staged(true)
-           .build()
- </code></pre>
- </div>
+ * ProductPriceExternalDiscountSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPriceExternalDiscountSetMessagePayload productPriceExternalDiscountSetMessagePayload = ProductPriceExternalDiscountSetMessagePayload.builder()
+ *             .variantId(1)
+ *             .priceId("{priceId}")
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPriceExternalDiscountSetMessagePayloadImpl.class)
@@ -32,24 +35,44 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
 
     String PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET = "ProductPriceExternalDiscountSet";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
+    /**
+     <>
+     */
+
     @JsonProperty("variantKey")
     public String getVariantKey();
+
+    /**
+     <>
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();

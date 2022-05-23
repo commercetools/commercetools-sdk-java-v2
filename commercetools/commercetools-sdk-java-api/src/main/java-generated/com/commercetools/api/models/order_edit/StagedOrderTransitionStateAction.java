@@ -16,14 +16,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderTransitionStateAction stagedOrderTransitionStateAction = StagedOrderTransitionStateAction.builder()
-           .state(stateBuilder -> stateBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderTransitionStateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderTransitionStateAction stagedOrderTransitionStateAction = StagedOrderTransitionStateAction.builder()
+ *             .state(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderTransitionStateActionImpl.class)
@@ -32,12 +35,16 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     String TRANSITION_STATE = "transitionState";
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
+
+    /**
+     <>
+     */
 
     @JsonProperty("force")
     public Boolean getForce();

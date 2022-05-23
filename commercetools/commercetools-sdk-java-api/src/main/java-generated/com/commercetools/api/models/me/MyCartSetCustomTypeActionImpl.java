@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCartSetCustomTypeAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeAction, ModelBase {
 
@@ -36,20 +39,26 @@ public class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeAction,
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Defines the Type that extends the MyCart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCart.</p>
+     <*  <p>Defines the Type that extends the MyCart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCart.</p>>
      */
+
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyCart.</p>
+     <*  <p>Sets the Custom Fields fields for the MyCart.</p>>
      */
+
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

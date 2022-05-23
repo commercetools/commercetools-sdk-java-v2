@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomLineItemTaxedPrice
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPrice, ModelBase {
 
@@ -32,9 +35,17 @@ public class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPrice, M
     public CustomLineItemTaxedPriceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getTotalNet() {
         return this.totalNet;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getTotalGross() {
         return this.totalGross;

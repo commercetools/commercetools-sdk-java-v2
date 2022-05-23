@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetCategoryOrderHintAction productSetCategoryOrderHintAction = ProductSetCategoryOrderHintAction.builder()
-           .categoryId("{categoryId}")
-           .build()
- </code></pre>
- </div>
+ * ProductSetCategoryOrderHintAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetCategoryOrderHintAction productSetCategoryOrderHintAction = ProductSetCategoryOrderHintAction.builder()
+ *             .categoryId("{categoryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetCategoryOrderHintActionImpl.class)
@@ -28,12 +31,23 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
 
     String SET_CATEGORY_ORDER_HINT = "setCategoryOrderHint";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("categoryId")
     public String getCategoryId();
 
+    /**
+     <>
+     */
+
     @JsonProperty("orderHint")
     public String getOrderHint();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

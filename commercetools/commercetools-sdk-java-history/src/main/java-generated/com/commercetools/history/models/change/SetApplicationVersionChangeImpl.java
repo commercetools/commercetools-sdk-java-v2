@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetApplicationVersionChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetApplicationVersionChangeImpl implements SetApplicationVersionChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
         this.type = SET_APPLICATION_VERSION_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Internal Update action for <code>setApplicationVersion</code></p>
+     <*  <p>Internal Update action for <code>setApplicationVersion</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public Integer getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public Integer getNextValue() {
         return this.nextValue;

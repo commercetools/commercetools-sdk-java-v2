@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetReturnShipmentStateAction stagedOrderSetReturnShipmentStateAction = StagedOrderSetReturnShipmentStateAction.builder()
-           .returnItemId("{returnItemId}")
-           .shipmentState(ReturnShipmentState.ADVISED)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetReturnShipmentStateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetReturnShipmentStateAction stagedOrderSetReturnShipmentStateAction = StagedOrderSetReturnShipmentStateAction.builder()
+ *             .returnItemId("{returnItemId}")
+ *             .shipmentState(ReturnShipmentState.ADVISED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetReturnShipmentStateActionImpl.class)
@@ -31,10 +34,16 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
 
     String SET_RETURN_SHIPMENT_STATE = "setReturnShipmentState";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();

@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveImageChange removeImageChange = RemoveImageChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveImageChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveImageChange removeImageChange = RemoveImageChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
@@ -32,7 +34,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
     /**
-     *  <p>Update actions for removing images</p>
+     <*  <p>Update actions for removing images</p>>
      */
 
     public RemoveImageChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveImageChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveImageChangeBuilder previousValue(
             final com.commercetools.history.models.common.Image... previousValue) {
@@ -51,11 +61,19 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveImageChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Image> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveImageChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Image... previousValue) {
@@ -66,6 +84,10 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveImageChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
         if (this.previousValue == null) {
@@ -75,6 +97,10 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveImageChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -82,16 +108,28 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveImageChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Image> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveImageChangeBuilder plusNextValue(final com.commercetools.history.models.common.Image... nextValue) {
         if (this.nextValue == null) {
@@ -101,6 +139,10 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveImageChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
         if (this.nextValue == null) {
@@ -109,6 +151,10 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveImageChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {

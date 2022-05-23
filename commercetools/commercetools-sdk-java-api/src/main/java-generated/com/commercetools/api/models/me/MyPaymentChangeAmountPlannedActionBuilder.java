@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyPaymentChangeAmountPlannedAction myPaymentChangeAmountPlannedAction = MyPaymentChangeAmountPlannedAction.builder()
-           .amount(amountBuilder -> amountBuilder)
-           .build()
- </code></pre>
- </div>
+ * MyPaymentChangeAmountPlannedActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyPaymentChangeAmountPlannedAction myPaymentChangeAmountPlannedAction = MyPaymentChangeAmountPlannedAction.builder()
+ *             .amount(amountBuilder -> amountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentChangeAmountPlannedActionBuilder implements Builder<MyPaymentChangeAmountPlannedAction> {
@@ -23,8 +25,8 @@ public class MyPaymentChangeAmountPlannedActionBuilder implements Builder<MyPaym
     private com.commercetools.api.models.common.Money amount;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public MyPaymentChangeAmountPlannedActionBuilder amount(
@@ -34,8 +36,8 @@ public class MyPaymentChangeAmountPlannedActionBuilder implements Builder<MyPaym
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public MyPaymentChangeAmountPlannedActionBuilder amount(final com.commercetools.api.models.common.Money amount) {

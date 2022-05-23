@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSearchRequest orderSearchRequest = OrderSearchRequest.builder()
-           .query(queryBuilder -> queryBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderSearchRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSearchRequest orderSearchRequest = OrderSearchRequest.builder()
+ *             .query(queryBuilder -> queryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
@@ -34,7 +36,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     private Integer offset;
 
     /**
-     *  <p>The Order search query.</p>
+     <*  <p>The Order search query.</p>>
      */
 
     public OrderSearchRequestBuilder query(
@@ -44,7 +46,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The Order search query.</p>
+     <*  <p>The Order search query.</p>>
      */
 
     public OrderSearchRequestBuilder query(final com.commercetools.api.models.order.OrderSearchQuery query) {
@@ -53,7 +55,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     <*  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>>
      */
 
     public OrderSearchRequestBuilder sort(@Nullable final String sort) {
@@ -62,7 +64,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     <*  <p>The maximum number of search results to be returned.</p>>
      */
 
     public OrderSearchRequestBuilder limit(@Nullable final Integer limit) {
@@ -71,7 +73,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     <*  <p>The number of search results to be skipped in the response for pagination.</p>>
      */
 
     public OrderSearchRequestBuilder offset(@Nullable final Integer offset) {

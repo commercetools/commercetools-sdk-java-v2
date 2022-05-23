@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeEnumValueOrderChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChange, ModelBase {
 
@@ -43,27 +46,41 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
         this.type = CHANGE_ENUM_VALUE_ORDER_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+     <*  <p>Update action for <code>changeEnumValueOrder</code> on types</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
+     <*  <p>The name of the field/attribute definition updated.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.change_value.EnumValue> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.change_value.EnumValue> getPreviousValue() {
         return this.previousValue;

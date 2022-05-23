@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodDraft shippingMethodDraft = ShippingMethodDraft.builder()
-           .name("{name}")
-           .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
-           .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
-           .isDefault(true)
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodDraft shippingMethodDraft = ShippingMethodDraft.builder()
+ *             .name("{name}")
+ *             .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
+ *             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
+ *             .isDefault(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> {
@@ -52,7 +54,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier for the ShippingMethod.</p>
+     <*  <p>User-defined unique identifier for the ShippingMethod.</p>>
      */
 
     public ShippingMethodDraftBuilder key(@Nullable final String key) {
@@ -60,10 +62,18 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodDraftBuilder localizedName(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -71,16 +81,28 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder localizedName(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {
         this.localizedName = localizedName;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodDraftBuilder localizedDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -89,11 +111,19 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder localizedDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodDraftBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
@@ -103,11 +133,19 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder taxCategory(
             final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodDraftBuilder zoneRates(
             final com.commercetools.api.models.shipping_method.ZoneRateDraft... zoneRates) {
@@ -115,11 +153,19 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder zoneRates(
             final java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> zoneRates) {
         this.zoneRates = zoneRates;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodDraftBuilder plusZoneRates(
             final com.commercetools.api.models.shipping_method.ZoneRateDraft... zoneRates) {
@@ -130,6 +176,10 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder plusZoneRates(
             Function<com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder> builder) {
         if (this.zoneRates == null) {
@@ -140,6 +190,10 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder withZoneRates(
             Function<com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder> builder) {
         this.zoneRates = new ArrayList<>();
@@ -149,7 +203,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
+     <*  <p>If <code>true</code> the shipping method will be the default one in a project.</p>>
      */
 
     public ShippingMethodDraftBuilder isDefault(final Boolean isDefault) {
@@ -158,7 +212,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     <*  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>>
      */
 
     public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {
@@ -166,11 +220,19 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

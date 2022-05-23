@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListSetCustomTypeAction myShoppingListSetCustomTypeAction = MyShoppingListSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListSetCustomTypeAction myShoppingListSetCustomTypeAction = MyShoppingListSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShoppingListSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+     <*  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>>
      */
 
     public MyShoppingListSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     }
 
     /**
-     *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+     <*  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>>
      */
 
     public MyShoppingListSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+     <*  <p>Sets the Custom Fields fields for the MyShoppingList.</p>>
      */
 
     public MyShoppingListSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+     <*  <p>Sets the Custom Fields fields for the MyShoppingList.</p>>
      */
 
     public MyShoppingListSetCustomTypeActionBuilder fields(

@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeStateTypeChange changeStateTypeChange = ChangeStateTypeChange.builder()
-           .change("{change}")
-           .previousValue(StateType.ORDER_STATE)
-           .nextValue(StateType.ORDER_STATE)
-           .build()
- </code></pre>
- </div>
+ * ChangeStateTypeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeStateTypeChange changeStateTypeChange = ChangeStateTypeChange.builder()
+ *             .change("{change}")
+ *             .previousValue(StateType.ORDER_STATE)
+ *             .nextValue(StateType.ORDER_STATE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChange> {
@@ -28,7 +30,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
     private com.commercetools.history.models.common.StateType nextValue;
 
     /**
-     *  <p>Update action for <code>changeType</code> on state</p>
+     <*  <p>Update action for <code>changeType</code> on state</p>>
      */
 
     public ChangeStateTypeChangeBuilder change(final String change) {
@@ -36,11 +38,19 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeStateTypeChangeBuilder previousValue(
             final com.commercetools.history.models.common.StateType previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeStateTypeChangeBuilder nextValue(final com.commercetools.history.models.common.StateType nextValue) {
         this.nextValue = nextValue;

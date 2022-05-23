@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SimilarProductPair similarProductPair = SimilarProductPair.builder()
-           .confidence(0.3)
-           .plusProducts(productsBuilder -> productsBuilder)
-           .build()
- </code></pre>
- </div>
+ * SimilarProductPairBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SimilarProductPair similarProductPair = SimilarProductPair.builder()
+ *             .confidence(0.3)
+ *             .plusProducts(productsBuilder -> productsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
@@ -26,7 +28,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     private java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products;
 
     /**
-     *  <p>The probability of product similarity.</p>
+     <*  <p>The probability of product similarity.</p>>
      */
 
     public SimilarProductPairBuilder confidence(final Double confidence) {
@@ -34,17 +36,29 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SimilarProductPairBuilder products(
             final com.commercetools.ml.models.similar_products.SimilarProduct... products) {
         this.products = new ArrayList<>(Arrays.asList(products));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SimilarProductPairBuilder products(
             final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products) {
         this.products = products;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SimilarProductPairBuilder plusProducts(
             final com.commercetools.ml.models.similar_products.SimilarProduct... products) {
@@ -55,6 +69,10 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SimilarProductPairBuilder plusProducts(
             Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProductBuilder> builder) {
         if (this.products == null) {
@@ -64,6 +82,10 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
                 .add(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SimilarProductPairBuilder withProducts(
             Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProductBuilder> builder) {

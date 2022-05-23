@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeFieldDefinitionOrderChange changeFieldDefinitionOrderChange = ChangeFieldDefinitionOrderChange.builder()
-           .change("{change}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeFieldDefinitionOrderChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeFieldDefinitionOrderChange changeFieldDefinitionOrderChange = ChangeFieldDefinitionOrderChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFieldDefinitionOrderChange> {
@@ -29,7 +31,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     private java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> nextValue;
 
     /**
-     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     <*  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>>
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder change(final String change) {
@@ -37,17 +39,29 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeFieldDefinitionOrderChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.FieldDefinitionOrderValue... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeFieldDefinitionOrderChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.change_value.FieldDefinitionOrderValue... previousValue) {
@@ -58,6 +72,10 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
         if (this.previousValue == null) {
@@ -68,6 +86,10 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeFieldDefinitionOrderChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -76,17 +98,29 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeFieldDefinitionOrderChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.FieldDefinitionOrderValue... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeFieldDefinitionOrderChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
             final com.commercetools.history.models.change_value.FieldDefinitionOrderValue... nextValue) {
@@ -97,6 +131,10 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
         if (this.nextValue == null) {
@@ -106,6 +144,10 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
             builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeFieldDefinitionOrderChangeBuilder withNextValue(
             Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {

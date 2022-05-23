@@ -21,21 +21,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Category category = Category.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .plusAncestors(ancestorsBuilder -> ancestorsBuilder)
-           .orderHint("{orderHint}")
-           .build()
- </code></pre>
- </div>
+ * Category
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Category category = Category.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .plusAncestors(ancestorsBuilder -> ancestorsBuilder)
+ *             .orderHint("{orderHint}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryImpl.class)
@@ -45,60 +48,72 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
         com.commercetools.api.models.Customizable<Category> {
 
     /**
-     *  <p>Platform-generated unique identifier of the Category.</p>
+     <*  <p>Platform-generated unique identifier of the Category.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>The current version of the category.</p>
+     <*  <p>The current version of the category.</p>>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+     <*  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     <*  <p>Contains the parent path towards the root category.</p>>
      */
     @NotNull
     @Valid
@@ -106,47 +121,63 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     public List<CategoryReference> getAncestors();
 
     /**
-     *  <p>A category that is the parent of this category in the category tree.</p>
+     <*  <p>A category that is the parent of this category in the category tree.</p>>
      */
     @Valid
     @JsonProperty("parent")
     public CategoryReference getParent();
 
     /**
-     *  <p>An attribute as base for a custom category order in one level.</p>
+     <*  <p>An attribute as base for a custom category order in one level.</p>>
      */
     @NotNull
     @JsonProperty("orderHint")
     public String getOrderHint();
 
+    /**
+     <>
+     */
+
     @JsonProperty("externalId")
     public String getExternalId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     <*  <p>Can be used to store images, icons or movies related to this category.</p>>
      */
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
 
     /**
-     *  <p>User-defined unique identifier of the Category.</p>
+     <*  <p>User-defined unique identifier of the Category.</p>>
      */
 
     @JsonProperty("key")

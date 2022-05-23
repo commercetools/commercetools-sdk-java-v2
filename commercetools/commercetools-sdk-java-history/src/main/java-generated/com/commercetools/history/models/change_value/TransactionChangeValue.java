@@ -13,29 +13,41 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TransactionChangeValue transactionChangeValue = TransactionChangeValue.builder()
-           .id("{id}")
-           .interactionId("{interactionId}")
-           .timestamp("{timestamp}")
-           .build()
- </code></pre>
- </div>
+ * TransactionChangeValue
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TransactionChangeValue transactionChangeValue = TransactionChangeValue.builder()
+ *             .id("{id}")
+ *             .interactionId("{interactionId}")
+ *             .timestamp("{timestamp}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TransactionChangeValueImpl.class)
 public interface TransactionChangeValue {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("interactionId")
     public String getInteractionId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("timestamp")
     public String getTimestamp();

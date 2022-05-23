@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SearchKeyword searchKeyword = SearchKeyword.builder()
-           .text("{text}")
-           .build()
- </code></pre>
- </div>
+ * SearchKeywordBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SearchKeyword searchKeyword = SearchKeyword.builder()
+ *             .text("{text}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchKeywordBuilder implements Builder<SearchKeyword> {
@@ -27,13 +29,17 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     @Nullable
     private com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer;
 
+    /**
+     <>
+     */
+
     public SearchKeywordBuilder text(final String text) {
         this.text = text;
         return this;
     }
 
     /**
-     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     <*  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>>
      */
 
     public SearchKeywordBuilder suggestTokenizer(
@@ -43,7 +49,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     <*  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>>
      */
 
     public SearchKeywordBuilder suggestTokenizer(

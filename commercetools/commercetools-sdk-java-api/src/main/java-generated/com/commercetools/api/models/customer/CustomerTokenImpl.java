@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerToken
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerTokenImpl implements CustomerToken, ModelBase {
 
@@ -48,27 +51,48 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the CustomerToken.</p>
+     <*  <p>Platform-generated unique identifier of the CustomerToken.</p>>
      */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     <>
+     */
 
     public String getCustomerId() {
         return this.customerId;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getExpiresAt() {
         return this.expiresAt;
     }
+
+    /**
+     <>
+     */
 
     public String getValue() {
         return this.value;

@@ -15,17 +15,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddLocalizedEnumValueChange addLocalizedEnumValueChange = AddLocalizedEnumValueChange.builder()
-           .change("{change}")
-           .fieldName("{fieldName}")
-           .attributeName("{attributeName}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddLocalizedEnumValueChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddLocalizedEnumValueChange addLocalizedEnumValueChange = AddLocalizedEnumValueChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddLocalizedEnumValueChangeImpl.class)
@@ -33,31 +36,37 @@ public interface AddLocalizedEnumValueChange extends Change {
 
     String ADD_LOCALIZED_ENUM_VALUE_CHANGE = "AddLocalizedEnumValueChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+     <*  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     *  <p>The name of the field definition updated.</p>
+     <*  <p>The name of the field definition updated.</p>>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     <*  <p>The name of the attribute updated.</p>>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductUpdate productUpdate = ProductUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductUpdate productUpdate = ProductUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductUpdateBuilder implements Builder<ProductUpdate> {
@@ -25,21 +27,37 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
 
     private java.util.List<com.commercetools.api.models.product.ProductUpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public ProductUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductUpdateBuilder actions(final com.commercetools.api.models.product.ProductUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.product.ProductUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductUpdateBuilder plusActions(final com.commercetools.api.models.product.ProductUpdateAction... actions) {
         if (this.actions == null) {
@@ -49,6 +67,10 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductUpdateBuilder plusActions(
             Function<com.commercetools.api.models.product.ProductUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product.ProductUpdateAction>> builder) {
         if (this.actions == null) {
@@ -57,6 +79,10 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.product.ProductUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductUpdateBuilder withActions(
             Function<com.commercetools.api.models.product.ProductUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product.ProductUpdateAction>> builder) {

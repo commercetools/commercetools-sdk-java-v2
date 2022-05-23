@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetLineItemProductSlugChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugChange, ModelBase {
 
@@ -47,28 +50,49 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
         this.type = SET_LINE_ITEM_PRODUCT_SLUG_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setLineItemProductSlug</code></p>
+     <*  <p>Update action for <code>setLineItemProductSlug</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     <>
+     */
+
     public String getVariant() {
         return this.variant;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
         return this.previousValue;

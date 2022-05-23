@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SubRate
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubRateImpl implements SubRate, ModelBase {
 
@@ -30,9 +33,17 @@ public class SubRateImpl implements SubRate, ModelBase {
     public SubRateImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     <>
+     */
 
     public Integer getAmount() {
         return this.amount;

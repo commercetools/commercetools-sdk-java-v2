@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TypeDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeDraftImpl implements TypeDraft, ModelBase {
 
@@ -44,36 +47,41 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Type.</p>
+     <*  <p>User-defined unique identifier for the Type.</p>>
      */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>Name of the Type.</p>
+     <*  <p>Name of the Type.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-     *  <p>Description of the Type.</p>
+     <*  <p>Description of the Type.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-     *  <p>Resources and/or data types for which the Type is defined.</p>
+     <*  <p>Resources and/or data types for which the Type is defined.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds() {
         return this.resourceTypeIds;
     }
 
     /**
-     *  <p>Defines Custom Fields.</p>
+     <*  <p>Defines Custom Fields.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions() {
         return this.fieldDefinitions;
     }

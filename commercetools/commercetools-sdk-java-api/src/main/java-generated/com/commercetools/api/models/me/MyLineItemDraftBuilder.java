@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyLineItemDraft myLineItemDraft = MyLineItemDraft.builder()
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * MyLineItemDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyLineItemDraft myLineItemDraft = MyLineItemDraft.builder()
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
@@ -48,15 +50,27 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     @Nullable
     private String sku;
 
+    /**
+     <>
+     */
+
     public MyLineItemDraftBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MyLineItemDraftBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
@@ -64,7 +78,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     <*  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>>
      */
 
     public MyLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -73,7 +87,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     <*  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
      */
 
     public MyLineItemDraftBuilder supplyChannel(
@@ -84,7 +98,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     <*  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
      */
 
     public MyLineItemDraftBuilder supplyChannel(
@@ -94,7 +108,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
      */
 
     public MyLineItemDraftBuilder distributionChannel(
@@ -106,7 +120,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
      */
 
     public MyLineItemDraftBuilder distributionChannel(
@@ -116,7 +130,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
 
     public MyLineItemDraftBuilder custom(
@@ -126,7 +140,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
 
     public MyLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -135,7 +149,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     <*  <p>Container for line item specific address(es).</p>>
      */
 
     public MyLineItemDraftBuilder shippingDetails(
@@ -146,7 +160,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     <*  <p>Container for line item specific address(es).</p>>
      */
 
     public MyLineItemDraftBuilder shippingDetails(
@@ -154,6 +168,10 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
         this.shippingDetails = shippingDetails;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyLineItemDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;

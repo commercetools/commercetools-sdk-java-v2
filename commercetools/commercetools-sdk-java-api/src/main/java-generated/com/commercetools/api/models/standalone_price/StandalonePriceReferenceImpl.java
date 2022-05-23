@@ -40,22 +40,25 @@ public class StandalonePriceReferenceImpl implements StandalonePriceReference, M
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Unique ID of the referenced resource.</p>
+     <*  <p>Unique ID of the referenced resource.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     <*  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>>
      */
+
     public com.commercetools.api.models.standalone_price.StandalonePrice getObj() {
         return this.obj;
     }

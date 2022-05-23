@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetDateOfBirthChange setDateOfBirthChange = SetDateOfBirthChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetDateOfBirthChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetDateOfBirthChange setDateOfBirthChange = SetDateOfBirthChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange> {
@@ -28,7 +30,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setDateOfBirth</code></p>
+     <*  <p>Shape of the action for <code>setDateOfBirth</code></p>>
      */
 
     public SetDateOfBirthChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetDateOfBirthChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetDateOfBirthChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

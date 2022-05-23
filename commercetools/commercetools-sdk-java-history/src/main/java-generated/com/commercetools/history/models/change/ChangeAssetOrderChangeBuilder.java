@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeAssetOrderChange changeAssetOrderChange = ChangeAssetOrderChange.builder()
-           .change("{change}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeAssetOrderChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeAssetOrderChange changeAssetOrderChange = ChangeAssetOrderChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderChange> {
@@ -28,10 +30,18 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
 
     private java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue;
 
+    /**
+     <>
+     */
+
     public ChangeAssetOrderChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAssetOrderChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString... previousValue) {
@@ -39,11 +49,19 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetOrderChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAssetOrderChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.LocalizedString... previousValue) {
@@ -54,6 +72,10 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetOrderChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         if (this.previousValue == null) {
@@ -64,6 +86,10 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetOrderChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -72,17 +98,29 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetOrderChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetOrderChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAssetOrderChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.LocalizedString... nextValue) {
@@ -93,6 +131,10 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetOrderChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         if (this.nextValue == null) {
@@ -101,6 +143,10 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAssetOrderChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {

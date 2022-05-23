@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeParentChange changeParentChange = ChangeParentChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeParentChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeParentChange changeParentChange = ChangeParentChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
@@ -29,7 +31,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
     private com.commercetools.history.models.common.Reference nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changeParent</code></p>
+     <*  <p>Shape of the action for <code>changeParent</code></p>>
      */
 
     public ChangeParentChangeBuilder change(final String change) {
@@ -37,11 +39,19 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeParentChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeParentChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {
@@ -49,11 +59,19 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeParentChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeParentChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;

@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetVatIdAction customerSetVatIdAction = CustomerSetVatIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetVatIdAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetVatIdAction customerSetVatIdAction = CustomerSetVatIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetVatIdActionImpl.class)
@@ -26,7 +29,7 @@ public interface CustomerSetVatIdAction extends CustomerUpdateAction {
     String SET_VAT_ID = "setVatId";
 
     /**
-     *  <p>If not defined, the vat Id is unset.</p>
+     <*  <p>If not defined, the vat Id is unset.</p>>
      */
 
     @JsonProperty("vatId")

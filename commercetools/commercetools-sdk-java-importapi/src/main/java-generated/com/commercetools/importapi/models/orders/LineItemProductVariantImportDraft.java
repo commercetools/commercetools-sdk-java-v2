@@ -16,48 +16,51 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LineItemProductVariantImportDraft lineItemProductVariantImportDraft = LineItemProductVariantImportDraft.builder()
-           .build()
- </code></pre>
- </div>
+ * LineItemProductVariantImportDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemProductVariantImportDraft lineItemProductVariantImportDraft = LineItemProductVariantImportDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemProductVariantImportDraftImpl.class)
 public interface LineItemProductVariantImportDraft {
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     <*  <p>Maps to <code>ProductVariant.product</code>.</p>>
      */
     @Valid
     @JsonProperty("productVariant")
     public ProductVariantKeyReference getProductVariant();
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
      */
     @Valid
     @JsonProperty("prices")
     public List<LineItemPrice> getPrices();
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
      */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
      */
     @Valid
     @JsonProperty("images")

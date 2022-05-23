@@ -14,20 +14,23 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderCustomerGroupSetMessage orderCustomerGroupSetMessage = OrderCustomerGroupSetMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .build()
- </code></pre>
- </div>
+ * OrderCustomerGroupSetMessage
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerGroupSetMessage orderCustomerGroupSetMessage = OrderCustomerGroupSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerGroupSetMessageImpl.class)
@@ -36,14 +39,14 @@ public interface OrderCustomerGroupSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_GROUP_SET = "OrderCustomerGroupSet";
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
     @Valid
     @JsonProperty("oldCustomerGroup")

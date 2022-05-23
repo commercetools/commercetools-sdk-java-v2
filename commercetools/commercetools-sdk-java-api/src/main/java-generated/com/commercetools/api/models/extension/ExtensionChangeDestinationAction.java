@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionChangeDestinationAction extensionChangeDestinationAction = ExtensionChangeDestinationAction.builder()
-           .destination(destinationBuilder -> destinationBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExtensionChangeDestinationAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionChangeDestinationAction extensionChangeDestinationAction = ExtensionChangeDestinationAction.builder()
+ *             .destination(destinationBuilder -> destinationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionChangeDestinationActionImpl.class)
@@ -30,7 +33,7 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
     String CHANGE_DESTINATION = "changeDestination";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
     @NotNull
     @Valid

@@ -14,16 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>A field with a date time value.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DateTimeField dateTimeField = DateTimeField.builder()
-           .value(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ *  <p>A field with a date time value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DateTimeField dateTimeField = DateTimeField.builder()
+ *             .value(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateTimeFieldImpl.class)
@@ -31,6 +32,9 @@ public interface DateTimeField extends CustomField {
 
     String DATE_TIME = "DateTime";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("value")
     public ZonedDateTime getValue();

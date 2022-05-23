@@ -14,13 +14,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreProductSelectionsChangedMessagePayload storeProductSelectionsChangedMessagePayload = StoreProductSelectionsChangedMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * StoreProductSelectionsChangedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreProductSelectionsChangedMessagePayload storeProductSelectionsChangedMessagePayload = StoreProductSelectionsChangedMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreProductSelectionsChangedMessagePayloadImpl.class)
@@ -28,14 +31,23 @@ public interface StoreProductSelectionsChangedMessagePayload extends MessagePayl
 
     String STORE_PRODUCT_SELECTIONS_CHANGED = "StoreProductSelectionsChanged";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("addedProductSelections")
     public List<ProductSelectionSetting> getAddedProductSelections();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("removedProductSelections")
     public List<ProductSelectionSetting> getRemovedProductSelections();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("updatedProductSelections")
     public List<ProductSelectionSetting> getUpdatedProductSelections();

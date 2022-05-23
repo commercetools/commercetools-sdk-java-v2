@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeChangeGroupsAction discountCodeChangeGroupsAction = DiscountCodeChangeGroupsAction.builder()
-           .plusGroups(groupsBuilder -> groupsBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeChangeGroupsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeChangeGroupsAction discountCodeChangeGroupsAction = DiscountCodeChangeGroupsAction.builder()
+ *             .plusGroups(groupsBuilder -> groupsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeChangeGroupsActionImpl.class)
@@ -29,7 +32,7 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
     String CHANGE_GROUPS = "changeGroups";
 
     /**
-     *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
+     <*  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>>
      */
     @NotNull
     @JsonProperty("groups")

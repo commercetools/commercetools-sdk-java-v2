@@ -37,15 +37,17 @@ public class ProductTypeImportRequestImpl implements ProductTypeImportRequest, M
     }
 
     /**
-     *  <p>The type of the import resource.</p>
+     <*  <p>The type of the import resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
         return this.type;
     }
 
     /**
-     *  <p>The product type import resources of this request.</p>
+     <*  <p>The product type import resources of this request.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> getResources() {
         return this.resources;
     }

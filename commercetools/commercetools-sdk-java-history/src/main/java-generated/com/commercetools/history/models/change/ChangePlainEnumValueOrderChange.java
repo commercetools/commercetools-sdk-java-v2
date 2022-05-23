@@ -15,17 +15,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangePlainEnumValueOrderChange changePlainEnumValueOrderChange = ChangePlainEnumValueOrderChange.builder()
-           .change("{change}")
-           .attributeName("{attributeName}")
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangePlainEnumValueOrderChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangePlainEnumValueOrderChange changePlainEnumValueOrderChange = ChangePlainEnumValueOrderChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangePlainEnumValueOrderChangeImpl.class)
@@ -33,29 +36,38 @@ public interface ChangePlainEnumValueOrderChange extends Change {
 
     String CHANGE_PLAIN_ENUM_VALUE_ORDER_CHANGE = "ChangePlainEnumValueOrderChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>
+     <*  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     <*  <p>The name of the attribute updated.</p>>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public List<EnumValue> getNextValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

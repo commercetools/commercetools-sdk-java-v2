@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TransitionLineItemStateChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransitionLineItemStateChangeImpl implements TransitionLineItemStateChange, ModelBase {
 
@@ -46,28 +49,49 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
         this.type = TRANSITION_LINE_ITEM_STATE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>transitionLineItemState</code></p>
+     <*  <p>Update action for <code>transitionLineItemState</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getLineItemId() {
         return this.lineItemId;
     }
 
+    /**
+     <>
+     */
+
     public String getStateId() {
         return this.stateId;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.common.ItemState> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.ItemState> getPreviousValue() {
         return this.previousValue;

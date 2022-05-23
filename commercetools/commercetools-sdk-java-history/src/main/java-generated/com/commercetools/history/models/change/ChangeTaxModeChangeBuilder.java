@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeTaxModeChange changeTaxModeChange = ChangeTaxModeChange.builder()
-           .change("{change}")
-           .previousValue(TaxMode.PLATFORM)
-           .nextValue(TaxMode.PLATFORM)
-           .build()
- </code></pre>
- </div>
+ * ChangeTaxModeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTaxModeChange changeTaxModeChange = ChangeTaxModeChange.builder()
+ *             .change("{change}")
+ *             .previousValue(TaxMode.PLATFORM)
+ *             .nextValue(TaxMode.PLATFORM)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> {
@@ -28,7 +30,7 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
     private com.commercetools.history.models.common.TaxMode nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changeTaxMode</code></p>
+     <*  <p>Shape of the action for <code>changeTaxMode</code></p>>
      */
 
     public ChangeTaxModeChangeBuilder change(final String change) {
@@ -36,11 +38,19 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeTaxModeChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxMode previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeTaxModeChangeBuilder nextValue(final com.commercetools.history.models.common.TaxMode nextValue) {
         this.nextValue = nextValue;

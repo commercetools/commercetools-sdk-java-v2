@@ -19,79 +19,102 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListLineItem shoppingListLineItem = ShoppingListLineItem.builder()
-           .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .id("{id}")
-           .name(nameBuilder -> nameBuilder)
-           .productId("{productId}")
-           .productType(productTypeBuilder -> productTypeBuilder)
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * ShoppingListLineItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListLineItem shoppingListLineItem = ShoppingListLineItem.builder()
+ *             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .productId("{productId}")
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListLineItemImpl.class)
 public interface ShoppingListLineItem extends com.commercetools.api.models.Customizable<ShoppingListLineItem> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     <>
+     */
+
     @JsonProperty("deactivatedAt")
     public ZonedDateTime getDeactivatedAt();
 
     /**
-     *  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>
+     <*  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("productSlug")
     public LocalizedString getProductSlug();
 
     /**
-     *  <p>Reference to a ProductType.</p>
+     <*  <p>Reference to a ProductType.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("productType")
     public ProductTypeReference getProductType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
+
+    /**
+     <>
+     */
 
     @JsonProperty("variantId")
     public Long getVariantId();

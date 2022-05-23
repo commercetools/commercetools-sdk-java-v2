@@ -7,13 +7,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   FieldContainer fieldContainer = FieldContainer.builder()
-           .build()
- </code></pre>
- </div>
+ * FieldContainerBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FieldContainer fieldContainer = FieldContainer.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldContainerBuilder implements Builder<FieldContainer> {
@@ -21,7 +23,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     <*  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>>
      */
 
     public FieldContainerBuilder values(final Map<String, java.lang.Object> values) {
@@ -30,7 +32,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     }
 
     /**
-     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     <*  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>>
      */
 
     public FieldContainerBuilder addValue(final String key, final java.lang.Object value) {

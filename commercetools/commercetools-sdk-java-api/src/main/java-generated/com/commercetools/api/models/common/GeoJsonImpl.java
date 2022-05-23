@@ -30,6 +30,10 @@ public class GeoJsonImpl implements GeoJson, ModelBase {
     public GeoJsonImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }

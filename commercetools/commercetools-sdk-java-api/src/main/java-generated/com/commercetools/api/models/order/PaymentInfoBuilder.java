@@ -8,30 +8,44 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentInfo paymentInfo = PaymentInfo.builder()
-           .plusPayments(paymentsBuilder -> paymentsBuilder)
-           .build()
- </code></pre>
- </div>
+ * PaymentInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentInfo paymentInfo = PaymentInfo.builder()
+ *             .plusPayments(paymentsBuilder -> paymentsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     private java.util.List<com.commercetools.api.models.payment.PaymentReference> payments;
 
+    /**
+     <>
+     */
+
     public PaymentInfoBuilder payments(final com.commercetools.api.models.payment.PaymentReference... payments) {
         this.payments = new ArrayList<>(Arrays.asList(payments));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentInfoBuilder payments(
             final java.util.List<com.commercetools.api.models.payment.PaymentReference> payments) {
         this.payments = payments;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentInfoBuilder plusPayments(final com.commercetools.api.models.payment.PaymentReference... payments) {
         if (this.payments == null) {
@@ -41,6 +55,10 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public PaymentInfoBuilder plusPayments(
             Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReferenceBuilder> builder) {
         if (this.payments == null) {
@@ -49,6 +67,10 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         this.payments.add(builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public PaymentInfoBuilder withPayments(
             Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReferenceBuilder> builder) {

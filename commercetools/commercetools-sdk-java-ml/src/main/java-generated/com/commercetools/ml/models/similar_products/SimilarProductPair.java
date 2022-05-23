@@ -14,29 +14,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>A pair of SimilarProducts</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SimilarProductPair similarProductPair = SimilarProductPair.builder()
-           .confidence(0.3)
-           .plusProducts(productsBuilder -> productsBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>A pair of SimilarProducts</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SimilarProductPair similarProductPair = SimilarProductPair.builder()
+ *             .confidence(0.3)
+ *             .plusProducts(productsBuilder -> productsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SimilarProductPairImpl.class)
 public interface SimilarProductPair {
 
     /**
-     *  <p>The probability of product similarity.</p>
+     <*  <p>The probability of product similarity.</p>>
      */
     @NotNull
     @JsonProperty("confidence")
     public Double getConfidence();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("products")

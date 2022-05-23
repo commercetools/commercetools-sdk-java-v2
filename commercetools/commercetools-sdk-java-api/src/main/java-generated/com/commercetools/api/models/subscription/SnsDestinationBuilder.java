@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SnsDestination snsDestination = SnsDestination.builder()
-           .accessKey("{accessKey}")
-           .accessSecret("{accessSecret}")
-           .topicArn("{topicArn}")
-           .build()
- </code></pre>
- </div>
+ * SnsDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SnsDestination snsDestination = SnsDestination.builder()
+ *             .accessKey("{accessKey}")
+ *             .accessSecret("{accessSecret}")
+ *             .topicArn("{topicArn}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SnsDestinationBuilder implements Builder<SnsDestination> {
@@ -27,15 +29,27 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
 
     private String topicArn;
 
+    /**
+     <>
+     */
+
     public SnsDestinationBuilder accessKey(final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SnsDestinationBuilder accessSecret(final String accessSecret) {
         this.accessSecret = accessSecret;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SnsDestinationBuilder topicArn(final String topicArn) {
         this.topicArn = topicArn;

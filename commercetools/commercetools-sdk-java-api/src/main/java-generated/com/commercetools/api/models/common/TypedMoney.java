@@ -13,18 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypedMoney typedMoney = TypedMoney.centPrecisionBuilder()
-           centAmount(0.3)
-           currencyCode("{currencyCode}")
-           fractionDigits(0.3)
-           .build()
- </code></pre>
- </div>
+ *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypedMoney typedMoney = TypedMoney.centPrecisionBuilder()
+ *             centAmount(0.3)
+ *             currencyCode("{currencyCode}")
+ *             fractionDigits(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = CentPrecisionMoney.CENT_PRECISION),
@@ -35,18 +36,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypedMoney extends Money {
 
     /**
-     *  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
+     <*  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>>
      */
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
 
     /**
-     *  <p>Number of digits after the decimal separator:</p>
-     *  <ul>
-     *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
-     *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
-     *  </ul>
+     <*  <p>Number of digits after the decimal separator:</p>
+    *  <ul>
+    *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
+    *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
+    *  </ul>>
      */
     @NotNull
     @JsonProperty("fractionDigits")

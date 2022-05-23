@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetTextLineItemCustomFieldChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCustomFieldChange, ModelBase {
 
@@ -50,32 +53,57 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
         this.type = SET_TEXT_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setTextLineItemCustomField</code></p>
+     <*  <p>Update action for <code>setTextLineItemCustomField</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     <>
+     */
+
     public String getCustomTypeId() {
         return this.customTypeId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
         return this.textLineItem;
     }
 
+    /**
+     <>
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;

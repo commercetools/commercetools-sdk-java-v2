@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductTypeChangeAttributeNameAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChangeAttributeNameAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChan
         this.action = CHANGE_ATTRIBUTE_NAME;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     <>
+     */
 
     public String getNewAttributeName() {
         return this.newAttributeName;

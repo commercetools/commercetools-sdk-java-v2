@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetPropertyChange setPropertyChange = SetPropertyChange.builder()
-           .change("{change}")
-           .path("{path}")
-           .build()
- </code></pre>
- </div>
+ * SetPropertyChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetPropertyChange setPropertyChange = SetPropertyChange.builder()
+ *             .change("{change}")
+ *             .path("{path}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
@@ -29,7 +31,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     private java.lang.Object previousValue;
 
     /**
-     *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     <*  <p>Update action for <code>setProperty</code> on custom objects</p>>
      */
 
     public SetPropertyChangeBuilder change(final String change) {
@@ -38,7 +40,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
-     *  <p>Value path to the property that was changed</p>
+     <*  <p>Value path to the property that was changed</p>>
      */
 
     public SetPropertyChangeBuilder path(final String path) {
@@ -46,10 +48,18 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetPropertyChangeBuilder nextValue(final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetPropertyChangeBuilder previousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountReference productDiscountReference = ProductDiscountReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountReference productDiscountReference = ProductDiscountReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountReference> {
@@ -28,7 +30,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     private com.commercetools.api.models.product_discount.ProductDiscount obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>
+     <*  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>>
      */
 
     public ProductDiscountReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     <*  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>>
      */
 
     public ProductDiscountReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     <*  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>>
      */
 
     public ProductDiscountReferenceBuilder obj(

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSelectionDraft productSelectionDraft = ProductSelectionDraft.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductSelectionDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionDraft productSelectionDraft = ProductSelectionDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDraft> {
@@ -31,7 +33,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier for the ProductSelection.</p>
+     <*  <p>User-defined unique identifier for the ProductSelection.</p>>
      */
 
     public ProductSelectionDraftBuilder key(@Nullable final String key) {
@@ -40,7 +42,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     <*  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>>
      */
 
     public ProductSelectionDraftBuilder name(
@@ -50,7 +52,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     <*  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>>
      */
 
     public ProductSelectionDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -59,7 +61,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     *  <p>Custom Fields of this ProductSelection.</p>
+     <*  <p>Custom Fields of this ProductSelection.</p>>
      */
 
     public ProductSelectionDraftBuilder custom(
@@ -69,7 +71,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     *  <p>Custom Fields of this ProductSelection.</p>
+     <*  <p>Custom Fields of this ProductSelection.</p>>
      */
 
     public ProductSelectionDraftBuilder custom(

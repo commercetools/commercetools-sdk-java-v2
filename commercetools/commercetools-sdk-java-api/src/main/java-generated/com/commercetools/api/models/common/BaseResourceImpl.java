@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * BaseResource
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BaseResourceImpl implements BaseResource, ModelBase {
 
@@ -38,17 +41,33 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
     public BaseResourceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;

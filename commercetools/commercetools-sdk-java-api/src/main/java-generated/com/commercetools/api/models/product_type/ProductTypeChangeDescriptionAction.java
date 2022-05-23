@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeChangeDescriptionAction productTypeChangeDescriptionAction = ProductTypeChangeDescriptionAction.builder()
-           .description("{description}")
-           .build()
- </code></pre>
- </div>
+ * ProductTypeChangeDescriptionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeDescriptionAction productTypeChangeDescriptionAction = ProductTypeChangeDescriptionAction.builder()
+ *             .description("{description}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeDescriptionActionImpl.class)
@@ -28,6 +31,9 @@ public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAct
 
     String CHANGE_DESCRIPTION = "changeDescription";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("description")
     public String getDescription();

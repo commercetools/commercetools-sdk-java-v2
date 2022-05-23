@@ -34,9 +34,17 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
     public ValidFromAndUntilValueImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     <>
+     */
 
     public String getValidUntil() {
         return this.validUntil;

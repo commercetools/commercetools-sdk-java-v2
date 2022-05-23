@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddPlainEnumValueChange addPlainEnumValueChange = AddPlainEnumValueChange.builder()
-           .change("{change}")
-           .attributeName("{attributeName}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddPlainEnumValueChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddPlainEnumValueChange addPlainEnumValueChange = AddPlainEnumValueChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddPlainEnumValueChangeImpl.class)
@@ -32,24 +35,30 @@ public interface AddPlainEnumValueChange extends Change {
 
     String ADD_PLAIN_ENUM_VALUE_CHANGE = "AddPlainEnumValueChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     <*  <p>Update action for <code>addPlainEnumValue</code> on product types</p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     <*  <p>The name of the attribute updated.</p>>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

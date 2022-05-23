@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartSetLineItemDistributionChannelAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemDistributionChannelActionImpl
         implements CartSetLineItemDistributionChannelAction, ModelBase {
@@ -36,17 +39,26 @@ public class CartSetLineItemDistributionChannelActionImpl
         this.action = SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }

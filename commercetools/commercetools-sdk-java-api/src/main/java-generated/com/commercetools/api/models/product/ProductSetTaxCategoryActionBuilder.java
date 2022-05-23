@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetTaxCategoryAction productSetTaxCategoryAction = ProductSetTaxCategoryAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetTaxCategoryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetTaxCategoryAction productSetTaxCategoryAction = ProductSetTaxCategoryAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTaxCategoryAction> {
@@ -25,7 +27,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     /**
-     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+     <*  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>>
      */
 
     public ProductSetTaxCategoryActionBuilder taxCategory(
@@ -37,7 +39,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
     }
 
     /**
-     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+     <*  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>>
      */
 
     public ProductSetTaxCategoryActionBuilder taxCategory(

@@ -13,20 +13,23 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LineItemReturnItem lineItemReturnItem = LineItemReturnItem.builder()
-           .id("{id}")
-           .quantity(0.3)
-           .shipmentState(ReturnShipmentState.ADVISED)
-           .paymentState(ReturnPaymentState.NON_REFUNDABLE)
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * LineItemReturnItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemReturnItem lineItemReturnItem = LineItemReturnItem.builder()
+ *             .id("{id}")
+ *             .quantity(0.3)
+ *             .shipmentState(ReturnShipmentState.ADVISED)
+ *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemReturnItemImpl.class)
@@ -34,6 +37,9 @@ public interface LineItemReturnItem extends ReturnItem {
 
     String LINE_ITEM_RETURN_ITEM = "LineItemReturnItem";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();

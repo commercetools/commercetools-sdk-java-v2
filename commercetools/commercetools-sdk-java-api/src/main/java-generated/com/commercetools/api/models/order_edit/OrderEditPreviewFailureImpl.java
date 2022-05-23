@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderEditPreviewFailure
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, ModelBase {
 
@@ -32,9 +35,17 @@ public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, Mod
         this.type = PREVIEW_FAILURE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
         return this.errors;

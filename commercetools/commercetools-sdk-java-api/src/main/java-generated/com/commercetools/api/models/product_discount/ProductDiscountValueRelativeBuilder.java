@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountValueRelative productDiscountValueRelative = ProductDiscountValueRelative.builder()
-           .permyriad(0.3)
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountValueRelativeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountValueRelative productDiscountValueRelative = ProductDiscountValueRelative.builder()
+ *             .permyriad(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountValueRelativeBuilder implements Builder<ProductDiscountValueRelative> {
@@ -22,7 +24,7 @@ public class ProductDiscountValueRelativeBuilder implements Builder<ProductDisco
     private Long permyriad;
 
     /**
-     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+     <*  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>>
      */
 
     public ProductDiscountValueRelativeBuilder permyriad(final Long permyriad) {

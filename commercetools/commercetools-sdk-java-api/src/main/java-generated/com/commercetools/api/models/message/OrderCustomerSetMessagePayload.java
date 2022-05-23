@@ -15,13 +15,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderCustomerSetMessagePayload orderCustomerSetMessagePayload = OrderCustomerSetMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderCustomerSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerSetMessagePayload orderCustomerSetMessagePayload = OrderCustomerSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerSetMessagePayloadImpl.class)
@@ -30,28 +33,28 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
     @Valid
     @JsonProperty("oldCustomer")
     public CustomerReference getOldCustomer();
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
     @Valid
     @JsonProperty("oldCustomerGroup")

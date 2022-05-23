@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DeliveryRemovedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessagePayload, ModelBase {
 
@@ -32,9 +35,17 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
         this.type = DELIVERY_REMOVED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {
         return this.delivery;

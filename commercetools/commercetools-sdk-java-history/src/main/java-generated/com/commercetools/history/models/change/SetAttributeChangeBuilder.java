@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetAttributeChange setAttributeChange = SetAttributeChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetAttributeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAttributeChange setAttributeChange = SetAttributeChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
@@ -32,7 +34,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     private com.commercetools.history.models.change_value.AttributeValue nextValue;
 
     /**
-     *  <p>Update action for <code>setAttribute</code></p>
+     <*  <p>Update action for <code>setAttribute</code></p>>
      */
 
     public SetAttributeChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAttributeChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetAttributeChangeBuilder previousValue(
             Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
@@ -52,11 +62,19 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetAttributeChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.AttributeValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetAttributeChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
@@ -64,6 +82,10 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetAttributeChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.AttributeValue nextValue) {

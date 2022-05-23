@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductAddExternalImageAction productAddExternalImageAction = ProductAddExternalImageAction.builder()
-           .image(imageBuilder -> imageBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductAddExternalImageActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductAddExternalImageAction productAddExternalImageAction = ProductAddExternalImageAction.builder()
+ *             .image(imageBuilder -> imageBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddExternalImageActionBuilder implements Builder<ProductAddExternalImageAction> {
@@ -33,15 +35,27 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     @Nullable
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductAddExternalImageActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductAddExternalImageActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductAddExternalImageActionBuilder image(
             Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
@@ -49,10 +63,18 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductAddExternalImageActionBuilder image(final com.commercetools.api.models.common.Image image) {
         this.image = image;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductAddExternalImageActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

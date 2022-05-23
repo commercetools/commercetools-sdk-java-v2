@@ -42,17 +42,33 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
         this.type = CHANGE_QUANTITY_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.change_value.InventoryQuantityValue getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.change_value.InventoryQuantityValue getPreviousValue() {
         return this.previousValue;

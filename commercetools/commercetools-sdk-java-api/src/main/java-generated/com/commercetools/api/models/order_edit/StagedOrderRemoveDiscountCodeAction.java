@@ -16,14 +16,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderRemoveDiscountCodeAction stagedOrderRemoveDiscountCodeAction = StagedOrderRemoveDiscountCodeAction.builder()
-           .discountCode(discountCodeBuilder -> discountCodeBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderRemoveDiscountCodeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderRemoveDiscountCodeAction stagedOrderRemoveDiscountCodeAction = StagedOrderRemoveDiscountCodeAction.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderRemoveDiscountCodeActionImpl.class)
@@ -32,7 +35,7 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
     String REMOVE_DISCOUNT_CODE = "removeDiscountCode";
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     <*  <p>Reference to a DiscountCode.</p>>
      */
     @NotNull
     @Valid

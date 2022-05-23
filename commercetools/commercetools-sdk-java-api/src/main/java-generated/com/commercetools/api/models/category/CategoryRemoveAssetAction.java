@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryRemoveAssetAction categoryRemoveAssetAction = CategoryRemoveAssetAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CategoryRemoveAssetAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryRemoveAssetAction categoryRemoveAssetAction = CategoryRemoveAssetAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryRemoveAssetActionImpl.class)
@@ -25,8 +28,16 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
 
     String REMOVE_ASSET = "removeAsset";
 
+    /**
+     <>
+     */
+
     @JsonProperty("assetId")
     public String getAssetId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("assetKey")
     public String getAssetKey();

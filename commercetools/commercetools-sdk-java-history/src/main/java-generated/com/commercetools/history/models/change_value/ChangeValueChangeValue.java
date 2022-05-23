@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeValueChangeValue changeValueChangeValue = ChangeValueChangeValue.absoluteBuilder()
-           plusMoney(moneyBuilder -> moneyBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeValueChangeValue
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeValueChangeValue changeValueChangeValue = ChangeValueChangeValue.absoluteBuilder()
+ *             plusMoney(moneyBuilder -> moneyBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueImpl.class, name = ChangeValueAbsoluteChangeValue.ABSOLUTE),
@@ -32,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ChangeValueChangeValue {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

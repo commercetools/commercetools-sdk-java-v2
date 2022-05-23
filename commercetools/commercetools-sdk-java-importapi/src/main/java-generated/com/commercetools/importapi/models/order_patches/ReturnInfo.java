@@ -15,33 +15,39 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReturnInfo returnInfo = ReturnInfo.builder()
-           .plusItems(itemsBuilder -> itemsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ReturnInfo
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReturnInfo returnInfo = ReturnInfo.builder()
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReturnInfoImpl.class)
 public interface ReturnInfo {
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("items")
     public List<ReturnItemDraft> getItems();
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     <*  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>>
      */
 
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     <*  <p>Maps to <code>ReturnInfo.returnDate</code></p>>
      */
 
     @JsonProperty("returnDate")

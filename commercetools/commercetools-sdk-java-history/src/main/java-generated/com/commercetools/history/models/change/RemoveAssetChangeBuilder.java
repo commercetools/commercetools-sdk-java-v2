@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveAssetChange removeAssetChange = RemoveAssetChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveAssetChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveAssetChange removeAssetChange = RemoveAssetChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
@@ -26,7 +28,7 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
     private com.commercetools.history.models.common.Asset previousValue;
 
     /**
-     *  <p>Update action for <code>removeAsset</code></p>
+     <*  <p>Update action for <code>removeAsset</code></p>>
      */
 
     public RemoveAssetChangeBuilder change(final String change) {
@@ -34,11 +36,19 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveAssetChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveAssetChangeBuilder previousValue(final com.commercetools.history.models.common.Asset previousValue) {
         this.previousValue = previousValue;

@@ -34,9 +34,17 @@ public class InvalidJsonInputImpl implements InvalidJsonInput, ModelBase {
         this.code = INVALID_JSON_INPUT;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;

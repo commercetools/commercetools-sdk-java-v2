@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartChangeTaxCalculationModeAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartChangeTaxCalculationModeActionImpl implements CartChangeTaxCalculationModeAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CartChangeTaxCalculationModeActionImpl implements CartChangeTaxCalc
         this.action = CHANGE_TAX_CALCULATION_MODE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;

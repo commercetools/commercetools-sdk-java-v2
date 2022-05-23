@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OutOfStockError outOfStockError = OutOfStockError.builder()
-           .message("{message}")
-           .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
-           .plusSkus(skusBuilder -> skusBuilder)
-           .build()
- </code></pre>
- </div>
+ * OutOfStockErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OutOfStockError outOfStockError = OutOfStockError.builder()
+ *             .message("{message}")
+ *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
+ *             .plusSkus(skusBuilder -> skusBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
@@ -29,15 +31,27 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     private java.util.List<String> skus;
 
+    /**
+     <>
+     */
+
     public OutOfStockErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OutOfStockErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OutOfStockErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -47,15 +61,27 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OutOfStockErrorBuilder lineItems(final String... lineItems) {
         this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OutOfStockErrorBuilder lineItems(final java.util.List<String> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OutOfStockErrorBuilder plusLineItems(final String... lineItems) {
         if (this.lineItems == null) {
@@ -65,15 +91,27 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OutOfStockErrorBuilder skus(final String... skus) {
         this.skus = new ArrayList<>(Arrays.asList(skus));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OutOfStockErrorBuilder skus(final java.util.List<String> skus) {
         this.skus = skus;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OutOfStockErrorBuilder plusSkus(final String... skus) {
         if (this.skus == null) {

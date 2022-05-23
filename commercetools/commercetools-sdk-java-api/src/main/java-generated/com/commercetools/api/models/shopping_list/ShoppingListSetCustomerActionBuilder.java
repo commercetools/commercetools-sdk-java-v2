@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListSetCustomerAction shoppingListSetCustomerAction = ShoppingListSetCustomerAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ShoppingListSetCustomerActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListSetCustomerAction shoppingListSetCustomerAction = ShoppingListSetCustomerAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingListSetCustomerAction> {
@@ -24,12 +26,20 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    /**
+     <>
+     */
+
     public ShoppingListSetCustomerActionBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShoppingListSetCustomerActionBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {

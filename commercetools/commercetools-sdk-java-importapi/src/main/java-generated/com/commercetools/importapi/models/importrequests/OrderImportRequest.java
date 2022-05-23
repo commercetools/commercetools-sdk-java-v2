@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>The request body to import Orders. Contains data for Orders to be created or updated in a commercetools Project.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderImportRequest orderImportRequest = OrderImportRequest.builder()
-           .plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>The request body to import Orders. Contains data for Orders to be created or updated in a commercetools Project.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderImportRequest orderImportRequest = OrderImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderImportRequestImpl.class)
@@ -33,7 +34,7 @@ public interface OrderImportRequest extends ImportRequest {
     String ORDER = "order";
 
     /**
-     *  <p>The order import resources of this request.</p>
+     <*  <p>The order import resources of this request.</p>>
      */
     @NotNull
     @Valid

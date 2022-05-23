@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCategoryOrderHintChange setCategoryOrderHintChange = SetCategoryOrderHintChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .categoryId("{categoryId}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCategoryOrderHintChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCategoryOrderHintChange setCategoryOrderHintChange = SetCategoryOrderHintChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .categoryId("{categoryId}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrderHintChange> {
@@ -35,7 +37,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     private com.commercetools.history.models.common.CategoryOrderHints nextValue;
 
     /**
-     *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     <*  <p>Update action for <code>setCategoryOrderHint</code></p>>
      */
 
     public SetCategoryOrderHintChangeBuilder change(final String change) {
@@ -43,15 +45,27 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCategoryOrderHintChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCategoryOrderHintChangeBuilder categoryId(final String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCategoryOrderHintChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CategoryOrderHintsBuilder, com.commercetools.history.models.common.CategoryOrderHintsBuilder> builder) {
@@ -60,17 +74,29 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCategoryOrderHintChangeBuilder previousValue(
             final com.commercetools.history.models.common.CategoryOrderHints previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCategoryOrderHintChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CategoryOrderHintsBuilder, com.commercetools.history.models.common.CategoryOrderHintsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CategoryOrderHintsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCategoryOrderHintChangeBuilder nextValue(
             final com.commercetools.history.models.common.CategoryOrderHints nextValue) {

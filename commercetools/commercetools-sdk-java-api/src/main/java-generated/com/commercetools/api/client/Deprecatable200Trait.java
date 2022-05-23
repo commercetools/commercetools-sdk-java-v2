@@ -3,6 +3,9 @@ package com.commercetools.api.client;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * Deprecatable200Trait
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Deprecatable200Trait<T extends Deprecatable200Trait<T>> {
 

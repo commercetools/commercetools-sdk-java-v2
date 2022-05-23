@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountValueFixedDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDraft, ModelBase {
 
@@ -32,9 +35,17 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
         this.type = FIXED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
         return this.money;

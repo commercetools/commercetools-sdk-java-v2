@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeNonApplicableError discountCodeNonApplicableError = DiscountCodeNonApplicableError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeNonApplicableErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeNonApplicableError discountCodeNonApplicableError = DiscountCodeNonApplicableError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCodeNonApplicableError> {
@@ -43,15 +45,27 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     @Nullable
     private java.time.ZonedDateTime validityCheckTime;
 
+    /**
+     <>
+     */
+
     public DiscountCodeNonApplicableErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountCodeNonApplicableErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountCodeNonApplicableErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -61,30 +75,54 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountCodeNonApplicableErrorBuilder discountCode(@Nullable final String discountCode) {
         this.discountCode = discountCode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountCodeNonApplicableErrorBuilder reason(@Nullable final String reason) {
         this.reason = reason;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountCodeNonApplicableErrorBuilder dicountCodeId(@Nullable final String dicountCodeId) {
         this.dicountCodeId = dicountCodeId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountCodeNonApplicableErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DiscountCodeNonApplicableErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DiscountCodeNonApplicableErrorBuilder validityCheckTime(
             @Nullable final java.time.ZonedDateTime validityCheckTime) {

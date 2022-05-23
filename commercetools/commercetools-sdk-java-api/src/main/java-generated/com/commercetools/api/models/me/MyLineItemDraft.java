@@ -18,63 +18,81 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyLineItemDraft myLineItemDraft = MyLineItemDraft.builder()
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * MyLineItemDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyLineItemDraft myLineItemDraft = MyLineItemDraft.builder()
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyLineItemDraftImpl.class)
 public interface MyLineItemDraft extends com.commercetools.api.models.CustomizableDraft<MyLineItemDraft> {
 
+    /**
+     <>
+     */
+
     @JsonProperty("productId")
     public String getProductId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     <*  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>>
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     <*  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
      */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     <*  <p>Container for line item specific address(es).</p>>
      */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
+
+    /**
+     <>
+     */
 
     @JsonProperty("sku")
     public String getSku();

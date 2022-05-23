@@ -13,24 +13,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   EnumValue enumValue = EnumValue.builder()
-           .key("{key}")
-           .label("{label}")
-           .build()
- </code></pre>
- </div>
+ * EnumValue
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EnumValue enumValue = EnumValue.builder()
+ *             .key("{key}")
+ *             .label("{label}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EnumValueImpl.class)
 public interface EnumValue {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("label")
     public String getLabel();

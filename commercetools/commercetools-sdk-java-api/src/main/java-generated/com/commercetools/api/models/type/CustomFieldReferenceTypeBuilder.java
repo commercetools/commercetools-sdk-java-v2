@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFieldReferenceType customFieldReferenceType = CustomFieldReferenceType.builder()
-           .referenceTypeId(CustomFieldReferenceValue.CART)
-           .build()
- </code></pre>
- </div>
+ * CustomFieldReferenceTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldReferenceType customFieldReferenceType = CustomFieldReferenceType.builder()
+ *             .referenceTypeId(CustomFieldReferenceValue.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldReferenceType> {
@@ -22,7 +24,7 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
     private com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId;
 
     /**
-     *  <p>Resource type the Custom Field can reference.</p>
+     <*  <p>Resource type the Custom Field can reference.</p>>
      */
 
     public CustomFieldReferenceTypeBuilder referenceTypeId(

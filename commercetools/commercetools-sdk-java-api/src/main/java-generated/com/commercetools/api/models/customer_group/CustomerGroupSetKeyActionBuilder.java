@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerGroupSetKeyAction customerGroupSetKeyAction = CustomerGroupSetKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerGroupSetKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroupSetKeyAction customerGroupSetKeyAction = CustomerGroupSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupSetKeyActionBuilder implements Builder<CustomerGroupSetKeyAction> {
@@ -24,7 +26,7 @@ public class CustomerGroupSetKeyActionBuilder implements Builder<CustomerGroupSe
     private String key;
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     <*  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>>
      */
 
     public CustomerGroupSetKeyActionBuilder key(@Nullable final String key) {

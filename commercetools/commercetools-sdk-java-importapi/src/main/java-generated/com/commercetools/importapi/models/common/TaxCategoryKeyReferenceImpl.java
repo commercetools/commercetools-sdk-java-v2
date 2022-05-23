@@ -34,13 +34,18 @@ public class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReference, Mod
         this.typeId = ReferenceType.findEnum("tax-category");
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     <*  <p>The type of the referenced resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }

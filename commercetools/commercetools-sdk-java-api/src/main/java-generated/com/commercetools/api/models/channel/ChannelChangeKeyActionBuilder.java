@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelChangeKeyAction channelChangeKeyAction = ChannelChangeKeyAction.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * ChannelChangeKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelChangeKeyAction channelChangeKeyAction = ChannelChangeKeyAction.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelChangeKeyActionBuilder implements Builder<ChannelChangeKeyAction> {
@@ -22,7 +24,7 @@ public class ChannelChangeKeyActionBuilder implements Builder<ChannelChangeKeyAc
     private String key;
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ChannelChangeKeyActionBuilder key(final String key) {

@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeChangeIsSearchableAction productTypeChangeIsSearchableAction = ProductTypeChangeIsSearchableAction.builder()
-           .attributeName("{attributeName}")
-           .isSearchable(true)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeChangeIsSearchableActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeIsSearchableAction productTypeChangeIsSearchableAction = ProductTypeChangeIsSearchableAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .isSearchable(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeIsSearchableActionBuilder implements Builder<ProductTypeChangeIsSearchableAction> {
@@ -24,10 +26,18 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
 
     private Boolean isSearchable;
 
+    /**
+     <>
+     */
+
     public ProductTypeChangeIsSearchableActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeChangeIsSearchableActionBuilder isSearchable(final Boolean isSearchable) {
         this.isSearchable = isSearchable;

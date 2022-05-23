@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Hit hit = Hit.builder()
-           .id("{id}")
-           .version(0.3)
-           .relevance(0.3)
-           .build()
- </code></pre>
- </div>
+ * HitBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Hit hit = Hit.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .relevance(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HitBuilder implements Builder<Hit> {
@@ -28,7 +30,7 @@ public class HitBuilder implements Builder<Hit> {
     private Double relevance;
 
     /**
-     *  <p>Platform-generated unique identifier of the Order.</p>
+     <*  <p>Platform-generated unique identifier of the Order.</p>>
      */
 
     public HitBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class HitBuilder implements Builder<Hit> {
     }
 
     /**
-     *  <p>Current version of the Order.</p>
+     <*  <p>Current version of the Order.</p>>
      */
 
     public HitBuilder version(final Long version) {
@@ -46,7 +48,7 @@ public class HitBuilder implements Builder<Hit> {
     }
 
     /**
-     *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
+     <*  <p>The higher the value is, the more relevant the hit is for the search request.</p>>
      */
 
     public HitBuilder relevance(final Double relevance) {

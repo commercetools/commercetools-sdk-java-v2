@@ -9,15 +9,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductMoveImageToPositionAction productMoveImageToPositionAction = ProductMoveImageToPositionAction.builder()
-           .imageUrl("{imageUrl}")
-           .position(0.3)
-           .build()
- </code></pre>
- </div>
+ * ProductMoveImageToPositionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductMoveImageToPositionAction productMoveImageToPositionAction = ProductMoveImageToPositionAction.builder()
+ *             .imageUrl("{imageUrl}")
+ *             .position(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductMoveImageToPositionActionBuilder implements Builder<ProductMoveImageToPositionAction> {
@@ -35,10 +37,18 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
     @Nullable
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductMoveImageToPositionActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductMoveImageToPositionActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
@@ -46,7 +56,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
     }
 
     /**
-     *  <p>The URL of the image</p>
+     <*  <p>The URL of the image</p>>
      */
 
     public ProductMoveImageToPositionActionBuilder imageUrl(final String imageUrl) {
@@ -54,10 +64,18 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductMoveImageToPositionActionBuilder position(final Long position) {
         this.position = position;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductMoveImageToPositionActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

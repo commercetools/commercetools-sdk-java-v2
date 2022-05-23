@@ -13,21 +13,31 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   GraphQLResponse graphQLResponse = GraphQLResponse.builder()
-           .build()
- </code></pre>
- </div>
+ * GraphQLResponse
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GraphQLResponse graphQLResponse = GraphQLResponse.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLResponseImpl.class)
 public interface GraphQLResponse {
 
+    /**
+     <>
+     */
+
     @JsonProperty("data")
     public Object getData();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("errors")
     public List<GraphQLError> getErrors();

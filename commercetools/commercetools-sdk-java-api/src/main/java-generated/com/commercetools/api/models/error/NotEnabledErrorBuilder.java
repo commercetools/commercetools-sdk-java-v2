@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   NotEnabledError notEnabledError = NotEnabledError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * NotEnabledErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     NotEnabledError notEnabledError = NotEnabledError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
@@ -23,15 +25,27 @@ public class NotEnabledErrorBuilder implements Builder<NotEnabledError> {
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public NotEnabledErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public NotEnabledErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public NotEnabledErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

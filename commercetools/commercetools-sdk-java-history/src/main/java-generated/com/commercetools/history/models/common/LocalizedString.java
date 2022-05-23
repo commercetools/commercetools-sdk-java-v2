@@ -13,19 +13,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LocalizedString localizedString = LocalizedString.builder()
-           ./^[a-z]{2}(-[A-Z]{2})?$/("{/^[a-z]{2}(-[A-Z]{2})?$/}")
-           .build()
- </code></pre>
- </div>
+ * LocalizedString
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LocalizedString localizedString = LocalizedString.builder()
+ *             ./^[a-z]{2}(-[A-Z]{2})?$/("{/^[a-z]{2}(-[A-Z]{2})?$/}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizedStringImpl.class)
 public interface LocalizedString {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonAnyGetter
     public Map<String, String> values();

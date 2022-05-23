@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SubscriptionUpdate subscriptionUpdate = SubscriptionUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * SubscriptionUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionUpdate subscriptionUpdate = SubscriptionUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
@@ -25,10 +27,18 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
 
     private java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public SubscriptionUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SubscriptionUpdateBuilder actions(
             final com.commercetools.api.models.subscription.SubscriptionUpdateAction... actions) {
@@ -36,11 +46,19 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SubscriptionUpdateBuilder plusActions(
             final com.commercetools.api.models.subscription.SubscriptionUpdateAction... actions) {
@@ -51,6 +69,10 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SubscriptionUpdateBuilder plusActions(
             Function<com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.subscription.SubscriptionUpdateAction>> builder) {
         if (this.actions == null) {
@@ -60,6 +82,10 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
             builder.apply(com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SubscriptionUpdateBuilder withActions(
             Function<com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.subscription.SubscriptionUpdateAction>> builder) {

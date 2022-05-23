@@ -16,14 +16,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetLineItemShippingDetailsAction stagedOrderSetLineItemShippingDetailsAction = StagedOrderSetLineItemShippingDetailsAction.builder()
-           .lineItemId("{lineItemId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetLineItemShippingDetailsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetLineItemShippingDetailsAction stagedOrderSetLineItemShippingDetailsAction = StagedOrderSetLineItemShippingDetailsAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetLineItemShippingDetailsActionImpl.class)
@@ -31,10 +34,16 @@ public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrder
 
     String SET_LINE_ITEM_SHIPPING_DETAILS = "setLineItemShippingDetails";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();

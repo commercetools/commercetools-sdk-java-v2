@@ -15,13 +15,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetBillingAddressAction stagedOrderSetBillingAddressAction = StagedOrderSetBillingAddressAction.builder()
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetBillingAddressAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetBillingAddressAction stagedOrderSetBillingAddressAction = StagedOrderSetBillingAddressAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetBillingAddressActionImpl.class)
@@ -29,6 +32,9 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
 
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetCustomShippingMethodChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMethodChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
         this.type = SET_CUSTOM_SHIPPING_METHOD_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setCustomShippingMethod</code></p>
+     <*  <p>Update action for <code>setCustomShippingMethod</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.change_value.CustomShippingMethodChangeValue getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.change_value.CustomShippingMethodChangeValue getPreviousValue() {
         return this.previousValue;

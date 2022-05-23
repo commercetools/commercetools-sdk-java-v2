@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderSetParcelItemsAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
         this.action = SET_PARCEL_ITEMS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;

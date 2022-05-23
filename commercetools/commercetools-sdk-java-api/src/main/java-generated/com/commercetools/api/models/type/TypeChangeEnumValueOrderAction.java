@@ -13,17 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Changes the order of EnumValues in an EnumType FieldDefinition. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeChangeEnumValueOrderAction typeChangeEnumValueOrderAction = TypeChangeEnumValueOrderAction.builder()
-           .fieldName("{fieldName}")
-           .plusKeys(keysBuilder -> keysBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>Changes the order of EnumValues in an EnumType FieldDefinition. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeEnumValueOrderAction typeChangeEnumValueOrderAction = TypeChangeEnumValueOrderAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .plusKeys(keysBuilder -> keysBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeEnumValueOrderActionImpl.class)
@@ -32,14 +33,14 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     String CHANGE_ENUM_VALUE_ORDER = "changeEnumValueOrder";
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+     <*  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>>
      */
     @NotNull
     @JsonProperty("keys")

@@ -26,6 +26,10 @@ public class ProductDiscountValueExternalDraftImpl implements ProductDiscountVal
         this.type = EXTERNAL;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }

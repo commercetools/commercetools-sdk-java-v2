@@ -34,13 +34,18 @@ public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
         this.name = SET;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>Field type of the elements in the set.</p>
+     <*  <p>Field type of the elements in the set.</p>>
      */
+
     public com.commercetools.api.models.type.FieldType getElementType() {
         return this.elementType;
     }

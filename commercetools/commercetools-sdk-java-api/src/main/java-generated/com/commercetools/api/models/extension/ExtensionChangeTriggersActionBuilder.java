@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionChangeTriggersAction extensionChangeTriggersAction = ExtensionChangeTriggersAction.builder()
-           .plusTriggers(triggersBuilder -> triggersBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExtensionChangeTriggersActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionChangeTriggersAction extensionChangeTriggersAction = ExtensionChangeTriggersAction.builder()
+ *             .plusTriggers(triggersBuilder -> triggersBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionChangeTriggersAction> {
@@ -23,7 +25,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ExtensionChangeTriggersActionBuilder triggers(
@@ -33,7 +35,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ExtensionChangeTriggersActionBuilder triggers(
@@ -43,7 +45,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ExtensionChangeTriggersActionBuilder plusTriggers(
@@ -56,7 +58,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ExtensionChangeTriggersActionBuilder plusTriggers(
@@ -69,7 +71,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ExtensionChangeTriggersActionBuilder withTriggers(

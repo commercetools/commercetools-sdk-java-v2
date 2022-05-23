@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectChangeCountriesAction projectChangeCountriesAction = ProjectChangeCountriesAction.builder()
-           .plusCountries(countriesBuilder -> countriesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProjectChangeCountriesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectChangeCountriesAction projectChangeCountriesAction = ProjectChangeCountriesAction.builder()
+ *             .plusCountries(countriesBuilder -> countriesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChangeCountriesAction> {
@@ -22,7 +24,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
     private java.util.List<String> countries;
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ProjectChangeCountriesActionBuilder countries(final String... countries) {
@@ -31,7 +33,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ProjectChangeCountriesActionBuilder countries(final java.util.List<String> countries) {
@@ -40,7 +42,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ProjectChangeCountriesActionBuilder plusCountries(final String... countries) {

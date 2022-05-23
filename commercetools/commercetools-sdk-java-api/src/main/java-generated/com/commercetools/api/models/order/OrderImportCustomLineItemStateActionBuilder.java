@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderImportCustomLineItemStateAction orderImportCustomLineItemStateAction = OrderImportCustomLineItemStateAction.builder()
-           .customLineItemId("{customLineItemId}")
-           .plusState(stateBuilder -> stateBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderImportCustomLineItemStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderImportCustomLineItemStateAction orderImportCustomLineItemStateAction = OrderImportCustomLineItemStateAction.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .plusState(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportCustomLineItemStateActionBuilder implements Builder<OrderImportCustomLineItemStateAction> {
@@ -25,10 +27,18 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
+    /**
+     <>
+     */
+
     public OrderImportCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderImportCustomLineItemStateActionBuilder state(
             final com.commercetools.api.models.order.ItemState... state) {
@@ -36,11 +46,19 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderImportCustomLineItemStateActionBuilder state(
             final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderImportCustomLineItemStateActionBuilder plusState(
             final com.commercetools.api.models.order.ItemState... state) {
@@ -51,6 +69,10 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderImportCustomLineItemStateActionBuilder plusState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         if (this.state == null) {
@@ -59,6 +81,10 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
         this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderImportCustomLineItemStateActionBuilder withState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {

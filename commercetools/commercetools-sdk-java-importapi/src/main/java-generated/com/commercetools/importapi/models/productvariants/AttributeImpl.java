@@ -34,11 +34,16 @@ public class AttributeImpl implements Attribute, ModelBase {
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
      */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     <>
+     */
 
     public String getType() {
         return this.type;

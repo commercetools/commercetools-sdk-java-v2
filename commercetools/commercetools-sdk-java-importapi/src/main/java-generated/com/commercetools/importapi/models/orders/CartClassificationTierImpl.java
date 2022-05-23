@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartClassificationTier
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartClassificationTierImpl implements CartClassificationTier, ModelBase {
 
@@ -43,21 +46,41 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.importapi.models.orders.ShippingRateTierType getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getValue() {
         return this.value;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.importapi.models.common.Money getPrice() {
         return this.price;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {
         return this.tiers;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getIsMatching() {
         return this.isMatching;

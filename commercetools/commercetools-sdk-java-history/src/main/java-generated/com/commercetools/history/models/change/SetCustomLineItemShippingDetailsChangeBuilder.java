@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomLineItemShippingDetailsChange setCustomLineItemShippingDetailsChange = SetCustomLineItemShippingDetailsChange.builder()
-           .change("{change}")
-           .customLineItemId("{customLineItemId}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCustomLineItemShippingDetailsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemShippingDetailsChange setCustomLineItemShippingDetailsChange = SetCustomLineItemShippingDetailsChange.builder()
+ *             .change("{change}")
+ *             .customLineItemId("{customLineItemId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<SetCustomLineItemShippingDetailsChange> {
@@ -32,7 +34,7 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
     private com.commercetools.history.models.common.ItemShippingDetails previousValue;
 
     /**
-     *  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>
+     <*  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>>
      */
 
     public SetCustomLineItemShippingDetailsChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemShippingDetailsChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemShippingDetailsChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
@@ -51,11 +61,19 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetCustomLineItemShippingDetailsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ItemShippingDetails nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemShippingDetailsChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
@@ -63,6 +81,10 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetCustomLineItemShippingDetailsChangeBuilder previousValue(
             final com.commercetools.history.models.common.ItemShippingDetails previousValue) {

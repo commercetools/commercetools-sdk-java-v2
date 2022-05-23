@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreAddProductSelectionAction storeAddProductSelectionAction = StoreAddProductSelectionAction.builder()
-           .productSelection(productSelectionBuilder -> productSelectionBuilder)
-           .build()
- </code></pre>
- </div>
+ * StoreAddProductSelectionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreAddProductSelectionAction storeAddProductSelectionAction = StoreAddProductSelectionAction.builder()
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreAddProductSelectionActionImpl.class)
@@ -31,7 +34,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
     String ADD_PRODUCT_SELECTION = "addProductSelection";
 
     /**
-     *  <p>Resource Identifier of a Product Selection</p>
+     <*  <p>Resource Identifier of a Product Selection</p>>
      */
     @NotNull
     @Valid
@@ -39,7 +42,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
     public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+     <*  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>>
      */
 
     @JsonProperty("active")

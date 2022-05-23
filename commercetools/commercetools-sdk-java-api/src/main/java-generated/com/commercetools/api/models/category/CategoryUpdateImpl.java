@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategoryUpdate
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
 
@@ -31,9 +34,17 @@ public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
     public CategoryUpdateImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions() {
         return this.actions;

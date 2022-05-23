@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemoveLocationChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase {
 
@@ -39,27 +42,34 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
         this.type = REMOVE_LOCATION_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>removeLocation</code> on zones</p>
+     <*  <p>Update action for <code>removeLocation</code> on zones</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
      */
+
     public com.commercetools.history.models.common.Location getPreviousValue() {
         return this.previousValue;
     }
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
      */
+
     public com.commercetools.history.models.common.Location getNextValue() {
         return this.nextValue;
     }

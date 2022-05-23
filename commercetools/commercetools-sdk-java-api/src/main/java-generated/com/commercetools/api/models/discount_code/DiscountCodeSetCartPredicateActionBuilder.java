@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeSetCartPredicateAction discountCodeSetCartPredicateAction = DiscountCodeSetCartPredicateAction.builder()
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeSetCartPredicateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeSetCartPredicateAction discountCodeSetCartPredicateAction = DiscountCodeSetCartPredicateAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeSetCartPredicateActionBuilder implements Builder<DiscountCodeSetCartPredicateAction> {
@@ -24,7 +26,7 @@ public class DiscountCodeSetCartPredicateActionBuilder implements Builder<Discou
     private String cartPredicate;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public DiscountCodeSetCartPredicateActionBuilder cartPredicate(@Nullable final String cartPredicate) {

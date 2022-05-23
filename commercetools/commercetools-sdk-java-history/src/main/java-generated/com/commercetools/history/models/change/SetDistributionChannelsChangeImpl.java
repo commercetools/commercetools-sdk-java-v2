@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetDistributionChannelsChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDistributionChannelsChangeImpl implements SetDistributionChannelsChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
         this.type = SET_DISTRIBUTION_CHANNELS_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Shape of the action for <code>setDistributionChannels</code></p>
+     <*  <p>Shape of the action for <code>setDistributionChannels</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {
         return this.nextValue;

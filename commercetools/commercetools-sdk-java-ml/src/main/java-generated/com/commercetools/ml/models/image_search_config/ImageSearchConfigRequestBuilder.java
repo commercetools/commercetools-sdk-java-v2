@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImageSearchConfigRequest imageSearchConfigRequest = ImageSearchConfigRequest.builder()
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ImageSearchConfigRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImageSearchConfigRequest imageSearchConfigRequest = ImageSearchConfigRequest.builder()
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfigRequest> {
@@ -23,7 +25,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     private java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions;
 
     /**
-     *  <p>The list of update actions to be performed on the project.</p>
+     <*  <p>The list of update actions to be performed on the project.</p>>
      */
 
     public ImageSearchConfigRequestBuilder actions(
@@ -33,7 +35,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     }
 
     /**
-     *  <p>The list of update actions to be performed on the project.</p>
+     <*  <p>The list of update actions to be performed on the project.</p>>
      */
 
     public ImageSearchConfigRequestBuilder actions(
@@ -43,7 +45,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     }
 
     /**
-     *  <p>The list of update actions to be performed on the project.</p>
+     <*  <p>The list of update actions to be performed on the project.</p>>
      */
 
     public ImageSearchConfigRequestBuilder plusActions(
@@ -56,7 +58,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     }
 
     /**
-     *  <p>The list of update actions to be performed on the project.</p>
+     <*  <p>The list of update actions to be performed on the project.</p>>
      */
 
     public ImageSearchConfigRequestBuilder plusActions(
@@ -71,7 +73,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     }
 
     /**
-     *  <p>The list of update actions to be performed on the project.</p>
+     <*  <p>The list of update actions to be performed on the project.</p>>
      */
 
     public ImageSearchConfigRequestBuilder withActions(

@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetMiddleNameChange setMiddleNameChange = SetMiddleNameChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetMiddleNameChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetMiddleNameChange setMiddleNameChange = SetMiddleNameChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> {
@@ -28,7 +30,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setMiddleName</code></p>
+     <*  <p>Shape of the action for <code>setMiddleName</code></p>>
      */
 
     public SetMiddleNameChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetMiddleNameChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetMiddleNameChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

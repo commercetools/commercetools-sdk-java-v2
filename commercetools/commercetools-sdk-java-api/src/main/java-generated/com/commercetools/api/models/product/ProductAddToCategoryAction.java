@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductAddToCategoryAction productAddToCategoryAction = ProductAddToCategoryAction.builder()
-           .category(categoryBuilder -> categoryBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductAddToCategoryAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductAddToCategoryAction productAddToCategoryAction = ProductAddToCategoryAction.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAddToCategoryActionImpl.class)
@@ -30,13 +33,24 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
 
     String ADD_TO_CATEGORY = "addToCategory";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("category")
     public CategoryResourceIdentifier getCategory();
 
+    /**
+     <>
+     */
+
     @JsonProperty("orderHint")
     public String getOrderHint();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

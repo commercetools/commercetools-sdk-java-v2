@@ -16,17 +16,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderTransitionCustomLineItemStateAction orderTransitionCustomLineItemStateAction = OrderTransitionCustomLineItemStateAction.builder()
-           .customLineItemId("{customLineItemId}")
-           .quantity(0.3)
-           .fromState(fromStateBuilder -> fromStateBuilder)
-           .toState(toStateBuilder -> toStateBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderTransitionCustomLineItemStateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderTransitionCustomLineItemStateAction orderTransitionCustomLineItemStateAction = OrderTransitionCustomLineItemStateAction.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderTransitionCustomLineItemStateActionImpl.class)
@@ -34,16 +37,22 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
 
     String TRANSITION_CUSTOM_LINE_ITEM_STATE = "transitionCustomLineItemState";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
     @NotNull
     @Valid
@@ -51,12 +60,16 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
     public StateResourceIdentifier getFromState();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("toState")
     public StateResourceIdentifier getToState();
+
+    /**
+     <>
+     */
 
     @JsonProperty("actualTransitionDate")
     public ZonedDateTime getActualTransitionDate();

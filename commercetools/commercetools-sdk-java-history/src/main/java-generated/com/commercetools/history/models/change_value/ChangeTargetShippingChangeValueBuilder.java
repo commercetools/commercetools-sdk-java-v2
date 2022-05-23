@@ -7,13 +7,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeTargetShippingChangeValue changeTargetShippingChangeValue = ChangeTargetShippingChangeValue.builder()
-           .build()
- </code></pre>
- </div>
+ * ChangeTargetShippingChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTargetShippingChangeValue changeTargetShippingChangeValue = ChangeTargetShippingChangeValue.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetShippingChangeValueBuilder implements Builder<ChangeTargetShippingChangeValue> {

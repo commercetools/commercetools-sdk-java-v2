@@ -13,16 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>A field with a boolean set value.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   BooleanSetField booleanSetField = BooleanSetField.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>A field with a boolean set value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     BooleanSetField booleanSetField = BooleanSetField.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BooleanSetFieldImpl.class)
@@ -30,6 +31,9 @@ public interface BooleanSetField extends CustomField {
 
     String BOOLEAN_SET = "BooleanSet";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("value")
     public List<Boolean> getValue();

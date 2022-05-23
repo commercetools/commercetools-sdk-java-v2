@@ -18,66 +18,102 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariant productVariant = ProductVariant.builder()
-           .id(0.3)
-           .build()
- </code></pre>
- </div>
+ * ProductVariant
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariant productVariant = ProductVariant.builder()
+ *             .id(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantImpl.class)
 public interface ProductVariant {
 
     /**
-     *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
+     <*  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public Long getId();
 
+    /**
+     <>
+     */
+
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     <*  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("prices")
     public List<Price> getPrices();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("price")
     public Price getPrice();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("availability")
     public ProductVariantAvailability getAvailability();
 
+    /**
+     <>
+     */
+
     @JsonProperty("isMatchingVariant")
     public Boolean getIsMatchingVariant();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("scopedPrice")
     public ScopedPrice getScopedPrice();
+
+    /**
+     <>
+     */
 
     @JsonProperty("scopedPriceDiscounted")
     public Boolean getScopedPriceDiscounted();

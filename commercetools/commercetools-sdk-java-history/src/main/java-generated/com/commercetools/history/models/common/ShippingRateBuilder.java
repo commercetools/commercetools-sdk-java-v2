@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingRate shippingRate = ShippingRate.builder()
-           .price(priceBuilder -> priceBuilder)
-           .freeAbove(freeAboveBuilder -> freeAboveBuilder)
-           .isMatching(true)
-           .plusTiers(tiersBuilder -> tiersBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingRateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingRate shippingRate = ShippingRate.builder()
+ *             .price(priceBuilder -> priceBuilder)
+ *             .freeAbove(freeAboveBuilder -> freeAboveBuilder)
+ *             .isMatching(true)
+ *             .plusTiers(tiersBuilder -> tiersBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateBuilder implements Builder<ShippingRate> {
@@ -31,16 +33,28 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     private java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers;
 
+    /**
+     <>
+     */
+
     public ShippingRateBuilder price(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.price = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingRateBuilder price(final com.commercetools.history.models.common.Money price) {
         this.price = price;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateBuilder freeAbove(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -48,13 +62,17 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingRateBuilder freeAbove(final com.commercetools.history.models.common.Money freeAbove) {
         this.freeAbove = freeAbove;
         return this;
     }
 
     /**
-     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
+     <*  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>>
      */
 
     public ShippingRateBuilder isMatching(final Boolean isMatching) {
@@ -62,16 +80,28 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingRateBuilder tiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateBuilder tiers(
             final java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers) {
         this.tiers = tiers;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateBuilder plusTiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {
         if (this.tiers == null) {
@@ -80,6 +110,10 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateBuilder plusTiers(
             Function<com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder> builder) {
@@ -90,6 +124,10 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
                 .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingRateBuilder withTiers(
             Function<com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder> builder) {

@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderDiscountCodeRemovedMessagePayload orderDiscountCodeRemovedMessagePayload = OrderDiscountCodeRemovedMessagePayload.builder()
-           .discountCode(discountCodeBuilder -> discountCodeBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderDiscountCodeRemovedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderDiscountCodeRemovedMessagePayload orderDiscountCodeRemovedMessagePayload = OrderDiscountCodeRemovedMessagePayload.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderDiscountCodeRemovedMessagePayloadImpl.class)
@@ -31,7 +34,7 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
     String ORDER_DISCOUNT_CODE_REMOVED = "OrderDiscountCodeRemoved";
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     <*  <p>Reference to a DiscountCode.</p>>
      */
     @NotNull
     @Valid

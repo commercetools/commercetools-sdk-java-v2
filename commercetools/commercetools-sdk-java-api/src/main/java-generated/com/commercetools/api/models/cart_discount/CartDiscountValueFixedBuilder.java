@@ -8,30 +8,44 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountValueFixed cartDiscountValueFixed = CartDiscountValueFixed.builder()
-           .plusMoney(moneyBuilder -> moneyBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountValueFixedBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountValueFixed cartDiscountValueFixed = CartDiscountValueFixed.builder()
+ *             .plusMoney(moneyBuilder -> moneyBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueFixed> {
 
     private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
 
+    /**
+     <>
+     */
+
     public CartDiscountValueFixedBuilder money(final com.commercetools.api.models.common.TypedMoney... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountValueFixedBuilder money(
             final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountValueFixedBuilder plusMoney(final com.commercetools.api.models.common.TypedMoney... money) {
         if (this.money == null) {
@@ -41,6 +55,10 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartDiscountValueFixedBuilder plusMoney(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
         if (this.money == null) {
@@ -49,6 +67,10 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
         this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountValueFixedBuilder withMoney(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {

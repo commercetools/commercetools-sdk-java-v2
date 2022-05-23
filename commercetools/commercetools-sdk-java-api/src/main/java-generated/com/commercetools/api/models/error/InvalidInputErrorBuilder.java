@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InvalidInputError invalidInputError = InvalidInputError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * InvalidInputErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidInputError invalidInputError = InvalidInputError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
@@ -23,15 +25,27 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public InvalidInputErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InvalidInputErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InvalidInputErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

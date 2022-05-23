@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetProductVariantKeyAction productSetProductVariantKeyAction = ProductSetProductVariantKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetProductVariantKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetProductVariantKeyAction productSetProductVariantKeyAction = ProductSetProductVariantKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetProductVariantKeyActionBuilder implements Builder<ProductSetProductVariantKeyAction> {
@@ -32,10 +34,18 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     @Nullable
     private Boolean staged;
 
+    /**
+     <>
+     */
+
     public ProductSetProductVariantKeyActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetProductVariantKeyActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
@@ -43,13 +53,17 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
+     <*  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>>
      */
 
     public ProductSetProductVariantKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetProductVariantKeyActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetExternalIdAction customerSetExternalIdAction = CustomerSetExternalIdAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetExternalIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetExternalIdAction customerSetExternalIdAction = CustomerSetExternalIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetExternalIdAction> {
@@ -24,7 +26,7 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
     private String externalId;
 
     /**
-     *  <p>If not defined, the external ID is unset.</p>
+     <*  <p>If not defined, the external ID is unset.</p>>
      */
 
     public CustomerSetExternalIdActionBuilder externalId(@Nullable final String externalId) {

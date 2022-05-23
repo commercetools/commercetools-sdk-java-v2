@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderLineItemAddedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedMessagePayload, ModelBase {
 
@@ -36,13 +39,25 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
         this.type = ORDER_LINE_ITEM_ADDED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.cart.LineItem getLineItem() {
         return this.lineItem;
     }
+
+    /**
+     <>
+     */
 
     public Long getAddedQuantity() {
         return this.addedQuantity;

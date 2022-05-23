@@ -10,23 +10,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductProjection productProjection = ProductProjection.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .productType(productTypeBuilder -> productTypeBuilder)
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .plusCategories(categoriesBuilder -> categoriesBuilder)
-           .masterVariant(masterVariantBuilder -> masterVariantBuilder)
-           .plusVariants(variantsBuilder -> variantsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductProjectionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductProjection productProjection = ProductProjection.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .plusCategories(categoriesBuilder -> categoriesBuilder)
+ *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
+ *             .plusVariants(variantsBuilder -> variantsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductProjectionBuilder implements Builder<ProductProjection> {
@@ -88,7 +90,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
 
     /**
-     *  <p>The unique ID of the Product.</p>
+     <*  <p>The unique ID of the Product.</p>>
      */
 
     public ProductProjectionBuilder id(final String id) {
@@ -97,7 +99,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>The current version of the Product.</p>
+     <*  <p>The current version of the Product.</p>>
      */
 
     public ProductProjectionBuilder version(final Long version) {
@@ -105,10 +107,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -116,13 +126,17 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>User-specific unique identifier of the Product.</p>
+     <*  <p>User-specific unique identifier of the Product.</p>>
      */
 
     public ProductProjectionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder productType(
             Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
@@ -131,11 +145,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -143,10 +165,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -154,11 +184,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -166,13 +204,17 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
 
     /**
-     *  <p>References to categories the product is in.</p>
+     <*  <p>References to categories the product is in.</p>>
      */
 
     public ProductProjectionBuilder categories(
@@ -182,7 +224,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>References to categories the product is in.</p>
+     <*  <p>References to categories the product is in.</p>>
      */
 
     public ProductProjectionBuilder categories(
@@ -192,7 +234,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>References to categories the product is in.</p>
+     <*  <p>References to categories the product is in.</p>>
      */
 
     public ProductProjectionBuilder plusCategories(
@@ -205,7 +247,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>References to categories the product is in.</p>
+     <*  <p>References to categories the product is in.</p>>
      */
 
     public ProductProjectionBuilder plusCategories(
@@ -218,7 +260,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>References to categories the product is in.</p>
+     <*  <p>References to categories the product is in.</p>>
      */
 
     public ProductProjectionBuilder withCategories(
@@ -228,6 +270,10 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder categoryOrderHints(
             Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
         this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())
@@ -235,11 +281,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder categoryOrderHints(
             @Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
         this.categoryOrderHints = categoryOrderHints;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder metaTitle(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -247,11 +301,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder metaTitle(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -259,11 +321,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder metaDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder metaKeywords(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -271,11 +341,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder metaKeywords(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder searchKeywords(
             Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
@@ -283,21 +361,37 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder searchKeywords(
             @Nullable final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder hasStagedChanges(@Nullable final Boolean hasStagedChanges) {
         this.hasStagedChanges = hasStagedChanges;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder published(@Nullable final Boolean published) {
         this.published = published;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder masterVariant(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
@@ -305,22 +399,38 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder masterVariant(
             final com.commercetools.api.models.product.ProductVariant masterVariant) {
         this.masterVariant = masterVariant;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {
         this.variants = new ArrayList<>(Arrays.asList(variants));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder variants(
             final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
         this.variants = variants;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder plusVariants(
             final com.commercetools.api.models.product.ProductVariant... variants) {
@@ -331,6 +441,10 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder plusVariants(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         if (this.variants == null) {
@@ -340,12 +454,20 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder withVariants(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         this.variants = new ArrayList<>();
         this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
@@ -354,11 +476,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductProjectionBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
@@ -366,13 +496,17 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductProjectionBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
         return this;
     }
 
     /**
-     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
      */
 
     public ProductProjectionBuilder reviewRatingStatistics(
@@ -384,7 +518,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
      */
 
     public ProductProjectionBuilder reviewRatingStatistics(

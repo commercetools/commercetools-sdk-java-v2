@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PriceTier priceTier = PriceTier.builder()
-           .minimumQuantity(0.3)
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * PriceTierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PriceTier priceTier = PriceTier.builder()
+ *             .minimumQuantity(0.3)
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceTierBuilder implements Builder<PriceTier> {
@@ -26,8 +28,8 @@ public class PriceTierBuilder implements Builder<PriceTier> {
     private com.commercetools.api.models.common.TypedMoney value;
 
     /**
-     *  <p>Minimum quantity this Price tier is valid for.</p>
-     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
+     <*  <p>Minimum quantity this Price tier is valid for.</p>
+    *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>>
      */
 
     public PriceTierBuilder minimumQuantity(final Long minimumQuantity) {
@@ -36,8 +38,8 @@ public class PriceTierBuilder implements Builder<PriceTier> {
     }
 
     /**
-     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
-     *  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
+     <*  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+    *  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>>
      */
 
     public PriceTierBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -46,8 +48,8 @@ public class PriceTierBuilder implements Builder<PriceTier> {
     }
 
     /**
-     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
-     *  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
+     <*  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+    *  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>>
      */
 
     public PriceTierBuilder value(

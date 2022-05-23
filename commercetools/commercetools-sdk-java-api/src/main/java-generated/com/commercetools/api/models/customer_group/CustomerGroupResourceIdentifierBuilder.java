@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerGroupResourceIdentifier customerGroupResourceIdentifier = CustomerGroupResourceIdentifier.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerGroupResourceIdentifierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroupResourceIdentifier customerGroupResourceIdentifier = CustomerGroupResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerGroupResourceIdentifier> {
@@ -27,7 +29,7 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
     private String key;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>Platform-generated unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public CustomerGroupResourceIdentifierBuilder id(@Nullable final String id) {
@@ -36,7 +38,7 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     <*  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public CustomerGroupResourceIdentifierBuilder key(@Nullable final String key) {

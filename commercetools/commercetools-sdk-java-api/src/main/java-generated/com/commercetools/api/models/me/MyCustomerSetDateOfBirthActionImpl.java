@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MyCustomerSetDateOfBirthAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBirthAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBi
         this.action = SET_DATE_OF_BIRTH;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;

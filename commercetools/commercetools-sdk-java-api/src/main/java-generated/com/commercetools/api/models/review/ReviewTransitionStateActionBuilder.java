@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewTransitionStateAction reviewTransitionStateAction = ReviewTransitionStateAction.builder()
-           .state(stateBuilder -> stateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ReviewTransitionStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewTransitionStateAction reviewTransitionStateAction = ReviewTransitionStateAction.builder()
+ *             .state(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransitionStateAction> {
@@ -27,17 +29,29 @@ public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransit
     @Nullable
     private Boolean force;
 
+    /**
+     <>
+     */
+
     public ReviewTransitionStateActionBuilder state(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ReviewTransitionStateActionBuilder state(
             final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ReviewTransitionStateActionBuilder force(@Nullable final Boolean force) {
         this.force = force;

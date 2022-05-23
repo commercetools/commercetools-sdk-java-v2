@@ -21,23 +21,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductProjection productProjection = ProductProjection.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .productType(productTypeBuilder -> productTypeBuilder)
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .plusCategories(categoriesBuilder -> categoriesBuilder)
-           .masterVariant(masterVariantBuilder -> masterVariantBuilder)
-           .plusVariants(variantsBuilder -> variantsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductProjection
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductProjection productProjection = ProductProjection.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .plusCategories(categoriesBuilder -> categoriesBuilder)
+ *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
+ *             .plusVariants(variantsBuilder -> variantsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductProjectionImpl.class)
@@ -45,99 +48,146 @@ public interface ProductProjection
         extends BaseResource, ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection> {
 
     /**
-     *  <p>The unique ID of the Product.</p>
+     <*  <p>The unique ID of the Product.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>The current version of the Product.</p>
+     <*  <p>The current version of the Product.</p>>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *  <p>User-specific unique identifier of the Product.</p>
+     <*  <p>User-specific unique identifier of the Product.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("productType")
     public ProductTypeReference getProductType();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
     /**
-     *  <p>References to categories the product is in.</p>
+     <*  <p>References to categories the product is in.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("categories")
     public List<CategoryReference> getCategories();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("categoryOrderHints")
     public CategoryOrderHints getCategoryOrderHints();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
 
+    /**
+     <>
+     */
+
     @JsonProperty("hasStagedChanges")
     public Boolean getHasStagedChanges();
+
+    /**
+     <>
+     */
 
     @JsonProperty("published")
     public Boolean getPublished();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("masterVariant")
     public ProductVariant getMasterVariant();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("variants")
     public List<ProductVariant> getVariants();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
     /**
-     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
      */
     @Valid
     @JsonProperty("reviewRatingStatistics")

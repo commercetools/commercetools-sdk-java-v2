@@ -12,14 +12,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeNonApplicableError discountCodeNonApplicableError = DiscountCodeNonApplicableError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeNonApplicableError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeNonApplicableError discountCodeNonApplicableError = DiscountCodeNonApplicableError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeNonApplicableErrorImpl.class)
@@ -27,20 +30,44 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
 
     String DISCOUNT_CODE_NON_APPLICABLE = "DiscountCodeNonApplicable";
 
+    /**
+     <>
+     */
+
     @JsonProperty("discountCode")
     public String getDiscountCode();
+
+    /**
+     <>
+     */
 
     @JsonProperty("reason")
     public String getReason();
 
+    /**
+     <>
+     */
+
     @JsonProperty("dicountCodeId")
     public String getDicountCodeId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
+    /**
+     <>
+     */
+
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
+
+    /**
+     <>
+     */
 
     @JsonProperty("validityCheckTime")
     public ZonedDateTime getValidityCheckTime();

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ReviewLabel
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewLabelImpl implements ReviewLabel, ModelBase {
 
@@ -34,13 +37,25 @@ public class ReviewLabelImpl implements ReviewLabel, ModelBase {
         this.type = REVIEW_LABEL;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public String getTitle() {
         return this.title;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MoveImageToPositionChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
         this.type = MOVE_IMAGE_TO_POSITION_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update actions for moving images</p>
+     <*  <p>Update actions for moving images</p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.common.Image> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.Image> getNextValue() {
         return this.nextValue;

@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeOrderHintChange changeOrderHintChange = ChangeOrderHintChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * ChangeOrderHintChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeOrderHintChange changeOrderHintChange = ChangeOrderHintChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChange> {
@@ -28,7 +30,7 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changeOrderHint</code></p>
+     <*  <p>Shape of the action for <code>changeOrderHint</code></p>>
      */
 
     public ChangeOrderHintChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeOrderHintChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeOrderHintChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

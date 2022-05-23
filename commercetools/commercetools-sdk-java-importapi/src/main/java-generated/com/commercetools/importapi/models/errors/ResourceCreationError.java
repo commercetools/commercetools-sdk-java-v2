@@ -11,20 +11,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ResourceCreationError resourceCreationError = ResourceCreationError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ResourceCreationError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResourceCreationError resourceCreationError = ResourceCreationError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceCreationErrorImpl.class)
 public interface ResourceCreationError extends ErrorObject {
 
     String RESOURCE_CREATION = "ResourceCreation";
+
+    /**
+     <>
+     */
 
     @JsonProperty("resource")
     public Object getResource();

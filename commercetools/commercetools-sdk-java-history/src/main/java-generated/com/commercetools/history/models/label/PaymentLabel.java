@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentLabel paymentLabel = PaymentLabel.builder()
-           .key("{key}")
-           .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
-           .build()
- </code></pre>
- </div>
+ * PaymentLabel
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentLabel paymentLabel = PaymentLabel.builder()
+ *             .key("{key}")
+ *             .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentLabelImpl.class)
@@ -31,14 +34,23 @@ public interface PaymentLabel extends Label {
 
     String PAYMENT_LABEL = "PaymentLabel";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("amountPlanned")

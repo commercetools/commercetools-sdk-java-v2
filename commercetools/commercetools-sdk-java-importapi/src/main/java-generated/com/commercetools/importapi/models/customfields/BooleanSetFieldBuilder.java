@@ -7,29 +7,43 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   BooleanSetField booleanSetField = BooleanSetField.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * BooleanSetFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     BooleanSetField booleanSetField = BooleanSetField.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
 
     private java.util.List<Boolean> value;
 
+    /**
+     <>
+     */
+
     public BooleanSetFieldBuilder value(final Boolean... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public BooleanSetFieldBuilder value(final java.util.List<Boolean> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public BooleanSetFieldBuilder plusValue(final Boolean... value) {
         if (this.value == null) {

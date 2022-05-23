@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AssetDimensions assetDimensions = AssetDimensions.builder()
-           .w(0.3)
-           .h(0.3)
-           .build()
- </code></pre>
- </div>
+ * AssetDimensionsBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssetDimensions assetDimensions = AssetDimensions.builder()
+ *             .w(0.3)
+ *             .h(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
@@ -25,7 +27,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     private Integer h;
 
     /**
-     *  <p>The width of the asset source.</p>
+     <*  <p>The width of the asset source.</p>>
      */
 
     public AssetDimensionsBuilder w(final Integer w) {
@@ -34,7 +36,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     }
 
     /**
-     *  <p>The height of the asset source.</p>
+     <*  <p>The height of the asset source.</p>>
      */
 
     public AssetDimensionsBuilder h(final Integer h) {

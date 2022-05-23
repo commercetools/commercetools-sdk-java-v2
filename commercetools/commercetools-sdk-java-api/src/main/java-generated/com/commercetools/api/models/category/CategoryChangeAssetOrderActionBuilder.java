@@ -7,29 +7,43 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryChangeAssetOrderAction categoryChangeAssetOrderAction = CategoryChangeAssetOrderAction.builder()
-           .plusAssetOrder(assetOrderBuilder -> assetOrderBuilder)
-           .build()
- </code></pre>
- </div>
+ * CategoryChangeAssetOrderActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryChangeAssetOrderAction categoryChangeAssetOrderAction = CategoryChangeAssetOrderAction.builder()
+ *             .plusAssetOrder(assetOrderBuilder -> assetOrderBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryChangeAssetOrderAction> {
 
     private java.util.List<String> assetOrder;
 
+    /**
+     <>
+     */
+
     public CategoryChangeAssetOrderActionBuilder assetOrder(final String... assetOrder) {
         this.assetOrder = new ArrayList<>(Arrays.asList(assetOrder));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CategoryChangeAssetOrderActionBuilder assetOrder(final java.util.List<String> assetOrder) {
         this.assetOrder = assetOrder;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CategoryChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {
         if (this.assetOrder == null) {

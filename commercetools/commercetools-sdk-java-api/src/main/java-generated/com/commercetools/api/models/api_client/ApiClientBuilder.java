@@ -9,16 +9,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ApiClient apiClient = ApiClient.builder()
-           .id("{id}")
-           .name("{name}")
-           .scope("{scope}")
-           .build()
- </code></pre>
- </div>
+ * ApiClientBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ApiClient apiClient = ApiClient.builder()
+ *             .id("{id}")
+ *             .name("{name}")
+ *             .scope("{scope}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApiClientBuilder implements Builder<ApiClient> {
@@ -48,7 +50,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     private Integer refreshTokenValiditySeconds;
 
     /**
-     *  <p>Platform-generated unique identifier of the APIClient. This is the OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     <*  <p>Platform-generated unique identifier of the APIClient. This is the OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>>
      */
 
     public ApiClientBuilder id(final String id) {
@@ -57,7 +59,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Name of the APIClient.</p>
+     <*  <p>Name of the APIClient.</p>>
      */
 
     public ApiClientBuilder name(final String name) {
@@ -66,7 +68,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     <*  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>>
      */
 
     public ApiClientBuilder scope(final String scope) {
@@ -75,7 +77,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     <*  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>>
      */
 
     public ApiClientBuilder secret(@Nullable final String secret) {
@@ -84,7 +86,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     <*  <p>Date of the last day this APIClient was used to obtain an access token.</p>>
      */
 
     public ApiClientBuilder lastUsedAt(@Nullable final java.time.LocalDate lastUsedAt) {
@@ -93,7 +95,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
+     <*  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>>
      */
 
     public ApiClientBuilder deleteAt(@Nullable final java.time.ZonedDateTime deleteAt) {
@@ -102,7 +104,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     <*  <p>Date and time (UTC) the APIClient was initially created at.</p>>
      */
 
     public ApiClientBuilder createdAt(@Nullable final java.time.ZonedDateTime createdAt) {
@@ -111,7 +113,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     <*  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>>
      */
 
     public ApiClientBuilder accessTokenValiditySeconds(@Nullable final Integer accessTokenValiditySeconds) {
@@ -120,7 +122,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     <*  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>>
      */
 
     public ApiClientBuilder refreshTokenValiditySeconds(@Nullable final Integer refreshTokenValiditySeconds) {

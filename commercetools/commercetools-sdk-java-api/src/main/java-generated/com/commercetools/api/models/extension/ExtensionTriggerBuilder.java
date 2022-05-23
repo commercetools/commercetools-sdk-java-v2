@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionTrigger extensionTrigger = ExtensionTrigger.builder()
-           .resourceTypeId(ExtensionResourceTypeId.CART)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExtensionTriggerBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionTrigger extensionTrigger = ExtensionTrigger.builder()
+ *             .resourceTypeId(ExtensionResourceTypeId.CART)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
@@ -25,7 +27,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     private java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions;
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
+     <*  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>>
      */
 
     public ExtensionTriggerBuilder resourceTypeId(
@@ -35,7 +37,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     }
 
     /**
-     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     <*  <p><code>Create</code> and <code>Update</code> requests are supported.</p>>
      */
 
     public ExtensionTriggerBuilder actions(final com.commercetools.api.models.extension.ExtensionAction... actions) {
@@ -44,7 +46,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     }
 
     /**
-     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     <*  <p><code>Create</code> and <code>Update</code> requests are supported.</p>>
      */
 
     public ExtensionTriggerBuilder actions(
@@ -54,7 +56,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     }
 
     /**
-     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     <*  <p><code>Create</code> and <code>Update</code> requests are supported.</p>>
      */
 
     public ExtensionTriggerBuilder plusActions(

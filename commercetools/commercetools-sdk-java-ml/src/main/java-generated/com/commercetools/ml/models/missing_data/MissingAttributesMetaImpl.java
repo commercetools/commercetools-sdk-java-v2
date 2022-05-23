@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MissingAttributesMeta
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBase {
 
@@ -36,17 +39,26 @@ public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBa
     public MissingAttributesMetaImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel() {
         return this.productLevel;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getVariantLevel() {
         return this.variantLevel;
     }
 
     /**
-     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
+     <*  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>>
      */
+
     public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }

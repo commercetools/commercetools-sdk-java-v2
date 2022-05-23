@@ -26,6 +26,10 @@ public class CustomFieldStringTypeImpl implements CustomFieldStringType, ModelBa
         this.name = STRING;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }

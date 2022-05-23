@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ZoneRateDraft zoneRateDraft = ZoneRateDraft.builder()
-           .zone(zoneBuilder -> zoneBuilder)
-           .plusShippingRates(shippingRatesBuilder -> shippingRatesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ZoneRateDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneRateDraft zoneRateDraft = ZoneRateDraft.builder()
+ *             .zone(zoneBuilder -> zoneBuilder)
+ *             .plusShippingRates(shippingRatesBuilder -> shippingRatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
@@ -25,11 +27,19 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates;
 
+    /**
+     <>
+     */
+
     public ZoneRateDraftBuilder zone(
             Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder> builder) {
         this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ZoneRateDraftBuilder zone(final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
@@ -37,7 +47,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
     }
 
     /**
-     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     <*  <p>The array must not contain two shipping rates with the same currency.</p>>
      */
 
     public ZoneRateDraftBuilder shippingRates(
@@ -47,7 +57,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
     }
 
     /**
-     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     <*  <p>The array must not contain two shipping rates with the same currency.</p>>
      */
 
     public ZoneRateDraftBuilder shippingRates(
@@ -57,7 +67,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
     }
 
     /**
-     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     <*  <p>The array must not contain two shipping rates with the same currency.</p>>
      */
 
     public ZoneRateDraftBuilder plusShippingRates(
@@ -70,7 +80,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
     }
 
     /**
-     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     <*  <p>The array must not contain two shipping rates with the same currency.</p>>
      */
 
     public ZoneRateDraftBuilder plusShippingRates(
@@ -84,7 +94,7 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
     }
 
     /**
-     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     <*  <p>The array must not contain two shipping rates with the same currency.</p>>
      */
 
     public ZoneRateDraftBuilder withShippingRates(

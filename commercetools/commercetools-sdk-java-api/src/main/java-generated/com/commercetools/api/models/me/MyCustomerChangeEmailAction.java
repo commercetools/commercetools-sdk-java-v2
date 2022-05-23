@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCustomerChangeEmailAction myCustomerChangeEmailAction = MyCustomerChangeEmailAction.builder()
-           .email("{email}")
-           .build()
- </code></pre>
- </div>
+ * MyCustomerChangeEmailAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerChangeEmailAction myCustomerChangeEmailAction = MyCustomerChangeEmailAction.builder()
+ *             .email("{email}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerChangeEmailActionImpl.class)
@@ -28,6 +31,9 @@ public interface MyCustomerChangeEmailAction extends MyCustomerUpdateAction {
 
     String CHANGE_EMAIL = "changeEmail";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("email")
     public String getEmail();

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartSetAnonymousIdAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction, M
         this.action = SET_ANONYMOUS_ID;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>If not set, any existing anonymous ID will be removed.</p>
+     <*  <p>If not set, any existing anonymous ID will be removed.</p>>
      */
+
     public String getAnonymousId() {
         return this.anonymousId;
     }

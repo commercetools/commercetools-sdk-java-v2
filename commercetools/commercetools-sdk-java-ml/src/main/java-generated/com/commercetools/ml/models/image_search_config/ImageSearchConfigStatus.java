@@ -9,6 +9,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * ImageSearchConfigStatus
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ImageSearchConfigStatus {
 

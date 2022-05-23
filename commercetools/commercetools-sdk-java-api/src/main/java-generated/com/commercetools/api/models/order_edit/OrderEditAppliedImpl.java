@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderEditApplied
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
 
@@ -39,17 +42,33 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
         this.type = APPLIED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getAppliedAt() {
         return this.appliedAt;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptBeforeEdit() {
         return this.excerptBeforeEdit;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptAfterEdit() {
         return this.excerptAfterEdit;

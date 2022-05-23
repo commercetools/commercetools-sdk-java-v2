@@ -9,19 +9,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetStatusInterfaceCodeAction paymentSetStatusInterfaceCodeAction = PaymentSetStatusInterfaceCodeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetStatusInterfaceCodeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetStatusInterfaceCodeAction paymentSetStatusInterfaceCodeAction = PaymentSetStatusInterfaceCodeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<PaymentSetStatusInterfaceCodeAction> {
 
     @Nullable
     private String interfaceCode;
+
+    /**
+     <>
+     */
 
     public PaymentSetStatusInterfaceCodeActionBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;

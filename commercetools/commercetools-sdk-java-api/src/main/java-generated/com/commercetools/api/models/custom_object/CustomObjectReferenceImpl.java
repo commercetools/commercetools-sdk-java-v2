@@ -40,22 +40,25 @@ public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBa
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced CustomObject.</p>
+     <*  <p>Platform-generated unique identifier of the referenced CustomObject.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     <*  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>>
      */
+
     public com.commercetools.api.models.custom_object.CustomObject getObj() {
         return this.obj;
     }

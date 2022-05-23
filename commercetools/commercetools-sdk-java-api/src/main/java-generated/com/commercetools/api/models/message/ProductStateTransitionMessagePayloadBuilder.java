@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductStateTransitionMessagePayload productStateTransitionMessagePayload = ProductStateTransitionMessagePayload.builder()
-           .state(stateBuilder -> stateBuilder)
-           .force(true)
-           .build()
- </code></pre>
- </div>
+ * ProductStateTransitionMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductStateTransitionMessagePayload productStateTransitionMessagePayload = ProductStateTransitionMessagePayload.builder()
+ *             .state(stateBuilder -> stateBuilder)
+ *             .force(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductStateTransitionMessagePayloadBuilder implements Builder<ProductStateTransitionMessagePayload> {
@@ -26,7 +28,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     private Boolean force;
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public ProductStateTransitionMessagePayloadBuilder state(
@@ -36,7 +38,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
 
     public ProductStateTransitionMessagePayloadBuilder state(
@@ -44,6 +46,10 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
         this.state = state;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductStateTransitionMessagePayloadBuilder force(final Boolean force) {
         this.force = force;

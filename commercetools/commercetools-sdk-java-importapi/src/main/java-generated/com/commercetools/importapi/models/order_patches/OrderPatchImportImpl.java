@@ -35,15 +35,17 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     <*  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>>
      */
+
     public String getOrderNumber() {
         return this.orderNumber;
     }
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>
+     <*  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>>
      */
+
     public com.commercetools.importapi.models.order_patches.OrderField getFields() {
         return this.fields;
     }

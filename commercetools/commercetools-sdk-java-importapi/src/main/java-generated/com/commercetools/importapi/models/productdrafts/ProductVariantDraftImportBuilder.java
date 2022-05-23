@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariantDraftImport productVariantDraftImport = ProductVariantDraftImport.builder()
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * ProductVariantDraftImportBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantDraftImport productVariantDraftImport = ProductVariantDraftImport.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDraftImportBuilder implements Builder<ProductVariantDraftImport> {
@@ -39,15 +41,27 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantDraftImportBuilder prices(
             @Nullable final com.commercetools.importapi.models.productdrafts.PriceDraftImport... prices) {
@@ -55,11 +69,19 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder prices(
             @Nullable final java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> prices) {
         this.prices = prices;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantDraftImportBuilder plusPrices(
             @Nullable final com.commercetools.importapi.models.productdrafts.PriceDraftImport... prices) {
@@ -70,6 +92,10 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder plusPrices(
             Function<com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder, com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder> builder) {
         if (this.prices == null) {
@@ -80,6 +106,10 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder withPrices(
             Function<com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder, com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder> builder) {
         this.prices = new ArrayList<>();
@@ -88,17 +118,29 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder attributes(
             @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder attributes(
             @Nullable final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantDraftImportBuilder plusAttributes(
             @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
@@ -109,6 +151,10 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder plusAttributes(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
         if (this.attributes == null) {
@@ -119,6 +165,10 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder withAttributes(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
         this.attributes = new ArrayList<>();
@@ -127,17 +177,29 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder images(
             @Nullable final com.commercetools.importapi.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder images(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
         this.images = images;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantDraftImportBuilder plusImages(
             @Nullable final com.commercetools.importapi.models.common.Image... images) {
@@ -148,6 +210,10 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder plusImages(
             Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
         if (this.images == null) {
@@ -157,6 +223,10 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder withImages(
             Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
         this.images = new ArrayList<>();
@@ -164,17 +234,29 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder assets(
             @Nullable final com.commercetools.importapi.models.common.Asset... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder assets(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
         this.assets = assets;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantDraftImportBuilder plusAssets(
             @Nullable final com.commercetools.importapi.models.common.Asset... assets) {
@@ -185,6 +267,10 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductVariantDraftImportBuilder plusAssets(
             Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
         if (this.assets == null) {
@@ -193,6 +279,10 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductVariantDraftImportBuilder withAssets(
             Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {

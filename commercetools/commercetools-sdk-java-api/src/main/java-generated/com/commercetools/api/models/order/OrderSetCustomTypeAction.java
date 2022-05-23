@@ -15,13 +15,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetCustomTypeAction orderSetCustomTypeAction = OrderSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderSetCustomTypeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetCustomTypeAction orderSetCustomTypeAction = OrderSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetCustomTypeActionImpl.class)
@@ -30,14 +33,14 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>
+     <*  <p>Defines the Type that extends the Order with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order.</p>>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Order.</p>
+     <*  <p>Sets the Custom Fields fields for the Order.</p>>
      */
     @Valid
     @JsonProperty("fields")

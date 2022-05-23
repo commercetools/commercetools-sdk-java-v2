@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductAddAssetAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBase {
 
@@ -46,29 +49,50 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
         this.action = ADD_ASSET;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     <>
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.AssetDraft getAsset() {
         return this.asset;
     }
 
     /**
-     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+     <*  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>>
      */
+
     public Integer getPosition() {
         return this.position;
     }

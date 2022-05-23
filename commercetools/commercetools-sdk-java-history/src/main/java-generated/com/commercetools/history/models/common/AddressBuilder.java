@@ -7,38 +7,40 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Address address = Address.builder()
-           .id("{id}")
-           .key("{key}")
-           .title("{title}")
-           .salutation("{salutation}")
-           .firstName("{firstName}")
-           .lastName("{lastName}")
-           .streetName("{streetName}")
-           .streetNumber("{streetNumber}")
-           .additionalStreetInfo("{additionalStreetInfo}")
-           .postalCode("{postalCode}")
-           .city("{city}")
-           .region("{region}")
-           .state("{state}")
-           .country("{country}")
-           .company("{company}")
-           .department("{department}")
-           .building("{building}")
-           .apartment("{apartment}")
-           .pOBox("{pOBox}")
-           .phone("{phone}")
-           .mobile("{mobile}")
-           .email("{email}")
-           .fax("{fax}")
-           .additionalAddressInfo("{additionalAddressInfo}")
-           .externalId("{externalId}")
-           .build()
- </code></pre>
- </div>
+ * AddressBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Address address = Address.builder()
+ *             .id("{id}")
+ *             .key("{key}")
+ *             .title("{title}")
+ *             .salutation("{salutation}")
+ *             .firstName("{firstName}")
+ *             .lastName("{lastName}")
+ *             .streetName("{streetName}")
+ *             .streetNumber("{streetNumber}")
+ *             .additionalStreetInfo("{additionalStreetInfo}")
+ *             .postalCode("{postalCode}")
+ *             .city("{city}")
+ *             .region("{region}")
+ *             .state("{state}")
+ *             .country("{country}")
+ *             .company("{company}")
+ *             .department("{department}")
+ *             .building("{building}")
+ *             .apartment("{apartment}")
+ *             .pOBox("{pOBox}")
+ *             .phone("{phone}")
+ *             .mobile("{mobile}")
+ *             .email("{email}")
+ *             .fax("{fax}")
+ *             .additionalAddressInfo("{additionalAddressInfo}")
+ *             .externalId("{externalId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddressBuilder implements Builder<Address> {
@@ -94,7 +96,7 @@ public class AddressBuilder implements Builder<Address> {
     private String externalId;
 
     /**
-     *  <p>Unique ID of the Address.</p>
+     <*  <p>Unique ID of the Address.</p>>
      */
 
     public AddressBuilder id(final String id) {
@@ -102,60 +104,108 @@ public class AddressBuilder implements Builder<Address> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder title(final String title) {
         this.title = title;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder salutation(final String salutation) {
         this.salutation = salutation;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder firstName(final String firstName) {
         this.firstName = firstName;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder lastName(final String lastName) {
         this.lastName = lastName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder streetName(final String streetName) {
         this.streetName = streetName;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder streetNumber(final String streetNumber) {
         this.streetNumber = streetNumber;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder additionalStreetInfo(final String additionalStreetInfo) {
         this.additionalStreetInfo = additionalStreetInfo;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder postalCode(final String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder city(final String city) {
         this.city = city;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder region(final String region) {
         this.region = region;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder state(final String state) {
         this.state = state;
@@ -163,7 +213,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
 
     public AddressBuilder country(final String country) {
@@ -171,55 +221,99 @@ public class AddressBuilder implements Builder<Address> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder company(final String company) {
         this.company = company;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder department(final String department) {
         this.department = department;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder building(final String building) {
         this.building = building;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder apartment(final String apartment) {
         this.apartment = apartment;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder pOBox(final String pOBox) {
         this.pOBox = pOBox;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder phone(final String phone) {
         this.phone = phone;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder mobile(final String mobile) {
         this.mobile = mobile;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder email(final String email) {
         this.email = email;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder fax(final String fax) {
         this.fax = fax;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddressBuilder additionalAddressInfo(final String additionalAddressInfo) {
         this.additionalAddressInfo = additionalAddressInfo;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddressBuilder externalId(final String externalId) {
         this.externalId = externalId;

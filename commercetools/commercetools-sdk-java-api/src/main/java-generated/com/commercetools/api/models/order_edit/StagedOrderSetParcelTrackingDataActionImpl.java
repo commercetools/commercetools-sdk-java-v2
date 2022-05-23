@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StagedOrderSetParcelTrackingDataAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSetParcelTrackingDataAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSe
         this.action = SET_PARCEL_TRACKING_DATA;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;

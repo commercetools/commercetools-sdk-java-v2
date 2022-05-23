@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DuplicateFieldError duplicateFieldError = DuplicateFieldError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * DuplicateFieldErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateFieldError duplicateFieldError = DuplicateFieldError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> {
@@ -35,15 +37,27 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     @Nullable
     private com.commercetools.api.models.common.Reference conflictingResource;
 
+    /**
+     <>
+     */
+
     public DuplicateFieldErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -53,10 +67,18 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DuplicateFieldErrorBuilder field(@Nullable final String field) {
         this.field = field;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DuplicateFieldErrorBuilder duplicateValue(@Nullable final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;
@@ -64,7 +86,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public DuplicateFieldErrorBuilder conflictingResource(
@@ -74,7 +96,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public DuplicateFieldErrorBuilder conflictingResource(

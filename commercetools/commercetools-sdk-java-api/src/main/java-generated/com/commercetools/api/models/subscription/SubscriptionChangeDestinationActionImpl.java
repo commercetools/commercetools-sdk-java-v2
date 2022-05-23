@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SubscriptionChangeDestinationAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionChangeDestinationActionImpl implements SubscriptionChangeDestinationAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class SubscriptionChangeDestinationActionImpl implements SubscriptionChan
         this.action = CHANGE_DESTINATION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {
         return this.destination;

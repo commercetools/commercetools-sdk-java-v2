@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * IronMqDestination
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class IronMqDestinationImpl implements IronMqDestination, ModelBase {
 
@@ -31,9 +34,17 @@ public class IronMqDestinationImpl implements IronMqDestination, ModelBase {
         this.type = IRON_MQ;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getUri() {
         return this.uri;

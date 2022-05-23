@@ -34,13 +34,18 @@ public class PriceKeyReferenceImpl implements PriceKeyReference, ModelBase {
         this.typeId = ReferenceType.findEnum("price");
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     <*  <p>The type of the referenced resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }

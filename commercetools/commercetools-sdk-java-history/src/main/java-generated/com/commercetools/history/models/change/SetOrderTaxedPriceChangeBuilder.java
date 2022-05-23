@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetOrderTaxedPriceChange setOrderTaxedPriceChange = SetOrderTaxedPriceChange.builder()
-           .change("{change}")
-           .taxMode(TaxMode.PLATFORM)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetOrderTaxedPriceChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetOrderTaxedPriceChange setOrderTaxedPriceChange = SetOrderTaxedPriceChange.builder()
+ *             .change("{change}")
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPriceChange> {
@@ -32,7 +34,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
     /**
-     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
+     <*  <p>Update action for <code>setOrderTaxedPrice</code></p>>
      */
 
     public SetOrderTaxedPriceChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetOrderTaxedPriceChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
         this.taxMode = taxMode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetOrderTaxedPriceChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
@@ -51,17 +61,29 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetOrderTaxedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetOrderTaxedPriceChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetOrderTaxedPriceChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxedItemPrice previousValue) {

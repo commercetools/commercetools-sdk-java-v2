@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentChangeAmountPlannedAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeAmountPlannedActionImpl implements PaymentChangeAmountPlannedAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class PaymentChangeAmountPlannedActionImpl implements PaymentChangeAmount
         this.action = CHANGE_AMOUNT_PLANNED;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;

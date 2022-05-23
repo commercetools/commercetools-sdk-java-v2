@@ -13,17 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>The <code>Authorization</code> header will be set to the content of <code>headerValue</code>. The authentication scheme (such as <code>Basic</code> or <code>Bearer</code>) should be included in the <code>headerValue</code>.</p>
- <p>For example, the <code>headerValue</code> for Basic Authentication should be set to <code>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AuthorizationHeaderAuthentication authorizationHeaderAuthentication = AuthorizationHeaderAuthentication.builder()
-           .headerValue("{headerValue}")
-           .build()
- </code></pre>
- </div>
+ *  <p>The <code>Authorization</code> header will be set to the content of <code>headerValue</code>. The authentication scheme (such as <code>Basic</code> or <code>Bearer</code>) should be included in the <code>headerValue</code>.</p>
+ *  <p>For example, the <code>headerValue</code> for Basic Authentication should be set to <code>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AuthorizationHeaderAuthentication authorizationHeaderAuthentication = AuthorizationHeaderAuthentication.builder()
+ *             .headerValue("{headerValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AuthorizationHeaderAuthenticationImpl.class)
@@ -32,7 +33,7 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
     String AUTHORIZATION_HEADER = "AuthorizationHeader";
 
     /**
-     *  <p>Partially hidden on retrieval for security reasons.</p>
+     <*  <p>Partially hidden on retrieval for security reasons.</p>>
      */
     @NotNull
     @JsonProperty("headerValue")

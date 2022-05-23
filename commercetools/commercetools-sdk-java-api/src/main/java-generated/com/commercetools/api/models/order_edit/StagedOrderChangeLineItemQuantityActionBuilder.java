@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderChangeLineItemQuantityAction stagedOrderChangeLineItemQuantityAction = StagedOrderChangeLineItemQuantityAction.builder()
-           .lineItemId("{lineItemId}")
-           .quantity(0.3)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderChangeLineItemQuantityActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderChangeLineItemQuantityAction stagedOrderChangeLineItemQuantityAction = StagedOrderChangeLineItemQuantityAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeLineItemQuantityActionBuilder
@@ -34,10 +36,18 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     @Nullable
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    /**
+     <>
+     */
+
     public StagedOrderChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
@@ -45,8 +55,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
@@ -56,8 +66,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
@@ -66,6 +76,10 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(
             Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
         this.externalTotalPrice = builder
@@ -73,6 +87,10 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(
             @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {

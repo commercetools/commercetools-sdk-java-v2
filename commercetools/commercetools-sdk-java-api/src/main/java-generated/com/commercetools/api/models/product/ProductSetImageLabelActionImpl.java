@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetImageLabelAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetImageLabelActionImpl implements ProductSetImageLabelAction, ModelBase {
 
@@ -45,31 +48,49 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
         this.action = SET_IMAGE_LABEL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
     /**
-     *  <p>The URL of the image.</p>
+     <*  <p>The URL of the image.</p>>
      */
+
     public String getImageUrl() {
         return this.imageUrl;
     }
 
     /**
-     *  <p>The new image label. If left blank or set to null, the label is removed.</p>
+     <*  <p>The new image label. If left blank or set to null, the label is removed.</p>>
      */
+
     public String getLabel() {
         return this.label;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

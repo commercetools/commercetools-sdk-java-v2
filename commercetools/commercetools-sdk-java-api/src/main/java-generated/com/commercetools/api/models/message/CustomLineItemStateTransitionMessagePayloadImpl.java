@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomLineItemStateTransitionMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemStateTransitionMessagePayloadImpl
         implements CustomLineItemStateTransitionMessagePayload, ModelBase {
@@ -48,32 +51,50 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
         this.type = CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     <>
+     */
+
     public java.time.ZonedDateTime getTransitionDate() {
         return this.transitionDate;
     }
+
+    /**
+     <>
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
+
     public com.commercetools.api.models.state.StateReference getFromState() {
         return this.fromState;
     }
 
     /**
-     *  <p>Reference to a State.</p>
+     <*  <p>Reference to a State.</p>>
      */
+
     public com.commercetools.api.models.state.StateReference getToState() {
         return this.toState;
     }

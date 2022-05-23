@@ -14,15 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderImportCustomLineItemStateAction orderImportCustomLineItemStateAction = OrderImportCustomLineItemStateAction.builder()
-           .customLineItemId("{customLineItemId}")
-           .plusState(stateBuilder -> stateBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderImportCustomLineItemStateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderImportCustomLineItemStateAction orderImportCustomLineItemStateAction = OrderImportCustomLineItemStateAction.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .plusState(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderImportCustomLineItemStateActionImpl.class)
@@ -30,10 +33,16 @@ public interface OrderImportCustomLineItemStateAction extends OrderUpdateAction 
 
     String IMPORT_CUSTOM_LINE_ITEM_STATE = "importCustomLineItemState";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("state")

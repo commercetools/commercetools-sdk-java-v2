@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * Delivery
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryImpl implements Delivery, ModelBase {
 
@@ -43,21 +46,41 @@ public class DeliveryImpl implements Delivery, ModelBase {
     public DeliveryImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
         return this.items;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.importapi.models.orders.Parcel> getParcels() {
         return this.parcels;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.importapi.models.common.Address getAddress() {
         return this.address;

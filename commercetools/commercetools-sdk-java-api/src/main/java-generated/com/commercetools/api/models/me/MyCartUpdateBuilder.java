@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartUpdate myCartUpdate = MyCartUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * MyCartUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartUpdate myCartUpdate = MyCartUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
@@ -25,21 +27,37 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
 
     private java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public MyCartUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartUpdateBuilder actions(final com.commercetools.api.models.me.MyCartUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MyCartUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartUpdateBuilder plusActions(final com.commercetools.api.models.me.MyCartUpdateAction... actions) {
         if (this.actions == null) {
@@ -49,6 +67,10 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MyCartUpdateBuilder plusActions(
             Function<com.commercetools.api.models.me.MyCartUpdateActionBuilder, Builder<? extends com.commercetools.api.models.me.MyCartUpdateAction>> builder) {
         if (this.actions == null) {
@@ -57,6 +79,10 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.me.MyCartUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCartUpdateBuilder withActions(
             Function<com.commercetools.api.models.me.MyCartUpdateActionBuilder, Builder<? extends com.commercetools.api.models.me.MyCartUpdateAction>> builder) {

@@ -34,15 +34,17 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-     *  <p>Country code of the geographic location.</p>
+     <*  <p>Country code of the geographic location.</p>>
      */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-     *  <p>State within the country.</p>
+     <*  <p>State within the country.</p>>
      */
+
     public String getState() {
         return this.state;
     }

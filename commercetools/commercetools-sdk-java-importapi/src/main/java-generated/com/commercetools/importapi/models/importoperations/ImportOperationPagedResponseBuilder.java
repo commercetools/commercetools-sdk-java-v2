@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImportOperationPagedResponse importOperationPagedResponse = ImportOperationPagedResponse.builder()
-           .limit(1)
-           .offset(1)
-           .count(1)
-           .total(1)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ImportOperationPagedResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportOperationPagedResponse importOperationPagedResponse = ImportOperationPagedResponse.builder()
+ *             .limit(1)
+ *             .offset(1)
+ *             .count(1)
+ *             .total(1)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationPagedResponseBuilder implements Builder<ImportOperationPagedResponse> {
@@ -35,7 +37,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public ImportOperationPagedResponseBuilder limit(final Integer limit) {
@@ -44,7 +46,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public ImportOperationPagedResponseBuilder offset(final Long offset) {
@@ -53,7 +55,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     *  <p>The actual number of results returned.</p>
+     <*  <p>The actual number of results returned.</p>>
      */
 
     public ImportOperationPagedResponseBuilder count(final Long count) {
@@ -62,7 +64,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     *  <p>The total number of import operations matching the query.</p>
+     <*  <p>The total number of import operations matching the query.</p>>
      */
 
     public ImportOperationPagedResponseBuilder total(final Long total) {
@@ -71,7 +73,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     *  <p>The array of Import Operations matching the query.</p>
+     <*  <p>The array of Import Operations matching the query.</p>>
      */
 
     public ImportOperationPagedResponseBuilder results(
@@ -81,7 +83,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     *  <p>The array of Import Operations matching the query.</p>
+     <*  <p>The array of Import Operations matching the query.</p>>
      */
 
     public ImportOperationPagedResponseBuilder results(
@@ -91,7 +93,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     *  <p>The array of Import Operations matching the query.</p>
+     <*  <p>The array of Import Operations matching the query.</p>>
      */
 
     public ImportOperationPagedResponseBuilder plusResults(
@@ -104,7 +106,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     *  <p>The array of Import Operations matching the query.</p>
+     <*  <p>The array of Import Operations matching the query.</p>>
      */
 
     public ImportOperationPagedResponseBuilder plusResults(
@@ -118,7 +120,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     *  <p>The array of Import Operations matching the query.</p>
+     <*  <p>The array of Import Operations matching the query.</p>>
      */
 
     public ImportOperationPagedResponseBuilder withResults(

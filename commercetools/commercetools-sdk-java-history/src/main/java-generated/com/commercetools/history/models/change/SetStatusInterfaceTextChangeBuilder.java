@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetStatusInterfaceTextChange setStatusInterfaceTextChange = SetStatusInterfaceTextChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetStatusInterfaceTextChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetStatusInterfaceTextChange setStatusInterfaceTextChange = SetStatusInterfaceTextChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInterfaceTextChange> {
@@ -28,7 +30,7 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setStatusInterfaceText</code></p>
+     <*  <p>Shape of the action for <code>setStatusInterfaceText</code></p>>
      */
 
     public SetStatusInterfaceTextChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetStatusInterfaceTextChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetStatusInterfaceTextChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

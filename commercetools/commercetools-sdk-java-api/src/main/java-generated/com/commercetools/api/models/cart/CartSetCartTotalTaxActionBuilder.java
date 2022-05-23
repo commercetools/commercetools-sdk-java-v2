@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetCartTotalTaxAction cartSetCartTotalTaxAction = CartSetCartTotalTaxAction.builder()
-           .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartSetCartTotalTaxActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetCartTotalTaxAction cartSetCartTotalTaxAction = CartSetCartTotalTaxAction.builder()
+ *             .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTotalTaxAction> {
@@ -28,7 +30,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
     /**
-     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     <*  <p>The total gross amount of the cart (totalNet + taxes).</p>>
      */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
@@ -38,7 +40,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     <*  <p>The total gross amount of the cart (totalNet + taxes).</p>>
      */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
@@ -47,17 +49,29 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartSetCartTotalTaxActionBuilder externalTaxPortions(
             @Nullable final com.commercetools.api.models.cart.TaxPortionDraft... externalTaxPortions) {
         this.externalTaxPortions = new ArrayList<>(Arrays.asList(externalTaxPortions));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartSetCartTotalTaxActionBuilder externalTaxPortions(
             @Nullable final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
         this.externalTaxPortions = externalTaxPortions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
             @Nullable final com.commercetools.api.models.cart.TaxPortionDraft... externalTaxPortions) {
@@ -68,6 +82,10 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
             Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
         if (this.externalTaxPortions == null) {
@@ -77,6 +95,10 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
                 .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartSetCartTotalTaxActionBuilder withExternalTaxPortions(
             Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {

@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetTextLineItemCustomTypeChange setTextLineItemCustomTypeChange = SetTextLineItemCustomTypeChange.builder()
-           .change("{change}")
-           .textLineItem(textLineItemBuilder -> textLineItemBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetTextLineItemCustomTypeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetTextLineItemCustomTypeChange setTextLineItemCustomTypeChange = SetTextLineItemCustomTypeChange.builder()
+ *             .change("{change}")
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLineItemCustomTypeChange> {
@@ -32,13 +34,17 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     /**
-     *  <p>Update action for <code>setTextLineItemCustomType</code></p>
+     <*  <p>Update action for <code>setTextLineItemCustomType</code></p>>
      */
 
     public SetTextLineItemCustomTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetTextLineItemCustomTypeChangeBuilder textLineItem(
             Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
@@ -47,11 +53,19 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetTextLineItemCustomTypeChangeBuilder textLineItem(
             final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.textLineItem = textLineItem;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetTextLineItemCustomTypeChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
@@ -59,17 +73,29 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetTextLineItemCustomTypeChangeBuilder nextValue(
             final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetTextLineItemCustomTypeChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetTextLineItemCustomTypeChangeBuilder previousValue(
             final com.commercetools.history.models.common.CustomFields previousValue) {

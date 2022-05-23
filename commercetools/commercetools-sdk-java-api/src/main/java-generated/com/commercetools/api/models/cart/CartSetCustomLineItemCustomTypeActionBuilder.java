@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetCustomLineItemCustomTypeAction cartSetCustomLineItemCustomTypeAction = CartSetCustomLineItemCustomTypeAction.builder()
-           .customLineItemId("{customLineItemId}")
-           .build()
- </code></pre>
- </div>
+ * CartSetCustomLineItemCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetCustomLineItemCustomTypeAction cartSetCustomLineItemCustomTypeAction = CartSetCustomLineItemCustomTypeAction.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<CartSetCustomLineItemCustomTypeAction> {
@@ -30,13 +32,17 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public CartSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder type(
@@ -46,7 +52,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder type(
@@ -56,7 +62,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder fields(
@@ -66,7 +72,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder fields(

@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderEditPreviewSuccess orderEditPreviewSuccess = OrderEditPreviewSuccess.builder()
-           .preview(previewBuilder -> previewBuilder)
-           .plusMessagePayloads(messagePayloadsBuilder -> messagePayloadsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderEditPreviewSuccess
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditPreviewSuccess orderEditPreviewSuccess = OrderEditPreviewSuccess.builder()
+ *             .preview(previewBuilder -> previewBuilder)
+ *             .plusMessagePayloads(messagePayloadsBuilder -> messagePayloadsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditPreviewSuccessImpl.class)
@@ -31,11 +34,17 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
 
     String PREVIEW_SUCCESS = "PreviewSuccess";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("preview")
     public StagedOrder getPreview();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("messagePayloads")

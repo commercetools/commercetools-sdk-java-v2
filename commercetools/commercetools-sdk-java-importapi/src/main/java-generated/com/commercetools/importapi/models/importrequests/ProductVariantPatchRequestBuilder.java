@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariantPatchRequest productVariantPatchRequest = ProductVariantPatchRequest.builder()
-           .plusPatches(patchesBuilder -> patchesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductVariantPatchRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantPatchRequest productVariantPatchRequest = ProductVariantPatchRequest.builder()
+ *             .plusPatches(patchesBuilder -> patchesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantPatchRequestBuilder implements Builder<ProductVariantPatchRequest> {
@@ -23,7 +25,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
     /**
-     *  <p>The product variant patches of this request.</p>
+     <*  <p>The product variant patches of this request.</p>>
      */
 
     public ProductVariantPatchRequestBuilder patches(
@@ -33,7 +35,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>The product variant patches of this request.</p>
+     <*  <p>The product variant patches of this request.</p>>
      */
 
     public ProductVariantPatchRequestBuilder patches(
@@ -43,7 +45,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>The product variant patches of this request.</p>
+     <*  <p>The product variant patches of this request.</p>>
      */
 
     public ProductVariantPatchRequestBuilder plusPatches(
@@ -56,7 +58,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>The product variant patches of this request.</p>
+     <*  <p>The product variant patches of this request.</p>>
      */
 
     public ProductVariantPatchRequestBuilder plusPatches(
@@ -70,7 +72,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p>The product variant patches of this request.</p>
+     <*  <p>The product variant patches of this request.</p>>
      */
 
     public ProductVariantPatchRequestBuilder withPatches(

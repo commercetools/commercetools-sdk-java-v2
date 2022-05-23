@@ -16,22 +16,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SyncInfo syncInfo = SyncInfo.builder()
-           .channel(channelBuilder -> channelBuilder)
-           .syncedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .build()
- </code></pre>
- </div>
+ * SyncInfo
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SyncInfo syncInfo = SyncInfo.builder()
+ *             .channel(channelBuilder -> channelBuilder)
+ *             .syncedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SyncInfoImpl.class)
 public interface SyncInfo {
 
     /**
-     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     <*  <p>Maps to <code>SyncInfo.channel</code></p>>
      */
     @NotNull
     @Valid
@@ -39,14 +42,14 @@ public interface SyncInfo {
     public ChannelKeyReference getChannel();
 
     /**
-     *  <p>Maps to <code>SyncInfo.externalId</code></p>
+     <*  <p>Maps to <code>SyncInfo.externalId</code></p>>
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
+     <*  <p>Maps to <code>SyncInfo.syncedAt</code></p>>
      */
     @NotNull
     @JsonProperty("syncedAt")

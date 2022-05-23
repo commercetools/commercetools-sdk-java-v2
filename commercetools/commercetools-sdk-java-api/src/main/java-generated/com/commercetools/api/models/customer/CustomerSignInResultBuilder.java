@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSignInResult customerSignInResult = CustomerSignInResult.builder()
-           .customer(customerBuilder -> customerBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomerSignInResultBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSignInResult customerSignInResult = CustomerSignInResult.builder()
+ *             .customer(customerBuilder -> customerBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult> {
@@ -27,11 +29,19 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     @Nullable
     private com.commercetools.api.models.cart.Cart cart;
 
+    /**
+     <>
+     */
+
     public CustomerSignInResultBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.CustomerBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerSignInResultBuilder customer(final com.commercetools.api.models.customer.Customer customer) {
         this.customer = customer;
@@ -39,7 +49,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     <*  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>>
      */
 
     public CustomerSignInResultBuilder cart(
@@ -49,7 +59,7 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     }
 
     /**
-     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     <*  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>>
      */
 
     public CustomerSignInResultBuilder cart(@Nullable final com.commercetools.api.models.cart.Cart cart) {

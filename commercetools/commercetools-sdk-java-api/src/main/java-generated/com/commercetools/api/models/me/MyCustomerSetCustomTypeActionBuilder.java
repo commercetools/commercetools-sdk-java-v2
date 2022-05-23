@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCustomerSetCustomTypeAction myCustomerSetCustomTypeAction = MyCustomerSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCustomerSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerSetCustomTypeAction myCustomerSetCustomTypeAction = MyCustomerSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>
+     <*  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>>
      */
 
     public MyCustomerSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
     }
 
     /**
-     *  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>
+     <*  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>>
      */
 
     public MyCustomerSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyCustomer.</p>
+     <*  <p>Sets the Custom Fields fields for the MyCustomer.</p>>
      */
 
     public MyCustomerSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the MyCustomer.</p>
+     <*  <p>Sets the Custom Fields fields for the MyCustomer.</p>>
      */
 
     public MyCustomerSetCustomTypeActionBuilder fields(

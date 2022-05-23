@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * GeneralCategoryRecommendation
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeneralCategoryRecommendationImpl implements GeneralCategoryRecommendation, ModelBase {
 
@@ -32,15 +35,17 @@ public class GeneralCategoryRecommendationImpl implements GeneralCategoryRecomme
     }
 
     /**
-     *  <p>An English category name that is recommended for a product.</p>
+     <*  <p>An English category name that is recommended for a product.</p>>
      */
+
     public String getCategoryName() {
         return this.categoryName;
     }
 
     /**
-     *  <p>Probability score for the category recommendation.</p>
+     <*  <p>Probability score for the category recommendation.</p>>
      */
+
     public Double getConfidence() {
         return this.confidence;
     }

@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeType attributeType = AttributeType.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * AttributeTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeType attributeType = AttributeType.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeTypeBuilder implements Builder<AttributeType> {
 
     private String name;
+
+    /**
+     <>
+     */
 
     public AttributeTypeBuilder name(final String name) {
         this.name = name;

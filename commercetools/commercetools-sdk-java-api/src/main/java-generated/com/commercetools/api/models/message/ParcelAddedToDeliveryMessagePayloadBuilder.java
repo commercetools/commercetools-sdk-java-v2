@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelAddedToDeliveryMessagePayload parcelAddedToDeliveryMessagePayload = ParcelAddedToDeliveryMessagePayload.builder()
-           .delivery(deliveryBuilder -> deliveryBuilder)
-           .parcel(parcelBuilder -> parcelBuilder)
-           .build()
- </code></pre>
- </div>
+ * ParcelAddedToDeliveryMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelAddedToDeliveryMessagePayload parcelAddedToDeliveryMessagePayload = ParcelAddedToDeliveryMessagePayload.builder()
+ *             .delivery(deliveryBuilder -> deliveryBuilder)
+ *             .parcel(parcelBuilder -> parcelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<ParcelAddedToDeliveryMessagePayload> {
@@ -25,11 +27,19 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    /**
+     <>
+     */
+
     public ParcelAddedToDeliveryMessagePayloadBuilder delivery(
             Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
         this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder delivery(
             final com.commercetools.api.models.order.Delivery delivery) {
@@ -37,11 +47,19 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ParcelAddedToDeliveryMessagePayloadBuilder parcel(
             Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
         this.parcel = builder.apply(com.commercetools.api.models.order.ParcelBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder parcel(final com.commercetools.api.models.order.Parcel parcel) {
         this.parcel = parcel;

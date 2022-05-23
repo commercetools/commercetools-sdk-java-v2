@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerRemoveShippingAddressIdAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemoveShippingAddressIdAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemove
         this.action = REMOVE_SHIPPING_ADDRESS_ID;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     <>
+     */
 
     public String getAddressKey() {
         return this.addressKey;

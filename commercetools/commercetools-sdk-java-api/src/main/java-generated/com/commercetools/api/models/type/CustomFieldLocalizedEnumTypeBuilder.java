@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFieldLocalizedEnumType customFieldLocalizedEnumType = CustomFieldLocalizedEnumType.builder()
-           .plusValues(valuesBuilder -> valuesBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomFieldLocalizedEnumTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldLocalizedEnumType customFieldLocalizedEnumType = CustomFieldLocalizedEnumType.builder()
+ *             .plusValues(valuesBuilder -> valuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldLocalizedEnumType> {
@@ -23,7 +25,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder values(
@@ -33,7 +35,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder values(
@@ -43,7 +45,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder plusValues(
@@ -56,7 +58,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder plusValues(
@@ -70,7 +72,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder withValues(

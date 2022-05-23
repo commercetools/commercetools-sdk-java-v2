@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderPaymentAddedMessagePayload orderPaymentAddedMessagePayload = OrderPaymentAddedMessagePayload.builder()
-           .payment(paymentBuilder -> paymentBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderPaymentAddedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderPaymentAddedMessagePayload orderPaymentAddedMessagePayload = OrderPaymentAddedMessagePayload.builder()
+ *             .payment(paymentBuilder -> paymentBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaymentAddedMessagePayload> {
@@ -23,7 +25,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
     private com.commercetools.api.models.payment.PaymentReference payment;
 
     /**
-     *  <p>Reference to a Payment.</p>
+     <*  <p>Reference to a Payment.</p>>
      */
 
     public OrderPaymentAddedMessagePayloadBuilder payment(
@@ -33,7 +35,7 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>Reference to a Payment.</p>
+     <*  <p>Reference to a Payment.</p>>
      */
 
     public OrderPaymentAddedMessagePayloadBuilder payment(

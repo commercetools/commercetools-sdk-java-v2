@@ -14,18 +14,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TermFacetResult termFacetResult = TermFacetResult.builder()
-           .dataType(TermFacetResultType.TEXT)
-           .missing(0.3)
-           .total(0.3)
-           .other(0.3)
-           .plusTerms(termsBuilder -> termsBuilder)
-           .build()
- </code></pre>
- </div>
+ * TermFacetResult
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TermFacetResult termFacetResult = TermFacetResult.builder()
+ *             .dataType(TermFacetResultType.TEXT)
+ *             .missing(0.3)
+ *             .total(0.3)
+ *             .other(0.3)
+ *             .plusTerms(termsBuilder -> termsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TermFacetResultImpl.class)
@@ -33,22 +36,37 @@ public interface TermFacetResult extends FacetResult {
 
     String TERMS = "terms";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("dataType")
     public TermFacetResultType getDataType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("missing")
     public Long getMissing();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("other")
     public Long getOther();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("terms")

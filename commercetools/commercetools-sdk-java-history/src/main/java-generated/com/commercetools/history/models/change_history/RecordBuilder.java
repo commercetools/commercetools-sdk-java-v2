@@ -8,24 +8,26 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Record record = Record.builder()
-           .version(1)
-           .previousVersion(1)
-           .type("{type}")
-           .modifiedBy(modifiedByBuilder -> modifiedByBuilder)
-           .modifiedAt("{modifiedAt}")
-           .label(labelBuilder -> labelBuilder)
-           .previousLabel(previousLabelBuilder -> previousLabelBuilder)
-           .plusChanges(changesBuilder -> changesBuilder)
-           .resource(resourceBuilder -> resourceBuilder)
-           .plusStores(storesBuilder -> storesBuilder)
-           .withoutChanges(true)
-           .build()
- </code></pre>
- </div>
+ * RecordBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Record record = Record.builder()
+ *             .version(1)
+ *             .previousVersion(1)
+ *             .type("{type}")
+ *             .modifiedBy(modifiedByBuilder -> modifiedByBuilder)
+ *             .modifiedAt("{modifiedAt}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .previousLabel(previousLabelBuilder -> previousLabelBuilder)
+ *             .plusChanges(changesBuilder -> changesBuilder)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .plusStores(storesBuilder -> storesBuilder)
+ *             .withoutChanges(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordBuilder implements Builder<Record> {
@@ -53,7 +55,7 @@ public class RecordBuilder implements Builder<Record> {
     private Boolean withoutChanges;
 
     /**
-     *  <p>Version of the resource after the change.</p>
+     <*  <p>Version of the resource after the change.</p>>
      */
 
     public RecordBuilder version(final Integer version) {
@@ -62,7 +64,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Version of the resource before the change.</p>
+     <*  <p>Version of the resource before the change.</p>>
      */
 
     public RecordBuilder previousVersion(final Integer previousVersion) {
@@ -71,7 +73,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Type of the change (creation, update or deletion).</p>
+     <*  <p>Type of the change (creation, update or deletion).</p>>
      */
 
     public RecordBuilder type(final String type) {
@@ -80,7 +82,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     <*  <p>Information about the user or the API client who performed the change.</p>>
      */
 
     public RecordBuilder modifiedBy(
@@ -90,7 +92,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     <*  <p>Information about the user or the API client who performed the change.</p>>
      */
 
     public RecordBuilder modifiedBy(final com.commercetools.history.models.change_history.ModifiedBy modifiedBy) {
@@ -99,7 +101,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Date and time when the change was made.</p>
+     <*  <p>Date and time when the change was made.</p>>
      */
 
     public RecordBuilder modifiedAt(final String modifiedAt) {
@@ -108,7 +110,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information that describes the resource after the change.</p>
+     <*  <p>Information that describes the resource after the change.</p>>
      */
 
     public RecordBuilder label(final com.commercetools.history.models.label.Label label) {
@@ -117,7 +119,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information that describes the resource after the change.</p>
+     <*  <p>Information that describes the resource after the change.</p>>
      */
 
     public RecordBuilder label(
@@ -127,7 +129,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information that describes the resource before the change.</p>
+     <*  <p>Information that describes the resource before the change.</p>>
      */
 
     public RecordBuilder previousLabel(final com.commercetools.history.models.label.Label previousLabel) {
@@ -136,7 +138,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information that describes the resource before the change.</p>
+     <*  <p>Information that describes the resource before the change.</p>>
      */
 
     public RecordBuilder previousLabel(
@@ -146,7 +148,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     <*  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>>
      */
 
     public RecordBuilder changes(final com.commercetools.history.models.change.Change... changes) {
@@ -155,7 +157,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     <*  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>>
      */
 
     public RecordBuilder changes(final java.util.List<com.commercetools.history.models.change.Change> changes) {
@@ -164,7 +166,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     <*  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>>
      */
 
     public RecordBuilder plusChanges(final com.commercetools.history.models.change.Change... changes) {
@@ -176,7 +178,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     <*  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>>
      */
 
     public RecordBuilder plusChanges(
@@ -189,7 +191,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     <*  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>>
      */
 
     public RecordBuilder withChanges(
@@ -200,7 +202,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     <*  <p>Reference to the changed resource.</p>>
      */
 
     public RecordBuilder resource(
@@ -210,7 +212,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     <*  <p>Reference to the changed resource.</p>>
      */
 
     public RecordBuilder resource(final com.commercetools.history.models.common.Reference resource) {
@@ -219,7 +221,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     <*  <p>References to the Stores attached to the Change.</p>>
      */
 
     public RecordBuilder stores(final com.commercetools.history.models.common.KeyReference... stores) {
@@ -228,7 +230,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     <*  <p>References to the Stores attached to the Change.</p>>
      */
 
     public RecordBuilder stores(final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
@@ -237,7 +239,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     <*  <p>References to the Stores attached to the Change.</p>>
      */
 
     public RecordBuilder plusStores(final com.commercetools.history.models.common.KeyReference... stores) {
@@ -249,7 +251,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     <*  <p>References to the Stores attached to the Change.</p>>
      */
 
     public RecordBuilder plusStores(
@@ -262,7 +264,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     <*  <p>References to the Stores attached to the Change.</p>>
      */
 
     public RecordBuilder withStores(
@@ -273,7 +275,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     <*  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>>
      */
 
     public RecordBuilder withoutChanges(final Boolean withoutChanges) {

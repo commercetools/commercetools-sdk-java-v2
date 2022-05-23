@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartAddDiscountCodeAction cartAddDiscountCodeAction = CartAddDiscountCodeAction.builder()
-           .code("{code}")
-           .build()
- </code></pre>
- </div>
+ * CartAddDiscountCodeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartAddDiscountCodeAction cartAddDiscountCodeAction = CartAddDiscountCodeAction.builder()
+ *             .code("{code}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddDiscountCodeActionBuilder implements Builder<CartAddDiscountCodeAction> {
 
     private String code;
+
+    /**
+     <>
+     */
 
     public CartAddDiscountCodeActionBuilder code(final String code) {
         this.code = code;

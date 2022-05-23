@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OverlappingStandalonePriceValidityError overlappingStandalonePriceValidityError = OverlappingStandalonePriceValidityError.builder()
-           .message("{message}")
-           .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
-           .sku("{sku}")
-           .currency("{currency}")
-           .build()
- </code></pre>
- </div>
+ * OverlappingStandalonePriceValidityErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OverlappingStandalonePriceValidityError overlappingStandalonePriceValidityError = OverlappingStandalonePriceValidityError.builder()
+ *             .message("{message}")
+ *             .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
+ *             .sku("{sku}")
+ *             .currency("{currency}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OverlappingStandalonePriceValidityErrorBuilder
@@ -57,15 +59,27 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     @Nullable
     private java.time.ZonedDateTime conflictingValidUntil;
 
+    /**
+     <>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -76,7 +90,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     <*  <p>Reference to a StandalonePrice.</p>>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
@@ -88,7 +102,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     <*  <p>Reference to a StandalonePrice.</p>>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
@@ -97,15 +111,27 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder currency(final String currency) {
         this.currency = currency;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder country(@Nullable final String country) {
         this.country = country;
@@ -113,7 +139,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
@@ -125,7 +151,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
@@ -135,7 +161,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
@@ -146,7 +172,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
@@ -155,10 +181,18 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder validUntil(
             @Nullable final java.time.ZonedDateTime validUntil) {
@@ -166,11 +200,19 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidFrom(
             @Nullable final java.time.ZonedDateTime conflictingValidFrom) {
         this.conflictingValidFrom = conflictingValidFrom;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidUntil(
             @Nullable final java.time.ZonedDateTime conflictingValidUntil) {

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SearchIndexingConfiguration searchIndexingConfiguration = SearchIndexingConfiguration.builder()
-           .build()
- </code></pre>
- </div>
+ * SearchIndexingConfigurationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SearchIndexingConfiguration searchIndexingConfiguration = SearchIndexingConfiguration.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexingConfiguration> {
@@ -28,7 +30,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     <*  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>>
      */
 
     public SearchIndexingConfigurationBuilder products(
@@ -40,7 +42,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     <*  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>>
      */
 
     public SearchIndexingConfigurationBuilder products(
@@ -50,7 +52,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     <*  <p>Configuration for the Order Search feature.</p>>
      */
 
     public SearchIndexingConfigurationBuilder orders(
@@ -61,7 +63,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     <*  <p>Configuration for the Order Search feature.</p>>
      */
 
     public SearchIndexingConfigurationBuilder orders(

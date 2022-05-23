@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductCreatedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePayload, ModelBase {
 
@@ -32,9 +35,17 @@ public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePa
         this.type = PRODUCT_CREATED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;

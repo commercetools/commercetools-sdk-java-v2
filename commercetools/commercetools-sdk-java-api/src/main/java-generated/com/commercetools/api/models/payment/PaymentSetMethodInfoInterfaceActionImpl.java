@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentSetMethodInfoInterfaceAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetMethodInfoInterfaceActionImpl implements PaymentSetMethodInfoInterfaceAction, ModelBase {
 
@@ -30,6 +33,10 @@ public class PaymentSetMethodInfoInterfaceActionImpl implements PaymentSetMethod
     public PaymentSetMethodInfoInterfaceActionImpl() {
         this.action = SET_METHOD_INFO_INTERFACE;
     }
+
+    /**
+     <>
+     */
 
     public String getAction() {
         return this.action;

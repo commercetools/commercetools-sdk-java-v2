@@ -17,18 +17,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Retrieves the representation of a subscription by its id.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .subscriptions()
-           .withId("{ID}")
-           .get()
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Retrieves the representation of a subscription by its id.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .subscriptions()
+ *            .withId("{ID}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsByIDGet

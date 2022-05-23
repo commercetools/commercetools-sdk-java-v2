@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * MultiBuyCustomLineItemsTarget
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItemsTarget, ModelBase {
 
@@ -47,37 +50,49 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
         this.type = MULTI_BUY_CUSTOM_LINE_ITEMS;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are matched by the predicate.</p>
+     <*  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are matched by the predicate.</p>>
      */
+
     public String getPredicate() {
         return this.predicate;
     }
 
     /**
-     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
      */
+
     public Integer getTriggerQuantity() {
         return this.triggerQuantity;
     }
 
     /**
-     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
      */
+
     public Integer getDiscountedQuantity() {
         return this.discountedQuantity;
     }
 
     /**
-     *  <p>Maximum number of applications of this discount.</p>
+     <*  <p>Maximum number of applications of this discount.</p>>
      */
+
     public Integer getMaxOccurrence() {
         return this.maxOccurrence;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {
         return this.selectionMode;

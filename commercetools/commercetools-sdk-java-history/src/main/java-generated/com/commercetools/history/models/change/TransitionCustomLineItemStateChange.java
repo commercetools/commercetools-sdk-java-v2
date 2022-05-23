@@ -15,18 +15,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TransitionCustomLineItemStateChange transitionCustomLineItemStateChange = TransitionCustomLineItemStateChange.builder()
-           .change("{change}")
-           .lineItemId("{lineItemId}")
-           .stateId("{stateId}")
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * TransitionCustomLineItemStateChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TransitionCustomLineItemStateChange transitionCustomLineItemStateChange = TransitionCustomLineItemStateChange.builder()
+ *             .change("{change}")
+ *             .lineItemId("{lineItemId}")
+ *             .stateId("{stateId}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TransitionCustomLineItemStateChangeImpl.class)
@@ -34,30 +37,45 @@ public interface TransitionCustomLineItemStateChange extends Change {
 
     String TRANSITION_CUSTOM_LINE_ITEM_STATE_CHANGE = "TransitionCustomLineItemStateChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>transitionCustomLineItemState</code></p>
+     <*  <p>Update action for <code>transitionCustomLineItemState</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("stateId")
     public String getStateId();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public List<ItemState> getNextValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

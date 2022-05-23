@@ -13,29 +13,30 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SearchIndexingConfiguration searchIndexingConfiguration = SearchIndexingConfiguration.builder()
-           .build()
- </code></pre>
- </div>
+ *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SearchIndexingConfiguration searchIndexingConfiguration = SearchIndexingConfiguration.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SearchIndexingConfigurationImpl.class)
 public interface SearchIndexingConfiguration {
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     <*  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>>
      */
     @Valid
     @JsonProperty("products")
     public SearchIndexingConfigurationValues getProducts();
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     <*  <p>Configuration for the Order Search feature.</p>>
      */
     @Valid
     @JsonProperty("orders")

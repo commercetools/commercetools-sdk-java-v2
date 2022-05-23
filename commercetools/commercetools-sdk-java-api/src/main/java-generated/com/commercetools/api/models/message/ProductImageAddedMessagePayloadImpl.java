@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductImageAddedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMessagePayload, ModelBase {
 
@@ -39,17 +42,33 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
         this.type = PRODUCT_IMAGE_ADDED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.Image getImage() {
         return this.image;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

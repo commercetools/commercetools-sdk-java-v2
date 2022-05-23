@@ -14,16 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeTaxModeChange changeTaxModeChange = ChangeTaxModeChange.builder()
-           .change("{change}")
-           .previousValue(TaxMode.PLATFORM)
-           .nextValue(TaxMode.PLATFORM)
-           .build()
- </code></pre>
- </div>
+ * ChangeTaxModeChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTaxModeChange changeTaxModeChange = ChangeTaxModeChange.builder()
+ *             .change("{change}")
+ *             .previousValue(TaxMode.PLATFORM)
+ *             .nextValue(TaxMode.PLATFORM)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTaxModeChangeImpl.class)
@@ -31,21 +34,30 @@ public interface ChangeTaxModeChange extends Change {
 
     String CHANGE_TAX_MODE_CHANGE = "ChangeTaxModeChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Shape of the action for <code>changeTaxMode</code></p>
+     <*  <p>Shape of the action for <code>changeTaxMode</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public TaxMode getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public TaxMode getNextValue();

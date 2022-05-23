@@ -10,25 +10,27 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LineItem lineItem = LineItem.builder()
-           .id("{id}")
-           .productId("{productId}")
-           .name(nameBuilder -> nameBuilder)
-           .productType(productTypeBuilder -> productTypeBuilder)
-           .variant(variantBuilder -> variantBuilder)
-           .price(priceBuilder -> priceBuilder)
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .quantity(0.3)
-           .plusState(stateBuilder -> stateBuilder)
-           .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
-           .priceMode(LineItemPriceMode.PLATFORM)
-           .lineItemMode(LineItemMode.STANDARD)
-           .build()
- </code></pre>
- </div>
+ * LineItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItem lineItem = LineItem.builder()
+ *             .id("{id}")
+ *             .productId("{productId}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .variant(variantBuilder -> variantBuilder)
+ *             .price(priceBuilder -> priceBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .quantity(0.3)
+ *             .plusState(stateBuilder -> stateBuilder)
+ *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .priceMode(LineItemPriceMode.PLATFORM)
+ *             .lineItemMode(LineItemMode.STANDARD)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemBuilder implements Builder<LineItem> {
@@ -88,7 +90,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     private java.time.ZonedDateTime lastModifiedAt;
 
     /**
-     *  <p>Platform-generated unique identifier of the LineItem.</p>
+     <*  <p>Platform-generated unique identifier of the LineItem.</p>>
      */
 
     public LineItemBuilder id(final String id) {
@@ -96,13 +98,17 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder productId(final String productId) {
         this.productId = productId;
         return this;
     }
 
     /**
-     *  <p>User-defined unique identifier of the Product. Only present on Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On Order resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>
+     <*  <p>User-defined unique identifier of the Product. Only present on Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On Order resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>>
      */
 
     public LineItemBuilder productKey(@Nullable final String productKey) {
@@ -111,7 +117,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The product name.</p>
+     <*  <p>The product name.</p>>
      */
 
     public LineItemBuilder name(
@@ -121,7 +127,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The product name.</p>
+     <*  <p>The product name.</p>>
      */
 
     public LineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -130,7 +136,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
+     <*  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>>
      */
 
     public LineItemBuilder productSlug(
@@ -140,7 +146,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
+     <*  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>>
      */
 
     public LineItemBuilder productSlug(
@@ -149,12 +155,20 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder productType(
             Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
         this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LineItemBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeReference productType) {
@@ -163,7 +177,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>
+     <*  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>>
      */
 
     public LineItemBuilder variant(
@@ -173,7 +187,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>
+     <*  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>>
      */
 
     public LineItemBuilder variant(final com.commercetools.api.models.product.ProductVariant variant) {
@@ -182,7 +196,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     <*  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>>
      */
 
     public LineItemBuilder price(
@@ -192,7 +206,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     <*  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>>
      */
 
     public LineItemBuilder price(final com.commercetools.api.models.common.Price price) {
@@ -201,7 +215,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
+     <*  <p>Set once the <code>taxRate</code> is set.</p>>
      */
 
     public LineItemBuilder taxedPrice(
@@ -211,7 +225,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
+     <*  <p>Set once the <code>taxRate</code> is set.</p>>
      */
 
     public LineItemBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
@@ -220,7 +234,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+     <*  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>>
      */
 
     public LineItemBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
@@ -229,7 +243,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+     <*  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>>
      */
 
     public LineItemBuilder totalPrice(
@@ -239,7 +253,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     <*  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>>
      */
 
     public LineItemBuilder quantity(final Long quantity) {
@@ -248,7 +262,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     <*  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>>
      */
 
     public LineItemBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -256,15 +270,27 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder state(final com.commercetools.api.models.order.ItemState... state) {
         this.state = new ArrayList<>(Arrays.asList(state));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder state(final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LineItemBuilder plusState(final com.commercetools.api.models.order.ItemState... state) {
         if (this.state == null) {
@@ -273,6 +299,10 @@ public class LineItemBuilder implements Builder<LineItem> {
         this.state.addAll(Arrays.asList(state));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LineItemBuilder plusState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
@@ -283,6 +313,10 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder withState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         this.state = new ArrayList<>();
@@ -291,7 +325,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
      */
 
     public LineItemBuilder taxRate(
@@ -301,7 +335,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
      */
 
     public LineItemBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
@@ -310,7 +344,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>
+     <*  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>>
      */
 
     public LineItemBuilder supplyChannel(
@@ -320,7 +354,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>
+     <*  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>>
      */
 
     public LineItemBuilder supplyChannel(
@@ -330,7 +364,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>
+     <*  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>>
      */
 
     public LineItemBuilder distributionChannel(
@@ -341,7 +375,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>
+     <*  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>>
      */
 
     public LineItemBuilder distributionChannel(
@@ -350,17 +384,29 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder discountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
         this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder discountedPricePerQuantity(
             final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LineItemBuilder plusDiscountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
@@ -371,6 +417,10 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder plusDiscountedPricePerQuantity(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
         if (this.discountedPricePerQuantity == null) {
@@ -381,6 +431,10 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder withDiscountedPricePerQuantity(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
         this.discountedPricePerQuantity = new ArrayList<>();
@@ -389,15 +443,27 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder priceMode(final com.commercetools.api.models.cart.LineItemPriceMode priceMode) {
         this.priceMode = priceMode;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder lineItemMode(final com.commercetools.api.models.cart.LineItemMode lineItemMode) {
         this.lineItemMode = lineItemMode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LineItemBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -405,13 +471,17 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public LineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     <*  <p>Container for line item specific address(es).</p>>
      */
 
     public LineItemBuilder shippingDetails(
@@ -421,7 +491,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>Container for line item specific address(es).</p>
+     <*  <p>Container for line item specific address(es).</p>>
      */
 
     public LineItemBuilder shippingDetails(
@@ -431,7 +501,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>The date when the LineItem was last modified by one of the following actions setLineItemShippingDetails, addLineItem, removeLineItem, or changeLineItemQuantity. Optional only for backwards compatible reasons. When the LineItem is created lastModifiedAt is set to addedAt.</p>
+     <*  <p>The date when the LineItem was last modified by one of the following actions setLineItemShippingDetails, addLineItem, removeLineItem, or changeLineItemQuantity. Optional only for backwards compatible reasons. When the LineItem is created lastModifiedAt is set to addedAt.</p>>
      */
 
     public LineItemBuilder lastModifiedAt(@Nullable final java.time.ZonedDateTime lastModifiedAt) {

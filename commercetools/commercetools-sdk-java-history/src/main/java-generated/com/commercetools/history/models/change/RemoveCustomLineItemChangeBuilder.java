@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   RemoveCustomLineItemChange removeCustomLineItemChange = RemoveCustomLineItemChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * RemoveCustomLineItemChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveCustomLineItemChange removeCustomLineItemChange = RemoveCustomLineItemChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLineItemChange> {
@@ -29,7 +31,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
     private com.commercetools.history.models.common.CustomLineItem previousValue;
 
     /**
-     *  <p>Update action for adding and removing custom line items</p>
+     <*  <p>Update action for adding and removing custom line items</p>>
      */
 
     public RemoveCustomLineItemChangeBuilder change(final String change) {
@@ -37,11 +39,19 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveCustomLineItemChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveCustomLineItemChangeBuilder nextValue(
             final com.commercetools.history.models.common.CustomLineItem nextValue) {
@@ -49,11 +59,19 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
         return this;
     }
 
+    /**
+     <>
+     */
+
     public RemoveCustomLineItemChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public RemoveCustomLineItemChangeBuilder previousValue(
             final com.commercetools.history.models.common.CustomLineItem previousValue) {

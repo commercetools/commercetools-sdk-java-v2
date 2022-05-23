@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderRemovePaymentAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderRemovePaymentActionImpl implements OrderRemovePaymentAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class OrderRemovePaymentActionImpl implements OrderRemovePaymentAction, M
         this.action = REMOVE_PAYMENT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     <*  <p>ResourceIdentifier to a Payment.</p>>
      */
+
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
         return this.payment;
     }

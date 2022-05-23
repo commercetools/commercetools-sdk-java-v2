@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionBadResponseError extensionBadResponseError = ExtensionBadResponseError.builder()
-           .message("{message}")
-           .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExtensionBadResponseErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionBadResponseError extensionBadResponseError = ExtensionBadResponseError.builder()
+ *             .message("{message}")
+ *             .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadResponseError> {
@@ -35,15 +37,27 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
+    /**
+     <>
+     */
+
     public ExtensionBadResponseErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ExtensionBadResponseErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ExtensionBadResponseErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -54,7 +68,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ExtensionBadResponseErrorBuilder localizedMessage(
@@ -64,7 +78,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ExtensionBadResponseErrorBuilder localizedMessage(
@@ -73,16 +87,28 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {
         this.extensionExtraInfo = extensionExtraInfo;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ExtensionBadResponseErrorBuilder errorByExtension(
             Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtensionBuilder> builder) {
         this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ExtensionBadResponseErrorBuilder errorByExtension(
             final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {

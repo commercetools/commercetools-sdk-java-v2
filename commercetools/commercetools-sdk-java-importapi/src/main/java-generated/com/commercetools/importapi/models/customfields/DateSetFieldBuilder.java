@@ -7,29 +7,43 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DateSetField dateSetField = DateSetField.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * DateSetFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DateSetField dateSetField = DateSetField.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DateSetFieldBuilder implements Builder<DateSetField> {
 
     private java.util.List<java.time.LocalDate> value;
 
+    /**
+     <>
+     */
+
     public DateSetFieldBuilder value(final java.time.LocalDate... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DateSetFieldBuilder value(final java.util.List<java.time.LocalDate> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DateSetFieldBuilder plusValue(final java.time.LocalDate... value) {
         if (this.value == null) {

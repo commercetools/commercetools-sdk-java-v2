@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StoreSetLanguagesAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, ModelBase {
 
@@ -31,9 +34,17 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
         this.action = SET_LANGUAGES;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getLanguages() {
         return this.languages;

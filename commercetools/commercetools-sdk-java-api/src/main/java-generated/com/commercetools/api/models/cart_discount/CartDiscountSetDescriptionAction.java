@@ -14,13 +14,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountSetDescriptionAction cartDiscountSetDescriptionAction = CartDiscountSetDescriptionAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartDiscountSetDescriptionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountSetDescriptionAction cartDiscountSetDescriptionAction = CartDiscountSetDescriptionAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountSetDescriptionActionImpl.class)
@@ -29,7 +32,7 @@ public interface CartDiscountSetDescriptionAction extends CartDiscountUpdateActi
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
+     <*  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>>
      */
     @Valid
     @JsonProperty("description")

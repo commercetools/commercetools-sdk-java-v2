@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetValidUntilChange setValidUntilChange = SetValidUntilChange.builder()
-           .change("{change}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetValidUntilChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetValidUntilChange setValidUntilChange = SetValidUntilChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> {
@@ -28,7 +30,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setValidUntil</code></p>
+     <*  <p>Shape of the action for <code>setValidUntil</code></p>>
      */
 
     public SetValidUntilChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetValidUntilChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetValidUntilChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

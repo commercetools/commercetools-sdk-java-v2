@@ -34,15 +34,17 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
     }
 
     /**
-     *  <p>The width of the asset source.</p>
+     <*  <p>The width of the asset source.</p>>
      */
+
     public Integer getW() {
         return this.w;
     }
 
     /**
-     *  <p>The height of the asset source.</p>
+     <*  <p>The height of the asset source.</p>>
      */
+
     public Integer getH() {
         return this.h;
     }

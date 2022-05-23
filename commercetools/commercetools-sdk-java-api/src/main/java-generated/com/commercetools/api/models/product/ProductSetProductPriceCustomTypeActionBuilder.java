@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetProductPriceCustomTypeAction productSetProductPriceCustomTypeAction = ProductSetProductPriceCustomTypeAction.builder()
-           .priceId("{priceId}")
-           .build()
- </code></pre>
- </div>
+ * ProductSetProductPriceCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetProductPriceCustomTypeAction productSetProductPriceCustomTypeAction = ProductSetProductPriceCustomTypeAction.builder()
+ *             .priceId("{priceId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<ProductSetProductPriceCustomTypeAction> {
@@ -33,10 +35,18 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public ProductSetProductPriceCustomTypeActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetProductPriceCustomTypeActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
@@ -44,7 +54,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
+     <*  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder type(
@@ -54,7 +64,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
+     <*  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder type(
@@ -64,7 +74,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Price.</p>
+     <*  <p>Sets the Custom Fields fields for the Price.</p>>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder fields(
@@ -74,7 +84,7 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Price.</p>
+     <*  <p>Sets the Custom Fields fields for the Price.</p>>
      */
 
     public ProductSetProductPriceCustomTypeActionBuilder fields(

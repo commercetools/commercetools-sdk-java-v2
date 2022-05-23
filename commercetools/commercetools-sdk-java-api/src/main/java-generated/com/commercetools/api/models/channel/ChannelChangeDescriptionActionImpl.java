@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChannelChangeDescriptionAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelChangeDescriptionActionImpl implements ChannelChangeDescriptionAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ChannelChangeDescriptionActionImpl implements ChannelChangeDescript
         this.action = CHANGE_DESCRIPTION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }

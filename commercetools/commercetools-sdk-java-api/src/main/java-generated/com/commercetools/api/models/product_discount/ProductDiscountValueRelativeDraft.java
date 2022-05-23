@@ -13,16 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Discounts the Product Price by a percentage, defined by the <code>permyriad</code> field.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountValueRelativeDraft productDiscountValueRelativeDraft = ProductDiscountValueRelativeDraft.builder()
-           .permyriad(0.3)
-           .build()
- </code></pre>
- </div>
+ *  <p>Discounts the Product Price by a percentage, defined by the <code>permyriad</code> field.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountValueRelativeDraft productDiscountValueRelativeDraft = ProductDiscountValueRelativeDraft.builder()
+ *             .permyriad(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueRelativeDraftImpl.class)
@@ -31,7 +32,7 @@ public interface ProductDiscountValueRelativeDraft extends ProductDiscountValueD
     String RELATIVE = "relative";
 
     /**
-     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+     <*  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>>
      */
     @NotNull
     @JsonProperty("permyriad")

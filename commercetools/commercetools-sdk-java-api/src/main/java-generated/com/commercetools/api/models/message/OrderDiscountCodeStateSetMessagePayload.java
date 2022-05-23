@@ -16,15 +16,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderDiscountCodeStateSetMessagePayload orderDiscountCodeStateSetMessagePayload = OrderDiscountCodeStateSetMessagePayload.builder()
-           .discountCode(discountCodeBuilder -> discountCodeBuilder)
-           .state(DiscountCodeState.NOT_ACTIVE)
-           .build()
- </code></pre>
- </div>
+ * OrderDiscountCodeStateSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderDiscountCodeStateSetMessagePayload orderDiscountCodeStateSetMessagePayload = OrderDiscountCodeStateSetMessagePayload.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .state(DiscountCodeState.NOT_ACTIVE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderDiscountCodeStateSetMessagePayloadImpl.class)
@@ -33,16 +36,23 @@ public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePay
     String ORDER_DISCOUNT_CODE_STATE_SET = "OrderDiscountCodeStateSet";
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     <*  <p>Reference to a DiscountCode.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("discountCode")
     public DiscountCodeReference getDiscountCode();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("state")
     public DiscountCodeState getState();
+
+    /**
+     <>
+     */
 
     @JsonProperty("oldState")
     public DiscountCodeState getOldState();

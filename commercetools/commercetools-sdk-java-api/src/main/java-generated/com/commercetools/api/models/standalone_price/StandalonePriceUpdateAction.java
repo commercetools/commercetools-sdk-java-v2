@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StandalonePriceUpdateAction standalonePriceUpdateAction = StandalonePriceUpdateAction.changeValueBuilder()
-           value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * StandalonePriceUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePriceUpdateAction standalonePriceUpdateAction = StandalonePriceUpdateAction.changeValueBuilder()
+ *             value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionImpl.class, name = StandalonePriceChangeValueAction.CHANGE_VALUE),
@@ -32,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StandalonePriceUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<StandalonePriceUpdateAction> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

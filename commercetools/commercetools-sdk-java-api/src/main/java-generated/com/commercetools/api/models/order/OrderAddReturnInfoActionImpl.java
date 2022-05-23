@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderAddReturnInfoAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, ModelBase {
 
@@ -39,17 +42,33 @@ public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, M
         this.action = ADD_RETURN_INFO;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getReturnTrackingId() {
         return this.returnTrackingId;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems() {
         return this.items;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getReturnDate() {
         return this.returnDate;

@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetProductPriceCustomTypeChange setProductPriceCustomTypeChange = SetProductPriceCustomTypeChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetProductPriceCustomTypeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetProductPriceCustomTypeChange setProductPriceCustomTypeChange = SetProductPriceCustomTypeChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProductPriceCustomTypeChange> {
@@ -32,7 +34,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     private com.commercetools.history.models.common.CustomFields nextValue;
 
     /**
-     *  <p>Update action for <code>setProductPriceCustomType</code></p>
+     <*  <p>Update action for <code>setProductPriceCustomType</code></p>>
      */
 
     public SetProductPriceCustomTypeChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetProductPriceCustomTypeChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetProductPriceCustomTypeChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
@@ -51,17 +61,29 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetProductPriceCustomTypeChangeBuilder previousValue(
             final com.commercetools.history.models.common.CustomFields previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetProductPriceCustomTypeChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetProductPriceCustomTypeChangeBuilder nextValue(
             final com.commercetools.history.models.common.CustomFields nextValue) {

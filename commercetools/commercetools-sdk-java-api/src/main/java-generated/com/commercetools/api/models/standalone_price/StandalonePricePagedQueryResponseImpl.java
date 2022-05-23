@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StandalonePricePagedQueryResponse
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePricePagedQueryResponseImpl implements StandalonePricePagedQueryResponse, ModelBase {
 
@@ -43,36 +46,41 @@ public class StandalonePricePagedQueryResponseImpl implements StandalonePricePag
     }
 
     /**
-     *  <p>Number of requested results.</p>
+     <*  <p>Number of requested results.</p>>
      */
+
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-     *  <p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p>
+     <*  <p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p>>
      */
+
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-     *  <p>Actual number of results returned.</p>
+     <*  <p>Actual number of results returned.</p>>
      */
+
     public Long getCount() {
         return this.count;
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     <*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>>
      */
+
     public Long getTotal() {
         return this.total;
     }
 
     /**
-     *  <p>StandalonePrices matching the query.</p>
+     <*  <p>StandalonePrices matching the query.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.standalone_price.StandalonePrice> getResults() {
         return this.results;
     }

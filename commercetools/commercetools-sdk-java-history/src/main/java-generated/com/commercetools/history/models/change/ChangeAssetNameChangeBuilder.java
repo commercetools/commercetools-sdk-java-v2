@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeAssetNameChange changeAssetNameChange = ChangeAssetNameChange.builder()
-           .change("{change}")
-           .asset(assetBuilder -> assetBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeAssetNameChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeAssetNameChange changeAssetNameChange = ChangeAssetNameChange.builder()
+ *             .change("{change}")
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChange> {
@@ -32,7 +34,7 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     /**
-     *  <p>Update action for <code>changeAssetName</code></p>
+     <*  <p>Update action for <code>changeAssetName</code></p>>
      */
 
     public ChangeAssetNameChangeBuilder change(final String change) {
@@ -40,11 +42,19 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetNameChangeBuilder asset(
             Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
         this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAssetNameChangeBuilder asset(
             final com.commercetools.history.models.change_value.AssetChangeValue asset) {
@@ -52,11 +62,19 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetNameChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAssetNameChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString nextValue) {
@@ -64,11 +82,19 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeAssetNameChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeAssetNameChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {

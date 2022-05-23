@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductAddedToCategoryMessagePayload productAddedToCategoryMessagePayload = ProductAddedToCategoryMessagePayload.builder()
-           .category(categoryBuilder -> categoryBuilder)
-           .staged(true)
-           .build()
- </code></pre>
- </div>
+ * ProductAddedToCategoryMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductAddedToCategoryMessagePayload productAddedToCategoryMessagePayload = ProductAddedToCategoryMessagePayload.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<ProductAddedToCategoryMessagePayload> {
@@ -26,7 +28,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     private Boolean staged;
 
     /**
-     *  <p>Reference to a Category.</p>
+     <*  <p>Reference to a Category.</p>>
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
@@ -36,7 +38,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>Reference to a Category.</p>
+     <*  <p>Reference to a Category.</p>>
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
@@ -44,6 +46,10 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
         this.category = category;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductAddedToCategoryMessagePayloadBuilder staged(final Boolean staged) {
         this.staged = staged;

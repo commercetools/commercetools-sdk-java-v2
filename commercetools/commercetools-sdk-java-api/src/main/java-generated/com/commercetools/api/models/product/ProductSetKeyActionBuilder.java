@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetKeyAction productSetKeyAction = ProductSetKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetKeyAction productSetKeyAction = ProductSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetKeyActionBuilder implements Builder<ProductSetKeyAction> {
@@ -24,7 +26,7 @@ public class ProductSetKeyActionBuilder implements Builder<ProductSetKeyAction> 
     private String key;
 
     /**
-     *  <p>User-specific unique identifier for the product. If left blank or set to <code>null</code>, the product key is unset/removed.</p>
+     <*  <p>User-specific unique identifier for the product. If left blank or set to <code>null</code>, the product key is unset/removed.</p>>
      */
 
     public ProductSetKeyActionBuilder key(@Nullable final String key) {

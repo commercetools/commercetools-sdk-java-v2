@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreRemoveSupplyChannelAction storeRemoveSupplyChannelAction = StoreRemoveSupplyChannelAction.builder()
-           .build()
- </code></pre>
- </div>
+ * StoreRemoveSupplyChannelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreRemoveSupplyChannelAction storeRemoveSupplyChannelAction = StoreRemoveSupplyChannelAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemoveSupplyChannelAction> {
@@ -24,12 +26,20 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    /**
+     <>
+     */
+
     public StoreRemoveSupplyChannelActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreRemoveSupplyChannelActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {

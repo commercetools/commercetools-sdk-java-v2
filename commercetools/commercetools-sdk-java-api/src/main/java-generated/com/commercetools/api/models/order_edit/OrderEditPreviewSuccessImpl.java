@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * OrderEditPreviewSuccess
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, ModelBase {
 
@@ -36,13 +39,25 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
         this.type = PREVIEW_SUCCESS;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.order_edit.StagedOrder getPreview() {
         return this.preview;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.message.MessagePayload> getMessagePayloads() {
         return this.messagePayloads;

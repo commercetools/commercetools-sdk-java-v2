@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MessagePayload messagePayload = MessagePayload.categoryCreatedBuilder()
-           category(categoryBuilder -> categoryBuilder)
-           .build()
- </code></pre>
- </div>
+ * MessagePayload
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MessagePayload messagePayload = MessagePayload.categoryCreatedBuilder()
+ *             category(categoryBuilder -> categoryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategoryCreatedMessagePayloadImpl.class, name = CategoryCreatedMessagePayload.CATEGORY_CREATED),
@@ -117,6 +120,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface MessagePayload {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

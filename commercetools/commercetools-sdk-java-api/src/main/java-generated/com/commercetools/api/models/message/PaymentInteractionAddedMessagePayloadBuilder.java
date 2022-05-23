@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentInteractionAddedMessagePayload paymentInteractionAddedMessagePayload = PaymentInteractionAddedMessagePayload.builder()
-           .interaction(interactionBuilder -> interactionBuilder)
-           .build()
- </code></pre>
- </div>
+ * PaymentInteractionAddedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentInteractionAddedMessagePayload paymentInteractionAddedMessagePayload = PaymentInteractionAddedMessagePayload.builder()
+ *             .interaction(interactionBuilder -> interactionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<PaymentInteractionAddedMessagePayload> {
@@ -23,7 +25,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
     private com.commercetools.api.models.type.CustomFields interaction;
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
 
     public PaymentInteractionAddedMessagePayloadBuilder interaction(
@@ -33,7 +35,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
 
     public PaymentInteractionAddedMessagePayloadBuilder interaction(

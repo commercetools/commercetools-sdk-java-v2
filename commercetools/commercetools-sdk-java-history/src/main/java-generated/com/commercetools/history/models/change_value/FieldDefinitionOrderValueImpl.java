@@ -34,9 +34,17 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
     public FieldDefinitionOrderValueImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;

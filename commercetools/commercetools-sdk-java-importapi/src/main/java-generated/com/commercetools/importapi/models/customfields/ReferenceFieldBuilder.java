@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReferenceField referenceField = ReferenceField.builder()
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ReferenceFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReferenceField referenceField = ReferenceField.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceFieldBuilder implements Builder<ReferenceField> {
@@ -23,7 +25,7 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
     private com.commercetools.importapi.models.common.KeyReference value;
 
     /**
-     *  <p>References a resource by key</p>
+     <*  <p>References a resource by key</p>>
      */
 
     public ReferenceFieldBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
@@ -32,7 +34,7 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
     }
 
     /**
-     *  <p>References a resource by key</p>
+     <*  <p>References a resource by key</p>>
      */
 
     public ReferenceFieldBuilder value(

@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountChangeIsActiveAction productDiscountChangeIsActiveAction = ProductDiscountChangeIsActiveAction.builder()
-           .isActive(true)
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountChangeIsActiveActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountChangeIsActiveAction productDiscountChangeIsActiveAction = ProductDiscountChangeIsActiveAction.builder()
+ *             .isActive(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountChangeIsActiveActionBuilder implements Builder<ProductDiscountChangeIsActiveAction> {
@@ -22,7 +24,7 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
     private Boolean isActive;
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
+     <*  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>>
      */
 
     public ProductDiscountChangeIsActiveActionBuilder isActive(final Boolean isActive) {

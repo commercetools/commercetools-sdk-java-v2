@@ -11,76 +11,79 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingImagesSearchRequest missingImagesSearchRequest = MissingImagesSearchRequest.builder()
-           .build()
- </code></pre>
- </div>
+ * MissingImagesSearchRequest
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingImagesSearchRequest missingImagesSearchRequest = MissingImagesSearchRequest.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingImagesSearchRequestImpl.class)
 public interface MissingImagesSearchRequest {
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     *  <p>If true, searches data from staged products in addition to published products.</p>
+     <*  <p>If true, searches data from staged products in addition to published products.</p>>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *  <p>Maximum number of products to scan.</p>
+     <*  <p>Maximum number of products to scan.</p>>
      */
 
     @JsonProperty("productSetLimit")
     public Long getProductSetLimit();
 
     /**
-     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
+     <*  <p>If true, searches all product variants. If false, only searches master variants.</p>>
      */
 
     @JsonProperty("includeVariants")
     public Boolean getIncludeVariants();
 
     /**
-     *  <p>If true, uses the median number of images per product variant as a threshold value.</p>
+     <*  <p>If true, uses the median number of images per product variant as a threshold value.</p>>
      */
 
     @JsonProperty("autoThreshold")
     public Boolean getAutoThreshold();
 
     /**
-     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
+     <*  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>>
      */
 
     @JsonProperty("threshold")
     public Long getThreshold();
 
     /**
-     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>>
      */
 
     @JsonProperty("productIds")
     public List<String> getProductIds();
 
     /**
-     *  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>>
      */
 
     @JsonProperty("productTypeIds")

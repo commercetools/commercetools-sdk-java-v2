@@ -35,15 +35,17 @@ public class MessagesConfigurationImpl implements MessagesConfiguration, ModelBa
     }
 
     /**
-     *  <p>When <code>true</code>, the Messages Query feature is active.</p>
+     <*  <p>When <code>true</code>, the Messages Query feature is active.</p>>
      */
+
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     /**
-     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
+     <*  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>>
      */
+
     public Integer getDeleteDaysAfterCreation() {
         return this.deleteDaysAfterCreation;
     }

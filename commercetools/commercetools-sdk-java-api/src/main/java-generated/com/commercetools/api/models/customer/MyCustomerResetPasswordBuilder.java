@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCustomerResetPassword myCustomerResetPassword = MyCustomerResetPassword.builder()
-           .tokenValue("{tokenValue}")
-           .newPassword("{newPassword}")
-           .build()
- </code></pre>
- </div>
+ * MyCustomerResetPasswordBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerResetPassword myCustomerResetPassword = MyCustomerResetPassword.builder()
+ *             .tokenValue("{tokenValue}")
+ *             .newPassword("{newPassword}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerResetPasswordBuilder implements Builder<MyCustomerResetPassword> {
@@ -24,10 +26,18 @@ public class MyCustomerResetPasswordBuilder implements Builder<MyCustomerResetPa
 
     private String newPassword;
 
+    /**
+     <>
+     */
+
     public MyCustomerResetPasswordBuilder tokenValue(final String tokenValue) {
         this.tokenValue = tokenValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MyCustomerResetPasswordBuilder newPassword(final String newPassword) {
         this.newPassword = newPassword;

@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetDefaultBillingAddressAction customerSetDefaultBillingAddressAction = CustomerSetDefaultBillingAddressAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetDefaultBillingAddressAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetDefaultBillingAddressAction customerSetDefaultBillingAddressAction = CustomerSetDefaultBillingAddressAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetDefaultBillingAddressActionImpl.class)
@@ -26,11 +29,15 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
     String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
 
     /**
-     *  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>
+     <*  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("addressKey")
     public String getAddressKey();

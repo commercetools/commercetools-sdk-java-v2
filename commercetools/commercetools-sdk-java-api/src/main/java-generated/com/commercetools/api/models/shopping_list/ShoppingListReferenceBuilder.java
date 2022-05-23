@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListReference shoppingListReference = ShoppingListReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * ShoppingListReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListReference shoppingListReference = ShoppingListReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListReferenceBuilder implements Builder<ShoppingListReference> {
@@ -28,7 +30,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     private com.commercetools.api.models.shopping_list.ShoppingList obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced ShoppingList.</p>
+     <*  <p>Platform-generated unique identifier of the referenced ShoppingList.</p>>
      */
 
     public ShoppingListReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     <*  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>>
      */
 
     public ShoppingListReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     <*  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>>
      */
 
     public ShoppingListReferenceBuilder obj(

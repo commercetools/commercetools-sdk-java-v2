@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LineItemPrice lineItemPrice = LineItemPrice.builder()
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * LineItemPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemPrice lineItemPrice = LineItemPrice.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemPriceBuilder implements Builder<LineItemPrice> {
@@ -49,7 +51,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>Maps to <code>Price.value</code>.</p>
+     <*  <p>Maps to <code>Price.value</code>.</p>>
      */
 
     public LineItemPriceBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -58,7 +60,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.value</code>.</p>
+     <*  <p>Maps to <code>Price.value</code>.</p>>
      */
 
     public LineItemPriceBuilder value(
@@ -68,7 +70,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.county</code>.</p>
+     <*  <p>Maps to <code>Price.county</code>.</p>>
      */
 
     public LineItemPriceBuilder country(@Nullable final String country) {
@@ -77,7 +79,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.validFrom</code>.</p>
+     <*  <p>Maps to <code>Price.validFrom</code>.</p>>
      */
 
     public LineItemPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -86,7 +88,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.validUntil</code>.</p>
+     <*  <p>Maps to <code>Price.validUntil</code>.</p>>
      */
 
     public LineItemPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -95,7 +97,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     <*  <p>References a customer group by key.</p>>
      */
 
     public LineItemPriceBuilder customerGroup(
@@ -107,7 +109,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     <*  <p>References a customer group by key.</p>>
      */
 
     public LineItemPriceBuilder customerGroup(
@@ -117,7 +119,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     <*  <p>References a channel by key.</p>>
      */
 
     public LineItemPriceBuilder channel(
@@ -127,7 +129,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     <*  <p>References a channel by key.</p>>
      */
 
     public LineItemPriceBuilder channel(
@@ -137,7 +139,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     <*  <p>Sets a discounted price from an external service.</p>>
      */
 
     public LineItemPriceBuilder discounted(
@@ -147,7 +149,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     <*  <p>Sets a discounted price from an external service.</p>>
      */
 
     public LineItemPriceBuilder discounted(
@@ -157,7 +159,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public LineItemPriceBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -166,7 +168,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public LineItemPriceBuilder tiers(
@@ -176,7 +178,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public LineItemPriceBuilder plusTiers(
@@ -189,7 +191,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public LineItemPriceBuilder plusTiers(
@@ -202,7 +204,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     <*  <p>The tiered prices for this price.</p>>
      */
 
     public LineItemPriceBuilder withTiers(
@@ -213,7 +215,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.custom</code>.</p>
+     <*  <p>Maps to <code>Price.custom</code>.</p>>
      */
 
     public LineItemPriceBuilder custom(
@@ -223,7 +225,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.custom</code>.</p>
+     <*  <p>Maps to <code>Price.custom</code>.</p>>
      */
 
     public LineItemPriceBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {

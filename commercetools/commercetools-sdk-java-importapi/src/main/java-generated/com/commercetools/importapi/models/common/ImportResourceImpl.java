@@ -30,6 +30,10 @@ public class ImportResourceImpl implements ImportResource, ModelBase {
     public ImportResourceImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }

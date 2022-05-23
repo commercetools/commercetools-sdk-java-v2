@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   FacetTerm facetTerm = FacetTerm.builder()
-           .count(0.3)
-           .build()
- </code></pre>
- </div>
+ * FacetTermBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FacetTerm facetTerm = FacetTerm.builder()
+ *             .count(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FacetTermBuilder implements Builder<FacetTerm> {
@@ -28,15 +30,27 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     @Nullable
     private Long productCount;
 
+    /**
+     <>
+     */
+
     public FacetTermBuilder term(final java.lang.Object term) {
         this.term = term;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public FacetTermBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public FacetTermBuilder productCount(@Nullable final Long productCount) {
         this.productCount = productCount;

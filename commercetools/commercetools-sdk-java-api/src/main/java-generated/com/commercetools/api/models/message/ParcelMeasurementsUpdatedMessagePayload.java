@@ -15,15 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelMeasurementsUpdatedMessagePayload parcelMeasurementsUpdatedMessagePayload = ParcelMeasurementsUpdatedMessagePayload.builder()
-           .deliveryId("{deliveryId}")
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * ParcelMeasurementsUpdatedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelMeasurementsUpdatedMessagePayload parcelMeasurementsUpdatedMessagePayload = ParcelMeasurementsUpdatedMessagePayload.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelMeasurementsUpdatedMessagePayloadImpl.class)
@@ -31,14 +34,23 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends OrderMessagePay
 
     String PARCEL_MEASUREMENTS_UPDATED = "ParcelMeasurementsUpdated";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();

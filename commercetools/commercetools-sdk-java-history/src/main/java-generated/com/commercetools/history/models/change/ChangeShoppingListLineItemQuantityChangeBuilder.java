@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeShoppingListLineItemQuantityChange changeShoppingListLineItemQuantityChange = ChangeShoppingListLineItemQuantityChange.builder()
-           .change("{change}")
-           .lineItem(lineItemBuilder -> lineItemBuilder)
-           .previousValue(1)
-           .nextValue(1)
-           .build()
- </code></pre>
- </div>
+ * ChangeShoppingListLineItemQuantityChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeShoppingListLineItemQuantityChange changeShoppingListLineItemQuantityChange = ChangeShoppingListLineItemQuantityChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .previousValue(1)
+ *             .nextValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeShoppingListLineItemQuantityChangeBuilder
@@ -32,10 +34,18 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     private Integer nextValue;
 
+    /**
+     <>
+     */
+
     public ChangeShoppingListLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeShoppingListLineItemQuantityChangeBuilder lineItem(
             Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder> builder) {
@@ -45,16 +55,28 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeShoppingListLineItemQuantityChangeBuilder lineItem(
             final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
         this.lineItem = lineItem;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeShoppingListLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeShoppingListLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;

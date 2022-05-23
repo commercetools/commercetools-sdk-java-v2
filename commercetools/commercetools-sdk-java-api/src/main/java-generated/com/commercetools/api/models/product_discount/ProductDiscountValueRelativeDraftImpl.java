@@ -34,13 +34,18 @@ public class ProductDiscountValueRelativeDraftImpl implements ProductDiscountVal
         this.type = RELATIVE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+     <*  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>>
      */
+
     public Long getPermyriad() {
         return this.permyriad;
     }

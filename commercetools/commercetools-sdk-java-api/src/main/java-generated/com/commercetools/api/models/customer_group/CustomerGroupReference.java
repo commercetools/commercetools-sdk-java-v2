@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Reference to a CustomerGroup.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerGroupReference customerGroupReference = CustomerGroupReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ *  <p>Reference to a CustomerGroup.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroupReference customerGroupReference = CustomerGroupReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupReferenceImpl.class)
@@ -33,14 +34,14 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     String CUSTOMER_GROUP = "customer-group";
 
     /**
-     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     <*  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>>
      */
     @Valid
     @JsonProperty("obj")
     public CustomerGroup getObj();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced CustomerGroup.</p>
+     <*  <p>Platform-generated unique identifier of the referenced CustomerGroup.</p>>
      */
     @NotNull
     @JsonProperty("id")

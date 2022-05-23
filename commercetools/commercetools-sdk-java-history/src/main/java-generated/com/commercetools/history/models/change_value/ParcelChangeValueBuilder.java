@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ParcelChangeValue parcelChangeValue = ParcelChangeValue.builder()
-           .id("{id}")
-           .createdAt("{createdAt}")
-           .build()
- </code></pre>
- </div>
+ * ParcelChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelChangeValue parcelChangeValue = ParcelChangeValue.builder()
+ *             .id("{id}")
+ *             .createdAt("{createdAt}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
@@ -24,10 +26,18 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
 
     private String createdAt;
 
+    /**
+     <>
+     */
+
     public ParcelChangeValueBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ParcelChangeValueBuilder createdAt(final String createdAt) {
         this.createdAt = createdAt;

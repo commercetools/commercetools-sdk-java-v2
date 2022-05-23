@@ -14,19 +14,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Creates a request for creating new ProductVariants or updating existing ones.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse>> result = apiRoot
-           .withProjectKeyValue("{projectKey}")
-           .productVariants()
-           .importContainers()
-           .withImportContainerKeyValue("{importContainerKey}")
-           .post(null)
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Creates a request for creating new ProductVariants or updating existing ones.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse>> result = apiRoot
+ *            .withProjectKeyValue("{projectKey}")
+ *            .productVariants()
+ *            .importContainers()
+ *            .withImportContainerKeyValue("{importContainerKey}")
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductVariantsImportContainersByImportContainerKeyPost extends

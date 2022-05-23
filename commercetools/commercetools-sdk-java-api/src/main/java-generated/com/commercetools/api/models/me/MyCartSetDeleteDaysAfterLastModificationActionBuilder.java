@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartSetDeleteDaysAfterLastModificationAction myCartSetDeleteDaysAfterLastModificationAction = MyCartSetDeleteDaysAfterLastModificationAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCartSetDeleteDaysAfterLastModificationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartSetDeleteDaysAfterLastModificationAction myCartSetDeleteDaysAfterLastModificationAction = MyCartSetDeleteDaysAfterLastModificationAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
@@ -23,6 +25,10 @@ public class MyCartSetDeleteDaysAfterLastModificationActionBuilder
 
     @Nullable
     private Integer deleteDaysAfterLastModification;
+
+    /**
+     <>
+     */
 
     public MyCartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(
             @Nullable final Integer deleteDaysAfterLastModification) {

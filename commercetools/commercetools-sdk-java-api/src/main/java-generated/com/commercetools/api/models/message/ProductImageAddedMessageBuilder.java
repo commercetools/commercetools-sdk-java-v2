@@ -10,23 +10,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductImageAddedMessage productImageAddedMessage = ProductImageAddedMessage.builder()
-           .id("{id}")
-           .version(0.3)
-           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-           .sequenceNumber(0.3)
-           .resource(resourceBuilder -> resourceBuilder)
-           .resourceVersion(0.3)
-           .variantId(0.3)
-           .image(imageBuilder -> imageBuilder)
-           .staged(true)
-           .build()
- </code></pre>
- </div>
+ * ProductImageAddedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductImageAddedMessage productImageAddedMessage = ProductImageAddedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .variantId(0.3)
+ *             .image(imageBuilder -> imageBuilder)
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImageAddedMessageBuilder implements Builder<ProductImageAddedMessage> {
@@ -61,7 +63,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     private Boolean staged;
 
     /**
-     *  <p>Platform-generated unique identifier of the Message.</p>
+     <*  <p>Platform-generated unique identifier of the Message.</p>>
      */
 
     public ProductImageAddedMessageBuilder id(final String id) {
@@ -69,15 +71,27 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductImageAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -85,7 +99,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ProductImageAddedMessageBuilder lastModifiedBy(
@@ -95,7 +109,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ProductImageAddedMessageBuilder lastModifiedBy(
@@ -105,7 +119,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ProductImageAddedMessageBuilder createdBy(
@@ -115,7 +129,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
      */
 
     public ProductImageAddedMessageBuilder createdBy(
@@ -124,13 +138,17 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public ProductImageAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -139,7 +157,7 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public ProductImageAddedMessageBuilder resource(
@@ -148,10 +166,18 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductImageAddedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -161,16 +187,28 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessageBuilder variantId(final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductImageAddedMessageBuilder image(
             Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
@@ -178,10 +216,18 @@ public class ProductImageAddedMessageBuilder implements Builder<ProductImageAdde
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductImageAddedMessageBuilder image(final com.commercetools.api.models.common.Image image) {
         this.image = image;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductImageAddedMessageBuilder staged(final Boolean staged) {
         this.staged = staged;

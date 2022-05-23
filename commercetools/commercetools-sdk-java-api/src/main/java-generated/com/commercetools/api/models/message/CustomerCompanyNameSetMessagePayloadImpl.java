@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerCompanyNameSetMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompanyNameSetMessagePayload, ModelBase {
 
@@ -31,9 +34,17 @@ public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompany
         this.type = CUSTOMER_COMPANY_NAME_SET;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getCompanyName() {
         return this.companyName;

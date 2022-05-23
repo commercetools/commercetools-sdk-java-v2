@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntryDeletedMessagePayload inventoryEntryDeletedMessagePayload = InventoryEntryDeletedMessagePayload.builder()
-           .sku("{sku}")
-           .build()
- </code></pre>
- </div>
+ * InventoryEntryDeletedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryDeletedMessagePayload inventoryEntryDeletedMessagePayload = InventoryEntryDeletedMessagePayload.builder()
+ *             .sku("{sku}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryDeletedMessagePayloadImpl.class)
@@ -30,12 +33,15 @@ public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
 
     String INVENTORY_ENTRY_DELETED = "InventoryEntryDeleted";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
     @Valid
     @JsonProperty("supplyChannel")

@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetStoreChange setStoreChange = SetStoreChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetStoreChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetStoreChange setStoreChange = SetStoreChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
@@ -29,7 +31,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
     private com.commercetools.history.models.common.Reference nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setStore</code></p>
+     <*  <p>Shape of the action for <code>setStore</code></p>>
      */
 
     public SetStoreChangeBuilder change(final String change) {
@@ -37,22 +39,38 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetStoreChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetStoreChangeBuilder previousValue(final com.commercetools.history.models.common.Reference previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetStoreChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetStoreChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;

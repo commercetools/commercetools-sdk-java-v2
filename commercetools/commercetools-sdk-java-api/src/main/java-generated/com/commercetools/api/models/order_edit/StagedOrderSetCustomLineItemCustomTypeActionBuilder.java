@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetCustomLineItemCustomTypeAction stagedOrderSetCustomLineItemCustomTypeAction = StagedOrderSetCustomLineItemCustomTypeAction.builder()
-           .customLineItemId("{customLineItemId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetCustomLineItemCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetCustomLineItemCustomTypeAction stagedOrderSetCustomLineItemCustomTypeAction = StagedOrderSetCustomLineItemCustomTypeAction.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
@@ -31,13 +33,17 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -47,7 +53,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -57,7 +63,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(
@@ -67,7 +73,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(

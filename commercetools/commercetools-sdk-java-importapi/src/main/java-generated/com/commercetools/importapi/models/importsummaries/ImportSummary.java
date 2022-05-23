@@ -14,24 +14,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Describes the status of an ImportContainer by the number of resources in each Processing State. Can be used to monitor the import progress per Import Container.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImportSummary importSummary = ImportSummary.builder()
-           .states(statesBuilder -> statesBuilder)
-           .total(1)
-           .build()
- </code></pre>
- </div>
+ *  <p>Describes the status of an ImportContainer by the number of resources in each Processing State. Can be used to monitor the import progress per Import Container.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportSummary importSummary = ImportSummary.builder()
+ *             .states(statesBuilder -> statesBuilder)
+ *             .total(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportSummaryImpl.class)
 public interface ImportSummary {
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     <*  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>>
      */
     @NotNull
     @Valid
@@ -39,7 +40,7 @@ public interface ImportSummary {
     public OperationStates getStates();
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     <*  <p>The total number of ImportOperations received for this Import Summary.</p>>
      */
     @NotNull
     @JsonProperty("total")

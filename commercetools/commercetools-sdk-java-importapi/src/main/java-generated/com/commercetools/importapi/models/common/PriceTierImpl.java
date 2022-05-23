@@ -35,15 +35,17 @@ public class PriceTierImpl implements PriceTier, ModelBase {
     }
 
     /**
-     *  <p>The minimum quantity this price tier is valid for.</p>
+     <*  <p>The minimum quantity this price tier is valid for.</p>>
      */
+
     public Long getMinimumQuantity() {
         return this.minimumQuantity;
     }
 
     /**
-     *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
+     <*  <p>The currency of a price tier is always the same as the currency of the base Price.</p>>
      */
+
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }

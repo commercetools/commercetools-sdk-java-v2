@@ -10,21 +10,23 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomLineItem customLineItem = CustomLineItem.builder()
-           .id("{id}")
-           .name(nameBuilder -> nameBuilder)
-           .money(moneyBuilder -> moneyBuilder)
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .slug("{slug}")
-           .quantity(0.3)
-           .plusState(stateBuilder -> stateBuilder)
-           .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomLineItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItem customLineItem = CustomLineItem.builder()
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .slug("{slug}")
+ *             .quantity(0.3)
+ *             .plusState(stateBuilder -> stateBuilder)
+ *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemBuilder implements Builder<CustomLineItem> {
@@ -61,7 +63,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
     /**
-     *  <p>Platform-generated unique identifier of the CustomLineItem.</p>
+     <*  <p>Platform-generated unique identifier of the CustomLineItem.</p>>
      */
 
     public CustomLineItemBuilder id(final String id) {
@@ -70,7 +72,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>The name of this CustomLineItem.</p>
+     <*  <p>The name of this CustomLineItem.</p>>
      */
 
     public CustomLineItemBuilder name(
@@ -80,7 +82,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>The name of this CustomLineItem.</p>
+     <*  <p>The name of this CustomLineItem.</p>>
      */
 
     public CustomLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -89,7 +91,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     <*  <p>The cost to add to the cart. The amount can be negative.</p>>
      */
 
     public CustomLineItemBuilder money(final com.commercetools.api.models.common.TypedMoney money) {
@@ -98,7 +100,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     <*  <p>The cost to add to the cart. The amount can be negative.</p>>
      */
 
     public CustomLineItemBuilder money(
@@ -108,7 +110,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
+     <*  <p>Set once the <code>taxRate</code> is set.</p>>
      */
 
     public CustomLineItemBuilder taxedPrice(
@@ -118,7 +120,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
+     <*  <p>Set once the <code>taxRate</code> is set.</p>>
      */
 
     public CustomLineItemBuilder taxedPrice(
@@ -128,7 +130,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>The total price of this custom line item. If custom line item is discounted, then the <code>totalPrice</code> would be the discounted custom line item price multiplied by <code>quantity</code>. Otherwise a total price is just a <code>money</code> multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+     <*  <p>The total price of this custom line item. If custom line item is discounted, then the <code>totalPrice</code> would be the discounted custom line item price multiplied by <code>quantity</code>. Otherwise a total price is just a <code>money</code> multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>>
      */
 
     public CustomLineItemBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
@@ -137,7 +139,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>The total price of this custom line item. If custom line item is discounted, then the <code>totalPrice</code> would be the discounted custom line item price multiplied by <code>quantity</code>. Otherwise a total price is just a <code>money</code> multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+     <*  <p>The total price of this custom line item. If custom line item is discounted, then the <code>totalPrice</code> would be the discounted custom line item price multiplied by <code>quantity</code>. Otherwise a total price is just a <code>money</code> multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>>
      */
 
     public CustomLineItemBuilder totalPrice(
@@ -147,7 +149,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     <*  <p>A unique String in the cart to identify this CustomLineItem.</p>>
      */
 
     public CustomLineItemBuilder slug(final String slug) {
@@ -156,7 +158,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
      */
 
     public CustomLineItemBuilder quantity(final Long quantity) {
@@ -164,15 +166,27 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder state(final com.commercetools.api.models.order.ItemState... state) {
         this.state = new ArrayList<>(Arrays.asList(state));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder state(final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomLineItemBuilder plusState(final com.commercetools.api.models.order.ItemState... state) {
         if (this.state == null) {
@@ -181,6 +195,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         this.state.addAll(Arrays.asList(state));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomLineItemBuilder plusState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
@@ -191,12 +209,20 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder withState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         this.state = new ArrayList<>();
         this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomLineItemBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
@@ -205,6 +231,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
@@ -212,7 +242,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
      */
 
     public CustomLineItemBuilder taxRate(
@@ -222,7 +252,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
      */
 
     public CustomLineItemBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
@@ -230,17 +260,29 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder discountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
         this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder discountedPricePerQuantity(
             final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomLineItemBuilder plusDiscountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
@@ -251,6 +293,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder plusDiscountedPricePerQuantity(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
         if (this.discountedPricePerQuantity == null) {
@@ -261,6 +307,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder withDiscountedPricePerQuantity(
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
         this.discountedPricePerQuantity = new ArrayList<>();
@@ -269,11 +319,19 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
@@ -281,7 +339,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>, <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>
+     <*  <p>Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>, <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>>
      */
 
     public CustomLineItemBuilder shippingDetails(
@@ -291,7 +349,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>, <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>
+     <*  <p>Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>, <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>>
      */
 
     public CustomLineItemBuilder shippingDetails(

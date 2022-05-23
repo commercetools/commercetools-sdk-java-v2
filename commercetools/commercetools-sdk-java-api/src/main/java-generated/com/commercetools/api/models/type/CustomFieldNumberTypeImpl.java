@@ -26,6 +26,10 @@ public class CustomFieldNumberTypeImpl implements CustomFieldNumberType, ModelBa
         this.name = NUMBER;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }

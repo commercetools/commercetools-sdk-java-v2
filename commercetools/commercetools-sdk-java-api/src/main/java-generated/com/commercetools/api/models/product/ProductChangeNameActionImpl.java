@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductChangeNameAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangeNameActionImpl implements ProductChangeNameAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
         this.action = CHANGE_NAME;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

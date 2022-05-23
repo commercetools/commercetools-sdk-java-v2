@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   VerifyEmailChange verifyEmailChange = VerifyEmailChange.builder()
-           .change("{change}")
-           .build()
- </code></pre>
- </div>
+ * VerifyEmailChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     VerifyEmailChange verifyEmailChange = VerifyEmailChange.builder()
+ *             .change("{change}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = VerifyEmailChangeImpl.class)
@@ -28,10 +31,16 @@ public interface VerifyEmailChange extends Change {
 
     String VERIFY_EMAIL_CHANGE = "VerifyEmailChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

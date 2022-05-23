@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ImportSummary importSummary = ImportSummary.builder()
-           .states(statesBuilder -> statesBuilder)
-           .total(1)
-           .build()
- </code></pre>
- </div>
+ * ImportSummaryBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportSummary importSummary = ImportSummary.builder()
+ *             .states(statesBuilder -> statesBuilder)
+ *             .total(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSummaryBuilder implements Builder<ImportSummary> {
@@ -26,7 +28,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     private Long total;
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     <*  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>>
      */
 
     public ImportSummaryBuilder states(
@@ -37,7 +39,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     <*  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>>
      */
 
     public ImportSummaryBuilder states(
@@ -47,7 +49,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     <*  <p>The total number of ImportOperations received for this Import Summary.</p>>
      */
 
     public ImportSummaryBuilder total(final Long total) {

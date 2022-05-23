@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeRemoveEnumValuesAction productTypeRemoveEnumValuesAction = ProductTypeRemoveEnumValuesAction.builder()
-           .attributeName("{attributeName}")
-           .plusKeys(keysBuilder -> keysBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductTypeRemoveEnumValuesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeRemoveEnumValuesAction productTypeRemoveEnumValuesAction = ProductTypeRemoveEnumValuesAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .plusKeys(keysBuilder -> keysBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<ProductTypeRemoveEnumValuesAction> {
@@ -24,20 +26,36 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
 
     private java.util.List<String> keys;
 
+    /**
+     <>
+     */
+
     public ProductTypeRemoveEnumValuesActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeRemoveEnumValuesActionBuilder keys(final String... keys) {
         this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductTypeRemoveEnumValuesActionBuilder keys(final java.util.List<String> keys) {
         this.keys = keys;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductTypeRemoveEnumValuesActionBuilder plusKeys(final String... keys) {
         if (this.keys == null) {

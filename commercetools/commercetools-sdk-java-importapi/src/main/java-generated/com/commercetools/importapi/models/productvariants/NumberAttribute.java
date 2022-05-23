@@ -13,16 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>This type represents an attribute whose value is a number.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   NumberAttribute numberAttribute = NumberAttribute.builder()
-           .value(0.3)
-           .build()
- </code></pre>
- </div>
+ *  <p>This type represents an attribute whose value is a number.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     NumberAttribute numberAttribute = NumberAttribute.builder()
+ *             .value(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = NumberAttributeImpl.class)
@@ -30,6 +31,9 @@ public interface NumberAttribute extends Attribute {
 
     String NUMBER = "number";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("value")
     public Double getValue();

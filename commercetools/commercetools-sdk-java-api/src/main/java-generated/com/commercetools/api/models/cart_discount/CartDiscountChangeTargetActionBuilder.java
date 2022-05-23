@@ -8,25 +8,35 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountChangeTargetAction cartDiscountChangeTargetAction = CartDiscountChangeTargetAction.builder()
-           .target(targetBuilder -> targetBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountChangeTargetActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeTargetAction cartDiscountChangeTargetAction = CartDiscountChangeTargetAction.builder()
+ *             .target(targetBuilder -> targetBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscountChangeTargetAction> {
 
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
+    /**
+     <>
+     */
+
     public CartDiscountChangeTargetActionBuilder target(
             final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.target = target;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountChangeTargetActionBuilder target(
             Function<com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountTarget>> builder) {

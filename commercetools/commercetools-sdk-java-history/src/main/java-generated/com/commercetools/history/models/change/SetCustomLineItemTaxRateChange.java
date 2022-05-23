@@ -17,19 +17,22 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetCustomLineItemTaxRateChange setCustomLineItemTaxRateChange = SetCustomLineItemTaxRateChange.builder()
-           .change("{change}")
-           .customLineItem(customLineItemBuilder -> customLineItemBuilder)
-           .customLineItemId("{customLineItemId}")
-           .taxMode(TaxMode.PLATFORM)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetCustomLineItemTaxRateChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemTaxRateChange setCustomLineItemTaxRateChange = SetCustomLineItemTaxRateChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetCustomLineItemTaxRateChangeImpl.class)
@@ -37,32 +40,44 @@ public interface SetCustomLineItemTaxRateChange extends Change {
 
     String SET_CUSTOM_LINE_ITEM_TAX_RATE_CHANGE = "SetCustomLineItemTaxRateChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCustomLineItemTaxRate</code></p>
+     <*  <p>Update action for <code>setCustomLineItemTaxRate</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("customLineItem")
     public LocalizedString getCustomLineItem();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
     @NotNull
     @Valid
@@ -70,7 +85,7 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     public TaxRate getNextValue();
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
      */
     @NotNull
     @Valid

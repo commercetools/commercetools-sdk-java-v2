@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeSetCustomTypeAction discountCodeSetCustomTypeAction = DiscountCodeSetCustomTypeAction.builder()
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeSetCustomTypeAction discountCodeSetCustomTypeAction = DiscountCodeSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountCodeSetCustomTypeAction> {
@@ -28,7 +30,7 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+     <*  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>>
      */
 
     public DiscountCodeSetCustomTypeActionBuilder type(
@@ -38,7 +40,7 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     }
 
     /**
-     *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+     <*  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>>
      */
 
     public DiscountCodeSetCustomTypeActionBuilder type(
@@ -48,7 +50,7 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
+     <*  <p>Sets the Custom Fields fields for the DiscountCode.</p>>
      */
 
     public DiscountCodeSetCustomTypeActionBuilder fields(
@@ -58,7 +60,7 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
+     <*  <p>Sets the Custom Fields fields for the DiscountCode.</p>>
      */
 
     public DiscountCodeSetCustomTypeActionBuilder fields(

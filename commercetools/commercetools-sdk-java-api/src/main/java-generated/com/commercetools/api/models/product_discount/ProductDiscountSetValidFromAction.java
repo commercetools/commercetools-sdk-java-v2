@@ -12,13 +12,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountSetValidFromAction productDiscountSetValidFromAction = ProductDiscountSetValidFromAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountSetValidFromAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountSetValidFromAction productDiscountSetValidFromAction = ProductDiscountSetValidFromAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountSetValidFromActionImpl.class)
@@ -27,7 +30,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     String SET_VALID_FROM = "setValidFrom";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>>
      */
 
     @JsonProperty("validFrom")

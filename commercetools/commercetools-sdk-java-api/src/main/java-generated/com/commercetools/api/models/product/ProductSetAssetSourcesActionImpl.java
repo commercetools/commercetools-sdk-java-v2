@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductSetAssetSourcesAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesAction, ModelBase {
 
@@ -49,29 +52,57 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
         this.action = SET_ASSET_SOURCES;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
         return this.sources;

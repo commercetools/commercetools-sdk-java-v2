@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryImportRequest categoryImportRequest = CategoryImportRequest.builder()
-           .plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
- </code></pre>
- </div>
+ * CategoryImportRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryImportRequest categoryImportRequest = CategoryImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryImportRequestBuilder implements Builder<CategoryImportRequest> {
@@ -23,7 +25,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     private java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources;
 
     /**
-     *  <p>The category import resources of this request.</p>
+     <*  <p>The category import resources of this request.</p>>
      */
 
     public CategoryImportRequestBuilder resources(
@@ -33,7 +35,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     }
 
     /**
-     *  <p>The category import resources of this request.</p>
+     <*  <p>The category import resources of this request.</p>>
      */
 
     public CategoryImportRequestBuilder resources(
@@ -43,7 +45,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     }
 
     /**
-     *  <p>The category import resources of this request.</p>
+     <*  <p>The category import resources of this request.</p>>
      */
 
     public CategoryImportRequestBuilder plusResources(
@@ -56,7 +58,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     }
 
     /**
-     *  <p>The category import resources of this request.</p>
+     <*  <p>The category import resources of this request.</p>>
      */
 
     public CategoryImportRequestBuilder plusResources(
@@ -70,7 +72,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     }
 
     /**
-     *  <p>The category import resources of this request.</p>
+     <*  <p>The category import resources of this request.</p>>
      */
 
     public CategoryImportRequestBuilder withResources(

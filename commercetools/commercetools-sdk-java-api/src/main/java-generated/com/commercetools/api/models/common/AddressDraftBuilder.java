@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddressDraft addressDraft = AddressDraft.builder()
-           .country("{country}")
-           .build()
- </code></pre>
- </div>
+ * AddressDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddressDraft addressDraft = AddressDraft.builder()
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddressDraftBuilder implements Builder<AddressDraft> {
@@ -100,7 +102,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>Unique identifier for the Address. Not recommended to set it manually since the Platform overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field to let the Platform generate the ID for the Address.</p>
+     <*  <p>Unique identifier for the Address. Not recommended to set it manually since the Platform overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field to let the Platform generate the ID for the Address.</p>>
      */
 
     public AddressDraftBuilder id(@Nullable final String id) {
@@ -109,7 +111,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Address.</p>
+     <*  <p>User-defined unique identifier for the Address.</p>>
      */
 
     public AddressDraftBuilder key(@Nullable final String key) {
@@ -118,7 +120,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
 
     public AddressDraftBuilder country(final String country) {
@@ -127,7 +129,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Title of the contact, for example 'Dr.'</p>
+     <*  <p>Title of the contact, for example 'Dr.'</p>>
      */
 
     public AddressDraftBuilder title(@Nullable final String title) {
@@ -136,7 +138,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     <*  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>>
      */
 
     public AddressDraftBuilder salutation(@Nullable final String salutation) {
@@ -145,7 +147,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Given name (first name) of the contact.</p>
+     <*  <p>Given name (first name) of the contact.</p>>
      */
 
     public AddressDraftBuilder firstName(@Nullable final String firstName) {
@@ -154,7 +156,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Family name (last name) of the contact.</p>
+     <*  <p>Family name (last name) of the contact.</p>>
      */
 
     public AddressDraftBuilder lastName(@Nullable final String lastName) {
@@ -163,7 +165,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Name of the street.</p>
+     <*  <p>Name of the street.</p>>
      */
 
     public AddressDraftBuilder streetName(@Nullable final String streetName) {
@@ -172,7 +174,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Street number.</p>
+     <*  <p>Street number.</p>>
      */
 
     public AddressDraftBuilder streetNumber(@Nullable final String streetNumber) {
@@ -181,7 +183,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Further information on the street address.</p>
+     <*  <p>Further information on the street address.</p>>
      */
 
     public AddressDraftBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
@@ -190,7 +192,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Postal code.</p>
+     <*  <p>Postal code.</p>>
      */
 
     public AddressDraftBuilder postalCode(@Nullable final String postalCode) {
@@ -199,7 +201,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Name of the city.</p>
+     <*  <p>Name of the city.</p>>
      */
 
     public AddressDraftBuilder city(@Nullable final String city) {
@@ -208,7 +210,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Name of the region.</p>
+     <*  <p>Name of the region.</p>>
      */
 
     public AddressDraftBuilder region(@Nullable final String region) {
@@ -217,7 +219,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Name of the state, for example, Colorado.</p>
+     <*  <p>Name of the state, for example, Colorado.</p>>
      */
 
     public AddressDraftBuilder state(@Nullable final String state) {
@@ -226,7 +228,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Name of the company.</p>
+     <*  <p>Name of the company.</p>>
      */
 
     public AddressDraftBuilder company(@Nullable final String company) {
@@ -235,7 +237,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Name of the department.</p>
+     <*  <p>Name of the department.</p>>
      */
 
     public AddressDraftBuilder department(@Nullable final String department) {
@@ -244,7 +246,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Number or name of the building.</p>
+     <*  <p>Number or name of the building.</p>>
      */
 
     public AddressDraftBuilder building(@Nullable final String building) {
@@ -253,7 +255,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Number or name of the apartment.</p>
+     <*  <p>Number or name of the apartment.</p>>
      */
 
     public AddressDraftBuilder apartment(@Nullable final String apartment) {
@@ -262,7 +264,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Post office box number.</p>
+     <*  <p>Post office box number.</p>>
      */
 
     public AddressDraftBuilder pOBox(@Nullable final String pOBox) {
@@ -271,7 +273,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Phone number of the contact.</p>
+     <*  <p>Phone number of the contact.</p>>
      */
 
     public AddressDraftBuilder phone(@Nullable final String phone) {
@@ -280,7 +282,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Mobile phone number of the contact.</p>
+     <*  <p>Mobile phone number of the contact.</p>>
      */
 
     public AddressDraftBuilder mobile(@Nullable final String mobile) {
@@ -289,7 +291,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Email address of the contact.</p>
+     <*  <p>Email address of the contact.</p>>
      */
 
     public AddressDraftBuilder email(@Nullable final String email) {
@@ -298,7 +300,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Fax number of the contact.</p>
+     <*  <p>Fax number of the contact.</p>>
      */
 
     public AddressDraftBuilder fax(@Nullable final String fax) {
@@ -307,7 +309,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Further information on the Address.</p>
+     <*  <p>Further information on the Address.</p>>
      */
 
     public AddressDraftBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
@@ -316,7 +318,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>ID for the contact used in an external system.</p>
+     <*  <p>ID for the contact used in an external system.</p>>
      */
 
     public AddressDraftBuilder externalId(@Nullable final String externalId) {
@@ -325,7 +327,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address.</p>
+     <*  <p>Custom Fields defined for the Address.</p>>
      */
 
     public AddressDraftBuilder custom(
@@ -335,7 +337,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address.</p>
+     <*  <p>Custom Fields defined for the Address.</p>>
      */
 
     public AddressDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

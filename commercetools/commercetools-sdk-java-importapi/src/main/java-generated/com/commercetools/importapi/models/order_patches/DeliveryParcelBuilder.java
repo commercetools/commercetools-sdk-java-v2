@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DeliveryParcel deliveryParcel = DeliveryParcel.builder()
-           .deliveryId("{deliveryId}")
-           .build()
- </code></pre>
- </div>
+ * DeliveryParcelBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryParcel deliveryParcel = DeliveryParcel.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
@@ -33,10 +35,18 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
+    /**
+     <>
+     */
+
     public DeliveryParcelBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryParcelBuilder measurements(
             Function<com.commercetools.importapi.models.orders.ParcelMeasurementsBuilder, com.commercetools.importapi.models.orders.ParcelMeasurementsBuilder> builder) {
@@ -45,11 +55,19 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryParcelBuilder measurements(
             @Nullable final com.commercetools.importapi.models.orders.ParcelMeasurements measurements) {
         this.measurements = measurements;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryParcelBuilder trackingData(
             Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingDataBuilder> builder) {
@@ -57,11 +75,19 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryParcelBuilder trackingData(
             @Nullable final com.commercetools.importapi.models.orders.TrackingData trackingData) {
         this.trackingData = trackingData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryParcelBuilder items(
             @Nullable final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -69,11 +95,19 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryParcelBuilder items(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryParcelBuilder plusItems(
             @Nullable final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -84,6 +118,10 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public DeliveryParcelBuilder plusItems(
             Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -92,6 +130,10 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         this.items.add(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public DeliveryParcelBuilder withItems(
             Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItemBuilder> builder) {

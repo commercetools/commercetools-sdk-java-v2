@@ -12,13 +12,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountSetValidUntilAction productDiscountSetValidUntilAction = ProductDiscountSetValidUntilAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountSetValidUntilAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountSetValidUntilAction productDiscountSetValidUntilAction = ProductDiscountSetValidUntilAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountSetValidUntilActionImpl.class)
@@ -27,7 +30,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     String SET_VALID_UNTIL = "setValidUntil";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated undiscounted values.</p>>
      */
 
     @JsonProperty("validUntil")

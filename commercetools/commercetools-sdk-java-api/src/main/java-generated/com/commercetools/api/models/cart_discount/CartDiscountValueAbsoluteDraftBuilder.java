@@ -8,30 +8,44 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountValueAbsoluteDraft cartDiscountValueAbsoluteDraft = CartDiscountValueAbsoluteDraft.builder()
-           .plusMoney(moneyBuilder -> moneyBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountValueAbsoluteDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountValueAbsoluteDraft cartDiscountValueAbsoluteDraft = CartDiscountValueAbsoluteDraft.builder()
+ *             .plusMoney(moneyBuilder -> moneyBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscountValueAbsoluteDraft> {
 
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
+    /**
+     <>
+     */
+
     public CartDiscountValueAbsoluteDraftBuilder money(final com.commercetools.api.models.common.Money... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountValueAbsoluteDraftBuilder money(
             final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountValueAbsoluteDraftBuilder plusMoney(final com.commercetools.api.models.common.Money... money) {
         if (this.money == null) {
@@ -41,6 +55,10 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CartDiscountValueAbsoluteDraftBuilder plusMoney(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         if (this.money == null) {
@@ -49,6 +67,10 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
         this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CartDiscountValueAbsoluteDraftBuilder withMoney(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {

@@ -14,25 +14,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountUpdate cartDiscountUpdate = CartDiscountUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountUpdate
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountUpdate cartDiscountUpdate = CartDiscountUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountUpdateImpl.class)
 public interface CartDiscountUpdate extends
         com.commercetools.api.models.ResourceUpdate<CartDiscountUpdate, CartDiscountUpdateAction, CartDiscountUpdateBuilder> {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("actions")

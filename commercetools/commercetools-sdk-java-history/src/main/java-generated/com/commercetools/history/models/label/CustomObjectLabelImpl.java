@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomObjectLabel
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
 
@@ -34,13 +37,25 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
         this.type = CUSTOM_OBJECT_LABEL;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public String getContainer() {
         return this.container;

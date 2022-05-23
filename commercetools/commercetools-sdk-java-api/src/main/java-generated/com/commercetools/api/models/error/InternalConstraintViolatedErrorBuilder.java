@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InternalConstraintViolatedError internalConstraintViolatedError = InternalConstraintViolatedError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * InternalConstraintViolatedErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InternalConstraintViolatedError internalConstraintViolatedError = InternalConstraintViolatedError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InternalConstraintViolatedErrorBuilder implements Builder<InternalConstraintViolatedError> {
@@ -23,15 +25,27 @@ public class InternalConstraintViolatedErrorBuilder implements Builder<InternalC
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public InternalConstraintViolatedErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InternalConstraintViolatedErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InternalConstraintViolatedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

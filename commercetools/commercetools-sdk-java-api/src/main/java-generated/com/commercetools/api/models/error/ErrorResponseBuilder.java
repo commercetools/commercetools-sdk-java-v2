@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ErrorResponse errorResponse = ErrorResponse.builder()
-           .statusCode(1)
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ErrorResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorResponse errorResponse = ErrorResponse.builder()
+ *             .statusCode(1)
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorResponseBuilder implements Builder<ErrorResponse> {
@@ -36,36 +38,64 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     @Nullable
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
+    /**
+     <>
+     */
+
     public ErrorResponseBuilder statusCode(final Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ErrorResponseBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ErrorResponseBuilder error(@Nullable final String error) {
         this.error = error;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ErrorResponseBuilder error_description(@Nullable final String error_description) {
         this.error_description = error_description;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ErrorResponseBuilder errors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ErrorResponseBuilder errors(
             @Nullable final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ErrorResponseBuilder plusErrors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
         if (this.errors == null) {
@@ -75,6 +105,10 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ErrorResponseBuilder plusErrors(
             Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
         if (this.errors == null) {
@@ -83,6 +117,10 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ErrorResponseBuilder withErrors(
             Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {

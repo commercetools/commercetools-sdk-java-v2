@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderCustomerSetMessagePayload orderCustomerSetMessagePayload = OrderCustomerSetMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderCustomerSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerSetMessagePayload orderCustomerSetMessagePayload = OrderCustomerSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCustomerSetMessagePayload> {
@@ -34,7 +36,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
 
     public OrderCustomerSetMessagePayloadBuilder customer(
@@ -44,7 +46,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
 
     public OrderCustomerSetMessagePayloadBuilder customer(
@@ -54,7 +56,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerSetMessagePayloadBuilder customerGroup(
@@ -66,7 +68,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerSetMessagePayloadBuilder customerGroup(
@@ -76,7 +78,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
@@ -86,7 +88,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>Reference to a Customer.</p>
+     <*  <p>Reference to a Customer.</p>>
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
@@ -96,7 +98,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(
@@ -108,7 +110,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(

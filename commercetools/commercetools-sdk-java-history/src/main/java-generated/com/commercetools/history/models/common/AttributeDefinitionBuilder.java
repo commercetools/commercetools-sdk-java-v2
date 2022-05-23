@@ -8,21 +8,23 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeDefinition attributeDefinition = AttributeDefinition.builder()
-           .type(typeBuilder -> typeBuilder)
-           .name("{name}")
-           .label(labelBuilder -> labelBuilder)
-           .isRequired(true)
-           .attributeConstraint(AttributeConstraintEnum.NONE)
-           .inputTip(inputTipBuilder -> inputTipBuilder)
-           .inputHint(TextInputHint.SINGLE_LINE)
-           .isSearchable(true)
-           .build()
- </code></pre>
- </div>
+ * AttributeDefinitionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeDefinition attributeDefinition = AttributeDefinition.builder()
+ *             .type(typeBuilder -> typeBuilder)
+ *             .name("{name}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .isRequired(true)
+ *             .attributeConstraint(AttributeConstraintEnum.NONE)
+ *             .inputTip(inputTipBuilder -> inputTipBuilder)
+ *             .inputHint(TextInputHint.SINGLE_LINE)
+ *             .isSearchable(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> {
@@ -43,11 +45,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     private Boolean isSearchable;
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionBuilder type(
             Function<com.commercetools.history.models.common.AttributeTypeBuilder, com.commercetools.history.models.common.AttributeTypeBuilder> builder) {
         this.type = builder.apply(com.commercetools.history.models.common.AttributeTypeBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionBuilder type(final com.commercetools.history.models.common.AttributeType type) {
         this.type = type;
@@ -55,7 +65,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     <*  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>>
      */
 
     public AttributeDefinitionBuilder name(final String name) {
@@ -63,11 +73,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionBuilder label(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionBuilder label(final com.commercetools.history.models.common.LocalizedString label) {
         this.label = label;
@@ -75,7 +93,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Whether the attribute is required to have a value.</p>
+     <*  <p>Whether the attribute is required to have a value.</p>>
      */
 
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
@@ -83,11 +101,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionBuilder attributeConstraint(
             final com.commercetools.history.models.common.AttributeConstraintEnum attributeConstraint) {
         this.attributeConstraint = attributeConstraint;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionBuilder inputTip(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -95,10 +121,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AttributeDefinitionBuilder inputTip(final com.commercetools.history.models.common.LocalizedString inputTip) {
         this.inputTip = inputTip;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AttributeDefinitionBuilder inputHint(final com.commercetools.history.models.common.TextInputHint inputHint) {
         this.inputHint = inputHint;
@@ -106,7 +140,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     <*  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>>
      */
 
     public AttributeDefinitionBuilder isSearchable(final Boolean isSearchable) {

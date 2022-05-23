@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategoryAddAssetAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryAddAssetActionImpl implements CategoryAddAssetAction, ModelBase {
 
@@ -35,17 +38,26 @@ public class CategoryAddAssetActionImpl implements CategoryAddAssetAction, Model
         this.action = ADD_ASSET;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.AssetDraft getAsset() {
         return this.asset;
     }
 
     /**
-     *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
+     <*  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>>
      */
+
     public Integer getPosition() {
         return this.position;
     }

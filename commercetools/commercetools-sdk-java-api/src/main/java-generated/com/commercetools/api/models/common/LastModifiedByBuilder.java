@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LastModifiedBy lastModifiedBy = LastModifiedBy.builder()
-           .build()
- </code></pre>
- </div>
+ * LastModifiedByBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LastModifiedBy lastModifiedBy = LastModifiedBy.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
@@ -34,7 +36,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     private String anonymousId;
 
     /**
-     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     <*  <p><code>id</code> of the APIClient which modified the resource.</p>>
      */
 
     public LastModifiedByBuilder clientId(@Nullable final String clientId) {
@@ -43,7 +45,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
      */
 
     public LastModifiedByBuilder externalUserId(@Nullable final String externalUserId) {
@@ -52,7 +54,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
      */
 
     public LastModifiedByBuilder customer(
@@ -62,7 +64,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
      */
 
     public LastModifiedByBuilder customer(
@@ -72,7 +74,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     <*  <p>Indicates the anonymous session during which the resource was modified.</p>>
      */
 
     public LastModifiedByBuilder anonymousId(@Nullable final String anonymousId) {

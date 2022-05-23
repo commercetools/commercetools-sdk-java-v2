@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductTypeSetInputTipAction productTypeSetInputTipAction = ProductTypeSetInputTipAction.builder()
-           .attributeName("{attributeName}")
-           .build()
- </code></pre>
- </div>
+ * ProductTypeSetInputTipActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeSetInputTipAction productTypeSetInputTipAction = ProductTypeSetInputTipAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeSetInputTipAction> {
@@ -27,13 +29,17 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     @Nullable
     private com.commercetools.api.models.common.LocalizedString inputTip;
 
+    /**
+     <>
+     */
+
     public ProductTypeSetInputTipActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ProductTypeSetInputTipActionBuilder inputTip(
@@ -43,7 +49,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ProductTypeSetInputTipActionBuilder inputTip(

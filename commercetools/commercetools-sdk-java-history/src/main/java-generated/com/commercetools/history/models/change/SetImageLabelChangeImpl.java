@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetImageLabelChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
         this.type = SET_IMAGE_LABEL_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setImageLabel</code></p>
+     <*  <p>Update action for <code>setImageLabel</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Image getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Image getNextValue() {
         return this.nextValue;

@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetCustomerGroupAction cartSetCustomerGroupAction = CartSetCustomerGroupAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartSetCustomerGroupActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetCustomerGroupAction cartSetCustomerGroupAction = CartSetCustomerGroupAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustomerGroupAction> {
@@ -25,7 +27,7 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
      */
 
     public CartSetCustomerGroupActionBuilder customerGroup(
@@ -37,7 +39,7 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
      */
 
     public CartSetCustomerGroupActionBuilder customerGroup(

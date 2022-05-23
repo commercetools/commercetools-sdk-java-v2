@@ -36,15 +36,17 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     <*  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>>
      */
+
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {
         return this.states;
     }
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     <*  <p>The total number of ImportOperations received for this Import Summary.</p>>
      */
+
     public Long getTotal() {
         return this.total;
     }

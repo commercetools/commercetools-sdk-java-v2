@@ -15,16 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeReviewRatingStatisticsChange changeReviewRatingStatisticsChange = ChangeReviewRatingStatisticsChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeReviewRatingStatisticsChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeReviewRatingStatisticsChange changeReviewRatingStatisticsChange = ChangeReviewRatingStatisticsChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeReviewRatingStatisticsChangeImpl.class)
@@ -33,21 +36,30 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     String CHANGE_REVIEW_RATING_STATISTICS_CHANGE = "ChangeReviewRatingStatisticsChange";
 
     /**
-     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     <*  <p>Update action for <code>changeReviewRatingStatistics</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public ReviewRatingStatistics getNextValue();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

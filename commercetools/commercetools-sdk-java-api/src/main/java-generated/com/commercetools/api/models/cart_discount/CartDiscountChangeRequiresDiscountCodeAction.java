@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountChangeRequiresDiscountCodeAction cartDiscountChangeRequiresDiscountCodeAction = CartDiscountChangeRequiresDiscountCodeAction.builder()
-           .requiresDiscountCode(true)
-           .build()
- </code></pre>
- </div>
+ * CartDiscountChangeRequiresDiscountCodeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeRequiresDiscountCodeAction cartDiscountChangeRequiresDiscountCodeAction = CartDiscountChangeRequiresDiscountCodeAction.builder()
+ *             .requiresDiscountCode(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeRequiresDiscountCodeActionImpl.class)
@@ -28,6 +31,9 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
 
     String CHANGE_REQUIRES_DISCOUNT_CODE = "changeRequiresDiscountCode";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("requiresDiscountCode")
     public Boolean getRequiresDiscountCode();

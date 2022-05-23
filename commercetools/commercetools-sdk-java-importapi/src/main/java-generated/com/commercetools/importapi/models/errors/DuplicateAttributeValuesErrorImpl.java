@@ -38,13 +38,25 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
         this.code = DUPLICATE_ATTRIBUTE_VALUES;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     <>
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;

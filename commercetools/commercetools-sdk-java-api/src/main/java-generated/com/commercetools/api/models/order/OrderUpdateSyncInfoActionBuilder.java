@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderUpdateSyncInfoAction orderUpdateSyncInfoAction = OrderUpdateSyncInfoAction.builder()
-           .channel(channelBuilder -> channelBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderUpdateSyncInfoActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderUpdateSyncInfoAction orderUpdateSyncInfoAction = OrderUpdateSyncInfoAction.builder()
+ *             .channel(channelBuilder -> channelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSyncInfoAction> {
@@ -31,7 +33,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public OrderUpdateSyncInfoActionBuilder channel(
@@ -42,7 +44,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
 
     public OrderUpdateSyncInfoActionBuilder channel(
@@ -51,10 +53,18 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderUpdateSyncInfoActionBuilder syncedAt(@Nullable final java.time.ZonedDateTime syncedAt) {
         this.syncedAt = syncedAt;

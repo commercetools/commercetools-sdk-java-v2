@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderCustomerEmailSetMessagePayload orderCustomerEmailSetMessagePayload = OrderCustomerEmailSetMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderCustomerEmailSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerEmailSetMessagePayload orderCustomerEmailSetMessagePayload = OrderCustomerEmailSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<OrderCustomerEmailSetMessagePayload> {
@@ -26,10 +28,18 @@ public class OrderCustomerEmailSetMessagePayloadBuilder implements Builder<Order
     @Nullable
     private String oldEmail;
 
+    /**
+     <>
+     */
+
     public OrderCustomerEmailSetMessagePayloadBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderCustomerEmailSetMessagePayloadBuilder oldEmail(@Nullable final String oldEmail) {
         this.oldEmail = oldEmail;

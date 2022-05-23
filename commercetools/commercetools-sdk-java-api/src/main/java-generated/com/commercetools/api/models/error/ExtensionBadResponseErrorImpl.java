@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ExtensionBadResponseError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError, ModelBase {
 
@@ -47,28 +50,49 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
         this.code = EXTENSION_BAD_RESPONSE;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     <>
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     <>
+     */
 
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
         return this.localizedMessage;
     }
 
+    /**
+     <>
+     */
+
     public java.lang.Object getExtensionExtraInfo() {
         return this.extensionExtraInfo;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
         return this.errorByExtension;

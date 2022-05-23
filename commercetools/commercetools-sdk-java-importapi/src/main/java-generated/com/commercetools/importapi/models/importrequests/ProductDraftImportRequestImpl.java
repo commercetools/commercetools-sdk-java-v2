@@ -37,15 +37,17 @@ public class ProductDraftImportRequestImpl implements ProductDraftImportRequest,
     }
 
     /**
-     *  <p>The type of the import resource.</p>
+     <*  <p>The type of the import resource.</p>>
      */
+
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
         return this.type;
     }
 
     /**
-     *  <p>The product draft import resources of this request.</p>
+     <*  <p>The product draft import resources of this request.</p>>
      */
+
     public java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> getResources() {
         return this.resources;
     }

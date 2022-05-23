@@ -37,17 +37,26 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
         this.code = REQUIRED_FIELD;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-     *  <p>The name of the field.</p>
+     <*  <p>The name of the field.</p>>
      */
+
     public String getField() {
         return this.field;
     }

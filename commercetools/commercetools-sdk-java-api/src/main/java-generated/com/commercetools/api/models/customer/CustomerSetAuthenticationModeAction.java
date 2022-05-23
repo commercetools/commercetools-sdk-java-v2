@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetAuthenticationModeAction customerSetAuthenticationModeAction = CustomerSetAuthenticationModeAction.builder()
-           .authMode(AuthenticationMode.PASSWORD)
-           .build()
- </code></pre>
- </div>
+ * CustomerSetAuthenticationModeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetAuthenticationModeAction customerSetAuthenticationModeAction = CustomerSetAuthenticationModeAction.builder()
+ *             .authMode(AuthenticationMode.PASSWORD)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetAuthenticationModeActionImpl.class)
@@ -28,12 +31,15 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
 
     String SET_AUTHENTICATION_MODE = "setAuthenticationMode";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("authMode")
     public AuthenticationMode getAuthMode();
 
     /**
-     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
+     <*  <p>Required when <code>authMode</code> is <code>Password</code></p>>
      */
 
     @JsonProperty("password")

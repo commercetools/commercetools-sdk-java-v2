@@ -8,24 +8,34 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MoneyField moneyField = MoneyField.builder()
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * MoneyFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MoneyField moneyField = MoneyField.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneyFieldBuilder implements Builder<MoneyField> {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
 
+    /**
+     <>
+     */
+
     public MoneyFieldBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MoneyFieldBuilder value(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {

@@ -14,26 +14,39 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   GraphQLRequest graphQLRequest = GraphQLRequest.builder()
-           .query("{query}")
-           .build()
- </code></pre>
- </div>
+ * GraphQLRequest
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GraphQLRequest graphQLRequest = GraphQLRequest.builder()
+ *             .query("{query}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLRequestImpl.class)
 public interface GraphQLRequest {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("query")
     public String getQuery();
 
+    /**
+     <>
+     */
+
     @JsonProperty("operationName")
     public String getOperationName();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("variables")
     public GraphQLVariablesMap getVariables();

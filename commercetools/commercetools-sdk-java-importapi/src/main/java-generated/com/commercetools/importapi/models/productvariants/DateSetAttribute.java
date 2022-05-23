@@ -14,16 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>This type represents an attribute whose value is a set of dates.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DateSetAttribute dateSetAttribute = DateSetAttribute.builder()
-           .plusValue(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>This type represents an attribute whose value is a set of dates.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DateSetAttribute dateSetAttribute = DateSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateSetAttributeImpl.class)
@@ -31,6 +32,9 @@ public interface DateSetAttribute extends Attribute {
 
     String DATE_SET = "date-set";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("value")
     public List<LocalDate> getValue();

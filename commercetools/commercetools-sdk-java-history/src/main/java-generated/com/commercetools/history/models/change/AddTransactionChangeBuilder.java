@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddTransactionChange addTransactionChange = AddTransactionChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddTransactionChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddTransactionChange addTransactionChange = AddTransactionChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddTransactionChangeBuilder implements Builder<AddTransactionChange> {
@@ -26,7 +28,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
     private com.commercetools.history.models.common.Transaction nextValue;
 
     /**
-     *  <p>Update action for <code>addTransaction</code> on payments</p>
+     <*  <p>Update action for <code>addTransaction</code> on payments</p>>
      */
 
     public AddTransactionChangeBuilder change(final String change) {
@@ -34,11 +36,19 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddTransactionChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TransactionBuilder, com.commercetools.history.models.common.TransactionBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TransactionBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddTransactionChangeBuilder nextValue(final com.commercetools.history.models.common.Transaction nextValue) {
         this.nextValue = nextValue;

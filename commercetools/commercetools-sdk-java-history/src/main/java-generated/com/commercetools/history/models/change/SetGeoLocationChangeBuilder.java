@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetGeoLocationChange setGeoLocationChange = SetGeoLocationChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetGeoLocationChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetGeoLocationChange setGeoLocationChange = SetGeoLocationChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange> {
@@ -29,7 +31,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     private com.commercetools.history.models.common.GeoLocation previousValue;
 
     /**
-     *  <p>Update action for <code>setGeoLocation</code></p>
+     <*  <p>Update action for <code>setGeoLocation</code></p>>
      */
 
     public SetGeoLocationChangeBuilder change(final String change) {
@@ -37,22 +39,38 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetGeoLocationChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.GeoLocationBuilder, com.commercetools.history.models.common.GeoLocationBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.GeoLocationBuilder.of()).build();
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetGeoLocationChangeBuilder nextValue(final com.commercetools.history.models.common.GeoLocation nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetGeoLocationChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.GeoLocationBuilder, com.commercetools.history.models.common.GeoLocationBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.GeoLocationBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetGeoLocationChangeBuilder previousValue(
             final com.commercetools.history.models.common.GeoLocation previousValue) {

@@ -13,16 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SnsDestination snsDestination = SnsDestination.builder()
-           .accessKey("{accessKey}")
-           .accessSecret("{accessSecret}")
-           .topicArn("{topicArn}")
-           .build()
- </code></pre>
- </div>
+ * SnsDestination
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SnsDestination snsDestination = SnsDestination.builder()
+ *             .accessKey("{accessKey}")
+ *             .accessSecret("{accessSecret}")
+ *             .topicArn("{topicArn}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SnsDestinationImpl.class)
@@ -30,14 +33,23 @@ public interface SnsDestination extends Destination {
 
     String SNS = "SNS";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("accessSecret")
     public String getAccessSecret();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("topicArn")
     public String getTopicArn();

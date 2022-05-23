@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ResourceCreationError resourceCreationError = ResourceCreationError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * ResourceCreationErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResourceCreationError resourceCreationError = ResourceCreationError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceCreationErrorBuilder implements Builder<ResourceCreationError> {
@@ -26,10 +28,18 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
     @Nullable
     private java.lang.Object resource;
 
+    /**
+     <>
+     */
+
     public ResourceCreationErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ResourceCreationErrorBuilder resource(@Nullable final java.lang.Object resource) {
         this.resource = resource;

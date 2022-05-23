@@ -7,20 +7,26 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderChangeTaxCalculationModeAction stagedOrderChangeTaxCalculationModeAction = StagedOrderChangeTaxCalculationModeAction.builder()
-           .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderChangeTaxCalculationModeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderChangeTaxCalculationModeAction stagedOrderChangeTaxCalculationModeAction = StagedOrderChangeTaxCalculationModeAction.builder()
+ *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeTaxCalculationModeActionBuilder
         implements Builder<StagedOrderChangeTaxCalculationModeAction> {
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
+
+    /**
+     <>
+     */
 
     public StagedOrderChangeTaxCalculationModeActionBuilder taxCalculationMode(
             final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {

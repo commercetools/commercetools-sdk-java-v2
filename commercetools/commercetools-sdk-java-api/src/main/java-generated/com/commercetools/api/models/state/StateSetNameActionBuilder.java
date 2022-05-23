@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StateSetNameAction stateSetNameAction = StateSetNameAction.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * StateSetNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateSetNameAction stateSetNameAction = StateSetNameAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
@@ -23,7 +25,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public StateSetNameActionBuilder name(
@@ -33,7 +35,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public StateSetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

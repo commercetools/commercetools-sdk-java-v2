@@ -9,19 +9,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerSetLocaleAction customerSetLocaleAction = CustomerSetLocaleAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CustomerSetLocaleActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetLocaleAction customerSetLocaleAction = CustomerSetLocaleAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetLocaleActionBuilder implements Builder<CustomerSetLocaleAction> {
 
     @Nullable
     private String locale;
+
+    /**
+     <>
+     */
 
     public CustomerSetLocaleActionBuilder locale(@Nullable final String locale) {
         this.locale = locale;

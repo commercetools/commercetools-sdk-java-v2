@@ -14,16 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Field type for enum values.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFieldEnumType customFieldEnumType = CustomFieldEnumType.builder()
-           .plusValues(valuesBuilder -> valuesBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>Field type for enum values.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldEnumType customFieldEnumType = CustomFieldEnumType.builder()
+ *             .plusValues(valuesBuilder -> valuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldEnumTypeImpl.class)
@@ -32,7 +33,7 @@ public interface CustomFieldEnumType extends FieldType {
     String ENUM = "Enum";
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
     @NotNull
     @Valid

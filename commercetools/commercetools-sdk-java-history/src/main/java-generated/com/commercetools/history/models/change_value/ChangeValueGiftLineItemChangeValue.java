@@ -15,18 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Shape of the value for cart discounts gift line item value.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeValueGiftLineItemChangeValue changeValueGiftLineItemChangeValue = ChangeValueGiftLineItemChangeValue.builder()
-           .product(productBuilder -> productBuilder)
-           .variantId(1)
-           .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>Shape of the value for cart discounts gift line item value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeValueGiftLineItemChangeValue changeValueGiftLineItemChangeValue = ChangeValueGiftLineItemChangeValue.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .variantId(1)
+ *             .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeValueGiftLineItemChangeValueImpl.class)
@@ -34,23 +35,38 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
 
     String GIFT_LINE_ITEM = "giftLineItem";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("product")
     public Reference getProduct();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("supplyChannel")
     public Reference getSupplyChannel();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("distributionChannel")

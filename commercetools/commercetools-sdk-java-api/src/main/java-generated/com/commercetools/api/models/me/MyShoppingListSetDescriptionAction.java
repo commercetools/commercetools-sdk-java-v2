@@ -14,13 +14,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyShoppingListSetDescriptionAction myShoppingListSetDescriptionAction = MyShoppingListSetDescriptionAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyShoppingListSetDescriptionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListSetDescriptionAction myShoppingListSetDescriptionAction = MyShoppingListSetDescriptionAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListSetDescriptionActionImpl.class)
@@ -29,7 +32,7 @@ public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdate
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
     @Valid
     @JsonProperty("description")

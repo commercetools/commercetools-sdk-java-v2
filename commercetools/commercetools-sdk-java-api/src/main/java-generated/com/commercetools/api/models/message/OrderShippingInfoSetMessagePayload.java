@@ -14,13 +14,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderShippingInfoSetMessagePayload orderShippingInfoSetMessagePayload = OrderShippingInfoSetMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderShippingInfoSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderShippingInfoSetMessagePayload orderShippingInfoSetMessagePayload = OrderShippingInfoSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderShippingInfoSetMessagePayloadImpl.class)
@@ -28,10 +31,16 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
 
     String ORDER_SHIPPING_INFO_SET = "OrderShippingInfoSet";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("oldShippingInfo")
     public ShippingInfo getOldShippingInfo();

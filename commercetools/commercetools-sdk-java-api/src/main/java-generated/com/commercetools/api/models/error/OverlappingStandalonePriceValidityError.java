@@ -18,17 +18,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OverlappingStandalonePriceValidityError overlappingStandalonePriceValidityError = OverlappingStandalonePriceValidityError.builder()
-           .message("{message}")
-           .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
-           .sku("{sku}")
-           .currency("{currency}")
-           .build()
- </code></pre>
- </div>
+ * OverlappingStandalonePriceValidityError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OverlappingStandalonePriceValidityError overlappingStandalonePriceValidityError = OverlappingStandalonePriceValidityError.builder()
+ *             .message("{message}")
+ *             .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
+ *             .sku("{sku}")
+ *             .currency("{currency}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OverlappingStandalonePriceValidityErrorImpl.class)
@@ -37,46 +40,72 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
     String OVERLAPPING_STANDALONE_PRICE_VALIDITY = "OverlappingStandalonePriceValidity";
 
     /**
-     *  <p>Reference to a StandalonePrice.</p>
+     <*  <p>Reference to a StandalonePrice.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("conflictingStandalonePrice")
     public StandalonePriceReference getConflictingStandalonePrice();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("currency")
     public String getCurrency();
+
+    /**
+     <>
+     */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     <*  <p>ResourceIdentifier to a Channel.</p>>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
+    /**
+     <>
+     */
+
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
+
+    /**
+     <>
+     */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+     <>
+     */
+
     @JsonProperty("conflictingValidFrom")
     public ZonedDateTime getConflictingValidFrom();
+
+    /**
+     <>
+     */
 
     @JsonProperty("conflictingValidUntil")
     public ZonedDateTime getConflictingValidUntil();

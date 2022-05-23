@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductPublishedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessagePayload, ModelBase {
 
@@ -39,17 +42,33 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
         this.type = PRODUCT_PUBLISHED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {
         return this.scope;

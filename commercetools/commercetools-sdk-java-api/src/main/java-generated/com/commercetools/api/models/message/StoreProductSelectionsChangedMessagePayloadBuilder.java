@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreProductSelectionsChangedMessagePayload storeProductSelectionsChangedMessagePayload = StoreProductSelectionsChangedMessagePayload.builder()
-           .build()
- </code></pre>
- </div>
+ * StoreProductSelectionsChangedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreProductSelectionsChangedMessagePayload storeProductSelectionsChangedMessagePayload = StoreProductSelectionsChangedMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreProductSelectionsChangedMessagePayloadBuilder
@@ -31,17 +33,29 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     @Nullable
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections;
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder addedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... addedProductSelections) {
         this.addedProductSelections = new ArrayList<>(Arrays.asList(addedProductSelections));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder addedProductSelections(
             @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> addedProductSelections) {
         this.addedProductSelections = addedProductSelections;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusAddedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... addedProductSelections) {
@@ -52,6 +66,10 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder plusAddedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         if (this.addedProductSelections == null) {
@@ -62,6 +80,10 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder withAddedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         this.addedProductSelections = new ArrayList<>();
@@ -70,17 +92,29 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder removedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... removedProductSelections) {
         this.removedProductSelections = new ArrayList<>(Arrays.asList(removedProductSelections));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder removedProductSelections(
             @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> removedProductSelections) {
         this.removedProductSelections = removedProductSelections;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusRemovedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... removedProductSelections) {
@@ -91,6 +125,10 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder plusRemovedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         if (this.removedProductSelections == null) {
@@ -101,6 +139,10 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder withRemovedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         this.removedProductSelections = new ArrayList<>();
@@ -109,17 +151,29 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder updatedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... updatedProductSelections) {
         this.updatedProductSelections = new ArrayList<>(Arrays.asList(updatedProductSelections));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder updatedProductSelections(
             @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections) {
         this.updatedProductSelections = updatedProductSelections;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusUpdatedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... updatedProductSelections) {
@@ -130,6 +184,10 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreProductSelectionsChangedMessagePayloadBuilder plusUpdatedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         if (this.updatedProductSelections == null) {
@@ -139,6 +197,10 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
                 .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder withUpdatedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {

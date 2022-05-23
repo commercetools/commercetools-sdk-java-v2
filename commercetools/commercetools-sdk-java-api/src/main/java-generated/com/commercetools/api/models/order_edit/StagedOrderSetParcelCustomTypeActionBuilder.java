@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetParcelCustomTypeAction stagedOrderSetParcelCustomTypeAction = StagedOrderSetParcelCustomTypeAction.builder()
-           .parcelId("{parcelId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetParcelCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetParcelCustomTypeAction stagedOrderSetParcelCustomTypeAction = StagedOrderSetParcelCustomTypeAction.builder()
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<StagedOrderSetParcelCustomTypeAction> {
@@ -30,13 +32,17 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public StagedOrderSetParcelCustomTypeActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     <*  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>>
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder type(
@@ -46,7 +52,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     <*  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>>
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder type(
@@ -56,7 +62,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     <*  <p>Sets the Custom Fields fields for the Parcel.</p>>
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder fields(
@@ -66,7 +72,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     <*  <p>Sets the Custom Fields fields for the Parcel.</p>>
      */
 
     public StagedOrderSetParcelCustomTypeActionBuilder fields(

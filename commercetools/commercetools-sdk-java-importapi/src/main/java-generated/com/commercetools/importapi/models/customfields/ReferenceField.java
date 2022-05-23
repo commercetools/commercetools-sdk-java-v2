@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>A field with a reference value.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReferenceField referenceField = ReferenceField.builder()
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>A field with a reference value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReferenceField referenceField = ReferenceField.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceFieldImpl.class)
@@ -33,7 +34,7 @@ public interface ReferenceField extends CustomField {
     String REFERENCE = "Reference";
 
     /**
-     *  <p>References a resource by key</p>
+     <*  <p>References a resource by key</p>>
      */
     @NotNull
     @Valid

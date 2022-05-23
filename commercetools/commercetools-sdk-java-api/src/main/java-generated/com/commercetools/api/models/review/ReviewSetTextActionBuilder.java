@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewSetTextAction reviewSetTextAction = ReviewSetTextAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ReviewSetTextActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewSetTextAction reviewSetTextAction = ReviewSetTextAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> {
@@ -24,7 +26,7 @@ public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> 
     private String text;
 
     /**
-     *  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     <*  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
      */
 
     public ReviewSetTextActionBuilder text(@Nullable final String text) {

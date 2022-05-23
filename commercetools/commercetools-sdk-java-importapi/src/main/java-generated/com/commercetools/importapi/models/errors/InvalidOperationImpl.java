@@ -34,9 +34,17 @@ public class InvalidOperationImpl implements InvalidOperation, ModelBase {
         this.code = INVALID_OPERATION;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;

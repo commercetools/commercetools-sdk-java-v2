@@ -21,38 +21,39 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection. Creating a Standalone Price is rejected if there already exists a Standalone Price for the same SKU with exactly the same price scope, or with overlapping validity periods within the same price scope. A Price without validity period does not conflict with a Price defined for a time period.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StandalonePriceDraft standalonePriceDraft = StandalonePriceDraft.builder()
-           .sku("{sku}")
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection. Creating a Standalone Price is rejected if there already exists a Standalone Price for the same SKU with exactly the same price scope, or with overlapping validity periods within the same price scope. A Price without validity period does not conflict with a Price defined for a time period.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePriceDraft standalonePriceDraft = StandalonePriceDraft.builder()
+ *             .sku("{sku}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceDraftImpl.class)
 public interface StandalonePriceDraft {
 
     /**
-     *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     <*  <p>User-defined unique identifier for the StandalonePrice.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>Specifies to which ProductVariant the Platform associates this Price. It is not validated to exist in product variants.</p>
+     <*  <p>Specifies to which ProductVariant the Platform associates this Price. It is not validated to exist in product variants.</p>>
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>Sets the money value of this Price.</p>
+     <*  <p>Sets the money value of this Price.</p>>
      */
     @NotNull
     @Valid
@@ -60,56 +61,56 @@ public interface StandalonePriceDraft {
     public Money getValue();
 
     /**
-     *  <p>Sets the country for which this Price is valid.</p>
+     <*  <p>Sets the country for which this Price is valid.</p>>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     <*  <p>Sets the CustomerGroup for which this Price is valid.</p>>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     <*  <p>Sets the product distribution Channel for which this Price is valid.</p>>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
     /**
-     *  <p>Sets the date from which the Price is valid.</p>
+     <*  <p>Sets the date from which the Price is valid.</p>>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Sets the date until the Price is valid.</p>
+     <*  <p>Sets the date until the Price is valid.</p>>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Sets price tiers.</p>
+     <*  <p>Sets price tiers.</p>>
      */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTierDraft> getTiers();
 
     /**
-     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
+     <*  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPriceDraft getDiscounted();
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     <*  <p>Custom Fields for the StandalonePrice.</p>>
      */
     @Valid
     @JsonProperty("custom")

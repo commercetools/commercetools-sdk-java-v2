@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerChangePassword
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerChangePasswordImpl implements CustomerChangePassword, ModelBase {
 
@@ -39,19 +42,32 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the Customer.</p>
+     <*  <p>Platform-generated unique identifier of the Customer.</p>>
      */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     <>
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     <>
+     */
+
     public String getCurrentPassword() {
         return this.currentPassword;
     }
+
+    /**
+     <>
+     */
 
     public String getNewPassword() {
         return this.newPassword;

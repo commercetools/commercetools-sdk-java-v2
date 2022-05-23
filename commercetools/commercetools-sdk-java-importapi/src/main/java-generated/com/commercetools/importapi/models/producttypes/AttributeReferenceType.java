@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AttributeReferenceType attributeReferenceType = AttributeReferenceType.builder()
-           .referenceTypeId(ReferenceType.CART)
-           .build()
- </code></pre>
- </div>
+ * AttributeReferenceType
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeReferenceType attributeReferenceType = AttributeReferenceType.builder()
+ *             .referenceTypeId(ReferenceType.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeReferenceTypeImpl.class)
@@ -30,7 +33,7 @@ public interface AttributeReferenceType extends AttributeType {
     String REFERENCE = "reference";
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     <*  <p>The type of the referenced resource.</p>>
      */
     @NotNull
     @JsonProperty("referenceTypeId")

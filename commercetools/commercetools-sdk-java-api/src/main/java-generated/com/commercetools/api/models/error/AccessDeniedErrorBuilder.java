@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AccessDeniedError accessDeniedError = AccessDeniedError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * AccessDeniedErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AccessDeniedError accessDeniedError = AccessDeniedError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
@@ -23,15 +25,27 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public AccessDeniedErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AccessDeniedErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AccessDeniedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

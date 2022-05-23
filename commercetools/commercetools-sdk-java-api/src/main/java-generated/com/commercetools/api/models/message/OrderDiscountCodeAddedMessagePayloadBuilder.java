@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderDiscountCodeAddedMessagePayload orderDiscountCodeAddedMessagePayload = OrderDiscountCodeAddedMessagePayload.builder()
-           .discountCode(discountCodeBuilder -> discountCodeBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderDiscountCodeAddedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderDiscountCodeAddedMessagePayload orderDiscountCodeAddedMessagePayload = OrderDiscountCodeAddedMessagePayload.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<OrderDiscountCodeAddedMessagePayload> {
@@ -23,7 +25,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     <*  <p>Reference to a DiscountCode.</p>>
      */
 
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(
@@ -34,7 +36,7 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     <*  <p>Reference to a DiscountCode.</p>>
      */
 
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(

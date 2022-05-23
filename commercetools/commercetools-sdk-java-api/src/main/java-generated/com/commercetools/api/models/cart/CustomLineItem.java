@@ -20,35 +20,38 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomLineItem customLineItem = CustomLineItem.builder()
-           .id("{id}")
-           .name(nameBuilder -> nameBuilder)
-           .money(moneyBuilder -> moneyBuilder)
-           .totalPrice(totalPriceBuilder -> totalPriceBuilder)
-           .slug("{slug}")
-           .quantity(0.3)
-           .plusState(stateBuilder -> stateBuilder)
-           .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomLineItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItem customLineItem = CustomLineItem.builder()
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .slug("{slug}")
+ *             .quantity(0.3)
+ *             .plusState(stateBuilder -> stateBuilder)
+ *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemImpl.class)
 public interface CustomLineItem extends com.commercetools.api.models.Customizable<CustomLineItem> {
 
     /**
-     *  <p>Platform-generated unique identifier of the CustomLineItem.</p>
+     <*  <p>Platform-generated unique identifier of the CustomLineItem.</p>>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>The name of this CustomLineItem.</p>
+     <*  <p>The name of this CustomLineItem.</p>>
      */
     @NotNull
     @Valid
@@ -56,7 +59,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public LocalizedString getName();
 
     /**
-     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     <*  <p>The cost to add to the cart. The amount can be negative.</p>>
      */
     @NotNull
     @Valid
@@ -64,14 +67,14 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public TypedMoney getMoney();
 
     /**
-     *  <p>Set once the <code>taxRate</code> is set.</p>
+     <*  <p>Set once the <code>taxRate</code> is set.</p>>
      */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>The total price of this custom line item. If custom line item is discounted, then the <code>totalPrice</code> would be the discounted custom line item price multiplied by <code>quantity</code>. Otherwise a total price is just a <code>money</code> multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+     <*  <p>The total price of this custom line item. If custom line item is discounted, then the <code>totalPrice</code> would be the discounted custom line item price multiplied by <code>quantity</code>. Otherwise a total price is just a <code>money</code> multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>>
      */
     @NotNull
     @Valid
@@ -79,46 +82,58 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public TypedMoney getTotalPrice();
 
     /**
-     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     <*  <p>A unique String in the cart to identify this CustomLineItem.</p>>
      */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
     /**
-     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *  <p>Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>, <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>
+     <*  <p>Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: <code>slug</code>, <code>name</code>, <code>quantity</code>, <code>money</code>, <code>state</code>, <code>discountedPricePerQuantity</code>.</p>>
      */
     @Valid
     @JsonProperty("shippingDetails")

@@ -13,17 +13,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetSkuChange setSkuChange = SetSkuChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .previousValue("{previousValue}")
-           .nextValue("{nextValue}")
-           .build()
- </code></pre>
- </div>
+ * SetSkuChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetSkuChange setSkuChange = SetSkuChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetSkuChangeImpl.class)
@@ -31,25 +34,37 @@ public interface SetSkuChange extends Change {
 
     String SET_SKU_CHANGE = "SetSkuChange";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     *  <p>Update action for <code>setSku</code></p>
+     <*  <p>Update action for <code>setSku</code></p>>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();

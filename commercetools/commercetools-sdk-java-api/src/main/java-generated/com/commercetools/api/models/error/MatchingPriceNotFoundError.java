@@ -16,16 +16,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MatchingPriceNotFoundError matchingPriceNotFoundError = MatchingPriceNotFoundError.builder()
-           .message("{message}")
-           .productId("{productId}")
-           .variantId(1)
-           .build()
- </code></pre>
- </div>
+ * MatchingPriceNotFoundError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MatchingPriceNotFoundError matchingPriceNotFoundError = MatchingPriceNotFoundError.builder()
+ *             .message("{message}")
+ *             .productId("{productId}")
+ *             .variantId(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MatchingPriceNotFoundErrorImpl.class)
@@ -33,29 +36,43 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
 
     String MATCHING_PRICE_NOT_FOUND = "MatchingPriceNotFound";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
+    /**
+     <>
+     */
+
     @JsonProperty("currency")
     public String getCurrency();
+
+    /**
+     <>
+     */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     *  <p>Reference to a CustomerGroup.</p>
+     <*  <p>Reference to a CustomerGroup.</p>>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Reference to a Channel.</p>
+     <*  <p>Reference to a Channel.</p>>
      */
     @Valid
     @JsonProperty("channel")

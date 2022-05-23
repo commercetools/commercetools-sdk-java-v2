@@ -38,20 +38,26 @@ public class SimilarProductsTaskStatusImpl implements SimilarProductsTaskStatus,
     public SimilarProductsTaskStatusImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.ml.models.common.TaskStatusEnum getState() {
         return this.state;
     }
 
     /**
-     *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
+     <*  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>>
      */
+
     public java.time.ZonedDateTime getExpires() {
         return this.expires;
     }
 
     /**
-     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+     <*  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>>
      */
+
     public com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult getResult() {
         return this.result;
     }

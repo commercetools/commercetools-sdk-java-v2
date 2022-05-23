@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeAmountAuthorizedChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
         this.type = CHANGE_AMOUNT_AUTHORIZED_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
+     <*  <p>Internal Update action for <code>changeAmountAuthorized</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Money getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Money getNextValue() {
         return this.nextValue;

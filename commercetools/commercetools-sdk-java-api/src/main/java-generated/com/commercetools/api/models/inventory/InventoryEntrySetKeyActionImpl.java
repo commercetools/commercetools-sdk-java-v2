@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InventoryEntrySetKeyAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetKeyActionImpl implements InventoryEntrySetKeyAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class InventoryEntrySetKeyActionImpl implements InventoryEntrySetKeyActio
         this.action = SET_KEY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
+
     public String getKey() {
         return this.key;
     }

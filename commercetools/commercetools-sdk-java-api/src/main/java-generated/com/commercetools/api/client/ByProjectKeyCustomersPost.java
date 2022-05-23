@@ -17,17 +17,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Creates a customer. If an anonymous cart is passed in, then the cart is assigned to the created customer and the version number of the Cart will increase. If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .customers()
-           .post(null)
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Creates a customer. If an anonymous cart is passed in, then the cart is assigned to the created customer and the version number of the Cart will increase. If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .customers()
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCustomersPost extends

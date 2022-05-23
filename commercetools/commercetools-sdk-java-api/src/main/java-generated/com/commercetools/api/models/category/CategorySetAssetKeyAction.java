@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategorySetAssetKeyAction categorySetAssetKeyAction = CategorySetAssetKeyAction.builder()
-           .assetId("{assetId}")
-           .build()
- </code></pre>
- </div>
+ * CategorySetAssetKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetAssetKeyAction categorySetAssetKeyAction = CategorySetAssetKeyAction.builder()
+ *             .assetId("{assetId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetAssetKeyActionImpl.class)
@@ -28,12 +31,15 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
 
     String SET_ASSET_KEY = "setAssetKey";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     <*  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>>
      */
 
     @JsonProperty("assetKey")

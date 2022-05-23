@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingPrices missingPrices = MissingPrices.builder()
-           .product(productBuilder -> productBuilder)
-           .variantId(0.3)
-           .build()
- </code></pre>
- </div>
+ * MissingPricesBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingPrices missingPrices = MissingPrices.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .variantId(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesBuilder implements Builder<MissingPrices> {
@@ -25,11 +27,19 @@ public class MissingPricesBuilder implements Builder<MissingPrices> {
 
     private Long variantId;
 
+    /**
+     <>
+     */
+
     public MissingPricesBuilder product(
             Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingPricesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
@@ -37,7 +47,7 @@ public class MissingPricesBuilder implements Builder<MissingPrices> {
     }
 
     /**
-     *  <p>Id of the <code>ProductVariant</code>.</p>
+     <*  <p>Id of the <code>ProductVariant</code>.</p>>
      */
 
     public MissingPricesBuilder variantId(final Long variantId) {

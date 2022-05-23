@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChannelUpdate
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
 
@@ -32,15 +35,17 @@ public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     <*  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>>
      */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-     *  <p>Update actions to be performed on the Channel.</p>
+     <*  <p>Update actions to be performed on the Channel.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> getActions() {
         return this.actions;
     }

@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxCategorySetKeyAction taxCategorySetKeyAction = TaxCategorySetKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * TaxCategorySetKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategorySetKeyAction taxCategorySetKeyAction = TaxCategorySetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategorySetKeyActionBuilder implements Builder<TaxCategorySetKeyAction> {
@@ -24,7 +26,7 @@ public class TaxCategorySetKeyActionBuilder implements Builder<TaxCategorySetKey
     private String key;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     public TaxCategorySetKeyActionBuilder key(@Nullable final String key) {

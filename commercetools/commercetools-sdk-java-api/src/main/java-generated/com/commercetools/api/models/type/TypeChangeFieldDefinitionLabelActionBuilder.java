@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeChangeFieldDefinitionLabelAction typeChangeFieldDefinitionLabelAction = TypeChangeFieldDefinitionLabelAction.builder()
-           .fieldName("{fieldName}")
-           .label(labelBuilder -> labelBuilder)
-           .build()
- </code></pre>
- </div>
+ * TypeChangeFieldDefinitionLabelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeFieldDefinitionLabelAction typeChangeFieldDefinitionLabelAction = TypeChangeFieldDefinitionLabelAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeFieldDefinitionLabelActionBuilder implements Builder<TypeChangeFieldDefinitionLabelAction> {
@@ -26,7 +28,7 @@ public class TypeChangeFieldDefinitionLabelActionBuilder implements Builder<Type
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
      */
 
     public TypeChangeFieldDefinitionLabelActionBuilder fieldName(final String fieldName) {
@@ -35,7 +37,7 @@ public class TypeChangeFieldDefinitionLabelActionBuilder implements Builder<Type
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public TypeChangeFieldDefinitionLabelActionBuilder label(
@@ -45,7 +47,7 @@ public class TypeChangeFieldDefinitionLabelActionBuilder implements Builder<Type
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public TypeChangeFieldDefinitionLabelActionBuilder label(

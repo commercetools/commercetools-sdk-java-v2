@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetParcelMeasurementsChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
         this.type = SET_PARCEL_MEASUREMENTS_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setParcelMeasurements</code></p>
+     <*  <p>Update action for <code>setParcelMeasurements</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
         return this.parcel;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.ParcelMeasurements getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.ParcelMeasurements getPreviousValue() {
         return this.previousValue;

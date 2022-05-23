@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetStateRolesChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetStateRolesChangeImpl implements SetStateRolesChange, ModelBase {
 
@@ -39,17 +42,33 @@ public class SetStateRolesChangeImpl implements SetStateRolesChange, ModelBase {
         this.type = SET_STATE_ROLES_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.history.models.common.StateRole> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.history.models.common.StateRole> getNextValue() {
         return this.nextValue;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentChangeTransactionStateAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTransactionStateAction, ModelBase {
 
@@ -35,13 +38,25 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
         this.action = CHANGE_TRANSACTION_STATE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getTransactionId() {
         return this.transactionId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;

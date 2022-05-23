@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerUpdate
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerUpdateImpl implements CustomerUpdate, ModelBase {
 
@@ -31,9 +34,17 @@ public class CustomerUpdateImpl implements CustomerUpdate, ModelBase {
     public CustomerUpdateImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.customer.CustomerUpdateAction> getActions() {
         return this.actions;

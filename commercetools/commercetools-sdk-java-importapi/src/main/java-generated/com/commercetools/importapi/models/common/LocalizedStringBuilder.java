@@ -7,24 +7,34 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   LocalizedString localizedString = LocalizedString.builder()
-           ./^[a-z]{2}(-[A-Z]{2})?$/("{/^[a-z]{2}(-[A-Z]{2})?$/}")
-           .build()
- </code></pre>
- </div>
+ * LocalizedStringBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LocalizedString localizedString = LocalizedString.builder()
+ *             ./^[a-z]{2}(-[A-Z]{2})?$/("{/^[a-z]{2}(-[A-Z]{2})?$/}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocalizedStringBuilder implements Builder<LocalizedString> {
 
     private Map<String, String> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public LocalizedStringBuilder values(final Map<String, String> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public LocalizedStringBuilder addValue(final String key, final String value) {
         if (this.values == null) {

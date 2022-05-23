@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SearchKeyword
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchKeywordImpl implements SearchKeyword, ModelBase {
 
@@ -31,9 +34,17 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     public SearchKeywordImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getText() {
         return this.text;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.product.SuggestTokenizer getSuggestTokenizer() {
         return this.suggestTokenizer;

@@ -15,21 +15,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeInfo discountCodeInfo = DiscountCodeInfo.builder()
-           .discountCode(discountCodeBuilder -> discountCodeBuilder)
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeInfo
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeInfo discountCodeInfo = DiscountCodeInfo.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeInfoImpl.class)
 public interface DiscountCodeInfo {
 
     /**
-     *  <p>References a discount code by key.</p>
+     <*  <p>References a discount code by key.</p>>
      */
     @NotNull
     @Valid
@@ -37,7 +40,7 @@ public interface DiscountCodeInfo {
     public DiscountCodeKeyReference getDiscountCode();
 
     /**
-     *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
+     <*  <p>Maps to <code>DiscountCodeInfo.state</code></p>>
      */
 
     @JsonProperty("state")

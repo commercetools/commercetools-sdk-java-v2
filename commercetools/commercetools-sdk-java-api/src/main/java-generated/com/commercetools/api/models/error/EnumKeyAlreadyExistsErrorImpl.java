@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * EnumKeyAlreadyExistsError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError, ModelBase {
 
@@ -43,21 +46,41 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
         this.code = ENUM_KEY_ALREADY_EXISTS;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
+    /**
+     <>
+     */
+
     public String getConflictingEnumKey() {
         return this.conflictingEnumKey;
     }
+
+    /**
+     <>
+     */
 
     public String getConflictingAttributeName() {
         return this.conflictingAttributeName;

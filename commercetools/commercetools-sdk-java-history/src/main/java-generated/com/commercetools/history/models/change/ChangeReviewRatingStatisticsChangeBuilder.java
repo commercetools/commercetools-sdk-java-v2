@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeReviewRatingStatisticsChange changeReviewRatingStatisticsChange = ChangeReviewRatingStatisticsChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeReviewRatingStatisticsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeReviewRatingStatisticsChange changeReviewRatingStatisticsChange = ChangeReviewRatingStatisticsChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<ChangeReviewRatingStatisticsChange> {
@@ -29,13 +31,17 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     private com.commercetools.history.models.common.ReviewRatingStatistics previousValue;
 
     /**
-     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     <*  <p>Update action for <code>changeReviewRatingStatistics</code></p>>
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeReviewRatingStatisticsChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatisticsBuilder> builder) {
@@ -44,11 +50,19 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeReviewRatingStatisticsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ReviewRatingStatistics nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeReviewRatingStatisticsChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatisticsBuilder> builder) {
@@ -56,6 +70,10 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeReviewRatingStatisticsChangeBuilder previousValue(
             final com.commercetools.history.models.common.ReviewRatingStatistics previousValue) {

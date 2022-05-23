@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetStatusInterfaceTextAction paymentSetStatusInterfaceTextAction = PaymentSetStatusInterfaceTextAction.builder()
-           .interfaceText("{interfaceText}")
-           .build()
- </code></pre>
- </div>
+ * PaymentSetStatusInterfaceTextAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetStatusInterfaceTextAction paymentSetStatusInterfaceTextAction = PaymentSetStatusInterfaceTextAction.builder()
+ *             .interfaceText("{interfaceText}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetStatusInterfaceTextActionImpl.class)
@@ -28,6 +31,9 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
 
     String SET_STATUS_INTERFACE_TEXT = "setStatusInterfaceText";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("interfaceText")
     public String getInterfaceText();

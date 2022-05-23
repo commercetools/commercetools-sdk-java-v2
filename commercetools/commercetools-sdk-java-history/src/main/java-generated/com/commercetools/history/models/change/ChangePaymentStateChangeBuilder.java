@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangePaymentStateChange changePaymentStateChange = ChangePaymentStateChange.builder()
-           .change("{change}")
-           .nextValue(PaymentState.BALANCE_DUE)
-           .previousValue(PaymentState.BALANCE_DUE)
-           .build()
- </code></pre>
- </div>
+ * ChangePaymentStateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangePaymentStateChange changePaymentStateChange = ChangePaymentStateChange.builder()
+ *             .change("{change}")
+ *             .nextValue(PaymentState.BALANCE_DUE)
+ *             .previousValue(PaymentState.BALANCE_DUE)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentStateChange> {
@@ -28,7 +30,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     private com.commercetools.history.models.common.PaymentState previousValue;
 
     /**
-     *  <p>Update action for <code>changePaymentState</code></p>
+     <*  <p>Update action for <code>changePaymentState</code></p>>
      */
 
     public ChangePaymentStateChangeBuilder change(final String change) {
@@ -36,11 +38,19 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangePaymentStateChangeBuilder nextValue(
             final com.commercetools.history.models.common.PaymentState nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangePaymentStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.PaymentState previousValue) {

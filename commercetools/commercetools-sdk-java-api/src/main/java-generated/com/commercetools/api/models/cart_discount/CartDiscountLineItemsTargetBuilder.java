@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartDiscountLineItemsTarget cartDiscountLineItemsTarget = CartDiscountLineItemsTarget.builder()
-           .predicate("{predicate}")
-           .build()
- </code></pre>
- </div>
+ * CartDiscountLineItemsTargetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountLineItemsTarget cartDiscountLineItemsTarget = CartDiscountLineItemsTarget.builder()
+ *             .predicate("{predicate}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountLineItemsTargetBuilder implements Builder<CartDiscountLineItemsTarget> {
 
     private String predicate;
+
+    /**
+     <>
+     */
 
     public CartDiscountLineItemsTargetBuilder predicate(final String predicate) {
         this.predicate = predicate;

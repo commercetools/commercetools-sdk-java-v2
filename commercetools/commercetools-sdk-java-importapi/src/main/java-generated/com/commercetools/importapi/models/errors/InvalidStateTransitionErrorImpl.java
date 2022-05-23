@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InvalidStateTransitionError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionError, ModelBase {
 
@@ -39,24 +42,34 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
         this.code = INVALID_TRANSITION;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
      */
+
     public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
         return this.currentState;
     }
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
      */
+
     public com.commercetools.importapi.models.common.ProcessingState getNewState() {
         return this.newState;
     }

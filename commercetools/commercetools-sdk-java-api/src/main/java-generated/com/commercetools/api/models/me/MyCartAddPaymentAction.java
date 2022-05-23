@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartAddPaymentAction myCartAddPaymentAction = MyCartAddPaymentAction.builder()
-           .payment(paymentBuilder -> paymentBuilder)
-           .build()
- </code></pre>
- </div>
+ * MyCartAddPaymentAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartAddPaymentAction myCartAddPaymentAction = MyCartAddPaymentAction.builder()
+ *             .payment(paymentBuilder -> paymentBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartAddPaymentActionImpl.class)
@@ -31,7 +34,7 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     *  <p>ResourceIdentifier to a Payment.</p>
+     <*  <p>ResourceIdentifier to a Payment.</p>>
      */
     @NotNull
     @Valid

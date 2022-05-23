@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderSetBillingAddressAction orderSetBillingAddressAction = OrderSetBillingAddressAction.builder()
-           .build()
- </code></pre>
- </div>
+ * OrderSetBillingAddressActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetBillingAddressAction orderSetBillingAddressAction = OrderSetBillingAddressAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBillingAddressAction> {
@@ -24,11 +26,19 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
     @Nullable
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     <>
+     */
+
     public OrderSetBillingAddressActionBuilder address(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderSetBillingAddressActionBuilder address(
             @Nullable final com.commercetools.api.models.common.BaseAddress address) {

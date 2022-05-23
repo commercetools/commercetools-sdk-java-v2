@@ -5,6 +5,9 @@ import java.util.List;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * PriceselectingTrait
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
     List<String> getPriceCurrency();

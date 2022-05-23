@@ -36,15 +36,17 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
     }
 
     /**
-     *  <p>URL with authorization header.</p>
+     <*  <p>URL with authorization header.</p>>
      */
+
     public String getUrl() {
         return this.url;
     }
 
     /**
-     *  <p>Partially hidden on retrieval.</p>
+     <*  <p>Partially hidden on retrieval.</p>>
      */
+
     public String getAuthorizationHeader() {
         return this.authorizationHeader;
     }

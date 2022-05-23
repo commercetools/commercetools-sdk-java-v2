@@ -35,6 +35,10 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
     public LocalizedStringImpl() {
     }
 
+    /**
+     <>
+     */
+
     public Map<String, String> values() {
         return values;
     }

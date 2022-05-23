@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountLineItemsTarget
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountLineItemsTargetImpl implements CartDiscountLineItemsTarget, ModelBase {
 
@@ -31,9 +34,17 @@ public class CartDiscountLineItemsTargetImpl implements CartDiscountLineItemsTar
         this.type = LINE_ITEMS;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getPredicate() {
         return this.predicate;

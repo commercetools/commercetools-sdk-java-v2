@@ -17,17 +17,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderTransitionLineItemStateAction stagedOrderTransitionLineItemStateAction = StagedOrderTransitionLineItemStateAction.builder()
-           .lineItemId("{lineItemId}")
-           .quantity(0.3)
-           .fromState(fromStateBuilder -> fromStateBuilder)
-           .toState(toStateBuilder -> toStateBuilder)
-           .build()
- </code></pre>
- </div>
+ * StagedOrderTransitionLineItemStateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderTransitionLineItemStateAction stagedOrderTransitionLineItemStateAction = StagedOrderTransitionLineItemStateAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderTransitionLineItemStateActionImpl.class)
@@ -35,16 +38,22 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
 
     String TRANSITION_LINE_ITEM_STATE = "transitionLineItemState";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
     @NotNull
     @Valid
@@ -52,12 +61,16 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public StateResourceIdentifier getFromState();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     <*  <p>ResourceIdentifier to a State.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("toState")
     public StateResourceIdentifier getToState();
+
+    /**
+     <>
+     */
 
     @JsonProperty("actualTransitionDate")
     public ZonedDateTime getActualTransitionDate();

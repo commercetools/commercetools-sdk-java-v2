@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetMaxApplicationsPerCustomerChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicationsPerCustomerChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
         this.type = SET_MAX_APPLICATIONS_PER_CUSTOMER_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
+     <*  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public Integer getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public Integer getNextValue() {
         return this.nextValue;

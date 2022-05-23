@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddAttributeDefinitionChange addAttributeDefinitionChange = AddAttributeDefinitionChange.builder()
-           .change("{change}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddAttributeDefinitionChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddAttributeDefinitionChange addAttributeDefinitionChange = AddAttributeDefinitionChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttributeDefinitionChange> {
@@ -26,7 +28,7 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
     private com.commercetools.history.models.common.AttributeDefinition nextValue;
 
     /**
-     *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
+     <*  <p>Update action for <code>addAttributeDefinition</code> on product types</p>>
      */
 
     public AddAttributeDefinitionChangeBuilder change(final String change) {
@@ -34,11 +36,19 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddAttributeDefinitionChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.AttributeDefinitionBuilder, com.commercetools.history.models.common.AttributeDefinitionBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.AttributeDefinitionBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddAttributeDefinitionChangeBuilder nextValue(
             final com.commercetools.history.models.common.AttributeDefinition nextValue) {

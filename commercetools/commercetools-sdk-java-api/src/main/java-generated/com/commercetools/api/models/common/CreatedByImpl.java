@@ -43,29 +43,33 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     <*  <p><code>id</code> of the APIClient which created the resource.</p>>
      */
+
     public String getClientId() {
         return this.clientId;
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
      */
+
     public String getExternalUserId() {
         return this.externalUserId;
     }
 
     /**
-     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     <*  <p>Indicates the Customer who created the resource using a token from the password flow.</p>>
      */
+
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     <*  <p>Indicates the anonymous session during which the resource was created.</p>>
      */
+
     public String getAnonymousId() {
         return this.anonymousId;
     }

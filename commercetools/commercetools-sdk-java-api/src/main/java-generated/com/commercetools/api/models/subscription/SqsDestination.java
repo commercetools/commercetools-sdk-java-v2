@@ -13,17 +13,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SqsDestination sqsDestination = SqsDestination.builder()
-           .accessKey("{accessKey}")
-           .accessSecret("{accessSecret}")
-           .queueUrl("{queueUrl}")
-           .region("{region}")
-           .build()
- </code></pre>
- </div>
+ * SqsDestination
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SqsDestination sqsDestination = SqsDestination.builder()
+ *             .accessKey("{accessKey}")
+ *             .accessSecret("{accessSecret}")
+ *             .queueUrl("{queueUrl}")
+ *             .region("{region}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SqsDestinationImpl.class)
@@ -31,18 +34,30 @@ public interface SqsDestination extends Destination {
 
     String SQS = "SQS";
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("accessSecret")
     public String getAccessSecret();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("queueUrl")
     public String getQueueUrl();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("region")
     public String getRegion();

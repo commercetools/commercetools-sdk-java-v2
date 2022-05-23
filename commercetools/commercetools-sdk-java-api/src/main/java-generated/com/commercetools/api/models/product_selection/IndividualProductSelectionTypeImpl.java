@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * IndividualProductSelectionType
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class IndividualProductSelectionTypeImpl implements IndividualProductSelectionType, ModelBase {
 
@@ -33,15 +36,17 @@ public class IndividualProductSelectionTypeImpl implements IndividualProductSele
     }
 
     /**
-     *  <p>The following type of Product Selections is supported:</p>
+     <*  <p>The following type of Product Selections is supported:</p>>
      */
+
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
     }
 
     /**
-     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     <*  <p>The name of the ProductSelection which is recommended to be unique.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }

@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShippingMethodRemoveShippingRateAction shippingMethodRemoveShippingRateAction = ShippingMethodRemoveShippingRateAction.builder()
-           .zone(zoneBuilder -> zoneBuilder)
-           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
-           .build()
- </code></pre>
- </div>
+ * ShippingMethodRemoveShippingRateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodRemoveShippingRateAction shippingMethodRemoveShippingRateAction = ShippingMethodRemoveShippingRateAction.builder()
+ *             .zone(zoneBuilder -> zoneBuilder)
+ *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<ShippingMethodRemoveShippingRateAction> {
@@ -25,11 +27,19 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
+    /**
+     <>
+     */
+
     public ShippingMethodRemoveShippingRateActionBuilder zone(
             Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder> builder) {
         this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodRemoveShippingRateActionBuilder zone(
             final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
@@ -37,12 +47,20 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ShippingMethodRemoveShippingRateActionBuilder shippingRate(
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
         this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ShippingMethodRemoveShippingRateActionBuilder shippingRate(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {

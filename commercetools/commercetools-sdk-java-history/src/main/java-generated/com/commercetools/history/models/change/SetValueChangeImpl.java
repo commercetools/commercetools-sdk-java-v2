@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetValueChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValueChangeImpl implements SetValueChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
         this.type = SET_VALUE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setValue</code> on custom objects</p>
+     <*  <p>Update action for <code>setValue</code> on custom objects</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;

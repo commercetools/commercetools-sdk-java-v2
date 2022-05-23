@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * HighPrecisionMoney
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
 
@@ -42,24 +45,41 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
         this.type = MoneyType.findEnum("highPrecision");
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.importapi.models.common.MoneyType getType() {
         return this.type;
     }
 
+    /**
+     <>
+     */
+
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
+
+    /**
+     <>
+     */
 
     public Long getCentAmount() {
         return this.centAmount;
     }
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     <*  <p>The currency code compliant to ISO 4217.</p>>
      */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
+
+    /**
+     <>
+     */
 
     public Long getPreciseAmount() {
         return this.preciseAmount;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StandalonePriceChangeValueAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceChangeValueActionImpl implements StandalonePriceChangeValueAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
         this.action = CHANGE_VALUE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }

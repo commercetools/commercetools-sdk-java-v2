@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetValidFromAndUntilChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChange, ModelBase {
 
@@ -39,24 +42,34 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
         this.type = SET_VALID_FROM_AND_UNTIL_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
      */
+
     public com.commercetools.history.models.change_value.ValidFromAndUntilValue getPreviousValue() {
         return this.previousValue;
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
      */
+
     public com.commercetools.history.models.change_value.ValidFromAndUntilValue getNextValue() {
         return this.nextValue;
     }

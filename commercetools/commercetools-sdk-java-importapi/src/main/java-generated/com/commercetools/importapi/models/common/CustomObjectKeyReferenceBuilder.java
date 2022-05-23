@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomObjectKeyReference customObjectKeyReference = CustomObjectKeyReference.builder()
-           .key("{key}")
-           .container("{container}")
-           .build()
- </code></pre>
- </div>
+ * CustomObjectKeyReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomObjectKeyReference customObjectKeyReference = CustomObjectKeyReference.builder()
+ *             .key("{key}")
+ *             .container("{container}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyReference> {
@@ -24,10 +26,18 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
 
     private String container;
 
+    /**
+     <>
+     */
+
     public CustomObjectKeyReferenceBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomObjectKeyReferenceBuilder container(final String container) {
         this.container = container;

@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CloudEventsFormat cloudEventsFormat = CloudEventsFormat.builder()
-           .cloudEventsVersion("{cloudEventsVersion}")
-           .build()
- </code></pre>
- </div>
+ * CloudEventsFormatBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CloudEventsFormat cloudEventsFormat = CloudEventsFormat.builder()
+ *             .cloudEventsVersion("{cloudEventsVersion}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
 
     private String cloudEventsVersion;
+
+    /**
+     <>
+     */
 
     public CloudEventsFormatBuilder cloudEventsVersion(final String cloudEventsVersion) {
         this.cloudEventsVersion = cloudEventsVersion;

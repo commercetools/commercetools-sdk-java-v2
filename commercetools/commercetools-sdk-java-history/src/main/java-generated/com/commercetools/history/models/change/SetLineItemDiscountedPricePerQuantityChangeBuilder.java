@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetLineItemDiscountedPricePerQuantityChange setLineItemDiscountedPricePerQuantityChange = SetLineItemDiscountedPricePerQuantityChange.builder()
-           .change("{change}")
-           .lineItem(lineItemBuilder -> lineItemBuilder)
-           .variant("{variant}")
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetLineItemDiscountedPricePerQuantityChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLineItemDiscountedPricePerQuantityChange setLineItemDiscountedPricePerQuantityChange = SetLineItemDiscountedPricePerQuantityChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .variant("{variant}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemDiscountedPricePerQuantityChangeBuilder
@@ -36,7 +38,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     private com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity previousValue;
 
     /**
-     *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
+     <*  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>>
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder change(final String change) {
@@ -44,11 +46,19 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetLineItemDiscountedPricePerQuantityChangeBuilder lineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
@@ -56,10 +66,18 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetLineItemDiscountedPricePerQuantityChangeBuilder variant(final String variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder> builder) {
@@ -69,11 +87,19 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetLineItemDiscountedPricePerQuantityChangeBuilder nextValue(
             final com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityBuilder> builder) {
@@ -82,6 +108,10 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder previousValue(
             final com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity previousValue) {

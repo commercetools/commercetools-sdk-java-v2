@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductMoveImageToPositionAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToPositionAction, ModelBase {
 
@@ -45,28 +48,49 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
         this.action = MOVE_IMAGE_TO_POSITION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     <>
+     */
 
     public String getSku() {
         return this.sku;
     }
 
     /**
-     *  <p>The URL of the image</p>
+     <*  <p>The URL of the image</p>>
      */
+
     public String getImageUrl() {
         return this.imageUrl;
     }
 
+    /**
+     <>
+     */
+
     public Long getPosition() {
         return this.position;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

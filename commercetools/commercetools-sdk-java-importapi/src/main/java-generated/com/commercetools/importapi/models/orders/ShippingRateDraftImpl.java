@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShippingRateDraft
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
 
@@ -35,13 +38,25 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     public ShippingRateDraftImpl() {
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.importapi.models.common.Money getPrice() {
         return this.price;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.importapi.models.common.Money getFreeAbove() {
         return this.freeAbove;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {
         return this.tiers;

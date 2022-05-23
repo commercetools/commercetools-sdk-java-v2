@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StateRemoveRolesAction stateRemoveRolesAction = StateRemoveRolesAction.builder()
-           .plusRoles(rolesBuilder -> rolesBuilder)
-           .build()
- </code></pre>
- </div>
+ * StateRemoveRolesAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateRemoveRolesAction stateRemoveRolesAction = StateRemoveRolesAction.builder()
+ *             .plusRoles(rolesBuilder -> rolesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateRemoveRolesActionImpl.class)
@@ -29,7 +32,7 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
     String REMOVE_ROLES = "removeRoles";
 
     /**
-     *  <p>Roles to remove from the State.</p>
+     <*  <p>Roles to remove from the State.</p>>
      */
     @NotNull
     @JsonProperty("roles")

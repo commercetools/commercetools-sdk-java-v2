@@ -13,13 +13,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CartSetShippingMethodTaxAmountAction cartSetShippingMethodTaxAmountAction = CartSetShippingMethodTaxAmountAction.builder()
-           .build()
- </code></pre>
- </div>
+ * CartSetShippingMethodTaxAmountAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetShippingMethodTaxAmountAction cartSetShippingMethodTaxAmountAction = CartSetShippingMethodTaxAmountAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetShippingMethodTaxAmountActionImpl.class)
@@ -27,6 +30,9 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
 
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("externalTaxAmount")
     public ExternalTaxAmountDraft getExternalTaxAmount();

@@ -18,66 +18,78 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
-           .name(nameBuilder -> nameBuilder)
-           .quantity(0.3)
-           .money(moneyBuilder -> moneyBuilder)
-           .slug("{slug}")
-           .build()
- </code></pre>
- </div>
+ * CustomLineItemDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .quantity(0.3)
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .slug("{slug}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemDraftImpl.class)
 public interface CustomLineItemDraft extends com.commercetools.api.models.CustomizableDraft<CustomLineItemDraft> {
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
+     <*  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>>
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("money")
     public Money getMoney();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
     /**
-     *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
+     <*  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+     <*  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>>
      */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p>The custom fields.</p>
+     <*  <p>The custom fields.</p>>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Container for custom line item specific address(es).</p>
+     <*  <p>Container for custom line item specific address(es).</p>>
      */
     @Valid
     @JsonProperty("shippingDetails")

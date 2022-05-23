@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategorySetMetaTitleAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleActio
         this.action = SET_META_TITLE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;

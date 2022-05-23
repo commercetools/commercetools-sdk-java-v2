@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderShipmentStateChangedMessagePayload orderShipmentStateChangedMessagePayload = OrderShipmentStateChangedMessagePayload.builder()
-           .shipmentState(ShipmentState.SHIPPED)
-           .build()
- </code></pre>
- </div>
+ * OrderShipmentStateChangedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderShipmentStateChangedMessagePayload orderShipmentStateChangedMessagePayload = OrderShipmentStateChangedMessagePayload.builder()
+ *             .shipmentState(ShipmentState.SHIPPED)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShipmentStateChangedMessagePayloadBuilder
@@ -27,11 +29,19 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
+    /**
+     <>
+     */
+
     public OrderShipmentStateChangedMessagePayloadBuilder shipmentState(
             final com.commercetools.api.models.order.ShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderShipmentStateChangedMessagePayloadBuilder oldShipmentState(
             @Nullable final com.commercetools.api.models.order.ShipmentState oldShipmentState) {

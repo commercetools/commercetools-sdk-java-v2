@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   DiscountCodeSetValidFromAction discountCodeSetValidFromAction = DiscountCodeSetValidFromAction.builder()
-           .build()
- </code></pre>
- </div>
+ * DiscountCodeSetValidFromActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeSetValidFromAction discountCodeSetValidFromAction = DiscountCodeSetValidFromAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeSetValidFromActionBuilder implements Builder<DiscountCodeSetValidFromAction> {
@@ -24,7 +26,7 @@ public class DiscountCodeSetValidFromActionBuilder implements Builder<DiscountCo
     private java.time.ZonedDateTime validFrom;
 
     /**
-     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     <*  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>>
      */
 
     public DiscountCodeSetValidFromActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {

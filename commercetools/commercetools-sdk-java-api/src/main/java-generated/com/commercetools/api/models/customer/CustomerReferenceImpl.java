@@ -40,22 +40,25 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Customer.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Customer.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     <*  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>>
      */
+
     public com.commercetools.api.models.customer.Customer getObj() {
         return this.obj;
     }

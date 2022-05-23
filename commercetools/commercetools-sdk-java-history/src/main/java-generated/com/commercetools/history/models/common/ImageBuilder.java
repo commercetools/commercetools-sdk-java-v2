@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Image image = Image.builder()
-           .url("{url}")
-           .dimensions(dimensionsBuilder -> dimensionsBuilder)
-           .label("{label}")
-           .build()
- </code></pre>
- </div>
+ * ImageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Image image = Image.builder()
+ *             .url("{url}")
+ *             .dimensions(dimensionsBuilder -> dimensionsBuilder)
+ *             .label("{label}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageBuilder implements Builder<Image> {
@@ -28,10 +30,18 @@ public class ImageBuilder implements Builder<Image> {
 
     private String label;
 
+    /**
+     <>
+     */
+
     public ImageBuilder url(final String url) {
         this.url = url;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ImageBuilder dimensions(
             Function<com.commercetools.history.models.common.ImageDimensionsBuilder, com.commercetools.history.models.common.ImageDimensionsBuilder> builder) {
@@ -39,10 +49,18 @@ public class ImageBuilder implements Builder<Image> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ImageBuilder dimensions(final com.commercetools.history.models.common.ImageDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ImageBuilder label(final String label) {
         this.label = label;

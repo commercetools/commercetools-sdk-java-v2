@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddVariantChange addVariantChange = AddVariantChange.builder()
-           .change("{change}")
-           .catalogData("{catalogData}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddVariantChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddVariantChange addVariantChange = AddVariantChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
@@ -32,7 +34,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
     private com.commercetools.history.models.common.Variant nextValue;
 
     /**
-     *  <p>Update action for <code>addVariant</code></p>
+     <*  <p>Update action for <code>addVariant</code></p>>
      */
 
     public AddVariantChangeBuilder change(final String change) {
@@ -40,10 +42,18 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddVariantChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddVariantChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
@@ -51,16 +61,28 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddVariantChangeBuilder previousValue(final com.commercetools.history.models.common.Variant previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddVariantChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.VariantBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddVariantChangeBuilder nextValue(final com.commercetools.history.models.common.Variant nextValue) {
         this.nextValue = nextValue;

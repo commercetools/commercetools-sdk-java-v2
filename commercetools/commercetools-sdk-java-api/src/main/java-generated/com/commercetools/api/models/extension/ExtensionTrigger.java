@@ -13,29 +13,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ExtensionTrigger extensionTrigger = ExtensionTrigger.builder()
-           .resourceTypeId(ExtensionResourceTypeId.CART)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ExtensionTrigger
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionTrigger extensionTrigger = ExtensionTrigger.builder()
+ *             .resourceTypeId(ExtensionResourceTypeId.CART)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionTriggerImpl.class)
 public interface ExtensionTrigger {
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
+     <*  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>>
      */
     @NotNull
     @JsonProperty("resourceTypeId")
     public ExtensionResourceTypeId getResourceTypeId();
 
     /**
-     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     <*  <p><code>Create</code> and <code>Update</code> requests are supported.</p>>
      */
     @NotNull
     @JsonProperty("actions")

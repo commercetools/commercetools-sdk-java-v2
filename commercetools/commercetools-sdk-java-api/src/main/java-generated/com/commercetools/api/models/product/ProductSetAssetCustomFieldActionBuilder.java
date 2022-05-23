@@ -9,14 +9,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetAssetCustomFieldAction productSetAssetCustomFieldAction = ProductSetAssetCustomFieldAction.builder()
-           .name("{name}")
-           .build()
- </code></pre>
- </div>
+ * ProductSetAssetCustomFieldActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAssetCustomFieldAction productSetAssetCustomFieldAction = ProductSetAssetCustomFieldAction.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductSetAssetCustomFieldAction> {
@@ -41,25 +43,45 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
     @Nullable
     private java.lang.Object value;
 
+    /**
+     <>
+     */
+
     public ProductSetAssetCustomFieldActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetAssetCustomFieldActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductSetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
@@ -67,7 +89,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     <*  <p>Name of the Custom Field.</p>>
      */
 
     public ProductSetAssetCustomFieldActionBuilder name(final String name) {
@@ -76,7 +98,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
      */
 
     public ProductSetAssetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

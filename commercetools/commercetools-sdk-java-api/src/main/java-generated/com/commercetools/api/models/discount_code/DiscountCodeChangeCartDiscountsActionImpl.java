@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * DiscountCodeChangeCartDiscountsAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeChangeCartDiscountsAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeCh
         this.action = CHANGE_CART_DISCOUNTS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New value to set.</p>
+     <*  <p>New value to set.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts() {
         return this.cartDiscounts;
     }

@@ -9,19 +9,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MyCartRecalculateAction myCartRecalculateAction = MyCartRecalculateAction.builder()
-           .build()
- </code></pre>
- </div>
+ * MyCartRecalculateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartRecalculateAction myCartRecalculateAction = MyCartRecalculateAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartRecalculateActionBuilder implements Builder<MyCartRecalculateAction> {
 
     @Nullable
     private Boolean updateProductData;
+
+    /**
+     <>
+     */
 
     public MyCartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {
         this.updateProductData = updateProductData;

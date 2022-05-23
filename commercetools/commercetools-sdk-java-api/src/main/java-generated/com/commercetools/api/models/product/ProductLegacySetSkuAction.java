@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductLegacySetSkuAction productLegacySetSkuAction = ProductLegacySetSkuAction.builder()
-           .variantId(1)
-           .build()
- </code></pre>
- </div>
+ * ProductLegacySetSkuAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductLegacySetSkuAction productLegacySetSkuAction = ProductLegacySetSkuAction.builder()
+ *             .variantId(1)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductLegacySetSkuActionImpl.class)
@@ -28,9 +31,16 @@ public interface ProductLegacySetSkuAction extends ProductUpdateAction {
 
     String LEGACY_SET_SKU = "legacySetSku";
 
+    /**
+     <>
+     */
+
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();

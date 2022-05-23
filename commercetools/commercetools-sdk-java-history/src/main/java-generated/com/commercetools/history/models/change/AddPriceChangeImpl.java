@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * AddPriceChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
 
@@ -42,24 +45,41 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
         this.type = ADD_PRICE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for adding prices</p>
+     <*  <p>Update action for adding prices</p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     <>
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Price getNextValue() {
         return this.nextValue;

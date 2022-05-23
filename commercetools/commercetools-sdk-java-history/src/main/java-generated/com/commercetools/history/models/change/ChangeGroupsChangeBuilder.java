@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeGroupsChange changeGroupsChange = ChangeGroupsChange.builder()
-           .change("{change}")
-           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-           .plusNextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChangeGroupsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeGroupsChange changeGroupsChange = ChangeGroupsChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
@@ -28,7 +30,7 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
     private java.util.List<String> nextValue;
 
     /**
-     *  <p>Update action for <code>changeGroups</code> on stores</p>
+     <*  <p>Update action for <code>changeGroups</code> on stores</p>>
      */
 
     public ChangeGroupsChangeBuilder change(final String change) {
@@ -36,15 +38,27 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeGroupsChangeBuilder previousValue(final String... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeGroupsChangeBuilder previousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeGroupsChangeBuilder plusPreviousValue(final String... previousValue) {
         if (this.previousValue == null) {
@@ -54,15 +68,27 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeGroupsChangeBuilder nextValue(final String... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeGroupsChangeBuilder nextValue(final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeGroupsChangeBuilder plusNextValue(final String... nextValue) {
         if (this.nextValue == null) {

@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StagedOrderSetReturnItemCustomTypeAction stagedOrderSetReturnItemCustomTypeAction = StagedOrderSetReturnItemCustomTypeAction.builder()
-           .returnItemId("{returnItemId}")
-           .build()
- </code></pre>
- </div>
+ * StagedOrderSetReturnItemCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetReturnItemCustomTypeAction stagedOrderSetReturnItemCustomTypeAction = StagedOrderSetReturnItemCustomTypeAction.builder()
+ *             .returnItemId("{returnItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetReturnItemCustomTypeActionBuilder
@@ -31,13 +33,17 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     <>
+     */
+
     public StagedOrderSetReturnItemCustomTypeActionBuilder returnItemId(final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     <*  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>>
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder type(
@@ -47,7 +53,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     <*  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>>
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder type(
@@ -57,7 +63,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     <*  <p>Sets the Custom Fields fields for the ReturnItem.</p>>
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder fields(
@@ -67,7 +73,7 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     <*  <p>Sets the Custom Fields fields for the ReturnItem.</p>>
      */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder fields(

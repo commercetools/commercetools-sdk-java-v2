@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderReference orderReference = OrderReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * OrderReference
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderReference orderReference = OrderReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderReferenceImpl.class)
@@ -29,6 +32,9 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
 
     String ORDER = "order";
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("obj")
     public Order getObj();

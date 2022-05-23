@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductDiscountMatchQuery productDiscountMatchQuery = ProductDiscountMatchQuery.builder()
-           .productId("{productId}")
-           .variantId(0.3)
-           .staged(true)
-           .price(priceBuilder -> priceBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductDiscountMatchQueryBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountMatchQuery productDiscountMatchQuery = ProductDiscountMatchQuery.builder()
+ *             .productId("{productId}")
+ *             .variantId(0.3)
+ *             .staged(true)
+ *             .price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscountMatchQuery> {
@@ -32,7 +34,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
     private com.commercetools.api.models.common.QueryPrice price;
 
     /**
-     *  <p>ID of the specified Product.</p>
+     <*  <p>ID of the specified Product.</p>>
      */
 
     public ProductDiscountMatchQueryBuilder productId(final String productId) {
@@ -41,7 +43,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
     }
 
     /**
-     *  <p>ID of the specified Product Variant.</p>
+     <*  <p>ID of the specified Product Variant.</p>>
      */
 
     public ProductDiscountMatchQueryBuilder variantId(final Integer variantId) {
@@ -50,7 +52,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
     }
 
     /**
-     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     <*  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>>
      */
 
     public ProductDiscountMatchQueryBuilder staged(final Boolean staged) {
@@ -59,7 +61,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
     }
 
     /**
-     *  <p>Specified Price of the specified Product Variant.</p>
+     <*  <p>Specified Price of the specified Product Variant.</p>>
      */
 
     public ProductDiscountMatchQueryBuilder price(
@@ -69,7 +71,7 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
     }
 
     /**
-     *  <p>Specified Price of the specified Product Variant.</p>
+     <*  <p>Specified Price of the specified Product Variant.</p>>
      */
 
     public ProductDiscountMatchQueryBuilder price(final com.commercetools.api.models.common.QueryPrice price) {

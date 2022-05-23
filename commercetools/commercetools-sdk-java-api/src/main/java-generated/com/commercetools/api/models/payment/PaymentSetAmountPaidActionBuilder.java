@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   PaymentSetAmountPaidAction paymentSetAmountPaidAction = PaymentSetAmountPaidAction.builder()
-           .build()
- </code></pre>
- </div>
+ * PaymentSetAmountPaidActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetAmountPaidAction paymentSetAmountPaidAction = PaymentSetAmountPaidAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetAmountPaidActionBuilder implements Builder<PaymentSetAmountPaidAction> {
@@ -25,8 +27,8 @@ public class PaymentSetAmountPaidActionBuilder implements Builder<PaymentSetAmou
     private com.commercetools.api.models.common.Money amount;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentSetAmountPaidActionBuilder amount(
@@ -36,8 +38,8 @@ public class PaymentSetAmountPaidActionBuilder implements Builder<PaymentSetAmou
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
 
     public PaymentSetAmountPaidActionBuilder amount(@Nullable final com.commercetools.api.models.common.Money amount) {

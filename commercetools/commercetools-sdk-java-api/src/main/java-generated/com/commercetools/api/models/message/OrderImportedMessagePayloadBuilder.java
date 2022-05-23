@@ -8,25 +8,35 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderImportedMessagePayload orderImportedMessagePayload = OrderImportedMessagePayload.builder()
-           .order(orderBuilder -> orderBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderImportedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderImportedMessagePayload orderImportedMessagePayload = OrderImportedMessagePayload.builder()
+ *             .order(orderBuilder -> orderBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportedMessagePayloadBuilder implements Builder<OrderImportedMessagePayload> {
 
     private com.commercetools.api.models.order.Order order;
 
+    /**
+     <>
+     */
+
     public OrderImportedMessagePayloadBuilder order(
             Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
         this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderImportedMessagePayloadBuilder order(final com.commercetools.api.models.order.Order order) {
         this.order = order;

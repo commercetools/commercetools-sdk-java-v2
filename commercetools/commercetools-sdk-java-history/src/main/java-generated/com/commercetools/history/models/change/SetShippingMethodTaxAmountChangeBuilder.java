@@ -8,17 +8,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetShippingMethodTaxAmountChange setShippingMethodTaxAmountChange = SetShippingMethodTaxAmountChange.builder()
-           .change("{change}")
-           .taxMode(TaxMode.PLATFORM)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * SetShippingMethodTaxAmountChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetShippingMethodTaxAmountChange setShippingMethodTaxAmountChange = SetShippingMethodTaxAmountChange.builder()
+ *             .change("{change}")
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShippingMethodTaxAmountChange> {
@@ -32,7 +34,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue;
 
     /**
-     *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
+     <*  <p>Update action for <code>setShippingMethodTaxAmount</code></p>>
      */
 
     public SetShippingMethodTaxAmountChangeBuilder change(final String change) {
@@ -40,11 +42,19 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetShippingMethodTaxAmountChangeBuilder taxMode(
             final com.commercetools.history.models.common.TaxMode taxMode) {
         this.taxMode = taxMode;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetShippingMethodTaxAmountChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder> builder) {
@@ -54,11 +64,19 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetShippingMethodTaxAmountChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetShippingMethodTaxAmountChangeBuilder previousValue(
             Function<com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder> builder) {
@@ -67,6 +85,10 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
                 .build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetShippingMethodTaxAmountChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue) {

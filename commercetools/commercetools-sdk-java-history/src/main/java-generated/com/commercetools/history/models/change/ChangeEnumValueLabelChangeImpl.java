@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ChangeEnumValueLabelChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChange, ModelBase {
 
@@ -46,34 +49,49 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
         this.type = CHANGE_ENUM_VALUE_LABEL_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
+     <*  <p>Update action for <code>changeEnumValueLabel</code> on types</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
+     <*  <p>The name of the field definition updated.</p>>
      */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-     *  <p>Key of the values that was updated</p>
+     <*  <p>Key of the values that was updated</p>>
      */
+
     public String getValueKey() {
         return this.valueKey;
     }
 
+    /**
+     <>
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public String getNextValue() {
         return this.nextValue;

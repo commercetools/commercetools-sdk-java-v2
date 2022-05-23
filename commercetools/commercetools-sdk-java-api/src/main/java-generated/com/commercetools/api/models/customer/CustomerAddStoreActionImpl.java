@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CustomerAddStoreAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddStoreActionImpl implements CustomerAddStoreAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class CustomerAddStoreActionImpl implements CustomerAddStoreAction, Model
         this.action = ADD_STORE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;

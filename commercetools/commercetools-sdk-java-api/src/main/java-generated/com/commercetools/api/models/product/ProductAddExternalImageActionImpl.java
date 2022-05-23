@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductAddExternalImageAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddExternalImageActionImpl implements ProductAddExternalImageAction, ModelBase {
 
@@ -43,21 +46,41 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
         this.action = ADD_EXTERNAL_IMAGE;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     <>
+     */
+
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.api.models.common.Image getImage() {
         return this.image;
     }
+
+    /**
+     <>
+     */
 
     public Boolean getStaged() {
         return this.staged;

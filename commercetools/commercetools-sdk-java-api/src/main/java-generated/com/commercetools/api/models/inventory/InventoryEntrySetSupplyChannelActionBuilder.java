@@ -10,13 +10,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InventoryEntrySetSupplyChannelAction inventoryEntrySetSupplyChannelAction = InventoryEntrySetSupplyChannelAction.builder()
-           .build()
- </code></pre>
- </div>
+ * InventoryEntrySetSupplyChannelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntrySetSupplyChannelAction inventoryEntrySetSupplyChannelAction = InventoryEntrySetSupplyChannelAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<InventoryEntrySetSupplyChannelAction> {
@@ -25,7 +27,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+     <*  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>>
      */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
@@ -36,7 +38,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
     }
 
     /**
-     *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+     <*  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>>
      */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(

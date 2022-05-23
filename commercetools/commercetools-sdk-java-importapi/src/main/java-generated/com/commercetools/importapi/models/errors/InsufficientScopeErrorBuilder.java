@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InsufficientScopeError insufficientScopeError = InsufficientScopeError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * InsufficientScopeErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InsufficientScopeError insufficientScopeError = InsufficientScopeError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeError> {
 
     private String message;
+
+    /**
+     <>
+     */
 
     public InsufficientScopeErrorBuilder message(final String message) {
         this.message = message;

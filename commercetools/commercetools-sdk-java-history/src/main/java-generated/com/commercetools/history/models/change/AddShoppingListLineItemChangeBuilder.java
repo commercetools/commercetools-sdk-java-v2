@@ -8,16 +8,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   AddShoppingListLineItemChange addShoppingListLineItemChange = AddShoppingListLineItemChange.builder()
-           .change("{change}")
-           .previousValue(previousValueBuilder -> previousValueBuilder)
-           .nextValue(nextValueBuilder -> nextValueBuilder)
-           .build()
- </code></pre>
- </div>
+ * AddShoppingListLineItemChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddShoppingListLineItemChange addShoppingListLineItemChange = AddShoppingListLineItemChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddShoppingListLineItemChangeBuilder implements Builder<AddShoppingListLineItemChange> {
@@ -28,10 +30,18 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
 
     private com.commercetools.history.models.common.LineItem nextValue;
 
+    /**
+     <>
+     */
+
     public AddShoppingListLineItemChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddShoppingListLineItemChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
@@ -39,17 +49,29 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddShoppingListLineItemChangeBuilder previousValue(
             final com.commercetools.history.models.common.LineItem previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public AddShoppingListLineItemChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public AddShoppingListLineItemChangeBuilder nextValue(
             final com.commercetools.history.models.common.LineItem nextValue) {

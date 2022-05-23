@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * StoreCreatedMessagePayload
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayload, ModelBase {
 
@@ -51,36 +54,58 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
         this.type = STORE_CREATED;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
         return this.distributionChannels;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
         return this.supplyChannels;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
         return this.productSelections;
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
      */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

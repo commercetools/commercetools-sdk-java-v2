@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InvalidCredentialsError invalidCredentialsError = InvalidCredentialsError.builder()
-           .message("{message}")
-           .build()
- </code></pre>
- </div>
+ * InvalidCredentialsErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidCredentialsError invalidCredentialsError = InvalidCredentialsError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredentialsError> {
@@ -23,15 +25,27 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     <>
+     */
+
     public InvalidCredentialsErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public InvalidCredentialsErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public InvalidCredentialsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

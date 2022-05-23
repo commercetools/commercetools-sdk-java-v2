@@ -7,19 +7,25 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectChangeMessagesEnabledAction projectChangeMessagesEnabledAction = ProjectChangeMessagesEnabledAction.builder()
-           .messagesEnabled(true)
-           .build()
- </code></pre>
- </div>
+ * ProjectChangeMessagesEnabledActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectChangeMessagesEnabledAction projectChangeMessagesEnabledAction = ProjectChangeMessagesEnabledAction.builder()
+ *             .messagesEnabled(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeMessagesEnabledActionBuilder implements Builder<ProjectChangeMessagesEnabledAction> {
 
     private Boolean messagesEnabled;
+
+    /**
+     <>
+     */
 
     public ProjectChangeMessagesEnabledActionBuilder messagesEnabled(final Boolean messagesEnabled) {
         this.messagesEnabled = messagesEnabled;

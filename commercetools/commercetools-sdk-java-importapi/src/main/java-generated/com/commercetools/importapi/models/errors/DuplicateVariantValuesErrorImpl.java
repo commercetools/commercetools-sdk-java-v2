@@ -38,17 +38,26 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
         this.code = DUPLICATE_VARIANT_VALUES;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-     *  <p>The offending variant values.</p>
+     <*  <p>The offending variant values.</p>>
      */
+
     public com.commercetools.importapi.models.errors.VariantValues getVariantValues() {
         return this.variantValues;
     }

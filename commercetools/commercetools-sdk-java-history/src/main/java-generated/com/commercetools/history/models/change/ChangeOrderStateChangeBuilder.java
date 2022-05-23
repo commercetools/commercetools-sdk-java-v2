@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChangeOrderStateChange changeOrderStateChange = ChangeOrderStateChange.builder()
-           .change("{change}")
-           .nextValue(OrderState.OPEN)
-           .previousValue(OrderState.OPEN)
-           .build()
- </code></pre>
- </div>
+ * ChangeOrderStateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeOrderStateChange changeOrderStateChange = ChangeOrderStateChange.builder()
+ *             .change("{change}")
+ *             .nextValue(OrderState.OPEN)
+ *             .previousValue(OrderState.OPEN)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateChange> {
@@ -28,7 +30,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     private com.commercetools.history.models.common.OrderState previousValue;
 
     /**
-     *  <p>Update action for <code>changeOrderState</code></p>
+     <*  <p>Update action for <code>changeOrderState</code></p>>
      */
 
     public ChangeOrderStateChangeBuilder change(final String change) {
@@ -36,10 +38,18 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ChangeOrderStateChangeBuilder nextValue(final com.commercetools.history.models.common.OrderState nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ChangeOrderStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.OrderState previousValue) {

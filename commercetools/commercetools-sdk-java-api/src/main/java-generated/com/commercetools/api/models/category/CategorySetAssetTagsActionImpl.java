@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategorySetAssetTagsAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsAction, ModelBase {
 
@@ -38,17 +41,33 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
         this.action = SET_ASSET_TAGS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<String> getTags() {
         return this.tags;

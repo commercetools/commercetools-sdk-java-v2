@@ -17,19 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Returns an order by its ID from a specific Store. If the order exists in the commercetools project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error.</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .inStoreKeyWithStoreKeyValue("{storeKey}")
-           .orders()
-           .withId("{ID}")
-           .get()
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Returns an order by its ID from a specific Store. If the order exists in the commercetools project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .orders()
+ *            .withId("{ID}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet

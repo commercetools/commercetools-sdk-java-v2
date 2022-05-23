@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductReference productReference = ProductReference.builder()
-           .id("{id}")
-           .build()
- </code></pre>
- </div>
+ * ProductReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductReference productReference = ProductReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductReferenceBuilder implements Builder<ProductReference> {
@@ -28,7 +30,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     private com.commercetools.api.models.product.Product obj;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced Product.</p>
+     <*  <p>Platform-generated unique identifier of the referenced Product.</p>>
      */
 
     public ProductReferenceBuilder id(final String id) {
@@ -37,7 +39,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     <*  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>>
      */
 
     public ProductReferenceBuilder obj(
@@ -47,7 +49,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     <*  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>>
      */
 
     public ProductReferenceBuilder obj(@Nullable final com.commercetools.api.models.product.Product obj) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * Image
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageImpl implements Image, ModelBase {
 
@@ -35,13 +38,25 @@ public class ImageImpl implements Image, ModelBase {
     public ImageImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getUrl() {
         return this.url;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.ImageDimensions getDimensions() {
         return this.dimensions;
     }
+
+    /**
+     <>
+     */
 
     public String getLabel() {
         return this.label;

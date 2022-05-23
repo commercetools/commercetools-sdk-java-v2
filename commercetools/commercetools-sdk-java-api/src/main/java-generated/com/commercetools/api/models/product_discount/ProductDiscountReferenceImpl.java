@@ -40,22 +40,25 @@ public class ProductDiscountReferenceImpl implements ProductDiscountReference, M
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>
+     <*  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     <*  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>>
      */
+
     public com.commercetools.api.models.product_discount.ProductDiscount getObj() {
         return this.obj;
     }

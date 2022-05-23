@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomLineItemTaxedPrice customLineItemTaxedPrice = CustomLineItemTaxedPrice.builder()
-           .totalNet(totalNetBuilder -> totalNetBuilder)
-           .totalGross(totalGrossBuilder -> totalGrossBuilder)
-           .build()
- </code></pre>
- </div>
+ * CustomLineItemTaxedPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItemTaxedPrice customLineItemTaxedPrice = CustomLineItemTaxedPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTaxedPrice> {
@@ -25,11 +27,19 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
 
     private com.commercetools.importapi.models.common.TypedMoney totalGross;
 
+    /**
+     <>
+     */
+
     public CustomLineItemTaxedPriceBuilder totalNet(
             final com.commercetools.importapi.models.common.TypedMoney totalNet) {
         this.totalNet = totalNet;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomLineItemTaxedPriceBuilder totalNet(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
@@ -37,11 +47,19 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomLineItemTaxedPriceBuilder totalGross(
             final com.commercetools.importapi.models.common.TypedMoney totalGross) {
         this.totalGross = totalGross;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomLineItemTaxedPriceBuilder totalGross(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {

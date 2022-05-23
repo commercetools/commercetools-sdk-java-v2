@@ -11,13 +11,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductSetProductVariantKeyAction productSetProductVariantKeyAction = ProductSetProductVariantKeyAction.builder()
-           .build()
- </code></pre>
- </div>
+ * ProductSetProductVariantKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetProductVariantKeyAction productSetProductVariantKeyAction = ProductSetProductVariantKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetProductVariantKeyActionImpl.class)
@@ -25,18 +28,30 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
 
     String SET_PRODUCT_VARIANT_KEY = "setProductVariantKey";
 
+    /**
+     <>
+     */
+
     @JsonProperty("variantId")
     public Long getVariantId();
+
+    /**
+     <>
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
+     <*  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>>
      */
 
     @JsonProperty("key")
     public String getKey();
+
+    /**
+     <>
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

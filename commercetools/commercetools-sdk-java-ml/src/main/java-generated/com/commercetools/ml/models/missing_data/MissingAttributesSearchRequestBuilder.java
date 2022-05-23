@@ -9,13 +9,15 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingAttributesSearchRequest missingAttributesSearchRequest = MissingAttributesSearchRequest.builder()
-           .build()
- </code></pre>
- </div>
+ * MissingAttributesSearchRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingAttributesSearchRequest missingAttributesSearchRequest = MissingAttributesSearchRequest.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesSearchRequestBuilder implements Builder<MissingAttributesSearchRequest> {
@@ -57,7 +59,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     private String attributeName;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder limit(@Nullable final Integer limit) {
@@ -66,7 +68,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder offset(@Nullable final Integer offset) {
@@ -75,7 +77,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>If true, searches data from staged products in addition to published products.</p>
+     <*  <p>If true, searches data from staged products in addition to published products.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder staged(@Nullable final Boolean staged) {
@@ -84,7 +86,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Maximum number of products to scan.</p>
+     <*  <p>Maximum number of products to scan.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder productSetLimit(@Nullable final Integer productSetLimit) {
@@ -93,7 +95,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
+     <*  <p>If true, searches all product variants. If false, only searches master variants.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder includeVariants(@Nullable final Boolean includeVariants) {
@@ -102,7 +104,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Minimum attribute coverage of variants to display, applied to both coverage types.</p>
+     <*  <p>Minimum attribute coverage of variants to display, applied to both coverage types.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder coverageMin(@Nullable final Double coverageMin) {
@@ -111,7 +113,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Maximum attribute coverage of variants to display, applied to both coverage types.</p>
+     <*  <p>Maximum attribute coverage of variants to display, applied to both coverage types.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder coverageMax(@Nullable final Double coverageMax) {
@@ -120,7 +122,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>] <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>
+     <*  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>] <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder sortBy(@Nullable final String sortBy) {
@@ -129,7 +131,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>If true, the <code>missingAttributeNames</code> will be included in the results.</p>
+     <*  <p>If true, the <code>missingAttributeNames</code> will be included in the results.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder showMissingAttributeNames(
@@ -139,7 +141,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder productIds(@Nullable final String... productIds) {
@@ -148,7 +150,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
@@ -157,7 +159,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder plusProductIds(@Nullable final String... productIds) {
@@ -169,7 +171,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder productTypeIds(@Nullable final String... productTypeIds) {
@@ -178,7 +180,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
@@ -187,7 +189,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {
@@ -199,7 +201,7 @@ public class MissingAttributesSearchRequestBuilder implements Builder<MissingAtt
     }
 
     /**
-     *  <p>Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in <code>MissingAttributesMeta</code>. The <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>
+     <*  <p>Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in <code>MissingAttributesMeta</code>. The <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>>
      */
 
     public MissingAttributesSearchRequestBuilder attributeName(@Nullable final String attributeName) {

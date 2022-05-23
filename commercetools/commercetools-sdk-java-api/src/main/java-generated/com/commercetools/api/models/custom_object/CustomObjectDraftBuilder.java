@@ -9,15 +9,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomObjectDraft customObjectDraft = CustomObjectDraft.builder()
-           .container("{container}")
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * CustomObjectDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomObjectDraft customObjectDraft = CustomObjectDraft.builder()
+ *             .container("{container}")
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
@@ -32,7 +34,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
     private Long version;
 
     /**
-     *  <p>Namespace to group CustomObjects.</p>
+     <*  <p>Namespace to group CustomObjects.</p>>
      */
 
     public CustomObjectDraftBuilder container(final String container) {
@@ -41,7 +43,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+     <*  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>>
      */
 
     public CustomObjectDraftBuilder key(final String key) {
@@ -50,7 +52,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
     }
 
     /**
-     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     <*  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>>
      */
 
     public CustomObjectDraftBuilder value(final java.lang.Object value) {
@@ -59,7 +61,7 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
     }
 
     /**
-     *  <p>Current version of the CustomObject.</p>
+     <*  <p>Current version of the CustomObject.</p>>
      */
 
     public CustomObjectDraftBuilder version(@Nullable final Long version) {

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartSetCustomShippingMethodAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShippingMethodAction, ModelBase {
 
@@ -43,24 +46,41 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
         this.action = SET_CUSTOM_SHIPPING_METHOD;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getShippingMethodName() {
         return this.shippingMethodName;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
      */
+
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;

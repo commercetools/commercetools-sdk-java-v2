@@ -49,43 +49,49 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     <*  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     <*  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>>
      */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     <*  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>>
      */
+
     public com.commercetools.history.models.common.Reference getCustomer() {
         return this.customer;
     }
 
     /**
-     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     <*  <p>Present only if the change was made using a token from an Anonymous Session.</p>>
      */
+
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
     /**
-     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     <*  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>>
      */
+
     public String getClientId() {
         return this.clientId;
     }
 
     /**
-     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     <*  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>>
      */
+
     public Boolean getIsPlatformClient() {
         return this.isPlatformClient;
     }

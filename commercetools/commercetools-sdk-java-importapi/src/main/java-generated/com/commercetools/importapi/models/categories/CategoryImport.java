@@ -19,25 +19,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CategoryImport categoryImport = CategoryImport.builder()
-           .key("{key}")
-           .name(nameBuilder -> nameBuilder)
-           .slug(slugBuilder -> slugBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryImport categoryImport = CategoryImport.builder()
+ *             .key("{key}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryImportImpl.class)
 public interface CategoryImport extends ImportResource {
 
     /**
-     *  <p>Maps to <code>Category.name</code>.</p>
+     <*  <p>Maps to <code>Category.name</code>.</p>>
      */
     @NotNull
     @Valid
@@ -45,7 +46,7 @@ public interface CategoryImport extends ImportResource {
     public LocalizedString getName();
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     <*  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>>
      */
     @NotNull
     @Valid
@@ -53,60 +54,63 @@ public interface CategoryImport extends ImportResource {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Maps to <code>Category.description</code>.</p>
+     <*  <p>Maps to <code>Category.description</code>.</p>>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     <*  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>>
      */
     @Valid
     @JsonProperty("parent")
     public CategoryKeyReference getParent();
 
     /**
-     *  <p>Maps to <code>Category.orderHint</code>.</p>
+     <*  <p>Maps to <code>Category.orderHint</code>.</p>>
      */
 
     @JsonProperty("orderHint")
     public String getOrderHint();
 
     /**
-     *  <p>Maps to <code>Category.externalId</code>.</p>
+     <*  <p>Maps to <code>Category.externalId</code>.</p>>
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     <*  <p>Maps to <code>Category.metaTitle</code>.</p>>
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     <*  <p>Maps to <code>Category.metaDescription</code>.</p>>
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     <*  <p>Maps to <code>Category.metaKeywords</code>.</p>>
      */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
+    /**
+     <>
+     */
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     <*  <p>The custom fields for this Category.</p>>
      */
     @Valid
     @JsonProperty("custom")

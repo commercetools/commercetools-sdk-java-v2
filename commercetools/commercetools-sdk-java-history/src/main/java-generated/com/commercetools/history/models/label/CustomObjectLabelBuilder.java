@@ -7,15 +7,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomObjectLabel customObjectLabel = CustomObjectLabel.builder()
-           .key("{key}")
-           .container("{container}")
-           .build()
- </code></pre>
- </div>
+ * CustomObjectLabelBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomObjectLabel customObjectLabel = CustomObjectLabel.builder()
+ *             .key("{key}")
+ *             .container("{container}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
@@ -24,10 +26,18 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
 
     private String container;
 
+    /**
+     <>
+     */
+
     public CustomObjectLabelBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomObjectLabelBuilder container(final String container) {
         this.container = container;

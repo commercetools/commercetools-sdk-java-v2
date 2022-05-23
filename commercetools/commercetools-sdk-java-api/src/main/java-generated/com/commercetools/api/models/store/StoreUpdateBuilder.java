@@ -8,15 +8,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   StoreUpdate storeUpdate = StoreUpdate.builder()
-           .version(0.3)
-           .plusActions(actionsBuilder -> actionsBuilder)
-           .build()
- </code></pre>
- </div>
+ * StoreUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreUpdate storeUpdate = StoreUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreUpdateBuilder implements Builder<StoreUpdate> {
@@ -25,21 +27,37 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
 
     private java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions;
 
+    /**
+     <>
+     */
+
     public StoreUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreUpdateBuilder actions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreUpdateBuilder plusActions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
         if (this.actions == null) {
@@ -49,6 +67,10 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public StoreUpdateBuilder plusActions(
             Function<com.commercetools.api.models.store.StoreUpdateActionBuilder, Builder<? extends com.commercetools.api.models.store.StoreUpdateAction>> builder) {
         if (this.actions == null) {
@@ -57,6 +79,10 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.store.StoreUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public StoreUpdateBuilder withActions(
             Function<com.commercetools.api.models.store.StoreUpdateActionBuilder, Builder<? extends com.commercetools.api.models.store.StoreUpdateAction>> builder) {

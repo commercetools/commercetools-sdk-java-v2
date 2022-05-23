@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ExtensionChangeTriggersAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTriggersAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTrigger
         this.action = CHANGE_TRIGGERS;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
         return this.triggers;
     }

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CartDiscountSetValidUntilAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountSetValidUntilActionImpl implements CartDiscountSetValidUntilAction, ModelBase {
 
@@ -31,13 +34,18 @@ public class CartDiscountSetValidUntilActionImpl implements CartDiscountSetValid
         this.action = SET_VALID_UNTIL;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+     <*  <p>If absent, the field with the value is removed in case a value was set before.</p>>
      */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }

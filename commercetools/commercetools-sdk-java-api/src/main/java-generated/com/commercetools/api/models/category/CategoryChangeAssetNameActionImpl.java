@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * CategoryChangeAssetNameAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNameAction, ModelBase {
 
@@ -39,17 +42,33 @@ public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNam
         this.action = CHANGE_ASSET_NAME;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     <>
+     */
+
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;

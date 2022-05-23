@@ -14,66 +14,69 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TaxRate taxRate = TaxRate.builder()
-           .name("{name}")
-           .amount(0.3)
-           .includedInPrice(true)
-           .country("{country}")
-           .build()
- </code></pre>
- </div>
+ * TaxRate
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxRate taxRate = TaxRate.builder()
+ *             .name("{name}")
+ *             .amount(0.3)
+ *             .includedInPrice(true)
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxRateImpl.class)
 public interface TaxRate {
 
     /**
-     *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
+     <*  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>Name of the TaxRate.</p>
+     <*  <p>Name of the TaxRate.</p>>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
+     <*  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>>
      */
     @NotNull
     @JsonProperty("amount")
     public Double getAmount();
 
     /**
-     *  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
+     <*  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>>
      */
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
 
     /**
-     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     <*  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     <*  <p>State within the country, such as Texas in the United States.</p>>
      */
 
     @JsonProperty("state")
     public String getState();
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     <*  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>>
      */
     @Valid
     @JsonProperty("subRates")

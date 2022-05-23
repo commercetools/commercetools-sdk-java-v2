@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * InvalidFieldError
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
 
@@ -47,25 +50,49 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
         this.code = INVALID_FIELD;
     }
 
+    /**
+     <>
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     <>
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     <>
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     <>
+     */
 
     public String getField() {
         return this.field;
     }
 
+    /**
+     <>
+     */
+
     public java.lang.Object getInvalidValue() {
         return this.invalidValue;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<java.lang.Object> getAllowedValues() {
         return this.allowedValues;

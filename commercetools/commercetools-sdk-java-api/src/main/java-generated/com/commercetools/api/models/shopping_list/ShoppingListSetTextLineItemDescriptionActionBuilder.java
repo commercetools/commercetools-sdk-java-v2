@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ShoppingListSetTextLineItemDescriptionAction shoppingListSetTextLineItemDescriptionAction = ShoppingListSetTextLineItemDescriptionAction.builder()
-           .textLineItemId("{textLineItemId}")
-           .build()
- </code></pre>
- </div>
+ * ShoppingListSetTextLineItemDescriptionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListSetTextLineItemDescriptionAction shoppingListSetTextLineItemDescriptionAction = ShoppingListSetTextLineItemDescriptionAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetTextLineItemDescriptionActionBuilder
@@ -28,13 +30,17 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     <>
+     */
+
     public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
         return this;
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder description(
@@ -44,7 +50,7 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
      */
 
     public ShoppingListSetTextLineItemDescriptionActionBuilder description(

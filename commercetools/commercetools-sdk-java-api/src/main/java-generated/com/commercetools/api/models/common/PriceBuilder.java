@@ -10,15 +10,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Price price = Price.builder()
-           .id("{id}")
-           .value(valueBuilder -> valueBuilder)
-           .build()
- </code></pre>
- </div>
+ * PriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Price price = Price.builder()
+ *             .id("{id}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceBuilder implements Builder<Price> {
@@ -52,7 +54,7 @@ public class PriceBuilder implements Builder<Price> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     *  <p>Platform-generated unique identifier of this Price.</p>
+     <*  <p>Platform-generated unique identifier of this Price.</p>>
      */
 
     public PriceBuilder id(final String id) {
@@ -61,7 +63,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Money value of this Price.</p>
+     <*  <p>Money value of this Price.</p>>
      */
 
     public PriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -70,7 +72,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Money value of this Price.</p>
+     <*  <p>Money value of this Price.</p>>
      */
 
     public PriceBuilder value(
@@ -80,7 +82,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Country for which this Price is valid.</p>
+     <*  <p>Country for which this Price is valid.</p>>
      */
 
     public PriceBuilder country(@Nullable final String country) {
@@ -89,7 +91,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     <*  <p>CustomerGroup for which this Price is valid.</p>>
      */
 
     public PriceBuilder customerGroup(
@@ -101,7 +103,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     <*  <p>CustomerGroup for which this Price is valid.</p>>
      */
 
     public PriceBuilder customerGroup(
@@ -111,7 +113,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     <*  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>>
      */
 
     public PriceBuilder channel(
@@ -121,7 +123,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     <*  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>>
      */
 
     public PriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
@@ -130,7 +132,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Date and time from which this Price is valid.</p>
+     <*  <p>Date and time from which this Price is valid.</p>>
      */
 
     public PriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -139,7 +141,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Date and time until this Price is valid.</p>
+     <*  <p>Date and time until this Price is valid.</p>>
      */
 
     public PriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -148,7 +150,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>
+     <*  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>>
      */
 
     public PriceBuilder discounted(
@@ -158,7 +160,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>
+     <*  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>>
      */
 
     public PriceBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
@@ -167,7 +169,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     <*  <p>Present if different Prices for certain LineItem quantities have been specified.</p>>
      */
 
     public PriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
@@ -176,7 +178,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     <*  <p>Present if different Prices for certain LineItem quantities have been specified.</p>>
      */
 
     public PriceBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
@@ -185,7 +187,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     <*  <p>Present if different Prices for certain LineItem quantities have been specified.</p>>
      */
 
     public PriceBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
@@ -197,7 +199,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     <*  <p>Present if different Prices for certain LineItem quantities have been specified.</p>>
      */
 
     public PriceBuilder plusTiers(
@@ -210,7 +212,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     <*  <p>Present if different Prices for certain LineItem quantities have been specified.</p>>
      */
 
     public PriceBuilder withTiers(
@@ -221,7 +223,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Price.</p>
+     <*  <p>Custom Fields defined for the Price.</p>>
      */
 
     public PriceBuilder custom(
@@ -231,7 +233,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Price.</p>
+     <*  <p>Custom Fields defined for the Price.</p>>
      */
 
     public PriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

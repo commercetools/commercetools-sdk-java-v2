@@ -35,16 +35,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
- <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
-
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ResourceIdentifier resourceIdentifier = ResourceIdentifier.cartDiscountBuilder()
-           .build()
- </code></pre>
- </div>
+ *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
+ *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.cartDiscountBuilder()
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl.class, name = CartDiscountResourceIdentifier.CART_DISCOUNT),
@@ -77,21 +78,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ResourceIdentifier {
 
     /**
-     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     <*  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>>
      */
 
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     <*  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     <*  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>>
      */
 
     @JsonProperty("key")

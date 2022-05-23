@@ -34,9 +34,17 @@ public class ChangeTargetCustomLineItemsChangeValueImpl implements ChangeTargetC
         this.type = CUSTOM_LINE_ITEMS;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     <>
+     */
 
     public String getPredicate() {
         return this.predicate;

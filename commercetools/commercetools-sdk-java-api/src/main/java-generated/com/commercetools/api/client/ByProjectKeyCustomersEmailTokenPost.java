@@ -14,18 +14,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- <p>Create a Token for verifying the Customer's Email</p>
-
- <div class=code-example>
- <pre><code class='java'>{@code
-   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken>> result = apiRoot
-           .withProjectKey("{projectKey}")
-           .customers()
-           .emailToken()
-           .post(null)
-           .execute()
- }</code></pre>
- </div>
+ *  <p>Create a Token for verifying the Customer's Email</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .customers()
+ *            .emailToken()
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCustomersEmailTokenPost extends

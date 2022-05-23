@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * PaymentSetAuthorizationAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetAuthorizationActionImpl implements PaymentSetAuthorizationAction, ModelBase {
 
@@ -35,17 +38,26 @@ public class PaymentSetAuthorizationActionImpl implements PaymentSetAuthorizatio
         this.action = SET_AUTHORIZATION;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
      */
+
     public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
     }
+
+    /**
+     <>
+     */
 
     public java.time.ZonedDateTime getUntil() {
         return this.until;

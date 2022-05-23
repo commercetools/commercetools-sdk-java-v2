@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetCompanyNameChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCompanyNameChangeImpl implements SetCompanyNameChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetCompanyNameChangeImpl implements SetCompanyNameChange, ModelBase
         this.type = SET_COMPANY_NAME_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Shape of the action for <code>setCompanyName</code></p>
+     <*  <p>Shape of the action for <code>setCompanyName</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     <>
+     */
 
     public String getNextValue() {
         return this.nextValue;

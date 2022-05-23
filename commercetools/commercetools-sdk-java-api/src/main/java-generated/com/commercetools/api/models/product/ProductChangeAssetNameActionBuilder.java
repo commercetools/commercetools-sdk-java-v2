@@ -10,14 +10,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductChangeAssetNameAction productChangeAssetNameAction = ProductChangeAssetNameAction.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductChangeAssetNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductChangeAssetNameAction productChangeAssetNameAction = ProductChangeAssetNameAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangeAssetNameActionBuilder implements Builder<ProductChangeAssetNameAction> {
@@ -39,36 +41,64 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     <>
+     */
+
     public ProductChangeAssetNameActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductChangeAssetNameActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductChangeAssetNameActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductChangeAssetNameActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public ProductChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductChangeAssetNameActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public ProductChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

@@ -13,24 +13,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SubRate subRate = SubRate.builder()
-           .name("{name}")
-           .amount(0.3)
-           .build()
- </code></pre>
- </div>
+ * SubRate
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubRate subRate = SubRate.builder()
+ *             .name("{name}")
+ *             .amount(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubRateImpl.class)
 public interface SubRate {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("amount")
     public Double getAmount();

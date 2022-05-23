@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ShoppingListChangeLineItemQuantityAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListChangeLineItemQuantityActionImpl
         implements ShoppingListChangeLineItemQuantityAction, ModelBase {
@@ -36,13 +39,25 @@ public class ShoppingListChangeLineItemQuantityActionImpl
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     <>
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     <>
+     */
 
     public Long getQuantity() {
         return this.quantity;

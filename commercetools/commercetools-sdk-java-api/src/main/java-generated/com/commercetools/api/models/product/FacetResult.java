@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   FacetResult facetResult = FacetResult.filterBuilder()
-           count(0.3)
-           .build()
- </code></pre>
- </div>
+ * FacetResult
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FacetResult facetResult = FacetResult.filterBuilder()
+ *             count(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.FilteredFacetResultImpl.class, name = FilteredFacetResult.FILTER),
@@ -31,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface FacetResult {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public FacetTypes getType();

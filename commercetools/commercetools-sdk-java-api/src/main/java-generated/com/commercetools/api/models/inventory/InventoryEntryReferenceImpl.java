@@ -40,22 +40,25 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     <*  <p>Type of referenced resource.</p>>
      */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>
+     <*  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     <*  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>>
      */
+
     public com.commercetools.api.models.inventory.InventoryEntry getObj() {
         return this.obj;
     }

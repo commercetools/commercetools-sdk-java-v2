@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * ProductAddVariantAction
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddVariantActionImpl implements ProductAddVariantAction, ModelBase {
 
@@ -54,33 +57,65 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
         this.action = ADD_VARIANT;
     }
 
+    /**
+     <>
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     <>
+     */
 
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     <>
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
 
+    /**
+     <>
+     */
+
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
 
+    /**
+     <>
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     <>
+     */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
         return this.assets;

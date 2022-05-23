@@ -9,15 +9,17 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomerAddress customerAddress = CustomerAddress.builder()
-           .key("{key}")
-           .country("{country}")
-           .build()
- </code></pre>
- </div>
+ * CustomerAddressBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerAddress customerAddress = CustomerAddress.builder()
+ *             .key("{key}")
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressBuilder implements Builder<CustomerAddress> {
@@ -93,7 +95,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     private String externalId;
 
     /**
-     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     <*  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>>
      */
 
     public CustomerAddressBuilder key(final String key) {
@@ -101,55 +103,99 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder salutation(@Nullable final String salutation) {
         this.salutation = salutation;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder firstName(@Nullable final String firstName) {
         this.firstName = firstName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder streetName(@Nullable final String streetName) {
         this.streetName = streetName;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder streetNumber(@Nullable final String streetNumber) {
         this.streetNumber = streetNumber;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
         this.additionalStreetInfo = additionalStreetInfo;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder postalCode(@Nullable final String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder city(@Nullable final String city) {
         this.city = city;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder region(@Nullable final String region) {
         this.region = region;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder state(@Nullable final String state) {
         this.state = state;
@@ -157,7 +203,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
      */
 
     public CustomerAddressBuilder country(final String country) {
@@ -165,55 +211,99 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder company(@Nullable final String company) {
         this.company = company;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder department(@Nullable final String department) {
         this.department = department;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder building(@Nullable final String building) {
         this.building = building;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder apartment(@Nullable final String apartment) {
         this.apartment = apartment;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder pOBox(@Nullable final String pOBox) {
         this.pOBox = pOBox;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder phone(@Nullable final String phone) {
         this.phone = phone;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder mobile(@Nullable final String mobile) {
         this.mobile = mobile;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder fax(@Nullable final String fax) {
         this.fax = fax;
         return this;
     }
 
+    /**
+     <>
+     */
+
     public CustomerAddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
         this.additionalAddressInfo = additionalAddressInfo;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public CustomerAddressBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;

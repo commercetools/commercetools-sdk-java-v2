@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetLineItemPriceChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, ModelBase {
 
@@ -43,24 +46,41 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
         this.type = SET_LINE_ITEM_PRICE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>setLineItemPrice</code></p>
+     <*  <p>Update action for <code>setLineItemPrice</code></p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.Price getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Price getPreviousValue() {
         return this.previousValue;

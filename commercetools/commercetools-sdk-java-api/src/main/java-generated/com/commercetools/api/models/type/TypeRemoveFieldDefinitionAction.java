@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypeRemoveFieldDefinitionAction typeRemoveFieldDefinitionAction = TypeRemoveFieldDefinitionAction.builder()
-           .fieldName("{fieldName}")
-           .build()
- </code></pre>
- </div>
+ * TypeRemoveFieldDefinitionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeRemoveFieldDefinitionAction typeRemoveFieldDefinitionAction = TypeRemoveFieldDefinitionAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeRemoveFieldDefinitionActionImpl.class)
@@ -29,7 +32,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     String REMOVE_FIELD_DEFINITION = "removeFieldDefinition";
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
+     <*  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>>
      */
     @NotNull
     @JsonProperty("fieldName")

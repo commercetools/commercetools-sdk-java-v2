@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ItemShippingDetailsDraft itemShippingDetailsDraft = ItemShippingDetailsDraft.builder()
-           .plusTargets(targetsBuilder -> targetsBuilder)
-           .build()
- </code></pre>
- </div>
+ * ItemShippingDetailsDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemShippingDetailsDraft itemShippingDetailsDraft = ItemShippingDetailsDraft.builder()
+ *             .plusTargets(targetsBuilder -> targetsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDetailsDraft> {
@@ -23,7 +25,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets;
 
     /**
-     *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+     <*  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -33,7 +35,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+     <*  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -43,7 +45,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+     <*  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -56,7 +58,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+     <*  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -69,7 +71,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+     <*  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>>
      */
 
     public ItemShippingDetailsDraftBuilder withTargets(

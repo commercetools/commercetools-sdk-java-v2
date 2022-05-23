@@ -8,18 +8,20 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   MissingPricesPagedQueryResult missingPricesPagedQueryResult = MissingPricesPagedQueryResult.builder()
-           .count(0.3)
-           .total(0.3)
-           .offset(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .meta(metaBuilder -> metaBuilder)
-           .build()
- </code></pre>
- </div>
+ * MissingPricesPagedQueryResultBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingPricesPagedQueryResult missingPricesPagedQueryResult = MissingPricesPagedQueryResult.builder()
+ *             .count(0.3)
+ *             .total(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .meta(metaBuilder -> metaBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPricesPagedQueryResult> {
@@ -34,10 +36,18 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
 
     private com.commercetools.ml.models.missing_data.MissingPricesMeta meta;
 
+    /**
+     <>
+     */
+
     public MissingPricesPagedQueryResultBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingPricesPagedQueryResultBuilder total(final Long total) {
         this.total = total;
@@ -45,7 +55,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public MissingPricesPagedQueryResultBuilder offset(final Long offset) {
@@ -53,17 +63,29 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingPricesPagedQueryResultBuilder results(
             final com.commercetools.ml.models.missing_data.MissingPrices... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingPricesPagedQueryResultBuilder results(
             final java.util.List<com.commercetools.ml.models.missing_data.MissingPrices> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingPricesPagedQueryResultBuilder plusResults(
             final com.commercetools.ml.models.missing_data.MissingPrices... results) {
@@ -74,6 +96,10 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingPricesPagedQueryResultBuilder plusResults(
             Function<com.commercetools.ml.models.missing_data.MissingPricesBuilder, com.commercetools.ml.models.missing_data.MissingPricesBuilder> builder) {
         if (this.results == null) {
@@ -83,6 +109,10 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingPricesPagedQueryResultBuilder withResults(
             Function<com.commercetools.ml.models.missing_data.MissingPricesBuilder, com.commercetools.ml.models.missing_data.MissingPricesBuilder> builder) {
         this.results = new ArrayList<>();
@@ -90,11 +120,19 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
         return this;
     }
 
+    /**
+     <>
+     */
+
     public MissingPricesPagedQueryResultBuilder meta(
             Function<com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder, com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder> builder) {
         this.meta = builder.apply(com.commercetools.ml.models.missing_data.MissingPricesMetaBuilder.of()).build();
         return this;
     }
+
+    /**
+     <>
+     */
 
     public MissingPricesPagedQueryResultBuilder meta(
             final com.commercetools.ml.models.missing_data.MissingPricesMeta meta) {

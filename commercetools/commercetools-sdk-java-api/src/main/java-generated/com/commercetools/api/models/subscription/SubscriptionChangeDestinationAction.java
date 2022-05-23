@@ -14,14 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SubscriptionChangeDestinationAction subscriptionChangeDestinationAction = SubscriptionChangeDestinationAction.builder()
-           .destination(destinationBuilder -> destinationBuilder)
-           .build()
- </code></pre>
- </div>
+ * SubscriptionChangeDestinationAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionChangeDestinationAction subscriptionChangeDestinationAction = SubscriptionChangeDestinationAction.builder()
+ *             .destination(destinationBuilder -> destinationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionChangeDestinationActionImpl.class)
@@ -29,6 +32,9 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
 
     String CHANGE_DESTINATION = "changeDestination";
 
+    /**
+     <>
+     */
     @NotNull
     @Valid
     @JsonProperty("destination")

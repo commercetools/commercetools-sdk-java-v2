@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ChannelChangeNameAction channelChangeNameAction = ChannelChangeNameAction.builder()
-           .name(nameBuilder -> nameBuilder)
-           .build()
- </code></pre>
- </div>
+ * ChannelChangeNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelChangeNameAction channelChangeNameAction = ChannelChangeNameAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeNameAction> {
@@ -23,7 +25,7 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ChannelChangeNameActionBuilder name(
@@ -33,7 +35,7 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     <*  <p>New value to set. Must not be empty.</p>>
      */
 
     public ChannelChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

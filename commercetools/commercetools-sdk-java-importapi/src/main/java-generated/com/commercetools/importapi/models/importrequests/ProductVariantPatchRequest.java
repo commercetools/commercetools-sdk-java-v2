@@ -15,16 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>The request body to import ProductVariantPatches. The data to be imported are represented by ProductVariantPatch.</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariantPatchRequest productVariantPatchRequest = ProductVariantPatchRequest.builder()
-           .plusPatches(patchesBuilder -> patchesBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>The request body to import ProductVariantPatches. The data to be imported are represented by ProductVariantPatch.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantPatchRequest productVariantPatchRequest = ProductVariantPatchRequest.builder()
+ *             .plusPatches(patchesBuilder -> patchesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantPatchRequestImpl.class)
@@ -33,7 +34,7 @@ public interface ProductVariantPatchRequest extends ImportRequest {
     String PRODUCT_VARIANT_PATCH = "product-variant-patch";
 
     /**
-     *  <p>The product variant patches of this request.</p>
+     <*  <p>The product variant patches of this request.</p>>
      */
     @NotNull
     @Valid

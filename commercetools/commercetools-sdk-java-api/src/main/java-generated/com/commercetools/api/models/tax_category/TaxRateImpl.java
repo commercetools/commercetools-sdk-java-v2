@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * TaxRate
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxRateImpl implements TaxRate, ModelBase {
 
@@ -49,50 +52,57 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
+     <*  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>>
      */
+
     public String getId() {
         return this.id;
     }
 
     /**
-     *  <p>Name of the TaxRate.</p>
+     <*  <p>Name of the TaxRate.</p>>
      */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
+     <*  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>>
      */
+
     public Double getAmount() {
         return this.amount;
     }
 
     /**
-     *  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
+     <*  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>>
      */
+
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
 
     /**
-     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     <*  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>>
      */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-     *  <p>State within the country, such as Texas in the United States.</p>
+     <*  <p>State within the country, such as Texas in the United States.</p>>
      */
+
     public String getState() {
         return this.state;
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     <*  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>>
      */
+
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;
     }

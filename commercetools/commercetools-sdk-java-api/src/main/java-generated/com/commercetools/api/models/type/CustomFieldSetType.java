@@ -14,16 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- <p>Values of a SetType Custom Field are sets of values of the specified <code>elementType</code> (without duplicate elements).</p>
-
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   CustomFieldSetType customFieldSetType = CustomFieldSetType.builder()
-           .elementType(elementTypeBuilder -> elementTypeBuilder)
-           .build()
- </code></pre>
- </div>
+ *  <p>Values of a SetType Custom Field are sets of values of the specified <code>elementType</code> (without duplicate elements).</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldSetType customFieldSetType = CustomFieldSetType.builder()
+ *             .elementType(elementTypeBuilder -> elementTypeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldSetTypeImpl.class)
@@ -32,7 +33,7 @@ public interface CustomFieldSetType extends FieldType {
     String SET = "Set";
 
     /**
-     *  <p>Field type of the elements in the set.</p>
+     <*  <p>Field type of the elements in the set.</p>>
      */
     @NotNull
     @Valid

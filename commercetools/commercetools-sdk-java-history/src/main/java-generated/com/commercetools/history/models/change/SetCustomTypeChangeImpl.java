@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * SetCustomTypeChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
 
@@ -39,20 +42,33 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
         this.type = SET_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for setting a custom type</p>
+     <*  <p>Update action for setting a custom type</p>>
      */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     <>
+     */
+
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
         return this.previousValue;

@@ -30,6 +30,10 @@ public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
     public SuggestTokenizerImpl() {
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }

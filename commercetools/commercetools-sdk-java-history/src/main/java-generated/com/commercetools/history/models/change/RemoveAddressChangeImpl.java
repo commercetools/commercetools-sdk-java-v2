@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ * RemoveAddressChange
+ */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
 
@@ -35,16 +38,25 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
         this.type = REMOVE_ADDRESS_CHANGE;
     }
 
+    /**
+     <>
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-     *  <p>Update action for <code>removeAddress</code> action.</p>
+     <*  <p>Update action for <code>removeAddress</code> action.</p>>
      */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     <>
+     */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {
         return this.previousValue;

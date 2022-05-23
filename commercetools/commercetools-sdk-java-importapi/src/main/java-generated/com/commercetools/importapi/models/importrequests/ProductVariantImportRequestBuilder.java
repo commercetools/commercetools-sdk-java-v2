@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProductVariantImportRequest productVariantImportRequest = ProductVariantImportRequest.builder()
-           .plusResources(resourcesBuilder -> resourcesBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProductVariantImportRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantImportRequest productVariantImportRequest = ProductVariantImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImportRequestBuilder implements Builder<ProductVariantImportRequest> {
@@ -23,7 +25,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources;
 
     /**
-     *  <p>The product variant import resources of this request.</p>
+     <*  <p>The product variant import resources of this request.</p>>
      */
 
     public ProductVariantImportRequestBuilder resources(
@@ -33,7 +35,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     }
 
     /**
-     *  <p>The product variant import resources of this request.</p>
+     <*  <p>The product variant import resources of this request.</p>>
      */
 
     public ProductVariantImportRequestBuilder resources(
@@ -43,7 +45,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     }
 
     /**
-     *  <p>The product variant import resources of this request.</p>
+     <*  <p>The product variant import resources of this request.</p>>
      */
 
     public ProductVariantImportRequestBuilder plusResources(
@@ -56,7 +58,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     }
 
     /**
-     *  <p>The product variant import resources of this request.</p>
+     <*  <p>The product variant import resources of this request.</p>>
      */
 
     public ProductVariantImportRequestBuilder plusResources(
@@ -70,7 +72,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     }
 
     /**
-     *  <p>The product variant import resources of this request.</p>
+     <*  <p>The product variant import resources of this request.</p>>
      */
 
     public ProductVariantImportRequestBuilder withResources(

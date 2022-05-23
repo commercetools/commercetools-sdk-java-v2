@@ -15,14 +15,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ReviewRatingSetMessagePayload reviewRatingSetMessagePayload = ReviewRatingSetMessagePayload.builder()
-           .includedInStatistics(true)
-           .build()
- </code></pre>
- </div>
+ * ReviewRatingSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewRatingSetMessagePayload reviewRatingSetMessagePayload = ReviewRatingSetMessagePayload.builder()
+ *             .includedInStatistics(true)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewRatingSetMessagePayloadImpl.class)
@@ -30,18 +33,29 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
 
     String REVIEW_RATING_SET = "ReviewRatingSet";
 
+    /**
+     <>
+     */
+
     @JsonProperty("oldRating")
     public Double getOldRating();
+
+    /**
+     <>
+     */
 
     @JsonProperty("newRating")
     public Double getNewRating();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("includedInStatistics")
     public Boolean getIncludedInStatistics();
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
     @Valid
     @JsonProperty("target")

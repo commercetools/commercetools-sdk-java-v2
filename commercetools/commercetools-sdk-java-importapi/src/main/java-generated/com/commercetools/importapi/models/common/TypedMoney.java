@@ -13,16 +13,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create a subtype instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   TypedMoney typedMoney = TypedMoney.highPrecisionBuilder()
-           centAmount(0.3)
-           currencyCode("{currencyCode}")
-           preciseAmount(0.3)
-           .build()
- </code></pre>
- </div>
+ * TypedMoney
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypedMoney typedMoney = TypedMoney.highPrecisionBuilder()
+ *             centAmount(0.3)
+ *             currencyCode("{currencyCode}")
+ *             preciseAmount(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION),
@@ -32,19 +35,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TypedMoney {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
 
+    /**
+     <>
+     */
+
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("centAmount")
     public Long getCentAmount();
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     <*  <p>The currency code compliant to ISO 4217.</p>>
      */
     @NotNull
     @JsonProperty("currencyCode")

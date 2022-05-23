@@ -7,16 +7,18 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   InvalidStateTransitionError invalidStateTransitionError = InvalidStateTransitionError.builder()
-           .message("{message}")
-           .currentState(ProcessingState.PROCESSING)
-           .newState(ProcessingState.PROCESSING)
-           .build()
- </code></pre>
- </div>
+ * InvalidStateTransitionErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidStateTransitionError invalidStateTransitionError = InvalidStateTransitionError.builder()
+ *             .message("{message}")
+ *             .currentState(ProcessingState.PROCESSING)
+ *             .newState(ProcessingState.PROCESSING)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateTransitionError> {
@@ -27,13 +29,17 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
 
     private com.commercetools.importapi.models.common.ProcessingState newState;
 
+    /**
+     <>
+     */
+
     public InvalidStateTransitionErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
      */
 
     public InvalidStateTransitionErrorBuilder currentState(
@@ -43,7 +49,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
      */
 
     public InvalidStateTransitionErrorBuilder newState(

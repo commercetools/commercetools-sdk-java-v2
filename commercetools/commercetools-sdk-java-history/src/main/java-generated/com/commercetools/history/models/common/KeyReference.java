@@ -13,24 +13,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   KeyReference keyReference = KeyReference.builder()
-           .key("{key}")
-           .typeId(ReferenceTypeId.CART)
-           .build()
- </code></pre>
- </div>
+ * KeyReference
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     KeyReference keyReference = KeyReference.builder()
+ *             .key("{key}")
+ *             .typeId(ReferenceTypeId.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = KeyReferenceImpl.class)
 public interface KeyReference {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();

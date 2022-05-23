@@ -10,17 +10,19 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   OrderPagedQueryResponse orderPagedQueryResponse = OrderPagedQueryResponse.builder()
-           .limit(0.3)
-           .count(0.3)
-           .offset(0.3)
-           .plusResults(resultsBuilder -> resultsBuilder)
-           .build()
- </code></pre>
- </div>
+ * OrderPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderPagedQueryResponse orderPagedQueryResponse = OrderPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .count(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryResponse> {
@@ -37,7 +39,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     private java.util.List<com.commercetools.api.models.order.Order> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     <*  <p>Number of results requested.</p>>
      */
 
     public OrderPagedQueryResponseBuilder limit(final Long limit) {
@@ -45,10 +47,18 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -56,7 +66,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     <*  <p>Number of elements skipped.</p>>
      */
 
     public OrderPagedQueryResponseBuilder offset(final Long offset) {
@@ -64,16 +74,28 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderPagedQueryResponseBuilder results(final com.commercetools.api.models.order.Order... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.order.Order> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.order.Order... results) {
         if (this.results == null) {
@@ -83,6 +105,10 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
         return this;
     }
 
+    /**
+     <>
+     */
+
     public OrderPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
         if (this.results == null) {
@@ -91,6 +117,10 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
         this.results.add(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build());
         return this;
     }
+
+    /**
+     <>
+     */
 
     public OrderPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {

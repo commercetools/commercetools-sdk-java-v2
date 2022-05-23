@@ -35,13 +35,18 @@ public class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnu
         this.name = LOCALIZED_ENUM;
     }
 
+    /**
+     <>
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-     *  <p>Allowed values.</p>
+     <*  <p>Allowed values.</p>>
      */
+
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
         return this.values;
     }

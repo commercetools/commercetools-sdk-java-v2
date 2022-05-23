@@ -7,14 +7,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   SetShippingRateInputChange setShippingRateInputChange = SetShippingRateInputChange.builder()
-           .change("{change}")
-           .build()
- </code></pre>
- </div>
+ * SetShippingRateInputChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetShippingRateInputChange setShippingRateInputChange = SetShippingRateInputChange.builder()
+ *             .change("{change}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRateInputChange> {
@@ -26,7 +28,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     private java.lang.Object previousValue;
 
     /**
-     *  <p>Update action for <code>setShippingRateInput</code></p>
+     <*  <p>Update action for <code>setShippingRateInput</code></p>>
      */
 
     public SetShippingRateInputChangeBuilder change(final String change) {
@@ -34,10 +36,18 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
         return this;
     }
 
+    /**
+     <>
+     */
+
     public SetShippingRateInputChangeBuilder nextValue(final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     <>
+     */
 
     public SetShippingRateInputChangeBuilder previousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;

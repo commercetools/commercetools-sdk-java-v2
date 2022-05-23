@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectChangeCartsConfigurationAction projectChangeCartsConfigurationAction = ProjectChangeCartsConfigurationAction.builder()
-           .cartsConfiguration(cartsConfigurationBuilder -> cartsConfigurationBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProjectChangeCartsConfigurationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectChangeCartsConfigurationAction projectChangeCartsConfigurationAction = ProjectChangeCartsConfigurationAction.builder()
+ *             .cartsConfiguration(cartsConfigurationBuilder -> cartsConfigurationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeCartsConfigurationActionBuilder implements Builder<ProjectChangeCartsConfigurationAction> {
@@ -23,7 +25,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     <*  <p>Configuration for the Carts feature.</p>>
      */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
@@ -34,7 +36,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>Configuration for the Carts feature.</p>
+     <*  <p>Configuration for the Carts feature.</p>>
      */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(

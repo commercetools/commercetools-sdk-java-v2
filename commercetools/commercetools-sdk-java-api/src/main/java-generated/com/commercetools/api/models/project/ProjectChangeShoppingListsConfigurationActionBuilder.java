@@ -8,14 +8,16 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   ProjectChangeShoppingListsConfigurationAction projectChangeShoppingListsConfigurationAction = ProjectChangeShoppingListsConfigurationAction.builder()
-           .shoppingListsConfiguration(shoppingListsConfigurationBuilder -> shoppingListsConfigurationBuilder)
-           .build()
- </code></pre>
- </div>
+ * ProjectChangeShoppingListsConfigurationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectChangeShoppingListsConfigurationAction projectChangeShoppingListsConfigurationAction = ProjectChangeShoppingListsConfigurationAction.builder()
+ *             .shoppingListsConfiguration(shoppingListsConfigurationBuilder -> shoppingListsConfigurationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeShoppingListsConfigurationActionBuilder
@@ -24,7 +26,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     <*  <p>Configuration for the Shopping Lists feature.</p>>
      */
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
@@ -36,7 +38,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     <*  <p>Configuration for the Shopping Lists feature.</p>>
      */
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(

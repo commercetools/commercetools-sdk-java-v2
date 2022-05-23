@@ -13,29 +13,41 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-   Variant variant = Variant.builder()
-           .id(1)
-           .sku("{sku}")
-           .key("{key}")
-           .build()
- </code></pre>
- </div>
+ * Variant
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Variant variant = Variant.builder()
+ *             .id(1)
+ *             .sku("{sku}")
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = VariantImpl.class)
 public interface Variant {
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("id")
     public Integer getId();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+     <>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();

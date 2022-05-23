@@ -7,7 +7,7 @@
 
 ## Introduction
 
-This repository contains the commercetools Composable Commerce and import-api java sdks generated from our api reference.
+This repository contains the commercetools Composable Commerce and Import API Java SDKs generated from our API reference.
 
 * [Getting Started](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/GettingStarted.html)
 

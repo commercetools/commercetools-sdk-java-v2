@@ -46,7 +46,7 @@ package com.commercetools.docs.meta;
  * [OkHttp https://api.europe-west1.gcp.commercetools.com/...] DEBUG commercetools.categories.response - io.vrap.rmf.base.client.ApiHttpResponse@33e37acd[statusCode=200,headers=...,textInterpretedBody={"limit":20,"offset":0,"count":4,"total":4,"results":[{"id":"ca7f64dc-ab41-4e7f-b65b-bfc25bf01111","version":1,"createdAt":"2021-01-06T09:21:55.445Z","lastModifiedAt":"2021-01-06T09:21:55.445Z","key":"random-key-15aab6ee-9a48-4fdc-a8c3-8ff9ff390d60","name":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"slug":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"description":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"ancestors":[],"orderHint":"random-string-a99e6941-3225-4766-923a-4a654652532f","externalId":"random-id-100b3851-29b4-47c1-aef3-860b4cd28f54"}]}]
  * }</pre>
  *
- * <p>{@code commercetools.categories.response} logs on trace level additional the formatted http response from the platform (abbreviated example):</p>
+ * <p>{@code commercetools.categories.response} logs on trace level additional the formatted http response from the API (abbreviated example):</p>
  *
  * <pre>{@code
  * [OkHttp https://api.europe-west1.gcp.commercetools.com/...] TRACE commercetools.categories.response - 200

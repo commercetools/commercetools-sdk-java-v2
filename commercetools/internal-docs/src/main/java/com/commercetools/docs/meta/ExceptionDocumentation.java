@@ -22,7 +22,7 @@ package com.commercetools.docs.meta;
  * <h3>Errors</h3>
  *
  * If a command cannot be performed due to unfulfilled preconditions
- * the platform can return one error response with multiple errors (<a href="https://docs.commercetools.com/api/errors">listing of error codes</a>).
+ * the API can return one error response with multiple errors (<a href="https://docs.commercetools.com/api/errors">listing of error codes</a>).
  * The SDK will then put a {@link io.vrap.rmf.base.client.error.BadRequestException} into a {@link java.util.concurrent.CompletionStage}.
  *
  * <h3>Custom HttpExceptionFactory</h3>

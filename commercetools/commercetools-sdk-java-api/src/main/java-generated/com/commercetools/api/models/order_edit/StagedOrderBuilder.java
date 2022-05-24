@@ -25,7 +25,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .orderState(OrderState.OPEN)
  *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
- *             .lastMessageSequenceNumber(0.3)
  *             .origin(CartOrigin.CUSTOMER)
  *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
  *             .build()
@@ -116,6 +115,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     @Nullable
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
+    @Deprecated
+    @Nullable
     private Long lastMessageSequenceNumber;
 
     @Nullable
@@ -760,10 +761,10 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     <*  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>>
+     <*  <p>Internal-only field.</p>>
      */
-
-    public StagedOrderBuilder lastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
+    @Deprecated
+    public StagedOrderBuilder lastMessageSequenceNumber(@Nullable final Long lastMessageSequenceNumber) {
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
         return this;
     }
@@ -1140,6 +1141,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this.discountCodes;
     }
 
+    @Deprecated
+    @Nullable
     public Long getLastMessageSequenceNumber() {
         return this.lastMessageSequenceNumber;
     }
@@ -1202,7 +1205,6 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         Objects.requireNonNull(totalPrice, StagedOrder.class + ": totalPrice is missing");
         Objects.requireNonNull(orderState, StagedOrder.class + ": orderState is missing");
         Objects.requireNonNull(syncInfo, StagedOrder.class + ": syncInfo is missing");
-        Objects.requireNonNull(lastMessageSequenceNumber, StagedOrder.class + ": lastMessageSequenceNumber is missing");
         Objects.requireNonNull(origin, StagedOrder.class + ": origin is missing");
         Objects.requireNonNull(refusedGifts, StagedOrder.class + ": refusedGifts is missing");
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,

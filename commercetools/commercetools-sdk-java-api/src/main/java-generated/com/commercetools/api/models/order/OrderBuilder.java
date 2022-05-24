@@ -25,7 +25,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .orderState(OrderState.OPEN)
  *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
- *             .lastMessageSequenceNumber(0.3)
  *             .origin(CartOrigin.CUSTOMER)
  *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
  *             .build()
@@ -116,6 +115,8 @@ public class OrderBuilder implements Builder<Order> {
     @Nullable
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
+    @Deprecated
+    @Nullable
     private Long lastMessageSequenceNumber;
 
     @Nullable
@@ -752,10 +753,10 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
-     <*  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>>
+     <*  <p>Internal-only field.</p>>
      */
-
-    public OrderBuilder lastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
+    @Deprecated
+    public OrderBuilder lastMessageSequenceNumber(@Nullable final Long lastMessageSequenceNumber) {
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
         return this;
     }
@@ -1131,6 +1132,8 @@ public class OrderBuilder implements Builder<Order> {
         return this.discountCodes;
     }
 
+    @Deprecated
+    @Nullable
     public Long getLastMessageSequenceNumber() {
         return this.lastMessageSequenceNumber;
     }
@@ -1193,7 +1196,6 @@ public class OrderBuilder implements Builder<Order> {
         Objects.requireNonNull(totalPrice, Order.class + ": totalPrice is missing");
         Objects.requireNonNull(orderState, Order.class + ": orderState is missing");
         Objects.requireNonNull(syncInfo, Order.class + ": syncInfo is missing");
-        Objects.requireNonNull(lastMessageSequenceNumber, Order.class + ": lastMessageSequenceNumber is missing");
         Objects.requireNonNull(origin, Order.class + ": origin is missing");
         Objects.requireNonNull(refusedGifts, Order.class + ": refusedGifts is missing");
         return new OrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,

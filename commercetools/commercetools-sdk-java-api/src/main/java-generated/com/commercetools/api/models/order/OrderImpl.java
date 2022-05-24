@@ -80,6 +80,7 @@ public class OrderImpl implements Order, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
+    @Deprecated
     private Long lastMessageSequenceNumber;
 
     private com.commercetools.api.models.cart.CartReference cart;
@@ -429,9 +430,9 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>>
+     <*  <p>Internal-only field.</p>>
      */
-
+    @Deprecated
     public Long getLastMessageSequenceNumber() {
         return this.lastMessageSequenceNumber;
     }
@@ -659,6 +660,7 @@ public class OrderImpl implements Order, ModelBase {
         this.discountCodes = discountCodes;
     }
 
+    @Deprecated
     public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
     }

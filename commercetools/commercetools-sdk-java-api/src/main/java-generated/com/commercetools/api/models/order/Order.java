@@ -53,7 +53,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .orderState(OrderState.OPEN)
  *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
- *             .lastMessageSequenceNumber(0.3)
  *             .origin(CartOrigin.CUSTOMER)
  *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
  *             .build()
@@ -281,9 +280,9 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public List<DiscountCodeInfo> getDiscountCodes();
 
     /**
-     <*  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>>
+     <*  <p>Internal-only field.</p>>
      */
-    @NotNull
+    @Deprecated
     @JsonProperty("lastMessageSequenceNumber")
     public Long getLastMessageSequenceNumber();
 
@@ -433,6 +432,7 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
 
     public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
 
+    @Deprecated
     public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber);
 
     public void setCart(final CartReference cart);

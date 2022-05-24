@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ErrorByExtension {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Extension.</p>>
+     <*  <p>Unique identifier of the Extension.</p>>
      */
     @NotNull
     @JsonProperty("id")

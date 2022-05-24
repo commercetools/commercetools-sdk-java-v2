@@ -147,7 +147,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Order.</p>>
+     <*  <p>Unique identifier of the Order.</p>>
      */
 
     public StagedOrderBuilder id(final String id) {

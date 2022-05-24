@@ -48,7 +48,7 @@ public class ZoneReferenceImpl implements ZoneReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Zone.</p>>
+     <*  <p>Unique identifier of the referenced Zone.</p>>
      */
 
     public String getId() {

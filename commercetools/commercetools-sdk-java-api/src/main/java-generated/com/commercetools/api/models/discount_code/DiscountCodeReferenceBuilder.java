@@ -30,7 +30,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     private com.commercetools.api.models.discount_code.DiscountCode obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced DiscountCode.</p>>
+     <*  <p>Unique identifier of the referenced DiscountCode.</p>>
      */
 
     public DiscountCodeReferenceBuilder id(final String id) {

@@ -66,7 +66,7 @@ public class StateBuilder implements Builder<State> {
     private java.util.List<com.commercetools.api.models.state.StateReference> transitions;
 
     /**
-     <*  <p>Platform-generated unique identifier of the State.</p>>
+     <*  <p>Unique identifier of the State.</p>>
      */
 
     public StateBuilder id(final String id) {

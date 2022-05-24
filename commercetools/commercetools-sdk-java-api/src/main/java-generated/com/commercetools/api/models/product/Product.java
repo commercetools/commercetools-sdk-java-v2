@@ -45,7 +45,7 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
         com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Product.</p>>
+     <*  <p>Unique identifier of the Product.</p>>
      */
     @NotNull
     @JsonProperty("id")

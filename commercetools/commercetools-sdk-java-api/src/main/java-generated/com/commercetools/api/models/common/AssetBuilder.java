@@ -45,7 +45,7 @@ public class AssetBuilder implements Builder<Asset> {
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Asset.</p>>
+     <*  <p>Unique identifier of the Asset.</p>>
      */
 
     public AssetBuilder id(final String id) {

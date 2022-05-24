@@ -42,7 +42,7 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
         com.commercetools.api.models.ResourceIdentifiable<ProductType> {
 
     /**
-     <*  <p>Platform-generated unique identifier for the ProductType.</p>>
+     <*  <p>Unique identifier for the ProductType.</p>>
      */
     @NotNull
     @JsonProperty("id")

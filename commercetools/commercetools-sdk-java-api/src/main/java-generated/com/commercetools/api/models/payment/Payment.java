@@ -48,7 +48,7 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
         com.commercetools.api.models.Customizable<Payment> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Payment.</p>>
+     <*  <p>Unique identifier of the Payment.</p>>
      */
     @NotNull
     @JsonProperty("id")

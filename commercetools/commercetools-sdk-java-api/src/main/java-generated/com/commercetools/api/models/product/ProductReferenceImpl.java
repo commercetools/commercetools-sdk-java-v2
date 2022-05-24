@@ -48,7 +48,7 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Product.</p>>
+     <*  <p>Unique identifier of the referenced Product.</p>>
      */
 
     public String getId() {

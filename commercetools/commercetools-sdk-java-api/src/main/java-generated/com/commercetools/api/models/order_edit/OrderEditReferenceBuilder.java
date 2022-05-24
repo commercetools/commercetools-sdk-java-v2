@@ -30,7 +30,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     private com.commercetools.api.models.order_edit.OrderEdit obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced OrderEdit.</p>>
+     <*  <p>Unique identifier of the referenced OrderEdit.</p>>
      */
 
     public OrderEditReferenceBuilder id(final String id) {

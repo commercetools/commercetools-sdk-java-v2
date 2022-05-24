@@ -72,7 +72,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShippingMethod.</p>>
+     <*  <p>Unique identifier of the ShippingMethod.</p>>
      */
 
     public ShippingMethodBuilder id(final String id) {

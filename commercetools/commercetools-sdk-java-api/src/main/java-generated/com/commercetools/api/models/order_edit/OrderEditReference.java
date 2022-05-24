@@ -41,7 +41,7 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     public OrderEdit getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced OrderEdit.</p>>
+     <*  <p>Unique identifier of the referenced OrderEdit.</p>>
      */
     @NotNull
     @JsonProperty("id")

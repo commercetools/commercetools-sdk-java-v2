@@ -42,7 +42,7 @@ public interface ProductDiscountReference
     public ProductDiscount getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>>
+     <*  <p>Unique identifier of the referenced ProductDiscount.</p>>
      */
     @NotNull
     @JsonProperty("id")

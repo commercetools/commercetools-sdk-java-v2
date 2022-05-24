@@ -65,7 +65,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier for the ProductType.</p>>
+     <*  <p>Unique identifier for the ProductType.</p>>
      */
 
     public String getId() {

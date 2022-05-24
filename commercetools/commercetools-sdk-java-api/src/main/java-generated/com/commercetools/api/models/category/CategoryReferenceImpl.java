@@ -48,7 +48,7 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Category.</p>>
+     <*  <p>Unique identifier of the referenced Category.</p>>
      */
 
     public String getId() {

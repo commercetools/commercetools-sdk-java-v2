@@ -78,7 +78,7 @@ public class ReviewBuilder implements Builder<Review> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Review.</p>>
+     <*  <p>Unique identifier of the Review.</p>>
      */
 
     public ReviewBuilder id(final String id) {

@@ -41,7 +41,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     public CartDiscount getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>>
+     <*  <p>Unique identifier of the referenced CartDiscount.</p>>
      */
     @NotNull
     @JsonProperty("id")

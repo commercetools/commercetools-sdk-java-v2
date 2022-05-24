@@ -60,7 +60,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     private com.commercetools.api.models.subscription.SubscriptionHealthStatus status;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Subscription.</p>>
+     <*  <p>Unique identifier of the Subscription.</p>>
      */
 
     public SubscriptionBuilder id(final String id) {

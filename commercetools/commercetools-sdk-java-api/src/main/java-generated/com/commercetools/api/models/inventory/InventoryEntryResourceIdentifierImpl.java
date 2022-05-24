@@ -47,7 +47,7 @@ public class InventoryEntryResourceIdentifierImpl implements InventoryEntryResou
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced InventoryEntry. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced InventoryEntry. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public String getId() {

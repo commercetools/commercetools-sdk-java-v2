@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a commercetools Project.</p>
+ *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface OrderPatchImport {
     public String getOrderNumber();
 
     /**
-     <*  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>>
+     <*  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>>
      */
     @NotNull
     @Valid

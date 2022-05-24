@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Representation for an update of a ProductVariant. Use this type to import updates for existing ProductVariants in a commercetools Project.</p>
+ *  <p>Representation for an update of a ProductVariant. Use this type to import updates for existing ProductVariants in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
@@ -48,7 +48,7 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public com.commercetools.importapi.models.productvariants.Attributes getAttributes() {

@@ -67,7 +67,7 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
         com.commercetools.api.models.Customizable<Order>, com.commercetools.api.models.order.OrderLike<Order> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Order.</p>>
+     <*  <p>Unique identifier of the Order.</p>>
      */
     @NotNull
     @JsonProperty("id")

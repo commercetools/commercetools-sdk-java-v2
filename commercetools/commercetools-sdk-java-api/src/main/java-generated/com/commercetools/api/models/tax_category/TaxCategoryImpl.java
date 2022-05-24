@@ -65,7 +65,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the TaxCategory.</p>>
+     <*  <p>Unique identifier of the TaxCategory.</p>>
      */
 
     public String getId() {
@@ -129,7 +129,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>>
+     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.TaxRate> getRates() {

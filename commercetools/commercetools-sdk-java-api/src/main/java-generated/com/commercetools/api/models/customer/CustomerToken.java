@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerToken {
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomerToken.</p>>
+     <*  <p>Unique identifier of the CustomerToken.</p>>
      */
     @NotNull
     @JsonProperty("id")

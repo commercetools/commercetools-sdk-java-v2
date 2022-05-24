@@ -71,7 +71,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     <*  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
      */
 
     public TaxedItemPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.TypedMoney totalTax) {
@@ -80,7 +80,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     <*  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
      */
 
     public TaxedItemPriceBuilder totalTax(

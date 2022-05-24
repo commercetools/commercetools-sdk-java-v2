@@ -57,7 +57,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the ProductSelection.</p>>
+     <*  <p>Unique identifier of the ProductSelection.</p>>
      */
 
     public ProductSelectionBuilder id(final String id) {

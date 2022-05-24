@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Hit {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Order.</p>>
+     <*  <p>Unique identifier of the Order.</p>>
      */
     @NotNull
     @JsonProperty("id")

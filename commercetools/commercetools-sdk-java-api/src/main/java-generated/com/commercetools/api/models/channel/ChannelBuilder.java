@@ -66,7 +66,7 @@ public class ChannelBuilder implements Builder<Channel> {
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Channel.</p>>
+     <*  <p>Unique identifier of the Channel.</p>>
      */
 
     public ChannelBuilder id(final String id) {

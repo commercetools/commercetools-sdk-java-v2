@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a commercetools Project.</p>
+ *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
@@ -43,7 +43,7 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
     }
 
     /**
-     <*  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>>
+     <*  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>>
      */
 
     public com.commercetools.importapi.models.order_patches.OrderField getFields() {

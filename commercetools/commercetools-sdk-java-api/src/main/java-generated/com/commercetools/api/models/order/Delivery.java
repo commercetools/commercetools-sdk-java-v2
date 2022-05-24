@@ -37,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Delivery extends com.commercetools.api.models.Customizable<Delivery> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Delivery.</p>>
+     <*  <p>Unique identifier of the Delivery.</p>>
      */
     @NotNull
     @JsonProperty("id")

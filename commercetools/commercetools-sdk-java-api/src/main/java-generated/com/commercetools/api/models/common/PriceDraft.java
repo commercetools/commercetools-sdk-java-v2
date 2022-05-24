@@ -79,7 +79,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      <*  <p>Set this field to add a DiscountedPrice from an external service.</p>
-    *  <p>The commercetools Platform sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+    *  <p>The API sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
     *  <ul>
     *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
     *   <li>A ProductDiscountValue of type <code>external</code>.</li>

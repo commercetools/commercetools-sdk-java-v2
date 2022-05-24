@@ -61,7 +61,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ReturnItem.</p>>
+     <*  <p>Unique identifier of the ReturnItem.</p>>
      */
 
     public String getId() {

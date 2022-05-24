@@ -84,7 +84,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the CartDiscount.</p>>
+     <*  <p>Unique identifier of the CartDiscount.</p>>
      */
 
     public CartDiscountBuilder id(final String id) {
@@ -300,7 +300,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     <*  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>>
+     <*  <p>The references of all the resources that are addressed in the predicate.</p>>
      */
 
     public CartDiscountBuilder references(final com.commercetools.api.models.common.Reference... references) {
@@ -309,7 +309,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     <*  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>>
+     <*  <p>The references of all the resources that are addressed in the predicate.</p>>
      */
 
     public CartDiscountBuilder references(
@@ -319,7 +319,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     <*  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>>
+     <*  <p>The references of all the resources that are addressed in the predicate.</p>>
      */
 
     public CartDiscountBuilder plusReferences(final com.commercetools.api.models.common.Reference... references) {
@@ -331,7 +331,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     <*  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>>
+     <*  <p>The references of all the resources that are addressed in the predicate.</p>>
      */
 
     public CartDiscountBuilder plusReferences(
@@ -344,7 +344,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     <*  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>>
+     <*  <p>The references of all the resources that are addressed in the predicate.</p>>
      */
 
     public CartDiscountBuilder withReferences(

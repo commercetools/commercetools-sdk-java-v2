@@ -48,7 +48,7 @@ public class DiscountCodeReferenceImpl implements DiscountCodeReference, ModelBa
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced DiscountCode.</p>>
+     <*  <p>Unique identifier of the referenced DiscountCode.</p>>
      */
 
     public String getId() {

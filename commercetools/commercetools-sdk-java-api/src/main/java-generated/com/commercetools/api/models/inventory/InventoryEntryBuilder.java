@@ -66,7 +66,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the InventoryEntry.</p>>
+     <*  <p>Unique identifier of the InventoryEntry.</p>>
      */
 
     public InventoryEntryBuilder id(final String id) {

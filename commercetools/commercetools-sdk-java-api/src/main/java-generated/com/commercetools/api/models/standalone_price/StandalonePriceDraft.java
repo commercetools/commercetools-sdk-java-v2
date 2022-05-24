@@ -46,7 +46,7 @@ public interface StandalonePriceDraft {
     public String getKey();
 
     /**
-     <*  <p>Specifies to which ProductVariant the Platform associates this Price. It is not validated to exist in product variants.</p>>
+     <*  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>>
      */
     @NotNull
     @JsonProperty("sku")

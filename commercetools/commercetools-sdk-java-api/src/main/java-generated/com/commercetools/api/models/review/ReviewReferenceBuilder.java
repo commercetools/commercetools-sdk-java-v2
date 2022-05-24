@@ -30,7 +30,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     private com.commercetools.api.models.review.Review obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Review.</p>>
+     <*  <p>Unique identifier of the referenced Review.</p>>
      */
 
     public ReviewReferenceBuilder id(final String id) {

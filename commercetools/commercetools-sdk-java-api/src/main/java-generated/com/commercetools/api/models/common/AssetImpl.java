@@ -55,7 +55,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Asset.</p>>
+     <*  <p>Unique identifier of the Asset.</p>>
      */
 
     public String getId() {

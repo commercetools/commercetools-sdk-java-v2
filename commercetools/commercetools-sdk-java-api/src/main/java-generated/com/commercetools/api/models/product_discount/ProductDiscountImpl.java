@@ -89,7 +89,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ProductDiscount.</p>>
+     <*  <p>Unique identifier of the ProductDiscount.</p>>
      */
 
     public String getId() {

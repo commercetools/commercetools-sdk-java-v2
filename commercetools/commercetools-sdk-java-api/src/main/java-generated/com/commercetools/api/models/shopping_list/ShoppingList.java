@@ -46,7 +46,7 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
         com.commercetools.api.models.Customizable<ShoppingList> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShoppingList.</p>>
+     <*  <p>Unique identifier of the ShoppingList.</p>>
      */
     @NotNull
     @JsonProperty("id")

@@ -75,7 +75,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShoppingList.</p>>
+     <*  <p>Unique identifier of the ShoppingList.</p>>
      */
 
     public ShoppingListBuilder id(final String id) {

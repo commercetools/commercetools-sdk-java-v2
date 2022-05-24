@@ -62,7 +62,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public ZonedDateTime getDeactivatedAt();
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>>
+     <*  <p>Unique identifier of the ShoppingListLineItem.</p>>
      */
     @NotNull
     @JsonProperty("id")

@@ -51,7 +51,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     private String customLineItemId;
 
     /**
-     <*  <p>Platform-generated unique identifier of the ReturnItem.</p>>
+     <*  <p>Unique identifier of the ReturnItem.</p>>
      */
 
     public CustomLineItemReturnItemBuilder id(final String id) {

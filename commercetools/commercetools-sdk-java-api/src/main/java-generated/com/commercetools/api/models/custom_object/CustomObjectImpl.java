@@ -61,7 +61,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomObject.</p>>
+     <*  <p>Unique identifier of the CustomObject.</p>>
      */
 
     public String getId() {
@@ -125,7 +125,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>>
+     <*  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>>
      */
 
     public java.lang.Object getValue() {

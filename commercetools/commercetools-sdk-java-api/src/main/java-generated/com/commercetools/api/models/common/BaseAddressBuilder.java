@@ -98,7 +98,7 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     private String externalId;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Address.</p>>
+     <*  <p>Unique identifier of the Address.</p>>
      */
 
     public BaseAddressBuilder id(@Nullable final String id) {

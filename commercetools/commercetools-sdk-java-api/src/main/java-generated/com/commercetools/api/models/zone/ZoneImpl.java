@@ -65,7 +65,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Zone.</p>>
+     <*  <p>Unique identifier of the Zone.</p>>
      */
 
     public String getId() {

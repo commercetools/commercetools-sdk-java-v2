@@ -166,7 +166,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Cart.</p>>
+     <*  <p>Unique identifier of the Cart.</p>>
      */
 
     public String getId() {

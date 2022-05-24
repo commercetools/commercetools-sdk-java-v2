@@ -54,7 +54,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the TaxCategory.</p>>
+     <*  <p>Unique identifier of the TaxCategory.</p>>
      */
 
     public TaxCategoryBuilder id(final String id) {
@@ -147,7 +147,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>>
+     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>>
      */
 
     public TaxCategoryBuilder rates(final com.commercetools.api.models.tax_category.TaxRate... rates) {
@@ -156,7 +156,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>>
+     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>>
      */
 
     public TaxCategoryBuilder rates(final java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates) {
@@ -165,7 +165,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>>
+     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>>
      */
 
     public TaxCategoryBuilder plusRates(final com.commercetools.api.models.tax_category.TaxRate... rates) {
@@ -177,7 +177,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>>
+     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>>
      */
 
     public TaxCategoryBuilder plusRates(
@@ -190,7 +190,7 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>>
+     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>>
      */
 
     public TaxCategoryBuilder withRates(

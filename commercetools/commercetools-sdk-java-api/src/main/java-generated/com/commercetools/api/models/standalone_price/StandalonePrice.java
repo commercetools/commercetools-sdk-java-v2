@@ -46,7 +46,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StandalonePrice extends BaseResource, com.commercetools.api.models.DomainResource<StandalonePrice> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the StandalonePrice.</p>>
+     <*  <p>Unique identifier of the StandalonePrice.</p>>
      */
     @NotNull
     @JsonProperty("id")
@@ -152,7 +152,7 @@ public interface StandalonePrice extends BaseResource, com.commercetools.api.mod
     public List<PriceTier> getTiers();
 
     /**
-     <*  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
+     <*  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
      */
     @Valid
     @JsonProperty("discounted")

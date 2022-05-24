@@ -34,7 +34,7 @@ public class ErrorByExtensionImpl implements ErrorByExtension, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Extension.</p>>
+     <*  <p>Unique identifier of the Extension.</p>>
      */
 
     public String getId() {

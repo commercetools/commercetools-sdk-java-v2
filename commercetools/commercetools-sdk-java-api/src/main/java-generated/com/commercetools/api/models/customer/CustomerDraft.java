@@ -219,7 +219,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     <*  <p>Defines whether a password is required for the Customer that is used for platform-internal authentication.</p>>
+     <*  <p>Defines whether a password field is a required field for the Customer.</p>>
      */
 
     @JsonProperty("authenticationMode")

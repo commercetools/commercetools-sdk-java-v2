@@ -88,7 +88,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShippingMethod.</p>>
+     <*  <p>Unique identifier of the ShippingMethod.</p>>
      */
 
     public String getId() {

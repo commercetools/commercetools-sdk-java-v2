@@ -48,7 +48,7 @@ public class StateReferenceImpl implements StateReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced State.</p>>
+     <*  <p>Unique identifier of the referenced State.</p>>
      */
 
     public String getId() {

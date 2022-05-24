@@ -48,7 +48,7 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced OrderEdit.</p>>
+     <*  <p>Unique identifier of the referenced OrderEdit.</p>>
      */
 
     public String getId() {

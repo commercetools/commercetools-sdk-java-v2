@@ -52,7 +52,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Cart from which you can create an Order.</p>>
+     <*  <p>Unique identifier of the Cart from which you can create an Order.</p>>
      */
     @Deprecated
     public OrderFromCartDraftBuilder id(@Nullable final String id) {

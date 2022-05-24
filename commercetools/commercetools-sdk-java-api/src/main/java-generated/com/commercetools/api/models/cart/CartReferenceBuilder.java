@@ -30,7 +30,7 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     private com.commercetools.api.models.cart.Cart obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Cart.</p>>
+     <*  <p>Unique identifier of the referenced Cart.</p>>
      */
 
     public CartReferenceBuilder id(final String id) {

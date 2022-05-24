@@ -54,7 +54,7 @@ public class PriceBuilder implements Builder<Price> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of this Price.</p>>
+     <*  <p>Unique identifier of this Price.</p>>
      */
 
     public PriceBuilder id(final String id) {
@@ -150,7 +150,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     <*  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>>
+     <*  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>>
      */
 
     public PriceBuilder discounted(
@@ -160,7 +160,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     <*  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>>
+     <*  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>>
      */
 
     public PriceBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {

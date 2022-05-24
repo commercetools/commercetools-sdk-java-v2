@@ -97,7 +97,7 @@ public interface Record {
     public Label getPreviousLabel();
 
     /**
-     <*  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>>
+     <*  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>>
      */
     @NotNull
     @Valid

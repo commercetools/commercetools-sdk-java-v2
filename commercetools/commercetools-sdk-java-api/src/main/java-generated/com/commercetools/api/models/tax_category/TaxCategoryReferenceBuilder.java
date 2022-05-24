@@ -30,7 +30,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     private com.commercetools.api.models.tax_category.TaxCategory obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>>
+     <*  <p>Unique identifier of the referenced TaxCategory.</p>>
      */
 
     public TaxCategoryReferenceBuilder id(final String id) {

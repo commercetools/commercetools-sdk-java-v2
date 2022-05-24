@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The request body to import ProductTypes. Contains data for ProductTypes to be created or updated in a commercetools Project.</p>
+ *  <p>The request body to import ProductTypes. Contains data for ProductTypes to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

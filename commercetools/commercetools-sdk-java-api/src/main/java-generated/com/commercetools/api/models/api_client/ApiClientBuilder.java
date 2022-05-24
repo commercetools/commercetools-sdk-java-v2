@@ -50,7 +50,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     private Integer refreshTokenValiditySeconds;
 
     /**
-     <*  <p>Platform-generated unique identifier of the APIClient. This is the OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>>
+     <*  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>>
      */
 
     public ApiClientBuilder id(final String id) {

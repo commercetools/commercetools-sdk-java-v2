@@ -30,7 +30,7 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     private com.commercetools.api.models.zone.Zone obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Zone.</p>>
+     <*  <p>Unique identifier of the referenced Zone.</p>>
      */
 
     public ZoneReferenceBuilder id(final String id) {

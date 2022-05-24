@@ -48,7 +48,7 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Payment.</p>>
+     <*  <p>Unique identifier of the referenced Payment.</p>>
      */
 
     public String getId() {

@@ -41,7 +41,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     public Customer getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Customer.</p>>
+     <*  <p>Unique identifier of the referenced Customer.</p>>
      */
     @NotNull
     @JsonProperty("id")

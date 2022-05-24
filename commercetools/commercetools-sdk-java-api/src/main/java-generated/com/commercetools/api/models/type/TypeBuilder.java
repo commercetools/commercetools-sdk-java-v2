@@ -57,7 +57,7 @@ public class TypeBuilder implements Builder<Type> {
     private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Type.</p>>
+     <*  <p>Unique identifier of the Type.</p>>
      */
 
     public TypeBuilder id(final String id) {

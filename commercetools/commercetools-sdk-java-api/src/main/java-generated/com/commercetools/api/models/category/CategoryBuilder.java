@@ -81,7 +81,7 @@ public class CategoryBuilder implements Builder<Category> {
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Category.</p>>
+     <*  <p>Unique identifier of the Category.</p>>
      */
 
     public CategoryBuilder id(final String id) {

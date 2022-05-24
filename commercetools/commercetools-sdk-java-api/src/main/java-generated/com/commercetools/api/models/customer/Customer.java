@@ -49,7 +49,7 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
         com.commercetools.api.models.Customizable<Customer> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Customer.</p>>
+     <*  <p>Unique identifier of the Customer.</p>>
      */
     @NotNull
     @JsonProperty("id")

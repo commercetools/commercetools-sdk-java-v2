@@ -60,7 +60,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     private com.commercetools.api.models.order.PaymentState oldPaymentState;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     <*  <p>Unique identifier of the Message.</p>>
      */
 
     public OrderPaymentStateChangedMessageBuilder id(final String id) {
@@ -145,7 +145,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public OrderPaymentStateChangedMessageBuilder resource(
@@ -155,7 +155,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
      */
 
     public OrderPaymentStateChangedMessageBuilder resource(

@@ -30,7 +30,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     private com.commercetools.api.models.shopping_list.ShoppingList obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShoppingList.</p>>
+     <*  <p>Unique identifier of the referenced ShoppingList.</p>>
      */
 
     public ShoppingListReferenceBuilder id(final String id) {

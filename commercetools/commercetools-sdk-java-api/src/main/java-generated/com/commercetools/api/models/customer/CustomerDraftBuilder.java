@@ -513,7 +513,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Defines whether a password is required for the Customer that is used for platform-internal authentication.</p>>
+     <*  <p>Defines whether a password field is a required field for the Customer.</p>>
      */
 
     public CustomerDraftBuilder authenticationMode(

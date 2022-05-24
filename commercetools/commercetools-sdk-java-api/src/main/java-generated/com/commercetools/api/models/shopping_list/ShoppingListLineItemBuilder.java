@@ -94,7 +94,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>>
+     <*  <p>Unique identifier of the ShoppingListLineItem.</p>>
      */
 
     public ShoppingListLineItemBuilder id(final String id) {

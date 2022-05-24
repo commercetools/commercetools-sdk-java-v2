@@ -44,7 +44,7 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
         com.commercetools.api.models.Customizable<ProductSelection> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the ProductSelection.</p>>
+     <*  <p>Unique identifier of the ProductSelection.</p>>
      */
     @NotNull
     @JsonProperty("id")

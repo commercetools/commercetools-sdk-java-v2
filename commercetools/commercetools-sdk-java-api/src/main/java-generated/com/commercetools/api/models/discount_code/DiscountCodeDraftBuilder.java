@@ -108,7 +108,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-     <*  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>>
+     <*  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>>
      */
 
     public DiscountCodeDraftBuilder cartDiscounts(
@@ -118,7 +118,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-     <*  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>>
+     <*  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>>
      */
 
     public DiscountCodeDraftBuilder cartDiscounts(
@@ -128,7 +128,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-     <*  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>>
+     <*  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>>
      */
 
     public DiscountCodeDraftBuilder plusCartDiscounts(
@@ -141,7 +141,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-     <*  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>>
+     <*  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>>
      */
 
     public DiscountCodeDraftBuilder plusCartDiscounts(
@@ -156,7 +156,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
-     <*  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>>
+     <*  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>>
      */
 
     public DiscountCodeDraftBuilder withCartDiscounts(

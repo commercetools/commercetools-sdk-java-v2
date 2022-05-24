@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerCreateEmailToken {
 
     /**
-     <*  <p>Platform-generated unique identifier of the email token.</p>>
+     <*  <p>Unique identifier of the email token.</p>>
      */
     @NotNull
     @JsonProperty("id")

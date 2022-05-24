@@ -94,7 +94,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShoppingList.</p>>
+     <*  <p>Unique identifier of the ShoppingList.</p>>
      */
 
     public String getId() {

@@ -55,7 +55,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantPatchBuilder attributes(
@@ -66,7 +66,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
+     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
      */
 
     public ProductVariantPatchBuilder attributes(

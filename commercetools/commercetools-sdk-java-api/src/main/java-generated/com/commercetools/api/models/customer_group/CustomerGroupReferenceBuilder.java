@@ -30,7 +30,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     private com.commercetools.api.models.customer_group.CustomerGroup obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CustomerGroup.</p>>
+     <*  <p>Unique identifier of the referenced CustomerGroup.</p>>
      */
 
     public CustomerGroupReferenceBuilder id(final String id) {

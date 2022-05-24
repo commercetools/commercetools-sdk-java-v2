@@ -42,7 +42,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Delivery.</p>>
+     <*  <p>Unique identifier of the Delivery.</p>>
      */
 
     public DeliveryBuilder id(final String id) {

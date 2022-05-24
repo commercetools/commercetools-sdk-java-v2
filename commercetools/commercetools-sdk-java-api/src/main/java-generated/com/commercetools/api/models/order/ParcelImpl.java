@@ -50,7 +50,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Parcel.</p>>
+     <*  <p>Unique identifier of the Parcel.</p>>
      */
 
     public String getId() {

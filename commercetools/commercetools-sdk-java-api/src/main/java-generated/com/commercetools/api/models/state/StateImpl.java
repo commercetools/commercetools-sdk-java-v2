@@ -81,7 +81,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the State.</p>>
+     <*  <p>Unique identifier of the State.</p>>
      */
 
     public String getId() {

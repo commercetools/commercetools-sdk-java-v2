@@ -141,7 +141,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Customer.</p>>
+     <*  <p>Unique identifier of the Customer.</p>>
      */
 
     public String getId() {

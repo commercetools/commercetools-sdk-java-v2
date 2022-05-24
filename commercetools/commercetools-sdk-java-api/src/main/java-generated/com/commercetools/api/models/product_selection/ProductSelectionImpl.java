@@ -70,7 +70,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ProductSelection.</p>>
+     <*  <p>Unique identifier of the ProductSelection.</p>>
      */
 
     public String getId() {

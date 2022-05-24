@@ -31,7 +31,7 @@ public interface ProductTypeResourceIdentifier
     String PRODUCT_TYPE = "product-type";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductType. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced ProductType. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("id")

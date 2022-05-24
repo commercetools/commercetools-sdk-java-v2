@@ -30,7 +30,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     private com.commercetools.api.models.inventory.InventoryEntry obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>>
+     <*  <p>Unique identifier of the referenced InventoryEntry.</p>>
      */
 
     public InventoryEntryReferenceBuilder id(final String id) {

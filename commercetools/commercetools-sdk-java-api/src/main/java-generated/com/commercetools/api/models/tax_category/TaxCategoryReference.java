@@ -41,7 +41,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     public TaxCategory getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>>
+     <*  <p>Unique identifier of the referenced TaxCategory.</p>>
      */
     @NotNull
     @JsonProperty("id")

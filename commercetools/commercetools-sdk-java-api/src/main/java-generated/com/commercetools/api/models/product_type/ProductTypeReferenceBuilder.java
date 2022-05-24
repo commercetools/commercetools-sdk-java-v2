@@ -30,7 +30,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     private com.commercetools.api.models.product_type.ProductType obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductType.</p>>
+     <*  <p>Unique identifier of the referenced ProductType.</p>>
      */
 
     public ProductTypeReferenceBuilder id(final String id) {

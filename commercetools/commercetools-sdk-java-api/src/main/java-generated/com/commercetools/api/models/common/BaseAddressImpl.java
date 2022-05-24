@@ -117,7 +117,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Address.</p>>
+     <*  <p>Unique identifier of the Address.</p>>
      */
 
     public String getId() {

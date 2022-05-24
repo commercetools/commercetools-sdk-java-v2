@@ -114,7 +114,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the LineItem.</p>>
+     <*  <p>Unique identifier of the LineItem.</p>>
      */
 
     public String getId() {

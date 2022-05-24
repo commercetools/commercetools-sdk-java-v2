@@ -31,7 +31,7 @@ public interface TaxCategoryResourceIdentifier
     String TAX_CATEGORY = "tax-category";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("id")

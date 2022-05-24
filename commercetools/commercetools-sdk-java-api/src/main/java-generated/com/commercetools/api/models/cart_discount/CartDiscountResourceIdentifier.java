@@ -31,7 +31,7 @@ public interface CartDiscountResourceIdentifier
     String CART_DISCOUNT = "cart-discount";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("id")

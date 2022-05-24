@@ -54,7 +54,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
     /**
-     <*  <p>Platform-generated unique identifier of the given Price.</p>>
+     <*  <p>Unique identifier of the given Price.</p>>
      */
 
     public QueryPriceBuilder id(@Nullable final String id) {

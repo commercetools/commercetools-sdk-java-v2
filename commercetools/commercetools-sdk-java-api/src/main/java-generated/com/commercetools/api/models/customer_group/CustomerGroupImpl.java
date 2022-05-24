@@ -61,7 +61,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomerGroup.</p>>
+     <*  <p>Unique identifier of the CustomerGroup.</p>>
      */
 
     public String getId() {

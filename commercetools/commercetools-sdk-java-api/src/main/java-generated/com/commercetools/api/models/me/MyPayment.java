@@ -41,7 +41,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
         com.commercetools.api.models.Customizable<MyPayment> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the MyPayment.</p>>
+     <*  <p>Unique identifier of the MyPayment.</p>>
      */
     @NotNull
     @JsonProperty("id")

@@ -98,7 +98,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Review.</p>>
+     <*  <p>Unique identifier of the Review.</p>>
      */
 
     public String getId() {

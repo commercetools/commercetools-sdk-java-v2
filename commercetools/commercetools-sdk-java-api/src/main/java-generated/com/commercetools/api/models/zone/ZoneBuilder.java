@@ -54,7 +54,7 @@ public class ZoneBuilder implements Builder<Zone> {
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Zone.</p>>
+     <*  <p>Unique identifier of the Zone.</p>>
      */
 
     public ZoneBuilder id(final String id) {

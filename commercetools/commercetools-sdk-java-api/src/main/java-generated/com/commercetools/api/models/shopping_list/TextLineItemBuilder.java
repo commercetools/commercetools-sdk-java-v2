@@ -90,7 +90,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the TextLineItem.</p>>
+     <*  <p>Unique identifier of the TextLineItem.</p>>
      */
 
     public TextLineItemBuilder id(final String id) {

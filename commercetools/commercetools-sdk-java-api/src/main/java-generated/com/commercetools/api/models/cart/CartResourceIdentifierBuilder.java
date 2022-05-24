@@ -29,7 +29,7 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public CartResourceIdentifierBuilder id(@Nullable final String id) {

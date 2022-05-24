@@ -41,7 +41,7 @@ public interface DiscountCodeReference extends Reference, com.commercetools.api.
     public DiscountCode getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced DiscountCode.</p>>
+     <*  <p>Unique identifier of the referenced DiscountCode.</p>>
      */
     @NotNull
     @JsonProperty("id")

@@ -95,7 +95,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>>
+     <*  <p>Unique identifier of the ShoppingListLineItem.</p>>
      */
 
     public String getId() {

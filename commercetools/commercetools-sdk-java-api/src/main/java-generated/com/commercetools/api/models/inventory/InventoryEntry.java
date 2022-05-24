@@ -44,7 +44,7 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
         com.commercetools.api.models.Customizable<InventoryEntry> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the InventoryEntry.</p>>
+     <*  <p>Unique identifier of the InventoryEntry.</p>>
      */
     @NotNull
     @JsonProperty("id")

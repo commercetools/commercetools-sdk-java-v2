@@ -42,7 +42,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Parcel.</p>>
+     <*  <p>Unique identifier of the Parcel.</p>>
      */
 
     public ParcelBuilder id(final String id) {

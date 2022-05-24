@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerChangePassword {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Customer.</p>>
+     <*  <p>Unique identifier of the Customer.</p>>
      */
     @NotNull
     @JsonProperty("id")

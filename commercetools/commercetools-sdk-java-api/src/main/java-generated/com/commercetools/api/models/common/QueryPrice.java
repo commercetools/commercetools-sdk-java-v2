@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface QueryPrice extends com.commercetools.api.models.Customizable<QueryPrice> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the given Price.</p>>
+     <*  <p>Unique identifier of the given Price.</p>>
      */
 
     @JsonProperty("id")

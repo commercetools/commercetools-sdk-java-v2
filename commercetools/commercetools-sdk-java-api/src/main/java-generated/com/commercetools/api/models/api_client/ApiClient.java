@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApiClient {
 
     /**
-     <*  <p>Platform-generated unique identifier of the APIClient. This is the OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>>
+     <*  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>>
      */
     @NotNull
     @JsonProperty("id")

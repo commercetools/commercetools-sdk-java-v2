@@ -41,7 +41,7 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
     public Zone getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Zone.</p>>
+     <*  <p>Unique identifier of the referenced Zone.</p>>
      */
     @NotNull
     @JsonProperty("id")

@@ -90,7 +90,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Payment.</p>>
+     <*  <p>Unique identifier of the Payment.</p>>
      */
 
     public String getId() {

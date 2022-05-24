@@ -74,7 +74,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the OrderEdit.</p>>
+     <*  <p>Unique identifier of the OrderEdit.</p>>
      */
 
     public String getId() {

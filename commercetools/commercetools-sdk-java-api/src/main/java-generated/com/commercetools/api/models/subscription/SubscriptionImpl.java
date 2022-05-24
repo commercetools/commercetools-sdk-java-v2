@@ -74,7 +74,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Subscription.</p>>
+     <*  <p>Unique identifier of the Subscription.</p>>
      */
 
     public String getId() {

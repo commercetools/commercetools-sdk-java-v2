@@ -60,7 +60,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     private Boolean scopedPriceDiscounted;
 
     /**
-     <*  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>>
+     <*  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>>
      */
 
     public ProductVariantBuilder id(final Long id) {

@@ -41,7 +41,7 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     public CustomObject getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CustomObject.</p>>
+     <*  <p>Unique identifier of the referenced CustomObject.</p>>
      */
     @NotNull
     @JsonProperty("id")

@@ -41,7 +41,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     public Category getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Category.</p>>
+     <*  <p>Unique identifier of the referenced Category.</p>>
      */
     @NotNull
     @JsonProperty("id")

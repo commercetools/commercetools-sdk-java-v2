@@ -48,7 +48,7 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShippingMethod.</p>>
+     <*  <p>Unique identifier of the referenced ShippingMethod.</p>>
      */
 
     public String getId() {

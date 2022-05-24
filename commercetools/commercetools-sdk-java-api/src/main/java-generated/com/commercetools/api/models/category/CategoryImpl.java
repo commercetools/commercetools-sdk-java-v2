@@ -101,7 +101,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Category.</p>>
+     <*  <p>Unique identifier of the Category.</p>>
      */
 
     public String getId() {

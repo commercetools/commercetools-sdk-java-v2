@@ -56,7 +56,7 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
         com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Cart.</p>>
+     <*  <p>Unique identifier of the Cart.</p>>
      */
     @NotNull
     @JsonProperty("id")

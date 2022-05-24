@@ -31,7 +31,7 @@ public interface ShoppingListResourceIdentifier
     String SHOPPING_LIST = "shopping-list";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("id")

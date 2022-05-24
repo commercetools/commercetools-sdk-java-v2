@@ -30,7 +30,7 @@ public interface CartResourceIdentifier extends ResourceIdentifier, com.commerce
     String CART = "cart";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("id")

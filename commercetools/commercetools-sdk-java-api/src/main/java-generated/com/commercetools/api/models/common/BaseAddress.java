@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface BaseAddress {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Address.</p>>
+     <*  <p>Unique identifier of the Address.</p>>
      */
 
     @JsonProperty("id")

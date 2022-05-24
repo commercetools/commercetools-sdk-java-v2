@@ -42,7 +42,7 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
         com.commercetools.api.models.ResourceIdentifiable<TaxCategory> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the TaxCategory.</p>>
+     <*  <p>Unique identifier of the TaxCategory.</p>>
      */
     @NotNull
     @JsonProperty("id")
@@ -98,7 +98,7 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
     public String getDescription();
 
     /**
-     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>>
+     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>>
      */
     @NotNull
     @Valid

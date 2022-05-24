@@ -67,7 +67,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     <*  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalTax() {

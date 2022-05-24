@@ -41,7 +41,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     public State getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced State.</p>>
+     <*  <p>Unique identifier of the referenced State.</p>>
      */
     @NotNull
     @JsonProperty("id")

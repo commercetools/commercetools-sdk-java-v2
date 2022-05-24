@@ -47,7 +47,7 @@ public class CategoryResourceIdentifierImpl implements CategoryResourceIdentifie
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public String getId() {

@@ -43,7 +43,7 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
         com.commercetools.api.models.Customizable<CustomerGroup> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomerGroup.</p>>
+     <*  <p>Unique identifier of the CustomerGroup.</p>>
      */
     @NotNull
     @JsonProperty("id")

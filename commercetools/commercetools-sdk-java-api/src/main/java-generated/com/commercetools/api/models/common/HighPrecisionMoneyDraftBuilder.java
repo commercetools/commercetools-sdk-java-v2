@@ -37,7 +37,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
     /**
      <*  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
     *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
-    *  <p>If <code>centAmount</code> is not provided, the commercetools Platform calculates the value automatically using the default rounding mode half even.</p>>
+    *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>>
      */
 
     public HighPrecisionMoneyDraftBuilder centAmount(@Nullable final Long centAmount) {

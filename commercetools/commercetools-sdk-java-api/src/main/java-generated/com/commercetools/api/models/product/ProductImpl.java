@@ -78,7 +78,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Product.</p>>
+     <*  <p>Unique identifier of the Product.</p>>
      */
 
     public String getId() {

@@ -30,7 +30,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     private com.commercetools.api.models.payment.Payment obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Payment.</p>>
+     <*  <p>Unique identifier of the referenced Payment.</p>>
      */
 
     public PaymentReferenceBuilder id(final String id) {

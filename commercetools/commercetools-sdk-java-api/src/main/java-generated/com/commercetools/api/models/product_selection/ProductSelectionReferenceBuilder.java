@@ -30,7 +30,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     private com.commercetools.api.models.product_selection.ProductSelection obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductSelection.</p>>
+     <*  <p>Unique identifier of the referenced ProductSelection.</p>>
      */
 
     public ProductSelectionReferenceBuilder id(final String id) {

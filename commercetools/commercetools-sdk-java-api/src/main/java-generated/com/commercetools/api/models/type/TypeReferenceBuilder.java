@@ -30,7 +30,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     private com.commercetools.api.models.type.Type obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Type.</p>>
+     <*  <p>Unique identifier of the referenced Type.</p>>
      */
 
     public TypeReferenceBuilder id(final String id) {

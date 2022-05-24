@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Parcel extends com.commercetools.api.models.Customizable<Parcel> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Parcel.</p>>
+     <*  <p>Unique identifier of the Parcel.</p>>
      */
     @NotNull
     @JsonProperty("id")

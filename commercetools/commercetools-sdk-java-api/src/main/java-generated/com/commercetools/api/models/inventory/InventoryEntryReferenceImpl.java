@@ -48,7 +48,7 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>>
+     <*  <p>Unique identifier of the referenced InventoryEntry.</p>>
      */
 
     public String getId() {

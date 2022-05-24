@@ -30,7 +30,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     private com.commercetools.api.models.customer.Customer obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Customer.</p>>
+     <*  <p>Unique identifier of the referenced Customer.</p>>
      */
 
     public CustomerReferenceBuilder id(final String id) {

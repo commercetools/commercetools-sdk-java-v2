@@ -35,7 +35,7 @@ public interface ProductSelectionReference
     String PRODUCT_SELECTION = "product-selection";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductSelection.</p>>
+     <*  <p>Unique identifier of the referenced ProductSelection.</p>>
      */
     @NotNull
     @JsonProperty("id")

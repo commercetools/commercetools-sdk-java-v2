@@ -54,7 +54,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
 
     /**
-     <*  <p>Platform-generated unique identifier for the ProductType.</p>>
+     <*  <p>Unique identifier for the ProductType.</p>>
      */
 
     public ProductTypeBuilder id(final String id) {

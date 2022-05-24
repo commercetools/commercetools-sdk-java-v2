@@ -29,7 +29,7 @@ public class PaymentResourceIdentifierBuilder implements Builder<PaymentResource
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Payment. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced Payment. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public PaymentResourceIdentifierBuilder id(@Nullable final String id) {

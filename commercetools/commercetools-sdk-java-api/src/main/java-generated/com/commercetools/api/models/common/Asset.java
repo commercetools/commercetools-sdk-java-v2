@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Asset extends com.commercetools.api.models.Customizable<Asset> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Asset.</p>>
+     <*  <p>Unique identifier of the Asset.</p>>
      */
     @NotNull
     @JsonProperty("id")

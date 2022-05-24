@@ -51,7 +51,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     private String lineItemId;
 
     /**
-     <*  <p>Platform-generated unique identifier of the ReturnItem.</p>>
+     <*  <p>Unique identifier of the ReturnItem.</p>>
      */
 
     public LineItemReturnItemBuilder id(final String id) {

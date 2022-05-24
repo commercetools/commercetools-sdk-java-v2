@@ -30,7 +30,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     private com.commercetools.api.models.category.Category obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Category.</p>>
+     <*  <p>Unique identifier of the referenced Category.</p>>
      */
 
     public CategoryReferenceBuilder id(final String id) {

@@ -38,7 +38,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
     public CustomFieldsDraft getCustom();
 
     /**
-     <*  <p>Unique identifier for the Address. Not recommended to set it manually since the Platform overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field to let the Platform generate the ID for the Address.</p>>
+     <*  <p>Unique identifier for the Address. Not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>>
      */
 
     @JsonProperty("id")

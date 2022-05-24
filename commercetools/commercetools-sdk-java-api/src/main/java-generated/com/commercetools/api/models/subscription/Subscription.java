@@ -43,7 +43,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Subscription extends BaseResource, com.commercetools.api.models.DomainResource<Subscription> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Subscription.</p>>
+     <*  <p>Unique identifier of the Subscription.</p>>
      */
     @NotNull
     @JsonProperty("id")

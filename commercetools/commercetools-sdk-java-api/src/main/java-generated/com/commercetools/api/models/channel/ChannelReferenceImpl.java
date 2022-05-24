@@ -48,7 +48,7 @@ public class ChannelReferenceImpl implements ChannelReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Channel.</p>>
+     <*  <p>Unique identifier of the referenced Channel.</p>>
      */
 
     public String getId() {

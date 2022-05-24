@@ -47,7 +47,7 @@ public class CartDiscountResourceIdentifierImpl implements CartDiscountResourceI
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced CartDiscount. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public String getId() {

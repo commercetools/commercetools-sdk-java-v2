@@ -48,7 +48,7 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShoppingList.</p>>
+     <*  <p>Unique identifier of the referenced ShoppingList.</p>>
      */
 
     public String getId() {

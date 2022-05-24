@@ -48,7 +48,7 @@ public class ProductDiscountReferenceImpl implements ProductDiscountReference, M
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>>
+     <*  <p>Unique identifier of the referenced ProductDiscount.</p>>
      */
 
     public String getId() {

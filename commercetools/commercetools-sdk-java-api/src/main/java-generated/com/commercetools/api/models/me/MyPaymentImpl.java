@@ -58,7 +58,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the MyPayment.</p>>
+     <*  <p>Unique identifier of the MyPayment.</p>>
      */
 
     public String getId() {

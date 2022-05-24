@@ -85,7 +85,7 @@ public interface ResourceIdentifier {
     public ReferenceTypeId getTypeId();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>>
+     <*  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>>
      */
 
     @JsonProperty("id")

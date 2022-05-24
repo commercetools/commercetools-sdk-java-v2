@@ -30,7 +30,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
     private com.commercetools.api.models.cart_discount.CartDiscount obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>>
+     <*  <p>Unique identifier of the referenced CartDiscount.</p>>
      */
 
     public CartDiscountReferenceBuilder id(final String id) {

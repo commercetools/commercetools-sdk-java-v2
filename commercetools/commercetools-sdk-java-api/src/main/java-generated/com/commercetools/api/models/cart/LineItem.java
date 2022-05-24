@@ -52,7 +52,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItem extends com.commercetools.api.models.Customizable<LineItem> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the LineItem.</p>>
+     <*  <p>Unique identifier of the LineItem.</p>>
      */
     @NotNull
     @JsonProperty("id")

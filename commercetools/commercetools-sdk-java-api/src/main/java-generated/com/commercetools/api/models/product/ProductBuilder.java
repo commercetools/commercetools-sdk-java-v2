@@ -63,7 +63,7 @@ public class ProductBuilder implements Builder<Product> {
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Product.</p>>
+     <*  <p>Unique identifier of the Product.</p>>
      */
 
     public ProductBuilder id(final String id) {

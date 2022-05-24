@@ -41,7 +41,7 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     public Review getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Review.</p>>
+     <*  <p>Unique identifier of the referenced Review.</p>>
      */
     @NotNull
     @JsonProperty("id")

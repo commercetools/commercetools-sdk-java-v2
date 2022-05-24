@@ -30,7 +30,7 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
     String STATE = "state";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     @JsonProperty("id")

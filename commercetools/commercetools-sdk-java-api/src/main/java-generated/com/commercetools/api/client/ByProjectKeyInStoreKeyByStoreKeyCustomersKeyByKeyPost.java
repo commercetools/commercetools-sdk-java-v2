@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the customer exists in the commercetools project but the stores field references a different store, this method returns a ResourceNotFound error.</p>
+ *  <p>If the customer exists in the project but the stores field references a different store, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

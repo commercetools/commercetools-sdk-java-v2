@@ -66,7 +66,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Extension.</p>>
+     <*  <p>Unique identifier of the Extension.</p>>
      */
 
     public String getId() {
@@ -122,7 +122,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Information necessary for the commercetools Platform to call the Extension.</p>>
+     <*  <p>The configuration for the Extension, including its type, location and authentication details.</p>>
      */
 
     public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
@@ -138,7 +138,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>>
+     <*  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>>
      */
 
     public Integer getTimeoutInMs() {

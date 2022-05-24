@@ -29,7 +29,7 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public OrderEditResourceIdentifierBuilder id(@Nullable final String id) {

@@ -45,7 +45,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Transaction.</p>>
+     <*  <p>Unique identifier of the Transaction.</p>>
      */
 
     public TransactionBuilder id(final String id) {

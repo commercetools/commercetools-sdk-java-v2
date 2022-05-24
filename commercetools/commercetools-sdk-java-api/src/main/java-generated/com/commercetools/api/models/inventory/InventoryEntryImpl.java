@@ -81,7 +81,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the InventoryEntry.</p>>
+     <*  <p>Unique identifier of the InventoryEntry.</p>>
      */
 
     public String getId() {

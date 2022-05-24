@@ -48,7 +48,7 @@ public class TaxCategoryReferenceImpl implements TaxCategoryReference, ModelBase
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>>
+     <*  <p>Unique identifier of the referenced TaxCategory.</p>>
      */
 
     public String getId() {

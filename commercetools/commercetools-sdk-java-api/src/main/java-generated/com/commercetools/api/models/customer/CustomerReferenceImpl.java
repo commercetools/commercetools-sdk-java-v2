@@ -48,7 +48,7 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Customer.</p>>
+     <*  <p>Unique identifier of the referenced Customer.</p>>
      */
 
     public String getId() {

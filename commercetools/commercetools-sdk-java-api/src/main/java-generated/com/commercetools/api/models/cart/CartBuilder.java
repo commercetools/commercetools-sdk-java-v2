@@ -129,7 +129,7 @@ public class CartBuilder implements Builder<Cart> {
     private Long totalLineItemQuantity;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Cart.</p>>
+     <*  <p>Unique identifier of the Cart.</p>>
      */
 
     public CartBuilder id(final String id) {

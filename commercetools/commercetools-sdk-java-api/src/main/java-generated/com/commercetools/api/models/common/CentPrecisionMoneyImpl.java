@@ -63,7 +63,7 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
     }
 
     /**
-     <*  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>>
+     <*  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>>
      */
 
     public com.commercetools.api.models.common.MoneyType getType() {

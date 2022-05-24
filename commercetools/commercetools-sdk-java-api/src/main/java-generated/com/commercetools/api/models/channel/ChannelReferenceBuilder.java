@@ -30,7 +30,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     private com.commercetools.api.models.channel.Channel obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Channel.</p>>
+     <*  <p>Unique identifier of the referenced Channel.</p>>
      */
 
     public ChannelReferenceBuilder id(final String id) {

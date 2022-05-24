@@ -30,7 +30,7 @@ public class HitBuilder implements Builder<Hit> {
     private Double relevance;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Order.</p>>
+     <*  <p>Unique identifier of the Order.</p>>
      */
 
     public HitBuilder id(final String id) {

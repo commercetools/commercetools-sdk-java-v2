@@ -75,7 +75,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the StandalonePrice.</p>>
+     <*  <p>Unique identifier of the StandalonePrice.</p>>
      */
 
     public StandalonePriceBuilder id(final String id) {
@@ -311,7 +311,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     <*  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
+     <*  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
      */
 
     public StandalonePriceBuilder discounted(
@@ -321,7 +321,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     <*  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
+     <*  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
      */
 
     public StandalonePriceBuilder discounted(

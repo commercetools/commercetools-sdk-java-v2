@@ -48,7 +48,7 @@ public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBa
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CustomObject.</p>>
+     <*  <p>Unique identifier of the referenced CustomObject.</p>>
      */
 
     public String getId() {

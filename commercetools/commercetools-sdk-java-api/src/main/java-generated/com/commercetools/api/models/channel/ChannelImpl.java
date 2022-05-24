@@ -82,7 +82,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Channel.</p>>
+     <*  <p>Unique identifier of the Channel.</p>>
      */
 
     public String getId() {

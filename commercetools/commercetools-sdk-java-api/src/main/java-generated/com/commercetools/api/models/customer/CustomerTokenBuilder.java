@@ -41,7 +41,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     private String value;
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomerToken.</p>>
+     <*  <p>Unique identifier of the CustomerToken.</p>>
      */
 
     public CustomerTokenBuilder id(final String id) {

@@ -48,7 +48,7 @@ public class ReviewReferenceImpl implements ReviewReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Review.</p>>
+     <*  <p>Unique identifier of the referenced Review.</p>>
      */
 
     public String getId() {

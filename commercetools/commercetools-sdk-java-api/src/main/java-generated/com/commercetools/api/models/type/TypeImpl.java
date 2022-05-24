@@ -70,7 +70,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Type.</p>>
+     <*  <p>Unique identifier of the Type.</p>>
      */
 
     public String getId() {

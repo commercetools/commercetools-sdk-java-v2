@@ -72,7 +72,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     private java.time.ZonedDateTime validUntil;
 
     /**
-     <*  <p>Platform-generated unique identifier of the ProductDiscount.</p>>
+     <*  <p>Unique identifier of the ProductDiscount.</p>>
      */
 
     public ProductDiscountBuilder id(final String id) {

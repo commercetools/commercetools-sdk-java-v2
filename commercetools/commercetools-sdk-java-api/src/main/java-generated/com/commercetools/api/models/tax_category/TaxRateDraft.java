@@ -47,7 +47,7 @@ public interface TaxRateDraft {
     public Double getAmount();
 
     /**
-     <*  <p>Set to <code>true</code>, if tax should be included in Prices and the <code>taxedPrice</code> should be present on Line Items. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>>
+     <*  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>>
      */
     @NotNull
     @JsonProperty("includedInPrice")

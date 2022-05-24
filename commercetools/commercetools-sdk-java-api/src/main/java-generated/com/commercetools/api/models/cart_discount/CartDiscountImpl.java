@@ -105,7 +105,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the CartDiscount.</p>>
+     <*  <p>Unique identifier of the CartDiscount.</p>>
      */
 
     public String getId() {
@@ -241,7 +241,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>>
+     <*  <p>The references of all the resources that are addressed in the predicate.</p>>
      */
 
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {

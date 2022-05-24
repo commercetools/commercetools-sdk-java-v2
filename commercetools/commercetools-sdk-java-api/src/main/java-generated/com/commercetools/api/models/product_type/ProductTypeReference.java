@@ -41,7 +41,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     public ProductType getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductType.</p>>
+     <*  <p>Unique identifier of the referenced ProductType.</p>>
      */
     @NotNull
     @JsonProperty("id")

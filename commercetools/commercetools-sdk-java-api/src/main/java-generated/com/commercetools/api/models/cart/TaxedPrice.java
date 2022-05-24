@@ -58,7 +58,7 @@ public interface TaxedPrice {
     public List<TaxPortion> getTaxPortions();
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     <*  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
      */
     @Valid
     @JsonProperty("totalTax")

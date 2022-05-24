@@ -41,7 +41,7 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
     public ShoppingList getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShoppingList.</p>>
+     <*  <p>Unique identifier of the referenced ShoppingList.</p>>
      */
     @NotNull
     @JsonProperty("id")

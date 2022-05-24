@@ -29,7 +29,7 @@ public class ZoneResourceIdentifierBuilder implements Builder<ZoneResourceIdenti
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public ZoneResourceIdentifierBuilder id(@Nullable final String id) {

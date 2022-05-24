@@ -90,7 +90,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     private java.time.ZonedDateTime lastModifiedAt;
 
     /**
-     <*  <p>Platform-generated unique identifier of the LineItem.</p>>
+     <*  <p>Unique identifier of the LineItem.</p>>
      */
 
     public LineItemBuilder id(final String id) {

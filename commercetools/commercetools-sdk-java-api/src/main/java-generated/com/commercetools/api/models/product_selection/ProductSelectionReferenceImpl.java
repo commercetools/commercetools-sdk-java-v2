@@ -48,7 +48,7 @@ public class ProductSelectionReferenceImpl implements ProductSelectionReference,
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductSelection.</p>>
+     <*  <p>Unique identifier of the referenced ProductSelection.</p>>
      */
 
     public String getId() {

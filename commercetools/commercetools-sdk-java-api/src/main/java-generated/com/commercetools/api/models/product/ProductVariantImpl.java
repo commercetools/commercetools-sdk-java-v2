@@ -74,7 +74,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>>
+     <*  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>>
      */
 
     public Long getId() {

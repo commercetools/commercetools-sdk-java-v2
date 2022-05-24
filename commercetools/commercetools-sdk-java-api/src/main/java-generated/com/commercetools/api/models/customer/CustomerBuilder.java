@@ -114,7 +114,7 @@ public class CustomerBuilder implements Builder<Customer> {
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Customer.</p>>
+     <*  <p>Unique identifier of the Customer.</p>>
      */
 
     public CustomerBuilder id(final String id) {

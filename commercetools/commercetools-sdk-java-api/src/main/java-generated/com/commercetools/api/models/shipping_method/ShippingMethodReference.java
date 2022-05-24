@@ -41,7 +41,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     public ShippingMethod getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShippingMethod.</p>>
+     <*  <p>Unique identifier of the referenced ShippingMethod.</p>>
      */
     @NotNull
     @JsonProperty("id")

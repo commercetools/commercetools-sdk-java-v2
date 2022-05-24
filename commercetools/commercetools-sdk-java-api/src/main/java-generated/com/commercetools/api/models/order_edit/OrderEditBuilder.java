@@ -60,7 +60,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     private String comment;
 
     /**
-     <*  <p>Platform-generated unique identifier of the OrderEdit.</p>>
+     <*  <p>Unique identifier of the OrderEdit.</p>>
      */
 
     public OrderEditBuilder id(final String id) {

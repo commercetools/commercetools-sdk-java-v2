@@ -48,7 +48,7 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>>
+     <*  <p>Unique identifier of the referenced CartDiscount.</p>>
      */
 
     public String getId() {

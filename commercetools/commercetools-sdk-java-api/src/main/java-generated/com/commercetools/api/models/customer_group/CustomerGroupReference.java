@@ -41,7 +41,7 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     public CustomerGroup getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CustomerGroup.</p>>
+     <*  <p>Unique identifier of the referenced CustomerGroup.</p>>
      */
     @NotNull
     @JsonProperty("id")

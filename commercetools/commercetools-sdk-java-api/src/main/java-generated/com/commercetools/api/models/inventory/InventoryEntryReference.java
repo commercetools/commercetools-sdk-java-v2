@@ -41,7 +41,7 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     public InventoryEntry getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>>
+     <*  <p>Unique identifier of the referenced InventoryEntry.</p>>
      */
     @NotNull
     @JsonProperty("id")

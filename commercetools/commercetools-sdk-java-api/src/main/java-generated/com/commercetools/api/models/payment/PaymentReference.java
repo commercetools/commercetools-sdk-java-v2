@@ -41,7 +41,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     public Payment getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Payment.</p>>
+     <*  <p>Unique identifier of the referenced Payment.</p>>
      */
     @NotNull
     @JsonProperty("id")

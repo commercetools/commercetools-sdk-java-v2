@@ -32,7 +32,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
     private Long ttlMinutes;
 
     /**
-     <*  <p>Platform-generated unique identifier of the email token.</p>>
+     <*  <p>Unique identifier of the email token.</p>>
      */
 
     public CustomerCreateEmailTokenBuilder id(final String id) {

@@ -43,7 +43,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnItem extends com.commercetools.api.models.Customizable<ReturnItem> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the ReturnItem.</p>>
+     <*  <p>Unique identifier of the ReturnItem.</p>>
      */
     @NotNull
     @JsonProperty("id")

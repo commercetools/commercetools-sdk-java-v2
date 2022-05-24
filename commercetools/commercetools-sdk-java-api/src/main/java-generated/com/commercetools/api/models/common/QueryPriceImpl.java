@@ -67,7 +67,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the given Price.</p>>
+     <*  <p>Unique identifier of the given Price.</p>>
      */
 
     public String getId() {

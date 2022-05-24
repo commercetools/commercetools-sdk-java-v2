@@ -72,7 +72,7 @@ public class PaymentBuilder implements Builder<Payment> {
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Payment.</p>>
+     <*  <p>Unique identifier of the Payment.</p>>
      */
 
     public PaymentBuilder id(final String id) {

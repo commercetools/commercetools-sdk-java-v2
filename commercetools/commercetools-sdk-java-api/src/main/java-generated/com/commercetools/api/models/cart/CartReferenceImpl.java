@@ -48,7 +48,7 @@ public class CartReferenceImpl implements CartReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Cart.</p>>
+     <*  <p>Unique identifier of the referenced Cart.</p>>
      */
 
     public String getId() {

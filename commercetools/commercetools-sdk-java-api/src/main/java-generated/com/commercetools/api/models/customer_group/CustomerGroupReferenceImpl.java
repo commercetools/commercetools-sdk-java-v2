@@ -48,7 +48,7 @@ public class CustomerGroupReferenceImpl implements CustomerGroupReference, Model
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CustomerGroup.</p>>
+     <*  <p>Unique identifier of the referenced CustomerGroup.</p>>
      */
 
     public String getId() {

@@ -48,7 +48,7 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
         com.commercetools.api.models.Customizable<Category> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Category.</p>>
+     <*  <p>Unique identifier of the Category.</p>>
      */
     @NotNull
     @JsonProperty("id")

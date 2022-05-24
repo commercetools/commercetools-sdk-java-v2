@@ -30,7 +30,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     private com.commercetools.api.models.state.State obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced State.</p>>
+     <*  <p>Unique identifier of the referenced State.</p>>
      */
 
     public StateReferenceBuilder id(final String id) {

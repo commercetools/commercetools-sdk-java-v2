@@ -47,7 +47,7 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
         com.commercetools.api.models.Customizable<OrderEdit> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the OrderEdit.</p>>
+     <*  <p>Unique identifier of the OrderEdit.</p>>
      */
     @NotNull
     @JsonProperty("id")

@@ -48,7 +48,7 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Type.</p>>
+     <*  <p>Unique identifier of the referenced Type.</p>>
      */
 
     public String getId() {

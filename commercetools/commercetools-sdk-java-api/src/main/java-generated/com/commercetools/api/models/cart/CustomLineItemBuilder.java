@@ -63,7 +63,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomLineItem.</p>>
+     <*  <p>Unique identifier of the CustomLineItem.</p>>
      */
 
     public CustomLineItemBuilder id(final String id) {

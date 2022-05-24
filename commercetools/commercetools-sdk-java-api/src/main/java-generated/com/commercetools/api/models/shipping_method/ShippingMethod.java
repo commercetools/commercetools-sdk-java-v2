@@ -48,7 +48,7 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
         com.commercetools.api.models.Customizable<ShippingMethod> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShippingMethod.</p>>
+     <*  <p>Unique identifier of the ShippingMethod.</p>>
      */
     @NotNull
     @JsonProperty("id")

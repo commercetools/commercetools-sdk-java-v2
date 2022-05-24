@@ -30,7 +30,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     private com.commercetools.api.models.shipping_method.ShippingMethod obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShippingMethod.</p>>
+     <*  <p>Unique identifier of the referenced ShippingMethod.</p>>
      */
 
     public ShippingMethodReferenceBuilder id(final String id) {

@@ -29,7 +29,7 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>>
+     <*  <p>Unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>>
      */
 
     public ProductSelectionResourceIdentifierBuilder id(@Nullable final String id) {

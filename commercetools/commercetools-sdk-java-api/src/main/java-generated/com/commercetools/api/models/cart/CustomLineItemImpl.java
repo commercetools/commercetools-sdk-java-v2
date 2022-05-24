@@ -78,7 +78,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomLineItem.</p>>
+     <*  <p>Unique identifier of the CustomLineItem.</p>>
      */
 
     public String getId() {

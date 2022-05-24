@@ -44,7 +44,7 @@ public interface State extends BaseResource, com.commercetools.api.models.Domain
         com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the State.</p>>
+     <*  <p>Unique identifier of the State.</p>>
      */
     @NotNull
     @JsonProperty("id")

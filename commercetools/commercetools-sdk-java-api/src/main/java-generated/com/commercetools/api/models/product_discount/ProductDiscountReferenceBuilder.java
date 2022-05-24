@@ -30,7 +30,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     private com.commercetools.api.models.product_discount.ProductDiscount obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>>
+     <*  <p>Unique identifier of the referenced ProductDiscount.</p>>
      */
 
     public ProductDiscountReferenceBuilder id(final String id) {

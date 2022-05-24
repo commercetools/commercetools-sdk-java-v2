@@ -48,7 +48,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the MyPayment.</p>>
+     <*  <p>Unique identifier of the MyPayment.</p>>
      */
 
     public MyPaymentBuilder id(final String id) {

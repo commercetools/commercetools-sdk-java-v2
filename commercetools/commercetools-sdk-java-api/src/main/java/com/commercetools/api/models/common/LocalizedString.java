@@ -38,7 +38,7 @@ public interface LocalizedString {
     public void setValue(String key, String value);
 
     public static LocalizedString of() {
-        return new LocalizedStringImpl();
+        return of(Collections.emptyMap());
     }
 
     public static LocalizedString of(final LocalizedString template) {

@@ -10,13 +10,20 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StackingMode
+ *  <p>Describes how the Cart Discount interacts with other Discounts.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface StackingMode {
 
-    StackingMode STACKING = StackingModeEnum.STACKING;
+    /**
+    	<p>Applies other matching Discounts after applying this one.</p>
 
+    */
+    StackingMode STACKING = StackingModeEnum.STACKING;
+    /**
+    	<p>Doesn't apply any more matching Discounts after this one if it's successfully applied.</p>
+
+    */
     StackingMode STOP_AFTER_THIS_DISCOUNT = StackingModeEnum.STOP_AFTER_THIS_DISCOUNT;
 
     enum StackingModeEnum implements StackingMode {

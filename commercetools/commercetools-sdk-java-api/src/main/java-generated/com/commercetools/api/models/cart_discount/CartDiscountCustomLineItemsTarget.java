@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartDiscountCustomLineItemsTarget
+ *  <p>Discount is applied to CustomLineItems matching the <code>predicate</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
     String CUSTOM_LINE_ITEMS = "customLineItems";
 
     /**
-     <>
+     <*  <p>Valid CustomLineItem target predicate.</p>>
      */
     @NotNull
     @JsonProperty("predicate")

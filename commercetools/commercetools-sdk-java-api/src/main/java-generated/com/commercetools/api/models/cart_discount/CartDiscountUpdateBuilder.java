@@ -28,7 +28,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction> actions;
 
     /**
-     <>
+     <*  <p>Expected version of the CartDiscount on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
      */
 
     public CartDiscountUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
     }
 
     /**
-     <>
+     <*  <p>Update actions to be performed on the CartDiscount.</p>>
      */
 
     public CartDiscountUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
     }
 
     /**
-     <>
+     <*  <p>Update actions to be performed on the CartDiscount.</p>>
      */
 
     public CartDiscountUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
     }
 
     /**
-     <>
+     <*  <p>Update actions to be performed on the CartDiscount.</p>>
      */
 
     public CartDiscountUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
     }
 
     /**
-     <>
+     <*  <p>Update actions to be performed on the CartDiscount.</p>>
      */
 
     public CartDiscountUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
     }
 
     /**
-     <>
+     <*  <p>Update actions to be performed on the CartDiscount.</p>>
      */
 
     public CartDiscountUpdateBuilder withActions(

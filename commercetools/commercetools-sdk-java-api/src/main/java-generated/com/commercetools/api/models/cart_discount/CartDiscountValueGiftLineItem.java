@@ -44,21 +44,21 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     public ProductReference getProduct();
 
     /**
-     <>
+     <*  <p>ProductVariant of the Product.</p>>
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <*  <p>The channel must have the role <code>InventorySupply</code></p>>
+     <*  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
     /**
-     <*  <p>The channel must have the role <code>ProductDistribution</code></p>>
+     <*  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>>
      */
     @Valid
     @JsonProperty("distributionChannel")

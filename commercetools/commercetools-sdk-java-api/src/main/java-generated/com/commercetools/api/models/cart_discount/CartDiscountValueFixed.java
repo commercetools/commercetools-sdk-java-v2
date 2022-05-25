@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartDiscountValueFixed
+ *  <p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,17 +34,17 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
     String FIXED = "fixed";
 
     /**
-     <>
+     <*  <p>Cent precision money values in different currencies.</p>>
      */
     @NotNull
     @Valid
     @JsonProperty("money")
-    public List<TypedMoney> getMoney();
+    public List<CentPrecisionMoney> getMoney();
 
     @JsonIgnore
-    public void setMoney(final TypedMoney... money);
+    public void setMoney(final CentPrecisionMoney... money);
 
-    public void setMoney(final List<TypedMoney> money);
+    public void setMoney(final List<CentPrecisionMoney> money);
 
     public static CartDiscountValueFixed of() {
         return new CartDiscountValueFixedImpl();

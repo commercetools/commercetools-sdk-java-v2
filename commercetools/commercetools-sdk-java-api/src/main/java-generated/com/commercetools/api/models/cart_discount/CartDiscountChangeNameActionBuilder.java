@@ -25,7 +25,7 @@ public class CartDiscountChangeNameActionBuilder implements Builder<CartDiscount
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <>
+     <*  <p>New value to set.</p>>
      */
 
     public CartDiscountChangeNameActionBuilder name(
@@ -35,7 +35,7 @@ public class CartDiscountChangeNameActionBuilder implements Builder<CartDiscount
     }
 
     /**
-     <>
+     <*  <p>New value to set.</p>>
      */
 
     public CartDiscountChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

@@ -64,7 +64,7 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
     }
 
     /**
-     <>
+     <*  <p>ProductVariant of the Product.</p>>
      */
 
     public Long getVariantId() {
@@ -72,7 +72,7 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
     }
 
     /**
-     <*  <p>The channel must have the role <code>InventorySupply</code></p>>
+     <*  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
@@ -80,7 +80,7 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
     }
 
     /**
-     <*  <p>The channel must have the role <code>ProductDistribution</code></p>>
+     <*  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {

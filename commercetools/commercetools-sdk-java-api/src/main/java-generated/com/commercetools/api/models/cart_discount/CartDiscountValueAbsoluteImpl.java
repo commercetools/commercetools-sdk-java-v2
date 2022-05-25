@@ -15,18 +15,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartDiscountValueAbsolute
+ *  <p>Discounts the CartDiscountTarget by an absolute amount (not allowed for MultiBuyLineItemsTarget and MultiBuyCustomLineItemsTarget).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute, ModelBase {
 
     private String type;
 
-    private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
+    private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
 
     @JsonCreator
     CartDiscountValueAbsoluteImpl(
-            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
+            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
         this.money = money;
         this.type = ABSOLUTE;
     }
@@ -44,18 +44,18 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
     }
 
     /**
-     <>
+     <*  <p>Cent precision money values in different currencies.</p>>
      */
 
-    public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney() {
+    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {
         return this.money;
     }
 
-    public void setMoney(final com.commercetools.api.models.common.TypedMoney... money) {
+    public void setMoney(final com.commercetools.api.models.common.CentPrecisionMoney... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
     }
 
-    public void setMoney(final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
+    public void setMoney(final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
         this.money = money;
     }
 

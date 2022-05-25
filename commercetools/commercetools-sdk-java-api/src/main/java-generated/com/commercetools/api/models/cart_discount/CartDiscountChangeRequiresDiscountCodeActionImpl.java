@@ -45,7 +45,7 @@ public class CartDiscountChangeRequiresDiscountCodeActionImpl
     }
 
     /**
-     <>
+     <*  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>>
      */
 
     public Boolean getRequiresDiscountCode() {

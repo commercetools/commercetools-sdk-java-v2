@@ -25,7 +25,7 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
     private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
 
     /**
-     <>
+     <*  <p>New value to set.</p>>
      */
 
     public CartDiscountChangeValueActionBuilder value(
@@ -35,7 +35,7 @@ public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscoun
     }
 
     /**
-     <>
+     <*  <p>New value to set.</p>>
      */
 
     public CartDiscountChangeValueActionBuilder value(

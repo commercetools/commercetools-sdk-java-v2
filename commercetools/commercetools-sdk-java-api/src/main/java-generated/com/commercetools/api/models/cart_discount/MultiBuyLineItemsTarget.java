@@ -35,35 +35,35 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     String MULTI_BUY_LINE_ITEMS = "multiBuyLineItems";
 
     /**
-     <*  <p>A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.</p>>
+     <*  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>>
      */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
+     <*  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>>
      */
     @NotNull
     @JsonProperty("triggerQuantity")
     public Integer getTriggerQuantity();
 
     /**
-     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
+     <*  <p>Number of Line Items that are discounted per application of this Discount.</p>>
      */
     @NotNull
     @JsonProperty("discountedQuantity")
     public Integer getDiscountedQuantity();
 
     /**
-     <*  <p>Maximum number of applications of this discount.</p>>
+     <*  <p>Maximum number of times this Discount can be applied.</p>>
      */
 
     @JsonProperty("maxOccurrence")
     public Integer getMaxOccurrence();
 
     /**
-     <>
+     <*  <p>Discounts particular Line Items only according to the SelectionMode.</p>>
      */
     @NotNull
     @JsonProperty("selectionMode")

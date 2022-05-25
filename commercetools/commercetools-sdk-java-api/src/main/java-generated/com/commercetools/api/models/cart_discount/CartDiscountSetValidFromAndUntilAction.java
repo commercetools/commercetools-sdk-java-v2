@@ -30,14 +30,14 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
     String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
 
     /**
-     <*  <p>If absent, the field with the value is removed in case a value was set before.</p>>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <*  <p>If absent, the field with the value is removed in case a value was set before.</p>>
+     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
      */
 
     @JsonProperty("validUntil")

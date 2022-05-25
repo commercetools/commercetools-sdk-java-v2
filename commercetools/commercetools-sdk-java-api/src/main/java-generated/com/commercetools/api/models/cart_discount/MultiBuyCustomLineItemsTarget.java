@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MultiBuyCustomLineItemsTarget
+ *  <p>This Discount target is similar to <code>MultiBuyLineItems</code>, but is applied on Custom Line Items instead of Line Items.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,35 +35,35 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     String MULTI_BUY_CUSTOM_LINE_ITEMS = "multiBuyCustomLineItems";
 
     /**
-     <*  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are matched by the predicate.</p>>
+     <*  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>>
      */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
+     <*  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>>
      */
     @NotNull
     @JsonProperty("triggerQuantity")
     public Integer getTriggerQuantity();
 
     /**
-     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
+     <*  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>>
      */
     @NotNull
     @JsonProperty("discountedQuantity")
     public Integer getDiscountedQuantity();
 
     /**
-     <*  <p>Maximum number of applications of this discount.</p>>
+     <*  <p>Maximum number of times this Discount can be applied.</p>>
      */
 
     @JsonProperty("maxOccurrence")
     public Integer getMaxOccurrence();
 
     /**
-     <>
+     <*  <p>Discounts particular Line Items only according to the SelectionMode.</p>>
      */
     @NotNull
     @JsonProperty("selectionMode")

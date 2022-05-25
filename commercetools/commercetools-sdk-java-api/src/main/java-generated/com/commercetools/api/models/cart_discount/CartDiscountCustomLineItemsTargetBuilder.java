@@ -24,7 +24,7 @@ public class CartDiscountCustomLineItemsTargetBuilder implements Builder<CartDis
     private String predicate;
 
     /**
-     <>
+     <*  <p>Valid CustomLineItem target predicate.</p>>
      */
 
     public CartDiscountCustomLineItemsTargetBuilder predicate(final String predicate) {

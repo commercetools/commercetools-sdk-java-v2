@@ -36,7 +36,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     <*  <p>ResourceIdentifier to a Product.</p>>
+     <*  <p>ResourceIdentifier of a Product.</p>>
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder product(
@@ -47,7 +47,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Product.</p>>
+     <*  <p>ResourceIdentifier of a Product.</p>>
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder product(
@@ -57,7 +57,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     <>
+     <*  <p>ProductVariant of the Product.</p>>
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder variantId(final Long variantId) {
@@ -66,7 +66,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     <*  <p>The channel must have the role <code>InventorySupply</code></p>>
+     <*  <p>Channel must have the role <code>InventorySupply</code>.</p>>
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(
@@ -77,7 +77,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     <*  <p>The channel must have the role <code>InventorySupply</code></p>>
+     <*  <p>Channel must have the role <code>InventorySupply</code>.</p>>
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(
@@ -87,7 +87,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     <*  <p>The channel must have the role <code>ProductDistribution</code></p>>
+     <*  <p>Channel must have the role <code>ProductDistribution</code>.</p>>
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(
@@ -99,7 +99,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     <*  <p>The channel must have the role <code>ProductDistribution</code></p>>
+     <*  <p>Channel must have the role <code>ProductDistribution</code>.</p>>
      */
 
     public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(

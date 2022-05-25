@@ -43,7 +43,7 @@ public class CartDiscountChangeCartPredicateActionImpl implements CartDiscountCh
     }
 
     /**
-     <*  <p>A valid Cart predicate.</p>>
+     <*  <p>New value to set.</p>>
      */
 
     public String getCartPredicate() {

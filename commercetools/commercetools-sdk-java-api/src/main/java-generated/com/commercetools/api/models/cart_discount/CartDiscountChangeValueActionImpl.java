@@ -44,7 +44,7 @@ public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValu
     }
 
     /**
-     <>
+     <*  <p>New value to set.</p>>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {

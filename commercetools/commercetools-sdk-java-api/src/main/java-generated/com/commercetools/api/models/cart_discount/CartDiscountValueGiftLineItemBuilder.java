@@ -56,7 +56,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     <>
+     <*  <p>ProductVariant of the Product.</p>>
      */
 
     public CartDiscountValueGiftLineItemBuilder variantId(final Long variantId) {
@@ -65,7 +65,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     <*  <p>The channel must have the role <code>InventorySupply</code></p>>
+     <*  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>>
      */
 
     public CartDiscountValueGiftLineItemBuilder supplyChannel(
@@ -75,7 +75,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     <*  <p>The channel must have the role <code>InventorySupply</code></p>>
+     <*  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>>
      */
 
     public CartDiscountValueGiftLineItemBuilder supplyChannel(
@@ -85,7 +85,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     <*  <p>The channel must have the role <code>ProductDistribution</code></p>>
+     <*  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>>
      */
 
     public CartDiscountValueGiftLineItemBuilder distributionChannel(
@@ -96,7 +96,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     <*  <p>The channel must have the role <code>ProductDistribution</code></p>>
+     <*  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>>
      */
 
     public CartDiscountValueGiftLineItemBuilder distributionChannel(

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartDiscountLineItemsTarget
+ *  <p>Discount is applied to LineItems matching the <code>predicate</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountLineItemsTargetImpl implements CartDiscountLineItemsTarget, ModelBase {
@@ -43,7 +43,7 @@ public class CartDiscountLineItemsTargetImpl implements CartDiscountLineItemsTar
     }
 
     /**
-     <>
+     <*  <p>Valid LineItem target predicate.</p>>
      */
 
     public String getPredicate() {

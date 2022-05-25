@@ -43,7 +43,7 @@ public class CartDiscountChangeSortOrderActionImpl implements CartDiscountChange
     }
 
     /**
-     <*  <p>The string must contain a number between 0 and 1. A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>>
+     <*  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>>
      */
 
     public String getSortOrder() {

@@ -36,7 +36,7 @@ public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDra
     String GIFT_LINE_ITEM = "giftLineItem";
 
     /**
-     <*  <p>ResourceIdentifier to a Product.</p>>
+     <*  <p>ResourceIdentifier of a Product.</p>>
      */
     @NotNull
     @Valid
@@ -44,21 +44,21 @@ public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDra
     public ProductResourceIdentifier getProduct();
 
     /**
-     <>
+     <*  <p>ProductVariant of the Product.</p>>
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <*  <p>The channel must have the role <code>InventorySupply</code></p>>
+     <*  <p>Channel must have the role <code>InventorySupply</code>.</p>>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     <*  <p>The channel must have the role <code>ProductDistribution</code></p>>
+     <*  <p>Channel must have the role <code>ProductDistribution</code>.</p>>
      */
     @Valid
     @JsonProperty("distributionChannel")

@@ -46,7 +46,7 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -54,7 +54,7 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for adding prices</p>>
+     *  <p>Update action for adding prices</p>
      */
 
     public String getChange() {
@@ -62,7 +62,7 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -70,7 +70,7 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPriceId() {
@@ -78,7 +78,7 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Price getNextValue() {

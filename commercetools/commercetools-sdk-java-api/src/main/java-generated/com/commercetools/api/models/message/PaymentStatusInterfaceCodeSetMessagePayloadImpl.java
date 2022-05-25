@@ -40,7 +40,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getPaymentId() {
@@ -56,7 +56,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getInterfaceCode() {

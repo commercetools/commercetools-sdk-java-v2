@@ -29,28 +29,28 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     String SET_PRODUCT_VARIANT_KEY = "setProductVariantKey";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>>
+     *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

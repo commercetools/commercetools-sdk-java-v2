@@ -39,7 +39,7 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>removeAsset</code></p>>
+     *  <p>Update action for <code>removeAsset</code></p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Asset getPreviousValue() {

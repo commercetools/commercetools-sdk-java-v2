@@ -37,7 +37,7 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
     }
 
     /**
-     <*  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>>
+     *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
      */
 
     public Boolean getCountryTaxRateFallbackEnabled() {

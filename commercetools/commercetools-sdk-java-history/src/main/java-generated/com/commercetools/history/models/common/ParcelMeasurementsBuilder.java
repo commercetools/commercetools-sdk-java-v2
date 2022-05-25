@@ -33,7 +33,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     private Integer weightInGram;
 
     /**
-     <>
+     *
      */
 
     public ParcelMeasurementsBuilder heightInMillimeter(final Integer heightInMillimeter) {
@@ -42,7 +42,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelMeasurementsBuilder lengthInMillimeter(final Integer lengthInMillimeter) {
@@ -51,7 +51,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelMeasurementsBuilder widthInMillimeter(final Integer widthInMillimeter) {
@@ -60,7 +60,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelMeasurementsBuilder weightInGram(final Integer weightInGram) {

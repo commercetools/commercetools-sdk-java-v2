@@ -30,7 +30,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     private Boolean force;
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionStateActionBuilder state(
@@ -40,7 +40,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionStateActionBuilder state(
@@ -50,7 +50,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     <>
+     *
      */
 
     public OrderTransitionStateActionBuilder force(@Nullable final Boolean force) {

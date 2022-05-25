@@ -31,7 +31,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     private java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> nextValue;
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder plusPreviousValue(
@@ -73,7 +73,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder plusPreviousValue(
@@ -87,7 +87,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder withPreviousValue(
@@ -99,7 +99,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder nextValue(
@@ -109,7 +109,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder nextValue(
@@ -119,7 +119,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder plusNextValue(
@@ -132,7 +132,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder plusNextValue(
@@ -146,7 +146,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemsOrderChangeBuilder withNextValue(

@@ -36,18 +36,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypedMoney extends Money {
 
     /**
-     <*  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>>
+     *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
      */
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
 
     /**
-     <*  <p>Number of digits after the decimal separator:</p>
-    *  <ul>
-    *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
-    *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
-    *  </ul>>
+     *  <p>Number of digits after the decimal separator:</p>
+     *  <ul>
+     *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
+     *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
+     *  </ul>
      */
     @NotNull
     @JsonProperty("fractionDigits")

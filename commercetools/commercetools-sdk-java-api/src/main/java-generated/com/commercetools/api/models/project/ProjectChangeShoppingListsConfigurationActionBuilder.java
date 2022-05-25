@@ -26,7 +26,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
 
     /**
-     <*  <p>Configuration for the Shopping Lists feature.</p>>
+     *  <p>Configuration for the Shopping Lists feature.</p>
      */
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
@@ -38,7 +38,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     }
 
     /**
-     <*  <p>Configuration for the Shopping Lists feature.</p>>
+     *  <p>Configuration for the Shopping Lists feature.</p>
      */
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(

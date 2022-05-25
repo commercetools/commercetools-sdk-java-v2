@@ -30,7 +30,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessagePayloadBuilder sku(final String sku) {
@@ -39,7 +39,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
@@ -49,7 +49,7 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(

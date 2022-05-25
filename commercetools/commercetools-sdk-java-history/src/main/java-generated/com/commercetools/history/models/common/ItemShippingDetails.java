@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemShippingDetails {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface ItemShippingDetails {
     public List<ItemShippingTarget> getTargets();
 
     /**
-     <*  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>>
+     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
      */
     @NotNull
     @JsonProperty("valid")

@@ -50,7 +50,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>The unique ID of this object.</p>>
+     *  <p>The unique ID of this object.</p>
      */
 
     public String getId() {
@@ -58,7 +58,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>The time at which the transaction took place.</p>>
+     *  <p>The time at which the transaction took place.</p>
      */
 
     public String getTimestamp() {
@@ -66,7 +66,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TransactionType getType() {
@@ -74,7 +74,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getAmount() {
@@ -82,7 +82,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>>
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
      */
 
     public String getInteractionId() {
@@ -90,7 +90,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TransactionState getState() {

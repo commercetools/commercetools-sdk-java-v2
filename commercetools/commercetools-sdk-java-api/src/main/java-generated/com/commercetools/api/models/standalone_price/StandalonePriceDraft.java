@@ -39,21 +39,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StandalonePriceDraft {
 
     /**
-     <*  <p>User-defined unique identifier for the StandalonePrice.</p>>
+     *  <p>User-defined unique identifier for the StandalonePrice.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>>
+     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>Sets the money value of this Price.</p>>
+     *  <p>Sets the money value of this Price.</p>
      */
     @NotNull
     @Valid
@@ -61,56 +61,56 @@ public interface StandalonePriceDraft {
     public Money getValue();
 
     /**
-     <*  <p>Sets the country for which this Price is valid.</p>>
+     *  <p>Sets the country for which this Price is valid.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>Sets the CustomerGroup for which this Price is valid.</p>>
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     <*  <p>Sets the product distribution Channel for which this Price is valid.</p>>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
     /**
-     <*  <p>Sets the date from which the Price is valid.</p>>
+     *  <p>Sets the date from which the Price is valid.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <*  <p>Sets the date until the Price is valid.</p>>
+     *  <p>Sets the date until the Price is valid.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <*  <p>Sets price tiers.</p>>
+     *  <p>Sets price tiers.</p>
      */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTierDraft> getTiers();
 
     /**
-     <*  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>>
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPriceDraft getDiscounted();
 
     /**
-     <*  <p>Custom Fields for the StandalonePrice.</p>>
+     *  <p>Custom Fields for the StandalonePrice.</p>
      */
     @Valid
     @JsonProperty("custom")

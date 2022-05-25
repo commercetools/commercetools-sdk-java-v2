@@ -50,7 +50,7 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -58,7 +58,7 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -66,7 +66,7 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -74,7 +74,7 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
     }
 
     /**
-     <>
+     *
      */
 
     public String getTaxCategoryId() {
@@ -82,7 +82,7 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
     }
 
     /**
-     <>
+     *
      */
 
     public String getCountry() {
@@ -90,7 +90,7 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
     }
 
     /**
-     <>
+     *
      */
 
     public String getState() {

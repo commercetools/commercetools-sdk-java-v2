@@ -42,7 +42,7 @@ public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -50,7 +50,7 @@ public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addProperty</code> on custom objects</p>>
+     *  <p>Update action for <code>addProperty</code> on custom objects</p>
      */
 
     public String getChange() {
@@ -58,7 +58,7 @@ public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
     }
 
     /**
-     <*  <p>Value path to the property that was added</p>>
+     *  <p>Value path to the property that was added</p>
      */
 
     public String getPath() {
@@ -66,7 +66,7 @@ public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {

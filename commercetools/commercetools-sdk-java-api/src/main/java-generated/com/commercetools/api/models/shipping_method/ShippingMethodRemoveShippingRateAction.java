@@ -35,7 +35,7 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     String REMOVE_SHIPPING_RATE = "removeShippingRate";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     public ZoneResourceIdentifier getZone();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

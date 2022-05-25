@@ -34,28 +34,28 @@ public interface SetCustomerIdChange extends Change {
     String SET_CUSTOMER_ID_CHANGE = "SetCustomerIdChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setCustomerId</code></p>>
+     *  <p>Shape of the action for <code>setCustomerId</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

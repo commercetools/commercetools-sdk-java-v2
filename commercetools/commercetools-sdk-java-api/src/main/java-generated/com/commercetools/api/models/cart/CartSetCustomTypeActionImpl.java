@@ -40,7 +40,7 @@ public class CartSetCustomTypeActionImpl implements CartSetCustomTypeAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class CartSetCustomTypeActionImpl implements CartSetCustomTypeAction, Mod
     }
 
     /**
-     <*  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>>
+     *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class CartSetCustomTypeActionImpl implements CartSetCustomTypeAction, Mod
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Cart.</p>>
+     *  <p>Sets the Custom Fields fields for the Cart.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

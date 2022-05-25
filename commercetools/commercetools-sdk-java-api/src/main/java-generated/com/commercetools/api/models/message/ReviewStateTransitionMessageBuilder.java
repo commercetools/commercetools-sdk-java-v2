@@ -72,7 +72,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     private Boolean force;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ReviewStateTransitionMessageBuilder id(final String id) {
@@ -81,7 +81,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder version(final Long version) {
@@ -90,7 +90,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -99,7 +99,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -108,7 +108,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewStateTransitionMessageBuilder lastModifiedBy(
@@ -118,7 +118,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewStateTransitionMessageBuilder lastModifiedBy(
@@ -128,7 +128,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewStateTransitionMessageBuilder createdBy(
@@ -138,7 +138,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewStateTransitionMessageBuilder createdBy(
@@ -148,7 +148,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -157,7 +157,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewStateTransitionMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -166,7 +166,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewStateTransitionMessageBuilder resource(
@@ -176,7 +176,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -185,7 +185,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -197,7 +197,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -207,7 +207,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ReviewStateTransitionMessageBuilder oldState(
@@ -217,7 +217,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ReviewStateTransitionMessageBuilder oldState(
@@ -227,7 +227,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ReviewStateTransitionMessageBuilder newState(
@@ -237,7 +237,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ReviewStateTransitionMessageBuilder newState(
@@ -247,7 +247,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder oldIncludedInStatistics(final Boolean oldIncludedInStatistics) {
@@ -256,7 +256,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder newIncludedInStatistics(final Boolean newIncludedInStatistics) {
@@ -265,7 +265,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewStateTransitionMessageBuilder target(final com.commercetools.api.models.common.Reference target) {
@@ -274,7 +274,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewStateTransitionMessageBuilder target(
@@ -284,7 +284,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessageBuilder force(final Boolean force) {

@@ -33,7 +33,7 @@ public interface AttributeNestedType extends AttributeType {
     String NESTED = "nested";
 
     /**
-     <*  <p>Reference to a ProductType.</p>>
+     *  <p>Reference to a ProductType.</p>
      */
     @NotNull
     @Valid

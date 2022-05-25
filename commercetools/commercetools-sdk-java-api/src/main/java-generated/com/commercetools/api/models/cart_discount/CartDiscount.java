@@ -52,49 +52,49 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
         com.commercetools.api.models.Customizable<CartDiscount> {
 
     /**
-     <*  <p>Unique identifier of the CartDiscount.</p>>
+     *  <p>Unique identifier of the CartDiscount.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Current version of the CartDiscount.</p>>
+     *  <p>Current version of the CartDiscount.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>Date and time (UTC) for the CartDiscount was initially created.</p>>
+     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>Date and time (UTC) for the CartDiscount was last updated.</p>>
+     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>Name of the CartDiscount.</p>>
+     *  <p>Name of the CartDiscount.</p>
      */
     @NotNull
     @Valid
@@ -102,21 +102,21 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     public LocalizedString getName();
 
     /**
-     <*  <p>User-defined unique identifier of the CartDiscount.</p>>
+     *  <p>User-defined unique identifier of the CartDiscount.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Description of the CartDiscount.</p>>
+     *  <p>Description of the CartDiscount.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <*  <p>Effect of the CartDiscount.</p>>
+     *  <p>Effect of the CartDiscount.</p>
      */
     @NotNull
     @Valid
@@ -124,56 +124,56 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     public CartDiscountValue getValue();
 
     /**
-     <*  <p>Valid Cart Predicate.</p>>
+     *  <p>Valid Cart Predicate.</p>
      */
     @NotNull
     @JsonProperty("cartPredicate")
     public String getCartPredicate();
 
     /**
-     <*  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>>
+     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
      */
     @Valid
     @JsonProperty("target")
     public CartDiscountTarget getTarget();
 
     /**
-     <*  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>>
+     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
      */
     @NotNull
     @JsonProperty("sortOrder")
     public String getSortOrder();
 
     /**
-     <*  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>>
+     *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
      */
     @NotNull
     @JsonProperty("isActive")
     public Boolean getIsActive();
 
     /**
-     <*  <p>Date and time (UTC) from which the Discount is effective.</p>>
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <*  <p>Date and time (UTC) until which the Discount is effective.</p>>
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <*  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>>
+     *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
      */
     @NotNull
     @JsonProperty("requiresDiscountCode")
     public Boolean getRequiresDiscountCode();
 
     /**
-     <*  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>>
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
      */
     @NotNull
     @Valid
@@ -181,14 +181,14 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     public List<Reference> getReferences();
 
     /**
-     <*  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>>
+     *  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>
      */
     @NotNull
     @JsonProperty("stackingMode")
     public StackingMode getStackingMode();
 
     /**
-     <*  <p>Custom Fields of the CartDiscount.</p>>
+     *  <p>Custom Fields of the CartDiscount.</p>
      */
     @Valid
     @JsonProperty("custom")

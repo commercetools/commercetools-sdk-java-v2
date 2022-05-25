@@ -33,7 +33,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     private Boolean force;
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder state(
@@ -43,7 +43,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder state(
@@ -53,7 +53,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
@@ -63,7 +63,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
@@ -73,7 +73,7 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessagePayloadBuilder force(final Boolean force) {

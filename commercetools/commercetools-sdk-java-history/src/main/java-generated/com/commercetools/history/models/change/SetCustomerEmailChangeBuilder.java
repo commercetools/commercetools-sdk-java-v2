@@ -30,7 +30,7 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setCustomerEmail</code></p>>
+     *  <p>Shape of the action for <code>setCustomerEmail</code></p>
      */
 
     public SetCustomerEmailChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomerEmailChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomerEmailChangeBuilder nextValue(final String nextValue) {

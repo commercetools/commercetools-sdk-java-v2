@@ -36,21 +36,21 @@ public interface SetOrderTotalPriceChange extends Change {
     String SET_ORDER_TOTAL_PRICE_CHANGE = "SetOrderTotalPriceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setOrderTotalPrice</code></p>>
+     *  <p>Update action for <code>setOrderTotalPrice</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetOrderTotalPriceChange extends Change {
     public Money getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

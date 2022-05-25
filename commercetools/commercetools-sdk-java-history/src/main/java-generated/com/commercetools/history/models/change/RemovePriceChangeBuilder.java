@@ -37,7 +37,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     private com.commercetools.history.models.common.Price nextValue;
 
     /**
-     <*  <p>Update action for removing prices</p>>
+     *  <p>Update action for removing prices</p>
      */
 
     public RemovePriceChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemovePriceChangeBuilder catalogData(final String catalogData) {
@@ -55,7 +55,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemovePriceChangeBuilder priceId(final String priceId) {
@@ -64,7 +64,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemovePriceChangeBuilder previousValue(
@@ -74,7 +74,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemovePriceChangeBuilder previousValue(final com.commercetools.history.models.common.Price previousValue) {
@@ -83,7 +83,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemovePriceChangeBuilder nextValue(
@@ -93,7 +93,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemovePriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {

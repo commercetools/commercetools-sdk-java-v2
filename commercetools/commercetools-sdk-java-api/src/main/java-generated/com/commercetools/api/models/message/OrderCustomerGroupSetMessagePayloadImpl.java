@@ -40,7 +40,7 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -56,7 +56,7 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {

@@ -25,7 +25,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
-     <*  <p>Reference to a Product that is assigned to the ProductSelection.</p>>
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      */
 
     public AssignedProductReferenceBuilder product(
@@ -35,7 +35,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     }
 
     /**
-     <*  <p>Reference to a Product that is assigned to the ProductSelection.</p>>
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      */
 
     public AssignedProductReferenceBuilder product(

@@ -54,7 +54,7 @@ public class ZoneBuilder implements Builder<Zone> {
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
     /**
-     <*  <p>Unique identifier of the Zone.</p>>
+     *  <p>Unique identifier of the Zone.</p>
      */
 
     public ZoneBuilder id(final String id) {
@@ -63,7 +63,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Current version of the Zone.</p>>
+     *  <p>Current version of the Zone.</p>
      */
 
     public ZoneBuilder version(final Long version) {
@@ -72,7 +72,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Zone was initially created.</p>>
+     *  <p>Date and time (UTC) the Zone was initially created.</p>
      */
 
     public ZoneBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -81,7 +81,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Zone was last updated.</p>>
+     *  <p>Date and time (UTC) the Zone was last updated.</p>
      */
 
     public ZoneBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -90,7 +90,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ZoneBuilder lastModifiedBy(
@@ -100,7 +100,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ZoneBuilder lastModifiedBy(
@@ -110,7 +110,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ZoneBuilder createdBy(
@@ -120,7 +120,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ZoneBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -129,7 +129,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Zone.</p>>
+     *  <p>User-defined unique identifier of the Zone.</p>
      */
 
     public ZoneBuilder key(@Nullable final String key) {
@@ -138,7 +138,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Name of the Zone.</p>>
+     *  <p>Name of the Zone.</p>
      */
 
     public ZoneBuilder name(final String name) {
@@ -147,7 +147,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     public ZoneBuilder description(@Nullable final String description) {
@@ -156,7 +156,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneBuilder locations(final com.commercetools.api.models.zone.Location... locations) {
@@ -165,7 +165,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneBuilder locations(final java.util.List<com.commercetools.api.models.zone.Location> locations) {
@@ -174,7 +174,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneBuilder plusLocations(final com.commercetools.api.models.zone.Location... locations) {
@@ -186,7 +186,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneBuilder plusLocations(
@@ -199,7 +199,7 @@ public class ZoneBuilder implements Builder<Zone> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneBuilder withLocations(

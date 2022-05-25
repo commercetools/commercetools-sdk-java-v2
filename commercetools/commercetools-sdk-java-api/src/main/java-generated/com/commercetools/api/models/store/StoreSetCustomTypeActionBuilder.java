@@ -30,7 +30,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>>
+     *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
      */
 
     public StoreSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
     }
 
     /**
-     <*  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>>
+     *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
      */
 
     public StoreSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Store.</p>>
+     *  <p>Sets the Custom Fields fields for the Store.</p>
      */
 
     public StoreSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class StoreSetCustomTypeActionBuilder implements Builder<StoreSetCustomTy
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Store.</p>>
+     *  <p>Sets the Custom Fields fields for the Store.</p>
      */
 
     public StoreSetCustomTypeActionBuilder fields(

@@ -35,12 +35,16 @@ public class PaymentSetMethodInfoInterfaceActionImpl implements PaymentSetMethod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getInterface() {
         return this._interface;

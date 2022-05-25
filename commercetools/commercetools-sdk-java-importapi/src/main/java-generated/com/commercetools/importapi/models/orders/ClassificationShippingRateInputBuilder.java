@@ -28,7 +28,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
     private com.commercetools.importapi.models.common.LocalizedString label;
 
     /**
-     <>
+     *
      */
 
     public ClassificationShippingRateInputBuilder key(final String key) {
@@ -37,12 +37,12 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public ClassificationShippingRateInputBuilder label(
@@ -52,12 +52,12 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public ClassificationShippingRateInputBuilder label(

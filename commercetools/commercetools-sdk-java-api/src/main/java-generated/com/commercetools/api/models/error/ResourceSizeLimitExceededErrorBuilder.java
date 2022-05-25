@@ -26,7 +26,7 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public ResourceSizeLimitExceededErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceSizeLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceSizeLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {

@@ -30,7 +30,7 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
     private Integer nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setRating</code></p>>
+     *  <p>Shape of the action for <code>setRating</code></p>
      */
 
     public SetRatingChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetRatingChangeBuilder previousValue(final Integer previousValue) {
@@ -48,7 +48,7 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetRatingChangeBuilder nextValue(final Integer nextValue) {

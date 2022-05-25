@@ -36,7 +36,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     String UPDATE_SYNC_INFO = "updateSyncInfo";
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @NotNull
     @Valid
@@ -44,14 +44,14 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     public ChannelResourceIdentifier getChannel();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("syncedAt")

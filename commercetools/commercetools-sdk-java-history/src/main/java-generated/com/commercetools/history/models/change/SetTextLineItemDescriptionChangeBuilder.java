@@ -34,7 +34,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemDescriptionChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemDescriptionChangeBuilder textLineItem(
@@ -54,7 +54,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemDescriptionChangeBuilder textLineItem(
@@ -64,7 +64,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemDescriptionChangeBuilder previousValue(
@@ -74,7 +74,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemDescriptionChangeBuilder previousValue(
@@ -84,7 +84,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemDescriptionChangeBuilder nextValue(
@@ -94,7 +94,7 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemDescriptionChangeBuilder nextValue(

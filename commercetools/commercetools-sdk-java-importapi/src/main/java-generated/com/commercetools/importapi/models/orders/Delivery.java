@@ -36,21 +36,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Delivery {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface Delivery {
     public List<DeliveryItem> getItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface Delivery {
     public List<Parcel> getParcels();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")

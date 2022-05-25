@@ -63,7 +63,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -71,7 +71,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
 
     public Long getQuantity() {
@@ -79,7 +79,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <*  <p>The cost to add to the cart. The amount can be negative.</p>>
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {
@@ -87,7 +87,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public String getSlug() {
@@ -95,7 +95,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
@@ -103,7 +103,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -111,7 +111,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -119,7 +119,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -127,7 +127,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

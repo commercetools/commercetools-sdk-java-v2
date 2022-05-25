@@ -40,7 +40,7 @@ public class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTypeActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTypeActio
     }
 
     /**
-     <*  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>>
+     *  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTypeActio
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Channel.</p>>
+     *  <p>Sets the Custom Fields fields for the Channel.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

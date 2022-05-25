@@ -27,21 +27,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantChannelAvailability {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("isOnStock")
     public Boolean getIsOnStock();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("availableQuantity")

@@ -44,7 +44,7 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -52,7 +52,7 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getTextLineItemId() {
@@ -60,7 +60,7 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
     }
 
     /**
-     <*  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>>
+     *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -68,7 +68,7 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the TextLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

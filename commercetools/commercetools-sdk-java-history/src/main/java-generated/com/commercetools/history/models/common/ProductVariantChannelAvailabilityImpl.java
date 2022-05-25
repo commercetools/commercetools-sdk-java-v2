@@ -39,7 +39,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsOnStock() {
@@ -47,7 +47,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getRestockableInDays() {
@@ -55,7 +55,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getAvailableQuantity() {

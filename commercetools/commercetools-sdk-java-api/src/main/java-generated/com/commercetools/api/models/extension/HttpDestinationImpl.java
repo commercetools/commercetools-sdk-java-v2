@@ -39,7 +39,7 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
     }
 
     /**
-     <*  <p>URL to the target destination.</p>>
+     *  <p>URL to the target destination.</p>
      */
 
     public String getUrl() {
@@ -55,7 +55,7 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
     }
 
     /**
-     <*  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>>
+     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      */
 
     public com.commercetools.api.models.extension.HttpDestinationAuthentication getAuthentication() {

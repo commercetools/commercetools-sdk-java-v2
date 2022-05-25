@@ -31,7 +31,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     private com.commercetools.api.models.common.ReferenceTypeId referencedBy;
 
     /**
-     <>
+     *
      */
 
     public ReferenceExistsErrorBuilder message(final String message) {
@@ -40,7 +40,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     }
 
     /**
-     <>
+     *
      */
 
     public ReferenceExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -49,7 +49,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     }
 
     /**
-     <>
+     *
      */
 
     public ReferenceExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -61,7 +61,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     }
 
     /**
-     <*  <p>supported resource type identifiers:</p>>
+     *  <p>supported resource type identifiers:</p>
      */
 
     public ReferenceExistsErrorBuilder referencedBy(

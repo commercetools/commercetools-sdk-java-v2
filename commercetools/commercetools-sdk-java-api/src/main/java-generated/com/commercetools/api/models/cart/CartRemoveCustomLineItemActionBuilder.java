@@ -24,7 +24,7 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
     private String customLineItemId;
 
     /**
-     <>
+     *
      */
 
     public CartRemoveCustomLineItemActionBuilder customLineItemId(final String customLineItemId) {

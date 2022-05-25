@@ -39,7 +39,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <*  <p>Connection to a particular synchronization destination.</p>>
+     *  <p>Connection to a particular synchronization destination.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -47,7 +47,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <*  <p>Can be used to reference an external order instance, file etc.</p>>
+     *  <p>Can be used to reference an external order instance, file etc.</p>
      */
 
     public String getExternalId() {
@@ -55,7 +55,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getSyncedAt() {

@@ -55,7 +55,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the Transaction.</p>>
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public String getId() {
@@ -63,7 +63,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>The time at which the transaction took place.</p>>
+     *  <p>The time at which the transaction took place.</p>
      */
 
     public java.time.ZonedDateTime getTimestamp() {
@@ -71,7 +71,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>The type of this transaction.</p>>
+     *  <p>The type of this transaction.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionType getType() {
@@ -79,7 +79,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.TypedMoney getAmount() {
@@ -87,7 +87,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>>
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
      */
 
     public String getInteractionId() {
@@ -95,7 +95,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>The state of this transaction.</p>>
+     *  <p>The state of this transaction.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionState getState() {
@@ -103,7 +103,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

@@ -47,7 +47,7 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setAssetTags</code></p>>
+     *  <p>Update action for <code>setAssetTags</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
@@ -71,7 +71,7 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getNextValue() {
@@ -79,7 +79,7 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getPreviousValue() {

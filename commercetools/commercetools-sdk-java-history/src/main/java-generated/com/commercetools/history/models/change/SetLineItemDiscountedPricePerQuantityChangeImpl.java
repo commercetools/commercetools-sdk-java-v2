@@ -52,7 +52,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -60,7 +60,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>>
+     *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
      */
 
     public String getChange() {
@@ -68,7 +68,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -76,7 +76,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -84,7 +84,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity getNextValue() {
@@ -92,7 +92,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity getPreviousValue() {

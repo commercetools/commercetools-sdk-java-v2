@@ -34,7 +34,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     private com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap channels;
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder isOnStock(final Boolean isOnStock) {
@@ -43,7 +43,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder restockableInDays(final Integer restockableInDays) {
@@ -52,7 +52,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder availableQuantity(final Integer availableQuantity) {
@@ -61,7 +61,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder channels(
@@ -73,7 +73,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder channels(

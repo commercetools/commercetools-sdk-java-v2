@@ -35,7 +35,7 @@ public class CartDiscountLineItemsTargetImpl implements CartDiscountLineItemsTar
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CartDiscountLineItemsTargetImpl implements CartDiscountLineItemsTar
     }
 
     /**
-     <*  <p>Valid LineItem target predicate.</p>>
+     *  <p>Valid LineItem target predicate.</p>
      */
 
     public String getPredicate() {

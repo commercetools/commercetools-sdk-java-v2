@@ -46,7 +46,7 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
     }
 
     /**
-     <*  <p>Average rating of one target This number is rounded with 5 decimals.</p>>
+     *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
      */
 
     public Integer getAverageRating() {
@@ -54,7 +54,7 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
     }
 
     /**
-     <*  <p>Highest rating of one target</p>>
+     *  <p>Highest rating of one target</p>
      */
 
     public Integer getHighestRating() {
@@ -62,7 +62,7 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
     }
 
     /**
-     <*  <p>Lowest rating of one target</p>>
+     *  <p>Lowest rating of one target</p>
      */
 
     public Integer getLowestRating() {
@@ -70,7 +70,7 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
     }
 
     /**
-     <*  <p>Number of ratings taken into account</p>>
+     *  <p>Number of ratings taken into account</p>
      */
 
     public Integer getCount() {
@@ -78,7 +78,7 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
     }
 
     /**
-     <*  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>>
+     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      */
 
     public java.lang.Object getRatingsDistribution() {

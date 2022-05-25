@@ -24,7 +24,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     private java.util.List<java.time.LocalDate> value;
 
     /**
-     <>
+     *
      */
 
     public DateSetFieldBuilder value(final java.time.LocalDate... value) {
@@ -33,7 +33,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public DateSetFieldBuilder value(final java.util.List<java.time.LocalDate> value) {
@@ -42,7 +42,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public DateSetFieldBuilder plusValue(final java.time.LocalDate... value) {

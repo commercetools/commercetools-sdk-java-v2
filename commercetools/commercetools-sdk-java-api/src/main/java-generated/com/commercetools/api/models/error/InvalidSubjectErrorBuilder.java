@@ -26,7 +26,7 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public InvalidSubjectErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidSubjectErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidSubjectErrorBuilder implements Builder<InvalidSubjectError> 
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidSubjectErrorBuilder addValue(final String key, final java.lang.Object value) {

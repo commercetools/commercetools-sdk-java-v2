@@ -47,7 +47,7 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     }
 
     /**
-     <*  <p>Update action for <code>setShippingMethodTaxAmount</code></p>>
+     *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
@@ -71,7 +71,7 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue getNextValue() {
@@ -79,7 +79,7 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue getPreviousValue() {

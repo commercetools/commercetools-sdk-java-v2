@@ -34,14 +34,14 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     <*  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>>
+     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the StagedOrder.</p>>
+     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
      */
     @Valid
     @JsonProperty("fields")

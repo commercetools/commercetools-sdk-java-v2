@@ -35,35 +35,35 @@ public interface SetProductVariantKeyChange extends Change {
     String SET_PRODUCT_VARIANT_KEY_CHANGE = "SetProductVariantKeyChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setProductVariantKey</code></p>>
+     *  <p>Update action for <code>setProductVariantKey</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

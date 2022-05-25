@@ -48,7 +48,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -56,7 +56,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getProduct() {
@@ -64,7 +64,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVariantId() {
@@ -72,7 +72,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getSupplyChannel() {
@@ -80,7 +80,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getDistributionChannel() {

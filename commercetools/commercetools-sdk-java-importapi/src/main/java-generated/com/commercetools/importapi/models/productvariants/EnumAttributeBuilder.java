@@ -29,7 +29,7 @@ public class EnumAttributeBuilder implements Builder<EnumAttribute> {
     private String value;
 
     /**
-     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public EnumAttributeBuilder name(@Nullable final String name) {
@@ -38,7 +38,7 @@ public class EnumAttributeBuilder implements Builder<EnumAttribute> {
     }
 
     /**
-     <>
+     *
      */
 
     public EnumAttributeBuilder value(final String value) {

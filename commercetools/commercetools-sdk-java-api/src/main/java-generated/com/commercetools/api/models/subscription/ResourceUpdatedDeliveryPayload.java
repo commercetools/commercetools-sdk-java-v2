@@ -37,21 +37,21 @@ public interface ResourceUpdatedDeliveryPayload extends DeliveryPayload {
     String RESOURCE_UPDATED = "ResourceUpdated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("oldVersion")
     public Long getOldVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("modifiedAt")

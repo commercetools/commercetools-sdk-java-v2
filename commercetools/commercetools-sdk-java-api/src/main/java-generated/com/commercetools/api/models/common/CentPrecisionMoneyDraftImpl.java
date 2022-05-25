@@ -43,11 +43,11 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
     }
 
     /**
-     <*  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
-    *  <ul>
-    *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
-    *  </ul>>
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
      */
 
     public Long getCentAmount() {
@@ -55,7 +55,7 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
     }
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
 
     public String getCurrencyCode() {
@@ -63,7 +63,7 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.MoneyType getType() {
@@ -71,7 +71,7 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
     }
 
     /**
-     <*  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>>
+     *  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>
      */
 
     public Integer getFractionDigits() {

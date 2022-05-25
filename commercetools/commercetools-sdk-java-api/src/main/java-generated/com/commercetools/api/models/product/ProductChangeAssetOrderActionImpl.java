@@ -46,7 +46,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -54,7 +54,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -62,7 +62,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -78,7 +78,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getAssetOrder() {

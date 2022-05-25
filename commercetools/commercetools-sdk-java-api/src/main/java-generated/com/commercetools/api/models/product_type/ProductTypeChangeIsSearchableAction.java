@@ -33,14 +33,14 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     String CHANGE_IS_SEARCHABLE = "changeIsSearchable";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("isSearchable")

@@ -24,7 +24,7 @@ public class AuthorizationHeaderAuthenticationBuilder implements Builder<Authori
     private String headerValue;
 
     /**
-     <*  <p>Partially hidden on retrieval for security reasons.</p>>
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
 
     public AuthorizationHeaderAuthenticationBuilder headerValue(final String headerValue) {

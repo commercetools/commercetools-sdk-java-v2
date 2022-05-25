@@ -74,7 +74,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the OrderEdit.</p>>
+     *  <p>Unique identifier of the OrderEdit.</p>
      */
 
     public String getId() {
@@ -82,7 +82,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the OrderEdit.</p>>
+     *  <p>The current version of the OrderEdit.</p>
      */
 
     public Long getVersion() {
@@ -90,7 +90,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -98,7 +98,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -106,7 +106,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -114,7 +114,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -122,7 +122,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the OrderEdit.</p>>
+     *  <p>User-defined unique identifier of the OrderEdit.</p>
      */
 
     public String getKey() {
@@ -130,7 +130,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>The order to be updated with this edit.</p>>
+     *  <p>The order to be updated with this edit.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getResource() {
@@ -138,7 +138,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>>
+     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
@@ -146,7 +146,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -154,7 +154,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>>
+     *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEditResult getResult() {
@@ -162,7 +162,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     <*  <p>This field can be used to add textual information regarding the edit.</p>>
+     *  <p>This field can be used to add textual information regarding the edit.</p>
      */
 
     public String getComment() {

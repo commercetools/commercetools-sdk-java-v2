@@ -36,7 +36,7 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
     }
 
     /**
-     <*  <p>A reference to the customer this payment belongs to.</p>>
+     *  <p>A reference to the customer this payment belongs to.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {

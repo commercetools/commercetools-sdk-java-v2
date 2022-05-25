@@ -38,7 +38,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetAttributeActionBuilder variantId(@Nullable final Long variantId) {
@@ -47,7 +47,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAttributeActionBuilder sku(@Nullable final String sku) {
@@ -56,7 +56,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAttributeActionBuilder name(final String name) {
@@ -65,7 +65,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     }
 
     /**
-     <*  <p>If the attribute exists and the value is omitted or set to <code>null</code>, the attribute is removed. If the attribute exists and a value is provided, the new value is applied. If the attribute does not exist and a value is provided, it is added as a new attribute.</p>>
+     *  <p>If the attribute exists and the value is omitted or set to <code>null</code>, the attribute is removed. If the attribute exists and a value is provided, the new value is applied. If the attribute does not exist and a value is provided, it is added as a new attribute.</p>
      */
 
     public ProductSetAttributeActionBuilder value(@Nullable final java.lang.Object value) {
@@ -74,7 +74,7 @@ public class ProductSetAttributeActionBuilder implements Builder<ProductSetAttri
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAttributeActionBuilder staged(@Nullable final Boolean staged) {

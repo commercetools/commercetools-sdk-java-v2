@@ -34,7 +34,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     private String previousValue;
 
     /**
-     <*  <p>Update action for <code>setAssetKey</code></p>>
+     *  <p>Update action for <code>setAssetKey</code></p>
      */
 
     public SetAssetKeyChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetKeyChangeBuilder asset(
@@ -53,7 +53,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetKeyChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
@@ -62,7 +62,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetKeyChangeBuilder nextValue(final String nextValue) {
@@ -71,7 +71,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetKeyChangeBuilder previousValue(final String previousValue) {

@@ -37,7 +37,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder id(final String id) {
@@ -46,7 +46,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder createdAt(final String createdAt) {
@@ -55,7 +55,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder measurements(
@@ -66,7 +66,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder measurements(final com.commercetools.history.models.common.ParcelMeasurements measurements) {
@@ -75,7 +75,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder trackingData(
@@ -85,7 +85,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder trackingData(final com.commercetools.history.models.common.TrackingData trackingData) {
@@ -94,7 +94,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder items(final com.commercetools.history.models.common.DeliveryItem... items) {
@@ -103,7 +103,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder items(final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
@@ -112,7 +112,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder plusItems(final com.commercetools.history.models.common.DeliveryItem... items) {
@@ -124,7 +124,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder plusItems(
@@ -137,7 +137,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder withItems(

@@ -43,7 +43,7 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -59,7 +59,7 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
     }
 
     /**
-     <*  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>>
+     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -67,7 +67,7 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Parcel.</p>>
+     *  <p>Sets the Custom Fields fields for the Parcel.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

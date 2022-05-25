@@ -33,7 +33,7 @@ public interface RangeFacetResult extends FacetResult {
     String RANGE = "range";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

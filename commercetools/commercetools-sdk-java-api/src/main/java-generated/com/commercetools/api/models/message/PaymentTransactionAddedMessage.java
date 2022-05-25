@@ -41,7 +41,7 @@ public interface PaymentTransactionAddedMessage extends Message {
     String PAYMENT_TRANSACTION_ADDED = "PaymentTransactionAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

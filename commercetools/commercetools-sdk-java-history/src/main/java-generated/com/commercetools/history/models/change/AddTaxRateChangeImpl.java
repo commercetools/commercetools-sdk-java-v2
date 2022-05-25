@@ -39,7 +39,7 @@ public class AddTaxRateChangeImpl implements AddTaxRateChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class AddTaxRateChangeImpl implements AddTaxRateChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addTaxRate</code> on tax categories</p>>
+     *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class AddTaxRateChangeImpl implements AddTaxRateChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getNextValue() {

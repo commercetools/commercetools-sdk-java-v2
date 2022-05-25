@@ -35,7 +35,7 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
     }
 
     /**
-     <*  <p>ID of the TaxRate to remove.</p>>
+     *  <p>ID of the TaxRate to remove.</p>
      */
 
     public String getTaxRateId() {

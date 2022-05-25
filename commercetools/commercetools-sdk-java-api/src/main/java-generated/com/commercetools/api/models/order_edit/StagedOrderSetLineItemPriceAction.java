@@ -35,15 +35,15 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
     String SET_LINE_ITEM_PRICE = "setLineItemPrice";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
     @Valid
     @JsonProperty("externalPrice")

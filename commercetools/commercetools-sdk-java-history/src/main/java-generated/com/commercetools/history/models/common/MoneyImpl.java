@@ -43,7 +43,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
 
     public String getCurrencyCode() {
@@ -51,7 +51,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getCentAmount() {
@@ -59,7 +59,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getFractionDigits() {
@@ -67,7 +67,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.MoneyType getType() {

@@ -39,7 +39,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     private java.util.List<com.commercetools.api.models.category.Category> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public CategoryPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public CategoryPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryPagedQueryResponseBuilder results(final com.commercetools.api.models.category.Category... results) {
@@ -84,7 +84,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryPagedQueryResponseBuilder plusResults(
@@ -107,7 +107,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryPagedQueryResponseBuilder plusResults(
@@ -120,7 +120,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryPagedQueryResponseBuilder withResults(

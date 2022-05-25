@@ -43,7 +43,7 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
     }
 
     /**
-     <*  <p>Shape of the action for <code>setTransitions</code></p>>
+     *  <p>Shape of the action for <code>setTransitions</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {

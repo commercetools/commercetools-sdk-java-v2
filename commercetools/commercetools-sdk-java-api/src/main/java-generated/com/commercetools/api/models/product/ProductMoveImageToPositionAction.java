@@ -33,35 +33,35 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     String MOVE_IMAGE_TO_POSITION = "moveImageToPosition";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>The URL of the image</p>>
+     *  <p>The URL of the image</p>
      */
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("position")
     public Long getPosition();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

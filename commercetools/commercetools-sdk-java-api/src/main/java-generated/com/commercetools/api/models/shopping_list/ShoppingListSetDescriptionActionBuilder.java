@@ -27,7 +27,7 @@ public class ShoppingListSetDescriptionActionBuilder implements Builder<Shopping
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetDescriptionActionBuilder description(
@@ -37,7 +37,7 @@ public class ShoppingListSetDescriptionActionBuilder implements Builder<Shopping
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetDescriptionActionBuilder description(

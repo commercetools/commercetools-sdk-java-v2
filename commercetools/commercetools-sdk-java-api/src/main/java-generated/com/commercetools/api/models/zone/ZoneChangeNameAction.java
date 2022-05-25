@@ -32,7 +32,7 @@ public interface ZoneChangeNameAction extends ZoneUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     <*  <p>New name of the Zone.</p>>
+     *  <p>New name of the Zone.</p>
      */
     @NotNull
     @JsonProperty("name")

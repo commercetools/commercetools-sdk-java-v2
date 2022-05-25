@@ -32,7 +32,7 @@ public interface NumberSetAttribute extends Attribute {
     String NUMBER_SET = "number-set";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

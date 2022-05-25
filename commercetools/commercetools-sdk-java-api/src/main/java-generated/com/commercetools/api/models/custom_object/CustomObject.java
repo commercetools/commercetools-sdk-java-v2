@@ -41,63 +41,63 @@ public interface CustomObject extends BaseResource, com.commercetools.api.models
         com.commercetools.api.models.Referencable<CustomObject> {
 
     /**
-     <*  <p>Unique identifier of the CustomObject.</p>>
+     *  <p>Unique identifier of the CustomObject.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Current version of the CustomObject.</p>>
+     *  <p>Current version of the CustomObject.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>Date and time (UTC) the CustomObject was initially created.</p>>
+     *  <p>Date and time (UTC) the CustomObject was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>Date and time (UTC) the CustomObject was last updated.</p>>
+     *  <p>Date and time (UTC) the CustomObject was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>Namespace to group CustomObjects.</p>>
+     *  <p>Namespace to group CustomObjects.</p>
      */
     @NotNull
     @JsonProperty("container")
     public String getContainer();
 
     /**
-     <*  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>>
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>>
+     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
      */
     @NotNull
     @JsonProperty("value")

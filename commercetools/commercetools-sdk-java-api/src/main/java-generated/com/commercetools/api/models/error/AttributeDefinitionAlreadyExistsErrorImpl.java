@@ -51,7 +51,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -59,7 +59,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -67,7 +67,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +75,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingProductTypeId() {
@@ -83,7 +83,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingProductTypeName() {
@@ -91,7 +91,7 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingAttributeName() {

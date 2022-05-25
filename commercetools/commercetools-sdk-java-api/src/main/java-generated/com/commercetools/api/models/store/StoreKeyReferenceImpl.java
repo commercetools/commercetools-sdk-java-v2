@@ -36,7 +36,7 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -44,7 +44,7 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique and immutable key of the referenced resource.</p>>
+     *  <p>User-defined unique and immutable key of the referenced resource.</p>
      */
 
     public String getKey() {

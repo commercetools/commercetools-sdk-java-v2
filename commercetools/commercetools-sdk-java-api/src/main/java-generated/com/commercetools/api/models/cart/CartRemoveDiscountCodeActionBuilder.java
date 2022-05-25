@@ -25,7 +25,7 @@ public class CartRemoveDiscountCodeActionBuilder implements Builder<CartRemoveDi
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public CartRemoveDiscountCodeActionBuilder discountCode(
@@ -36,7 +36,7 @@ public class CartRemoveDiscountCodeActionBuilder implements Builder<CartRemoveDi
     }
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public CartRemoveDiscountCodeActionBuilder discountCode(

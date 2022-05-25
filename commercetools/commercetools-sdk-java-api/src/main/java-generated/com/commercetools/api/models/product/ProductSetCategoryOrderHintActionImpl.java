@@ -42,7 +42,7 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -50,7 +50,7 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
     }
 
     /**
-     <>
+     *
      */
 
     public String getCategoryId() {
@@ -58,7 +58,7 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
     }
 
     /**
-     <>
+     *
      */
 
     public String getOrderHint() {
@@ -66,7 +66,7 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

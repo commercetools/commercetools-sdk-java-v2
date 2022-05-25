@@ -36,7 +36,7 @@ public class OrderUpdateItemShippingAddressActionImpl implements OrderUpdateItem
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderUpdateItemShippingAddressActionImpl implements OrderUpdateItem
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

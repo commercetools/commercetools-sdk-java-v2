@@ -39,7 +39,7 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getTransactionId() {
@@ -55,7 +55,7 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getTimestamp() {

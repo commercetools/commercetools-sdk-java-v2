@@ -52,7 +52,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -60,7 +60,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -68,7 +68,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -76,7 +76,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -84,7 +84,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -92,7 +92,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

@@ -28,7 +28,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
     private java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public CartUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartUpdateBuilder actions(final com.commercetools.api.models.cart.CartUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartUpdateBuilder actions(final java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions) {
@@ -55,7 +55,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartUpdateBuilder plusActions(final com.commercetools.api.models.cart.CartUpdateAction... actions) {
@@ -67,7 +67,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartUpdateBuilder plusActions(
@@ -80,7 +80,7 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartUpdateBuilder withActions(

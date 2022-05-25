@@ -36,21 +36,21 @@ public interface SetDefaultShippingAddressChange extends Change {
     String SET_DEFAULT_SHIPPING_ADDRESS_CHANGE = "SetDefaultShippingAddressChange";
 
     /**
-     <*  <p>Update action for <code>setDefaultShippingAddress</code> action.</p>>
+     *  <p>Update action for <code>setDefaultShippingAddress</code> action.</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetDefaultShippingAddressChange extends Change {
     public Address getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

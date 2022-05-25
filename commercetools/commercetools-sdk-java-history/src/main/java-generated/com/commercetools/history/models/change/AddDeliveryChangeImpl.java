@@ -43,7 +43,7 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addDelivery</code></p>>
+     *  <p>Update action for <code>addDelivery</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.DeliveryChangeValue getNextValue() {
@@ -67,7 +67,7 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.DeliveryChangeValue getPreviousValue() {

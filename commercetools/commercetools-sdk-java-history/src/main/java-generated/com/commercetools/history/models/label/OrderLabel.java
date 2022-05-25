@@ -33,21 +33,21 @@ public interface OrderLabel extends Label {
     String ORDER_LABEL = "OrderLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customerEmail")
     public String getCustomerEmail();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("orderNumber")

@@ -35,7 +35,7 @@ public class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft, Model
     }
 
     /**
-     <*  <p>The total gross amount of the item (totalNet + taxes).</p>>
+     *  <p>The total gross amount of the item (totalNet + taxes).</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalGross() {
@@ -43,7 +43,7 @@ public class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getTaxRate() {

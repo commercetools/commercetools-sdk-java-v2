@@ -32,7 +32,7 @@ public interface EnumSetField extends CustomField {
     String ENUM_SET = "EnumSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

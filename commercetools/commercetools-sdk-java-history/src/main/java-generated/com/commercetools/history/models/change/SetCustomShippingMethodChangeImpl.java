@@ -43,7 +43,7 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
     }
 
     /**
-     <*  <p>Update action for <code>setCustomShippingMethod</code></p>>
+     *  <p>Update action for <code>setCustomShippingMethod</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.CustomShippingMethodChangeValue getNextValue() {
@@ -67,7 +67,7 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.CustomShippingMethodChangeValue getPreviousValue() {

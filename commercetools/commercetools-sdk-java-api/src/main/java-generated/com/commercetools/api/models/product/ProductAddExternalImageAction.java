@@ -34,21 +34,21 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     String ADD_EXTERNAL_IMAGE = "addExternalImage";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -56,7 +56,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     public Image getImage();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

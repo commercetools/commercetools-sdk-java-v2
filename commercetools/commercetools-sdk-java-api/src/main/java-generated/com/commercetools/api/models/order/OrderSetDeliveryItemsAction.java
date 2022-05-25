@@ -34,14 +34,14 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     String SET_DELIVERY_ITEMS = "setDeliveryItems";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

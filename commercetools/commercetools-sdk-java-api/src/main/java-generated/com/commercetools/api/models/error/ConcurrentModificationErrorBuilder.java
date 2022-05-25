@@ -31,7 +31,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     private Long currentVersion;
 
     /**
-     <>
+     *
      */
 
     public ConcurrentModificationErrorBuilder message(final String message) {
@@ -40,7 +40,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     <>
+     *
      */
 
     public ConcurrentModificationErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -49,7 +49,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     <>
+     *
      */
 
     public ConcurrentModificationErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -61,7 +61,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     <>
+     *
      */
 
     public ConcurrentModificationErrorBuilder currentVersion(@Nullable final Long currentVersion) {

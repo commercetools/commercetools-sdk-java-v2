@@ -35,7 +35,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     String ADD_INTERFACE_INTERACTION = "addInterfaceInteraction";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     public TypeResourceIdentifier getType();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("fields")

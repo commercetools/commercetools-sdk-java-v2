@@ -30,7 +30,7 @@ public interface ProductPublishAction extends ProductUpdateAction {
     String PUBLISH = "publish";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("scope")

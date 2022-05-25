@@ -28,7 +28,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
 
     /**
-     <*  <p>Reference to a Product that is assigned to the ProductSelection.</p>>
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      */
 
     public ProductSelectionAssignmentBuilder product(
@@ -38,7 +38,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     <*  <p>Reference to a Product that is assigned to the ProductSelection.</p>>
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      */
 
     public ProductSelectionAssignmentBuilder product(
@@ -48,7 +48,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     <*  <p>Reference to the ProductSelection that this assignment is part of.</p>>
+     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
      */
 
     public ProductSelectionAssignmentBuilder productSelection(
@@ -60,7 +60,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     <*  <p>Reference to the ProductSelection that this assignment is part of.</p>>
+     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
      */
 
     public ProductSelectionAssignmentBuilder productSelection(

@@ -27,7 +27,7 @@ public class MyCartSetBillingAddressActionBuilder implements Builder<MyCartSetBi
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public MyCartSetBillingAddressActionBuilder address(
@@ -37,7 +37,7 @@ public class MyCartSetBillingAddressActionBuilder implements Builder<MyCartSetBi
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartSetBillingAddressActionBuilder address(

@@ -24,7 +24,7 @@ public class MyCartChangeTaxModeActionBuilder implements Builder<MyCartChangeTax
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
     /**
-     <>
+     *
      */
 
     public MyCartChangeTaxModeActionBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {

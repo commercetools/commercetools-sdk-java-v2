@@ -28,7 +28,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder deliveryId(final String deliveryId) {
@@ -37,7 +37,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder items(
@@ -47,7 +47,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder items(
@@ -57,7 +57,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder plusItems(
@@ -70,7 +70,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder plusItems(
@@ -83,7 +83,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryItemsActionBuilder withItems(

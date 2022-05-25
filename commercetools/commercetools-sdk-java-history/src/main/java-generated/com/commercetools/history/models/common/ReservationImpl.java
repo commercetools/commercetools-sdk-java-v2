@@ -43,7 +43,7 @@ public class ReservationImpl implements Reservation, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {
@@ -51,7 +51,7 @@ public class ReservationImpl implements Reservation, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getOwner() {
@@ -59,7 +59,7 @@ public class ReservationImpl implements Reservation, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCreatedAt() {
@@ -67,7 +67,7 @@ public class ReservationImpl implements Reservation, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCheckoutStartedAt() {

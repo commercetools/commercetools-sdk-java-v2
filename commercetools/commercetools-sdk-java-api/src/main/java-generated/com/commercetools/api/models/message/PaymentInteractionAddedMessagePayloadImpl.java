@@ -36,7 +36,7 @@ public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInterac
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInterac
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getInteraction() {

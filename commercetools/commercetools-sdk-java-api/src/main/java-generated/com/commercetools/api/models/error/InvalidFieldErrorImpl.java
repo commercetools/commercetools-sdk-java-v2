@@ -51,7 +51,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -59,7 +59,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -67,7 +67,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +75,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getField() {
@@ -83,7 +83,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getInvalidValue() {
@@ -91,7 +91,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<java.lang.Object> getAllowedValues() {

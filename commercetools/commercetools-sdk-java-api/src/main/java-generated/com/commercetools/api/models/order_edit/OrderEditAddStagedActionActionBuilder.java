@@ -25,7 +25,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
     private com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction;
 
     /**
-     <>
+     *
      */
 
     public OrderEditAddStagedActionActionBuilder stagedAction(
@@ -35,7 +35,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAddStagedActionActionBuilder stagedAction(

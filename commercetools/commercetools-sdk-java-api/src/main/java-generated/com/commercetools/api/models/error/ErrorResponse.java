@@ -32,35 +32,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ErrorResponse {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("statusCode")
     public Integer getStatusCode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("message")
     public String getMessage();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("error")
     public String getError();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("error_description")
     public String getErrorDescription();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("errors")

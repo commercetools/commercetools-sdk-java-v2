@@ -29,7 +29,7 @@ public interface ShoppingListSetDeleteDaysAfterLastModificationAction extends Sh
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("deleteDaysAfterLastModification")

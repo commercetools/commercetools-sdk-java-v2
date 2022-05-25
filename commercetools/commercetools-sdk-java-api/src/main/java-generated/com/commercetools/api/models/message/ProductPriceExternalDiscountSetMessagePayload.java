@@ -36,42 +36,42 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
     String PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET = "ProductPriceExternalDiscountSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantKey")
     public String getVariantKey();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("staged")

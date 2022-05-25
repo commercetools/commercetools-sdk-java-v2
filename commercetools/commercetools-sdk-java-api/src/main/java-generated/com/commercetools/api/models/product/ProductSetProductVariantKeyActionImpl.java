@@ -46,7 +46,7 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -54,7 +54,7 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -62,7 +62,7 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
     }
 
     /**
-     <*  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>>
+     *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
      */
 
     public String getKey() {
@@ -78,7 +78,7 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

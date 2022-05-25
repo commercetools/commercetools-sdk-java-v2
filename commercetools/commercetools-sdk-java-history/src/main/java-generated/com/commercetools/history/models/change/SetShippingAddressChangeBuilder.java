@@ -31,7 +31,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
     private com.commercetools.history.models.common.Address previousValue;
 
     /**
-     <*  <p>Update action for <code>setShippingAddress</code></p>>
+     *  <p>Update action for <code>setShippingAddress</code></p>
      */
 
     public SetShippingAddressChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingAddressChangeBuilder nextValue(
@@ -50,7 +50,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
@@ -59,7 +59,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingAddressChangeBuilder previousValue(
@@ -69,7 +69,7 @@ public class SetShippingAddressChangeBuilder implements Builder<SetShippingAddre
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingAddressChangeBuilder previousValue(

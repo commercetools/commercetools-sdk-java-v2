@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChangeSubscription {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("resourceTypeId")

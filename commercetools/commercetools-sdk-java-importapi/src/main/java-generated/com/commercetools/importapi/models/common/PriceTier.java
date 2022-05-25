@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceTier {
 
     /**
-     <*  <p>The minimum quantity this price tier is valid for.</p>>
+     *  <p>The minimum quantity this price tier is valid for.</p>
      */
     @NotNull
     @JsonProperty("minimumQuantity")
     public Long getMinimumQuantity();
 
     /**
-     <*  <p>The currency of a price tier is always the same as the currency of the base Price.</p>>
+     *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
      */
     @NotNull
     @Valid

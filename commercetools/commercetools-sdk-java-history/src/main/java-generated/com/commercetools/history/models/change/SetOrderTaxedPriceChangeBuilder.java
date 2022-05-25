@@ -34,7 +34,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
     /**
-     <*  <p>Update action for <code>setOrderTaxedPrice</code></p>>
+     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
      */
 
     public SetOrderTaxedPriceChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTaxedPriceChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
@@ -52,7 +52,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTaxedPriceChangeBuilder nextValue(
@@ -62,7 +62,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTaxedPriceChangeBuilder nextValue(
@@ -72,7 +72,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTaxedPriceChangeBuilder previousValue(
@@ -82,7 +82,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTaxedPriceChangeBuilder previousValue(

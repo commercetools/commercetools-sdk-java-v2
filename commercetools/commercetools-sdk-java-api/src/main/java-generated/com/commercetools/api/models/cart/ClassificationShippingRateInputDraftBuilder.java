@@ -24,7 +24,7 @@ public class ClassificationShippingRateInputDraftBuilder implements Builder<Clas
     private String key;
 
     /**
-     <>
+     *
      */
 
     public ClassificationShippingRateInputDraftBuilder key(final String key) {

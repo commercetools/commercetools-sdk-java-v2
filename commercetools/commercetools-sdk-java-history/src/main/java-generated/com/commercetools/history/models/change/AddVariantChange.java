@@ -37,28 +37,28 @@ public interface AddVariantChange extends Change {
     String ADD_VARIANT_CHANGE = "AddVariantChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addVariant</code></p>>
+     *  <p>Update action for <code>addVariant</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface AddVariantChange extends Change {
     public Variant getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

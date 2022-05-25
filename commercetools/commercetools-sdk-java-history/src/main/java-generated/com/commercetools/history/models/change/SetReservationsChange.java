@@ -36,21 +36,21 @@ public interface SetReservationsChange extends Change {
     String SET_RESERVATIONS_CHANGE = "SetReservationsChange";
 
     /**
-     <*  <p>Update action for <code>setReservations</code> on inventories</p>>
+     *  <p>Update action for <code>setReservations</code> on inventories</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetReservationsChange extends Change {
     public List<Reservation> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

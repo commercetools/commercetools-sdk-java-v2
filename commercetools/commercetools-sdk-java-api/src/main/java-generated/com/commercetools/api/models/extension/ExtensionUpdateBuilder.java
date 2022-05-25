@@ -28,7 +28,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     private java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions;
 
     /**
-     <*  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public ExtensionUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Extension.</p>>
+     *  <p>Update actions to be performed on the Extension.</p>
      */
 
     public ExtensionUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Extension.</p>>
+     *  <p>Update actions to be performed on the Extension.</p>
      */
 
     public ExtensionUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Extension.</p>>
+     *  <p>Update actions to be performed on the Extension.</p>
      */
 
     public ExtensionUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Extension.</p>>
+     *  <p>Update actions to be performed on the Extension.</p>
      */
 
     public ExtensionUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Extension.</p>>
+     *  <p>Update actions to be performed on the Extension.</p>
      */
 
     public ExtensionUpdateBuilder withActions(

@@ -72,7 +72,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public StoreCreatedMessageBuilder id(final String id) {
@@ -81,7 +81,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder version(final Long version) {
@@ -90,7 +90,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -99,7 +99,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -108,7 +108,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public StoreCreatedMessageBuilder lastModifiedBy(
@@ -118,7 +118,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public StoreCreatedMessageBuilder lastModifiedBy(
@@ -128,7 +128,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public StoreCreatedMessageBuilder createdBy(
@@ -138,7 +138,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public StoreCreatedMessageBuilder createdBy(
@@ -148,7 +148,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -157,7 +157,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public StoreCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -166,7 +166,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public StoreCreatedMessageBuilder resource(
@@ -176,7 +176,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -185,7 +185,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -197,7 +197,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -207,7 +207,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public StoreCreatedMessageBuilder name(
@@ -217,7 +217,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public StoreCreatedMessageBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -226,7 +226,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder languages(final String... languages) {
@@ -235,7 +235,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder languages(final java.util.List<String> languages) {
@@ -244,7 +244,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder plusLanguages(final String... languages) {
@@ -256,7 +256,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder distributionChannels(
@@ -266,7 +266,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder distributionChannels(
@@ -276,7 +276,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder plusDistributionChannels(
@@ -289,7 +289,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder plusDistributionChannels(
@@ -303,7 +303,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder withDistributionChannels(
@@ -315,7 +315,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder supplyChannels(
@@ -325,7 +325,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder supplyChannels(
@@ -335,7 +335,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder plusSupplyChannels(
@@ -348,7 +348,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder plusSupplyChannels(
@@ -362,7 +362,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder withSupplyChannels(
@@ -374,7 +374,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder productSelections(
@@ -384,7 +384,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder productSelections(
@@ -394,7 +394,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder plusProductSelections(
@@ -407,7 +407,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder plusProductSelections(
@@ -421,7 +421,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessageBuilder withProductSelections(
@@ -433,7 +433,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public StoreCreatedMessageBuilder custom(
@@ -443,7 +443,7 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public StoreCreatedMessageBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

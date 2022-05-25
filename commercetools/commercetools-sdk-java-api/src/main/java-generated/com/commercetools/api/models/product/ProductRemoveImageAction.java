@@ -32,28 +32,28 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     String REMOVE_IMAGE = "removeImage";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>The URL of the image.</p>>
+     *  <p>The URL of the image.</p>
      */
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

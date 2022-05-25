@@ -51,7 +51,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -59,7 +59,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -67,7 +67,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +75,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
@@ -83,7 +83,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getExtensionExtraInfo() {
@@ -91,7 +91,7 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {

@@ -50,7 +50,7 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     <*  <p>Update action for setting a custom field</p>>
+     *  <p>Update action for setting a custom field</p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     <*  <p>Custom field name</p>>
+     *  <p>Custom field name</p>
      */
 
     public String getName() {
@@ -74,7 +74,7 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomTypeId() {
@@ -82,7 +82,7 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {
@@ -90,7 +90,7 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

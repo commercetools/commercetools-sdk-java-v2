@@ -43,7 +43,7 @@ public class ChangeTargetChangeImpl implements ChangeTargetChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeTargetChangeImpl implements ChangeTargetChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>changeTarget</code> on cart discounts</p>>
+     *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeTargetChangeImpl implements ChangeTargetChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ChangeTargetChangeValue getNextValue() {
@@ -67,7 +67,7 @@ public class ChangeTargetChangeImpl implements ChangeTargetChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ChangeTargetChangeValue getPreviousValue() {

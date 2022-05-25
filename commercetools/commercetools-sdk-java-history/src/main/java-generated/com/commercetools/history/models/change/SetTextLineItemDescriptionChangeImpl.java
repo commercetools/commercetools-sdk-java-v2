@@ -47,7 +47,7 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
@@ -71,7 +71,7 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -79,7 +79,7 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

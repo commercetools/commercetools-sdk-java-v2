@@ -34,14 +34,14 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
     String ADD_LOCALIZED_ENUM_VALUE = "addLocalizedEnumValue";
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
     @NotNull
     @Valid

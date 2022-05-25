@@ -27,7 +27,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <*  <p>If not provided, the name is unset.</p>>
+     *  <p>If not provided, the name is unset.</p>
      */
 
     public PaymentSetMethodInfoNameActionBuilder name(
@@ -37,7 +37,7 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
     }
 
     /**
-     <*  <p>If not provided, the name is unset.</p>>
+     *  <p>If not provided, the name is unset.</p>
      */
 
     public PaymentSetMethodInfoNameActionBuilder name(

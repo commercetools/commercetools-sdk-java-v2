@@ -28,7 +28,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     private com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue;
 
     /**
-     <*  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>>
+     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
      */
 
     public AddInterfaceInteractionChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     }
 
     /**
-     <*  <p>Only available if <code>expand</code> is set to true</p>>
+     *  <p>Only available if <code>expand</code> is set to true</p>
      */
 
     public AddInterfaceInteractionChangeBuilder nextValue(
@@ -49,7 +49,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     }
 
     /**
-     <*  <p>Only available if <code>expand</code> is set to true</p>>
+     *  <p>Only available if <code>expand</code> is set to true</p>
      */
 
     public AddInterfaceInteractionChangeBuilder nextValue(

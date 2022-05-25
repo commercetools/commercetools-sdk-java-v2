@@ -40,7 +40,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -48,7 +48,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public StateReference getOldState();
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -56,21 +56,21 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public StateReference getNewState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("oldIncludedInStatistics")
     public Boolean getOldIncludedInStatistics();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newIncludedInStatistics")
     public Boolean getNewIncludedInStatistics();
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
     @NotNull
     @Valid
@@ -78,7 +78,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     public Reference getTarget();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("force")

@@ -26,7 +26,7 @@ public class OrderSetLocaleActionBuilder implements Builder<OrderSetLocaleAction
     private String locale;
 
     /**
-     <>
+     *
      */
 
     public OrderSetLocaleActionBuilder locale(@Nullable final String locale) {

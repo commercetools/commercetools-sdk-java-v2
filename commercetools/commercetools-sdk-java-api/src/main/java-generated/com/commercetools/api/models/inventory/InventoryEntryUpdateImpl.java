@@ -35,7 +35,7 @@ public class InventoryEntryUpdateImpl implements InventoryEntryUpdate, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class InventoryEntryUpdateImpl implements InventoryEntryUpdate, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> getActions() {

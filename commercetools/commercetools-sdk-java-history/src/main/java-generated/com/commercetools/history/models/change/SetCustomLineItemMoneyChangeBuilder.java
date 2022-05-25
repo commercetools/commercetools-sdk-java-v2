@@ -37,7 +37,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     private com.commercetools.history.models.common.Money previousValue;
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemMoney</code></p>>
+     *  <p>Update action for <code>setCustomLineItemMoney</code></p>
      */
 
     public SetCustomLineItemMoneyChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemMoneyChangeBuilder customLineItem(
@@ -57,7 +57,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemMoneyChangeBuilder customLineItem(
@@ -67,7 +67,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemMoneyChangeBuilder customLineItemId(final String customLineItemId) {
@@ -76,7 +76,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemMoneyChangeBuilder nextValue(
@@ -86,7 +86,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemMoneyChangeBuilder nextValue(
@@ -96,7 +96,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemMoneyChangeBuilder previousValue(
@@ -106,7 +106,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemMoneyChangeBuilder previousValue(

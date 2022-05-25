@@ -25,7 +25,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueAbsoluteBuilder money(
@@ -35,7 +35,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueAbsoluteBuilder money(
@@ -45,7 +45,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueAbsoluteBuilder plusMoney(
@@ -58,7 +58,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueAbsoluteBuilder plusMoney(
@@ -71,7 +71,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueAbsoluteBuilder withMoney(

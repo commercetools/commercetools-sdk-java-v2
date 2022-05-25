@@ -33,49 +33,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerSignin {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("password")
     public String getPassword();
 
     /**
-     <>
+     *
      */
     @Deprecated
     @JsonProperty("anonymousCartId")
     public String getAnonymousCartId();
 
     /**
-     <*  <p>ResourceIdentifier to a Cart.</p>>
+     *  <p>ResourceIdentifier to a Cart.</p>
      */
     @Valid
     @JsonProperty("anonymousCart")
     public CartResourceIdentifier getAnonymousCart();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("anonymousCartSignInMode")
     public AnonymousCartSignInMode getAnonymousCartSignInMode();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("updateProductData")

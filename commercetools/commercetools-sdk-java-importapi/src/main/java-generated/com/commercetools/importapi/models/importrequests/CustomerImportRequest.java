@@ -34,7 +34,7 @@ public interface CustomerImportRequest extends ImportRequest {
     String CUSTOMER = "customer";
 
     /**
-     <*  <p>The customer import resources of this request.</p>>
+     *  <p>The customer import resources of this request.</p>
      */
     @NotNull
     @Valid

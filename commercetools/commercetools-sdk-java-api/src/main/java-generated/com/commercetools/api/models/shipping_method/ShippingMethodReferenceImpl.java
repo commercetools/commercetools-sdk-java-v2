@@ -40,7 +40,7 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
     }
 
     /**
-     <*  <p>Unique identifier of the referenced ShippingMethod.</p>>
+     *  <p>Unique identifier of the referenced ShippingMethod.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethod getObj() {

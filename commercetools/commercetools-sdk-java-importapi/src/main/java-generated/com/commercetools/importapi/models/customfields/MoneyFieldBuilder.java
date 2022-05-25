@@ -25,7 +25,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     /**
-     <>
+     *
      */
 
     public MoneyFieldBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -34,7 +34,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
     }
 
     /**
-     <>
+     *
      */
 
     public MoneyFieldBuilder value(

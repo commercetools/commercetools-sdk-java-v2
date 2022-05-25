@@ -27,7 +27,7 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
 
     /**
-     <>
+     *
      */
 
     public KeyReferenceBuilder key(final String key) {
@@ -36,7 +36,7 @@ public class KeyReferenceBuilder implements Builder<KeyReference> {
     }
 
     /**
-     <>
+     *
      */
 
     public KeyReferenceBuilder typeId(final com.commercetools.history.models.common.ReferenceTypeId typeId) {

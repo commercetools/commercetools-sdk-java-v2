@@ -33,7 +33,7 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")

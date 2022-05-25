@@ -31,7 +31,7 @@ public class ExtensionDestinationImpl implements ExtensionDestination, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

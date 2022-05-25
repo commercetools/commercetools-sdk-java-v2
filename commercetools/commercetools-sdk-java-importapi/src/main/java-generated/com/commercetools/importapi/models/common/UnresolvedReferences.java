@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface UnresolvedReferences {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>The type of the referenced resource.</p>>
+     *  <p>The type of the referenced resource.</p>
      */
     @NotNull
     @JsonProperty("typeId")

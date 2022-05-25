@@ -63,7 +63,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     private Boolean force;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderStateTransitionMessageBuilder id(final String id) {
@@ -72,7 +72,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessageBuilder version(final Long version) {
@@ -81,7 +81,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -90,7 +90,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -99,7 +99,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderStateTransitionMessageBuilder lastModifiedBy(
@@ -109,7 +109,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderStateTransitionMessageBuilder lastModifiedBy(
@@ -119,7 +119,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderStateTransitionMessageBuilder createdBy(
@@ -129,7 +129,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderStateTransitionMessageBuilder createdBy(
@@ -139,7 +139,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -148,7 +148,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderStateTransitionMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -157,7 +157,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderStateTransitionMessageBuilder resource(
@@ -167,7 +167,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -176,7 +176,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -188,7 +188,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -198,7 +198,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public OrderStateTransitionMessageBuilder state(
@@ -208,7 +208,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public OrderStateTransitionMessageBuilder state(final com.commercetools.api.models.state.StateReference state) {
@@ -217,7 +217,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public OrderStateTransitionMessageBuilder oldState(
@@ -227,7 +227,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public OrderStateTransitionMessageBuilder oldState(
@@ -237,7 +237,7 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateTransitionMessageBuilder force(final Boolean force) {

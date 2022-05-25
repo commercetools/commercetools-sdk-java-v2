@@ -30,7 +30,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     private Boolean active;
 
     /**
-     <*  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>>
+     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
      */
 
     public StoreChangeProductSelectionActionBuilder productSelection(
@@ -40,7 +40,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     }
 
     /**
-     <*  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>>
+     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
      */
 
     public StoreChangeProductSelectionActionBuilder productSelection(
@@ -51,7 +51,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     }
 
     /**
-     <*  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>>
+     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
      */
 
     public StoreChangeProductSelectionActionBuilder active(@Nullable final Boolean active) {

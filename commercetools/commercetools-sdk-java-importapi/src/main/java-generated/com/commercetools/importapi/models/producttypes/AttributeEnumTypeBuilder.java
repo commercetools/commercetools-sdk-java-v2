@@ -25,7 +25,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values;
 
     /**
-     <>
+     *
      */
 
     public AttributeEnumTypeBuilder values(
@@ -35,7 +35,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeEnumTypeBuilder values(
@@ -45,7 +45,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeEnumTypeBuilder plusValues(
@@ -58,7 +58,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeEnumTypeBuilder plusValues(
@@ -72,7 +72,7 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeEnumTypeBuilder withValues(

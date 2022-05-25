@@ -37,28 +37,28 @@ public interface ChangeMasterVariantChange extends Change {
     String CHANGE_MASTER_VARIANT_CHANGE = "ChangeMasterVariantChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeMasterVariant</code></p>>
+     *  <p>Update action for <code>changeMasterVariant</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface ChangeMasterVariantChange extends Change {
     public Variant getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

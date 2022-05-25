@@ -101,7 +101,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the Category.</p>>
+     *  <p>Unique identifier of the Category.</p>
      */
 
     public String getId() {
@@ -109,7 +109,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the category.</p>>
+     *  <p>The current version of the category.</p>
      */
 
     public Long getVersion() {
@@ -117,7 +117,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -125,7 +125,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -133,7 +133,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -141,7 +141,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -149,7 +149,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -157,7 +157,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>>
+     *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -165,7 +165,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -173,7 +173,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>Contains the parent path towards the root category.</p>>
+     *  <p>Contains the parent path towards the root category.</p>
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getAncestors() {
@@ -181,7 +181,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>A category that is the parent of this category in the category tree.</p>>
+     *  <p>A category that is the parent of this category in the category tree.</p>
      */
 
     public com.commercetools.api.models.category.CategoryReference getParent() {
@@ -189,7 +189,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>An attribute as base for a custom category order in one level.</p>>
+     *  <p>An attribute as base for a custom category order in one level.</p>
      */
 
     public String getOrderHint() {
@@ -197,7 +197,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getExternalId() {
@@ -205,7 +205,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -213,7 +213,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -221,7 +221,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -229,7 +229,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -237,7 +237,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>Can be used to store images, icons or movies related to this category.</p>>
+     *  <p>Can be used to store images, icons or movies related to this category.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
@@ -245,7 +245,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Category.</p>>
+     *  <p>User-defined unique identifier of the Category.</p>
      */
 
     public String getKey() {

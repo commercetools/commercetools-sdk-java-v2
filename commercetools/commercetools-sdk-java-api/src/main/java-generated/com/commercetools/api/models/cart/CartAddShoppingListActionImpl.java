@@ -44,7 +44,7 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -52,7 +52,7 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
     }
 
     /**
-     <*  <p>ResourceIdentifier to a ShoppingList.</p>>
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
      */
 
     public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList() {
@@ -60,7 +60,7 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -68,7 +68,7 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {

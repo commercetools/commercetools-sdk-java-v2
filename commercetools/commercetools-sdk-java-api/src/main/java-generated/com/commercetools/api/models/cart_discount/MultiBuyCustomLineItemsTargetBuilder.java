@@ -38,7 +38,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
     /**
-     <*  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>>
+     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder predicate(final String predicate) {
@@ -47,7 +47,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     <*  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>>
+     *  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
@@ -56,7 +56,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     <*  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>>
+     *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
@@ -65,7 +65,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     <*  <p>Maximum number of times this Discount can be applied.</p>>
+     *  <p>Maximum number of times this Discount can be applied.</p>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
@@ -74,7 +74,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     <*  <p>Discounts particular Line Items only according to the SelectionMode.</p>>
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      */
 
     public MultiBuyCustomLineItemsTargetBuilder selectionMode(

@@ -25,7 +25,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     private java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets;
 
     /**
-     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -35,7 +35,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      */
 
     public ItemShippingDetailsDraftBuilder targets(
@@ -45,7 +45,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -58,7 +58,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
@@ -72,7 +72,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      */
 
     public ItemShippingDetailsDraftBuilder withTargets(

@@ -37,7 +37,7 @@ public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
     }
 
     /**
-     <*  <p>The type of the import resource.</p>>
+     *  <p>The type of the import resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
@@ -45,7 +45,7 @@ public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
     }
 
     /**
-     <*  <p>The price import resources of this request.</p>>
+     *  <p>The price import resources of this request.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.prices.PriceImport> getResources() {

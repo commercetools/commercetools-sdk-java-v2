@@ -35,7 +35,7 @@ public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -43,7 +43,7 @@ public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {

@@ -31,7 +31,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     private com.commercetools.history.models.common.Parcel previousValue;
 
     /**
-     <*  <p>Update action for <code>removeParcelFromDelivery</code></p>>
+     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
      */
 
     public RemoveParcelFromDeliveryChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveParcelFromDeliveryChangeBuilder deliveryId(final String deliveryId) {
@@ -49,7 +49,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveParcelFromDeliveryChangeBuilder previousValue(
@@ -59,7 +59,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveParcelFromDeliveryChangeBuilder previousValue(

@@ -48,7 +48,7 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values() {

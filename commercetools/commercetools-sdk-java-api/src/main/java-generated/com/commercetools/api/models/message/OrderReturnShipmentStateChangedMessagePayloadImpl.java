@@ -40,7 +40,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getReturnItemId() {
@@ -56,7 +56,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getReturnShipmentState() {

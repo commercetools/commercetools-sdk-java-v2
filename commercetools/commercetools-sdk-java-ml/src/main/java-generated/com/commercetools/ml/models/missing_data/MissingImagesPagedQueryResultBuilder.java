@@ -37,7 +37,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     private com.commercetools.ml.models.missing_data.MissingImagesMeta meta;
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder count(final Long count) {
@@ -46,7 +46,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder total(final Long total) {
@@ -55,7 +55,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public MissingImagesPagedQueryResultBuilder offset(final Long offset) {
@@ -64,7 +64,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder results(
@@ -74,7 +74,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder results(
@@ -84,7 +84,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder plusResults(
@@ -97,7 +97,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder plusResults(
@@ -110,7 +110,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder withResults(
@@ -121,7 +121,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder meta(
@@ -131,7 +131,7 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesPagedQueryResultBuilder meta(

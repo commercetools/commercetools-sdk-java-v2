@@ -36,7 +36,7 @@ public class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleActio
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {

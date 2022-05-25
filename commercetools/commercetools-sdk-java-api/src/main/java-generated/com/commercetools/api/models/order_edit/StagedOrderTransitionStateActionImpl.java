@@ -40,7 +40,7 @@ public class StagedOrderTransitionStateActionImpl implements StagedOrderTransiti
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class StagedOrderTransitionStateActionImpl implements StagedOrderTransiti
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -56,7 +56,7 @@ public class StagedOrderTransitionStateActionImpl implements StagedOrderTransiti
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getForce() {

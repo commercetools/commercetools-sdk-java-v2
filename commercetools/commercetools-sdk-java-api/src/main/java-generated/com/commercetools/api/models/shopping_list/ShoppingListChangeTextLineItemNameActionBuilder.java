@@ -29,7 +29,7 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListChangeTextLineItemNameActionBuilder textLineItemId(final String textLineItemId) {
@@ -38,7 +38,7 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ShoppingListChangeTextLineItemNameActionBuilder name(
@@ -48,7 +48,7 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ShoppingListChangeTextLineItemNameActionBuilder name(

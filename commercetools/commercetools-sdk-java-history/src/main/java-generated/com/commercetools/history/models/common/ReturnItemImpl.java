@@ -57,7 +57,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -65,7 +65,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {
@@ -73,7 +73,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -81,7 +81,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getComment() {
@@ -89,7 +89,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReturnShipmentState getShipmentState() {
@@ -97,7 +97,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReturnPaymentState getPaymentState() {
@@ -105,7 +105,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLastModifiedAt() {
@@ -113,7 +113,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCreatedAt() {

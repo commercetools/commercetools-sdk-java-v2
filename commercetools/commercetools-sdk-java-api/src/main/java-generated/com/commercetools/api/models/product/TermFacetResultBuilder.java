@@ -37,7 +37,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     private java.util.List<com.commercetools.api.models.product.FacetTerm> terms;
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder dataType(final com.commercetools.api.models.product.TermFacetResultType dataType) {
@@ -46,7 +46,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder missing(final Long missing) {
@@ -55,7 +55,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder total(final Long total) {
@@ -64,7 +64,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder other(final Long other) {
@@ -73,7 +73,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder terms(final com.commercetools.api.models.product.FacetTerm... terms) {
@@ -82,7 +82,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder terms(final java.util.List<com.commercetools.api.models.product.FacetTerm> terms) {
@@ -91,7 +91,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder plusTerms(final com.commercetools.api.models.product.FacetTerm... terms) {
@@ -103,7 +103,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder plusTerms(
@@ -116,7 +116,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public TermFacetResultBuilder withTerms(

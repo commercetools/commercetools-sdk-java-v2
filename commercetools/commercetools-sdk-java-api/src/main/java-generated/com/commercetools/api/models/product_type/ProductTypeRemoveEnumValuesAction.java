@@ -33,14 +33,14 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     String REMOVE_ENUM_VALUES = "removeEnumValues";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("keys")

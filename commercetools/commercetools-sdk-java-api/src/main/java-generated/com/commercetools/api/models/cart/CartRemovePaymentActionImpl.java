@@ -36,7 +36,7 @@ public class CartRemovePaymentActionImpl implements CartRemovePaymentAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartRemovePaymentActionImpl implements CartRemovePaymentAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {

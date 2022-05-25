@@ -35,21 +35,21 @@ public interface RemoveAssetChange extends Change {
     String REMOVE_ASSET_CHANGE = "RemoveAssetChange";
 
     /**
-     <*  <p>Update action for <code>removeAsset</code></p>>
+     *  <p>Update action for <code>removeAsset</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

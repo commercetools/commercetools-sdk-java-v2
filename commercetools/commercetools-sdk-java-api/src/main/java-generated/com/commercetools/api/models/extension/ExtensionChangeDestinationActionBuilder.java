@@ -25,7 +25,7 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
     private com.commercetools.api.models.extension.ExtensionDestination destination;
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ExtensionChangeDestinationActionBuilder destination(
@@ -35,7 +35,7 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ExtensionChangeDestinationActionBuilder destination(

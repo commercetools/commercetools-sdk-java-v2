@@ -26,7 +26,7 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public InvalidTokenErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidTokenErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidTokenErrorBuilder addValue(final String key, final java.lang.Object value) {

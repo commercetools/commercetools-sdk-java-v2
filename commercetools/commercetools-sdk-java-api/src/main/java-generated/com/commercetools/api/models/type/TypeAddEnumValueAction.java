@@ -34,14 +34,14 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
     String ADD_ENUM_VALUE = "addEnumValue";
 
     /**
-     <*  <p><code>name</code> of the Field Definition to update.</p>>
+     *  <p><code>name</code> of the Field Definition to update.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
     @NotNull
     @Valid

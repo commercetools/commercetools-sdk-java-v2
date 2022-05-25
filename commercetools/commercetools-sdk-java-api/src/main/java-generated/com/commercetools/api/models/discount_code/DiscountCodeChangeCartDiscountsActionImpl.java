@@ -36,7 +36,7 @@ public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeCh
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeCh
     }
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts() {

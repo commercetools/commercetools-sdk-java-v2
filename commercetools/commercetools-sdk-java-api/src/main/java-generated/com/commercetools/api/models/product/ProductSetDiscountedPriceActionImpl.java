@@ -43,7 +43,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     <>
+     *
      */
 
     public String getPriceId() {
@@ -59,7 +59,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -67,7 +67,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {

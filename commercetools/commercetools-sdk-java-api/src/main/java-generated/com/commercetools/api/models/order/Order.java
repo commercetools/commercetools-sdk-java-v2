@@ -66,91 +66,91 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
         com.commercetools.api.models.Customizable<Order>, com.commercetools.api.models.order.OrderLike<Order> {
 
     /**
-     <*  <p>Unique identifier of the Order.</p>>
+     *  <p>Unique identifier of the Order.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>The current version of the order.</p>>
+     *  <p>The current version of the order.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>This field will only be present if it was set for Order Import</p>>
+     *  <p>This field will only be present if it was set for Order Import</p>
      */
 
     @JsonProperty("completedAt")
     public ZonedDateTime getCompletedAt();
 
     /**
-     <*  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>>
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
      */
 
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customerId")
     public String getCustomerId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customerEmail")
     public String getCustomerEmail();
 
     /**
-     <*  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("store")
     public StoreKeyReference getStore();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -158,7 +158,7 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public List<LineItem> getLineItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -166,7 +166,7 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public List<CustomLineItem> getCustomLineItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -174,91 +174,91 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public TypedMoney getTotalPrice();
 
     /**
-     <*  <p>The taxes are calculated based on the shipping address.</p>>
+     *  <p>The taxes are calculated based on the shipping address.</p>
      */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedPrice getTaxedPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingAddress")
     public Address getShippingAddress();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("billingAddress")
     public Address getBillingAddress();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>>
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
      */
 
     @JsonProperty("taxRoundingMode")
     public RoundingMode getTaxRoundingMode();
 
     /**
-     <*  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>>
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>One of the four predefined OrderStates.</p>>
+     *  <p>One of the four predefined OrderStates.</p>
      */
     @NotNull
     @JsonProperty("orderState")
     public OrderState getOrderState();
 
     /**
-     <*  <p>This reference can point to a state in a custom workflow.</p>>
+     *  <p>This reference can point to a state in a custom workflow.</p>
      */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
 
     /**
-     <*  <p>Set if the ShippingMethod is set.</p>>
+     *  <p>Set if the ShippingMethod is set.</p>
      */
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -266,91 +266,91 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public List<SyncInfo> getSyncInfo();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("returnInfo")
     public List<ReturnInfo> getReturnInfo();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("discountCodes")
     public List<DiscountCodeInfo> getDiscountCodes();
 
     /**
-     <*  <p>Internal-only field.</p>>
+     *  <p>Internal-only field.</p>
      */
     @Deprecated
     @JsonProperty("lastMessageSequenceNumber")
     public Long getLastMessageSequenceNumber();
 
     /**
-     <*  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>>
+     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
      */
     @Valid
     @JsonProperty("cart")
     public CartReference getCart();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("paymentInfo")
     public PaymentInfo getPaymentInfo();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("inventoryMode")
     public InventoryMode getInventoryMode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("origin")
     public CartOrigin getOrigin();
 
     /**
-     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>>
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
      */
 
     @JsonProperty("taxCalculationMode")
     public TaxCalculationMode getTaxCalculationMode();
 
     /**
-     <*  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>>
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
      */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
     public List<Address> getItemShippingAddresses();
 
     /**
-     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>>
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
      */
     @NotNull
     @Valid

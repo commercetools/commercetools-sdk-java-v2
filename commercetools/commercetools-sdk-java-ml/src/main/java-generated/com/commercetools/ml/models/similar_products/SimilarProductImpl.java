@@ -39,7 +39,7 @@ public class SimilarProductImpl implements SimilarProduct, ModelBase {
     }
 
     /**
-     <*  <p>Reference to Product</p>>
+     *  <p>Reference to Product</p>
      */
 
     public com.commercetools.ml.models.common.ProductReference getProduct() {
@@ -47,7 +47,7 @@ public class SimilarProductImpl implements SimilarProduct, ModelBase {
     }
 
     /**
-     <*  <p>ID of the ProductVariant that was compared.</p>>
+     *  <p>ID of the ProductVariant that was compared.</p>
      */
 
     public Long getVariantId() {
@@ -55,7 +55,7 @@ public class SimilarProductImpl implements SimilarProduct, ModelBase {
     }
 
     /**
-     <*  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>>
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
      */
 
     public com.commercetools.ml.models.similar_products.SimilarProductMeta getMeta() {

@@ -34,7 +34,7 @@ public interface PaymentTransactionAddedMessagePayload extends MessagePayload {
     String PAYMENT_TRANSACTION_ADDED = "PaymentTransactionAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

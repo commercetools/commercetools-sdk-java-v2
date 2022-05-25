@@ -27,7 +27,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     private Double quantity;
 
     /**
-     <*  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>>
+     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
      */
 
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
@@ -36,7 +36,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     <*  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>>
+     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
      */
 
     public ItemShippingTargetBuilder quantity(final Double quantity) {

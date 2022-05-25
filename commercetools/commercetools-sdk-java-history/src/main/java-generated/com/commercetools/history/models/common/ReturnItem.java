@@ -37,56 +37,56 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnItem {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("comment")
     public String getComment();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("paymentState")
     public ReturnPaymentState getPaymentState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public String getLastModifiedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")

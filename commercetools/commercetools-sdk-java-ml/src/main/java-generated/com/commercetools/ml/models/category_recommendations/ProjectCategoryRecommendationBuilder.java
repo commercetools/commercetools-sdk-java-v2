@@ -31,7 +31,7 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     private String path;
 
     /**
-     <*  <p>A category that is recommended for a product.</p>>
+     *  <p>A category that is recommended for a product.</p>
      */
 
     public ProjectCategoryRecommendationBuilder category(
@@ -41,7 +41,7 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     }
 
     /**
-     <*  <p>A category that is recommended for a product.</p>>
+     *  <p>A category that is recommended for a product.</p>
      */
 
     public ProjectCategoryRecommendationBuilder category(
@@ -51,7 +51,7 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     }
 
     /**
-     <*  <p>Probability score for the category recommendation.</p>>
+     *  <p>Probability score for the category recommendation.</p>
      */
 
     public ProjectCategoryRecommendationBuilder confidence(final Double confidence) {
@@ -60,7 +60,7 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     }
 
     /**
-     <*  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>>
+     *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
      */
 
     public ProjectCategoryRecommendationBuilder path(final String path) {

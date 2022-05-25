@@ -34,7 +34,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
     /**
-     <*  <p>Update action for <code>setParcelItems</code></p>>
+     *  <p>Update action for <code>setParcelItems</code></p>
      */
 
     public SetParcelItemsChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder parcel(
@@ -54,7 +54,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder parcel(
@@ -64,7 +64,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder nextValue(
@@ -74,7 +74,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder nextValue(
@@ -84,7 +84,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder plusNextValue(
@@ -97,7 +97,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder plusNextValue(
@@ -110,7 +110,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder withNextValue(
@@ -121,7 +121,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder previousValue(
@@ -131,7 +131,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder previousValue(
@@ -141,7 +141,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder plusPreviousValue(
@@ -154,7 +154,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder plusPreviousValue(
@@ -167,7 +167,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelItemsChangeBuilder withPreviousValue(

@@ -36,28 +36,28 @@ public interface AddEnumValueChange extends Change {
     String ADD_ENUM_VALUE_CHANGE = "AddEnumValueChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addEnumValue</code> on types</p>>
+     *  <p>Update action for <code>addEnumValue</code> on types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the field/attribute definition updated.</p>>
+     *  <p>The name of the field/attribute definition updated.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

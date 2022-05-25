@@ -48,7 +48,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder name(
@@ -58,7 +58,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -67,7 +67,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
      */
 
     public CustomLineItemDraftBuilder quantity(final Long quantity) {
@@ -76,7 +76,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder money(
@@ -86,7 +86,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -95,7 +95,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder slug(final String slug) {
@@ -104,7 +104,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>>
+     *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
      */
 
     public CustomLineItemDraftBuilder taxCategory(
@@ -116,7 +116,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>>
+     *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
      */
 
     public CustomLineItemDraftBuilder taxCategory(
@@ -126,7 +126,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>>
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public CustomLineItemDraftBuilder externalTaxRate(
@@ -137,7 +137,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>>
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public CustomLineItemDraftBuilder externalTaxRate(
@@ -147,7 +147,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public CustomLineItemDraftBuilder custom(
@@ -157,7 +157,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public CustomLineItemDraftBuilder custom(
@@ -167,7 +167,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>Container for custom line item specific address(es).</p>>
+     *  <p>Container for custom line item specific address(es).</p>
      */
 
     public CustomLineItemDraftBuilder shippingDetails(
@@ -178,7 +178,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>Container for custom line item specific address(es).</p>>
+     *  <p>Container for custom line item specific address(es).</p>
      */
 
     public CustomLineItemDraftBuilder shippingDetails(

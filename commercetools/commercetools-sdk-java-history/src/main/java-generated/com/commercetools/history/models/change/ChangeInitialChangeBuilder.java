@@ -30,7 +30,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
     private Boolean nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changeInitial</code></p>>
+     *  <p>Shape of the action for <code>changeInitial</code></p>
      */
 
     public ChangeInitialChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeInitialChangeBuilder previousValue(final Boolean previousValue) {
@@ -48,7 +48,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeInitialChangeBuilder nextValue(final Boolean nextValue) {

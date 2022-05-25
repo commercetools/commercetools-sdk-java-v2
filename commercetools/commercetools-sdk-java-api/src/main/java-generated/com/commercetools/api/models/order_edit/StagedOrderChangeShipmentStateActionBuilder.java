@@ -26,7 +26,7 @@ public class StagedOrderChangeShipmentStateActionBuilder implements Builder<Stag
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeShipmentStateActionBuilder shipmentState(

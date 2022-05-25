@@ -30,7 +30,7 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
     private Integer nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setMaxApplications</code></p>>
+     *  <p>Shape of the action for <code>setMaxApplications</code></p>
      */
 
     public SetMaxApplicationsChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
     }
 
     /**
-     <>
+     *
      */
 
     public SetMaxApplicationsChangeBuilder previousValue(final Integer previousValue) {
@@ -48,7 +48,7 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
     }
 
     /**
-     <>
+     *
      */
 
     public SetMaxApplicationsChangeBuilder nextValue(final Integer nextValue) {

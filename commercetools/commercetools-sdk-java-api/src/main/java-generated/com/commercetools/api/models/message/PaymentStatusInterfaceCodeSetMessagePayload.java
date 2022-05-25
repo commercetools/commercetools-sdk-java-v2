@@ -33,14 +33,14 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
     String PAYMENT_STATUS_INTERFACE_CODE_SET = "PaymentStatusInterfaceCodeSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("paymentId")
     public String getPaymentId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("interfaceCode")

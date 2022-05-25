@@ -39,7 +39,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     private java.util.List<com.commercetools.api.models.store.Store> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public StorePagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public StorePagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public StorePagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public StorePagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public StorePagedQueryResponseBuilder results(final com.commercetools.api.models.store.Store... results) {
@@ -84,7 +84,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public StorePagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public StorePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.store.Store... results) {
@@ -106,7 +106,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public StorePagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public StorePagedQueryResponseBuilder withResults(

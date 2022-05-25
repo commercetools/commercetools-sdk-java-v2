@@ -35,7 +35,7 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getValidFrom() {
@@ -43,7 +43,7 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getValidUntil() {

@@ -74,7 +74,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getProductId() {
@@ -82,7 +82,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -90,7 +90,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -98,7 +98,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>
      */
 
     public Long getQuantity() {
@@ -106,7 +106,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>>
+     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -114,7 +114,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -122,7 +122,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -130,7 +130,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>>
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -138,7 +138,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -146,7 +146,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>>
+     *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -154,7 +154,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>>
+     *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -162,7 +162,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Container for line item specific address(es).</p>>
+     *  <p>Container for line item specific address(es).</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

@@ -40,7 +40,7 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -56,7 +56,7 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getOldShippingInfo() {

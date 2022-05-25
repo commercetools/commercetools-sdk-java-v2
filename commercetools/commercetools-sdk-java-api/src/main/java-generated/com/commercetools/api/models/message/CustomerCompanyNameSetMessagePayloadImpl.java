@@ -35,7 +35,7 @@ public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompany
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompany
     }
 
     /**
-     <>
+     *
      */
 
     public String getCompanyName() {

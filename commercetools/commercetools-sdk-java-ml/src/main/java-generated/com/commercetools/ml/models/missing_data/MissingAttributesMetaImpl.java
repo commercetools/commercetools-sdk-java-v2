@@ -40,7 +40,7 @@ public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel() {
@@ -48,7 +48,7 @@ public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getVariantLevel() {
@@ -56,7 +56,7 @@ public class MissingAttributesMetaImpl implements MissingAttributesMeta, ModelBa
     }
 
     /**
-     <*  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>>
+     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
      */
 
     public java.util.List<String> getProductTypeIds() {

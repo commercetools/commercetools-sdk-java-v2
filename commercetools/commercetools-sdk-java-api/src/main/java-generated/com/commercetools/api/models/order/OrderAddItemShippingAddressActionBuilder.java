@@ -25,7 +25,7 @@ public class OrderAddItemShippingAddressActionBuilder implements Builder<OrderAd
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public OrderAddItemShippingAddressActionBuilder address(
@@ -35,7 +35,7 @@ public class OrderAddItemShippingAddressActionBuilder implements Builder<OrderAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddItemShippingAddressActionBuilder address(

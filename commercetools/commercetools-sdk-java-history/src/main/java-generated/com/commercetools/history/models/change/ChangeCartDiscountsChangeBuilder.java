@@ -31,7 +31,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changeCartDiscounts</code></p>>
+     *  <p>Shape of the action for <code>changeCartDiscounts</code></p>
      */
 
     public ChangeCartDiscountsChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder plusPreviousValue(
@@ -73,7 +73,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder plusPreviousValue(
@@ -86,7 +86,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder withPreviousValue(
@@ -97,7 +97,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder nextValue(
@@ -107,7 +107,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder nextValue(
@@ -117,7 +117,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder plusNextValue(
@@ -130,7 +130,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder plusNextValue(
@@ -143,7 +143,7 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartDiscountsChangeBuilder withNextValue(

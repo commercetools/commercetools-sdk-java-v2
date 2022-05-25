@@ -24,7 +24,7 @@ public class PaymentSetMethodInfoInterfaceActionBuilder implements Builder<Payme
     private String _interface;
 
     /**
-     <>
+     *
      */
 
     public PaymentSetMethodInfoInterfaceActionBuilder _interface(final String _interface) {

@@ -27,7 +27,7 @@ public class ReferenceBuilder implements Builder<Reference> {
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
 
     /**
-     <>
+     *
      */
 
     public ReferenceBuilder id(final String id) {
@@ -36,7 +36,7 @@ public class ReferenceBuilder implements Builder<Reference> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReferenceBuilder typeId(final com.commercetools.history.models.common.ReferenceTypeId typeId) {

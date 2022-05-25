@@ -37,42 +37,42 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
     String MULTI_BUY_LINE_ITEMS = "multiBuyLineItems";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
      */
     @NotNull
     @JsonProperty("triggerQuantity")
     public Integer getTriggerQuantity();
 
     /**
-     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
      */
     @NotNull
     @JsonProperty("discountedQuantity")
     public Integer getDiscountedQuantity();
 
     /**
-     <*  <p>Maximum number of applications of this discount.</p>>
+     *  <p>Maximum number of applications of this discount.</p>
      */
     @NotNull
     @JsonProperty("maxOccurrence")
     public Integer getMaxOccurrence();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("selectionMode")

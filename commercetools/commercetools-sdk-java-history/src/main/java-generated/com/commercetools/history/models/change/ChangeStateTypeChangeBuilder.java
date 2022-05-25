@@ -30,7 +30,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
     private com.commercetools.history.models.common.StateType nextValue;
 
     /**
-     <*  <p>Update action for <code>changeType</code> on state</p>>
+     *  <p>Update action for <code>changeType</code> on state</p>
      */
 
     public ChangeStateTypeChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeStateTypeChangeBuilder previousValue(
@@ -49,7 +49,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeStateTypeChangeBuilder nextValue(final com.commercetools.history.models.common.StateType nextValue) {

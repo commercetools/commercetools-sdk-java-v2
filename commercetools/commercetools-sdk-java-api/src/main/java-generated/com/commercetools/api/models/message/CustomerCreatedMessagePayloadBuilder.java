@@ -25,7 +25,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
     private com.commercetools.api.models.customer.Customer customer;
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessagePayloadBuilder customer(
@@ -35,7 +35,7 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessagePayloadBuilder customer(

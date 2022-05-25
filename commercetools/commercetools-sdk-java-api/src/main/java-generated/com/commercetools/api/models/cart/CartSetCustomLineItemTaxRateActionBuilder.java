@@ -30,7 +30,7 @@ public class CartSetCustomLineItemTaxRateActionBuilder implements Builder<CartSe
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomLineItemTaxRateActionBuilder customLineItemId(final String customLineItemId) {
@@ -39,7 +39,7 @@ public class CartSetCustomLineItemTaxRateActionBuilder implements Builder<CartSe
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomLineItemTaxRateActionBuilder externalTaxRate(
@@ -50,7 +50,7 @@ public class CartSetCustomLineItemTaxRateActionBuilder implements Builder<CartSe
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomLineItemTaxRateActionBuilder externalTaxRate(

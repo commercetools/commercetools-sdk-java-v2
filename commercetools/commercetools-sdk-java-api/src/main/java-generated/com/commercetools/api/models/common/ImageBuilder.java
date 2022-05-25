@@ -33,7 +33,7 @@ public class ImageBuilder implements Builder<Image> {
     private String label;
 
     /**
-     <>
+     *
      */
 
     public ImageBuilder url(final String url) {
@@ -42,7 +42,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     <>
+     *
      */
 
     public ImageBuilder dimensions(
@@ -52,7 +52,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     <>
+     *
      */
 
     public ImageBuilder dimensions(final com.commercetools.api.models.common.ImageDimensions dimensions) {
@@ -61,7 +61,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     <>
+     *
      */
 
     public ImageBuilder label(@Nullable final String label) {

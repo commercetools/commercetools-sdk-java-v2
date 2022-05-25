@@ -43,7 +43,7 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getHeightInMillimeter() {
@@ -51,7 +51,7 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getLengthInMillimeter() {
@@ -59,7 +59,7 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getWidthInMillimeter() {
@@ -67,7 +67,7 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getWeightInGram() {

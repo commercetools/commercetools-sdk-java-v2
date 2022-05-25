@@ -40,7 +40,7 @@ public class StagedOrderSetCustomTypeActionImpl implements StagedOrderSetCustomT
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class StagedOrderSetCustomTypeActionImpl implements StagedOrderSetCustomT
     }
 
     /**
-     <*  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>>
+     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class StagedOrderSetCustomTypeActionImpl implements StagedOrderSetCustomT
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the StagedOrder.</p>>
+     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

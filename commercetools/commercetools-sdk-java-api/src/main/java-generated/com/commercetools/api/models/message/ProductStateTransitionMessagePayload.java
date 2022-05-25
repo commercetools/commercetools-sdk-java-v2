@@ -35,7 +35,7 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
     String PRODUCT_STATE_TRANSITION = "ProductStateTransition";
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
     public StateReference getState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("force")

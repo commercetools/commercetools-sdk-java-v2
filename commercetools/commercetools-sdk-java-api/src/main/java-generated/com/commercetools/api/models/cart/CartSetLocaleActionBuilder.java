@@ -26,7 +26,7 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
     private String locale;
 
     /**
-     <>
+     *
      */
 
     public CartSetLocaleActionBuilder locale(@Nullable final String locale) {

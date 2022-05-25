@@ -41,8 +41,8 @@ public interface CartAddCustomLineItemAction
     String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface CartAddCustomLineItemAction
     public Money getMoney();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @NotNull
     @Valid
@@ -58,35 +58,35 @@ public interface CartAddCustomLineItemAction
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")

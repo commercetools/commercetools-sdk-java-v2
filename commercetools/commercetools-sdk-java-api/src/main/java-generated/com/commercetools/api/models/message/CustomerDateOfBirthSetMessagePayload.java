@@ -30,7 +30,7 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
     String CUSTOMER_DATE_OF_BIRTH_SET = "CustomerDateOfBirthSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("dateOfBirth")

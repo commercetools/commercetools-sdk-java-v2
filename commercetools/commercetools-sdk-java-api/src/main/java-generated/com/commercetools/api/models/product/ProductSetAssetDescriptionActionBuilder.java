@@ -42,7 +42,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetDescriptionActionBuilder variantId(@Nullable final Long variantId) {
@@ -51,7 +51,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetDescriptionActionBuilder sku(@Nullable final String sku) {
@@ -60,7 +60,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetDescriptionActionBuilder staged(@Nullable final Boolean staged) {
@@ -69,7 +69,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetDescriptionActionBuilder assetId(@Nullable final String assetId) {
@@ -78,7 +78,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
@@ -87,7 +87,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetDescriptionActionBuilder description(
@@ -97,7 +97,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetDescriptionActionBuilder description(

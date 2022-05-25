@@ -24,7 +24,7 @@ public class MyCartAddDiscountCodeActionBuilder implements Builder<MyCartAddDisc
     private String code;
 
     /**
-     <>
+     *
      */
 
     public MyCartAddDiscountCodeActionBuilder code(final String code) {

@@ -43,7 +43,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
@@ -67,7 +67,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getNewState() {

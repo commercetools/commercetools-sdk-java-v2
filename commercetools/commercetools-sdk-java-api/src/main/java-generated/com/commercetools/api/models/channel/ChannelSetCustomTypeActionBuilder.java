@@ -30,7 +30,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>>
+     *  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>
      */
 
     public ChannelSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     }
 
     /**
-     <*  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>>
+     *  <p>Defines the Type that extends the Channel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Channel.</p>
      */
 
     public ChannelSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Channel.</p>>
+     *  <p>Sets the Custom Fields fields for the Channel.</p>
      */
 
     public ChannelSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class ChannelSetCustomTypeActionBuilder implements Builder<ChannelSetCust
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Channel.</p>>
+     *  <p>Sets the Custom Fields fields for the Channel.</p>
      */
 
     public ChannelSetCustomTypeActionBuilder fields(

@@ -35,7 +35,7 @@ public class ProductSelectionUpdateImpl implements ProductSelectionUpdate, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ProductSelectionUpdateImpl implements ProductSelectionUpdate, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product_selection.ProductSelectionUpdateAction> getActions() {

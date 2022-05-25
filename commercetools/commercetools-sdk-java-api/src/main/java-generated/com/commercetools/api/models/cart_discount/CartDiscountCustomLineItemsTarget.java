@@ -32,7 +32,7 @@ public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
     String CUSTOM_LINE_ITEMS = "customLineItems";
 
     /**
-     <*  <p>Valid CustomLineItem target predicate.</p>>
+     *  <p>Valid CustomLineItem target predicate.</p>
      */
     @NotNull
     @JsonProperty("predicate")

@@ -34,7 +34,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -42,7 +42,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

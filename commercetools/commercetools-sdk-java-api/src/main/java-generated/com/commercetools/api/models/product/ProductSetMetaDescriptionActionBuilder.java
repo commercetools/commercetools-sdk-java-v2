@@ -30,7 +30,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetMetaDescriptionActionBuilder metaDescription(
@@ -40,7 +40,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetMetaDescriptionActionBuilder metaDescription(
@@ -50,7 +50,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetMetaDescriptionActionBuilder staged(@Nullable final Boolean staged) {

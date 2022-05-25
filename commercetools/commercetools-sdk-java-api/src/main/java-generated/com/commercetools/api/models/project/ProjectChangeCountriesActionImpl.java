@@ -35,7 +35,7 @@ public class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesA
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public java.util.List<String> getCountries() {

@@ -24,7 +24,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     private Map<String, java.util.List<com.commercetools.importapi.models.products.SearchKeyword>> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public SearchKeywordsBuilder values(
@@ -34,7 +34,7 @@ public class SearchKeywordsBuilder implements Builder<SearchKeywords> {
     }
 
     /**
-     <>
+     *
      */
 
     public SearchKeywordsBuilder addValue(final String key,

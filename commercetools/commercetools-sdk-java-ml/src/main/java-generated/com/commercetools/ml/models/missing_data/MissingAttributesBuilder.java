@@ -45,7 +45,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     private com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage;
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesBuilder product(
@@ -55,7 +55,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
@@ -64,7 +64,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesBuilder productType(
@@ -74,7 +74,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesBuilder productType(
@@ -84,7 +84,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <*  <p>ID of a ProductVariant.</p>>
+     *  <p>ID of a ProductVariant.</p>
      */
 
     public MissingAttributesBuilder variantId(final Integer variantId) {
@@ -93,7 +93,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     public MissingAttributesBuilder missingAttributeValues(final String... missingAttributeValues) {
@@ -102,7 +102,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     public MissingAttributesBuilder missingAttributeValues(final java.util.List<String> missingAttributeValues) {
@@ -111,7 +111,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     public MissingAttributesBuilder plusMissingAttributeValues(final String... missingAttributeValues) {
@@ -123,7 +123,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     public MissingAttributesBuilder missingAttributeNames(@Nullable final String... missingAttributeNames) {
@@ -132,7 +132,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     public MissingAttributesBuilder missingAttributeNames(
@@ -142,7 +142,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     public MissingAttributesBuilder plusMissingAttributeNames(@Nullable final String... missingAttributeNames) {
@@ -154,7 +154,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesBuilder attributeCount(
@@ -165,7 +165,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesBuilder attributeCount(
@@ -175,7 +175,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesBuilder attributeCoverage(
@@ -186,7 +186,7 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesBuilder attributeCoverage(

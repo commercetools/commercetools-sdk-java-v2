@@ -28,7 +28,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAddedMessagePayloadBuilder variant(
@@ -38,7 +38,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAddedMessagePayloadBuilder variant(
@@ -48,7 +48,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAddedMessagePayloadBuilder staged(final Boolean staged) {

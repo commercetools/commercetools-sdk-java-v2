@@ -35,7 +35,7 @@ public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDisco
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDisco
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {

@@ -42,7 +42,7 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -50,7 +50,7 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -58,7 +58,7 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     <*  <p>The same update behavior as for Set Attribute applies.</p>>
+     *  <p>The same update behavior as for Set Attribute applies.</p>
      */
 
     public java.lang.Object getValue() {
@@ -66,7 +66,7 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

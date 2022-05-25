@@ -34,14 +34,14 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     String CUSTOMER_GROUP = "customer-group";
 
     /**
-     <*  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
      */
     @Valid
     @JsonProperty("obj")
     public CustomerGroup getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced CustomerGroup.</p>>
+     *  <p>Unique identifier of the referenced CustomerGroup.</p>
      */
     @NotNull
     @JsonProperty("id")

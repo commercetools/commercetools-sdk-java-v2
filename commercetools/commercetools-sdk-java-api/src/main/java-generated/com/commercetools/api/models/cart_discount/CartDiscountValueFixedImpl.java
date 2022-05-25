@@ -36,7 +36,7 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {

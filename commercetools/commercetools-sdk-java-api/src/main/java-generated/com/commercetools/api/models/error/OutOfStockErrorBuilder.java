@@ -32,7 +32,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     private java.util.List<String> skus;
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder lineItems(final String... lineItems) {
@@ -71,7 +71,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder lineItems(final java.util.List<String> lineItems) {
@@ -80,7 +80,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder plusLineItems(final String... lineItems) {
@@ -92,7 +92,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder skus(final String... skus) {
@@ -101,7 +101,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder skus(final java.util.List<String> skus) {
@@ -110,7 +110,7 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OutOfStockErrorBuilder plusSkus(final String... skus) {

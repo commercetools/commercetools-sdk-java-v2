@@ -31,21 +31,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SearchIndexingConfigurationValues {
 
     /**
-     <*  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>>
+     *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
      */
 
     @JsonProperty("status")
     public SearchIndexingConfigurationStatus getStatus();
 
     /**
-     <*  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>>
+     *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
      */
 
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")

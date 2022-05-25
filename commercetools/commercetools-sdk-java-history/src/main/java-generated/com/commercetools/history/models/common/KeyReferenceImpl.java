@@ -35,7 +35,7 @@ public class KeyReferenceImpl implements KeyReference, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -43,7 +43,7 @@ public class KeyReferenceImpl implements KeyReference, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {

@@ -32,7 +32,7 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
     String CHANGE_STACKING_MODE = "changeStackingMode";
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
     @NotNull
     @JsonProperty("stackingMode")

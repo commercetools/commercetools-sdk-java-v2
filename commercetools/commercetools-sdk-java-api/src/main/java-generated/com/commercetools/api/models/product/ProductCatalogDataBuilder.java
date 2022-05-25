@@ -34,7 +34,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     private Boolean hasStagedChanges;
 
     /**
-     <>
+     *
      */
 
     public ProductCatalogDataBuilder published(final Boolean published) {
@@ -43,7 +43,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductCatalogDataBuilder current(
@@ -53,7 +53,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductCatalogDataBuilder current(final com.commercetools.api.models.product.ProductData current) {
@@ -62,7 +62,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductCatalogDataBuilder staged(
@@ -72,7 +72,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductCatalogDataBuilder staged(final com.commercetools.api.models.product.ProductData staged) {
@@ -81,7 +81,7 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductCatalogDataBuilder hasStagedChanges(final Boolean hasStagedChanges) {

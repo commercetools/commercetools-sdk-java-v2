@@ -55,7 +55,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -63,7 +63,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVariantId() {
@@ -71,7 +71,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariantKey() {
@@ -79,7 +79,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -87,7 +87,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getPriceId() {
@@ -95,7 +95,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -103,7 +103,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

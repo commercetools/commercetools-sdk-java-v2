@@ -36,7 +36,7 @@ public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoN
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoN
     }
 
     /**
-     <*  <p>If not provided, the name is unset.</p>>
+     *  <p>If not provided, the name is unset.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

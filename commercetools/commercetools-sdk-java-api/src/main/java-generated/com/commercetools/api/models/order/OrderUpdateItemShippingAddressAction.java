@@ -34,7 +34,7 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
     String UPDATE_ITEM_SHIPPING_ADDRESS = "updateItemShippingAddress";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

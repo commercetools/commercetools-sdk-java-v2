@@ -32,7 +32,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     String SET_SLUG = "setSlug";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("slug")

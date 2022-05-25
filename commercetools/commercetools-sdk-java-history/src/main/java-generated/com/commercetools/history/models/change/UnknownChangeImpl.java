@@ -43,7 +43,7 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {
@@ -67,7 +67,7 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {

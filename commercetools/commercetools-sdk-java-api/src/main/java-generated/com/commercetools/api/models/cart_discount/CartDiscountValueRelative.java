@@ -32,7 +32,7 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
     String RELATIVE = "relative";
 
     /**
-     <*  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>>
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      */
     @NotNull
     @JsonProperty("permyriad")

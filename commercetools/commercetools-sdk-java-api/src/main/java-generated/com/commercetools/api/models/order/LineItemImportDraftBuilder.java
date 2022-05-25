@@ -57,7 +57,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <*  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>>
+     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
      */
 
     public LineItemImportDraftBuilder productId(@Nullable final String productId) {
@@ -66,7 +66,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>The product name.</p>>
+     *  <p>The product name.</p>
      */
 
     public LineItemImportDraftBuilder name(
@@ -76,7 +76,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>The product name.</p>>
+     *  <p>The product name.</p>
      */
 
     public LineItemImportDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -85,7 +85,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder variant(
@@ -95,7 +95,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder variant(
@@ -105,7 +105,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder price(
@@ -115,7 +115,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
@@ -124,7 +124,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder quantity(final Long quantity) {
@@ -133,7 +133,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder state(@Nullable final com.commercetools.api.models.order.ItemState... state) {
@@ -142,7 +142,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder state(
@@ -152,7 +152,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder plusState(@Nullable final com.commercetools.api.models.order.ItemState... state) {
@@ -164,7 +164,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder plusState(
@@ -177,7 +177,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder withState(
@@ -188,7 +188,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public LineItemImportDraftBuilder supplyChannel(
@@ -199,7 +199,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public LineItemImportDraftBuilder supplyChannel(
@@ -209,7 +209,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public LineItemImportDraftBuilder distributionChannel(
@@ -221,7 +221,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public LineItemImportDraftBuilder distributionChannel(
@@ -231,7 +231,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder taxRate(
@@ -241,7 +241,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder taxRate(
@@ -251,7 +251,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public LineItemImportDraftBuilder custom(
@@ -261,7 +261,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public LineItemImportDraftBuilder custom(
@@ -271,7 +271,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder shippingDetails(
@@ -282,7 +282,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder shippingDetails(

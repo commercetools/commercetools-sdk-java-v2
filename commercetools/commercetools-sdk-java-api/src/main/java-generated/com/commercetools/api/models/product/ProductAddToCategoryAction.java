@@ -34,7 +34,7 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     String ADD_TO_CATEGORY = "addToCategory";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,14 +42,14 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     public CategoryResourceIdentifier getCategory();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("orderHint")
     public String getOrderHint();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

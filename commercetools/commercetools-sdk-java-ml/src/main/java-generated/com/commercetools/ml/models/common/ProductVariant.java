@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariant {
 
     /**
-     <*  <p>The product that contains this variant.</p>>
+     *  <p>The product that contains this variant.</p>
      */
     @NotNull
     @Valid
@@ -41,14 +41,14 @@ public interface ProductVariant {
     public ProductReference getProduct();
 
     /**
-     <*  <p>The state of the product variant.</p>>
+     *  <p>The state of the product variant.</p>
      */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <*  <p>The id of the product variant.</p>>
+     *  <p>The id of the product variant.</p>
      */
     @NotNull
     @JsonProperty("variantId")

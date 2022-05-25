@@ -33,7 +33,7 @@ public interface TimeSetField extends CustomField {
     String TIME_SET = "TimeSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

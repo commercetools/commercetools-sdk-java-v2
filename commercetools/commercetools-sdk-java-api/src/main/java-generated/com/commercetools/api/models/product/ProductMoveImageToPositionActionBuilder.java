@@ -38,7 +38,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductMoveImageToPositionActionBuilder variantId(@Nullable final Long variantId) {
@@ -47,7 +47,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
     }
 
     /**
-     <>
+     *
      */
 
     public ProductMoveImageToPositionActionBuilder sku(@Nullable final String sku) {
@@ -56,7 +56,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
     }
 
     /**
-     <*  <p>The URL of the image</p>>
+     *  <p>The URL of the image</p>
      */
 
     public ProductMoveImageToPositionActionBuilder imageUrl(final String imageUrl) {
@@ -65,7 +65,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
     }
 
     /**
-     <>
+     *
      */
 
     public ProductMoveImageToPositionActionBuilder position(final Long position) {
@@ -74,7 +74,7 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
     }
 
     /**
-     <>
+     *
      */
 
     public ProductMoveImageToPositionActionBuilder staged(@Nullable final Boolean staged) {

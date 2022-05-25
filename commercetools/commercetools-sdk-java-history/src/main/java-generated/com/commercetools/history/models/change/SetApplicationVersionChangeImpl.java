@@ -43,7 +43,7 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
     }
 
     /**
-     <*  <p>Internal Update action for <code>setApplicationVersion</code></p>>
+     *  <p>Internal Update action for <code>setApplicationVersion</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getNextValue() {

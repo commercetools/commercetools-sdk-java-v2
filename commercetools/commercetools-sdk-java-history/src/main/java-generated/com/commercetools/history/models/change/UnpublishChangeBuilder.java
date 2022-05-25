@@ -24,7 +24,7 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
     private String change;
 
     /**
-     <>
+     *
      */
 
     public UnpublishChangeBuilder change(final String change) {

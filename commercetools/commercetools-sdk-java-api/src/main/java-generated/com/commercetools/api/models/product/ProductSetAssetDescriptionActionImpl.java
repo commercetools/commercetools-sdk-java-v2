@@ -53,7 +53,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -61,7 +61,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -69,7 +69,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -77,7 +77,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -85,7 +85,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -93,7 +93,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -101,7 +101,7 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

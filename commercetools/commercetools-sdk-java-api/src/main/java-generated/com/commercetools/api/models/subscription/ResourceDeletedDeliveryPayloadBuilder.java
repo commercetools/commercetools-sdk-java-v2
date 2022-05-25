@@ -42,7 +42,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     private Boolean dataErasure;
 
     /**
-     <>
+     *
      */
 
     public ResourceDeletedDeliveryPayloadBuilder projectKey(final String projectKey) {
@@ -51,7 +51,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resource(
@@ -61,7 +61,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resource(
@@ -71,7 +71,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -83,7 +83,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceDeletedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -93,7 +93,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceDeletedDeliveryPayloadBuilder version(final Long version) {
@@ -102,7 +102,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceDeletedDeliveryPayloadBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {
@@ -111,7 +111,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceDeletedDeliveryPayloadBuilder dataErasure(@Nullable final Boolean dataErasure) {

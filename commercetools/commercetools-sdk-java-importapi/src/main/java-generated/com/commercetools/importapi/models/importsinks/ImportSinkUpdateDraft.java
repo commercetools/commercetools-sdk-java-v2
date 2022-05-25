@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportSinkUpdateDraft {
 
     /**
-     <*  <p>Current version of the ImportSink.</p>>
+     *  <p>Current version of the ImportSink.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>>
+     *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
      */
 
     @JsonProperty("resourceType")

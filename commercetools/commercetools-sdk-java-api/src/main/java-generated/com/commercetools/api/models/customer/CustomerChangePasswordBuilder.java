@@ -33,7 +33,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     private String newPassword;
 
     /**
-     <*  <p>Unique identifier of the Customer.</p>>
+     *  <p>Unique identifier of the Customer.</p>
      */
 
     public CustomerChangePasswordBuilder id(final String id) {
@@ -42,7 +42,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerChangePasswordBuilder version(final Long version) {
@@ -51,7 +51,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerChangePasswordBuilder currentPassword(final String currentPassword) {
@@ -60,7 +60,7 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerChangePasswordBuilder newPassword(final String newPassword) {

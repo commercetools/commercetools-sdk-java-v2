@@ -35,14 +35,14 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     String SET_LINE_ITEM_TOTAL_PRICE = "setLineItemTotalPrice";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTotalPrice")

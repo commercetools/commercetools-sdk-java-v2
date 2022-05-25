@@ -41,7 +41,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     private java.lang.Object previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemCustomField</code></p>>
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder change(final String change) {
@@ -50,7 +50,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
@@ -59,7 +59,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder name(final String name) {
@@ -68,7 +68,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder variant(final String variant) {
@@ -77,7 +77,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder lineItem(
@@ -87,7 +87,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder lineItem(
@@ -97,7 +97,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -106,7 +106,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {

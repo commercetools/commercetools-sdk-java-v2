@@ -28,7 +28,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates;
 
     /**
-     <>
+     *
      */
 
     public ZoneRateBuilder zone(
@@ -38,7 +38,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ZoneRateBuilder zone(final com.commercetools.api.models.zone.ZoneReference zone) {
@@ -47,7 +47,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     <*  <p>The array does not contain two shipping rates with the same currency.</p>>
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
      */
 
     public ZoneRateBuilder shippingRates(
@@ -57,7 +57,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     <*  <p>The array does not contain two shipping rates with the same currency.</p>>
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
      */
 
     public ZoneRateBuilder shippingRates(
@@ -67,7 +67,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     <*  <p>The array does not contain two shipping rates with the same currency.</p>>
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
      */
 
     public ZoneRateBuilder plusShippingRates(
@@ -80,7 +80,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     <*  <p>The array does not contain two shipping rates with the same currency.</p>>
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
      */
 
     public ZoneRateBuilder plusShippingRates(
@@ -94,7 +94,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     <*  <p>The array does not contain two shipping rates with the same currency.</p>>
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
      */
 
     public ZoneRateBuilder withShippingRates(

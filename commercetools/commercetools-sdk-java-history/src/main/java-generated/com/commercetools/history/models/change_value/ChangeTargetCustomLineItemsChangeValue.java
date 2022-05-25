@@ -32,14 +32,14 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     String CUSTOM_LINE_ITEMS = "customLineItems";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("predicate")

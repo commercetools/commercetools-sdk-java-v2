@@ -24,7 +24,7 @@ public class DiscountCodeKeyReferenceBuilder implements Builder<DiscountCodeKeyR
     private String key;
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeKeyReferenceBuilder key(final String key) {

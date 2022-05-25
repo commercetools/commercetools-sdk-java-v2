@@ -47,7 +47,7 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     }
 
     /**
-     <*  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>>
+     *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
@@ -71,7 +71,7 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {
@@ -79,7 +79,7 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {

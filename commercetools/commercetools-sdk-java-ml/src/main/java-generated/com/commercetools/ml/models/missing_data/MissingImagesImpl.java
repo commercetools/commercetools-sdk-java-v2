@@ -38,7 +38,7 @@ public class MissingImagesImpl implements MissingImages, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.common.ProductReference getProduct() {
@@ -46,7 +46,7 @@ public class MissingImagesImpl implements MissingImages, ModelBase {
     }
 
     /**
-     <*  <p>ID of the variant</p>>
+     *  <p>ID of the variant</p>
      */
 
     public Long getVariantId() {
@@ -54,7 +54,7 @@ public class MissingImagesImpl implements MissingImages, ModelBase {
     }
 
     /**
-     <*  <p>Number of images the variant contains.</p>>
+     *  <p>Number of images the variant contains.</p>
      */
 
     public Long getImageCount() {

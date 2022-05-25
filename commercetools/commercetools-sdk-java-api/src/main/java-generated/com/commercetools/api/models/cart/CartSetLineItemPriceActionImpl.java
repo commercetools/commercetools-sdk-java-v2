@@ -39,7 +39,7 @@ public class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -55,8 +55,8 @@ public class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceActio
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {

@@ -25,7 +25,7 @@ public class ProductRevertStagedVariantChangesActionBuilder
     private Long variantId;
 
     /**
-     <>
+     *
      */
 
     public ProductRevertStagedVariantChangesActionBuilder variantId(final Long variantId) {

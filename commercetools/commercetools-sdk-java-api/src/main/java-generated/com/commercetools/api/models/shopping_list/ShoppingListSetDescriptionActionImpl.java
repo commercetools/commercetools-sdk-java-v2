@@ -36,7 +36,7 @@ public class ShoppingListSetDescriptionActionImpl implements ShoppingListSetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShoppingListSetDescriptionActionImpl implements ShoppingListSetDesc
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

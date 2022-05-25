@@ -28,7 +28,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     private java.lang.Object fields;
 
     /**
-     <>
+     *
      */
 
     public CustomFieldsBuilder type(
@@ -38,7 +38,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomFieldsBuilder type(final com.commercetools.history.models.common.Reference type) {
@@ -47,7 +47,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     <*  <p>A valid JSON object, based on FieldDefinition.</p>>
+     *  <p>A valid JSON object, based on FieldDefinition.</p>
      */
 
     public CustomFieldsBuilder fields(final java.lang.Object fields) {

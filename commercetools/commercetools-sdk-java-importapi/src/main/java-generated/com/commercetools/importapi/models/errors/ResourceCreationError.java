@@ -30,7 +30,7 @@ public interface ResourceCreationError extends ErrorObject {
     String RESOURCE_CREATION = "ResourceCreation";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("resource")

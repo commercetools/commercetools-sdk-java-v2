@@ -30,7 +30,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     private com.commercetools.api.models.extension.HttpDestinationAuthentication authentication;
 
     /**
-     <*  <p>URL to the target destination.</p>>
+     *  <p>URL to the target destination.</p>
      */
 
     public HttpDestinationBuilder url(final String url) {
@@ -39,7 +39,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     }
 
     /**
-     <*  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>>
+     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      */
 
     public HttpDestinationBuilder authentication(
@@ -49,7 +49,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     }
 
     /**
-     <*  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>>
+     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      */
 
     public HttpDestinationBuilder authentication(

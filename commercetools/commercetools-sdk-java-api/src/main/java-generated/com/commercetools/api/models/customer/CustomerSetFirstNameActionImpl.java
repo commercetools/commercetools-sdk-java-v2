@@ -35,7 +35,7 @@ public class CustomerSetFirstNameActionImpl implements CustomerSetFirstNameActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerSetFirstNameActionImpl implements CustomerSetFirstNameActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getFirstName() {

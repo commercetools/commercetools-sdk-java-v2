@@ -40,56 +40,56 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Extension extends BaseResource, com.commercetools.api.models.DomainResource<Extension> {
 
     /**
-     <*  <p>Unique identifier of the Extension.</p>>
+     *  <p>Unique identifier of the Extension.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Current version of the Extension.</p>>
+     *  <p>Current version of the Extension.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>Date and time (UTC) the Extension was initially created.</p>>
+     *  <p>Date and time (UTC) the Extension was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>Date and time (UTC) the Extension was last updated.</p>>
+     *  <p>Date and time (UTC) the Extension was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>User-defined unique identifier of the Extension.</p>>
+     *  <p>User-defined unique identifier of the Extension.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>The configuration for the Extension, including its type, location and authentication details.</p>>
+     *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
      */
     @NotNull
     @Valid
@@ -97,7 +97,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public ExtensionDestination getDestination();
 
     /**
-     <*  <p>Describes what triggers the Extension.</p>>
+     *  <p>Describes what triggers the Extension.</p>
      */
     @NotNull
     @Valid
@@ -105,7 +105,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public List<ExtensionTrigger> getTriggers();
 
     /**
-     <*  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>>
+     *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      */
 
     @JsonProperty("timeoutInMs")

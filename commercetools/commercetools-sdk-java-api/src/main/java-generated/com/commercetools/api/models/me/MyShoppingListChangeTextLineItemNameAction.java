@@ -35,14 +35,14 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     String CHANGE_TEXT_LINE_ITEM_NAME = "changeTextLineItemName";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @NotNull
     @Valid

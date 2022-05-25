@@ -33,7 +33,7 @@ public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction
     String CHANGE_TARGET = "changeTarget";
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
     @NotNull
     @Valid

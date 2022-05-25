@@ -34,21 +34,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductTypeImport extends ImportResource {
 
     /**
-     <*  <p>Maps to <code>ProductType.name</code>.</p>>
+     *  <p>Maps to <code>ProductType.name</code>.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>Maps to <code>ProductType.description</code>.</p>>
+     *  <p>Maps to <code>ProductType.description</code>.</p>
      */
     @NotNull
     @JsonProperty("description")
     public String getDescription();
 
     /**
-     <*  <p>The <code>attributes</code> of ProductType.</p>>
+     *  <p>The <code>attributes</code> of ProductType.</p>
      */
     @Valid
     @JsonProperty("attributes")

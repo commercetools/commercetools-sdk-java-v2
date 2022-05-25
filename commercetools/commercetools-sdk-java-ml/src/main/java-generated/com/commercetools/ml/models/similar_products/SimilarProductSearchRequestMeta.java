@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SimilarProductSearchRequestMeta {
 
     /**
-     <*  <p>The SimilarityMeasures used in this search.</p>>
+     *  <p>The SimilarityMeasures used in this search.</p>
      */
     @NotNull
     @Valid

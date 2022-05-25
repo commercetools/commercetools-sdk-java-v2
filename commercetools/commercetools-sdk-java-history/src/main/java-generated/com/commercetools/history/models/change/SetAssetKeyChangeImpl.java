@@ -47,7 +47,7 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setAssetKey</code></p>>
+     *  <p>Update action for <code>setAssetKey</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
@@ -71,7 +71,7 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {
@@ -79,7 +79,7 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {

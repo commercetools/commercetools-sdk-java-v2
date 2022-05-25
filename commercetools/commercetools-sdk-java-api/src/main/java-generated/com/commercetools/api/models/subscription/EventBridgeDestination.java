@@ -33,14 +33,14 @@ public interface EventBridgeDestination extends Destination {
     String EVENT_BRIDGE = "EventBridge";
 
     /**
-     <*  <p>AWS region of the Subscriptions that receives the events.</p>>
+     *  <p>AWS region of the Subscriptions that receives the events.</p>
      */
     @NotNull
     @JsonProperty("region")
     public String getRegion();
 
     /**
-     <*  <p>ID of the AWS account that receives events.</p>>
+     *  <p>ID of the AWS account that receives events.</p>
      */
     @NotNull
     @JsonProperty("accountId")

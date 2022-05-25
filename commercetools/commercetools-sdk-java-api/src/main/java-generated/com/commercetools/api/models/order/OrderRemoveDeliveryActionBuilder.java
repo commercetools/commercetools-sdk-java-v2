@@ -24,7 +24,7 @@ public class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemoveDeli
     private String deliveryId;
 
     /**
-     <>
+     *
      */
 
     public OrderRemoveDeliveryActionBuilder deliveryId(final String deliveryId) {

@@ -33,7 +33,7 @@ public interface AttributeEnumType extends AttributeType {
     String ENUM = "enum";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

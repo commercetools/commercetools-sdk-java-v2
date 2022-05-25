@@ -36,7 +36,7 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
     }
 
     /**
-     <*  <p>Value to remove from the array.</p>>
+     *  <p>Value to remove from the array.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {

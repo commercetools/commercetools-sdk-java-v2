@@ -25,7 +25,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
     private com.commercetools.api.models.order.Delivery delivery;
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddedMessagePayloadBuilder delivery(
@@ -35,7 +35,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddedMessagePayloadBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {

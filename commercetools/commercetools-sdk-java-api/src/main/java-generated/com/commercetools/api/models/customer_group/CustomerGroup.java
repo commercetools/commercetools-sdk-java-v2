@@ -43,63 +43,63 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
         com.commercetools.api.models.Customizable<CustomerGroup> {
 
     /**
-     <*  <p>Unique identifier of the CustomerGroup.</p>>
+     *  <p>Unique identifier of the CustomerGroup.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Current version of the CustomerGroup.</p>>
+     *  <p>Current version of the CustomerGroup.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>Date and time (UTC) the CustomerGroup was initially created.</p>>
+     *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>Date and time (UTC) the CustomerGroup was last updated.</p>>
+     *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>User-defined unique identifier for the CustomerGroup.</p>>
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Unique name of the CustomerGroup.</p>>
+     *  <p>Unique name of the CustomerGroup.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>Custom Fields for the CustomerGroup.</p>>
+     *  <p>Custom Fields for the CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("custom")

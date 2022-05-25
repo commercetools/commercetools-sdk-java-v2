@@ -35,7 +35,7 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
     }
 
     /**
-     <*  <p>If set, a customer with the given ID must exist in the project.</p>>
+     *  <p>If set, a customer with the given ID must exist in the project.</p>
      */
 
     public String getCustomerId() {

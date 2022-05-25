@@ -30,7 +30,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     private com.commercetools.api.models.shopping_list.ShoppingList obj;
 
     /**
-     <*  <p>Unique identifier of the referenced ShoppingList.</p>>
+     *  <p>Unique identifier of the referenced ShoppingList.</p>
      */
 
     public ShoppingListReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
      */
 
     public ShoppingListReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
      */
 
     public ShoppingListReferenceBuilder obj(

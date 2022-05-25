@@ -41,7 +41,7 @@ public interface OrderReturnInfoAddedMessage extends OrderMessage {
     String RETURN_INFO_ADDED = "ReturnInfoAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

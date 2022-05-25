@@ -40,7 +40,7 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -56,7 +56,7 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getForce() {

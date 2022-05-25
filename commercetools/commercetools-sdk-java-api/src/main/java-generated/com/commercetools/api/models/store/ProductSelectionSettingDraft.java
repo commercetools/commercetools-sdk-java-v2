@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionSettingDraft {
 
     /**
-     <*  <p>Resource Identifier of a Product Selection</p>>
+     *  <p>Resource Identifier of a Product Selection</p>
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface ProductSelectionSettingDraft {
     public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-     <*  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>>
+     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
      */
 
     @JsonProperty("active")

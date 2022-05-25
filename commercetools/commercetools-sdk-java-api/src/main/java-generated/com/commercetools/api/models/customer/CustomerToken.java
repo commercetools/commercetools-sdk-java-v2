@@ -35,42 +35,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerToken {
 
     /**
-     <*  <p>Unique identifier of the CustomerToken.</p>>
+     *  <p>Unique identifier of the CustomerToken.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customerId")
     public String getCustomerId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("expiresAt")
     public ZonedDateTime getExpiresAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

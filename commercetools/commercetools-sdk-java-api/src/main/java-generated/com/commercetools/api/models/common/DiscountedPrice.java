@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedPrice {
 
     /**
-     <*  <p>Money value of the discounted price.</p>>
+     *  <p>Money value of the discounted price.</p>
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface DiscountedPrice {
     public TypedMoney getValue();
 
     /**
-     <*  <p>ProductDiscount related to the discounted price.</p>>
+     *  <p>ProductDiscount related to the discounted price.</p>
      */
     @NotNull
     @Valid

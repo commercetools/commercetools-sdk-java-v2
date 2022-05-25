@@ -40,7 +40,7 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the referenced Customer.</p>>
+     *  <p>Unique identifier of the referenced Customer.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
      */
 
     public com.commercetools.api.models.customer.Customer getObj() {

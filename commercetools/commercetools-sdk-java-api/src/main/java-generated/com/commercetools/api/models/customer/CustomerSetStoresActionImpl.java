@@ -36,7 +36,7 @@ public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {

@@ -42,7 +42,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetNameActionBuilder variantId(@Nullable final Long variantId) {
@@ -51,7 +51,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetNameActionBuilder sku(@Nullable final String sku) {
@@ -60,7 +60,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetNameActionBuilder staged(@Nullable final Boolean staged) {
@@ -69,7 +69,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetNameActionBuilder assetId(@Nullable final String assetId) {
@@ -78,7 +78,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
@@ -87,7 +87,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetNameActionBuilder name(
@@ -97,7 +97,7 @@ public class ProductChangeAssetNameActionBuilder implements Builder<ProductChang
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

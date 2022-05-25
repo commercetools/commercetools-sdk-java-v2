@@ -35,7 +35,7 @@ public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBa
     }
 
     /**
-     <*  <p>If set to <code>true</code>, the line item product data (<code>name</code>, <code>variant</code> and <code>productType</code>) will also be updated. If set to <code>false</code>, only the prices and tax rates of the line item will be updated. Notice that if the Product's priceMode value is <code>Embedded</code> ProductPriceMode, the updated price of a line item may not correspond to a price in <code>variant.prices</code> anymore.</p>>
+     *  <p>If set to <code>true</code>, the line item product data (<code>name</code>, <code>variant</code> and <code>productType</code>) will also be updated. If set to <code>false</code>, only the prices and tax rates of the line item will be updated. Notice that if the Product's priceMode value is <code>Embedded</code> ProductPriceMode, the updated price of a line item may not correspond to a price in <code>variant.prices</code> anymore.</p>
      */
 
     public Boolean getUpdateProductData() {

@@ -39,7 +39,7 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
     }
 
     /**
-     <*  <p>Update action for <code>addAttributeDefinition</code> on product types</p>>
+     *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.AttributeDefinition getNextValue() {

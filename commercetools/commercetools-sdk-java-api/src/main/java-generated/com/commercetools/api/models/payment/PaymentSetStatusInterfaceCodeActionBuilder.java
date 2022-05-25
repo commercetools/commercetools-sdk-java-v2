@@ -26,7 +26,7 @@ public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<Payme
     private String interfaceCode;
 
     /**
-     <>
+     *
      */
 
     public PaymentSetStatusInterfaceCodeActionBuilder interfaceCode(@Nullable final String interfaceCode) {

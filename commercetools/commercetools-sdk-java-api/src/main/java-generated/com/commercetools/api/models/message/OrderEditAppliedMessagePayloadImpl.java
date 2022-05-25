@@ -40,7 +40,7 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
     }
 
     /**
-     <*  <p>Reference to a OrderEdit.</p>>
+     *  <p>Reference to a OrderEdit.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEditReference getEdit() {
@@ -56,7 +56,7 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order_edit.OrderEditApplied getResult() {

@@ -30,7 +30,7 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changePredicate</code></p>>
+     *  <p>Shape of the action for <code>changePredicate</code></p>
      */
 
     public ChangePredicateChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePredicateChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePredicateChangeBuilder nextValue(final String nextValue) {

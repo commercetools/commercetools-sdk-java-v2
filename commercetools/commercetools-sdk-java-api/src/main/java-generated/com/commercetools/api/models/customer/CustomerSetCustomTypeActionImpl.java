@@ -40,7 +40,7 @@ public class CustomerSetCustomTypeActionImpl implements CustomerSetCustomTypeAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class CustomerSetCustomTypeActionImpl implements CustomerSetCustomTypeAct
     }
 
     /**
-     <*  <p>Defines the Type that extends the Customer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Customer.</p>>
+     *  <p>Defines the Type that extends the Customer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Customer.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class CustomerSetCustomTypeActionImpl implements CustomerSetCustomTypeAct
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Customer.</p>>
+     *  <p>Sets the Custom Fields fields for the Customer.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

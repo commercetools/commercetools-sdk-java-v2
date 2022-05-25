@@ -34,7 +34,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     private com.commercetools.api.models.order.TrackingData trackingData;
 
     /**
-     <>
+     *
      */
 
     public ParcelTrackingDataUpdatedMessagePayloadBuilder deliveryId(final String deliveryId) {
@@ -43,7 +43,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelTrackingDataUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
@@ -52,7 +52,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelTrackingDataUpdatedMessagePayloadBuilder trackingData(
@@ -62,7 +62,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelTrackingDataUpdatedMessagePayloadBuilder trackingData(

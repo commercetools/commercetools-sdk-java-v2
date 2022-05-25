@@ -32,42 +32,42 @@ public interface ProductSetAssetDescriptionAction extends ProductUpdateAction {
     String SET_ASSET_DESCRIPTION = "setAssetDescription";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("description")

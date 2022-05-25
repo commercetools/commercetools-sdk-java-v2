@@ -53,7 +53,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     private Double mean;
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder from(final Double from) {
@@ -62,7 +62,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder fromStr(final String fromStr) {
@@ -71,7 +71,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder to(final Double to) {
@@ -80,7 +80,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder toStr(final String toStr) {
@@ -89,7 +89,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder count(final Long count) {
@@ -98,7 +98,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder productCount(@Nullable final Long productCount) {
@@ -107,7 +107,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder total(final Double total) {
@@ -116,7 +116,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder min(final Double min) {
@@ -125,7 +125,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder max(final Double max) {
@@ -134,7 +134,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetRangeBuilder mean(final Double mean) {

@@ -33,28 +33,28 @@ public interface InvalidFieldError extends ErrorObject {
     String INVALID_FIELD = "InvalidField";
 
     /**
-     <*  <p>The name of the field.</p>>
+     *  <p>The name of the field.</p>
      */
     @NotNull
     @JsonProperty("field")
     public String getField();
 
     /**
-     <*  <p>The invalid value.</p>>
+     *  <p>The invalid value.</p>
      */
     @NotNull
     @JsonProperty("invalidValue")
     public Object getInvalidValue();
 
     /**
-     <*  <p>The set of allowed values for the field, if any.</p>>
+     *  <p>The set of allowed values for the field, if any.</p>
      */
 
     @JsonProperty("allowedValues")
     public List<Object> getAllowedValues();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("resourceIndex")

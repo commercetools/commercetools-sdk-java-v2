@@ -50,7 +50,7 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     <*  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>>
+     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public String getAttributeName() {
@@ -74,7 +74,7 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     <*  <p>Key of the values that was updated</p>>
+     *  <p>Key of the values that was updated</p>
      */
 
     public String getValueKey() {
@@ -82,7 +82,7 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -90,7 +90,7 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

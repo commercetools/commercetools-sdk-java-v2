@@ -30,7 +30,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <>
+     *
      */
 
     public OrderSetLineItemShippingDetailsActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +39,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetLineItemShippingDetailsActionBuilder shippingDetails(
@@ -50,7 +50,7 @@ public class OrderSetLineItemShippingDetailsActionBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetLineItemShippingDetailsActionBuilder shippingDetails(

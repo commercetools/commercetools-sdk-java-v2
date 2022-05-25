@@ -31,7 +31,7 @@ public class ProductDiscountValueDraftImpl implements ProductDiscountValueDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

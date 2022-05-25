@@ -33,7 +33,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     String REMOVE_CUSTOM_LINE_ITEM = "removeCustomLineItem";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")

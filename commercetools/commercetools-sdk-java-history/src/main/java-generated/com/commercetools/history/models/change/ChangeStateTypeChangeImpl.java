@@ -43,7 +43,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
     }
 
     /**
-     <*  <p>Update action for <code>changeType</code> on state</p>>
+     *  <p>Update action for <code>changeType</code> on state</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.StateType getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.StateType getNextValue() {

@@ -30,7 +30,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     private com.commercetools.api.models.tax_category.TaxCategory obj;
 
     /**
-     <*  <p>Unique identifier of the referenced TaxCategory.</p>>
+     *  <p>Unique identifier of the referenced TaxCategory.</p>
      */
 
     public TaxCategoryReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     <*  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>>
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
      */
 
     public TaxCategoryReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     <*  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>>
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
      */
 
     public TaxCategoryReferenceBuilder obj(@Nullable final com.commercetools.api.models.tax_category.TaxCategory obj) {

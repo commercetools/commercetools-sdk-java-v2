@@ -24,7 +24,7 @@ public class ProductDiscountChangePredicateActionBuilder implements Builder<Prod
     private String predicate;
 
     /**
-     <*  <p>New value to set. Must be a valid ProductDiscount predicate.</p>>
+     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
      */
 
     public ProductDiscountChangePredicateActionBuilder predicate(final String predicate) {

@@ -78,7 +78,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -86,7 +86,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -94,7 +94,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -102,7 +102,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -110,7 +110,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -118,7 +118,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -126,7 +126,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <*  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>>
+     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
      */
 
     public String getKey() {
@@ -134,7 +134,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <*  <p>The name of the store</p>>
+     *  <p>The name of the store</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -142,7 +142,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getLanguages() {
@@ -150,7 +150,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <*  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>>
+     *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
@@ -158,7 +158,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <*  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>>
+     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
@@ -166,7 +166,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <*  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>>
+     *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
@@ -174,7 +174,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

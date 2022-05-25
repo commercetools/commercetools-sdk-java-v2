@@ -25,7 +25,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     private java.util.List<com.commercetools.importapi.models.products.ProductImport> resources;
 
     /**
-     <*  <p>The product import resources of this request.</p>>
+     *  <p>The product import resources of this request.</p>
      */
 
     public ProductImportRequestBuilder resources(
@@ -35,7 +35,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     }
 
     /**
-     <*  <p>The product import resources of this request.</p>>
+     *  <p>The product import resources of this request.</p>
      */
 
     public ProductImportRequestBuilder resources(
@@ -45,7 +45,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     }
 
     /**
-     <*  <p>The product import resources of this request.</p>>
+     *  <p>The product import resources of this request.</p>
      */
 
     public ProductImportRequestBuilder plusResources(
@@ -58,7 +58,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     }
 
     /**
-     <*  <p>The product import resources of this request.</p>>
+     *  <p>The product import resources of this request.</p>
      */
 
     public ProductImportRequestBuilder plusResources(
@@ -72,7 +72,7 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
     }
 
     /**
-     <*  <p>The product import resources of this request.</p>>
+     *  <p>The product import resources of this request.</p>
      */
 
     public ProductImportRequestBuilder withResources(

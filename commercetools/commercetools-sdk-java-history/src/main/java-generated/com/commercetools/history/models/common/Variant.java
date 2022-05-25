@@ -32,21 +32,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Variant {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public Integer getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")

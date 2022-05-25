@@ -24,7 +24,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     private Map<String, String> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public CategoryOrderHintsBuilder values(final Map<String, String> values) {
@@ -33,7 +33,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryOrderHintsBuilder addValue(final String key, final String value) {

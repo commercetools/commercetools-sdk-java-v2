@@ -30,7 +30,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setSalutation</code></p>>
+     *  <p>Shape of the action for <code>setSalutation</code></p>
      */
 
     public SetSalutationChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetSalutationChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetSalutationChangeBuilder nextValue(final String nextValue) {

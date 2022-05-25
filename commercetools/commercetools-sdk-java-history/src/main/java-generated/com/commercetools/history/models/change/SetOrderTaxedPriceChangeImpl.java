@@ -47,7 +47,7 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
     }
 
     /**
-     <*  <p>Update action for <code>setOrderTaxedPrice</code></p>>
+     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
@@ -71,7 +71,7 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
@@ -79,7 +79,7 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {

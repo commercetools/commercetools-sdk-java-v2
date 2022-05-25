@@ -30,7 +30,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductChangeNameActionBuilder name(
@@ -40,7 +40,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -49,7 +49,7 @@ public class ProductChangeNameActionBuilder implements Builder<ProductChangeName
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeNameActionBuilder staged(@Nullable final Boolean staged) {

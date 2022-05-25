@@ -35,7 +35,7 @@ public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAct
     }
 
     /**
-     <*  <p>If not defined, the external ID is unset.</p>>
+     *  <p>If not defined, the external ID is unset.</p>
      */
 
     public String getExternalId() {

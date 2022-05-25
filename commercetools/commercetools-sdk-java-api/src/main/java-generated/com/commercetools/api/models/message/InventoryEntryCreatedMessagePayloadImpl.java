@@ -36,7 +36,7 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry() {

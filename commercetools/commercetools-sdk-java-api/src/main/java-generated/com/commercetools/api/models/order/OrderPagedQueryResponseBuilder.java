@@ -39,7 +39,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     private java.util.List<com.commercetools.api.models.order.Order> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public OrderPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public OrderPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderPagedQueryResponseBuilder results(final com.commercetools.api.models.order.Order... results) {
@@ -84,7 +84,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.order.Order... results) {
@@ -106,7 +106,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderPagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderPagedQueryResponseBuilder withResults(

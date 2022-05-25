@@ -34,21 +34,21 @@ public interface SnsDestination extends Destination {
     String SNS = "SNS";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("accessSecret")
     public String getAccessSecret();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("topicArn")

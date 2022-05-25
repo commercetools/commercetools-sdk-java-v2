@@ -42,7 +42,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     <*  <p>The Order search query.</p>>
+     *  <p>The Order search query.</p>
      */
 
     public com.commercetools.api.models.order.OrderSearchQuery getQuery() {
@@ -50,7 +50,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     <*  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>>
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      */
 
     public String getSort() {
@@ -58,7 +58,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     <*  <p>The maximum number of search results to be returned.</p>>
+     *  <p>The maximum number of search results to be returned.</p>
      */
 
     public Integer getLimit() {
@@ -66,7 +66,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     <*  <p>The number of search results to be skipped in the response for pagination.</p>>
+     *  <p>The number of search results to be skipped in the response for pagination.</p>
      */
 
     public Integer getOffset() {

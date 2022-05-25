@@ -30,7 +30,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>>
+     *  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>
      */
 
     public ShoppingListSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
     }
 
     /**
-     <*  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>>
+     *  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>
      */
 
     public ShoppingListSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ShoppingList.</p>>
+     *  <p>Sets the Custom Fields fields for the ShoppingList.</p>
      */
 
     public ShoppingListSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class ShoppingListSetCustomTypeActionBuilder implements Builder<ShoppingL
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ShoppingList.</p>>
+     *  <p>Sets the Custom Fields fields for the ShoppingList.</p>
      */
 
     public ShoppingListSetCustomTypeActionBuilder fields(

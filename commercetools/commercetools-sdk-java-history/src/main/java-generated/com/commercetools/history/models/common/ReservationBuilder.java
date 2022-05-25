@@ -34,7 +34,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     private String checkoutStartedAt;
 
     /**
-     <>
+     *
      */
 
     public ReservationBuilder quantity(final Integer quantity) {
@@ -43,7 +43,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReservationBuilder owner(
@@ -53,7 +53,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReservationBuilder owner(final com.commercetools.history.models.common.Reference owner) {
@@ -62,7 +62,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReservationBuilder createdAt(final String createdAt) {
@@ -71,7 +71,7 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReservationBuilder checkoutStartedAt(final String checkoutStartedAt) {

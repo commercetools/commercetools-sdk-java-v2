@@ -33,14 +33,14 @@ public interface SubscriptionUpdate extends
         com.commercetools.api.models.ResourceUpdate<SubscriptionUpdate, SubscriptionUpdateAction, SubscriptionUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

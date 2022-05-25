@@ -57,7 +57,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionDeletedMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder lastModifiedBy(
@@ -113,7 +113,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder createdBy(
@@ -123,7 +123,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder createdBy(
@@ -133,7 +133,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder resource(
@@ -152,7 +152,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder resource(
@@ -162,7 +162,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -171,7 +171,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -183,7 +183,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -193,7 +193,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder name(
@@ -203,7 +203,7 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ProductSelectionDeletedMessageBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

@@ -31,7 +31,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setMethodInfoName</code></p>>
+     *  <p>Shape of the action for <code>setMethodInfoName</code></p>
      */
 
     public SetMethodInfoNameChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     <>
+     *
      */
 
     public SetMethodInfoNameChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     <>
+     *
      */
 
     public SetMethodInfoNameChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     <>
+     *
      */
 
     public SetMethodInfoNameChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     <>
+     *
      */
 
     public SetMethodInfoNameChangeBuilder nextValue(

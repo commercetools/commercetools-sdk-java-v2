@@ -27,7 +27,7 @@ public class CustomFieldMoneyTypeImpl implements CustomFieldMoneyType, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

@@ -41,7 +41,7 @@ public interface DeliveryRemovedMessage extends OrderMessage {
     String DELIVERY_REMOVED = "DeliveryRemoved";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

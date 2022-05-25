@@ -39,7 +39,7 @@ public class CustomerAddShippingAddressIdActionImpl implements CustomerAddShippi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CustomerAddShippingAddressIdActionImpl implements CustomerAddShippi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressId() {
@@ -55,7 +55,7 @@ public class CustomerAddShippingAddressIdActionImpl implements CustomerAddShippi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {

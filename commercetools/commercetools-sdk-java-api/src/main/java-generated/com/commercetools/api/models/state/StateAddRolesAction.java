@@ -32,7 +32,7 @@ public interface StateAddRolesAction extends StateUpdateAction {
     String ADD_ROLES = "addRoles";
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
     @NotNull
     @JsonProperty("roles")

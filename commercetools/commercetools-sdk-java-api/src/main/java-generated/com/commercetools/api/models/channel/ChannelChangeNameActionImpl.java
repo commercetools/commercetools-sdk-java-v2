@@ -35,7 +35,7 @@ public class ChannelChangeNameActionImpl implements ChannelChangeNameAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ChannelChangeNameActionImpl implements ChannelChangeNameAction, Mod
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

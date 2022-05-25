@@ -34,28 +34,28 @@ public interface SetLastNameChange extends Change {
     String SET_LAST_NAME_CHANGE = "SetLastNameChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setLastName</code></p>>
+     *  <p>Shape of the action for <code>setLastName</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

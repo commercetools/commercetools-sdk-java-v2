@@ -32,7 +32,7 @@ public class ShippingRateInputImpl implements ShippingRateInput, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ShippingRateInputType getType() {

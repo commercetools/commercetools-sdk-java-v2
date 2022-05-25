@@ -39,42 +39,42 @@ public interface SetDiscountedPriceChange extends Change {
     String SET_DISCOUNTED_PRICE_CHANGE = "SetDiscountedPriceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setDiscountedPrice</code></p>>
+     *  <p>Update action for <code>setDiscountedPrice</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -82,7 +82,7 @@ public interface SetDiscountedPriceChange extends Change {
     public Price getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

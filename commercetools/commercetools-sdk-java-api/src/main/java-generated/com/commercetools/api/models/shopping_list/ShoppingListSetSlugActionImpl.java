@@ -36,7 +36,7 @@ public class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {

@@ -39,7 +39,7 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -47,7 +47,7 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -55,7 +55,7 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {

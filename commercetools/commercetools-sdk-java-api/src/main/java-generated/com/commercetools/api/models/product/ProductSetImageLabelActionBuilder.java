@@ -38,7 +38,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetImageLabelActionBuilder sku(@Nullable final String sku) {
@@ -47,7 +47,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetImageLabelActionBuilder variantId(@Nullable final Long variantId) {
@@ -56,7 +56,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     }
 
     /**
-     <*  <p>The URL of the image.</p>>
+     *  <p>The URL of the image.</p>
      */
 
     public ProductSetImageLabelActionBuilder imageUrl(final String imageUrl) {
@@ -65,7 +65,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     }
 
     /**
-     <*  <p>The new image label. If left blank or set to null, the label is removed.</p>>
+     *  <p>The new image label. If left blank or set to null, the label is removed.</p>
      */
 
     public ProductSetImageLabelActionBuilder label(@Nullable final String label) {
@@ -74,7 +74,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetImageLabelActionBuilder staged(@Nullable final Boolean staged) {

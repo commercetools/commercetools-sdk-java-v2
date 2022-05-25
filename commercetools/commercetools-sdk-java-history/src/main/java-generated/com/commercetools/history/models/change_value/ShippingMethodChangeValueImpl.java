@@ -34,7 +34,7 @@ public class ShippingMethodChangeValueImpl implements ShippingMethodChangeValue,
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -42,7 +42,7 @@ public class ShippingMethodChangeValueImpl implements ShippingMethodChangeValue,
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

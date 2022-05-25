@@ -32,7 +32,7 @@ public class SuggestionResultImpl implements SuggestionResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values() {

@@ -36,7 +36,7 @@ public class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessa
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {

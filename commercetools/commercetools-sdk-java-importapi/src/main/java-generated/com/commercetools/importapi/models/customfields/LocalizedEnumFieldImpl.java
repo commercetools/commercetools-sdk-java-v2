@@ -35,7 +35,7 @@ public class LocalizedEnumFieldImpl implements LocalizedEnumField, ModelBase {
     }
 
     /**
-     <*  <p>The type of this field.</p>>
+     *  <p>The type of this field.</p>
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class LocalizedEnumFieldImpl implements LocalizedEnumField, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getValue() {

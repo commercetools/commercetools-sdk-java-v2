@@ -36,7 +36,7 @@ public class StoreAddDistributionChannelActionImpl implements StoreAddDistributi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StoreAddDistributionChannelActionImpl implements StoreAddDistributi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {

@@ -34,7 +34,7 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
     String ADD_STAGED_ACTION = "addStagedAction";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

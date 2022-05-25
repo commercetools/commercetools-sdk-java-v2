@@ -38,35 +38,35 @@ public interface SetPricesChange extends Change {
     String SET_PRICES_CHANGE = "SetPricesChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setPrices</code></p>>
+     *  <p>Update action for <code>setPrices</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface SetPricesChange extends Change {
     public List<Price> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

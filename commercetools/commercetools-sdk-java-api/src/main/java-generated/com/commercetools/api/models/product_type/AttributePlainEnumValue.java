@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributePlainEnumValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("label")

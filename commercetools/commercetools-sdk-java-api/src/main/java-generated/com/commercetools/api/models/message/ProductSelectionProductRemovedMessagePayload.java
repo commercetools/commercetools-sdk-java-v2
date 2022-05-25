@@ -34,7 +34,7 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
     String PRODUCT_SELECTION_PRODUCT_REMOVED = "ProductSelectionProductRemoved";
 
     /**
-     <*  <p>Reference to a Product.</p>>
+     *  <p>Reference to a Product.</p>
      */
     @NotNull
     @Valid

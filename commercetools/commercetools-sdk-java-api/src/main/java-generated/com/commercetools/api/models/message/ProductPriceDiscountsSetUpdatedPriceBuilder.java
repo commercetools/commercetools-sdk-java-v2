@@ -42,7 +42,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantId(final Integer variantId) {
@@ -51,7 +51,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder variantKey(@Nullable final String variantKey) {
@@ -60,7 +60,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder sku(@Nullable final String sku) {
@@ -69,7 +69,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder priceId(final String priceId) {
@@ -78,7 +78,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
@@ -88,7 +88,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder discounted(
@@ -98,7 +98,7 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetUpdatedPriceBuilder staged(final Boolean staged) {

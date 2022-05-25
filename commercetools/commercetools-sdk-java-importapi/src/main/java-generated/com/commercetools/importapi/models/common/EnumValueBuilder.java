@@ -27,7 +27,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     private String label;
 
     /**
-     <>
+     *
      */
 
     public EnumValueBuilder key(final String key) {
@@ -36,7 +36,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     }
 
     /**
-     <>
+     *
      */
 
     public EnumValueBuilder label(final String label) {

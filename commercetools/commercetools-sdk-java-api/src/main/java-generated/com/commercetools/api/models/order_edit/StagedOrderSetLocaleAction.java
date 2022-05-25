@@ -30,7 +30,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("locale")

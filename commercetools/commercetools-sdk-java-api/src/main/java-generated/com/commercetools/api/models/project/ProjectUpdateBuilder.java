@@ -28,7 +28,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     private java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions;
 
     /**
-     <*  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public ProjectUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Project.</p>>
+     *  <p>Update actions to be performed on the Project.</p>
      */
 
     public ProjectUpdateBuilder actions(final com.commercetools.api.models.project.ProjectUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Project.</p>>
+     *  <p>Update actions to be performed on the Project.</p>
      */
 
     public ProjectUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Project.</p>>
+     *  <p>Update actions to be performed on the Project.</p>
      */
 
     public ProjectUpdateBuilder plusActions(final com.commercetools.api.models.project.ProjectUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Project.</p>>
+     *  <p>Update actions to be performed on the Project.</p>
      */
 
     public ProjectUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class ProjectUpdateBuilder implements Builder<ProjectUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Project.</p>>
+     *  <p>Update actions to be performed on the Project.</p>
      */
 
     public ProjectUpdateBuilder withActions(

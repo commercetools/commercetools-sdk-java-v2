@@ -26,7 +26,7 @@ public class OrderChangePaymentStateActionBuilder implements Builder<OrderChange
     private com.commercetools.api.models.order.PaymentState paymentState;
 
     /**
-     <>
+     *
      */
 
     public OrderChangePaymentStateActionBuilder paymentState(

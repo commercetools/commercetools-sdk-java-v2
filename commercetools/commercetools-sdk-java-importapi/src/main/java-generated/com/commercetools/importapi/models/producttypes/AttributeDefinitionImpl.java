@@ -60,7 +60,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.producttypes.AttributeType getType() {
@@ -68,7 +68,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -76,12 +76,12 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
@@ -89,7 +89,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsRequired() {
@@ -97,7 +97,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.producttypes.AttributeConstraintEnum getAttributeConstraint() {
@@ -105,12 +105,12 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getInputTip() {
@@ -118,7 +118,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.producttypes.TextInputHint getInputHint() {
@@ -126,7 +126,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsSearchable() {

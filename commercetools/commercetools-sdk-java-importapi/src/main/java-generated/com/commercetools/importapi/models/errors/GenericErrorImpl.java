@@ -35,7 +35,7 @@ public class GenericErrorImpl implements GenericError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -43,7 +43,7 @@ public class GenericErrorImpl implements GenericError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

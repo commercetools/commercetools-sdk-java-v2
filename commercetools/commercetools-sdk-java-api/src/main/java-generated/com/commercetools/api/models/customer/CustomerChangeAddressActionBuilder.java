@@ -33,7 +33,7 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public CustomerChangeAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -42,7 +42,7 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerChangeAddressActionBuilder addressKey(@Nullable final String addressKey) {
@@ -51,7 +51,7 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerChangeAddressActionBuilder address(
@@ -61,7 +61,7 @@ public class CustomerChangeAddressActionBuilder implements Builder<CustomerChang
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerChangeAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {

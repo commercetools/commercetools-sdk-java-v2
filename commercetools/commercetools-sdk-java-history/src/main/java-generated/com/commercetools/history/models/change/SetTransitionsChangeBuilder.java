@@ -31,7 +31,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setTransitions</code></p>>
+     *  <p>Shape of the action for <code>setTransitions</code></p>
      */
 
     public SetTransitionsChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder plusPreviousValue(
@@ -73,7 +73,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder plusPreviousValue(
@@ -86,7 +86,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder withPreviousValue(
@@ -97,7 +97,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder nextValue(final com.commercetools.history.models.common.Reference... nextValue) {
@@ -106,7 +106,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder nextValue(
@@ -116,7 +116,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder plusNextValue(
@@ -129,7 +129,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder plusNextValue(
@@ -142,7 +142,7 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTransitionsChangeBuilder withNextValue(

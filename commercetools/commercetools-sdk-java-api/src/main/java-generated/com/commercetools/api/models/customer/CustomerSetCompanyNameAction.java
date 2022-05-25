@@ -29,7 +29,7 @@ public interface CustomerSetCompanyNameAction extends CustomerUpdateAction {
     String SET_COMPANY_NAME = "setCompanyName";
 
     /**
-     <*  <p>If not defined, the company name is unset.</p>>
+     *  <p>If not defined, the company name is unset.</p>
      */
 
     @JsonProperty("companyName")

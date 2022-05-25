@@ -60,7 +60,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     private com.commercetools.api.models.common.Address oldAddress;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderShippingAddressSetMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderShippingAddressSetMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderShippingAddressSetMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderShippingAddressSetMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderShippingAddressSetMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderShippingAddressSetMessageBuilder resource(
@@ -155,7 +155,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderShippingAddressSetMessageBuilder resource(
@@ -165,7 +165,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,7 +174,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,7 +186,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,7 +196,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder address(
@@ -206,7 +206,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder address(
@@ -216,7 +216,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder oldAddress(
@@ -226,7 +226,7 @@ public class OrderShippingAddressSetMessageBuilder implements Builder<OrderShipp
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessageBuilder oldAddress(

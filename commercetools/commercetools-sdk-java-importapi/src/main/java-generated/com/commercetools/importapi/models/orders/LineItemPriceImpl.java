@@ -63,7 +63,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.value</code>.</p>>
+     *  <p>Maps to <code>Price.value</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
@@ -71,7 +71,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.county</code>.</p>>
+     *  <p>Maps to <code>Price.county</code>.</p>
      */
 
     public String getCountry() {
@@ -79,7 +79,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.validFrom</code>.</p>>
+     *  <p>Maps to <code>Price.validFrom</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -87,7 +87,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.validUntil</code>.</p>>
+     *  <p>Maps to <code>Price.validUntil</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -95,7 +95,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>References a customer group by key.</p>>
+     *  <p>References a customer group by key.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -103,7 +103,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>References a channel by key.</p>>
+     *  <p>References a channel by key.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -111,7 +111,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>Sets a discounted price from an external service.</p>>
+     *  <p>Sets a discounted price from an external service.</p>
      */
 
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
@@ -119,7 +119,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
@@ -127,7 +127,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.custom</code>.</p>>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

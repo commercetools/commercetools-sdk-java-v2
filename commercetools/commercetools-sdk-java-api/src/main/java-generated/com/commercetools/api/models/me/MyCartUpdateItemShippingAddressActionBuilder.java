@@ -25,7 +25,7 @@ public class MyCartUpdateItemShippingAddressActionBuilder implements Builder<MyC
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public MyCartUpdateItemShippingAddressActionBuilder address(
@@ -35,7 +35,7 @@ public class MyCartUpdateItemShippingAddressActionBuilder implements Builder<MyC
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartUpdateItemShippingAddressActionBuilder address(

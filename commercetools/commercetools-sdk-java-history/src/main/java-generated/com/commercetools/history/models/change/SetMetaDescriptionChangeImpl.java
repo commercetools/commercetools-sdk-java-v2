@@ -43,7 +43,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
     }
 
     /**
-     <*  <p>Shape of the action for <code>setMetaDescription</code></p>>
+     *  <p>Shape of the action for <code>setMetaDescription</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

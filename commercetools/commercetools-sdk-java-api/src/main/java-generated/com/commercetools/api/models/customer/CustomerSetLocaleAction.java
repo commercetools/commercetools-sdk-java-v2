@@ -29,7 +29,7 @@ public interface CustomerSetLocaleAction extends CustomerUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("locale")

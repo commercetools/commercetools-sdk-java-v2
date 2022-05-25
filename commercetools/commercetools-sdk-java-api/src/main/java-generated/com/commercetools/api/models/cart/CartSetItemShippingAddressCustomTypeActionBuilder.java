@@ -34,7 +34,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public CartSetItemShippingAddressCustomTypeActionBuilder addressKey(final String addressKey) {
@@ -43,7 +43,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      */
 
     public CartSetItemShippingAddressCustomTypeActionBuilder type(
@@ -53,7 +53,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      */
 
     public CartSetItemShippingAddressCustomTypeActionBuilder type(
@@ -63,7 +63,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
      */
 
     public CartSetItemShippingAddressCustomTypeActionBuilder fields(
@@ -73,7 +73,7 @@ public class CartSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
      */
 
     public CartSetItemShippingAddressCustomTypeActionBuilder fields(

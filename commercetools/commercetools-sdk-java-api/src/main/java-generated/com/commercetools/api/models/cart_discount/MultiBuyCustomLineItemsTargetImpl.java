@@ -51,7 +51,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>>
+     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
      */
 
     public String getPredicate() {
@@ -67,7 +67,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>>
+     *  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>
      */
 
     public Integer getTriggerQuantity() {
@@ -75,7 +75,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>>
+     *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
      */
 
     public Integer getDiscountedQuantity() {
@@ -83,7 +83,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>Maximum number of times this Discount can be applied.</p>>
+     *  <p>Maximum number of times this Discount can be applied.</p>
      */
 
     public Integer getMaxOccurrence() {
@@ -91,7 +91,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>Discounts particular Line Items only according to the SelectionMode.</p>>
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      */
 
     public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {

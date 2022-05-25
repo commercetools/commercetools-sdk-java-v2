@@ -69,7 +69,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder id(final String id) {
@@ -78,7 +78,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder version(final Long version) {
@@ -87,7 +87,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -96,7 +96,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -105,7 +105,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder lastModifiedBy(
@@ -115,7 +115,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder lastModifiedBy(
@@ -125,7 +125,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder createdBy(
@@ -135,7 +135,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder createdBy(
@@ -145,7 +145,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -154,7 +154,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder resource(
@@ -164,7 +164,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder resource(
@@ -174,7 +174,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -183,7 +183,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder resourceUserProvidedIdentifiers(
@@ -205,7 +205,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder oldQuantityOnStock(final Long oldQuantityOnStock) {
@@ -214,7 +214,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder newQuantityOnStock(final Long newQuantityOnStock) {
@@ -223,7 +223,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder oldAvailableQuantity(final Long oldAvailableQuantity) {
@@ -232,7 +232,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessageBuilder newAvailableQuantity(final Long newAvailableQuantity) {
@@ -241,7 +241,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder supplyChannel(
@@ -251,7 +251,7 @@ public class InventoryEntryQuantitySetMessageBuilder implements Builder<Inventor
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public InventoryEntryQuantitySetMessageBuilder supplyChannel(

@@ -41,21 +41,21 @@ public interface SetLineItemTaxAmountChange extends Change {
     String SET_LINE_ITEM_TAX_AMOUNT_CHANGE = "SetLineItemTaxAmountChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLineItemTaxAmount</code></p>>
+     *  <p>Update action for <code>setLineItemTaxAmount</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -63,21 +63,21 @@ public interface SetLineItemTaxAmountChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
     @NotNull
     @Valid
@@ -85,7 +85,7 @@ public interface SetLineItemTaxAmountChange extends Change {
     public TaxRate getNextValue();
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
     @NotNull
     @Valid

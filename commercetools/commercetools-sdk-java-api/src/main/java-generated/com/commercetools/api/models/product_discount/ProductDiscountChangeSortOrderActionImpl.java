@@ -35,7 +35,7 @@ public class ProductDiscountChangeSortOrderActionImpl implements ProductDiscount
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ProductDiscountChangeSortOrderActionImpl implements ProductDiscount
     }
 
     /**
-     <*  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>>
+     *  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>
      */
 
     public String getSortOrder() {

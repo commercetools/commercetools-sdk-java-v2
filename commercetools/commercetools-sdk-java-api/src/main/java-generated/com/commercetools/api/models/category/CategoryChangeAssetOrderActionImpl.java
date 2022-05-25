@@ -35,7 +35,7 @@ public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOr
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOr
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getAssetOrder() {

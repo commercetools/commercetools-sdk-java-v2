@@ -34,28 +34,28 @@ public interface CustomerLabel extends Label {
     String CUSTOMER_LABEL = "CustomerLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("firstName")
     public String getFirstName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastName")
     public String getLastName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customerNumber")

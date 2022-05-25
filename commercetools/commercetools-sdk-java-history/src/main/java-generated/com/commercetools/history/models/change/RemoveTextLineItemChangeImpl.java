@@ -43,7 +43,7 @@ public class RemoveTextLineItemChangeImpl implements RemoveTextLineItemChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class RemoveTextLineItemChangeImpl implements RemoveTextLineItemChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class RemoveTextLineItemChangeImpl implements RemoveTextLineItemChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TextLineItem getPreviousValue() {
@@ -67,7 +67,7 @@ public class RemoveTextLineItemChangeImpl implements RemoveTextLineItemChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TextLineItem getNextValue() {

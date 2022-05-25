@@ -26,7 +26,7 @@ public class CartDiscountSetValidUntilActionBuilder implements Builder<CartDisco
     private java.time.ZonedDateTime validUntil;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public CartDiscountSetValidUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {

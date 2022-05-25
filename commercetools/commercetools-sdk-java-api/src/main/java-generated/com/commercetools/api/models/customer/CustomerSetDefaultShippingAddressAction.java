@@ -29,14 +29,14 @@ public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateA
     String SET_DEFAULT_SHIPPING_ADDRESS = "setDefaultShippingAddress";
 
     /**
-     <*  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>>
+     *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

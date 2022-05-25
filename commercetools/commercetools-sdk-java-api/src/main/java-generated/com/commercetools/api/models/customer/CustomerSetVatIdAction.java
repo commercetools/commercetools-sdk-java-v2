@@ -29,7 +29,7 @@ public interface CustomerSetVatIdAction extends CustomerUpdateAction {
     String SET_VAT_ID = "setVatId";
 
     /**
-     <*  <p>If not defined, the vat Id is unset.</p>>
+     *  <p>If not defined, the vat Id is unset.</p>
      */
 
     @JsonProperty("vatId")

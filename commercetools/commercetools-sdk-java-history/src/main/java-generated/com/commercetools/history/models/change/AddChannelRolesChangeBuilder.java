@@ -30,7 +30,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
     private java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue;
 
     /**
-     <>
+     *
      */
 
     public AddChannelRolesChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddChannelRolesChangeBuilder previousValue(
@@ -49,7 +49,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddChannelRolesChangeBuilder previousValue(
@@ -59,7 +59,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddChannelRolesChangeBuilder plusPreviousValue(
@@ -72,7 +72,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddChannelRolesChangeBuilder nextValue(
@@ -82,7 +82,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddChannelRolesChangeBuilder nextValue(
@@ -92,7 +92,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddChannelRolesChangeBuilder plusNextValue(

@@ -36,7 +36,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
@@ -45,7 +45,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder measurements(
@@ -55,7 +55,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder measurements(
@@ -65,7 +65,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder trackingData(
@@ -75,7 +75,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder trackingData(
@@ -85,7 +85,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder items(
@@ -95,7 +95,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder items(
@@ -105,7 +105,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder plusItems(
@@ -118,7 +118,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder plusItems(
@@ -131,7 +131,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddParcelToDeliveryActionBuilder withItems(

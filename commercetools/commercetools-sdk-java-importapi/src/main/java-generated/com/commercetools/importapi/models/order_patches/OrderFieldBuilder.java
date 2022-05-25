@@ -51,7 +51,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     private java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> setParcelItems;
 
     /**
-     <*  <p>Maps to <code>Order.returnInfo</code></p>>
+     *  <p>Maps to <code>Order.returnInfo</code></p>
      */
 
     public OrderFieldBuilder addReturnInfo(
@@ -62,7 +62,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.returnInfo</code></p>>
+     *  <p>Maps to <code>Order.returnInfo</code></p>
      */
 
     public OrderFieldBuilder addReturnInfo(
@@ -72,7 +72,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public OrderFieldBuilder addParcelToDelivery(
@@ -84,7 +84,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public OrderFieldBuilder addParcelToDelivery(
@@ -94,7 +94,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public OrderFieldBuilder addDeliveries(
@@ -104,7 +104,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public OrderFieldBuilder addDeliveries(
@@ -114,7 +114,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public OrderFieldBuilder plusAddDeliveries(
@@ -127,7 +127,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public OrderFieldBuilder plusAddDeliveries(
@@ -141,7 +141,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public OrderFieldBuilder withAddDeliveries(
@@ -153,7 +153,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.removeDelivery</code></p>>
+     *  <p>Maps to <code>Order.removeDelivery</code></p>
      */
 
     public OrderFieldBuilder removeDelivery(
@@ -165,7 +165,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.removeDelivery</code></p>>
+     *  <p>Maps to <code>Order.removeDelivery</code></p>
      */
 
     public OrderFieldBuilder removeDelivery(
@@ -175,7 +175,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>>
+     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
      */
 
     public OrderFieldBuilder removeParcelFromDelivery(
@@ -187,7 +187,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>>
+     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
      */
 
     public OrderFieldBuilder removeParcelFromDelivery(
@@ -197,7 +197,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.addressDraft</code></p>>
+     *  <p>Maps to <code>Order.addressDraft</code></p>
      */
 
     public OrderFieldBuilder setDeliveryAddress(
@@ -209,7 +209,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.addressDraft</code></p>>
+     *  <p>Maps to <code>Order.addressDraft</code></p>
      */
 
     public OrderFieldBuilder setDeliveryAddress(
@@ -219,7 +219,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelMeasurements</code></p>>
+     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
      */
 
     public OrderFieldBuilder setParcelMeasurements(
@@ -231,7 +231,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelMeasurements</code></p>>
+     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
      */
 
     public OrderFieldBuilder setParcelMeasurements(
@@ -241,7 +241,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelTrackingData</code></p>>
+     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
      */
 
     public OrderFieldBuilder setParcelTrackingData(
@@ -253,7 +253,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelTrackingData</code></p>>
+     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
      */
 
     public OrderFieldBuilder setParcelTrackingData(
@@ -263,7 +263,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelItems</code></p>>
+     *  <p>Maps to <code>Order.parcelItems</code></p>
      */
 
     public OrderFieldBuilder setParcelItems(
@@ -273,7 +273,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelItems</code></p>>
+     *  <p>Maps to <code>Order.parcelItems</code></p>
      */
 
     public OrderFieldBuilder setParcelItems(
@@ -283,7 +283,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelItems</code></p>>
+     *  <p>Maps to <code>Order.parcelItems</code></p>
      */
 
     public OrderFieldBuilder plusSetParcelItems(
@@ -296,7 +296,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelItems</code></p>>
+     *  <p>Maps to <code>Order.parcelItems</code></p>
      */
 
     public OrderFieldBuilder plusSetParcelItems(
@@ -310,7 +310,7 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelItems</code></p>>
+     *  <p>Maps to <code>Order.parcelItems</code></p>
      */
 
     public OrderFieldBuilder withSetParcelItems(

@@ -36,21 +36,21 @@ public interface ChangeCartDiscountsChange extends Change {
     String CHANGE_CART_DISCOUNTS_CHANGE = "ChangeCartDiscountsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeCartDiscounts</code></p>>
+     *  <p>Shape of the action for <code>changeCartDiscounts</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeCartDiscountsChange extends Change {
     public List<Reference> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

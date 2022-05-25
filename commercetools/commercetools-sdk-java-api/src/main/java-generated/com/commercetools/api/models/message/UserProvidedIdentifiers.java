@@ -30,49 +30,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface UserProvidedIdentifiers {
 
     /**
-     <*  <p>User-provided unique identifier of the resource.</p>>
+     *  <p>User-provided unique identifier of the resource.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customerNumber")
     public String getCustomerNumber();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
     /**
-     <*  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>>
+     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
      */
     @Valid
     @JsonProperty("containerAndKey")

@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderPatchImport {
 
     /**
-     <*  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>>
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
      */
     @NotNull
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
     /**
-     <*  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>>
+     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
      */
     @NotNull
     @Valid

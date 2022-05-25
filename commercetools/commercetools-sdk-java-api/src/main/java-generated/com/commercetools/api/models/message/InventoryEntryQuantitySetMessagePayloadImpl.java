@@ -51,7 +51,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public Long getOldQuantityOnStock() {
@@ -67,7 +67,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public Long getNewQuantityOnStock() {
@@ -75,7 +75,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public Long getOldAvailableQuantity() {
@@ -83,7 +83,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public Long getNewAvailableQuantity() {
@@ -91,7 +91,7 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {

@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceFunction {
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
     @NotNull
     @JsonProperty("currencyCode")
     public String getCurrencyCode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("function")

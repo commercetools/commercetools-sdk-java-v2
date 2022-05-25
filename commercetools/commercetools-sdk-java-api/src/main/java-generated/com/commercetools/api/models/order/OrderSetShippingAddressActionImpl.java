@@ -36,7 +36,7 @@ public class OrderSetShippingAddressActionImpl implements OrderSetShippingAddres
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderSetShippingAddressActionImpl implements OrderSetShippingAddres
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

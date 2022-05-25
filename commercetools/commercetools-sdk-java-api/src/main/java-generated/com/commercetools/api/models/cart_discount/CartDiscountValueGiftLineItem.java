@@ -36,7 +36,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     String GIFT_LINE_ITEM = "giftLineItem";
 
     /**
-     <*  <p>Reference to a Product.</p>>
+     *  <p>Reference to a Product.</p>
      */
     @NotNull
     @Valid
@@ -44,21 +44,21 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     public ProductReference getProduct();
 
     /**
-     <*  <p>ProductVariant of the Product.</p>>
+     *  <p>ProductVariant of the Product.</p>
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <*  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>>
+     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
     /**
-     <*  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>>
+     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
      */
     @Valid
     @JsonProperty("distributionChannel")

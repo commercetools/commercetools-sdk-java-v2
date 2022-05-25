@@ -25,7 +25,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueFixedBuilder money(final com.commercetools.api.models.common.CentPrecisionMoney... money) {
@@ -34,7 +34,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueFixedBuilder money(
@@ -44,7 +44,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueFixedBuilder plusMoney(
@@ -57,7 +57,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueFixedBuilder plusMoney(
@@ -70,7 +70,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public CartDiscountValueFixedBuilder withMoney(

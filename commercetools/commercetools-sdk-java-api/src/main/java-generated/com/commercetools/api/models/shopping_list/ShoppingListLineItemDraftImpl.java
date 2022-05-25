@@ -49,7 +49,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -57,7 +57,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -65,7 +65,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -73,7 +73,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public String getProductId() {
@@ -81,7 +81,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {
@@ -89,7 +89,7 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {

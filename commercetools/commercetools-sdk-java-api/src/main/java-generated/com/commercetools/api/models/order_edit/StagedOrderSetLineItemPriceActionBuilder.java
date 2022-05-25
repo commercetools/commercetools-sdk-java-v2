@@ -30,7 +30,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     private com.commercetools.api.models.common.Money externalPrice;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetLineItemPriceActionBuilder lineItemId(final String lineItemId) {
@@ -39,8 +39,8 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderSetLineItemPriceActionBuilder externalPrice(
@@ -50,8 +50,8 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderSetLineItemPriceActionBuilder externalPrice(

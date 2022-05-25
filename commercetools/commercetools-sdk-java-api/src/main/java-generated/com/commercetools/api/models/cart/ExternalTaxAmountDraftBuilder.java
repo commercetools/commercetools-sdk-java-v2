@@ -28,7 +28,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
     private com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate;
 
     /**
-     <*  <p>The total gross amount of the item (totalNet + taxes).</p>>
+     *  <p>The total gross amount of the item (totalNet + taxes).</p>
      */
 
     public ExternalTaxAmountDraftBuilder totalGross(
@@ -38,7 +38,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
     }
 
     /**
-     <*  <p>The total gross amount of the item (totalNet + taxes).</p>>
+     *  <p>The total gross amount of the item (totalNet + taxes).</p>
      */
 
     public ExternalTaxAmountDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
@@ -47,7 +47,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxAmountDraftBuilder taxRate(
@@ -57,7 +57,7 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxAmountDraftBuilder taxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate) {

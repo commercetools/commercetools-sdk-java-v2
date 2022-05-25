@@ -39,7 +39,7 @@ public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TextLineItem getNextValue() {

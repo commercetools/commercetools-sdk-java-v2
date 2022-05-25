@@ -37,42 +37,42 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     String MATCHING_PRICE_NOT_FOUND = "MatchingPriceNotFound";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("currency")
     public String getCurrency();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
     @Valid
     @JsonProperty("channel")

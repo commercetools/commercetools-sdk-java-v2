@@ -31,7 +31,7 @@ public class ProductSelectionUpdateActionImpl implements ProductSelectionUpdateA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

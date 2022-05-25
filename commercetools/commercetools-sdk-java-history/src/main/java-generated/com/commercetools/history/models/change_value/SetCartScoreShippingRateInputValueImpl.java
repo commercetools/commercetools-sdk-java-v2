@@ -35,7 +35,7 @@ public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShipp
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShipp
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getScore() {

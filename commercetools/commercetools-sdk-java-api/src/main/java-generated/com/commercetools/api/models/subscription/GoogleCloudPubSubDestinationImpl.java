@@ -39,7 +39,7 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
     }
 
     /**
-     <>
+     *
      */
 
     public String getProjectId() {
@@ -55,7 +55,7 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
     }
 
     /**
-     <>
+     *
      */
 
     public String getTopic() {

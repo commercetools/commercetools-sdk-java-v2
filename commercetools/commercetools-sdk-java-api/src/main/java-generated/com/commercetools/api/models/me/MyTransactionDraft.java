@@ -36,21 +36,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyTransactionDraft extends com.commercetools.api.models.CustomizableDraft<MyTransactionDraft> {
 
     /**
-     <*  <p>The time at which the transaction took place.</p>>
+     *  <p>The time at which the transaction took place.</p>
      */
 
     @JsonProperty("timestamp")
     public ZonedDateTime getTimestamp();
 
     /**
-     <*  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>>
+     *  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>
      */
     @NotNull
     @JsonProperty("type")
     public TransactionType getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,14 +58,14 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     public Money getAmount();
 
     /**
-     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>>
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
      */
 
     @JsonProperty("interactionId")
     public String getInteractionId();
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
     @Valid
     @JsonProperty("custom")

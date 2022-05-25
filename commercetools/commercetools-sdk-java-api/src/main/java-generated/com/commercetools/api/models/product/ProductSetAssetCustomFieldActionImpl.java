@@ -56,7 +56,7 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -64,7 +64,7 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -72,7 +72,7 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -80,7 +80,7 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -88,7 +88,7 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -96,7 +96,7 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -104,7 +104,7 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
     }
 
     /**
-     <*  <p>Name of the Custom Field.</p>>
+     *  <p>Name of the Custom Field.</p>
      */
 
     public String getName() {
@@ -112,7 +112,7 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
     }
 
     /**
-     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
 
     public java.lang.Object getValue() {

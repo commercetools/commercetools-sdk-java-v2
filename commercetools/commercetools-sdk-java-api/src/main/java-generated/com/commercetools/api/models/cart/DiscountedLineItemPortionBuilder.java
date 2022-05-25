@@ -28,7 +28,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPortionBuilder discount(
@@ -39,7 +39,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPortionBuilder discount(
@@ -49,7 +49,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPortionBuilder discountedAmount(
@@ -59,7 +59,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPortionBuilder discountedAmount(

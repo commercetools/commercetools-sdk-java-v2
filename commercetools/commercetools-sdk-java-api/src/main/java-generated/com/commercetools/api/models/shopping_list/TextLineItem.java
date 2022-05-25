@@ -37,35 +37,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TextLineItem extends com.commercetools.api.models.Customizable<TextLineItem> {
 
     /**
-     <*  <p>When the text line item was added to the shopping list.</p>>
+     *  <p>When the text line item was added to the shopping list.</p>
      */
     @NotNull
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <*  <p>Unique identifier of the TextLineItem.</p>>
+     *  <p>Unique identifier of the TextLineItem.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -73,7 +73,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")

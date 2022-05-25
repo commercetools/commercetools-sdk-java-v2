@@ -35,7 +35,7 @@ public class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAction, M
     }
 
     /**
-     <*  <p>Location to be removed from the Zone.</p>>
+     *  <p>Location to be removed from the Zone.</p>
      */
 
     public com.commercetools.api.models.zone.Location getLocation() {

@@ -33,21 +33,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxPortion {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>A number in the range [0..1]</p>>
+     *  <p>A number in the range [0..1]</p>
      */
     @NotNull
     @JsonProperty("rate")
     public Double getRate();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

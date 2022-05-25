@@ -26,7 +26,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public InvalidCredentialsErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidCredentialsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidCredentialsErrorBuilder addValue(final String key, final java.lang.Object value) {

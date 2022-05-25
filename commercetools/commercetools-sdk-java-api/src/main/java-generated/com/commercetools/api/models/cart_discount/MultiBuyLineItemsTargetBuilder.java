@@ -38,7 +38,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
     /**
-     <*  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>>
+     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
      */
 
     public MultiBuyLineItemsTargetBuilder predicate(final String predicate) {
@@ -47,7 +47,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     <*  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>>
+     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
      */
 
     public MultiBuyLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
@@ -56,7 +56,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     <*  <p>Number of Line Items that are discounted per application of this Discount.</p>>
+     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
      */
 
     public MultiBuyLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
@@ -65,7 +65,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     <*  <p>Maximum number of times this Discount can be applied.</p>>
+     *  <p>Maximum number of times this Discount can be applied.</p>
      */
 
     public MultiBuyLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
@@ -74,7 +74,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     <*  <p>Discounts particular Line Items only according to the SelectionMode.</p>>
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      */
 
     public MultiBuyLineItemsTargetBuilder selectionMode(

@@ -49,7 +49,7 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -57,7 +57,7 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -65,7 +65,7 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -73,7 +73,7 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -81,7 +81,7 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -89,7 +89,7 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {

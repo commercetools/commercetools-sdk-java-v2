@@ -25,7 +25,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     private java.util.List<com.commercetools.api.models.payment.PaymentReference> payments;
 
     /**
-     <>
+     *
      */
 
     public PaymentInfoBuilder payments(final com.commercetools.api.models.payment.PaymentReference... payments) {
@@ -34,7 +34,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentInfoBuilder payments(
@@ -44,7 +44,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentInfoBuilder plusPayments(final com.commercetools.api.models.payment.PaymentReference... payments) {
@@ -56,7 +56,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentInfoBuilder plusPayments(
@@ -69,7 +69,7 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentInfoBuilder withPayments(

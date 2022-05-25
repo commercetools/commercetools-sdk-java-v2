@@ -35,7 +35,7 @@ public class ReferenceImpl implements Reference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -43,7 +43,7 @@ public class ReferenceImpl implements Reference, ModelBase {
     }
 
     /**
-     <*  <p>Unique ID of the referenced resource.</p>>
+     *  <p>Unique ID of the referenced resource.</p>
      */
 
     public String getId() {

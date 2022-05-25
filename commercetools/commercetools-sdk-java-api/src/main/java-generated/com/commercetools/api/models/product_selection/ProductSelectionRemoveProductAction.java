@@ -34,7 +34,7 @@ public interface ProductSelectionRemoveProductAction extends ProductSelectionUpd
     String REMOVE_PRODUCT = "removeProduct";
 
     /**
-     <*  <p>ResourceIdentifier to Product</p>>
+     *  <p>ResourceIdentifier to Product</p>
      */
     @NotNull
     @Valid

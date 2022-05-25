@@ -57,7 +57,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Unique identifier of the ProductSelection.</p>>
+     *  <p>Unique identifier of the ProductSelection.</p>
      */
 
     public ProductSelectionBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Current version of the ProductSelection.</p>>
+     *  <p>Current version of the ProductSelection.</p>
      */
 
     public ProductSelectionBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Date and time (UTC) the ProductSelection was initially created.</p>>
+     *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
      */
 
     public ProductSelectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Date and time (UTC) the ProductSelection was last updated.</p>>
+     *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
      */
 
     public ProductSelectionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
      */
 
     public ProductSelectionBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
      */
 
     public ProductSelectionBuilder lastModifiedBy(
@@ -113,7 +113,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
      */
 
     public ProductSelectionBuilder createdBy(
@@ -123,7 +123,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
      */
 
     public ProductSelectionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -132,7 +132,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ProductSelection.</p>>
+     *  <p>User-defined unique identifier of the ProductSelection.</p>
      */
 
     public ProductSelectionBuilder key(@Nullable final String key) {
@@ -141,7 +141,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Name of the ProductSelection.</p>>
+     *  <p>Name of the ProductSelection.</p>
      */
 
     public ProductSelectionBuilder name(
@@ -151,7 +151,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Name of the ProductSelection.</p>>
+     *  <p>Name of the ProductSelection.</p>
      */
 
     public ProductSelectionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -160,7 +160,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Number of Products that are currently assigned to this ProductSelection.</p>>
+     *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
      */
 
     public ProductSelectionBuilder productCount(final Integer productCount) {
@@ -169,7 +169,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>>
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
      */
 
     public ProductSelectionBuilder type(
@@ -179,7 +179,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Custom Fields of this ProductSelection.</p>>
+     *  <p>Custom Fields of this ProductSelection.</p>
      */
 
     public ProductSelectionBuilder custom(
@@ -189,7 +189,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     <*  <p>Custom Fields of this ProductSelection.</p>>
+     *  <p>Custom Fields of this ProductSelection.</p>
      */
 
     public ProductSelectionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

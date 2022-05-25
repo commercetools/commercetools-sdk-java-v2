@@ -55,7 +55,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -63,7 +63,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -71,7 +71,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems() {
@@ -79,7 +79,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems() {
@@ -87,7 +87,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -95,7 +95,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     <*  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>>
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -103,7 +103,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

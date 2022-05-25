@@ -30,7 +30,7 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setExternalId</code></p>>
+     *  <p>Shape of the action for <code>setExternalId</code></p>
      */
 
     public SetExternalIdChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetExternalIdChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetExternalIdChangeBuilder nextValue(final String nextValue) {

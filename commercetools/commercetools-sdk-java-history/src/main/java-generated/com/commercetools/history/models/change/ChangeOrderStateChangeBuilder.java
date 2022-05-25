@@ -30,7 +30,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     private com.commercetools.history.models.common.OrderState previousValue;
 
     /**
-     <*  <p>Update action for <code>changeOrderState</code></p>>
+     *  <p>Update action for <code>changeOrderState</code></p>
      */
 
     public ChangeOrderStateChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeOrderStateChangeBuilder nextValue(final com.commercetools.history.models.common.OrderState nextValue) {
@@ -48,7 +48,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeOrderStateChangeBuilder previousValue(

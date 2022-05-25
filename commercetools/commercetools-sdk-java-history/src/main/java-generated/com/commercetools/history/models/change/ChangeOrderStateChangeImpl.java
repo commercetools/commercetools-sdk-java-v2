@@ -43,7 +43,7 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
     }
 
     /**
-     <*  <p>Update action for <code>changeOrderState</code></p>>
+     *  <p>Update action for <code>changeOrderState</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.OrderState getNextValue() {
@@ -67,7 +67,7 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.OrderState getPreviousValue() {

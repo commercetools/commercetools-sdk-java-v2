@@ -32,28 +32,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderPagedSearchResponse {
 
     /**
-     <*  <p>Total number of results matching the query.</p>>
+     *  <p>Total number of results matching the query.</p>
      */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-     <*  <p>Actual results.</p>>
+     *  <p>Actual results.</p>
      */
     @NotNull
     @Valid

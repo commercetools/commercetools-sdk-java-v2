@@ -35,7 +35,7 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-     <*  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>>
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      */
 
     public com.commercetools.api.models.type.TypeReference getType() {
@@ -43,7 +43,7 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

@@ -43,7 +43,7 @@ public class SetMethodInfoMethodChangeImpl implements SetMethodInfoMethodChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetMethodInfoMethodChangeImpl implements SetMethodInfoMethodChange,
     }
 
     /**
-     <*  <p>Shape of the action for <code>setMethodInfoMethod</code></p>>
+     *  <p>Shape of the action for <code>setMethodInfoMethod</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetMethodInfoMethodChangeImpl implements SetMethodInfoMethodChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetMethodInfoMethodChangeImpl implements SetMethodInfoMethodChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

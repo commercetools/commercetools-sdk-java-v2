@@ -32,7 +32,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     private Long availableQuantity;
 
     /**
-     <>
+     *
      */
 
     public ProductVariantChannelAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
@@ -41,7 +41,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantChannelAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -50,7 +50,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantChannelAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {

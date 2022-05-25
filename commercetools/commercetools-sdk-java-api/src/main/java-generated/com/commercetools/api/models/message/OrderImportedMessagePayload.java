@@ -34,7 +34,7 @@ public interface OrderImportedMessagePayload extends OrderMessagePayload {
     String ORDER_IMPORTED = "OrderImported";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

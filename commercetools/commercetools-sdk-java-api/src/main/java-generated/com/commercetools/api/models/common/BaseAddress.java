@@ -30,175 +30,175 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface BaseAddress {
 
     /**
-     <*  <p>Unique identifier of the Address.</p>>
+     *  <p>Unique identifier of the Address.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>User-defined unique identifier of the Address.</p>>
+     *  <p>User-defined unique identifier of the Address.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>Title of the contact, for example 'Dr.'</p>>
+     *  <p>Title of the contact, for example 'Dr.'</p>
      */
 
     @JsonProperty("title")
     public String getTitle();
 
     /**
-     <*  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>>
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      */
 
     @JsonProperty("salutation")
     public String getSalutation();
 
     /**
-     <*  <p>Given name (first name) of the contact.</p>>
+     *  <p>Given name (first name) of the contact.</p>
      */
 
     @JsonProperty("firstName")
     public String getFirstName();
 
     /**
-     <*  <p>Family name (last name) of the contact.</p>>
+     *  <p>Family name (last name) of the contact.</p>
      */
 
     @JsonProperty("lastName")
     public String getLastName();
 
     /**
-     <*  <p>Name of the street.</p>>
+     *  <p>Name of the street.</p>
      */
 
     @JsonProperty("streetName")
     public String getStreetName();
 
     /**
-     <*  <p>Street number.</p>>
+     *  <p>Street number.</p>
      */
 
     @JsonProperty("streetNumber")
     public String getStreetNumber();
 
     /**
-     <*  <p>Further information on the street address.</p>>
+     *  <p>Further information on the street address.</p>
      */
 
     @JsonProperty("additionalStreetInfo")
     public String getAdditionalStreetInfo();
 
     /**
-     <*  <p>Postal code.</p>>
+     *  <p>Postal code.</p>
      */
 
     @JsonProperty("postalCode")
     public String getPostalCode();
 
     /**
-     <*  <p>Name of the city.</p>>
+     *  <p>Name of the city.</p>
      */
 
     @JsonProperty("city")
     public String getCity();
 
     /**
-     <*  <p>Name of the region.</p>>
+     *  <p>Name of the region.</p>
      */
 
     @JsonProperty("region")
     public String getRegion();
 
     /**
-     <*  <p>Name of the state, for example, Colorado.</p>>
+     *  <p>Name of the state, for example, Colorado.</p>
      */
 
     @JsonProperty("state")
     public String getState();
 
     /**
-     <*  <p>Name of the company.</p>>
+     *  <p>Name of the company.</p>
      */
 
     @JsonProperty("company")
     public String getCompany();
 
     /**
-     <*  <p>Name of the department.</p>>
+     *  <p>Name of the department.</p>
      */
 
     @JsonProperty("department")
     public String getDepartment();
 
     /**
-     <*  <p>Number or name of the building.</p>>
+     *  <p>Number or name of the building.</p>
      */
 
     @JsonProperty("building")
     public String getBuilding();
 
     /**
-     <*  <p>Number or name of the apartment.</p>>
+     *  <p>Number or name of the apartment.</p>
      */
 
     @JsonProperty("apartment")
     public String getApartment();
 
     /**
-     <*  <p>Post office box number.</p>>
+     *  <p>Post office box number.</p>
      */
 
     @JsonProperty("pOBox")
     public String getPOBox();
 
     /**
-     <*  <p>Phone number of the contact.</p>>
+     *  <p>Phone number of the contact.</p>
      */
 
     @JsonProperty("phone")
     public String getPhone();
 
     /**
-     <*  <p>Mobile phone number of the contact.</p>>
+     *  <p>Mobile phone number of the contact.</p>
      */
 
     @JsonProperty("mobile")
     public String getMobile();
 
     /**
-     <*  <p>Email address of the contact.</p>>
+     *  <p>Email address of the contact.</p>
      */
 
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <*  <p>Fax number of the contact.</p>>
+     *  <p>Fax number of the contact.</p>
      */
 
     @JsonProperty("fax")
     public String getFax();
 
     /**
-     <*  <p>Further information on the Address.</p>>
+     *  <p>Further information on the Address.</p>
      */
 
     @JsonProperty("additionalAddressInfo")
     public String getAdditionalAddressInfo();
 
     /**
-     <*  <p>ID for the contact used in an external system.</p>>
+     *  <p>ID for the contact used in an external system.</p>
      */
 
     @JsonProperty("externalId")

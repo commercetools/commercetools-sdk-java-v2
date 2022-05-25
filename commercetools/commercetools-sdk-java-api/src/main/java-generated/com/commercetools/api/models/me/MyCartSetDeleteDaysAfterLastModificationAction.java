@@ -29,7 +29,7 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("deleteDaysAfterLastModification")

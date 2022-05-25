@@ -36,21 +36,21 @@ public interface SetSupplyChannelsChange extends Change {
     String SET_SUPPLY_CHANNELS_CHANGE = "SetSupplyChannelsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setSupplyChannels</code></p>>
+     *  <p>Shape of the action for <code>setSupplyChannels</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetSupplyChannelsChange extends Change {
     public List<Reference> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

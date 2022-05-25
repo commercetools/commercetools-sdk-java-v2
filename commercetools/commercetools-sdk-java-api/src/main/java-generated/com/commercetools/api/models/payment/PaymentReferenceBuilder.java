@@ -30,7 +30,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     private com.commercetools.api.models.payment.Payment obj;
 
     /**
-     <*  <p>Unique identifier of the referenced Payment.</p>>
+     *  <p>Unique identifier of the referenced Payment.</p>
      */
 
     public PaymentReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
      */
 
     public PaymentReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
      */
 
     public PaymentReferenceBuilder obj(@Nullable final com.commercetools.api.models.payment.Payment obj) {

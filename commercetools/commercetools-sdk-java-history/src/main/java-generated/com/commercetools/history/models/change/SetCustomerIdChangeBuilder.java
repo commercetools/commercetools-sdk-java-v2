@@ -30,7 +30,7 @@ public class SetCustomerIdChangeBuilder implements Builder<SetCustomerIdChange> 
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setCustomerId</code></p>>
+     *  <p>Shape of the action for <code>setCustomerId</code></p>
      */
 
     public SetCustomerIdChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetCustomerIdChangeBuilder implements Builder<SetCustomerIdChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomerIdChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetCustomerIdChangeBuilder implements Builder<SetCustomerIdChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomerIdChangeBuilder nextValue(final String nextValue) {

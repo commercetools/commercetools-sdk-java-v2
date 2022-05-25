@@ -32,7 +32,7 @@ public class ImageSearchConfigRequestImpl implements ImageSearchConfigRequest, M
     }
 
     /**
-     <*  <p>The list of update actions to be performed on the project.</p>>
+     *  <p>The list of update actions to be performed on the project.</p>
      */
 
     public java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> getActions() {

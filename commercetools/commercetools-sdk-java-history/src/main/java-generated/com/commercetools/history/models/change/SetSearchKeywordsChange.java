@@ -37,28 +37,28 @@ public interface SetSearchKeywordsChange extends Change {
     String SET_SEARCH_KEYWORDS_CHANGE = "SetSearchKeywordsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setSearchKeywords</code></p>>
+     *  <p>Update action for <code>setSearchKeywords</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface SetSearchKeywordsChange extends Change {
     public SearchKeywords getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

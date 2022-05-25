@@ -34,7 +34,7 @@ public interface CartAddPaymentAction extends CartUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

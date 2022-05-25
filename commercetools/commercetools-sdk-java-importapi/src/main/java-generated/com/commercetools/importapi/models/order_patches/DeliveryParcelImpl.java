@@ -43,7 +43,7 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -51,7 +51,7 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {
@@ -59,7 +59,7 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {
@@ -67,7 +67,7 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {

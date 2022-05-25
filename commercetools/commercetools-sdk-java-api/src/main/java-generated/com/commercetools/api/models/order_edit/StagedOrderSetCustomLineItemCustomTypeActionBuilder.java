@@ -34,7 +34,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
@@ -43,7 +43,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -53,7 +53,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -63,7 +63,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(
@@ -73,7 +73,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
      */
 
     public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(

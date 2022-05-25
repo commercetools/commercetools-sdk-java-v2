@@ -32,7 +32,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     private Boolean shipping;
 
     /**
-     <>
+     *
      */
 
     public PriceChangedErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceChangedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceChangedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceChangedErrorBuilder lineItems(final String... lineItems) {
@@ -71,7 +71,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceChangedErrorBuilder lineItems(final java.util.List<String> lineItems) {
@@ -80,7 +80,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceChangedErrorBuilder plusLineItems(final String... lineItems) {
@@ -92,7 +92,7 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceChangedErrorBuilder shipping(final Boolean shipping) {

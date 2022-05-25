@@ -35,7 +35,7 @@ public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions() {

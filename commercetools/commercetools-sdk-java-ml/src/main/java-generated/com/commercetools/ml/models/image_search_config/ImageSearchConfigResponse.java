@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImageSearchConfigResponse {
 
     /**
-     <*  <p>The image search activation status.</p>>
+     *  <p>The image search activation status.</p>
      */
     @NotNull
     @JsonProperty("status")
     public ImageSearchConfigStatus getStatus();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")

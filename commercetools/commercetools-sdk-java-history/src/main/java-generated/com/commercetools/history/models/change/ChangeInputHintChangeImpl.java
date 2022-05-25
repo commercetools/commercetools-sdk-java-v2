@@ -51,7 +51,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     <*  <p>Update action for <code>changeInputHint</code> on product types and types</p>>
+     *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public String getFieldName() {
@@ -75,7 +75,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public String getAttributeName() {
@@ -83,7 +83,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TextInputHint getNextValue() {
@@ -91,7 +91,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TextInputHint getPreviousValue() {

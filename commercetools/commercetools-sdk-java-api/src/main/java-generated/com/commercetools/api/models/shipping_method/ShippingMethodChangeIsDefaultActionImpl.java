@@ -35,7 +35,7 @@ public class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodCh
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodCh
     }
 
     /**
-     <*  <p>Only one ShippingMethod in a project can be default.</p>>
+     *  <p>Only one ShippingMethod in a project can be default.</p>
      */
 
     public Boolean getIsDefault() {

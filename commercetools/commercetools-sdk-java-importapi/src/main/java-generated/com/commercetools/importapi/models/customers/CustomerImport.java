@@ -39,112 +39,112 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerImport extends ImportResource {
 
     /**
-     <*  <p>Maps to <code>Customer.customerNumber</code>.</p>>
+     *  <p>Maps to <code>Customer.customerNumber</code>.</p>
      */
 
     @JsonProperty("customerNumber")
     public String getCustomerNumber();
 
     /**
-     <*  <p>Maps to <code>Customer.email</code>.</p>>
+     *  <p>Maps to <code>Customer.email</code>.</p>
      */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <*  <p>Maps to <code>Customer.password</code>.</p>>
+     *  <p>Maps to <code>Customer.password</code>.</p>
      */
     @NotNull
     @JsonProperty("password")
     public String getPassword();
 
     /**
-     <*  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>>
+     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
      */
     @Valid
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();
 
     /**
-     <*  <p>Maps to <code>Customer.firstName</code>.</p>>
+     *  <p>Maps to <code>Customer.firstName</code>.</p>
      */
 
     @JsonProperty("firstName")
     public String getFirstName();
 
     /**
-     <*  <p>Maps to <code>Customer.lastName</code>.</p>>
+     *  <p>Maps to <code>Customer.lastName</code>.</p>
      */
 
     @JsonProperty("lastName")
     public String getLastName();
 
     /**
-     <*  <p>Maps to <code>Customer.middleName</code>.</p>>
+     *  <p>Maps to <code>Customer.middleName</code>.</p>
      */
 
     @JsonProperty("middleName")
     public String getMiddleName();
 
     /**
-     <*  <p>Maps to <code>Customer.title</code>.</p>>
+     *  <p>Maps to <code>Customer.title</code>.</p>
      */
 
     @JsonProperty("title")
     public String getTitle();
 
     /**
-     <*  <p>Maps to <code>Customer.salutation</code>.</p>>
+     *  <p>Maps to <code>Customer.salutation</code>.</p>
      */
 
     @JsonProperty("salutation")
     public String getSalutation();
 
     /**
-     <*  <p>Maps to <code>Customer.externalId</code>.</p>>
+     *  <p>Maps to <code>Customer.externalId</code>.</p>
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     <*  <p>Maps to <code>Customer.dateOfBirth</code>.</p>>
+     *  <p>Maps to <code>Customer.dateOfBirth</code>.</p>
      */
 
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 
     /**
-     <*  <p>Maps to <code>Customer.companyName</code>.</p>>
+     *  <p>Maps to <code>Customer.companyName</code>.</p>
      */
 
     @JsonProperty("companyName")
     public String getCompanyName();
 
     /**
-     <*  <p>Maps to <code>Customer.vatId</code>.</p>>
+     *  <p>Maps to <code>Customer.vatId</code>.</p>
      */
 
     @JsonProperty("vatId")
     public String getVatId();
 
     /**
-     <*  <p>Maps to <code>Customer.isEmailVerified</code>.</p>>
+     *  <p>Maps to <code>Customer.isEmailVerified</code>.</p>
      */
 
     @JsonProperty("isEmailVerified")
     public Boolean getIsEmailVerified();
 
     /**
-     <*  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>>
+     *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     <*  <p>Maps to <code>Customer.addresses</code>.</p>>
+     *  <p>Maps to <code>Customer.addresses</code>.</p>
      */
     @NotNull
     @Valid
@@ -152,42 +152,42 @@ public interface CustomerImport extends ImportResource {
     public List<CustomerAddress> getAddresses();
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     @JsonProperty("defaultBillingAddress")
     public Integer getDefaultBillingAddress();
 
     /**
-     <*  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
      */
 
     @JsonProperty("billingAddresses")
     public List<Integer> getBillingAddresses();
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     @JsonProperty("defaultShippingAddress")
     public Integer getDefaultShippingAddress();
 
     /**
-     <*  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
      */
 
     @JsonProperty("shippingAddresses")
     public List<Integer> getShippingAddresses();
 
     /**
-     <*  <p>Maps to <code>Customer.locale</code>.</p>>
+     *  <p>Maps to <code>Customer.locale</code>.</p>
      */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-     <*  <p>The custom fields for this Customer.</p>>
+     *  <p>The custom fields for this Customer.</p>
      */
     @Valid
     @JsonProperty("custom")

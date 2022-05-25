@@ -33,7 +33,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
     private com.commercetools.history.models.common.AttributeConstraintEnum nextValue;
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeConstraintChangeBuilder change(final String change) {
@@ -42,7 +42,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
     }
 
     /**
-     <*  <p>name of the updated attribute</p>>
+     *  <p>name of the updated attribute</p>
      */
 
     public ChangeAttributeConstraintChangeBuilder attributeName(final String attributeName) {
@@ -51,7 +51,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeConstraintChangeBuilder previousValue(
@@ -61,7 +61,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeConstraintChangeBuilder nextValue(

@@ -28,7 +28,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
 
     public TypeAddLocalizedEnumValueActionBuilder fieldName(final String fieldName) {
@@ -37,7 +37,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public TypeAddLocalizedEnumValueActionBuilder value(
@@ -47,7 +47,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public TypeAddLocalizedEnumValueActionBuilder value(

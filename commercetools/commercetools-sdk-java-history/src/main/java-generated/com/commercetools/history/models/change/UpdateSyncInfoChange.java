@@ -36,28 +36,28 @@ public interface UpdateSyncInfoChange extends Change {
     String UPDATE_SYNC_INFO_CHANGE = "UpdateSyncInfoChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>updateSyncInfo</code></p>>
+     *  <p>Update action for <code>updateSyncInfo</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("channelId")
     public String getChannelId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

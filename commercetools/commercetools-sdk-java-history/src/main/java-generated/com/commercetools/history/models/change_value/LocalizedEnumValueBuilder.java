@@ -28,7 +28,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     <>
+     *
      */
 
     public LocalizedEnumValueBuilder key(final String key) {
@@ -37,7 +37,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizedEnumValueBuilder label(
@@ -47,7 +47,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizedEnumValueBuilder label(final com.commercetools.history.models.common.LocalizedString label) {

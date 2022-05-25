@@ -35,12 +35,16 @@ public class MyPaymentSetMethodInfoInterfaceActionImpl implements MyPaymentSetMe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getInterface() {
         return this._interface;

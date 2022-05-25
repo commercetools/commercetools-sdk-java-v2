@@ -39,7 +39,7 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

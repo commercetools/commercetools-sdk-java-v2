@@ -34,28 +34,28 @@ public interface ChangeSortOrderChange extends Change {
     String CHANGE_SORT_ORDER_CHANGE = "ChangeSortOrderChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeSortOrder</code></p>>
+     *  <p>Shape of the action for <code>changeSortOrder</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

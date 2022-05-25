@@ -35,29 +35,29 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
     String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTotalPrice")

@@ -38,7 +38,7 @@ public class ImportSinkBuilder implements Builder<ImportSink> {
     private java.time.ZonedDateTime lastModifiedAt;
 
     /**
-     <*  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>>
+     *  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
      */
 
     public ImportSinkBuilder key(final String key) {
@@ -47,7 +47,7 @@ public class ImportSinkBuilder implements Builder<ImportSink> {
     }
 
     /**
-     <*  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>>
+     *  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
      */
 
     public ImportSinkBuilder resourceType(
@@ -57,7 +57,7 @@ public class ImportSinkBuilder implements Builder<ImportSink> {
     }
 
     /**
-     <*  <p>The version of the ImportSink.</p>>
+     *  <p>The version of the ImportSink.</p>
      */
 
     public ImportSinkBuilder version(final Long version) {
@@ -66,7 +66,7 @@ public class ImportSinkBuilder implements Builder<ImportSink> {
     }
 
     /**
-     <*  <p>The time when the ImportSink was created.</p>>
+     *  <p>The time when the ImportSink was created.</p>
      */
 
     public ImportSinkBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -75,7 +75,7 @@ public class ImportSinkBuilder implements Builder<ImportSink> {
     }
 
     /**
-     <*  <p>The last time when the ImportSink was modified.</p>>
+     *  <p>The last time when the ImportSink was modified.</p>
      */
 
     public ImportSinkBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {

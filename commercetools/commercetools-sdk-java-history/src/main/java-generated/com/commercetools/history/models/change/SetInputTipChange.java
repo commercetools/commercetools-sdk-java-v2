@@ -37,28 +37,28 @@ public interface SetInputTipChange extends Change {
     String SET_INPUT_TIP_CHANGE = "SetInputTipChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setInputTip</code> on product types</p>>
+     *  <p>Update action for <code>setInputTip</code> on product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the updated attribute.</p>>
+     *  <p>The name of the updated attribute.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface SetInputTipChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

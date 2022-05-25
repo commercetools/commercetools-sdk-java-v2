@@ -39,7 +39,7 @@ public interface ProductSelectionUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<ProductSelectionUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

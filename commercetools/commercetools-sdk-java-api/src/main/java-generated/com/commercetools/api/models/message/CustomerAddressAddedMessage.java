@@ -41,7 +41,7 @@ public interface CustomerAddressAddedMessage extends Message {
     String CUSTOMER_ADDRESS_ADDED = "CustomerAddressAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

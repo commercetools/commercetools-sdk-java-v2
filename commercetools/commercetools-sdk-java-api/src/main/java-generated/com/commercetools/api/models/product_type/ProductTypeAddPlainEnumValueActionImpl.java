@@ -39,7 +39,7 @@ public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPla
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPla
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPla
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_type.AttributePlainEnumValue getValue() {

@@ -31,7 +31,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     private String returnDate;
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder items(final com.commercetools.history.models.common.ReturnItem... items) {
@@ -40,7 +40,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder items(final java.util.List<com.commercetools.history.models.common.ReturnItem> items) {
@@ -49,7 +49,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder plusItems(final com.commercetools.history.models.common.ReturnItem... items) {
@@ -61,7 +61,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder plusItems(
@@ -74,7 +74,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder withItems(
@@ -85,7 +85,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <*  <p>Identifies, which return tracking ID is connected to this particular return.</p>>
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      */
 
     public ReturnInfoBuilder returnTrackingId(final String returnTrackingId) {
@@ -94,7 +94,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder returnDate(final String returnDate) {

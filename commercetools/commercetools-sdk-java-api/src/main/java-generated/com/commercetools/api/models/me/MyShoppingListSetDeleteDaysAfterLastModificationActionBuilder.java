@@ -27,7 +27,7 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
     private Long deleteDaysAfterLastModification;
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(

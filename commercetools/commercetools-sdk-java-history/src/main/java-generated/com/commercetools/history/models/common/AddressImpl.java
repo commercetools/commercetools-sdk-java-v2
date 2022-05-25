@@ -117,7 +117,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <*  <p>Unique ID of the Address.</p>>
+     *  <p>Unique ID of the Address.</p>
      */
 
     public String getId() {
@@ -125,7 +125,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -133,7 +133,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getTitle() {
@@ -141,7 +141,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSalutation() {
@@ -149,7 +149,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFirstName() {
@@ -157,7 +157,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLastName() {
@@ -165,7 +165,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getStreetName() {
@@ -173,7 +173,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getStreetNumber() {
@@ -181,7 +181,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAdditionalStreetInfo() {
@@ -189,7 +189,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPostalCode() {
@@ -197,7 +197,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCity() {
@@ -205,7 +205,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getRegion() {
@@ -213,7 +213,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getState() {
@@ -221,7 +221,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -229,7 +229,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCompany() {
@@ -237,7 +237,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getDepartment() {
@@ -245,7 +245,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getBuilding() {
@@ -253,7 +253,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getApartment() {
@@ -261,7 +261,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPOBox() {
@@ -269,7 +269,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPhone() {
@@ -277,7 +277,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMobile() {
@@ -285,7 +285,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {
@@ -293,7 +293,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFax() {
@@ -301,7 +301,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAdditionalAddressInfo() {
@@ -309,7 +309,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getExternalId() {

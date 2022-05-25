@@ -48,7 +48,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -56,7 +56,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -64,7 +64,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -72,7 +72,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
@@ -80,7 +80,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

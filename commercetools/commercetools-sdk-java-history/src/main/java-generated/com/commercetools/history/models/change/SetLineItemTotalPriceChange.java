@@ -38,21 +38,21 @@ public interface SetLineItemTotalPriceChange extends Change {
     String SET_LINE_ITEM_TOTAL_PRICE_CHANGE = "SetLineItemTotalPriceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLineItemTotalPrice</code></p>>
+     *  <p>Update action for <code>setLineItemTotalPrice</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetLineItemTotalPriceChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetLineItemTotalPriceChange extends Change {
     public Money getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -24,7 +24,7 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
     private String name;
 
     /**
-     <>
+     *
      */
 
     public CustomShippingMethodChangeValueBuilder name(final String name) {

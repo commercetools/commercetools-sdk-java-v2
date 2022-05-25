@@ -32,7 +32,7 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
     String ADD_QUANTITY = "addQuantity";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")

@@ -28,7 +28,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
     private com.commercetools.api.models.order.Parcel parcel;
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder delivery(
@@ -38,7 +38,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder delivery(
@@ -48,7 +48,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder parcel(
@@ -58,7 +58,7 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessagePayloadBuilder parcel(final com.commercetools.api.models.order.Parcel parcel) {

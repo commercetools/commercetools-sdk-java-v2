@@ -43,7 +43,7 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for setting a custom type</p>>
+     *  <p>Update action for setting a custom type</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
@@ -67,7 +67,7 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {

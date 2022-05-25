@@ -27,7 +27,7 @@ public class SubRateBuilder implements Builder<SubRate> {
     private Double amount;
 
     /**
-     <*  <p>Name of the SubRate.</p>>
+     *  <p>Name of the SubRate.</p>
      */
 
     public SubRateBuilder name(final String name) {
@@ -36,7 +36,7 @@ public class SubRateBuilder implements Builder<SubRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubRateBuilder amount(final Double amount) {

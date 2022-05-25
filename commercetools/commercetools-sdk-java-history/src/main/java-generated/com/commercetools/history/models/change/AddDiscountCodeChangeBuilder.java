@@ -28,7 +28,7 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
     private com.commercetools.history.models.common.DiscountCodeInfo nextValue;
 
     /**
-     <*  <p>Update action for <code>addDiscountCode</code></p>>
+     *  <p>Update action for <code>addDiscountCode</code></p>
      */
 
     public AddDiscountCodeChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddDiscountCodeChangeBuilder nextValue(
@@ -47,7 +47,7 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddDiscountCodeChangeBuilder nextValue(

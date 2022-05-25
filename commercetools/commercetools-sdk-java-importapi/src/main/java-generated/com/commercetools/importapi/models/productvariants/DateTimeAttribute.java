@@ -33,7 +33,7 @@ public interface DateTimeAttribute extends Attribute {
     String DATETIME = "datetime";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

@@ -28,7 +28,7 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
     private com.commercetools.api.models.common.LocalizedString localizedDescription;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(
@@ -39,7 +39,7 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(

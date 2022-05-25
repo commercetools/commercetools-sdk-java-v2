@@ -34,7 +34,7 @@ public interface ProductVariantImportRequest extends ImportRequest {
     String PRODUCT_VARIANT = "product-variant";
 
     /**
-     <*  <p>The product variant import resources of this request.</p>>
+     *  <p>The product variant import resources of this request.</p>
      */
     @NotNull
     @Valid

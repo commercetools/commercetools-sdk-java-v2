@@ -39,7 +39,7 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     <*  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>>
+     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -47,7 +47,7 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     <*  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>>
+     *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
      */
 
     public String getId() {
@@ -55,7 +55,7 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     <*  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>>
+     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
      */
 
     public String getKey() {

@@ -34,21 +34,21 @@ public interface AWSLambdaDestination extends ExtensionDestination {
     String AWS_LAMBDA = "AWSLambda";
 
     /**
-     <*  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>>
+     *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>
      */
     @NotNull
     @JsonProperty("arn")
     public String getArn();
 
     /**
-     <*  <p>Partially hidden on retrieval for security reasons.</p>>
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();
 
     /**
-     <*  <p>Partially hidden on retrieval for security reasons.</p>>
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
     @NotNull
     @JsonProperty("accessSecret")

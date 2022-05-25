@@ -36,7 +36,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     private Boolean isMatching;
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder value(final String value) {
@@ -45,7 +45,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder price(
@@ -55,7 +55,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder price(final com.commercetools.importapi.models.common.Money price) {
@@ -64,7 +64,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder tiers(
@@ -74,7 +74,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder tiers(
@@ -84,7 +84,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder plusTiers(
@@ -97,7 +97,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder plusTiers(
@@ -111,7 +111,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder withTiers(
@@ -123,7 +123,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder isMatching(@Nullable final Boolean isMatching) {

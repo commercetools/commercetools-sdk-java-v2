@@ -37,35 +37,35 @@ public interface TermFacetResult extends FacetResult {
     String TERMS = "terms";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("dataType")
     public TermFacetResultType getDataType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("missing")
     public Long getMissing();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("other")
     public Long getOther();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

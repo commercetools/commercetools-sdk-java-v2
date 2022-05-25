@@ -36,7 +36,7 @@ public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupActio
     }
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {

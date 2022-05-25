@@ -43,7 +43,7 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
     }
 
     /**
-     <*  <p>Update action for <code>updateSyncInfo</code></p>>
+     *  <p>Update action for <code>updateSyncInfo</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getChannelId() {
@@ -67,7 +67,7 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.SyncInfo getNextValue() {

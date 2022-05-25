@@ -42,7 +42,7 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -50,7 +50,7 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -58,7 +58,7 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -66,7 +66,7 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {

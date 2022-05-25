@@ -30,7 +30,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>>
+     *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
      */
 
     public PaymentSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     <*  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>>
+     *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
      */
 
     public PaymentSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Payment.</p>>
+     *  <p>Sets the Custom Fields fields for the Payment.</p>
      */
 
     public PaymentSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class PaymentSetCustomTypeActionBuilder implements Builder<PaymentSetCust
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Payment.</p>>
+     *  <p>Sets the Custom Fields fields for the Payment.</p>
      */
 
     public PaymentSetCustomTypeActionBuilder fields(

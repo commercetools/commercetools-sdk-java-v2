@@ -35,7 +35,7 @@ public class UnpublishChangeImpl implements UnpublishChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class UnpublishChangeImpl implements UnpublishChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {

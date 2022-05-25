@@ -26,7 +26,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
     private java.util.List<String> languages;
 
     /**
-     <>
+     *
      */
 
     public StoreSetLanguagesActionBuilder languages(@Nullable final String... languages) {
@@ -35,7 +35,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetLanguagesActionBuilder languages(@Nullable final java.util.List<String> languages) {
@@ -44,7 +44,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetLanguagesActionBuilder plusLanguages(@Nullable final String... languages) {

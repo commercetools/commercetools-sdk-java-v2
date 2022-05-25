@@ -32,7 +32,7 @@ public interface CartDiscountSetDescriptionAction extends CartDiscountUpdateActi
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("description")

@@ -39,7 +39,7 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
     }
 
     /**
-     <*  <p>The attribute in conflict.</p>>
+     *  <p>The attribute in conflict.</p>
      */
 
     public com.commercetools.importapi.models.productvariants.Attribute getAttribute() {

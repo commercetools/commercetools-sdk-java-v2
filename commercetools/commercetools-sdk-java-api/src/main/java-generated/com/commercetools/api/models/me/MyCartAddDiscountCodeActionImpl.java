@@ -35,7 +35,7 @@ public class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountCodeAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountCodeAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {

@@ -35,7 +35,7 @@ public class PriceFunctionImpl implements PriceFunction, ModelBase {
     }
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
 
     public String getCurrencyCode() {
@@ -43,7 +43,7 @@ public class PriceFunctionImpl implements PriceFunction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFunction() {

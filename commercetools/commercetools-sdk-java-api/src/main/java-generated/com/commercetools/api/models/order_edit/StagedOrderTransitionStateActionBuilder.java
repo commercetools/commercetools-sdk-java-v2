@@ -30,7 +30,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
     private Boolean force;
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public StagedOrderTransitionStateActionBuilder state(
@@ -40,7 +40,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public StagedOrderTransitionStateActionBuilder state(
@@ -50,7 +50,7 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderTransitionStateActionBuilder force(@Nullable final Boolean force) {

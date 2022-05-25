@@ -52,7 +52,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -60,7 +60,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -68,7 +68,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getAmount() {
@@ -76,7 +76,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIncludedInPrice() {
@@ -84,7 +84,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -92,7 +92,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getState() {
@@ -100,7 +100,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates() {

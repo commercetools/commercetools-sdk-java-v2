@@ -30,7 +30,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
     private Boolean force;
 
     /**
-     <>
+     *
      */
 
     public ProductTransitionStateActionBuilder state(
@@ -40,7 +40,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTransitionStateActionBuilder state(
@@ -50,7 +50,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTransitionStateActionBuilder force(@Nullable final Boolean force) {

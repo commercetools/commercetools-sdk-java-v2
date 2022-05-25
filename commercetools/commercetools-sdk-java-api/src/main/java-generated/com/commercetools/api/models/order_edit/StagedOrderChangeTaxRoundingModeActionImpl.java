@@ -36,7 +36,7 @@ public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {

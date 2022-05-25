@@ -39,7 +39,7 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -55,7 +55,7 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {

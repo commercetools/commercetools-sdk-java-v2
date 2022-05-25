@@ -47,7 +47,7 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     }
 
     /**
-     <*  <p>Update action for <code>changeTransactionState</code> on payments</p>>
+     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
@@ -71,7 +71,7 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TransactionState getNextValue() {
@@ -79,7 +79,7 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TransactionState getPreviousValue() {

@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SyncInfo {
 
     /**
-     <*  <p>Connection to a particular synchronization destination.</p>>
+     *  <p>Connection to a particular synchronization destination.</p>
      */
     @NotNull
     @Valid
@@ -42,14 +42,14 @@ public interface SyncInfo {
     public ChannelReference getChannel();
 
     /**
-     <*  <p>Can be used to reference an external order instance, file etc.</p>>
+     *  <p>Can be used to reference an external order instance, file etc.</p>
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("syncedAt")

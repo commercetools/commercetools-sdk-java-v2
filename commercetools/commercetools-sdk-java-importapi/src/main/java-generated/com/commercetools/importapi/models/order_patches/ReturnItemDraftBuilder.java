@@ -38,7 +38,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     private com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState;
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder quantity(final Double quantity) {
@@ -47,7 +47,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder lineItemId(@Nullable final String lineItemId) {
@@ -56,7 +56,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder customLineItemId(@Nullable final String customLineItemId) {
@@ -65,7 +65,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder comment(@Nullable final String comment) {
@@ -74,7 +74,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <*  <p>Maps to <code>ReturnItem.shipmentState</code></p>>
+     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
      */
 
     public ReturnItemDraftBuilder shipmentState(

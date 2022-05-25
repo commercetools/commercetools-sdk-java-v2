@@ -25,7 +25,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
     private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionCreatedMessagePayloadBuilder productSelection(
@@ -35,7 +35,7 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionCreatedMessagePayloadBuilder productSelection(

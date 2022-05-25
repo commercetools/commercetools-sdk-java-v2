@@ -36,7 +36,7 @@ public class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupplyChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupplyChan
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {

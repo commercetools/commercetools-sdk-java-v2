@@ -35,7 +35,7 @@ public class MyCartUpdateImpl implements MyCartUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class MyCartUpdateImpl implements MyCartUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> getActions() {

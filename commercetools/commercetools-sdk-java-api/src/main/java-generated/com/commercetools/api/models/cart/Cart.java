@@ -56,84 +56,84 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
         com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart> {
 
     /**
-     <*  <p>Unique identifier of the Cart.</p>>
+     *  <p>Unique identifier of the Cart.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>User-defined unique identifier of the Cart.</p>>
+     *  <p>User-defined unique identifier of the Cart.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>The current version of the cart.</p>>
+     *  <p>The current version of the cart.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customerId")
     public String getCustomerId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customerEmail")
     public String getCustomerEmail();
 
     /**
-     <*  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("store")
     public StoreKeyReference getStore();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -141,7 +141,7 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     public List<LineItem> getLineItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -149,7 +149,7 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     public List<CustomLineItem> getCustomLineItems();
 
     /**
-     <*  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>>
+     *  <p>The sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      */
     @NotNull
     @Valid
@@ -157,119 +157,119 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     public TypedMoney getTotalPrice();
 
     /**
-     <*  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>>
+     *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
      */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedPrice getTaxedPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("cartState")
     public CartState getCartState();
 
     /**
-     <*  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>>
+     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
      */
     @Valid
     @JsonProperty("shippingAddress")
     public Address getShippingAddress();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("billingAddress")
     public Address getBillingAddress();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("inventoryMode")
     public InventoryMode getInventoryMode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>>
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
      */
     @NotNull
     @JsonProperty("taxRoundingMode")
     public RoundingMode getTaxRoundingMode();
 
     /**
-     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>>
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
      */
     @NotNull
     @JsonProperty("taxCalculationMode")
     public TaxCalculationMode getTaxCalculationMode();
 
     /**
-     <*  <p>Set automatically when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>>
+     *  <p>Set automatically when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>Set automatically once the ShippingMethod is set.</p>>
+     *  <p>Set automatically once the ShippingMethod is set.</p>
      */
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("discountCodes")
     public List<DiscountCodeInfo> getDiscountCodes();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("paymentInfo")
     public PaymentInfo getPaymentInfo();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-     <*  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.</p>>
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.</p>
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Integer getDeleteDaysAfterLastModification();
 
     /**
-     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>>
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from the cart.</p>
      */
     @NotNull
     @Valid
@@ -277,28 +277,28 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     public List<CartDiscountReference> getRefusedGifts();
 
     /**
-     <*  <p>The origin field indicates how this cart was created. The value <code>Customer</code> indicates, that the cart was created by the customer.</p>>
+     *  <p>The origin field indicates how this cart was created. The value <code>Customer</code> indicates, that the cart was created by the customer.</p>
      */
     @NotNull
     @JsonProperty("origin")
     public CartOrigin getOrigin();
 
     /**
-     <*  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>>
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
      */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();
 
     /**
-     <*  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>>
+     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
     public List<Address> getItemShippingAddresses();
 
     /**
-     <*  <p>The sum off all the Line Items quantities. Does not take Custom Line Items into consideration.</p>>
+     *  <p>The sum off all the Line Items quantities. Does not take Custom Line Items into consideration.</p>
      */
 
     @JsonProperty("totalLineItemQuantity")

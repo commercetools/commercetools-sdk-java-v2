@@ -26,7 +26,7 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public SearchFacetPathNotFoundErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
     }
 
     /**
-     <>
+     *
      */
 
     public SearchFacetPathNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class SearchFacetPathNotFoundErrorBuilder implements Builder<SearchFacetP
     }
 
     /**
-     <>
+     *
      */
 
     public SearchFacetPathNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {

@@ -30,7 +30,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setMiddleName</code></p>>
+     *  <p>Shape of the action for <code>setMiddleName</code></p>
      */
 
     public SetMiddleNameChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetMiddleNameChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetMiddleNameChangeBuilder nextValue(final String nextValue) {

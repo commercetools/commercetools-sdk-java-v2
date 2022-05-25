@@ -28,7 +28,7 @@ public class CartValueTypeImpl implements CartValueType, ModelBase {
     }
 
     /**
-     <*  <p>Can be one of the following or absent.</p>>
+     *  <p>Can be one of the following or absent.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {

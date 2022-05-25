@@ -88,7 +88,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the ShippingMethod.</p>>
+     *  <p>Unique identifier of the ShippingMethod.</p>
      */
 
     public String getId() {
@@ -96,7 +96,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the shipping method.</p>>
+     *  <p>The current version of the shipping method.</p>
      */
 
     public Long getVersion() {
@@ -104,7 +104,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -112,7 +112,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -120,7 +120,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -128,7 +128,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -136,7 +136,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ShippingMethod.</p>>
+     *  <p>User-defined unique identifier of the ShippingMethod.</p>
      */
 
     public String getKey() {
@@ -144,7 +144,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -152,7 +152,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
@@ -160,7 +160,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getDescription() {
@@ -168,7 +168,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
@@ -176,7 +176,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -184,7 +184,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates() {
@@ -192,7 +192,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <*  <p>One shipping method in a project can be default.</p>>
+     *  <p>One shipping method in a project can be default.</p>
      */
 
     public Boolean getIsDefault() {
@@ -200,7 +200,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <*  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>>
+     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
      */
 
     public String getPredicate() {
@@ -208,7 +208,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

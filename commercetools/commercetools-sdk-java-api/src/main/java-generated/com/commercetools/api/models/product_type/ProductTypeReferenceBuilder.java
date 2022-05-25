@@ -30,7 +30,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     private com.commercetools.api.models.product_type.ProductType obj;
 
     /**
-     <*  <p>Unique identifier of the referenced ProductType.</p>>
+     *  <p>Unique identifier of the referenced ProductType.</p>
      */
 
     public ProductTypeReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
      */
 
     public ProductTypeReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
      */
 
     public ProductTypeReferenceBuilder obj(@Nullable final com.commercetools.api.models.product_type.ProductType obj) {

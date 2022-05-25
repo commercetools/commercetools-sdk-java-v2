@@ -43,7 +43,7 @@ public class ChangeShipmentStateChangeImpl implements ChangeShipmentStateChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeShipmentStateChangeImpl implements ChangeShipmentStateChange,
     }
 
     /**
-     <*  <p>Update action for <code>changeShipmentState</code></p>>
+     *  <p>Update action for <code>changeShipmentState</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeShipmentStateChangeImpl implements ChangeShipmentStateChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ShipmentState getNextValue() {
@@ -67,7 +67,7 @@ public class ChangeShipmentStateChangeImpl implements ChangeShipmentStateChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ShipmentState getPreviousValue() {

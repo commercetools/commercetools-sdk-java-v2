@@ -28,7 +28,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
     private com.commercetools.importapi.models.common.LocalizedString label;
 
     /**
-     <>
+     *
      */
 
     public AttributeLocalizedEnumValueBuilder key(final String key) {
@@ -37,12 +37,12 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AttributeLocalizedEnumValueBuilder label(
@@ -52,12 +52,12 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AttributeLocalizedEnumValueBuilder label(

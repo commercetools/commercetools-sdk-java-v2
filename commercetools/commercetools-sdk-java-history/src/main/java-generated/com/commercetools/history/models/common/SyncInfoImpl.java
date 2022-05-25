@@ -38,7 +38,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getChannel() {
@@ -46,7 +46,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <*  <p>Can be used to reference an external order instance, file etc.</p>>
+     *  <p>Can be used to reference an external order instance, file etc.</p>
      */
 
     public String getExternalId() {
@@ -54,7 +54,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSyncedAt() {

@@ -30,7 +30,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     private com.commercetools.api.models.shipping_method.ShippingMethod obj;
 
     /**
-     <*  <p>Unique identifier of the referenced ShippingMethod.</p>>
+     *  <p>Unique identifier of the referenced ShippingMethod.</p>
      */
 
     public ShippingMethodReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
      */
 
     public ShippingMethodReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
      */
 
     public ShippingMethodReferenceBuilder obj(

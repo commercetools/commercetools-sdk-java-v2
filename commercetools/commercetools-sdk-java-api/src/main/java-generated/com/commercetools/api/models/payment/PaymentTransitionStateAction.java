@@ -34,7 +34,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("force")

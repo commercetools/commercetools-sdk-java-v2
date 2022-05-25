@@ -32,7 +32,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     String REMOVE_DELIVERY = "removeDelivery";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")

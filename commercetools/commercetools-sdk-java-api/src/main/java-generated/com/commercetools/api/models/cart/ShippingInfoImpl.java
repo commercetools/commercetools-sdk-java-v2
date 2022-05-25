@@ -67,7 +67,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getShippingMethodName() {
@@ -75,7 +75,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <*  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>>
+     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getPrice() {
@@ -83,7 +83,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <*  <p>The shipping rate used to determine the price.</p>>
+     *  <p>The shipping rate used to determine the price.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRate getShippingRate() {
@@ -91,7 +91,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <*  <p>Set once the <code>taxRate</code> is set.</p>>
+     *  <p>Set once the <code>taxRate</code> is set.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
@@ -99,7 +99,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <*  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>>
+     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -107,7 +107,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -115,7 +115,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <*  <p>Not set if custom shipping method is used.</p>>
+     *  <p>Not set if custom shipping method is used.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodReference getShippingMethod() {
@@ -123,7 +123,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
@@ -131,7 +131,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice() {
@@ -139,7 +139,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
     }
 
     /**
-     <*  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>>
+     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {

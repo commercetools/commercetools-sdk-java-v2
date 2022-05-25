@@ -24,7 +24,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
     private java.util.List<Boolean> value;
 
     /**
-     <>
+     *
      */
 
     public BooleanSetFieldBuilder value(final Boolean... value) {
@@ -33,7 +33,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public BooleanSetFieldBuilder value(final java.util.List<Boolean> value) {
@@ -42,7 +42,7 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public BooleanSetFieldBuilder plusValue(final Boolean... value) {

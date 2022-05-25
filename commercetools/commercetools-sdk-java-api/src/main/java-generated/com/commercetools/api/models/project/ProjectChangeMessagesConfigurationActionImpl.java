@@ -37,7 +37,7 @@ public class ProjectChangeMessagesConfigurationActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class ProjectChangeMessagesConfigurationActionImpl
     }
 
     /**
-     <*  <p>Configuration for the Messages Query feature.</p>>
+     *  <p>Configuration for the Messages Query feature.</p>
      */
 
     public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration() {

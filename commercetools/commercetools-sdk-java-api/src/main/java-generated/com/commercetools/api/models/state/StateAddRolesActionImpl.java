@@ -36,7 +36,7 @@ public class StateAddRolesActionImpl implements StateAddRolesAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StateAddRolesActionImpl implements StateAddRolesAction, ModelBase {
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {

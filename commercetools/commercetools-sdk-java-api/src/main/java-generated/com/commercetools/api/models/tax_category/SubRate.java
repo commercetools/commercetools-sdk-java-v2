@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SubRate {
 
     /**
-     <*  <p>Name of the SubRate.</p>>
+     *  <p>Name of the SubRate.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("amount")

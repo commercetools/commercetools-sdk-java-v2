@@ -25,7 +25,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionBuilder
     private java.util.List<String> textLineItemOrder;
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListChangeTextLineItemsOrderActionBuilder textLineItemOrder(final String... textLineItemOrder) {
@@ -34,7 +34,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListChangeTextLineItemsOrderActionBuilder textLineItemOrder(
@@ -44,7 +44,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListChangeTextLineItemsOrderActionBuilder plusTextLineItemOrder(

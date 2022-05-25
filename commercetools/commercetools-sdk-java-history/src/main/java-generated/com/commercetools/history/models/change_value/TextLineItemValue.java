@@ -33,14 +33,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TextLineItemValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

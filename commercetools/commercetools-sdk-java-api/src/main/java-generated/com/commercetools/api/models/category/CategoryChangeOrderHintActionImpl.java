@@ -35,7 +35,7 @@ public class CategoryChangeOrderHintActionImpl implements CategoryChangeOrderHin
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CategoryChangeOrderHintActionImpl implements CategoryChangeOrderHin
     }
 
     /**
-     <>
+     *
      */
 
     public String getOrderHint() {

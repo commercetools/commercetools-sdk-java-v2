@@ -46,7 +46,7 @@ public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQuer
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -54,7 +54,7 @@ public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQuer
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -62,7 +62,7 @@ public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQuer
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -70,7 +70,7 @@ public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQuer
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.ml.models.missing_data.MissingImages> getResults() {
@@ -78,7 +78,7 @@ public class MissingImagesPagedQueryResultImpl implements MissingImagesPagedQuer
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.MissingImagesMeta getMeta() {

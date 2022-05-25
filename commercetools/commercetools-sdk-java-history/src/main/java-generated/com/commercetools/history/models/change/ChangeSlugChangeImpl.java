@@ -43,7 +43,7 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeSlug</code></p>>
+     *  <p>Shape of the action for <code>changeSlug</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

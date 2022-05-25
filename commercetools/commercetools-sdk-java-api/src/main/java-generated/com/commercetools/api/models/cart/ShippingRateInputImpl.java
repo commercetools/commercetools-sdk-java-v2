@@ -31,7 +31,7 @@ public class ShippingRateInputImpl implements ShippingRateInput, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

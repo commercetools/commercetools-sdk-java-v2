@@ -33,7 +33,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductAddToCategoryActionBuilder category(
@@ -44,7 +44,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddToCategoryActionBuilder category(
@@ -54,7 +54,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddToCategoryActionBuilder orderHint(@Nullable final String orderHint) {
@@ -63,7 +63,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddToCategoryActionBuilder staged(@Nullable final Boolean staged) {

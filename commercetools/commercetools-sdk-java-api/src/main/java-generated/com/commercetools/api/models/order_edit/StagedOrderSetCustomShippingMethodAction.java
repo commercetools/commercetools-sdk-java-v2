@@ -38,14 +38,14 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     String SET_CUSTOM_SHIPPING_METHOD = "setCustomShippingMethod";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -53,14 +53,14 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     public ShippingRateDraft getShippingRate();
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")

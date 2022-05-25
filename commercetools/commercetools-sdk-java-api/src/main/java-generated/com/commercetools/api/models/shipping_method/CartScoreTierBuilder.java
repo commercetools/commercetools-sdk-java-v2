@@ -36,7 +36,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     private Boolean isMatching;
 
     /**
-     <>
+     *
      */
 
     public CartScoreTierBuilder score(final Double score) {
@@ -45,8 +45,8 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartScoreTierBuilder price(
@@ -56,8 +56,8 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartScoreTierBuilder price(@Nullable final com.commercetools.api.models.common.Money price) {
@@ -66,7 +66,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartScoreTierBuilder priceFunction(
@@ -77,7 +77,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartScoreTierBuilder priceFunction(
@@ -87,7 +87,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartScoreTierBuilder isMatching(@Nullable final Boolean isMatching) {

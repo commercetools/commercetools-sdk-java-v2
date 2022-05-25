@@ -34,42 +34,42 @@ public interface SetCustomFieldChange extends Change {
     String SET_CUSTOM_FIELD_CHANGE = "SetCustomFieldChange";
 
     /**
-     <*  <p>Update action for setting a custom field</p>>
+     *  <p>Update action for setting a custom field</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Custom field name</p>>
+     *  <p>Custom field name</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customTypeId")
     public String getCustomTypeId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

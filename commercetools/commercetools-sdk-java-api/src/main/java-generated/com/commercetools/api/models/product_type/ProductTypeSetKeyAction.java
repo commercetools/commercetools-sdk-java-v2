@@ -29,7 +29,7 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     <*  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
+     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
 
     @JsonProperty("key")

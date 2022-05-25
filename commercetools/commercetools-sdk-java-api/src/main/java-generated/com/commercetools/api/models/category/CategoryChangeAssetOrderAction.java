@@ -32,7 +32,7 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
     String CHANGE_ASSET_ORDER = "changeAssetOrder";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("assetOrder")

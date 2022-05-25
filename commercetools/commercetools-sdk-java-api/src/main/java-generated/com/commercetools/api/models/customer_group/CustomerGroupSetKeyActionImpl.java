@@ -35,7 +35,7 @@ public class CustomerGroupSetKeyActionImpl implements CustomerGroupSetKeyAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerGroupSetKeyActionImpl implements CustomerGroupSetKeyAction,
     }
 
     /**
-     <*  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>>
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      */
 
     public String getKey() {

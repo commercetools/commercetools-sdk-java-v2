@@ -36,7 +36,7 @@ public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, Model
     }
 
     /**
-     <*  <p>Roles to remove from the State.</p>>
+     *  <p>Roles to remove from the State.</p>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {

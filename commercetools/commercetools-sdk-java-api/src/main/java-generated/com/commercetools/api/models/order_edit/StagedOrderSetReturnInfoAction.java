@@ -33,7 +33,7 @@ public interface StagedOrderSetReturnInfoAction extends StagedOrderUpdateAction 
     String SET_RETURN_INFO = "setReturnInfo";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("items")

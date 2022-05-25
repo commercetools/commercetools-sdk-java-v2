@@ -90,7 +90,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
 
     /**
-     <*  <p>The unique ID of the Product.</p>>
+     *  <p>The unique ID of the Product.</p>
      */
 
     public ProductProjectionBuilder id(final String id) {
@@ -99,7 +99,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>The current version of the Product.</p>>
+     *  <p>The current version of the Product.</p>
      */
 
     public ProductProjectionBuilder version(final Long version) {
@@ -108,7 +108,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -117,7 +117,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -126,7 +126,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>User-specific unique identifier of the Product.</p>>
+     *  <p>User-specific unique identifier of the Product.</p>
      */
 
     public ProductProjectionBuilder key(@Nullable final String key) {
@@ -135,7 +135,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder productType(
@@ -146,7 +146,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder productType(
@@ -156,7 +156,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder name(
@@ -166,7 +166,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -175,7 +175,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder description(
@@ -185,7 +185,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder description(
@@ -195,7 +195,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder slug(
@@ -205,7 +205,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -214,7 +214,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>References to categories the product is in.</p>>
+     *  <p>References to categories the product is in.</p>
      */
 
     public ProductProjectionBuilder categories(
@@ -224,7 +224,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>References to categories the product is in.</p>>
+     *  <p>References to categories the product is in.</p>
      */
 
     public ProductProjectionBuilder categories(
@@ -234,7 +234,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>References to categories the product is in.</p>>
+     *  <p>References to categories the product is in.</p>
      */
 
     public ProductProjectionBuilder plusCategories(
@@ -247,7 +247,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>References to categories the product is in.</p>>
+     *  <p>References to categories the product is in.</p>
      */
 
     public ProductProjectionBuilder plusCategories(
@@ -260,7 +260,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>References to categories the product is in.</p>>
+     *  <p>References to categories the product is in.</p>
      */
 
     public ProductProjectionBuilder withCategories(
@@ -271,7 +271,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder categoryOrderHints(
@@ -282,7 +282,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder categoryOrderHints(
@@ -292,7 +292,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder metaTitle(
@@ -302,7 +302,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder metaTitle(
@@ -312,7 +312,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder metaDescription(
@@ -322,7 +322,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder metaDescription(
@@ -332,7 +332,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder metaKeywords(
@@ -342,7 +342,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder metaKeywords(
@@ -352,7 +352,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder searchKeywords(
@@ -362,7 +362,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder searchKeywords(
@@ -372,7 +372,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder hasStagedChanges(@Nullable final Boolean hasStagedChanges) {
@@ -381,7 +381,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder published(@Nullable final Boolean published) {
@@ -390,7 +390,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder masterVariant(
@@ -400,7 +400,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder masterVariant(
@@ -410,7 +410,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {
@@ -419,7 +419,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder variants(
@@ -429,7 +429,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder plusVariants(
@@ -442,7 +442,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder plusVariants(
@@ -455,7 +455,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder withVariants(
@@ -466,7 +466,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder taxCategory(
@@ -477,7 +477,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder taxCategory(
@@ -487,7 +487,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder state(
@@ -497,7 +497,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -506,7 +506,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
      */
 
     public ProductProjectionBuilder reviewRatingStatistics(
@@ -518,7 +518,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
      */
 
     public ProductProjectionBuilder reviewRatingStatistics(

@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Custom {
 
     /**
-     <*  <p>The type that provides the field definitions for this object.</p>>
+     *  <p>The type that provides the field definitions for this object.</p>
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface Custom {
     public TypeKeyReference getType();
 
     /**
-     <*  <p>The custom fields of this object.</p>>
+     *  <p>The custom fields of this object.</p>
      */
     @Valid
     @JsonProperty("fields")

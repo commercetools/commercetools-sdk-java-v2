@@ -45,7 +45,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     private com.commercetools.api.models.message.ContainerAndKey containerAndKey;
 
     /**
-     <*  <p>User-provided unique identifier of the resource.</p>>
+     *  <p>User-provided unique identifier of the resource.</p>
      */
 
     public UserProvidedIdentifiersBuilder key(@Nullable final String key) {
@@ -54,7 +54,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     <>
+     *
      */
 
     public UserProvidedIdentifiersBuilder externalId(@Nullable final String externalId) {
@@ -63,7 +63,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     <>
+     *
      */
 
     public UserProvidedIdentifiersBuilder orderNumber(@Nullable final String orderNumber) {
@@ -72,7 +72,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     <>
+     *
      */
 
     public UserProvidedIdentifiersBuilder customerNumber(@Nullable final String customerNumber) {
@@ -81,7 +81,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     <>
+     *
      */
 
     public UserProvidedIdentifiersBuilder sku(@Nullable final String sku) {
@@ -90,7 +90,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public UserProvidedIdentifiersBuilder slug(
@@ -100,7 +100,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public UserProvidedIdentifiersBuilder slug(
@@ -110,7 +110,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     <*  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>>
+     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
      */
 
     public UserProvidedIdentifiersBuilder containerAndKey(
@@ -120,7 +120,7 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     }
 
     /**
-     <*  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>>
+     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
      */
 
     public UserProvidedIdentifiersBuilder containerAndKey(

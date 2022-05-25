@@ -27,7 +27,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     private Integer h;
 
     /**
-     <*  <p>The width of the asset source.</p>>
+     *  <p>The width of the asset source.</p>
      */
 
     public AssetDimensionsBuilder w(final Integer w) {
@@ -36,7 +36,7 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
     }
 
     /**
-     <*  <p>The height of the asset source.</p>>
+     *  <p>The height of the asset source.</p>
      */
 
     public AssetDimensionsBuilder h(final Integer h) {

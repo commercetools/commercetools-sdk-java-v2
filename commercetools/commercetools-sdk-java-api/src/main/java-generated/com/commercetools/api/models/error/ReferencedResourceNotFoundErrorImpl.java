@@ -50,7 +50,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -58,7 +58,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -66,7 +66,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -74,7 +74,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     <*  <p>supported resource type identifiers:</p>>
+     *  <p>supported resource type identifiers:</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -82,7 +82,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -90,7 +90,7 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {

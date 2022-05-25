@@ -27,7 +27,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     private Long quantity;
 
     /**
-     <*  <p>Unique identifier of the DeliveryItem.</p>>
+     *  <p>Unique identifier of the DeliveryItem.</p>
      */
 
     public DeliveryItemBuilder id(final String id) {
@@ -36,7 +36,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemBuilder quantity(final Long quantity) {

@@ -38,28 +38,28 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     String SET_SHIPPING_METHOD_TAX_AMOUNT_CHANGE = "SetShippingMethodTaxAmountChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setShippingMethodTaxAmount</code></p>>
+     *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -67,7 +67,7 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     public ShippingMethodTaxAmountChangeValue getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

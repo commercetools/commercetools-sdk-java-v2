@@ -26,7 +26,7 @@ public class CustomerSetCompanyNameActionBuilder implements Builder<CustomerSetC
     private String companyName;
 
     /**
-     <*  <p>If not defined, the company name is unset.</p>>
+     *  <p>If not defined, the company name is unset.</p>
      */
 
     public CustomerSetCompanyNameActionBuilder companyName(@Nullable final String companyName) {

@@ -43,7 +43,7 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {

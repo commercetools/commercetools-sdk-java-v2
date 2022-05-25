@@ -39,7 +39,7 @@ public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getResource() {

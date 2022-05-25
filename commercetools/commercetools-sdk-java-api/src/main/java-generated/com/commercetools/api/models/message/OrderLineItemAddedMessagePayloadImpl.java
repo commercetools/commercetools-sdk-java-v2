@@ -40,7 +40,7 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.LineItem getLineItem() {
@@ -56,7 +56,7 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
     }
 
     /**
-     <>
+     *
      */
 
     public Long getAddedQuantity() {

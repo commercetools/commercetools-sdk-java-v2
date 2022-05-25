@@ -39,21 +39,21 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     String TRANSITION_CUSTOM_LINE_ITEM_STATE = "transitionCustomLineItemState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
     @NotNull
     @Valid
@@ -61,7 +61,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public StateResourceIdentifier getFromState();
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
     @NotNull
     @Valid
@@ -69,7 +69,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public StateResourceIdentifier getToState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("actualTransitionDate")

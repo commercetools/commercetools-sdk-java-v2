@@ -38,35 +38,35 @@ public interface RemovePriceChange extends Change {
     String REMOVE_PRICE_CHANGE = "RemovePriceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for removing prices</p>>
+     *  <p>Update action for removing prices</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface RemovePriceChange extends Change {
     public Price getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

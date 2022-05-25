@@ -34,14 +34,14 @@ public interface DiscountCodeReference extends Reference, com.commercetools.api.
     String DISCOUNT_CODE = "discount-code";
 
     /**
-     <*  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>>
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
      */
     @Valid
     @JsonProperty("obj")
     public DiscountCode getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced DiscountCode.</p>>
+     *  <p>Unique identifier of the referenced DiscountCode.</p>
      */
     @NotNull
     @JsonProperty("id")

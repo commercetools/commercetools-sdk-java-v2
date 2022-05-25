@@ -39,7 +39,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     private java.time.ZonedDateTime actualTransitionDate;
 
     /**
-     <>
+     *
      */
 
     public OrderTransitionLineItemStateActionBuilder lineItemId(final String lineItemId) {
@@ -48,7 +48,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     <>
+     *
      */
 
     public OrderTransitionLineItemStateActionBuilder quantity(final Long quantity) {
@@ -57,7 +57,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionLineItemStateActionBuilder fromState(
@@ -67,7 +67,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionLineItemStateActionBuilder fromState(
@@ -77,7 +77,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionLineItemStateActionBuilder toState(
@@ -87,7 +87,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionLineItemStateActionBuilder toState(
@@ -97,7 +97,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     <>
+     *
      */
 
     public OrderTransitionLineItemStateActionBuilder actualTransitionDate(

@@ -28,7 +28,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     private com.commercetools.importapi.models.common.ProductDiscountKeyReference discount;
 
     /**
-     <>
+     *
      */
 
     public DiscountedPriceBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -37,7 +37,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedPriceBuilder value(
@@ -47,7 +47,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     <*  <p>Reference to a ProductDiscount.</p>>
+     *  <p>Reference to a ProductDiscount.</p>
      */
 
     public DiscountedPriceBuilder discount(
@@ -58,7 +58,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     <*  <p>Reference to a ProductDiscount.</p>>
+     *  <p>Reference to a ProductDiscount.</p>
      */
 
     public DiscountedPriceBuilder discount(

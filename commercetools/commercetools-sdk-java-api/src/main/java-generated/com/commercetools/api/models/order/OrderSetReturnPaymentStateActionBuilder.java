@@ -27,7 +27,7 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnPaymentStateActionBuilder returnItemId(final String returnItemId) {
@@ -36,7 +36,7 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnPaymentStateActionBuilder paymentState(

@@ -45,7 +45,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder name(
@@ -55,7 +55,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -64,7 +64,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder description(
@@ -74,7 +74,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder description(
@@ -84,7 +84,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder lineItems(
@@ -94,7 +94,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder lineItems(
@@ -104,7 +104,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder plusLineItems(
@@ -117,7 +117,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder plusLineItems(
@@ -131,7 +131,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder withLineItems(
@@ -143,7 +143,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder textLineItems(
@@ -153,7 +153,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder textLineItems(
@@ -163,7 +163,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder plusTextLineItems(
@@ -176,7 +176,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder plusTextLineItems(
@@ -190,7 +190,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder withTextLineItems(
@@ -202,7 +202,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public MyShoppingListDraftBuilder custom(
@@ -212,7 +212,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public MyShoppingListDraftBuilder custom(
@@ -222,7 +222,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <*  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>>
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
      */
 
     public MyShoppingListDraftBuilder deleteDaysAfterLastModification(
@@ -232,7 +232,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder store(
@@ -242,7 +242,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListDraftBuilder store(

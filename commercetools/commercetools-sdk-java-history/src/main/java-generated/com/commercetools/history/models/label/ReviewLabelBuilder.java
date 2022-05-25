@@ -27,7 +27,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     private String title;
 
     /**
-     <>
+     *
      */
 
     public ReviewLabelBuilder key(final String key) {
@@ -36,7 +36,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewLabelBuilder title(final String title) {

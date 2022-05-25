@@ -32,7 +32,7 @@ public interface CloudEventsFormat extends DeliveryFormat {
     String CLOUD_EVENTS = "CloudEvents";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("cloudEventsVersion")

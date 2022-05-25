@@ -36,7 +36,7 @@ public class StagedOrderSetReturnInfoActionImpl implements StagedOrderSetReturnI
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderSetReturnInfoActionImpl implements StagedOrderSetReturnI
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> getItems() {

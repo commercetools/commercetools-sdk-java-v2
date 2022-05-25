@@ -35,21 +35,21 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     String ATTRIBUTE_DEFINITION_TYPE_CONFLICT = "AttributeDefinitionTypeConflict";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("conflictingProductTypeId")
     public String getConflictingProductTypeId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("conflictingProductTypeName")
     public String getConflictingProductTypeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")

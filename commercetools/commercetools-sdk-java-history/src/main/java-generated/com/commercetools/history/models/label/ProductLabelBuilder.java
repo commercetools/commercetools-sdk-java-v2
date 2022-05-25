@@ -28,7 +28,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     private com.commercetools.history.models.common.LocalizedString name;
 
     /**
-     <>
+     *
      */
 
     public ProductLabelBuilder slug(
@@ -38,7 +38,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductLabelBuilder slug(final com.commercetools.history.models.common.LocalizedString slug) {
@@ -47,7 +47,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductLabelBuilder name(
@@ -57,7 +57,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductLabelBuilder name(final com.commercetools.history.models.common.LocalizedString name) {

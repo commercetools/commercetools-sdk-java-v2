@@ -23,7 +23,7 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
     private java.lang.Object reference;
 
     /**
-     <>
+     *
      */
 
     public ReplicaMyCartDraftBuilder reference(final java.lang.Object reference) {

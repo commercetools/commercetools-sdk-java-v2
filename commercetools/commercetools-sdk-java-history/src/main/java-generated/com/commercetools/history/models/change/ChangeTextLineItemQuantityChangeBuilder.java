@@ -34,7 +34,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     private Integer nextValue;
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemQuantityChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemQuantityChangeBuilder textLineItem(
@@ -54,7 +54,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemQuantityChangeBuilder textLineItem(
@@ -64,7 +64,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
@@ -73,7 +73,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {

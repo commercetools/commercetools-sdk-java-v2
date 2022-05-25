@@ -35,14 +35,14 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     String SET_CUSTOM_LINE_ITEM_TAX_RATE = "setCustomLineItemTaxRate";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")

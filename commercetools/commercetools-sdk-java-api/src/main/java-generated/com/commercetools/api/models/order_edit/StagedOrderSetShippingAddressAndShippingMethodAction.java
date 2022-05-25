@@ -37,7 +37,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     String SET_SHIPPING_ADDRESS_AND_SHIPPING_METHOD = "setShippingAddressAndShippingMethod";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -45,14 +45,14 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     public BaseAddress getAddress();
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")

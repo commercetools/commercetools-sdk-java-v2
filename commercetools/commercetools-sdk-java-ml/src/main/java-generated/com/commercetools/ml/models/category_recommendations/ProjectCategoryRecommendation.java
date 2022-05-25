@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProjectCategoryRecommendation {
 
     /**
-     <*  <p>A category that is recommended for a product.</p>>
+     *  <p>A category that is recommended for a product.</p>
      */
     @NotNull
     @Valid
@@ -42,14 +42,14 @@ public interface ProjectCategoryRecommendation {
     public CategoryReference getCategory();
 
     /**
-     <*  <p>Probability score for the category recommendation.</p>>
+     *  <p>Probability score for the category recommendation.</p>
      */
     @NotNull
     @JsonProperty("confidence")
     public Double getConfidence();
 
     /**
-     <*  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>>
+     *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
      */
     @NotNull
     @JsonProperty("path")

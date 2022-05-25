@@ -32,7 +32,7 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values() {

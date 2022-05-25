@@ -39,14 +39,14 @@ public interface OrderBillingAddressSetMessage extends OrderMessage {
     String ORDER_BILLING_ADDRESS_SET = "OrderBillingAddressSet";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("oldAddress")

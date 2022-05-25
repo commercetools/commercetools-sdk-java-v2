@@ -36,7 +36,7 @@ public class CartDiscountChangeNameActionImpl implements CartDiscountChangeNameA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartDiscountChangeNameActionImpl implements CartDiscountChangeNameA
     }
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

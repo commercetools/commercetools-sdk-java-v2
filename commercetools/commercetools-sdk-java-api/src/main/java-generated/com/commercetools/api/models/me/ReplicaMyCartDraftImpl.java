@@ -34,7 +34,7 @@ public class ReplicaMyCartDraftImpl implements ReplicaMyCartDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getReference() {

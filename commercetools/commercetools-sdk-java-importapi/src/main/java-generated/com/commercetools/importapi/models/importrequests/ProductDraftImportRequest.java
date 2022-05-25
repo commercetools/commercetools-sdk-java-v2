@@ -34,7 +34,7 @@ public interface ProductDraftImportRequest extends ImportRequest {
     String PRODUCT_DRAFT = "product-draft";
 
     /**
-     <*  <p>The product draft import resources of this request.</p>>
+     *  <p>The product draft import resources of this request.</p>
      */
     @NotNull
     @Valid

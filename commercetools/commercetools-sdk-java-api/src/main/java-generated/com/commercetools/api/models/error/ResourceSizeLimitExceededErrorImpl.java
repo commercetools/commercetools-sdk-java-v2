@@ -39,7 +39,7 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

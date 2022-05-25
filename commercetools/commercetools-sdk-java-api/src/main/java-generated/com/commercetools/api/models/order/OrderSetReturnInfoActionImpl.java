@@ -36,7 +36,7 @@ public class OrderSetReturnInfoActionImpl implements OrderSetReturnInfoAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderSetReturnInfoActionImpl implements OrderSetReturnInfoAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> getItems() {

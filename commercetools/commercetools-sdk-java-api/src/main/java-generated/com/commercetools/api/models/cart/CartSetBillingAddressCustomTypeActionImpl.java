@@ -40,7 +40,7 @@ public class CartSetBillingAddressCustomTypeActionImpl implements CartSetBilling
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class CartSetBillingAddressCustomTypeActionImpl implements CartSetBilling
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class CartSetBillingAddressCustomTypeActionImpl implements CartSetBilling
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

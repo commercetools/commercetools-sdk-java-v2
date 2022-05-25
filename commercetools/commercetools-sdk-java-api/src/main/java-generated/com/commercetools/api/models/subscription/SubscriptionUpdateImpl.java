@@ -35,7 +35,7 @@ public class SubscriptionUpdateImpl implements SubscriptionUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class SubscriptionUpdateImpl implements SubscriptionUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> getActions() {

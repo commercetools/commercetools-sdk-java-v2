@@ -34,14 +34,14 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
-     <*  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
      */
     @Valid
     @JsonProperty("obj")
     public CustomObject getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced CustomObject.</p>>
+     *  <p>Unique identifier of the referenced CustomObject.</p>
      */
     @NotNull
     @JsonProperty("id")

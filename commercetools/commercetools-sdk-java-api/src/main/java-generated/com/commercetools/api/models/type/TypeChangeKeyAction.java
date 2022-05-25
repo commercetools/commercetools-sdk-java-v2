@@ -32,7 +32,7 @@ public interface TypeChangeKeyAction extends TypeUpdateAction {
     String CHANGE_KEY = "changeKey";
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @JsonProperty("key")

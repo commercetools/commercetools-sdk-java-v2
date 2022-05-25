@@ -32,14 +32,14 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
     String ORDER_SHIPPING_RATE_INPUT_SET = "OrderShippingRateInputSet";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("oldShippingRateInput")

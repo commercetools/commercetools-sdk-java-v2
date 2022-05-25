@@ -33,14 +33,14 @@ public interface CartSetCustomTypeAction extends CartUpdateAction {
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     <*  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>>
+     *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Cart.</p>>
+     *  <p>Sets the Custom Fields fields for the Cart.</p>
      */
     @Valid
     @JsonProperty("fields")

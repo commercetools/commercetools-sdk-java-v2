@@ -37,35 +37,35 @@ public interface RemoveBillingAddressIdChange extends Change {
     String REMOVE_BILLING_ADDRESS_ID_CHANGE = "RemoveBillingAddressIdChange";
 
     /**
-     <*  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>>
+     *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public List<String> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

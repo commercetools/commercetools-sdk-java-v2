@@ -31,7 +31,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     private Long productCount;
 
     /**
-     <>
+     *
      */
 
     public FacetTermBuilder term(final java.lang.Object term) {
@@ -40,7 +40,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetTermBuilder count(final Long count) {
@@ -49,7 +49,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetTermBuilder productCount(@Nullable final Long productCount) {

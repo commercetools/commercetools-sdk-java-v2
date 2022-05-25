@@ -33,7 +33,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
@@ -42,7 +42,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
      */
 
     public CartSetCustomLineItemCustomTypeActionBuilder fields(

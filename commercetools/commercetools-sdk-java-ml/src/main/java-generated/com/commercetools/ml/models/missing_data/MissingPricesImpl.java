@@ -35,7 +35,7 @@ public class MissingPricesImpl implements MissingPrices, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.common.ProductReference getProduct() {
@@ -43,7 +43,7 @@ public class MissingPricesImpl implements MissingPrices, ModelBase {
     }
 
     /**
-     <*  <p>Id of the <code>ProductVariant</code>.</p>>
+     *  <p>Id of the <code>ProductVariant</code>.</p>
      */
 
     public Long getVariantId() {

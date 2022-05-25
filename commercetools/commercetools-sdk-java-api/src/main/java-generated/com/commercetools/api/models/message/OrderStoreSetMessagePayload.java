@@ -34,7 +34,7 @@ public interface OrderStoreSetMessagePayload extends OrderMessagePayload {
     String ORDER_STORE_SET = "OrderStoreSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

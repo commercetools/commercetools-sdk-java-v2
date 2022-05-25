@@ -36,7 +36,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductAddExternalImageActionBuilder variantId(@Nullable final Long variantId) {
@@ -45,7 +45,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddExternalImageActionBuilder sku(@Nullable final String sku) {
@@ -54,7 +54,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddExternalImageActionBuilder image(
@@ -64,7 +64,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddExternalImageActionBuilder image(final com.commercetools.api.models.common.Image image) {
@@ -73,7 +73,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddExternalImageActionBuilder staged(@Nullable final Boolean staged) {

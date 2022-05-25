@@ -33,7 +33,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <*  <p>User-defined unique identifier for the ProductSelection.</p>>
+     *  <p>User-defined unique identifier for the ProductSelection.</p>
      */
 
     public ProductSelectionDraftBuilder key(@Nullable final String key) {
@@ -42,7 +42,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     <*  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>>
+     *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
      */
 
     public ProductSelectionDraftBuilder name(
@@ -52,7 +52,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     <*  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>>
+     *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
      */
 
     public ProductSelectionDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -61,7 +61,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     <*  <p>Custom Fields of this ProductSelection.</p>>
+     *  <p>Custom Fields of this ProductSelection.</p>
      */
 
     public ProductSelectionDraftBuilder custom(
@@ -71,7 +71,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     <*  <p>Custom Fields of this ProductSelection.</p>>
+     *  <p>Custom Fields of this ProductSelection.</p>
      */
 
     public ProductSelectionDraftBuilder custom(

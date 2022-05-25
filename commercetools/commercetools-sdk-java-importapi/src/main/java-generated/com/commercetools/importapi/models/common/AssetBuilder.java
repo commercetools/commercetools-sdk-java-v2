@@ -42,7 +42,7 @@ public class AssetBuilder implements Builder<Asset> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     <*  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>>
+     *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
      */
 
     public AssetBuilder key(final String key) {
@@ -51,7 +51,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder sources(final com.commercetools.importapi.models.common.AssetSource... sources) {
@@ -60,7 +60,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder sources(final java.util.List<com.commercetools.importapi.models.common.AssetSource> sources) {
@@ -69,7 +69,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder plusSources(final com.commercetools.importapi.models.common.AssetSource... sources) {
@@ -81,7 +81,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder plusSources(
@@ -94,7 +94,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder withSources(
@@ -105,12 +105,12 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AssetBuilder name(
@@ -120,12 +120,12 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AssetBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -134,12 +134,12 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AssetBuilder description(
@@ -149,12 +149,12 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AssetBuilder description(
@@ -164,7 +164,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder tags(@Nullable final String... tags) {
@@ -173,7 +173,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -182,7 +182,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder plusTags(@Nullable final String... tags) {
@@ -194,7 +194,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>The representation to be sent to the server when creating a resource with custom fields.</p>>
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
      */
 
     public AssetBuilder custom(
@@ -204,7 +204,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>The representation to be sent to the server when creating a resource with custom fields.</p>>
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
      */
 
     public AssetBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {

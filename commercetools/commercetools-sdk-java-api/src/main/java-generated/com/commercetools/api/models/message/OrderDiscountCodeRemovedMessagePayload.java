@@ -34,7 +34,7 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
     String ORDER_DISCOUNT_CODE_REMOVED = "OrderDiscountCodeRemoved";
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
     @NotNull
     @Valid

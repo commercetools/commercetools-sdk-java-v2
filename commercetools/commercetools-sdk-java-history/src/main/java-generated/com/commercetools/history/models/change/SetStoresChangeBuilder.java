@@ -31,7 +31,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setStores</code></p>>
+     *  <p>Shape of the action for <code>setStores</code></p>
      */
 
     public SetStoresChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder plusPreviousValue(
@@ -73,7 +73,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder plusPreviousValue(
@@ -86,7 +86,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder withPreviousValue(
@@ -97,7 +97,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder nextValue(final com.commercetools.history.models.common.Reference... nextValue) {
@@ -106,7 +106,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder nextValue(
@@ -116,7 +116,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder plusNextValue(final com.commercetools.history.models.common.Reference... nextValue) {
@@ -128,7 +128,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder plusNextValue(
@@ -141,7 +141,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetStoresChangeBuilder withNextValue(

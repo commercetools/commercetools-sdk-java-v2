@@ -36,7 +36,7 @@ public class PaymentAddTransactionActionImpl implements PaymentAddTransactionAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class PaymentAddTransactionActionImpl implements PaymentAddTransactionAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.TransactionDraft getTransaction() {

@@ -27,7 +27,7 @@ public class AttributeDateTypeImpl implements AttributeDateType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

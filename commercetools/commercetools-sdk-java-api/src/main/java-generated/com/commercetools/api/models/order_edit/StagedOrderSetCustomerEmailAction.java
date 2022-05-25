@@ -30,7 +30,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("email")

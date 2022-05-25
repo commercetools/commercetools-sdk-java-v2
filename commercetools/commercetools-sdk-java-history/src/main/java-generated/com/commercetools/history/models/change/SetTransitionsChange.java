@@ -36,21 +36,21 @@ public interface SetTransitionsChange extends Change {
     String SET_TRANSITIONS_CHANGE = "SetTransitionsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setTransitions</code></p>>
+     *  <p>Shape of the action for <code>setTransitions</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetTransitionsChange extends Change {
     public List<Reference> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

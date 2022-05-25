@@ -31,7 +31,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     private com.commercetools.history.models.common.ReviewRatingStatistics previousValue;
 
     /**
-     <*  <p>Update action for <code>changeReviewRatingStatistics</code></p>>
+     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder nextValue(
@@ -51,7 +51,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder nextValue(
@@ -61,7 +61,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeReviewRatingStatisticsChangeBuilder previousValue(

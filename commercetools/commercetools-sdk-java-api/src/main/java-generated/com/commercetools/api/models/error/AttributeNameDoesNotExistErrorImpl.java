@@ -43,7 +43,7 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
     }
 
     /**
-     <>
+     *
      */
 
     public String getInvalidAttributeName() {

@@ -37,28 +37,28 @@ public interface RemoveVariantChange extends Change {
     String REMOVE_VARIANT_CHANGE = "RemoveVariantChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeVariant</code></p>>
+     *  <p>Update action for <code>removeVariant</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface RemoveVariantChange extends Change {
     public Variant getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

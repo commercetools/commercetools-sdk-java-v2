@@ -42,7 +42,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     private com.commercetools.history.models.common.CustomFields custom;
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder id(final String id) {
@@ -51,7 +51,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder createdAt(final String createdAt) {
@@ -60,7 +60,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder items(final com.commercetools.history.models.common.DeliveryItem... items) {
@@ -69,7 +69,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder items(final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
@@ -78,7 +78,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder plusItems(final com.commercetools.history.models.common.DeliveryItem... items) {
@@ -90,7 +90,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder plusItems(
@@ -103,7 +103,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder withItems(
@@ -114,7 +114,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder parcels(final com.commercetools.history.models.common.Parcel... parcels) {
@@ -123,7 +123,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder parcels(final java.util.List<com.commercetools.history.models.common.Parcel> parcels) {
@@ -132,7 +132,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder plusParcels(final com.commercetools.history.models.common.Parcel... parcels) {
@@ -144,7 +144,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder plusParcels(
@@ -157,7 +157,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder withParcels(
@@ -168,7 +168,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder address(
@@ -178,7 +178,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryBuilder address(@Nullable final com.commercetools.history.models.common.Address address) {
@@ -187,7 +187,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public DeliveryBuilder custom(
@@ -197,7 +197,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public DeliveryBuilder custom(@Nullable final com.commercetools.history.models.common.CustomFields custom) {

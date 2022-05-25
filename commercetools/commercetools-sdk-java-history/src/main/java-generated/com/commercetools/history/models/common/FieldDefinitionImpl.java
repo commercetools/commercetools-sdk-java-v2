@@ -43,7 +43,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.FieldType getType() {
@@ -51,7 +51,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     <*  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>>
+     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
      */
 
     public String getName() {
@@ -59,7 +59,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
@@ -67,7 +67,7 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TextInputHint getInputHint() {

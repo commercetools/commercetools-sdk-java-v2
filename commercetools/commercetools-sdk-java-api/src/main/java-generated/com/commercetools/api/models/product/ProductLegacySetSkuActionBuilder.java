@@ -29,7 +29,7 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
     private Integer variantId;
 
     /**
-     <>
+     *
      */
 
     public ProductLegacySetSkuActionBuilder sku(@Nullable final String sku) {
@@ -38,7 +38,7 @@ public class ProductLegacySetSkuActionBuilder implements Builder<ProductLegacySe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductLegacySetSkuActionBuilder variantId(final Integer variantId) {

@@ -31,7 +31,7 @@ public class MissingPricesTaskStatusBuilder implements Builder<MissingPricesTask
     private com.commercetools.ml.models.missing_data.MissingPricesPagedQueryResult result;
 
     /**
-     <>
+     *
      */
 
     public MissingPricesTaskStatusBuilder state(final com.commercetools.ml.models.common.TaskStatusEnum state) {
@@ -40,7 +40,7 @@ public class MissingPricesTaskStatusBuilder implements Builder<MissingPricesTask
     }
 
     /**
-     <*  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>>
+     *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
      */
 
     public MissingPricesTaskStatusBuilder expires(final java.time.ZonedDateTime expires) {
@@ -49,7 +49,7 @@ public class MissingPricesTaskStatusBuilder implements Builder<MissingPricesTask
     }
 
     /**
-     <*  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>>
+     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
 
     public MissingPricesTaskStatusBuilder result(
@@ -60,7 +60,7 @@ public class MissingPricesTaskStatusBuilder implements Builder<MissingPricesTask
     }
 
     /**
-     <*  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>>
+     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
 
     public MissingPricesTaskStatusBuilder result(

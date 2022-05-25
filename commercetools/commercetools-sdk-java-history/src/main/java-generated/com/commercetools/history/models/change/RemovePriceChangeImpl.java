@@ -50,7 +50,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for removing prices</p>>
+     *  <p>Update action for removing prices</p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -74,7 +74,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPriceId() {
@@ -82,7 +82,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Price getPreviousValue() {
@@ -90,7 +90,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Price getNextValue() {

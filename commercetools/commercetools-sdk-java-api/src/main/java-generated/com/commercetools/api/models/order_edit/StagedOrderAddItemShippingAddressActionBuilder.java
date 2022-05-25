@@ -26,7 +26,7 @@ public class StagedOrderAddItemShippingAddressActionBuilder
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddItemShippingAddressActionBuilder address(
@@ -36,7 +36,7 @@ public class StagedOrderAddItemShippingAddressActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddItemShippingAddressActionBuilder address(

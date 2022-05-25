@@ -29,7 +29,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
     /**
-     <>
+     *
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder customLineItemId(
@@ -39,7 +39,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -49,7 +49,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder targetsDelta(
@@ -59,7 +59,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -72,7 +72,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
@@ -85,7 +85,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(

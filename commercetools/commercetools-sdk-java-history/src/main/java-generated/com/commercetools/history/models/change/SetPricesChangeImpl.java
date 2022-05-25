@@ -50,7 +50,7 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setPrices</code></p>>
+     *  <p>Update action for <code>setPrices</code></p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -74,7 +74,7 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -82,7 +82,7 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Price> getPreviousValue() {
@@ -90,7 +90,7 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Price> getNextValue() {

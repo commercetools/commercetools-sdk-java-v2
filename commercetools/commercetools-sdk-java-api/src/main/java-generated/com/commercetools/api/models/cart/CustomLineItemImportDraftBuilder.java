@@ -51,7 +51,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder name(
@@ -61,7 +61,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -70,7 +70,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
 
     public CustomLineItemImportDraftBuilder quantity(final Long quantity) {
@@ -79,7 +79,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <*  <p>The cost to add to the cart. The amount can be negative.</p>>
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
      */
 
     public CustomLineItemImportDraftBuilder money(
@@ -89,7 +89,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <*  <p>The cost to add to the cart. The amount can be negative.</p>>
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
      */
 
     public CustomLineItemImportDraftBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -98,7 +98,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder slug(final String slug) {
@@ -107,7 +107,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder state(
@@ -117,7 +117,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder state(
@@ -127,7 +127,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder plusState(
@@ -140,7 +140,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder plusState(
@@ -153,7 +153,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder withState(
@@ -164,7 +164,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder taxRate(
@@ -174,7 +174,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder taxRate(
@@ -184,7 +184,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder taxCategory(
@@ -196,7 +196,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder taxCategory(
@@ -206,7 +206,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public CustomLineItemImportDraftBuilder custom(
@@ -216,7 +216,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public CustomLineItemImportDraftBuilder custom(
@@ -226,7 +226,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder shippingDetails(
@@ -237,7 +237,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemImportDraftBuilder shippingDetails(

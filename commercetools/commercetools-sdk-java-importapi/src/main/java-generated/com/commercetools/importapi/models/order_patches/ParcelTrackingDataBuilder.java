@@ -30,7 +30,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     private com.commercetools.importapi.models.orders.TrackingData trackingData;
 
     /**
-     <>
+     *
      */
 
     public ParcelTrackingDataBuilder parcelId(final String parcelId) {
@@ -39,7 +39,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelTrackingDataBuilder trackingData(
@@ -49,7 +49,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelTrackingDataBuilder trackingData(

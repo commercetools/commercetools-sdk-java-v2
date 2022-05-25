@@ -36,21 +36,21 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE = "setItemShippingAddressCustomType";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
 
     /**
-     <*  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
      */
     @Valid
     @JsonProperty("fields")

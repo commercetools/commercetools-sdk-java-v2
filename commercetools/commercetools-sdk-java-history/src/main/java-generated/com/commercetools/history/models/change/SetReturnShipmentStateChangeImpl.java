@@ -43,7 +43,7 @@ public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateC
     }
 
     /**
-     <*  <p>Update action for <code>setReturnShipmentState</code></p>>
+     *  <p>Update action for <code>setReturnShipmentState</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReturnShipmentState getNextValue() {
@@ -67,7 +67,7 @@ public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReturnShipmentState getPreviousValue() {

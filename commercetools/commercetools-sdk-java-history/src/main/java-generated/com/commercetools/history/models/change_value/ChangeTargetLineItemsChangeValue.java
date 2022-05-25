@@ -32,14 +32,14 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     String LINE_ITEMS = "lineItems";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("predicate")

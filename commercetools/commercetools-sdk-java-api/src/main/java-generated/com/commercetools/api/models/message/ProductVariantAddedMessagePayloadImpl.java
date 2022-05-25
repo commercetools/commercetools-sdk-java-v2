@@ -40,7 +40,7 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -56,7 +56,7 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

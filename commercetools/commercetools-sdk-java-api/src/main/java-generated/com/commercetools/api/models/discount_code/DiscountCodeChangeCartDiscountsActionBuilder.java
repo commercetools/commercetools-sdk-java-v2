@@ -25,7 +25,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
@@ -35,7 +35,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
@@ -45,7 +45,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
@@ -58,7 +58,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
@@ -73,7 +73,7 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
     }
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(

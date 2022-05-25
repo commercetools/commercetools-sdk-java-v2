@@ -25,7 +25,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     private java.util.List<com.commercetools.importapi.models.customers.CustomerImport> resources;
 
     /**
-     <*  <p>The customer import resources of this request.</p>>
+     *  <p>The customer import resources of this request.</p>
      */
 
     public CustomerImportRequestBuilder resources(
@@ -35,7 +35,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     }
 
     /**
-     <*  <p>The customer import resources of this request.</p>>
+     *  <p>The customer import resources of this request.</p>
      */
 
     public CustomerImportRequestBuilder resources(
@@ -45,7 +45,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     }
 
     /**
-     <*  <p>The customer import resources of this request.</p>>
+     *  <p>The customer import resources of this request.</p>
      */
 
     public CustomerImportRequestBuilder plusResources(
@@ -58,7 +58,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     }
 
     /**
-     <*  <p>The customer import resources of this request.</p>>
+     *  <p>The customer import resources of this request.</p>
      */
 
     public CustomerImportRequestBuilder plusResources(
@@ -72,7 +72,7 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
     }
 
     /**
-     <*  <p>The customer import resources of this request.</p>>
+     *  <p>The customer import resources of this request.</p>
      */
 
     public CustomerImportRequestBuilder withResources(

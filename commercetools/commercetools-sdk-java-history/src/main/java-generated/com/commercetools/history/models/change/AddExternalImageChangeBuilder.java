@@ -34,7 +34,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
     /**
-     <*  <p>Update actions for adding an external image</p>>
+     *  <p>Update actions for adding an external image</p>
      */
 
     public AddExternalImageChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder previousValue(
@@ -62,7 +62,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder plusPreviousValue(
@@ -85,7 +85,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder plusPreviousValue(
@@ -98,7 +98,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder withPreviousValue(
@@ -109,7 +109,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {
@@ -118,7 +118,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder nextValue(
@@ -128,7 +128,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder plusNextValue(
@@ -141,7 +141,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder plusNextValue(
@@ -154,7 +154,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddExternalImageChangeBuilder withNextValue(

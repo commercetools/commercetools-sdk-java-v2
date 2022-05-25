@@ -32,7 +32,7 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, com.commercetools.history.models.common.ProductVariantChannelAvailability> values() {

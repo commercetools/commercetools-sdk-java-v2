@@ -34,7 +34,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

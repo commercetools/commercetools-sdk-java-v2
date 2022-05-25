@@ -123,7 +123,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>>
+     *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
      */
 
     public String getOrderNumber() {
@@ -131,7 +131,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>If given the customer with that ID must exist in the project.</p>>
+     *  <p>If given the customer with that ID must exist in the project.</p>
      */
 
     public String getCustomerId() {
@@ -139,7 +139,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>>
+     *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
      */
 
     public String getCustomerEmail() {
@@ -147,7 +147,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>If not given <code>customLineItems</code> must not be empty.</p>>
+     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.LineItemImportDraft> getLineItems() {
@@ -155,7 +155,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>If not given <code>lineItems</code> must not be empty.</p>>
+     *  <p>If not given <code>lineItems</code> must not be empty.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> getCustomLineItems() {
@@ -163,7 +163,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getTotalPrice() {
@@ -171,7 +171,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>>
+     *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
@@ -179,7 +179,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
@@ -187,7 +187,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
@@ -195,7 +195,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>>
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -203,7 +203,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
      */
 
     public String getCountry() {
@@ -211,7 +211,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>If not given the <code>Open</code> state will be assigned by default.</p>>
+     *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
      */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {
@@ -219,7 +219,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>This reference can point to a state in a custom workflow.</p>>
+     *  <p>This reference can point to a state in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -227,7 +227,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -235,7 +235,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -243,7 +243,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Set if the ShippingMethod is set.</p>>
+     *  <p>Set if the ShippingMethod is set.</p>
      */
 
     public com.commercetools.api.models.order.ShippingInfoImportDraft getShippingInfo() {
@@ -251,7 +251,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
@@ -259,7 +259,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCompletedAt() {
@@ -267,7 +267,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -275,7 +275,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>If not given the mode <code>None</code> will be assigned by default.</p>>
+     *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -283,7 +283,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>>
+     *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
@@ -291,7 +291,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
@@ -299,7 +299,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
@@ -307,7 +307,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>The default origin is <code>Customer</code>.</p>>
+     *  <p>The default origin is <code>Customer</code>.</p>
      */
 
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {

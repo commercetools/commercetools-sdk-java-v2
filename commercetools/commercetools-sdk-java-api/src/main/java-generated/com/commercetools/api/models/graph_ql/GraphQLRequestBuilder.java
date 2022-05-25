@@ -33,7 +33,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     private com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables;
 
     /**
-     <>
+     *
      */
 
     public GraphQLRequestBuilder query(final String query) {
@@ -42,7 +42,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLRequestBuilder operationName(@Nullable final String operationName) {
@@ -51,7 +51,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLRequestBuilder variables(
@@ -61,7 +61,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLRequestBuilder variables(

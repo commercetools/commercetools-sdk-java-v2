@@ -33,7 +33,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     private com.commercetools.api.models.common.TypedMoney amount;
 
     /**
-     <>
+     *
      */
 
     public TaxPortionBuilder name(@Nullable final String name) {
@@ -42,7 +42,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     <*  <p>A number in the range [0..1]</p>>
+     *  <p>A number in the range [0..1]</p>
      */
 
     public TaxPortionBuilder rate(final Double rate) {
@@ -51,7 +51,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxPortionBuilder amount(final com.commercetools.api.models.common.TypedMoney amount) {
@@ -60,7 +60,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxPortionBuilder amount(

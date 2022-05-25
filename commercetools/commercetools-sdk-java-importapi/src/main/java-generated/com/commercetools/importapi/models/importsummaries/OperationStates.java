@@ -35,42 +35,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OperationStates {
 
     /**
-     <*  <p>The number of resources in the <code>processing</code> state.</p>>
+     *  <p>The number of resources in the <code>processing</code> state.</p>
      */
     @NotNull
     @JsonProperty("processing")
     public Long getProcessing();
 
     /**
-     <*  <p>The number of resources in the <code>validationFailed</code> state.</p>>
+     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
      */
     @NotNull
     @JsonProperty("validationFailed")
     public Long getValidationFailed();
 
     /**
-     <*  <p>The number of resources in the <code>unresolved</code> state.</p>>
+     *  <p>The number of resources in the <code>unresolved</code> state.</p>
      */
     @NotNull
     @JsonProperty("unresolved")
     public Long getUnresolved();
 
     /**
-     <*  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>>
+     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
      */
     @NotNull
     @JsonProperty("waitForMasterVariant")
     public Long getWaitForMasterVariant();
 
     /**
-     <*  <p>The number of resources in the <code>imported</code> state.</p>>
+     *  <p>The number of resources in the <code>imported</code> state.</p>
      */
     @NotNull
     @JsonProperty("imported")
     public Long getImported();
 
     /**
-     <*  <p>The number of resources in the <code>rejected</code> state.</p>>
+     *  <p>The number of resources in the <code>rejected</code> state.</p>
      */
     @NotNull
     @JsonProperty("rejected")

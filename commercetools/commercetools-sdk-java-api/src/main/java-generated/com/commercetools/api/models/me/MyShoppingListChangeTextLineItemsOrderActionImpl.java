@@ -37,7 +37,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class MyShoppingListChangeTextLineItemsOrderActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getTextLineItemOrder() {

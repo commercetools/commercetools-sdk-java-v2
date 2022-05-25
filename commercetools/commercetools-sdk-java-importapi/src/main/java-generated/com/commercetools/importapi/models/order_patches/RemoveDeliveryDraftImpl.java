@@ -31,7 +31,7 @@ public class RemoveDeliveryDraftImpl implements RemoveDeliveryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {

@@ -31,7 +31,7 @@ public class RemoveParcelFromDeliveryDraftImpl implements RemoveParcelFromDelive
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {

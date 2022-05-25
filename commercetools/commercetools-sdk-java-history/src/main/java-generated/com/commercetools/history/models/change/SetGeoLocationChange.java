@@ -36,21 +36,21 @@ public interface SetGeoLocationChange extends Change {
     String SET_GEO_LOCATION_CHANGE = "SetGeoLocationChange";
 
     /**
-     <*  <p>Update action for <code>setGeoLocation</code></p>>
+     *  <p>Update action for <code>setGeoLocation</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetGeoLocationChange extends Change {
     public GeoLocation getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

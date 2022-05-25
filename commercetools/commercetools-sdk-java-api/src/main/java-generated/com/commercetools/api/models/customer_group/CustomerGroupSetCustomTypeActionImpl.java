@@ -40,7 +40,7 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
     }
 
     /**
-     <*  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>>
+     *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the CustomerGroup.</p>>
+     *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

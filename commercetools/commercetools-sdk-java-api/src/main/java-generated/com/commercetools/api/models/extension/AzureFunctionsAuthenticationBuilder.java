@@ -24,7 +24,7 @@ public class AzureFunctionsAuthenticationBuilder implements Builder<AzureFunctio
     private String key;
 
     /**
-     <*  <p>Partially hidden on retrieval for security reasons.</p>>
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
 
     public AzureFunctionsAuthenticationBuilder key(final String key) {

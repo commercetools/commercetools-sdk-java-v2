@@ -31,7 +31,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     private String syncedAt;
 
     /**
-     <>
+     *
      */
 
     public SyncInfoBuilder channel(
@@ -41,7 +41,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public SyncInfoBuilder channel(final com.commercetools.history.models.common.Reference channel) {
@@ -50,7 +50,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     <*  <p>Can be used to reference an external order instance, file etc.</p>>
+     *  <p>Can be used to reference an external order instance, file etc.</p>
      */
 
     public SyncInfoBuilder externalId(final String externalId) {
@@ -59,7 +59,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public SyncInfoBuilder syncedAt(final String syncedAt) {

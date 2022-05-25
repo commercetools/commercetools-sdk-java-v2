@@ -106,7 +106,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
     /**
-     <*  <p>String that uniquely identifies a customer. It can be used to create more human-readable (in contrast to ID) identifier for the customer. It should be <strong>unique</strong> across a project. Once it's set it cannot be changed.</p>>
+     *  <p>String that uniquely identifies a customer. It can be used to create more human-readable (in contrast to ID) identifier for the customer. It should be <strong>unique</strong> across a project. Once it's set it cannot be changed.</p>
      */
 
     public CustomerDraftBuilder customerNumber(@Nullable final String customerNumber) {
@@ -115,7 +115,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive. For more information, see Email uniquenes.</p>>
+     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive. For more information, see Email uniquenes.</p>
      */
 
     public CustomerDraftBuilder email(final String email) {
@@ -124,7 +124,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>>
+     *  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>
      */
 
     public CustomerDraftBuilder password(@Nullable final String password) {
@@ -133,7 +133,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder firstName(@Nullable final String firstName) {
@@ -142,7 +142,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder lastName(@Nullable final String lastName) {
@@ -151,7 +151,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder middleName(@Nullable final String middleName) {
@@ -160,7 +160,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder title(@Nullable final String title) {
@@ -169,7 +169,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Identifies a single cart that will be assigned to the new customer account.</p>>
+     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
      */
     @Deprecated
     public CustomerDraftBuilder anonymousCartId(@Nullable final String anonymousCartId) {
@@ -178,7 +178,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Identifies a single cart that will be assigned to the new customer account.</p>>
+     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
      */
 
     public CustomerDraftBuilder anonymousCart(
@@ -189,7 +189,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Identifies a single cart that will be assigned to the new customer account.</p>>
+     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
      */
 
     public CustomerDraftBuilder anonymousCart(
@@ -199,7 +199,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p>>
+     *  <p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p>
      */
 
     public CustomerDraftBuilder anonymousId(@Nullable final String anonymousId) {
@@ -208,7 +208,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
@@ -217,7 +217,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder companyName(@Nullable final String companyName) {
@@ -226,7 +226,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder vatId(@Nullable final String vatId) {
@@ -235,7 +235,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public CustomerDraftBuilder addresses(
@@ -245,7 +245,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public CustomerDraftBuilder addresses(
@@ -255,7 +255,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public CustomerDraftBuilder plusAddresses(
@@ -268,7 +268,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public CustomerDraftBuilder plusAddresses(
@@ -281,7 +281,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public CustomerDraftBuilder withAddresses(
@@ -292,7 +292,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     public CustomerDraftBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
@@ -301,7 +301,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>
      */
 
     public CustomerDraftBuilder shippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -310,7 +310,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>
      */
 
     public CustomerDraftBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
@@ -319,7 +319,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p>
      */
 
     public CustomerDraftBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
@@ -331,7 +331,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     public CustomerDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
@@ -340,7 +340,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
      */
 
     public CustomerDraftBuilder billingAddresses(@Nullable final Integer... billingAddresses) {
@@ -349,7 +349,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
      */
 
     public CustomerDraftBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
@@ -358,7 +358,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
      */
 
     public CustomerDraftBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
@@ -370,7 +370,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder isEmailVerified(@Nullable final Boolean isEmailVerified) {
@@ -379,7 +379,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder externalId(@Nullable final String externalId) {
@@ -388,7 +388,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder customerGroup(
@@ -400,7 +400,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder customerGroup(
@@ -410,7 +410,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public CustomerDraftBuilder custom(
@@ -420,7 +420,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public CustomerDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -429,7 +429,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Must be one of the languages supported for this project</p>>
+     *  <p>Must be one of the languages supported for this project</p>
      */
 
     public CustomerDraftBuilder locale(@Nullable final String locale) {
@@ -438,7 +438,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerDraftBuilder salutation(@Nullable final String salutation) {
@@ -447,7 +447,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Customer.</p>>
+     *  <p>User-defined unique identifier for the Customer.</p>
      */
 
     public CustomerDraftBuilder key(@Nullable final String key) {
@@ -456,7 +456,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>>
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
      */
 
     public CustomerDraftBuilder stores(
@@ -466,7 +466,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>>
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
      */
 
     public CustomerDraftBuilder stores(
@@ -476,7 +476,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>>
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
      */
 
     public CustomerDraftBuilder plusStores(
@@ -489,7 +489,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>>
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
      */
 
     public CustomerDraftBuilder plusStores(
@@ -502,7 +502,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>>
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
      */
 
     public CustomerDraftBuilder withStores(
@@ -513,7 +513,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     <*  <p>Defines whether a password field is a required field for the Customer.</p>>
+     *  <p>Defines whether a password field is a required field for the Customer.</p>
      */
 
     public CustomerDraftBuilder authenticationMode(

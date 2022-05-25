@@ -33,7 +33,7 @@ public interface CustomFieldSetType extends FieldType {
     String SET = "Set";
 
     /**
-     <*  <p>Field type of the elements in the set.</p>>
+     *  <p>Field type of the elements in the set.</p>
      */
     @NotNull
     @Valid

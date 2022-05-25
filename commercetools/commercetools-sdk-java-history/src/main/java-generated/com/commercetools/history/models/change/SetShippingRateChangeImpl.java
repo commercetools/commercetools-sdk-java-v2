@@ -43,7 +43,7 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
     }
 
     /**
-     <*  <p>Update action for <code>setShippingRate</code></p>>
+     *  <p>Update action for <code>setShippingRate</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {
@@ -67,7 +67,7 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {

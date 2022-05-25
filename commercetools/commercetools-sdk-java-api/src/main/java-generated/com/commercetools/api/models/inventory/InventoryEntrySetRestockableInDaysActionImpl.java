@@ -36,7 +36,7 @@ public class InventoryEntrySetRestockableInDaysActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class InventoryEntrySetRestockableInDaysActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Long getRestockableInDays() {

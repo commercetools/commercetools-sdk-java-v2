@@ -40,7 +40,7 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
     }
 
     /**
-     <*  <p>The total gross amount of the cart (totalNet + taxes).</p>>
+     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalTotalGross() {
@@ -56,7 +56,7 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions() {

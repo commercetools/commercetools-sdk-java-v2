@@ -36,21 +36,21 @@ public interface SetMethodInfoNameChange extends Change {
     String SET_METHOD_INFO_NAME_CHANGE = "SetMethodInfoNameChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setMethodInfoName</code></p>>
+     *  <p>Shape of the action for <code>setMethodInfoName</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetMethodInfoNameChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

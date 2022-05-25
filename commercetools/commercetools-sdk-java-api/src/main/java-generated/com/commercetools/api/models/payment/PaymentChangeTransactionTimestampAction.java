@@ -34,14 +34,14 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
     String CHANGE_TRANSACTION_TIMESTAMP = "changeTransactionTimestamp";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("timestamp")

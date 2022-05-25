@@ -35,7 +35,7 @@ public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
@@ -43,7 +43,7 @@ public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Reference to a ProductDiscount.</p>>
+     *  <p>Reference to a ProductDiscount.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductDiscountKeyReference getDiscount() {

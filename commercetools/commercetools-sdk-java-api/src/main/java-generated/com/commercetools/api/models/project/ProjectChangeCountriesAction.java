@@ -32,7 +32,7 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     String CHANGE_COUNTRIES = "changeCountries";
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @JsonProperty("countries")

@@ -30,7 +30,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetDescriptionActionBuilder description(
@@ -40,7 +40,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetDescriptionActionBuilder description(
@@ -50,7 +50,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetDescriptionActionBuilder staged(@Nullable final Boolean staged) {

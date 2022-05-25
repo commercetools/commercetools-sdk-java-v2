@@ -54,7 +54,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -62,7 +62,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     <*  <p>Update action for <code>setAssetCustomField</code></p>>
+     *  <p>Update action for <code>setAssetCustomField</code></p>
      */
 
     public String getChange() {
@@ -70,7 +70,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -78,7 +78,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomTypeId() {
@@ -86,7 +86,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
@@ -94,7 +94,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {
@@ -102,7 +102,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

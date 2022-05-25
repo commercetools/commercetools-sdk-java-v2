@@ -35,7 +35,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getData() {
@@ -43,7 +43,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> getErrors() {

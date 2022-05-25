@@ -33,14 +33,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GraphQLError {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("message")
     public String getMessage();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -48,7 +48,7 @@ public interface GraphQLError {
     public List<GraphQLErrorLocation> getLocations();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("path")

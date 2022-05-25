@@ -36,7 +36,7 @@ public class MoneySetFieldImpl implements MoneySetField, ModelBase {
     }
 
     /**
-     <*  <p>The type of this field.</p>>
+     *  <p>The type of this field.</p>
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class MoneySetFieldImpl implements MoneySetField, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Money> getValue() {

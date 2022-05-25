@@ -34,7 +34,7 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
     String REMOVE_DISTRIBUTION_CHANNEL = "removeDistributionChannel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

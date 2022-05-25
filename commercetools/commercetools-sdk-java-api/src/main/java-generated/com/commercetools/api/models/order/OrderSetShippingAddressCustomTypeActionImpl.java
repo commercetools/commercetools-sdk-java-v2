@@ -40,7 +40,7 @@ public class OrderSetShippingAddressCustomTypeActionImpl implements OrderSetShip
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class OrderSetShippingAddressCustomTypeActionImpl implements OrderSetShip
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class OrderSetShippingAddressCustomTypeActionImpl implements OrderSetShip
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

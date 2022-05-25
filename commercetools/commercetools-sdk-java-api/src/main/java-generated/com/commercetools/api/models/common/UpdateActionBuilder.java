@@ -24,7 +24,7 @@ public class UpdateActionBuilder implements Builder<UpdateAction> {
     private String action;
 
     /**
-     <>
+     *
      */
 
     public UpdateActionBuilder action(final String action) {

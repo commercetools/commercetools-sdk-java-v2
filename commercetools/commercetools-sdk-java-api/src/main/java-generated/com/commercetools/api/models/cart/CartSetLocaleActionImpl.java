@@ -35,7 +35,7 @@ public class CartSetLocaleActionImpl implements CartSetLocaleAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartSetLocaleActionImpl implements CartSetLocaleAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {

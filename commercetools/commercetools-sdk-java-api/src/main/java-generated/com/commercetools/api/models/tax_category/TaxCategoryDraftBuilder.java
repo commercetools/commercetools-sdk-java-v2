@@ -36,7 +36,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     private String key;
 
     /**
-     <*  <p>Name of the TaxCategory.</p>>
+     *  <p>Name of the TaxCategory.</p>
      */
 
     public TaxCategoryDraftBuilder name(final String name) {
@@ -45,7 +45,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     }
 
     /**
-     <*  <p>Description of the TaxCategory.</p>>
+     *  <p>Description of the TaxCategory.</p>
      */
 
     public TaxCategoryDraftBuilder description(@Nullable final String description) {
@@ -54,7 +54,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries.</p>>
+     *  <p>Tax rates and subrates of states and countries.</p>
      */
 
     public TaxCategoryDraftBuilder rates(
@@ -64,7 +64,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries.</p>>
+     *  <p>Tax rates and subrates of states and countries.</p>
      */
 
     public TaxCategoryDraftBuilder rates(
@@ -74,7 +74,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries.</p>>
+     *  <p>Tax rates and subrates of states and countries.</p>
      */
 
     public TaxCategoryDraftBuilder plusRates(
@@ -87,7 +87,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries.</p>>
+     *  <p>Tax rates and subrates of states and countries.</p>
      */
 
     public TaxCategoryDraftBuilder plusRates(
@@ -100,7 +100,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries.</p>>
+     *  <p>Tax rates and subrates of states and countries.</p>
      */
 
     public TaxCategoryDraftBuilder withRates(
@@ -111,7 +111,7 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the TaxCategory.</p>>
+     *  <p>User-defined unique identifier for the TaxCategory.</p>
      */
 
     public TaxCategoryDraftBuilder key(@Nullable final String key) {

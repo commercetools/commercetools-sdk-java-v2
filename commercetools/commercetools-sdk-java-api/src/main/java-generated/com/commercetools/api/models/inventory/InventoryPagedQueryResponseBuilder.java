@@ -39,7 +39,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public InventoryPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public InventoryPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryPagedQueryResponseBuilder withResults(

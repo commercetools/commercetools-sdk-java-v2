@@ -82,14 +82,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Reference {
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
     /**
-     <*  <p>Unique ID of the referenced resource.</p>>
+     *  <p>Unique ID of the referenced resource.</p>
      */
     @NotNull
     @JsonProperty("id")

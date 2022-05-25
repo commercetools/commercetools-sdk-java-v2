@@ -34,7 +34,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     private java.util.List<String> previousValue;
 
     /**
-     <*  <p>Update action for <code>setAssetTags</code></p>>
+     *  <p>Update action for <code>setAssetTags</code></p>
      */
 
     public SetAssetTagsChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetTagsChangeBuilder asset(
@@ -53,7 +53,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetTagsChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
@@ -62,7 +62,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetTagsChangeBuilder nextValue(final String... nextValue) {
@@ -71,7 +71,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetTagsChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -80,7 +80,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetTagsChangeBuilder plusNextValue(final String... nextValue) {
@@ -92,7 +92,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetTagsChangeBuilder previousValue(final String... previousValue) {
@@ -101,7 +101,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetTagsChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -110,7 +110,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetTagsChangeBuilder plusPreviousValue(final String... previousValue) {

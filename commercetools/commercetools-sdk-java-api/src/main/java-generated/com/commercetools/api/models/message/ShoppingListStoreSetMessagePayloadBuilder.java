@@ -25,7 +25,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListStoreSetMessagePayloadBuilder store(
@@ -35,7 +35,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListStoreSetMessagePayloadBuilder store(

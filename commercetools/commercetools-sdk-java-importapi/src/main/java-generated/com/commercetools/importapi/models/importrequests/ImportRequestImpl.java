@@ -31,7 +31,7 @@ public class ImportRequestImpl implements ImportRequest, ModelBase {
     }
 
     /**
-     <*  <p>The type of the import resource.</p>>
+     *  <p>The type of the import resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getType() {

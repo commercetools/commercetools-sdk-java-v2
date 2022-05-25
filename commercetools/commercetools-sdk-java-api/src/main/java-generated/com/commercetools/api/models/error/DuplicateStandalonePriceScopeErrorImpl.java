@@ -70,7 +70,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -78,7 +78,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -86,7 +86,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -94,7 +94,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <*  <p>Reference to a StandalonePrice.</p>>
+     *  <p>Reference to a StandalonePrice.</p>
      */
 
     public com.commercetools.api.models.standalone_price.StandalonePriceReference getConflictingStandalonePrice() {
@@ -102,7 +102,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -110,7 +110,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <>
+     *
      */
 
     public String getCurrency() {
@@ -118,7 +118,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <>
+     *
      */
 
     public String getCountry() {
@@ -126,7 +126,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -134,7 +134,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -142,7 +142,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -150,7 +150,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidUntil() {

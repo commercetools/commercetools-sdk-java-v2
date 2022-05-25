@@ -31,7 +31,7 @@ public class ReviewUpdateActionImpl implements ReviewUpdateAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

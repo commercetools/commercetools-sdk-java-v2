@@ -33,14 +33,14 @@ public interface ShoppingListChangeTextLineItemQuantityAction extends ShoppingLi
     String CHANGE_TEXT_LINE_ITEM_QUANTITY = "changeTextLineItemQuantity";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")

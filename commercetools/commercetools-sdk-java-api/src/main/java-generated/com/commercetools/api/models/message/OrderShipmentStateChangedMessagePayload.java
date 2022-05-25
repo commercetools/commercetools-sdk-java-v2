@@ -33,14 +33,14 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
     String ORDER_SHIPMENT_STATE_CHANGED = "OrderShipmentStateChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("oldShipmentState")

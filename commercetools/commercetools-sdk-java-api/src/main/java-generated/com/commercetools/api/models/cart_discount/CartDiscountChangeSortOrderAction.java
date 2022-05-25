@@ -32,7 +32,7 @@ public interface CartDiscountChangeSortOrderAction extends CartDiscountUpdateAct
     String CHANGE_SORT_ORDER = "changeSortOrder";
 
     /**
-     <*  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>>
+     *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
      */
     @NotNull
     @JsonProperty("sortOrder")

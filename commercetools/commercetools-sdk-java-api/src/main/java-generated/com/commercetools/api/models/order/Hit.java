@@ -32,21 +32,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Hit {
 
     /**
-     <*  <p>Unique identifier of the Order.</p>>
+     *  <p>Unique identifier of the Order.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Current version of the Order.</p>>
+     *  <p>Current version of the Order.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>The higher the value is, the more relevant the hit is for the search request.</p>>
+     *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
      */
     @NotNull
     @JsonProperty("relevance")

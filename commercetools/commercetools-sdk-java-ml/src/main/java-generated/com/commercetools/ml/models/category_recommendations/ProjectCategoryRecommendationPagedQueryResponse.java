@@ -35,28 +35,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProjectCategoryRecommendationPagedQueryResponse {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -64,7 +64,7 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
     public List<ProjectCategoryRecommendation> getResults();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

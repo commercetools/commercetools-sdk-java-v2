@@ -40,14 +40,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItemImportDraft extends com.commercetools.api.models.CustomizableDraft<LineItemImportDraft> {
 
     /**
-     <*  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>>
+     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
      */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     <*  <p>The product name.</p>>
+     *  <p>The product name.</p>
      */
     @NotNull
     @Valid
@@ -55,7 +55,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -63,7 +63,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public ProductVariantImportDraft getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -71,49 +71,49 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public PriceDraft getPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
 
     /**
-     <*  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingDetails")

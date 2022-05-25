@@ -53,7 +53,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     private java.time.ZonedDateTime validUntil;
 
     /**
-     <>
+     *
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder message(final String message) {
@@ -62,7 +62,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -71,7 +71,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -83,7 +83,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <*  <p>Reference to a StandalonePrice.</p>>
+     *  <p>Reference to a StandalonePrice.</p>
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder conflictingStandalonePrice(
@@ -95,7 +95,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <*  <p>Reference to a StandalonePrice.</p>>
+     *  <p>Reference to a StandalonePrice.</p>
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder conflictingStandalonePrice(
@@ -105,7 +105,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder sku(final String sku) {
@@ -114,7 +114,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder currency(final String currency) {
@@ -123,7 +123,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder country(@Nullable final String country) {
@@ -132,7 +132,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder customerGroup(
@@ -144,7 +144,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder customerGroup(
@@ -154,7 +154,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder channel(
@@ -165,7 +165,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder channel(
@@ -175,7 +175,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -184,7 +184,7 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateStandalonePriceScopeErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {

@@ -57,7 +57,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <*  <p>User-defined unique identifier for the StandalonePrice.</p>>
+     *  <p>User-defined unique identifier for the StandalonePrice.</p>
      */
 
     public StandalonePriceDraftBuilder key(@Nullable final String key) {
@@ -66,7 +66,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>>
+     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
      */
 
     public StandalonePriceDraftBuilder sku(final String sku) {
@@ -75,7 +75,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the money value of this Price.</p>>
+     *  <p>Sets the money value of this Price.</p>
      */
 
     public StandalonePriceDraftBuilder value(
@@ -85,7 +85,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the money value of this Price.</p>>
+     *  <p>Sets the money value of this Price.</p>
      */
 
     public StandalonePriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
@@ -94,7 +94,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the country for which this Price is valid.</p>>
+     *  <p>Sets the country for which this Price is valid.</p>
      */
 
     public StandalonePriceDraftBuilder country(@Nullable final String country) {
@@ -103,7 +103,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the CustomerGroup for which this Price is valid.</p>>
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      */
 
     public StandalonePriceDraftBuilder customerGroup(
@@ -115,7 +115,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the CustomerGroup for which this Price is valid.</p>>
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      */
 
     public StandalonePriceDraftBuilder customerGroup(
@@ -125,7 +125,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the product distribution Channel for which this Price is valid.</p>>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
      */
 
     public StandalonePriceDraftBuilder channel(
@@ -136,7 +136,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the product distribution Channel for which this Price is valid.</p>>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
      */
 
     public StandalonePriceDraftBuilder channel(
@@ -146,7 +146,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the date from which the Price is valid.</p>>
+     *  <p>Sets the date from which the Price is valid.</p>
      */
 
     public StandalonePriceDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -155,7 +155,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets the date until the Price is valid.</p>>
+     *  <p>Sets the date until the Price is valid.</p>
      */
 
     public StandalonePriceDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -164,7 +164,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets price tiers.</p>>
+     *  <p>Sets price tiers.</p>
      */
 
     public StandalonePriceDraftBuilder tiers(
@@ -174,7 +174,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets price tiers.</p>>
+     *  <p>Sets price tiers.</p>
      */
 
     public StandalonePriceDraftBuilder tiers(
@@ -184,7 +184,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets price tiers.</p>>
+     *  <p>Sets price tiers.</p>
      */
 
     public StandalonePriceDraftBuilder plusTiers(
@@ -197,7 +197,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets price tiers.</p>>
+     *  <p>Sets price tiers.</p>
      */
 
     public StandalonePriceDraftBuilder plusTiers(
@@ -210,7 +210,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets price tiers.</p>>
+     *  <p>Sets price tiers.</p>
      */
 
     public StandalonePriceDraftBuilder withTiers(
@@ -221,7 +221,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>>
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
      */
 
     public StandalonePriceDraftBuilder discounted(
@@ -231,7 +231,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>>
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
      */
 
     public StandalonePriceDraftBuilder discounted(
@@ -241,7 +241,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Custom Fields for the StandalonePrice.</p>>
+     *  <p>Custom Fields for the StandalonePrice.</p>
      */
 
     public StandalonePriceDraftBuilder custom(
@@ -251,7 +251,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     <*  <p>Custom Fields for the StandalonePrice.</p>>
+     *  <p>Custom Fields for the StandalonePrice.</p>
      */
 
     public StandalonePriceDraftBuilder custom(

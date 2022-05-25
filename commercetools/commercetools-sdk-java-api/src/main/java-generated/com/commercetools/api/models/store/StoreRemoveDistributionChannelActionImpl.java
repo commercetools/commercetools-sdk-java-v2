@@ -36,7 +36,7 @@ public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDist
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDist
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {

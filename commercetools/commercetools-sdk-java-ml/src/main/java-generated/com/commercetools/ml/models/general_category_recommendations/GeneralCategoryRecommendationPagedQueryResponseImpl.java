@@ -43,7 +43,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -51,7 +51,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -59,7 +59,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -67,7 +67,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> getResults() {

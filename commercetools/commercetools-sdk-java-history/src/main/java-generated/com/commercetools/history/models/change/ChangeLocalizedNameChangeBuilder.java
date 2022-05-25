@@ -31,7 +31,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changeName</code></p>>
+     *  <p>Shape of the action for <code>changeName</code></p>
      */
 
     public ChangeLocalizedNameChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedNameChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedNameChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedNameChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedNameChangeBuilder nextValue(

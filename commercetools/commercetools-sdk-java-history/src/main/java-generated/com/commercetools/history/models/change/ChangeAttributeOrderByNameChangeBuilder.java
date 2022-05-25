@@ -30,7 +30,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
     private java.util.List<String> nextValue;
 
     /**
-     <*  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>>
+     *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
      */
 
     public ChangeAttributeOrderByNameChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeOrderByNameChangeBuilder previousValue(final String... previousValue) {
@@ -48,7 +48,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeOrderByNameChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -57,7 +57,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeOrderByNameChangeBuilder plusPreviousValue(final String... previousValue) {
@@ -69,7 +69,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeOrderByNameChangeBuilder nextValue(final String... nextValue) {
@@ -78,7 +78,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeOrderByNameChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -87,7 +87,7 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAttributeOrderByNameChangeBuilder plusNextValue(final String... nextValue) {

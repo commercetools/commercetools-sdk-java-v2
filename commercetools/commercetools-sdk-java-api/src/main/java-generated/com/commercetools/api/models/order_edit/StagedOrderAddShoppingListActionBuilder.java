@@ -33,7 +33,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     <*  <p>ResourceIdentifier to a ShoppingList.</p>>
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
      */
 
     public StagedOrderAddShoppingListActionBuilder shoppingList(
@@ -45,7 +45,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     <*  <p>ResourceIdentifier to a ShoppingList.</p>>
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
      */
 
     public StagedOrderAddShoppingListActionBuilder shoppingList(
@@ -55,7 +55,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderAddShoppingListActionBuilder supplyChannel(
@@ -66,7 +66,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderAddShoppingListActionBuilder supplyChannel(
@@ -76,7 +76,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderAddShoppingListActionBuilder distributionChannel(
@@ -88,7 +88,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderAddShoppingListActionBuilder distributionChannel(

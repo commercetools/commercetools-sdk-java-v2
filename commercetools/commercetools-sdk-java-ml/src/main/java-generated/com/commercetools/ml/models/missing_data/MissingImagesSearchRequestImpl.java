@@ -60,7 +60,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Long getLimit() {
@@ -68,7 +68,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -76,7 +76,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>If true, searches data from staged products in addition to published products.</p>>
+     *  <p>If true, searches data from staged products in addition to published products.</p>
      */
 
     public Boolean getStaged() {
@@ -84,7 +84,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>Maximum number of products to scan.</p>>
+     *  <p>Maximum number of products to scan.</p>
      */
 
     public Long getProductSetLimit() {
@@ -92,7 +92,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>If true, searches all product variants. If false, only searches master variants.</p>>
+     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
      */
 
     public Boolean getIncludeVariants() {
@@ -100,7 +100,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>If true, uses the median number of images per product variant as a threshold value.</p>>
+     *  <p>If true, uses the median number of images per product variant as a threshold value.</p>
      */
 
     public Boolean getAutoThreshold() {
@@ -108,7 +108,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>>
+     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
      */
 
     public Long getThreshold() {
@@ -116,7 +116,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>>
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
      */
 
     public java.util.List<String> getProductIds() {
@@ -124,7 +124,7 @@ public class MissingImagesSearchRequestImpl implements MissingImagesSearchReques
     }
 
     /**
-     <*  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>>
+     *  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>
      */
 
     public java.util.List<String> getProductTypeIds() {

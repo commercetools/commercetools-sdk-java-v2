@@ -36,7 +36,7 @@ public class CartAddPaymentActionImpl implements CartAddPaymentAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartAddPaymentActionImpl implements CartAddPaymentAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {

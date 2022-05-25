@@ -34,7 +34,7 @@ public interface ReferenceSetAttribute extends Attribute {
     String REFERENCE_SET = "reference-set";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

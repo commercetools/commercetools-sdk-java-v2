@@ -35,7 +35,7 @@ public class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {

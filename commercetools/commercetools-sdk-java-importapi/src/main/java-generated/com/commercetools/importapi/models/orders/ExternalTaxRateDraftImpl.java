@@ -49,7 +49,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -57,7 +57,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Double getAmount() {
@@ -65,7 +65,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getCountry() {
@@ -73,7 +73,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getState() {
@@ -81,7 +81,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates() {
@@ -89,7 +89,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIncludedInPrice() {

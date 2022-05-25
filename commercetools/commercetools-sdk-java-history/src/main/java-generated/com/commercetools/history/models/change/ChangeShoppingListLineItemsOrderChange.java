@@ -36,21 +36,21 @@ public interface ChangeShoppingListLineItemsOrderChange extends Change {
     String CHANGE_SHOPPING_LIST_LINE_ITEMS_ORDER_CHANGE = "ChangeShoppingListLineItemsOrderChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeShoppingListLineItemsOrderChange extends Change {
     public List<ShoppingListLineItemValue> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -33,14 +33,14 @@ public interface ReviewUpdate
         extends com.commercetools.api.models.ResourceUpdate<ReviewUpdate, ReviewUpdateAction, ReviewUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

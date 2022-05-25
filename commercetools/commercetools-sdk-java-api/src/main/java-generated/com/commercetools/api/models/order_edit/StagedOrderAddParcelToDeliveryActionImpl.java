@@ -47,7 +47,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -55,7 +55,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -63,7 +63,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -71,7 +71,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -79,7 +79,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {

@@ -30,7 +30,7 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
     private String newPassword;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerChangePasswordBuilder version(final Long version) {
@@ -39,7 +39,7 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerChangePasswordBuilder currentPassword(final String currentPassword) {
@@ -48,7 +48,7 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerChangePasswordBuilder newPassword(final String newPassword) {

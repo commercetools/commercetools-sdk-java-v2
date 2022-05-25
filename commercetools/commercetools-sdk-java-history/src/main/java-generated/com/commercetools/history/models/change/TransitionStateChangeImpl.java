@@ -43,7 +43,7 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
     }
 
     /**
-     <*  <p>Shape of the action for <code>transitionState</code></p>>
+     *  <p>Shape of the action for <code>transitionState</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {
@@ -67,7 +67,7 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {

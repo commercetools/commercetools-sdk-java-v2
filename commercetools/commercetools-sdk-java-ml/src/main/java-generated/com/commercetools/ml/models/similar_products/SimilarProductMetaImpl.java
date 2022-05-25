@@ -43,7 +43,7 @@ public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
     }
 
     /**
-     <*  <p>Localized product name used for similarity estimation.</p>>
+     *  <p>Localized product name used for similarity estimation.</p>
      */
 
     public com.commercetools.ml.models.common.LocalizedString getName() {
@@ -51,7 +51,7 @@ public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
     }
 
     /**
-     <*  <p>Localized product description used for similarity estimation.</p>>
+     *  <p>Localized product description used for similarity estimation.</p>
      */
 
     public com.commercetools.ml.models.common.LocalizedString getDescription() {
@@ -59,7 +59,7 @@ public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
     }
 
     /**
-     <*  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>>
+     *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
      */
 
     public com.commercetools.ml.models.common.Money getPrice() {
@@ -67,7 +67,7 @@ public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
     }
 
     /**
-     <*  <p>Total number of variants associated with the product.</p>>
+     *  <p>Total number of variants associated with the product.</p>
      */
 
     public Long getVariantCount() {

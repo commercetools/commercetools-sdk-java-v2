@@ -43,7 +43,7 @@ public class SetMetaKeywordsChangeImpl implements SetMetaKeywordsChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetMetaKeywordsChangeImpl implements SetMetaKeywordsChange, ModelBa
     }
 
     /**
-     <*  <p>Shape of the action for <code>setMetaKeywords</code></p>>
+     *  <p>Shape of the action for <code>setMetaKeywords</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetMetaKeywordsChangeImpl implements SetMetaKeywordsChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetMetaKeywordsChangeImpl implements SetMetaKeywordsChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

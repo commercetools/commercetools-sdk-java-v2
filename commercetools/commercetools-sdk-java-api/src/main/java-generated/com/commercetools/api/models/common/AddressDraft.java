@@ -31,21 +31,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AddressDraft extends BaseAddress, com.commercetools.api.models.CustomizableDraft<AddressDraft> {
 
     /**
-     <*  <p>Custom Fields defined for the Address.</p>>
+     *  <p>Custom Fields defined for the Address.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <*  <p>Unique identifier for the Address. Not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>>
+     *  <p>Unique identifier for the Address. Not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>User-defined unique identifier for the Address.</p>>
+     *  <p>User-defined unique identifier for the Address.</p>
      */
 
     @JsonProperty("key")

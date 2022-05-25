@@ -36,7 +36,7 @@ public class ImageSearchConfigResponseImpl implements ImageSearchConfigResponse,
     }
 
     /**
-     <*  <p>The image search activation status.</p>>
+     *  <p>The image search activation status.</p>
      */
 
     public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus() {
@@ -44,7 +44,7 @@ public class ImageSearchConfigResponseImpl implements ImageSearchConfigResponse,
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {

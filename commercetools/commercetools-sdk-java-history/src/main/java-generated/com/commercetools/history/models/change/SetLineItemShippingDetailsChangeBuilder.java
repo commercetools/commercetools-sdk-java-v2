@@ -34,7 +34,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     private com.commercetools.history.models.common.ItemShippingDetails previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemShippingDetails</code></p>>
+     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
      */
 
     public SetLineItemShippingDetailsChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemShippingDetailsChangeBuilder lineItemId(final String lineItemId) {
@@ -52,7 +52,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemShippingDetailsChangeBuilder nextValue(
@@ -62,7 +62,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemShippingDetailsChangeBuilder nextValue(
@@ -72,7 +72,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemShippingDetailsChangeBuilder previousValue(
@@ -83,7 +83,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemShippingDetailsChangeBuilder previousValue(

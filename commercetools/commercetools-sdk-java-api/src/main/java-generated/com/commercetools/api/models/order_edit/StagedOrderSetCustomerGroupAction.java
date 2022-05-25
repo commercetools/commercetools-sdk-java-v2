@@ -33,7 +33,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("customerGroup")

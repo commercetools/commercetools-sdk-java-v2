@@ -42,7 +42,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder sku(@Nullable final String sku) {
@@ -51,7 +51,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>>
+     *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
      */
 
     public ProductVariantDraftBuilder key(@Nullable final String key) {
@@ -60,7 +60,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder prices(@Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
@@ -69,7 +69,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder prices(
@@ -79,7 +79,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder plusPrices(
@@ -92,7 +92,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder plusPrices(
@@ -105,7 +105,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder withPrices(
@@ -116,7 +116,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder attributes(
@@ -126,7 +126,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder attributes(
@@ -136,7 +136,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder plusAttributes(
@@ -149,7 +149,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder plusAttributes(
@@ -162,7 +162,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder withAttributes(
@@ -173,7 +173,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -182,7 +182,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder images(
@@ -192,7 +192,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder plusImages(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -204,7 +204,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder plusImages(
@@ -217,7 +217,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder withImages(
@@ -228,7 +228,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
@@ -237,7 +237,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder assets(
@@ -247,7 +247,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder plusAssets(
@@ -260,7 +260,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder plusAssets(
@@ -273,7 +273,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDraftBuilder withAssets(

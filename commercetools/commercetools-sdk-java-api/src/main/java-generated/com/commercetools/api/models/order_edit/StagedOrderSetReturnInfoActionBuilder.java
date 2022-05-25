@@ -27,7 +27,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     private java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnInfoActionBuilder items(
@@ -37,7 +37,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnInfoActionBuilder items(
@@ -47,7 +47,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnInfoActionBuilder plusItems(
@@ -60,7 +60,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnInfoActionBuilder plusItems(
@@ -73,7 +73,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnInfoActionBuilder withItems(

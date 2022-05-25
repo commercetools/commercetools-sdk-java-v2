@@ -33,7 +33,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     String ORDER = "order";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("obj")

@@ -34,14 +34,14 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
     String SET_TEXT_LINE_ITEM_DESCRIPTION = "setTextLineItemDescription";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("description")

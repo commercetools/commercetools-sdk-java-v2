@@ -43,7 +43,7 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addAsset</code></p>>
+     *  <p>Update action for <code>addAsset</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Asset getNextValue() {
@@ -67,7 +67,7 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Asset getPreviousValue() {

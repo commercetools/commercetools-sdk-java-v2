@@ -28,7 +28,7 @@ public class ShoppingListChangeLineItemQuantityActionBuilder
     private Long quantity;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
@@ -37,7 +37,7 @@ public class ShoppingListChangeLineItemQuantityActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListChangeLineItemQuantityActionBuilder quantity(final Long quantity) {

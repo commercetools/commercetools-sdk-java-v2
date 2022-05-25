@@ -33,14 +33,14 @@ public interface CustomerGroupUpdate extends
         com.commercetools.api.models.ResourceUpdate<CustomerGroupUpdate, CustomerGroupUpdateAction, CustomerGroupUpdateBuilder> {
 
     /**
-     <*  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>Update actions to be performed on the CustomerGroup.</p>>
+     *  <p>Update actions to be performed on the CustomerGroup.</p>
      */
     @NotNull
     @Valid

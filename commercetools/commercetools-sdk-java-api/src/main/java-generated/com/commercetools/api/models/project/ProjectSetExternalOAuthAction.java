@@ -31,7 +31,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     String SET_EXTERNAL_O_AUTH = "setExternalOAuth";
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("externalOAuth")

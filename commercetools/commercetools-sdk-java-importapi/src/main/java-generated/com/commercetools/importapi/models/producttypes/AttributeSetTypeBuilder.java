@@ -25,7 +25,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
     private com.commercetools.importapi.models.producttypes.AttributeType elementType;
 
     /**
-     <>
+     *
      */
 
     public AttributeSetTypeBuilder elementType(
@@ -35,7 +35,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeSetTypeBuilder elementType(

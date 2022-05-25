@@ -34,28 +34,28 @@ public interface SetExternalIdChange extends Change {
     String SET_EXTERNAL_ID_CHANGE = "SetExternalIdChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setExternalId</code></p>>
+     *  <p>Shape of the action for <code>setExternalId</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

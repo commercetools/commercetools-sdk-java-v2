@@ -46,7 +46,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getStatusCode() {
@@ -54,7 +54,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -62,7 +62,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getError() {
@@ -70,7 +70,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getErrorDescription() {
@@ -78,7 +78,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_history.ErrorObject> getErrors() {

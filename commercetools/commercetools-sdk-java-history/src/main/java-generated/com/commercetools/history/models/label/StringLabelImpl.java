@@ -35,7 +35,7 @@ public class StringLabelImpl implements StringLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class StringLabelImpl implements StringLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getValue() {

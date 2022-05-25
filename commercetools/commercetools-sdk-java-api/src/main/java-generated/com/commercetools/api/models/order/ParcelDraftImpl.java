@@ -44,7 +44,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -52,7 +52,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -60,7 +60,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     <*  <p>The delivery items contained in this parcel.</p>>
+     *  <p>The delivery items contained in this parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -68,7 +68,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields of this parcel.</p>>
+     *  <p>Custom Fields of this parcel.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

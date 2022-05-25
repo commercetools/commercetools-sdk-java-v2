@@ -34,7 +34,7 @@ public interface OrderImportRequest extends ImportRequest {
     String ORDER = "order";
 
     /**
-     <*  <p>The order import resources of this request.</p>>
+     *  <p>The order import resources of this request.</p>
      */
     @NotNull
     @Valid

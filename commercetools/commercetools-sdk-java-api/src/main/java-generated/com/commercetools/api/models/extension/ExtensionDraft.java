@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionDraft {
 
     /**
-     <*  <p>User-defined unique identifier for the Extension.</p>>
+     *  <p>User-defined unique identifier for the Extension.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Defines where the Extension can be reached.</p>>
+     *  <p>Defines where the Extension can be reached.</p>
      */
     @NotNull
     @Valid
@@ -47,7 +47,7 @@ public interface ExtensionDraft {
     public ExtensionDestination getDestination();
 
     /**
-     <*  <p>Describes what triggers the Extension.</p>>
+     *  <p>Describes what triggers the Extension.</p>
      */
     @NotNull
     @Valid
@@ -55,8 +55,8 @@ public interface ExtensionDraft {
     public List<ExtensionTrigger> getTriggers();
 
     /**
-     <*  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-    *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>>
+     *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
      */
 
     @JsonProperty("timeoutInMs")

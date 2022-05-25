@@ -45,7 +45,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -53,7 +53,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -61,7 +61,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionImpl
     }
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -69,7 +69,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

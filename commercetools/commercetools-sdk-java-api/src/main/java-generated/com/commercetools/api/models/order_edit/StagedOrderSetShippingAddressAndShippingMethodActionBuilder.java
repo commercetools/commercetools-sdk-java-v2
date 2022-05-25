@@ -34,7 +34,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
@@ -44,7 +44,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
@@ -54,7 +54,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
@@ -66,7 +66,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
@@ -76,7 +76,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(
@@ -87,7 +87,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(

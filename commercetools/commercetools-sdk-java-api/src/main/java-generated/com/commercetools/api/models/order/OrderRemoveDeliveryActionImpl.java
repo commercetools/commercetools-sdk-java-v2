@@ -35,7 +35,7 @@ public class OrderRemoveDeliveryActionImpl implements OrderRemoveDeliveryAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class OrderRemoveDeliveryActionImpl implements OrderRemoveDeliveryAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {

@@ -30,21 +30,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProjectCategoryRecommendationMeta {
 
     /**
-     <*  <p>The product name that was used to generate recommendations.</p>>
+     *  <p>The product name that was used to generate recommendations.</p>
      */
 
     @JsonProperty("productName")
     public String getProductName();
 
     /**
-     <*  <p>The product image that was used to generate recommendations.</p>>
+     *  <p>The product image that was used to generate recommendations.</p>
      */
 
     @JsonProperty("productImageUrl")
     public String getProductImageUrl();
 
     /**
-     <*  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>>
+     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
      */
     @NotNull
     @JsonProperty("generalCategoryNames")

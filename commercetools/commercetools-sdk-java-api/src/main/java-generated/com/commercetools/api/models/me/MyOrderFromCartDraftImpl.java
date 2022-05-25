@@ -34,7 +34,7 @@ public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase
     }
 
     /**
-     <*  <p>Unique identifier of the Cart that initiates an Order creation.</p>>
+     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
      */
 
     public String getId() {
@@ -42,7 +42,7 @@ public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {

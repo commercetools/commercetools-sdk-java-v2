@@ -32,7 +32,7 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
     String PRODUCT_REVERTED_STAGED_CHANGES = "ProductRevertedStagedChanges";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("removedImageUrls")

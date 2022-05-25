@@ -34,7 +34,7 @@ public interface HighPrecisionMoney extends TypedMoney {
     String HIGH_PRECISION = "highPrecision";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("preciseAmount")

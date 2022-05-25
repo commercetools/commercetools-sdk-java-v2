@@ -30,21 +30,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SimilarProduct {
 
     /**
-     <*  <p>Reference to Product</p>>
+     *  <p>Reference to Product</p>
      */
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
 
     /**
-     <*  <p>ID of the ProductVariant that was compared.</p>>
+     *  <p>ID of the ProductVariant that was compared.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <*  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>>
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
      */
     @Valid
     @JsonProperty("meta")

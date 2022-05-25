@@ -38,70 +38,70 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface FacetRange {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("from")
     public Double getFrom();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("fromStr")
     public String getFromStr();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("to")
     public Double getTo();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("toStr")
     public String getToStr();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("productCount")
     public Long getProductCount();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("total")
     public Double getTotal();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("min")
     public Double getMin();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("max")
     public Double getMax();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("mean")

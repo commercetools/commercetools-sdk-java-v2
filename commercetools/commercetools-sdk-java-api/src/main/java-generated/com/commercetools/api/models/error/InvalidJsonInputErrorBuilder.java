@@ -26,7 +26,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public InvalidJsonInputErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidJsonInputErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidJsonInputErrorBuilder implements Builder<InvalidJsonInputErr
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidJsonInputErrorBuilder addValue(final String key, final java.lang.Object value) {

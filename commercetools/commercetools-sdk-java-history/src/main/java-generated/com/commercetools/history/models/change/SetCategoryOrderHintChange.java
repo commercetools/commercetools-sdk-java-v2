@@ -38,35 +38,35 @@ public interface SetCategoryOrderHintChange extends Change {
     String SET_CATEGORY_ORDER_HINT_CHANGE = "SetCategoryOrderHintChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setCategoryOrderHint</code></p>>
+     *  <p>Update action for <code>setCategoryOrderHint</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("categoryId")
     public String getCategoryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface SetCategoryOrderHintChange extends Change {
     public CategoryOrderHints getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

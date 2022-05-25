@@ -43,7 +43,7 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
     }
 
     /**
-     <*  <p>Shape of the action for <code>setCustomerNumber</code></p>>
+     *  <p>Shape of the action for <code>setCustomerNumber</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

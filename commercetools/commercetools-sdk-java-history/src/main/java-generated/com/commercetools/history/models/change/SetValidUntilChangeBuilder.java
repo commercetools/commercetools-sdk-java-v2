@@ -30,7 +30,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setValidUntil</code></p>>
+     *  <p>Shape of the action for <code>setValidUntil</code></p>
      */
 
     public SetValidUntilChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetValidUntilChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetValidUntilChangeBuilder nextValue(final String nextValue) {

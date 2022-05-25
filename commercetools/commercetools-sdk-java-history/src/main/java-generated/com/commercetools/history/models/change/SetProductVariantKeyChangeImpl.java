@@ -47,7 +47,7 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
     }
 
     /**
-     <*  <p>Update action for <code>setProductVariantKey</code></p>>
+     *  <p>Update action for <code>setProductVariantKey</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -79,7 +79,7 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

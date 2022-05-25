@@ -47,7 +47,7 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemPrice</code></p>>
+     *  <p>Update action for <code>setLineItemPrice</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -71,7 +71,7 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Price getNextValue() {
@@ -79,7 +79,7 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Price getPreviousValue() {

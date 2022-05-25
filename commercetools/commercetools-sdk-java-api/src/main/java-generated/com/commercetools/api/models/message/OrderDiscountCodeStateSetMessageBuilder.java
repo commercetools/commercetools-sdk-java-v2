@@ -63,7 +63,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder id(final String id) {
@@ -72,7 +72,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder version(final Long version) {
@@ -81,7 +81,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -90,7 +90,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -99,7 +99,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(
@@ -109,7 +109,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder lastModifiedBy(
@@ -119,7 +119,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder createdBy(
@@ -129,7 +129,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder createdBy(
@@ -139,7 +139,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -148,7 +148,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder resource(
@@ -158,7 +158,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder resource(
@@ -168,7 +168,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -177,7 +177,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -189,7 +189,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -199,7 +199,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder discountCode(
@@ -210,7 +210,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public OrderDiscountCodeStateSetMessageBuilder discountCode(
@@ -220,7 +220,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder state(
@@ -230,7 +230,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessageBuilder oldState(

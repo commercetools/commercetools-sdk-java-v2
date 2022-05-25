@@ -39,7 +39,7 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,7 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {

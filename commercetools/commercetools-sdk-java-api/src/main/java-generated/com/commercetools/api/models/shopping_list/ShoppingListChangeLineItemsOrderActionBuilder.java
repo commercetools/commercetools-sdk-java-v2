@@ -24,7 +24,7 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
     private java.util.List<String> lineItemOrder;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListChangeLineItemsOrderActionBuilder lineItemOrder(final String... lineItemOrder) {
@@ -33,7 +33,7 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListChangeLineItemsOrderActionBuilder lineItemOrder(final java.util.List<String> lineItemOrder) {
@@ -42,7 +42,7 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListChangeLineItemsOrderActionBuilder plusLineItemOrder(final String... lineItemOrder) {

@@ -29,7 +29,7 @@ public interface CustomerSetCustomerNumberAction extends CustomerUpdateAction {
     String SET_CUSTOMER_NUMBER = "setCustomerNumber";
 
     /**
-     <*  <p>It should be <strong>unique</strong> across a project. Once it's set, it cannot be changed.</p>>
+     *  <p>It should be <strong>unique</strong> across a project. Once it's set, it cannot be changed.</p>
      */
 
     @JsonProperty("customerNumber")

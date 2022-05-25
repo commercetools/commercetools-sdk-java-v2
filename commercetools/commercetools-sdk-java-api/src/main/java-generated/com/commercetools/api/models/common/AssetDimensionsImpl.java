@@ -34,7 +34,7 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
     }
 
     /**
-     <*  <p>Width of the Asset source.</p>>
+     *  <p>Width of the Asset source.</p>
      */
 
     public Integer getW() {
@@ -42,7 +42,7 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
     }
 
     /**
-     <*  <p>Height of the Asset source.</p>>
+     *  <p>Height of the Asset source.</p>
      */
 
     public Integer getH() {

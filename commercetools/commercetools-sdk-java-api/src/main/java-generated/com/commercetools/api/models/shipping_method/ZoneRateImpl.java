@@ -35,7 +35,7 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.zone.ZoneReference getZone() {
@@ -43,7 +43,7 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
     }
 
     /**
-     <*  <p>The array does not contain two shipping rates with the same currency.</p>>
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> getShippingRates() {

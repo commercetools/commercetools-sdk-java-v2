@@ -29,7 +29,7 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
 
     public TypeChangeLocalizedEnumValueLabelActionBuilder fieldName(final String fieldName) {
@@ -38,7 +38,7 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public TypeChangeLocalizedEnumValueLabelActionBuilder value(
@@ -48,7 +48,7 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public TypeChangeLocalizedEnumValueLabelActionBuilder value(

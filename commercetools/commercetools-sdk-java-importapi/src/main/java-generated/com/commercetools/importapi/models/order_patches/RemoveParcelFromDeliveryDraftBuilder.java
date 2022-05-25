@@ -24,7 +24,7 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
     private String parcelId;
 
     /**
-     <>
+     *
      */
 
     public RemoveParcelFromDeliveryDraftBuilder parcelId(final String parcelId) {

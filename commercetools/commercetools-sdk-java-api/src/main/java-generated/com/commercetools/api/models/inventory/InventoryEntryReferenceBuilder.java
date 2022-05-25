@@ -30,7 +30,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     private com.commercetools.api.models.inventory.InventoryEntry obj;
 
     /**
-     <*  <p>Unique identifier of the referenced InventoryEntry.</p>>
+     *  <p>Unique identifier of the referenced InventoryEntry.</p>
      */
 
     public InventoryEntryReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     }
 
     /**
-     <*  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
      */
 
     public InventoryEntryReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     }
 
     /**
-     <*  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
      */
 
     public InventoryEntryReferenceBuilder obj(

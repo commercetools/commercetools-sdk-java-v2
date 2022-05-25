@@ -33,14 +33,14 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     <*  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>>
+     *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the InventoryEntry.</p>>
+     *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
      */
     @Valid
     @JsonProperty("fields")

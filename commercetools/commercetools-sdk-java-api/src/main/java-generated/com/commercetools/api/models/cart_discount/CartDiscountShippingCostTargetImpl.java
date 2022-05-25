@@ -27,7 +27,7 @@ public class CartDiscountShippingCostTargetImpl implements CartDiscountShippingC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

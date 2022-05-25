@@ -35,7 +35,7 @@ public interface ProductVariantAddedMessagePayload extends MessagePayload {
     String PRODUCT_VARIANT_ADDED = "ProductVariantAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface ProductVariantAddedMessagePayload extends MessagePayload {
     public ProductVariant getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("staged")

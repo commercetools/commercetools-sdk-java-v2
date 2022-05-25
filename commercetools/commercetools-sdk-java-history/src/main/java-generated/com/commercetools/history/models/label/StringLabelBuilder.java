@@ -24,7 +24,7 @@ public class StringLabelBuilder implements Builder<StringLabel> {
     private String value;
 
     /**
-     <>
+     *
      */
 
     public StringLabelBuilder value(final String value) {

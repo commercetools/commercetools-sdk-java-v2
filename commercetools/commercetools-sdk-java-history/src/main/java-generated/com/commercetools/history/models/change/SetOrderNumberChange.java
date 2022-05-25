@@ -34,28 +34,28 @@ public interface SetOrderNumberChange extends Change {
     String SET_ORDER_NUMBER_CHANGE = "SetOrderNumberChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setOrderNumber</code></p>>
+     *  <p>Shape of the action for <code>setOrderNumber</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

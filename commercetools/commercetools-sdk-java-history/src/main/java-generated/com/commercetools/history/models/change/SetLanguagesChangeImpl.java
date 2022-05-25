@@ -43,7 +43,7 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setLanguages</code> on stores</p>>
+     *  <p>Update action for <code>setLanguages</code> on stores</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getNextValue() {

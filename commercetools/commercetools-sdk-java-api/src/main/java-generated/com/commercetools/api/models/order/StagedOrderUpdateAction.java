@@ -205,7 +205,7 @@ public interface StagedOrderUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<StagedOrderUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

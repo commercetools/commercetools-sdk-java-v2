@@ -35,14 +35,14 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     String CHANGE_PRICE = "changePrice";
 
     /**
-     <*  <p>ID of the EmbeddedPrice</p>>
+     *  <p>ID of the EmbeddedPrice</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     public PriceDraft getPrice();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

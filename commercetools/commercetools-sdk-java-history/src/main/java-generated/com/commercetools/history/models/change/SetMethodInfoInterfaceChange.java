@@ -34,28 +34,28 @@ public interface SetMethodInfoInterfaceChange extends Change {
     String SET_METHOD_INFO_INTERFACE_CHANGE = "SetMethodInfoInterfaceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setMethodInfoInterface</code></p>>
+     *  <p>Shape of the action for <code>setMethodInfoInterface</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

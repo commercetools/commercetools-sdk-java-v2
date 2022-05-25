@@ -43,63 +43,63 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnItem extends com.commercetools.api.models.Customizable<ReturnItem> {
 
     /**
-     <*  <p>Unique identifier of the ReturnItem.</p>>
+     *  <p>Unique identifier of the ReturnItem.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("comment")
     public String getComment();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("paymentState")
     public ReturnPaymentState getPaymentState();
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")

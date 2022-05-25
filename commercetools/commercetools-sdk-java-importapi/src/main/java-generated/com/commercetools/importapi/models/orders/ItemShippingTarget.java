@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemShippingTarget {
 
     /**
-     <*  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>>
+     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
      */
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
 
     /**
-     <*  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>>
+     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
      */
     @NotNull
     @JsonProperty("quantity")

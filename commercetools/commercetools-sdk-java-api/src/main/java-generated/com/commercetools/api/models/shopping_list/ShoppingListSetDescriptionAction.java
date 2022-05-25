@@ -32,7 +32,7 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("description")

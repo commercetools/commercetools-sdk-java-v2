@@ -28,7 +28,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     private java.util.List<String> removedImageUrls;
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDeletedMessagePayloadBuilder variant(
@@ -38,7 +38,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDeletedMessagePayloadBuilder variant(
@@ -48,7 +48,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDeletedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -57,7 +57,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDeletedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -66,7 +66,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {

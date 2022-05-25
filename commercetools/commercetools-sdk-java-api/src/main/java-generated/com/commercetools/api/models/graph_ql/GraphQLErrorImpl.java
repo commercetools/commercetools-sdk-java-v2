@@ -39,7 +39,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -47,7 +47,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> getLocations() {
@@ -55,7 +55,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<java.lang.Object> getPath() {

@@ -40,7 +40,7 @@ public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.MissingImagesProductLevel getProductLevel() {
@@ -48,7 +48,7 @@ public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.MissingImagesVariantLevel getVariantLevel() {
@@ -56,7 +56,7 @@ public class MissingImagesMetaImpl implements MissingImagesMeta, ModelBase {
     }
 
     /**
-     <*  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>>
+     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
      */
 
     public Long getThreshold() {

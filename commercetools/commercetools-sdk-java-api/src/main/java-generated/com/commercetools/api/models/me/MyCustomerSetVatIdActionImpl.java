@@ -35,7 +35,7 @@ public class MyCustomerSetVatIdActionImpl implements MyCustomerSetVatIdAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCustomerSetVatIdActionImpl implements MyCustomerSetVatIdAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getVatId() {

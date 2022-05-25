@@ -39,7 +39,7 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsSearchable() {

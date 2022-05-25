@@ -39,21 +39,21 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
     String SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY_CHANGE = "SetLineItemDiscountedPricePerQuantityChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>>
+     *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -61,14 +61,14 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -76,7 +76,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
     public DiscountedLineItemPriceForQuantity getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

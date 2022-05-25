@@ -31,7 +31,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      */
 
     public StagedOrderSetShippingAddressCustomTypeActionBuilder type(
@@ -41,7 +41,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      */
 
     public StagedOrderSetShippingAddressCustomTypeActionBuilder type(
@@ -51,7 +51,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
      */
 
     public StagedOrderSetShippingAddressCustomTypeActionBuilder fields(
@@ -61,7 +61,7 @@ public class StagedOrderSetShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
      */
 
     public StagedOrderSetShippingAddressCustomTypeActionBuilder fields(

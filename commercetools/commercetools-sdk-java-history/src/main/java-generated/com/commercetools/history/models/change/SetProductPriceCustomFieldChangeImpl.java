@@ -47,7 +47,7 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
     }
 
     /**
-     <*  <p>Update action for <code>setProductPriceCustomField</code></p>>
+     *  <p>Update action for <code>setProductPriceCustomField</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
@@ -79,7 +79,7 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {

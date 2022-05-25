@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface KeyReference {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("typeId")

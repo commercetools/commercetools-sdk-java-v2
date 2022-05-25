@@ -29,7 +29,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     <*  <p>If set, a customer with the given ID must exist in the project.</p>>
+     *  <p>If set, a customer with the given ID must exist in the project.</p>
      */
 
     @JsonProperty("customerId")

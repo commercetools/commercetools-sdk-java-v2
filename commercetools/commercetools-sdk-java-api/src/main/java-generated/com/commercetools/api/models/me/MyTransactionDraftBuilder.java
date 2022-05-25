@@ -39,7 +39,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <*  <p>The time at which the transaction took place.</p>>
+     *  <p>The time at which the transaction took place.</p>
      */
 
     public MyTransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
@@ -48,7 +48,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     <*  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>>
+     *  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>
      */
 
     public MyTransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
@@ -57,7 +57,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyTransactionDraftBuilder amount(
@@ -67,7 +67,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyTransactionDraftBuilder amount(final com.commercetools.api.models.common.Money amount) {
@@ -76,7 +76,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>>
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
      */
 
     public MyTransactionDraftBuilder interactionId(@Nullable final String interactionId) {
@@ -85,7 +85,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public MyTransactionDraftBuilder custom(
@@ -95,7 +95,7 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public MyTransactionDraftBuilder custom(

@@ -39,7 +39,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder limit(@Nullable final Long limit) {
@@ -48,7 +48,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder offset(@Nullable final Long offset) {
@@ -75,7 +75,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodPagedQueryResponseBuilder plusResults(
@@ -122,7 +122,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodPagedQueryResponseBuilder withResults(

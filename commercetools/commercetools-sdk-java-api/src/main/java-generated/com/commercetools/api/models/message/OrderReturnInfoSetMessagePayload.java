@@ -32,7 +32,7 @@ public interface OrderReturnInfoSetMessagePayload extends OrderMessagePayload {
     String RETURN_INFO_SET = "ReturnInfoSet";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("returnInfo")

@@ -40,7 +40,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     private java.time.ZonedDateTime actualTransitionDate;
 
     /**
-     <>
+     *
      */
 
     public OrderTransitionCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
@@ -49,7 +49,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderTransitionCustomLineItemStateActionBuilder quantity(final Long quantity) {
@@ -58,7 +58,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionCustomLineItemStateActionBuilder fromState(
@@ -68,7 +68,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionCustomLineItemStateActionBuilder fromState(
@@ -78,7 +78,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionCustomLineItemStateActionBuilder toState(
@@ -88,7 +88,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public OrderTransitionCustomLineItemStateActionBuilder toState(
@@ -98,7 +98,7 @@ public class OrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderTransitionCustomLineItemStateActionBuilder actualTransitionDate(

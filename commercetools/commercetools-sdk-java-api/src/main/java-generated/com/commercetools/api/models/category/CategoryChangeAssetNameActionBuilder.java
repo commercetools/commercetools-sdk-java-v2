@@ -33,7 +33,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <>
+     *
      */
 
     public CategoryChangeAssetNameActionBuilder assetId(@Nullable final String assetId) {
@@ -42,7 +42,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
@@ -51,7 +51,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryChangeAssetNameActionBuilder name(
@@ -61,7 +61,7 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

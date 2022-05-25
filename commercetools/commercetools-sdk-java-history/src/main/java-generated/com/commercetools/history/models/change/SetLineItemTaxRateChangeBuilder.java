@@ -40,7 +40,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     private com.commercetools.history.models.common.TaxRate previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemTaxRate</code></p>>
+     *  <p>Update action for <code>setLineItemTaxRate</code></p>
      */
 
     public SetLineItemTaxRateChangeBuilder change(final String change) {
@@ -49,7 +49,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTaxRateChangeBuilder lineItem(
@@ -59,7 +59,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTaxRateChangeBuilder lineItem(
@@ -69,7 +69,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTaxRateChangeBuilder variant(final String variant) {
@@ -78,7 +78,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTaxRateChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
@@ -87,7 +87,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public SetLineItemTaxRateChangeBuilder nextValue(
@@ -97,7 +97,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public SetLineItemTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
@@ -106,7 +106,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public SetLineItemTaxRateChangeBuilder previousValue(
@@ -116,7 +116,7 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public SetLineItemTaxRateChangeBuilder previousValue(

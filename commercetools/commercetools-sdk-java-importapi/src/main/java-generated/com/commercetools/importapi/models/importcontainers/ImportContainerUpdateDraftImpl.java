@@ -35,7 +35,7 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
     }
 
     /**
-     <*  <p>Current version of the ImportContainer.</p>>
+     *  <p>Current version of the ImportContainer.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
     }
 
     /**
-     <*  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>>
+     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {

@@ -35,7 +35,7 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -43,12 +43,12 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {

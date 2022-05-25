@@ -47,7 +47,7 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     }
 
     /**
-     <*  <p>Update action for <code>setParcelTrackingData</code></p>>
+     *  <p>Update action for <code>setParcelTrackingData</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
@@ -71,7 +71,7 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TrackingData getNextValue() {
@@ -79,7 +79,7 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TrackingData getPreviousValue() {

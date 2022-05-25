@@ -35,28 +35,28 @@ public interface ChangePaymentStateChange extends Change {
     String CHANGE_PAYMENT_STATE_CHANGE = "ChangePaymentStateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changePaymentState</code></p>>
+     *  <p>Update action for <code>changePaymentState</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public PaymentState getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

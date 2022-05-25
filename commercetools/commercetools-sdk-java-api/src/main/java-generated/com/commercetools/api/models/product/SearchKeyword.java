@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SearchKeyword {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("text")
     public String getText();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("suggestTokenizer")

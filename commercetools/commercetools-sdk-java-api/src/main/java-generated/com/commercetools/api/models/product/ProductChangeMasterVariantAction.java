@@ -29,21 +29,21 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
     String CHANGE_MASTER_VARIANT = "changeMasterVariant";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

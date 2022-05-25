@@ -32,21 +32,21 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     String SET_ATTRIBUTE_IN_ALL_VARIANTS = "setAttributeInAllVariants";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>The same update behavior as for Set Attribute applies.</p>>
+     *  <p>The same update behavior as for Set Attribute applies.</p>
      */
 
     @JsonProperty("value")
     public Object getValue();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

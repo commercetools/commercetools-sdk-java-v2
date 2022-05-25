@@ -30,7 +30,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     private java.util.List<com.commercetools.api.models.common.Price> conflictingPrices;
 
     /**
-     <>
+     *
      */
 
     public DuplicatePriceScopeErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicatePriceScopeErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -48,7 +48,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicatePriceScopeErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -60,7 +60,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicatePriceScopeErrorBuilder conflictingPrices(
@@ -70,7 +70,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicatePriceScopeErrorBuilder conflictingPrices(
@@ -80,7 +80,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
@@ -93,7 +93,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
@@ -106,7 +106,7 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicatePriceScopeErrorBuilder withConflictingPrices(

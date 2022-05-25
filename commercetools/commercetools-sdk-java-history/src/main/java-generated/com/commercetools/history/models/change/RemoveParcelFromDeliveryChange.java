@@ -36,28 +36,28 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     String REMOVE_PARCEL_FROM_DELIVERY_CHANGE = "RemoveParcelFromDeliveryChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeParcelFromDelivery</code></p>>
+     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

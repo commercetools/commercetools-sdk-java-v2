@@ -31,7 +31,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setSupplyChannels</code></p>>
+     *  <p>Shape of the action for <code>setSupplyChannels</code></p>
      */
 
     public SetSupplyChannelsChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder plusPreviousValue(
@@ -73,7 +73,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder plusPreviousValue(
@@ -86,7 +86,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder withPreviousValue(
@@ -97,7 +97,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder nextValue(
@@ -107,7 +107,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder nextValue(
@@ -117,7 +117,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder plusNextValue(
@@ -130,7 +130,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder plusNextValue(
@@ -143,7 +143,7 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
     }
 
     /**
-     <>
+     *
      */
 
     public SetSupplyChannelsChangeBuilder withNextValue(

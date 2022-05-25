@@ -27,7 +27,7 @@ public class CategorySetDescriptionActionBuilder implements Builder<CategorySetD
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     <>
+     *
      */
 
     public CategorySetDescriptionActionBuilder description(
@@ -37,7 +37,7 @@ public class CategorySetDescriptionActionBuilder implements Builder<CategorySetD
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetDescriptionActionBuilder description(

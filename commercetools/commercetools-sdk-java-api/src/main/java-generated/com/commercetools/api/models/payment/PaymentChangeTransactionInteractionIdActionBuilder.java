@@ -28,7 +28,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
     private String interactionId;
 
     /**
-     <>
+     *
      */
 
     public PaymentChangeTransactionInteractionIdActionBuilder transactionId(final String transactionId) {
@@ -37,7 +37,7 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentChangeTransactionInteractionIdActionBuilder interactionId(final String interactionId) {

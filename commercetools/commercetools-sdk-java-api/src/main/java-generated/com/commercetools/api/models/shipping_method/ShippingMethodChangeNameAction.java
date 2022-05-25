@@ -32,7 +32,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     String CHANGE_NAME = "changeName";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")

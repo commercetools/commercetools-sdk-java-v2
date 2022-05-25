@@ -58,7 +58,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -66,7 +66,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -74,7 +74,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -82,7 +82,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -90,7 +90,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -98,7 +98,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -106,7 +106,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -114,7 +114,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {

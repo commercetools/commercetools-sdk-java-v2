@@ -27,7 +27,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     private java.util.List<Integer> coordinates;
 
     /**
-     <>
+     *
      */
 
     public GeoLocationBuilder type(final String type) {
@@ -36,7 +36,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     /**
-     <>
+     *
      */
 
     public GeoLocationBuilder coordinates(final Integer... coordinates) {
@@ -45,7 +45,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     /**
-     <>
+     *
      */
 
     public GeoLocationBuilder coordinates(final java.util.List<Integer> coordinates) {
@@ -54,7 +54,7 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
     }
 
     /**
-     <>
+     *
      */
 
     public GeoLocationBuilder plusCoordinates(final Integer... coordinates) {

@@ -35,21 +35,21 @@ public interface RemoveFieldDefinitionChange extends Change {
     String REMOVE_FIELD_DEFINITION_CHANGE = "RemoveFieldDefinitionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeFieldDefinition</code> on payments</p>>
+     *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

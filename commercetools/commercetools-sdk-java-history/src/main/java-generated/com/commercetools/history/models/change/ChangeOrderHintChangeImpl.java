@@ -43,7 +43,7 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeOrderHint</code></p>>
+     *  <p>Shape of the action for <code>changeOrderHint</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

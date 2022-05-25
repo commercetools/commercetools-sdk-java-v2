@@ -36,7 +36,7 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
     }
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {

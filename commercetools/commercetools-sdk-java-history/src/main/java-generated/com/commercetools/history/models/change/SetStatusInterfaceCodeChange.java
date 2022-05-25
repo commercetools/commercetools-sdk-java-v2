@@ -34,28 +34,28 @@ public interface SetStatusInterfaceCodeChange extends Change {
     String SET_STATUS_INTERFACE_CODE_CHANGE = "SetStatusInterfaceCodeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setStatusInterfaceCode</code></p>>
+     *  <p>Shape of the action for <code>setStatusInterfaceCode</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

@@ -45,7 +45,7 @@ public class StorePagedQueryResponseImpl implements StorePagedQueryResponse, Mod
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Long getLimit() {
@@ -53,7 +53,7 @@ public class StorePagedQueryResponseImpl implements StorePagedQueryResponse, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -61,7 +61,7 @@ public class StorePagedQueryResponseImpl implements StorePagedQueryResponse, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -69,7 +69,7 @@ public class StorePagedQueryResponseImpl implements StorePagedQueryResponse, Mod
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -77,7 +77,7 @@ public class StorePagedQueryResponseImpl implements StorePagedQueryResponse, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.store.Store> getResults() {

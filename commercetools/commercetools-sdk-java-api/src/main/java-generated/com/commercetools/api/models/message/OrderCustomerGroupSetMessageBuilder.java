@@ -60,7 +60,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomerGroupSetMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomerGroupSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomerGroupSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomerGroupSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder resource(
@@ -164,7 +164,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomerGroupSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomerGroupSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomerGroupSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder customerGroup(
@@ -207,7 +207,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder customerGroup(
@@ -217,7 +217,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder oldCustomerGroup(
@@ -229,7 +229,7 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerGroupSetMessageBuilder oldCustomerGroup(

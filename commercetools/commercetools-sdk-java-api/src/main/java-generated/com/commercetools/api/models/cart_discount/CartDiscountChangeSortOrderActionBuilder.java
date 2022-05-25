@@ -24,7 +24,7 @@ public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDis
     private String sortOrder;
 
     /**
-     <*  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>>
+     *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
      */
 
     public CartDiscountChangeSortOrderActionBuilder sortOrder(final String sortOrder) {

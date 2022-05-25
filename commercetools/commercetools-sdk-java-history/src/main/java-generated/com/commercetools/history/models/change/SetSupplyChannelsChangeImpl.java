@@ -43,7 +43,7 @@ public class SetSupplyChannelsChangeImpl implements SetSupplyChannelsChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetSupplyChannelsChangeImpl implements SetSupplyChannelsChange, Mod
     }
 
     /**
-     <*  <p>Shape of the action for <code>setSupplyChannels</code></p>>
+     *  <p>Shape of the action for <code>setSupplyChannels</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetSupplyChannelsChangeImpl implements SetSupplyChannelsChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetSupplyChannelsChangeImpl implements SetSupplyChannelsChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {

@@ -33,14 +33,14 @@ public interface ExtensionNoResponseError extends ErrorObject {
     String EXTENSION_NO_RESPONSE = "ExtensionNoResponse";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("extensionId")
     public String getExtensionId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("extensionKey")

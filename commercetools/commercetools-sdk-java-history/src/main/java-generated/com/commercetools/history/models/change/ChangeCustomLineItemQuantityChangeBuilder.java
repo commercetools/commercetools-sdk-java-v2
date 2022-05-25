@@ -37,7 +37,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     private Integer previousValue;
 
     /**
-     <*  <p>Update action for <code>changeCustomLineItemQuantity</code></p>>
+     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder customLineItem(
@@ -57,7 +57,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder customLineItem(
@@ -67,7 +67,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder customLineItemId(final String customLineItemId) {
@@ -76,7 +76,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
@@ -85,7 +85,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCustomLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {

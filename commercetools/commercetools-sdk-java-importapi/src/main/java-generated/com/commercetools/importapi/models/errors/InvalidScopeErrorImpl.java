@@ -35,7 +35,7 @@ public class InvalidScopeErrorImpl implements InvalidScopeError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -43,7 +43,7 @@ public class InvalidScopeErrorImpl implements InvalidScopeError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

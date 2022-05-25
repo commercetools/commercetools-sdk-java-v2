@@ -41,70 +41,70 @@ public interface Zone extends BaseResource, com.commercetools.api.models.DomainR
         com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone> {
 
     /**
-     <*  <p>Unique identifier of the Zone.</p>>
+     *  <p>Unique identifier of the Zone.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Current version of the Zone.</p>>
+     *  <p>Current version of the Zone.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>Date and time (UTC) the Zone was initially created.</p>>
+     *  <p>Date and time (UTC) the Zone was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>Date and time (UTC) the Zone was last updated.</p>>
+     *  <p>Date and time (UTC) the Zone was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>User-defined unique identifier of the Zone.</p>>
+     *  <p>User-defined unique identifier of the Zone.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Name of the Zone.</p>>
+     *  <p>Name of the Zone.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     @JsonProperty("description")
     public String getDescription();
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
     @NotNull
     @Valid

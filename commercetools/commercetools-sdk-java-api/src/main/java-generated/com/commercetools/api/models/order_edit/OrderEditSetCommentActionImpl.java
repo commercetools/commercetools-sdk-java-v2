@@ -35,7 +35,7 @@ public class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getComment() {

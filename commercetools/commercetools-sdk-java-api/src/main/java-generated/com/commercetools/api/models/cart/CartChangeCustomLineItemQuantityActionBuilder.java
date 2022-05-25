@@ -27,7 +27,7 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
     private Long quantity;
 
     /**
-     <>
+     *
      */
 
     public CartChangeCustomLineItemQuantityActionBuilder customLineItemId(final String customLineItemId) {
@@ -36,7 +36,7 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
     }
 
     /**
-     <>
+     *
      */
 
     public CartChangeCustomLineItemQuantityActionBuilder quantity(final Long quantity) {

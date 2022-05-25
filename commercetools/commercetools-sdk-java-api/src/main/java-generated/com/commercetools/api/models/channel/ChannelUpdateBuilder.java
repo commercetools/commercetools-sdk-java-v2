@@ -28,7 +28,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     private java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions;
 
     /**
-     <*  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>>
+     *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public ChannelUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Channel.</p>>
+     *  <p>Update actions to be performed on the Channel.</p>
      */
 
     public ChannelUpdateBuilder actions(final com.commercetools.api.models.channel.ChannelUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Channel.</p>>
+     *  <p>Update actions to be performed on the Channel.</p>
      */
 
     public ChannelUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Channel.</p>>
+     *  <p>Update actions to be performed on the Channel.</p>
      */
 
     public ChannelUpdateBuilder plusActions(final com.commercetools.api.models.channel.ChannelUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Channel.</p>>
+     *  <p>Update actions to be performed on the Channel.</p>
      */
 
     public ChannelUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Channel.</p>>
+     *  <p>Update actions to be performed on the Channel.</p>
      */
 
     public ChannelUpdateBuilder withActions(

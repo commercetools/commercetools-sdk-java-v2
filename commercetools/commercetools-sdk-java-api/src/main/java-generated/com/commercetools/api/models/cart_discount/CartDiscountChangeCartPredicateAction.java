@@ -32,7 +32,7 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
     String CHANGE_CART_PREDICATE = "changeCartPredicate";
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
     @NotNull
     @JsonProperty("cartPredicate")

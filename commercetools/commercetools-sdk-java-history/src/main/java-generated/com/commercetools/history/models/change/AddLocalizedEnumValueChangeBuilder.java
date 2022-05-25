@@ -34,7 +34,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
     private com.commercetools.history.models.change_value.LocalizedEnumValue nextValue;
 
     /**
-     <*  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>>
+     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
      */
 
     public AddLocalizedEnumValueChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public AddLocalizedEnumValueChangeBuilder fieldName(final String fieldName) {
@@ -52,7 +52,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public AddLocalizedEnumValueChangeBuilder attributeName(final String attributeName) {
@@ -61,7 +61,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
     }
 
     /**
-     <>
+     *
      */
 
     public AddLocalizedEnumValueChangeBuilder nextValue(
@@ -72,7 +72,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
     }
 
     /**
-     <>
+     *
      */
 
     public AddLocalizedEnumValueChangeBuilder nextValue(

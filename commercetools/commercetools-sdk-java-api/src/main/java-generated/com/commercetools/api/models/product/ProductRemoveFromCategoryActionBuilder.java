@@ -30,7 +30,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveFromCategoryActionBuilder category(
@@ -41,7 +41,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveFromCategoryActionBuilder category(
@@ -51,7 +51,7 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveFromCategoryActionBuilder staged(@Nullable final Boolean staged) {

@@ -47,7 +47,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -63,7 +63,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -71,7 +71,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -79,7 +79,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems() {

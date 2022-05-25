@@ -34,28 +34,28 @@ public interface SetLanguagesChange extends Change {
     String SET_LANGUAGES_CHANGE = "SetLanguagesChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLanguages</code> on stores</p>>
+     *  <p>Update action for <code>setLanguages</code> on stores</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

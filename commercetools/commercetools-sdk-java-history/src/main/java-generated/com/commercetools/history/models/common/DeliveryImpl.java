@@ -50,7 +50,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -58,7 +58,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCreatedAt() {
@@ -66,7 +66,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
@@ -74,7 +74,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Parcel> getParcels() {
@@ -82,7 +82,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getAddress() {
@@ -90,7 +90,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {

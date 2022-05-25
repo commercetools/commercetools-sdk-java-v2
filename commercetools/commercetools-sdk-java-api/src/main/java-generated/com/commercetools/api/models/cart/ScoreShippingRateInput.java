@@ -32,7 +32,7 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
     String SCORE = "Score";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("score")

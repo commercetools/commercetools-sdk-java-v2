@@ -37,7 +37,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
@@ -46,7 +46,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
@@ -55,8 +55,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
@@ -66,8 +66,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalPrice(
@@ -77,7 +77,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(
@@ -89,7 +89,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeLineItemQuantityActionBuilder externalTotalPrice(

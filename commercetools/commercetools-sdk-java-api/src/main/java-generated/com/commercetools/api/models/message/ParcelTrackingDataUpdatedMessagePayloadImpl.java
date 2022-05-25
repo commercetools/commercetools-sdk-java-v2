@@ -43,7 +43,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -67,7 +67,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {

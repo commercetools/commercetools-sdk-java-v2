@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingPricesProductLevel extends MissingPricesProductCount {
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     <*  <p>Number of products missing prices.</p>>
+     *  <p>Number of products missing prices.</p>
      */
     @NotNull
     @JsonProperty("missingPrices")

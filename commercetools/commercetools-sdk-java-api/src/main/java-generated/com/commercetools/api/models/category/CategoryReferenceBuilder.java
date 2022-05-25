@@ -30,7 +30,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     private com.commercetools.api.models.category.Category obj;
 
     /**
-     <*  <p>Unique identifier of the referenced Category.</p>>
+     *  <p>Unique identifier of the referenced Category.</p>
      */
 
     public CategoryReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
      */
 
     public CategoryReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
      */
 
     public CategoryReferenceBuilder obj(@Nullable final com.commercetools.api.models.category.Category obj) {

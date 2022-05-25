@@ -38,7 +38,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getTerm() {
@@ -46,7 +46,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -54,7 +54,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getProductCount() {

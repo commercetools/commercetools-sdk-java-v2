@@ -34,7 +34,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue;
 
     /**
-     <*  <p>Update action for <code>setShippingMethodTaxAmount</code></p>>
+     *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
      */
 
     public SetShippingMethodTaxAmountChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodTaxAmountChangeBuilder taxMode(
@@ -53,7 +53,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodTaxAmountChangeBuilder nextValue(
@@ -65,7 +65,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodTaxAmountChangeBuilder nextValue(
@@ -75,7 +75,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodTaxAmountChangeBuilder previousValue(
@@ -87,7 +87,7 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodTaxAmountChangeBuilder previousValue(

@@ -33,14 +33,14 @@ public interface InventoryEntryUpdate extends
         com.commercetools.api.models.ResourceUpdate<InventoryEntryUpdate, InventoryEntryUpdateAction, InventoryEntryUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

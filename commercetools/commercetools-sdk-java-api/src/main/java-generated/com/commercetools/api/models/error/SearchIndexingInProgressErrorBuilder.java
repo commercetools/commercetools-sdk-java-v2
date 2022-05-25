@@ -26,7 +26,7 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public SearchIndexingInProgressErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
     }
 
     /**
-     <>
+     *
      */
 
     public SearchIndexingInProgressErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class SearchIndexingInProgressErrorBuilder implements Builder<SearchIndex
     }
 
     /**
-     <>
+     *
      */
 
     public SearchIndexingInProgressErrorBuilder addValue(final String key, final java.lang.Object value) {

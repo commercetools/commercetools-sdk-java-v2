@@ -81,7 +81,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the Project.</p>>
+     *  <p>Current version of the Project.</p>
      */
 
     public Long getVersion() {
@@ -89,7 +89,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Project.</p>>
+     *  <p>User-defined unique identifier of the Project.</p>
      */
 
     public String getKey() {
@@ -97,7 +97,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Project.</p>>
+     *  <p>Name of the Project.</p>
      */
 
     public String getName() {
@@ -105,7 +105,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Country code of the geographic location.</p>>
+     *  <p>Country code of the geographic location.</p>
      */
 
     public java.util.List<String> getCountries() {
@@ -113,7 +113,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Currency code of the country. A Project must have at least one currency.</p>>
+     *  <p>Currency code of the country. A Project must have at least one currency.</p>
      */
 
     public java.util.List<String> getCurrencies() {
@@ -121,7 +121,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Language of the country. A Project must have at least one language.</p>>
+     *  <p>Language of the country. A Project must have at least one language.</p>
      */
 
     public java.util.List<String> getLanguages() {
@@ -129,7 +129,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Project was initially created.</p>>
+     *  <p>Date and time (UTC) the Project was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -137,7 +137,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>>
+     *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
      */
 
     public String getTrialUntil() {
@@ -145,7 +145,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Holds the configuration for the Messages Query feature.</p>>
+     *  <p>Holds the configuration for the Messages Query feature.</p>
      */
 
     public com.commercetools.api.models.message.MessagesConfiguration getMessages() {
@@ -153,7 +153,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Holds the configuration for the Carts feature.</p>>
+     *  <p>Holds the configuration for the Carts feature.</p>
      */
 
     public com.commercetools.api.models.project.CartsConfiguration getCarts() {
@@ -161,7 +161,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>>
+     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
      */
 
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
@@ -169,7 +169,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Holds the configuration for the tiered shipping rates feature.</p>>
+     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
      */
 
     public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
@@ -177,7 +177,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>>
+     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
      */
 
     public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
@@ -185,7 +185,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     <*  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>>
+     *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfiguration getSearchIndexing() {

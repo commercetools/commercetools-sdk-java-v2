@@ -31,7 +31,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     private Integer variantId;
 
     /**
-     <*  <p>The product that contains this variant.</p>>
+     *  <p>The product that contains this variant.</p>
      */
 
     public ProductVariantBuilder product(
@@ -41,7 +41,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <*  <p>The product that contains this variant.</p>>
+     *  <p>The product that contains this variant.</p>
      */
 
     public ProductVariantBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
@@ -50,7 +50,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <*  <p>The state of the product variant.</p>>
+     *  <p>The state of the product variant.</p>
      */
 
     public ProductVariantBuilder staged(final Boolean staged) {
@@ -59,7 +59,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <*  <p>The id of the product variant.</p>>
+     *  <p>The id of the product variant.</p>
      */
 
     public ProductVariantBuilder variantId(final Integer variantId) {

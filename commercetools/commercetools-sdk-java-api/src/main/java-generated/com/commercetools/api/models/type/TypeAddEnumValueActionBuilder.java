@@ -28,7 +28,7 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
     /**
-     <*  <p><code>name</code> of the Field Definition to update.</p>>
+     *  <p><code>name</code> of the Field Definition to update.</p>
      */
 
     public TypeAddEnumValueActionBuilder fieldName(final String fieldName) {
@@ -37,7 +37,7 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public TypeAddEnumValueActionBuilder value(
@@ -47,7 +47,7 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public TypeAddEnumValueActionBuilder value(final com.commercetools.api.models.type.CustomFieldEnumValue value) {

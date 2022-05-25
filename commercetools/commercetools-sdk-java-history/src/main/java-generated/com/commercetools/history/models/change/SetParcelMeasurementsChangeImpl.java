@@ -47,7 +47,7 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     }
 
     /**
-     <*  <p>Update action for <code>setParcelMeasurements</code></p>>
+     *  <p>Update action for <code>setParcelMeasurements</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
@@ -71,7 +71,7 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ParcelMeasurements getNextValue() {
@@ -79,7 +79,7 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ParcelMeasurements getPreviousValue() {

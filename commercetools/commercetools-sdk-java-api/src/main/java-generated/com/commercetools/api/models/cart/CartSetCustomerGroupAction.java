@@ -32,7 +32,7 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("customerGroup")

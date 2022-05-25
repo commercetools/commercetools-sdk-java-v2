@@ -30,7 +30,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     private com.commercetools.history.models.common.ShipmentState previousValue;
 
     /**
-     <*  <p>Update action for <code>changeShipmentState</code></p>>
+     *  <p>Update action for <code>changeShipmentState</code></p>
      */
 
     public ChangeShipmentStateChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShipmentStateChangeBuilder nextValue(
@@ -49,7 +49,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShipmentStateChangeBuilder previousValue(

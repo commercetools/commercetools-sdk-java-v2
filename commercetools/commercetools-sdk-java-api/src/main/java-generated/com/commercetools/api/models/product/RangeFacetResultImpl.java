@@ -36,7 +36,7 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.FacetTypes getType() {
@@ -44,7 +44,7 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.FacetRange> getRanges() {

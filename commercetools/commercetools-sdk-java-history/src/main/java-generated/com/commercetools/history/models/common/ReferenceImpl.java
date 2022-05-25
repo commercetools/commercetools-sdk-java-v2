@@ -35,7 +35,7 @@ public class ReferenceImpl implements Reference, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -43,7 +43,7 @@ public class ReferenceImpl implements Reference, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReferenceTypeId getTypeId() {

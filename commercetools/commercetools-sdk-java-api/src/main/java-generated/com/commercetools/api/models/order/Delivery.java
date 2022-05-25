@@ -37,21 +37,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Delivery extends com.commercetools.api.models.Customizable<Delivery> {
 
     /**
-     <*  <p>Unique identifier of the Delivery.</p>>
+     *  <p>Unique identifier of the Delivery.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>>
+     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
      */
     @NotNull
     @Valid
@@ -59,7 +59,7 @@ public interface Delivery extends com.commercetools.api.models.Customizable<Deli
     public List<DeliveryItem> getItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -67,14 +67,14 @@ public interface Delivery extends com.commercetools.api.models.Customizable<Deli
     public List<Parcel> getParcels();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
     @Valid
     @JsonProperty("custom")

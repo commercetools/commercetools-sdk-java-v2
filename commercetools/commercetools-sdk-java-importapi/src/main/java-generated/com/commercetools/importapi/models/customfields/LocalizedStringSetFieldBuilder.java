@@ -25,7 +25,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     private java.util.List<com.commercetools.importapi.models.common.LocalizedString> value;
 
     /**
-     <>
+     *
      */
 
     public LocalizedStringSetFieldBuilder value(
@@ -35,7 +35,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizedStringSetFieldBuilder value(
@@ -45,7 +45,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizedStringSetFieldBuilder plusValue(
@@ -58,7 +58,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizedStringSetFieldBuilder plusValue(
@@ -71,7 +71,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizedStringSetFieldBuilder withValue(

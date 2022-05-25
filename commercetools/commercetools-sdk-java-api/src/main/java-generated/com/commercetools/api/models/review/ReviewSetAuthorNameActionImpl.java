@@ -35,7 +35,7 @@ public class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameAction,
     }
 
     /**
-     <*  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
+     *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
 
     public String getAuthorName() {

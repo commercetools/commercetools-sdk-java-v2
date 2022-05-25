@@ -32,28 +32,28 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     String SET_ASSET_CUSTOM_TYPE = "setAssetCustomType";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
      */
     @Valid
     @JsonProperty("fields")

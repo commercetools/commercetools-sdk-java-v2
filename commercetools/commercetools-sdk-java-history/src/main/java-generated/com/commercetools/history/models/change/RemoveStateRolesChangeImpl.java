@@ -43,7 +43,7 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.StateRole> getPreviousValue() {
@@ -67,7 +67,7 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.StateRole> getNextValue() {

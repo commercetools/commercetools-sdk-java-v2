@@ -27,7 +27,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     <>
+     *
      */
 
     public StoreRemoveSupplyChannelActionBuilder supplyChannel(
@@ -38,7 +38,7 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
     }
 
     /**
-     <>
+     *
      */
 
     public StoreRemoveSupplyChannelActionBuilder supplyChannel(

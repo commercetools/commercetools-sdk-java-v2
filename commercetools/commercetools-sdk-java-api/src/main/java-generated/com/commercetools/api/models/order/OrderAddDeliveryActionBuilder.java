@@ -36,7 +36,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder items(
@@ -46,7 +46,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder items(
@@ -56,7 +56,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder plusItems(
@@ -69,7 +69,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder plusItems(
@@ -82,7 +82,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder withItems(
@@ -93,7 +93,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder address(
@@ -103,7 +103,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder address(
@@ -113,7 +113,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder parcels(
@@ -123,7 +123,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder parcels(
@@ -133,7 +133,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder plusParcels(
@@ -146,7 +146,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder plusParcels(
@@ -159,7 +159,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddDeliveryActionBuilder withParcels(
@@ -170,7 +170,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public OrderAddDeliveryActionBuilder custom(
@@ -180,7 +180,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public OrderAddDeliveryActionBuilder custom(

@@ -47,7 +47,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     <*  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>>
+     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public String getFieldName() {
@@ -71,7 +71,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public String getAttributeName() {
@@ -79,7 +79,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.LocalizedEnumValue getNextValue() {

@@ -34,28 +34,28 @@ public interface ChangeKeyChange extends Change {
     String CHANGE_KEY_CHANGE = "ChangeKeyChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeKey</code></p>>
+     *  <p>Shape of the action for <code>changeKey</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

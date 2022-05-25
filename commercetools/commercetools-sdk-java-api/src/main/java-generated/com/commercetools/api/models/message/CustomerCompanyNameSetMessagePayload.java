@@ -29,7 +29,7 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
     String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("companyName")

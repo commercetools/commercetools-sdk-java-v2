@@ -25,7 +25,7 @@ public class StagedOrderRemoveParcelFromDeliveryActionBuilder
     private String parcelId;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveParcelFromDeliveryActionBuilder parcelId(final String parcelId) {

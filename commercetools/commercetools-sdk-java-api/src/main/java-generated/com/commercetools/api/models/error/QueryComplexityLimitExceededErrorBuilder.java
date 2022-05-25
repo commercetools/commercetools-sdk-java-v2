@@ -26,7 +26,7 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public QueryComplexityLimitExceededErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
     }
 
     /**
-     <>
+     *
      */
 
     public QueryComplexityLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
     }
 
     /**
-     <>
+     *
      */
 
     public QueryComplexityLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {

@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPrice {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface DiscountedLineItemPrice {
     public Money getValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

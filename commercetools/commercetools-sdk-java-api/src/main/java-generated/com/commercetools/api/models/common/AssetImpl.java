@@ -55,7 +55,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the Asset.</p>>
+     *  <p>Unique identifier of the Asset.</p>
      */
 
     public String getId() {
@@ -63,7 +63,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
@@ -71,7 +71,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Asset.</p>>
+     *  <p>Name of the Asset.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -79,7 +79,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>Description of the Asset.</p>>
+     *  <p>Description of the Asset.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -87,7 +87,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public java.util.List<String> getTags() {
@@ -95,7 +95,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields defined for the Asset.</p>>
+     *  <p>Custom Fields defined for the Asset.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -103,7 +103,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Asset.</p>>
+     *  <p>User-defined unique identifier of the Asset.</p>
      */
 
     public String getKey() {

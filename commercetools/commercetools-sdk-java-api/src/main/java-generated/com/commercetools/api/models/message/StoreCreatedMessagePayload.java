@@ -40,21 +40,21 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     String STORE_CREATED = "StoreCreated";
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("languages")
     public List<String> getLanguages();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -62,7 +62,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ChannelReference> getDistributionChannels();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -70,7 +70,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ChannelReference> getSupplyChannels();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -78,7 +78,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ProductSelectionSetting> getProductSelections();
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
     @Valid
     @JsonProperty("custom")

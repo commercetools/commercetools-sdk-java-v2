@@ -60,7 +60,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     private java.time.ZonedDateTime conflictingValidUntil;
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder message(final String message) {
@@ -69,7 +69,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -78,7 +78,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -90,7 +90,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <*  <p>Reference to a StandalonePrice.</p>>
+     *  <p>Reference to a StandalonePrice.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
@@ -102,7 +102,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <*  <p>Reference to a StandalonePrice.</p>>
+     *  <p>Reference to a StandalonePrice.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
@@ -112,7 +112,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder sku(final String sku) {
@@ -121,7 +121,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder currency(final String currency) {
@@ -130,7 +130,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder country(@Nullable final String country) {
@@ -139,7 +139,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
@@ -151,7 +151,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
@@ -161,7 +161,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
@@ -172,7 +172,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
@@ -182,7 +182,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -191,7 +191,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder validUntil(
@@ -201,7 +201,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidFrom(
@@ -211,7 +211,7 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidUntil(

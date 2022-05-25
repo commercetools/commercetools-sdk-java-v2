@@ -34,7 +34,7 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
     String REMOVE_STORE = "removeStore";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

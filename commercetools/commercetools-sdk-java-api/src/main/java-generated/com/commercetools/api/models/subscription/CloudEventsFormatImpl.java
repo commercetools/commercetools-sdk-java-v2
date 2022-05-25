@@ -35,7 +35,7 @@ public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCloudEventsVersion() {

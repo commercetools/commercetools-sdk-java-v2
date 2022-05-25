@@ -30,7 +30,7 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     /**
-     <>
+     *
      */
 
     public OrderSetParcelMeasurementsActionBuilder parcelId(final String parcelId) {
@@ -39,7 +39,7 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetParcelMeasurementsActionBuilder measurements(
@@ -49,7 +49,7 @@ public class OrderSetParcelMeasurementsActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetParcelMeasurementsActionBuilder measurements(

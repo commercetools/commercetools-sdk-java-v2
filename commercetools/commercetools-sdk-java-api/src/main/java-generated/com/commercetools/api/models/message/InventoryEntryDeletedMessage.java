@@ -41,14 +41,14 @@ public interface InventoryEntryDeletedMessage extends Message {
     String INVENTORY_ENTRY_DELETED = "InventoryEntryDeleted";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")

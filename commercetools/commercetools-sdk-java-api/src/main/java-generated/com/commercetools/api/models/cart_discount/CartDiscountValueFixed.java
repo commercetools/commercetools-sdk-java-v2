@@ -34,7 +34,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
     String FIXED = "fixed";
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
     @NotNull
     @Valid

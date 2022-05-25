@@ -32,21 +32,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingAttributesDetails {
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
     @NotNull
     @JsonProperty("total")
     public Integer getTotal();
 
     /**
-     <*  <p>Number of products missing attribute names.</p>>
+     *  <p>Number of products missing attribute names.</p>
      */
     @NotNull
     @JsonProperty("missingAttributeNames")
     public Integer getMissingAttributeNames();
 
     /**
-     <*  <p>Number of products missing attribute values.</p>>
+     *  <p>Number of products missing attribute values.</p>
      */
     @NotNull
     @JsonProperty("missingAttributeValues")

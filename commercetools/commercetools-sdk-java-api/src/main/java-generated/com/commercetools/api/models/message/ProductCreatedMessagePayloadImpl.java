@@ -36,7 +36,7 @@ public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {

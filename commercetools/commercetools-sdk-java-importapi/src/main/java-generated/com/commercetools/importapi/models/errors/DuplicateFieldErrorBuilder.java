@@ -32,7 +32,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     private java.lang.Object duplicateValue;
 
     /**
-     <>
+     *
      */
 
     public DuplicateFieldErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     <*  <p>The name of the field.</p>>
+     *  <p>The name of the field.</p>
      */
 
     public DuplicateFieldErrorBuilder field(@Nullable final String field) {
@@ -50,7 +50,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     <*  <p>The offending duplicate value.</p>>
+     *  <p>The offending duplicate value.</p>
      */
 
     public DuplicateFieldErrorBuilder duplicateValue(@Nullable final java.lang.Object duplicateValue) {

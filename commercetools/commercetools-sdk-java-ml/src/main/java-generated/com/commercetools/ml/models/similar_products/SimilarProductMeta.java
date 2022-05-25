@@ -31,28 +31,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SimilarProductMeta {
 
     /**
-     <*  <p>Localized product name used for similarity estimation.</p>>
+     *  <p>Localized product name used for similarity estimation.</p>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     <*  <p>Localized product description used for similarity estimation.</p>>
+     *  <p>Localized product description used for similarity estimation.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <*  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>>
+     *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
      */
     @Valid
     @JsonProperty("price")
     public Money getPrice();
 
     /**
-     <*  <p>Total number of variants associated with the product.</p>>
+     *  <p>Total number of variants associated with the product.</p>
      */
 
     @JsonProperty("variantCount")

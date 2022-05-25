@@ -39,7 +39,7 @@ public class MissingAttributesDetailsImpl implements MissingAttributesDetails, M
     }
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
 
     public Integer getTotal() {
@@ -47,7 +47,7 @@ public class MissingAttributesDetailsImpl implements MissingAttributesDetails, M
     }
 
     /**
-     <*  <p>Number of products missing attribute names.</p>>
+     *  <p>Number of products missing attribute names.</p>
      */
 
     public Integer getMissingAttributeNames() {
@@ -55,7 +55,7 @@ public class MissingAttributesDetailsImpl implements MissingAttributesDetails, M
     }
 
     /**
-     <*  <p>Number of products missing attribute values.</p>>
+     *  <p>Number of products missing attribute values.</p>
      */
 
     public Integer getMissingAttributeValues() {

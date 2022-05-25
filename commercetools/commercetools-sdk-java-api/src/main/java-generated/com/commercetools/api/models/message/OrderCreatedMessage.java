@@ -41,7 +41,7 @@ public interface OrderCreatedMessage extends OrderMessage {
     String ORDER_CREATED = "OrderCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -25,7 +25,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     private java.util.List<String> removedImageUrls;
 
     /**
-     <>
+     *
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -34,7 +34,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(
@@ -44,7 +44,7 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRevertedStagedChangesMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {

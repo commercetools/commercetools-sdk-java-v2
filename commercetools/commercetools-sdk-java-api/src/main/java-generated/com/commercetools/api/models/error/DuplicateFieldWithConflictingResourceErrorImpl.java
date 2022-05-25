@@ -52,7 +52,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -60,7 +60,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -68,7 +68,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -76,7 +76,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getField() {
@@ -84,7 +84,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getDuplicateValue() {
@@ -92,7 +92,7 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getConflictingResource() {

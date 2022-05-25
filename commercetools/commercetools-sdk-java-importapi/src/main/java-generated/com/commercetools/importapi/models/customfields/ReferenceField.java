@@ -34,7 +34,7 @@ public interface ReferenceField extends CustomField {
     String REFERENCE = "Reference";
 
     /**
-     <*  <p>References a resource by key</p>>
+     *  <p>References a resource by key</p>
      */
     @NotNull
     @Valid

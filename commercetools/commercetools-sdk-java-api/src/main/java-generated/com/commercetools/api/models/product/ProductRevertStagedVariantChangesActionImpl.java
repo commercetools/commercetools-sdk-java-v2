@@ -35,7 +35,7 @@ public class ProductRevertStagedVariantChangesActionImpl implements ProductRever
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ProductRevertStagedVariantChangesActionImpl implements ProductRever
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {

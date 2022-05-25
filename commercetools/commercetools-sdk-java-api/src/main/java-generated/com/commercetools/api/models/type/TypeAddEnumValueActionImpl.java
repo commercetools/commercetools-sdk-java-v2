@@ -39,7 +39,7 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
     }
 
     /**
-     <*  <p><code>name</code> of the Field Definition to update.</p>>
+     *  <p><code>name</code> of the Field Definition to update.</p>
      */
 
     public String getFieldName() {
@@ -55,7 +55,7 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldEnumValue getValue() {

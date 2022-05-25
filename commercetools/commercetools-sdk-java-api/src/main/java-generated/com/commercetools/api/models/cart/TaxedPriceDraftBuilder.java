@@ -31,8 +31,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public TaxedPriceDraftBuilder totalNet(
@@ -42,8 +42,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public TaxedPriceDraftBuilder totalNet(final com.commercetools.api.models.common.Money totalNet) {
@@ -52,8 +52,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public TaxedPriceDraftBuilder totalGross(
@@ -63,8 +63,8 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public TaxedPriceDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
@@ -73,7 +73,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceDraftBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortionDraft... taxPortions) {
@@ -82,7 +82,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceDraftBuilder taxPortions(
@@ -92,7 +92,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceDraftBuilder plusTaxPortions(
@@ -105,7 +105,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceDraftBuilder plusTaxPortions(
@@ -118,7 +118,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceDraftBuilder withTaxPortions(

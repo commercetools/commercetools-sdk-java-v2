@@ -37,28 +37,28 @@ public interface SetAttributeChange extends Change {
     String SET_ATTRIBUTE_CHANGE = "SetAttributeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setAttribute</code></p>>
+     *  <p>Update action for <code>setAttribute</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface SetAttributeChange extends Change {
     public AttributeValue getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

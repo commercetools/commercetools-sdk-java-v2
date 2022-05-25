@@ -31,7 +31,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueActionImpl.class, name = ProductTypeAddPlainEnumValueAction.ADD_PLAIN_ENUM_VALUE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintActionImpl.class, name = ProductTypeChangeAttributeConstraintAction.CHANGE_ATTRIBUTE_CONSTRAINT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionImpl.class, name = ProductTypeChangeAttributeNameAction.CHANGE_ATTRIBUTE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderActionImpl.class, name = ProductTypeChangeAttributeOrderAction.CHANGE_ATTRIBUTE_ORDER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionImpl.class, name = ProductTypeChangeAttributeOrderByNameAction.CHANGE_ATTRIBUTE_ORDER_BY_NAME),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeDescriptionActionImpl.class, name = ProductTypeChangeDescriptionAction.CHANGE_DESCRIPTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyActionImpl.class, name = ProductTypeChangeEnumKeyAction.CHANGE_ENUM_KEY),
@@ -54,7 +53,7 @@ public interface ProductTypeUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<ProductTypeUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")
@@ -78,10 +77,6 @@ public interface ProductTypeUpdateAction
 
     public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder changeAttributeNameBuilder() {
         return com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderActionBuilder changeAttributeOrderBuilder() {
-        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderActionBuilder.of();
     }
 
     public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionBuilder changeAttributeOrderByNameBuilder() {

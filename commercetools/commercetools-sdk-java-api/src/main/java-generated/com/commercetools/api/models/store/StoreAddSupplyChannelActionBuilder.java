@@ -27,7 +27,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     <>
+     *
      */
 
     public StoreAddSupplyChannelActionBuilder supplyChannel(
@@ -38,7 +38,7 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
     }
 
     /**
-     <>
+     *
      */
 
     public StoreAddSupplyChannelActionBuilder supplyChannel(

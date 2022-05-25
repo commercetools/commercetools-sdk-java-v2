@@ -36,7 +36,7 @@ public class CartUpdateItemShippingAddressActionImpl implements CartUpdateItemSh
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartUpdateItemShippingAddressActionImpl implements CartUpdateItemSh
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

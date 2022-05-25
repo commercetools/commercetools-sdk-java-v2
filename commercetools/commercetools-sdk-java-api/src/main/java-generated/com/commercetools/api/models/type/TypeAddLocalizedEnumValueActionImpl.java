@@ -39,7 +39,7 @@ public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnum
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnum
     }
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
 
     public String getFieldName() {
@@ -55,7 +55,7 @@ public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnum
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {

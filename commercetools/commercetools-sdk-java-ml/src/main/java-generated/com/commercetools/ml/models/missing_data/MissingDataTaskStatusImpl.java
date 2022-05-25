@@ -39,7 +39,7 @@ public class MissingDataTaskStatusImpl implements MissingDataTaskStatus, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.common.TaskStatusEnum getState() {
@@ -47,7 +47,7 @@ public class MissingDataTaskStatusImpl implements MissingDataTaskStatus, ModelBa
     }
 
     /**
-     <*  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>>
+     *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
      */
 
     public java.time.ZonedDateTime getExpires() {
@@ -55,7 +55,7 @@ public class MissingDataTaskStatusImpl implements MissingDataTaskStatus, ModelBa
     }
 
     /**
-     <*  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>>
+     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
 
     public com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResult getResult() {

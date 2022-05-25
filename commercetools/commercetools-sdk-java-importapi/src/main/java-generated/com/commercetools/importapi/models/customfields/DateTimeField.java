@@ -33,7 +33,7 @@ public interface DateTimeField extends CustomField {
     String DATE_TIME = "DateTime";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

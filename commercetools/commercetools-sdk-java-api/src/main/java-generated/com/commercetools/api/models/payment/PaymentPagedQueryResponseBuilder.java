@@ -39,7 +39,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     private java.util.List<com.commercetools.api.models.payment.Payment> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public PaymentPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public PaymentPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentPagedQueryResponseBuilder results(final com.commercetools.api.models.payment.Payment... results) {
@@ -84,7 +84,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.payment.Payment... results) {
@@ -106,7 +106,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentPagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class PaymentPagedQueryResponseBuilder implements Builder<PaymentPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentPagedQueryResponseBuilder withResults(

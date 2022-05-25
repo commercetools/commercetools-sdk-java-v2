@@ -43,7 +43,7 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>>
+     *  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getNextValue() {

@@ -39,7 +39,7 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getSlug() {
@@ -55,7 +55,7 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {

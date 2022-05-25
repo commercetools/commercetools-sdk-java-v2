@@ -47,7 +47,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -55,7 +55,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -63,7 +63,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -71,7 +71,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.Parcel> getParcels() {
@@ -79,7 +79,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.Address getAddress() {

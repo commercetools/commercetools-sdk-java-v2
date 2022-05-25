@@ -31,7 +31,7 @@ public class OrderMessagePayloadImpl implements OrderMessagePayload, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

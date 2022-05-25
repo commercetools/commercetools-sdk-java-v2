@@ -48,7 +48,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
@@ -56,7 +56,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {
@@ -64,7 +64,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Subscription.</p>>
+     *  <p>User-defined unique identifier for the Subscription.</p>
      */
 
     public String getKey() {
@@ -72,7 +72,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
@@ -80,7 +80,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {

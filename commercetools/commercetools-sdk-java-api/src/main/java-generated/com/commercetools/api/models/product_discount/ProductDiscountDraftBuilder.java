@@ -51,7 +51,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     private java.time.ZonedDateTime validUntil;
 
     /**
-     <*  <p>Name of the ProductDiscount.</p>>
+     *  <p>Name of the ProductDiscount.</p>
      */
 
     public ProductDiscountDraftBuilder name(
@@ -61,7 +61,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Name of the ProductDiscount.</p>>
+     *  <p>Name of the ProductDiscount.</p>
      */
 
     public ProductDiscountDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -70,7 +70,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ProductDiscount.</p>>
+     *  <p>User-defined unique identifier for the ProductDiscount.</p>
      */
 
     public ProductDiscountDraftBuilder key(@Nullable final String key) {
@@ -79,7 +79,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Description of the ProductDiscount.</p>>
+     *  <p>Description of the ProductDiscount.</p>
      */
 
     public ProductDiscountDraftBuilder description(
@@ -89,7 +89,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Description of the ProductDiscount.</p>>
+     *  <p>Description of the ProductDiscount.</p>
      */
 
     public ProductDiscountDraftBuilder description(
@@ -99,7 +99,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Type of Discount and its corresponding value.</p>>
+     *  <p>Type of Discount and its corresponding value.</p>
      */
 
     public ProductDiscountDraftBuilder value(
@@ -109,7 +109,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Type of Discount and its corresponding value.</p>>
+     *  <p>Type of Discount and its corresponding value.</p>
      */
 
     public ProductDiscountDraftBuilder value(
@@ -120,7 +120,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Valid ProductDiscount predicate.</p>>
+     *  <p>Valid ProductDiscount predicate.</p>
      */
 
     public ProductDiscountDraftBuilder predicate(final String predicate) {
@@ -129,7 +129,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>>
+     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
      */
 
     public ProductDiscountDraftBuilder sortOrder(final String sortOrder) {
@@ -138,7 +138,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>>
+     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
      */
 
     public ProductDiscountDraftBuilder isActive(final Boolean isActive) {
@@ -147,7 +147,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
      */
 
     public ProductDiscountDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -156,7 +156,7 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     }
 
     /**
-     <*  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
      */
 
     public ProductDiscountDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {

@@ -32,35 +32,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItemProductVariantImportDraft {
 
     /**
-     <*  <p>Maps to <code>ProductVariant.product</code>.</p>>
+     *  <p>Maps to <code>ProductVariant.product</code>.</p>
      */
     @Valid
     @JsonProperty("productVariant")
     public ProductVariantKeyReference getProductVariant();
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
      */
     @Valid
     @JsonProperty("prices")
     public List<LineItemPrice> getPrices();
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
      */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
      */
     @Valid
     @JsonProperty("images")

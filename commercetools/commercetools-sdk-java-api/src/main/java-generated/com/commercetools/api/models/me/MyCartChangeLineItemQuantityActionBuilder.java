@@ -36,7 +36,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     <>
+     *
      */
 
     public MyCartChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
@@ -45,7 +45,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
@@ -54,8 +54,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalPrice(
@@ -65,8 +65,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalPrice(
@@ -76,7 +76,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(
@@ -88,7 +88,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(

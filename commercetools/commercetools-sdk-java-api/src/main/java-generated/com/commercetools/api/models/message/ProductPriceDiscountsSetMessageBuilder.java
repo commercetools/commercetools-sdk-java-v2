@@ -57,7 +57,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder lastModifiedBy(
@@ -113,7 +113,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder createdBy(
@@ -123,7 +123,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder createdBy(
@@ -133,7 +133,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder resource(
@@ -152,7 +152,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductPriceDiscountsSetMessageBuilder resource(
@@ -162,7 +162,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -171,7 +171,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -183,7 +183,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -193,7 +193,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder updatedPrices(
@@ -203,7 +203,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder updatedPrices(
@@ -213,7 +213,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder plusUpdatedPrices(
@@ -226,7 +226,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder plusUpdatedPrices(
@@ -241,7 +241,7 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessageBuilder withUpdatedPrices(

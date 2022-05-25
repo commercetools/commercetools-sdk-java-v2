@@ -28,7 +28,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     private java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products;
 
     /**
-     <*  <p>The probability of product similarity.</p>>
+     *  <p>The probability of product similarity.</p>
      */
 
     public SimilarProductPairBuilder confidence(final Double confidence) {
@@ -37,7 +37,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductPairBuilder products(
@@ -47,7 +47,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductPairBuilder products(
@@ -57,7 +57,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductPairBuilder plusProducts(
@@ -70,7 +70,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductPairBuilder plusProducts(
@@ -84,7 +84,7 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductPairBuilder withProducts(

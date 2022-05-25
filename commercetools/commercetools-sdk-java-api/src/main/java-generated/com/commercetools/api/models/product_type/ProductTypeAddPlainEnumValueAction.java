@@ -34,14 +34,14 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     String ADD_PLAIN_ENUM_VALUE = "addPlainEnumValue";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

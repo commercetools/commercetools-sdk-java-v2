@@ -57,7 +57,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public CartAddLineItemActionBuilder custom(
@@ -67,7 +67,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public CartAddLineItemActionBuilder custom(
@@ -77,7 +77,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddLineItemActionBuilder distributionChannel(
@@ -89,7 +89,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddLineItemActionBuilder distributionChannel(
@@ -99,7 +99,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder externalTaxRate(
@@ -110,7 +110,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder externalTaxRate(
@@ -120,7 +120,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -129,7 +129,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -138,7 +138,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -147,7 +147,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -156,7 +156,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddLineItemActionBuilder supplyChannel(
@@ -167,7 +167,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public CartAddLineItemActionBuilder supplyChannel(
@@ -177,8 +177,8 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartAddLineItemActionBuilder externalPrice(
@@ -188,8 +188,8 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartAddLineItemActionBuilder externalPrice(
@@ -199,7 +199,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder externalTotalPrice(
@@ -211,7 +211,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder externalTotalPrice(
@@ -221,7 +221,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder shippingDetails(
@@ -232,7 +232,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddLineItemActionBuilder shippingDetails(

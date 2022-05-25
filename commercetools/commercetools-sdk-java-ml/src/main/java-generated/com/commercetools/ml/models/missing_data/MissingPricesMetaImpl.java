@@ -36,7 +36,7 @@ public class MissingPricesMetaImpl implements MissingPricesMeta, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.MissingPricesProductLevel getProductLevel() {
@@ -44,7 +44,7 @@ public class MissingPricesMetaImpl implements MissingPricesMeta, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.MissingPricesVariantLevel getVariantLevel() {

@@ -30,7 +30,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     private com.commercetools.api.models.review.Review obj;
 
     /**
-     <*  <p>Unique identifier of the referenced Review.</p>>
+     *  <p>Unique identifier of the referenced Review.</p>
      */
 
     public ReviewReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      */
 
     public ReviewReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      */
 
     public ReviewReferenceBuilder obj(@Nullable final com.commercetools.api.models.review.Review obj) {

@@ -38,21 +38,21 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     String SET_TEXT_LINE_ITEM_CUSTOM_TYPE_CHANGE = "SetTextLineItemCustomTypeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setTextLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setTextLineItemCustomType</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     public TextLineItemValue getTextLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     public CustomFields getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

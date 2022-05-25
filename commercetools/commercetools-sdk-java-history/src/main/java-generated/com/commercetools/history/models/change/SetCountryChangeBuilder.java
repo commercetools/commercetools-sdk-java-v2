@@ -30,7 +30,7 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
     private String nextValue;
 
     /**
-     <*  <p>Update action for <code>setCountry</code></p>>
+     *  <p>Update action for <code>setCountry</code></p>
      */
 
     public SetCountryChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public SetCountryChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public SetCountryChangeBuilder nextValue(final String nextValue) {

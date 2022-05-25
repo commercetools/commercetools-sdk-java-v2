@@ -32,35 +32,35 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     String SET_ATTRIBUTE = "setAttribute";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>If the attribute exists and the value is omitted or set to <code>null</code>, the attribute is removed. If the attribute exists and a value is provided, the new value is applied. If the attribute does not exist and a value is provided, it is added as a new attribute.</p>>
+     *  <p>If the attribute exists and the value is omitted or set to <code>null</code>, the attribute is removed. If the attribute exists and a value is provided, the new value is applied. If the attribute does not exist and a value is provided, it is added as a new attribute.</p>
      */
 
     @JsonProperty("value")
     public Object getValue();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

@@ -24,7 +24,7 @@ public class GenericErrorBuilder implements Builder<GenericError> {
     private String message;
 
     /**
-     <>
+     *
      */
 
     public GenericErrorBuilder message(final String message) {

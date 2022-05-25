@@ -33,7 +33,7 @@ public interface TimeField extends CustomField {
     String TIME = "Time";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

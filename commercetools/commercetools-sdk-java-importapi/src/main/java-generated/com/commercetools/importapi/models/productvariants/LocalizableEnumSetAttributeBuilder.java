@@ -29,7 +29,7 @@ public class LocalizableEnumSetAttributeBuilder implements Builder<LocalizableEn
     private java.util.List<String> value;
 
     /**
-     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public LocalizableEnumSetAttributeBuilder name(@Nullable final String name) {
@@ -38,7 +38,7 @@ public class LocalizableEnumSetAttributeBuilder implements Builder<LocalizableEn
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizableEnumSetAttributeBuilder value(final String... value) {
@@ -47,7 +47,7 @@ public class LocalizableEnumSetAttributeBuilder implements Builder<LocalizableEn
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizableEnumSetAttributeBuilder value(final java.util.List<String> value) {
@@ -56,7 +56,7 @@ public class LocalizableEnumSetAttributeBuilder implements Builder<LocalizableEn
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizableEnumSetAttributeBuilder plusValue(final String... value) {

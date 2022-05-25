@@ -51,7 +51,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the CustomerToken.</p>>
+     *  <p>Unique identifier of the CustomerToken.</p>
      */
 
     public String getId() {
@@ -59,7 +59,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -67,7 +67,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -75,7 +75,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerId() {
@@ -83,7 +83,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getExpiresAt() {
@@ -91,7 +91,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getValue() {

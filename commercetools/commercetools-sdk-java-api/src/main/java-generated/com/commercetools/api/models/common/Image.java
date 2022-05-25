@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Image {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("url")
     public String getUrl();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -47,7 +47,7 @@ public interface Image {
     public ImageDimensions getDimensions();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("label")

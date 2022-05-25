@@ -30,7 +30,7 @@ public class MissingAttributesDetailsBuilder implements Builder<MissingAttribute
     private Integer missingAttributeValues;
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
 
     public MissingAttributesDetailsBuilder total(final Integer total) {
@@ -39,7 +39,7 @@ public class MissingAttributesDetailsBuilder implements Builder<MissingAttribute
     }
 
     /**
-     <*  <p>Number of products missing attribute names.</p>>
+     *  <p>Number of products missing attribute names.</p>
      */
 
     public MissingAttributesDetailsBuilder missingAttributeNames(final Integer missingAttributeNames) {
@@ -48,7 +48,7 @@ public class MissingAttributesDetailsBuilder implements Builder<MissingAttribute
     }
 
     /**
-     <*  <p>Number of products missing attribute values.</p>>
+     *  <p>Number of products missing attribute values.</p>
      */
 
     public MissingAttributesDetailsBuilder missingAttributeValues(final Integer missingAttributeValues) {

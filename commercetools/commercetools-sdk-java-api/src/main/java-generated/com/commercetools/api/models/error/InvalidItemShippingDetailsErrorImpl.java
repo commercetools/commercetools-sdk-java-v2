@@ -46,7 +46,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -54,7 +54,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -62,7 +62,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -70,7 +70,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     <>
+     *
      */
 
     public String getSubject() {
@@ -78,7 +78,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
     }
 
     /**
-     <>
+     *
      */
 
     public String getItemId() {

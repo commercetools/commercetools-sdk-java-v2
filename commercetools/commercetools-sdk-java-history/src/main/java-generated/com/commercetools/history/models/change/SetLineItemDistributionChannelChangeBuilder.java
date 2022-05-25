@@ -37,7 +37,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     private com.commercetools.history.models.common.Reference previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemDistributionChannel</code></p>>
+     *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
      */
 
     public SetLineItemDistributionChannelChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDistributionChannelChangeBuilder lineItem(
@@ -56,7 +56,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDistributionChannelChangeBuilder lineItem(
@@ -66,7 +66,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDistributionChannelChangeBuilder variant(final String variant) {
@@ -75,7 +75,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDistributionChannelChangeBuilder nextValue(
@@ -85,7 +85,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDistributionChannelChangeBuilder nextValue(
@@ -95,7 +95,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDistributionChannelChangeBuilder previousValue(
@@ -105,7 +105,7 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDistributionChannelChangeBuilder previousValue(

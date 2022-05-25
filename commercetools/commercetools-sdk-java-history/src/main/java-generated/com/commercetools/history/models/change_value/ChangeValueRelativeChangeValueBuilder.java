@@ -24,7 +24,7 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
     private Integer permyriad;
 
     /**
-     <>
+     *
      */
 
     public ChangeValueRelativeChangeValueBuilder permyriad(final Integer permyriad) {

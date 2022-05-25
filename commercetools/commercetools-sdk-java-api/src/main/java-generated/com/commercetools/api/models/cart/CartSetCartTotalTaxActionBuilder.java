@@ -30,7 +30,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
     /**
-     <*  <p>The total gross amount of the cart (totalNet + taxes).</p>>
+     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
      */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
@@ -40,7 +40,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     <*  <p>The total gross amount of the cart (totalNet + taxes).</p>>
+     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
      */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
@@ -50,7 +50,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCartTotalTaxActionBuilder externalTaxPortions(
@@ -60,7 +60,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCartTotalTaxActionBuilder externalTaxPortions(
@@ -70,7 +70,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
@@ -83,7 +83,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
@@ -97,7 +97,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCartTotalTaxActionBuilder withExternalTaxPortions(

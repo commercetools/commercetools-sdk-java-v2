@@ -25,7 +25,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     private java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources;
 
     /**
-     <*  <p>The category import resources of this request.</p>>
+     *  <p>The category import resources of this request.</p>
      */
 
     public CategoryImportRequestBuilder resources(
@@ -35,7 +35,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     }
 
     /**
-     <*  <p>The category import resources of this request.</p>>
+     *  <p>The category import resources of this request.</p>
      */
 
     public CategoryImportRequestBuilder resources(
@@ -45,7 +45,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     }
 
     /**
-     <*  <p>The category import resources of this request.</p>>
+     *  <p>The category import resources of this request.</p>
      */
 
     public CategoryImportRequestBuilder plusResources(
@@ -58,7 +58,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     }
 
     /**
-     <*  <p>The category import resources of this request.</p>>
+     *  <p>The category import resources of this request.</p>
      */
 
     public CategoryImportRequestBuilder plusResources(
@@ -72,7 +72,7 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
     }
 
     /**
-     <*  <p>The category import resources of this request.</p>>
+     *  <p>The category import resources of this request.</p>
      */
 
     public CategoryImportRequestBuilder withResources(

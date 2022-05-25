@@ -28,7 +28,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions;
 
     /**
-     <*  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public ProductDiscountUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
     }
 
     /**
-     <*  <p>Update actions to be performed on the ProductDiscount.</p>>
+     *  <p>Update actions to be performed on the ProductDiscount.</p>
      */
 
     public ProductDiscountUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
     }
 
     /**
-     <*  <p>Update actions to be performed on the ProductDiscount.</p>>
+     *  <p>Update actions to be performed on the ProductDiscount.</p>
      */
 
     public ProductDiscountUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
     }
 
     /**
-     <*  <p>Update actions to be performed on the ProductDiscount.</p>>
+     *  <p>Update actions to be performed on the ProductDiscount.</p>
      */
 
     public ProductDiscountUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
     }
 
     /**
-     <*  <p>Update actions to be performed on the ProductDiscount.</p>>
+     *  <p>Update actions to be performed on the ProductDiscount.</p>
      */
 
     public ProductDiscountUpdateBuilder plusActions(
@@ -85,7 +85,7 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
     }
 
     /**
-     <*  <p>Update actions to be performed on the ProductDiscount.</p>>
+     *  <p>Update actions to be performed on the ProductDiscount.</p>
      */
 
     public ProductDiscountUpdateBuilder withActions(

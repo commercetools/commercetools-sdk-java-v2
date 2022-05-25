@@ -60,7 +60,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderEditAppliedMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderEditAppliedMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderEditAppliedMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderEditAppliedMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderEditAppliedMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderEditAppliedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderEditAppliedMessageBuilder resource(
@@ -164,7 +164,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <*  <p>Reference to a OrderEdit.</p>>
+     *  <p>Reference to a OrderEdit.</p>
      */
 
     public OrderEditAppliedMessageBuilder edit(
@@ -205,7 +205,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <*  <p>Reference to a OrderEdit.</p>>
+     *  <p>Reference to a OrderEdit.</p>
      */
 
     public OrderEditAppliedMessageBuilder edit(final com.commercetools.api.models.order_edit.OrderEditReference edit) {
@@ -214,7 +214,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder result(
@@ -224,7 +224,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedMessageBuilder result(

@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Update extends com.commercetools.api.models.ResourceUpdate<Update, UpdateAction, UpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -36,7 +36,7 @@ public class ExtensionChangeDestinationActionImpl implements ExtensionChangeDest
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ExtensionChangeDestinationActionImpl implements ExtensionChangeDest
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.extension.ExtensionDestination getDestination() {

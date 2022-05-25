@@ -37,7 +37,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
 
     /**
-     <*  <p>Update action for <code>transitionLineItemState</code></p>>
+     *  <p>Update action for <code>transitionLineItemState</code></p>
      */
 
     public TransitionLineItemStateChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder lineItemId(final String lineItemId) {
@@ -55,7 +55,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder stateId(final String stateId) {
@@ -64,7 +64,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder nextValue(
@@ -74,7 +74,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder nextValue(
@@ -84,7 +84,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder plusNextValue(
@@ -97,7 +97,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder plusNextValue(
@@ -110,7 +110,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder withNextValue(
@@ -121,7 +121,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder previousValue(
@@ -131,7 +131,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder previousValue(
@@ -141,7 +141,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder plusPreviousValue(
@@ -154,7 +154,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder plusPreviousValue(
@@ -167,7 +167,7 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionLineItemStateChangeBuilder withPreviousValue(

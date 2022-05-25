@@ -33,7 +33,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     <*  <p>Maps to <code>SyncInfo.channel</code></p>>
+     *  <p>Maps to <code>SyncInfo.channel</code></p>
      */
 
     public SyncInfoBuilder channel(
@@ -43,7 +43,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     <*  <p>Maps to <code>SyncInfo.channel</code></p>>
+     *  <p>Maps to <code>SyncInfo.channel</code></p>
      */
 
     public SyncInfoBuilder channel(final com.commercetools.importapi.models.common.ChannelKeyReference channel) {
@@ -52,7 +52,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     <*  <p>Maps to <code>SyncInfo.externalId</code></p>>
+     *  <p>Maps to <code>SyncInfo.externalId</code></p>
      */
 
     public SyncInfoBuilder externalId(@Nullable final String externalId) {
@@ -61,7 +61,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     <*  <p>Maps to <code>SyncInfo.syncedAt</code></p>>
+     *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
      */
 
     public SyncInfoBuilder syncedAt(final java.time.ZonedDateTime syncedAt) {

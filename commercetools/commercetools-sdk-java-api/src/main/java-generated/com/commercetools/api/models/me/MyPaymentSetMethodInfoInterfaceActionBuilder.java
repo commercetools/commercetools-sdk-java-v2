@@ -24,7 +24,7 @@ public class MyPaymentSetMethodInfoInterfaceActionBuilder implements Builder<MyP
     private String _interface;
 
     /**
-     <>
+     *
      */
 
     public MyPaymentSetMethodInfoInterfaceActionBuilder _interface(final String _interface) {

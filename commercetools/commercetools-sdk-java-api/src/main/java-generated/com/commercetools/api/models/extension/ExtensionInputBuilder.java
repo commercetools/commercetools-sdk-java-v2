@@ -28,7 +28,7 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
     private com.commercetools.api.models.common.Reference resource;
 
     /**
-     <*  <p><code>Create</code> or <code>Update</code> request.</p>>
+     *  <p><code>Create</code> or <code>Update</code> request.</p>
      */
 
     public ExtensionInputBuilder action(final com.commercetools.api.models.extension.ExtensionAction action) {
@@ -37,7 +37,7 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
     }
 
     /**
-     <*  <p>Expanded reference to the resource that triggered the Extension.</p>>
+     *  <p>Expanded reference to the resource that triggered the Extension.</p>
      */
 
     public ExtensionInputBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -46,7 +46,7 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
     }
 
     /**
-     <*  <p>Expanded reference to the resource that triggered the Extension.</p>>
+     *  <p>Expanded reference to the resource that triggered the Extension.</p>
      */
 
     public ExtensionInputBuilder resource(

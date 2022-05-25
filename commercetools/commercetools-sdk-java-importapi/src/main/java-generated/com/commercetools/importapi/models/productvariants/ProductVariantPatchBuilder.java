@@ -33,7 +33,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     private Boolean staged;
 
     /**
-     <*  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>>
+     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      */
 
     public ProductVariantPatchBuilder productVariant(
@@ -45,7 +45,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     <*  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>>
+     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      */
 
     public ProductVariantPatchBuilder productVariant(
@@ -55,7 +55,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
      */
 
     public ProductVariantPatchBuilder attributes(
@@ -66,7 +66,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the Project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
      */
 
     public ProductVariantPatchBuilder attributes(
@@ -76,7 +76,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     <*  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>>
+     *  <p>If <code>false</code>, the attribute changes are applied to both current and staged projected representations of the Product.</p>
      */
 
     public ProductVariantPatchBuilder staged(@Nullable final Boolean staged) {

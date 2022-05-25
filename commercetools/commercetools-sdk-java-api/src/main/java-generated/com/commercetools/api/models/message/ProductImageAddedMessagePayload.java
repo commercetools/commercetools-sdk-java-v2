@@ -36,14 +36,14 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     String PRODUCT_IMAGE_ADDED = "ProductImageAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     public Image getImage();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("staged")

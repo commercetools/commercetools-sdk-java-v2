@@ -36,7 +36,7 @@ public class CategorySetDescriptionActionImpl implements CategorySetDescriptionA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CategorySetDescriptionActionImpl implements CategorySetDescriptionA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

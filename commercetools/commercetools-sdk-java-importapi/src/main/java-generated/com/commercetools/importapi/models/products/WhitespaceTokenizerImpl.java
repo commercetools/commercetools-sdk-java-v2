@@ -27,7 +27,7 @@ public class WhitespaceTokenizerImpl implements WhitespaceTokenizer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

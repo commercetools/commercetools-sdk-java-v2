@@ -43,7 +43,7 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>setIsValid</code></p>>
+     *  <p>Shape of the action for <code>setIsValid</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getNextValue() {

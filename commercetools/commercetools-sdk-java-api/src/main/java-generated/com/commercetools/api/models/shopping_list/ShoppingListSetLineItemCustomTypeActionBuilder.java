@@ -34,7 +34,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
@@ -43,7 +43,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>>
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      */
 
     public ShoppingListSetLineItemCustomTypeActionBuilder type(
@@ -53,7 +53,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>>
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      */
 
     public ShoppingListSetLineItemCustomTypeActionBuilder type(
@@ -63,7 +63,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the LineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the LineItem.</p>
      */
 
     public ShoppingListSetLineItemCustomTypeActionBuilder fields(
@@ -73,7 +73,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the LineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the LineItem.</p>
      */
 
     public ShoppingListSetLineItemCustomTypeActionBuilder fields(

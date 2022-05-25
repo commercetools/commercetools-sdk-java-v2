@@ -36,7 +36,7 @@ public class StoreSetDistributionChannelsActionImpl implements StoreSetDistribut
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StoreSetDistributionChannelsActionImpl implements StoreSetDistribut
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {

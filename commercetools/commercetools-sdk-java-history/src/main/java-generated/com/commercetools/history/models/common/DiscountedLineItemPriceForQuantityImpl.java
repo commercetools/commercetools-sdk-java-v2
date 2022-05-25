@@ -35,7 +35,7 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {
@@ -43,7 +43,7 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.DiscountedLineItemPrice getDiscountedPrice() {

@@ -48,7 +48,7 @@ public interface ShippingMethodUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<ShippingMethodUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

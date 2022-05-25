@@ -34,7 +34,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     <*  <p>Update action for <code>addToCategory</code></p>>
+     *  <p>Update action for <code>addToCategory</code></p>
      */
 
     public AddToCategoryChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder category(
@@ -53,7 +53,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
@@ -62,7 +62,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder previousValue(
@@ -82,7 +82,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder plusPreviousValue(
@@ -95,7 +95,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder plusPreviousValue(
@@ -108,7 +108,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder withPreviousValue(
@@ -119,7 +119,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder nextValue(final com.commercetools.history.models.common.Reference... nextValue) {
@@ -128,7 +128,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder nextValue(
@@ -138,7 +138,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder plusNextValue(
@@ -151,7 +151,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder plusNextValue(
@@ -164,7 +164,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddToCategoryChangeBuilder withNextValue(

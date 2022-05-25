@@ -32,7 +32,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")

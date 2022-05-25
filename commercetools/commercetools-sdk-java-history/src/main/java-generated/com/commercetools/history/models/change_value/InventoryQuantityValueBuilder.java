@@ -27,7 +27,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     private Integer availableQuantity;
 
     /**
-     <>
+     *
      */
 
     public InventoryQuantityValueBuilder quantityOnStock(final Integer quantityOnStock) {
@@ -36,7 +36,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryQuantityValueBuilder availableQuantity(final Integer availableQuantity) {

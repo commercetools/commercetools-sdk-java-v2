@@ -34,7 +34,7 @@ public class AttributeCoverageImpl implements AttributeCoverage, ModelBase {
     }
 
     /**
-     <*  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>>
+     *  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>
      */
 
     public Double getNames() {
@@ -42,7 +42,7 @@ public class AttributeCoverageImpl implements AttributeCoverage, ModelBase {
     }
 
     /**
-     <*  <p>Represents the percentage of attributes in the product variant that contain values.</p>>
+     *  <p>Represents the percentage of attributes in the product variant that contain values.</p>
      */
 
     public Double getValues() {

@@ -32,21 +32,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroupDraft extends com.commercetools.api.models.CustomizableDraft<CustomerGroupDraft> {
 
     /**
-     <*  <p>User-defined unique identifier for the CustomerGroup.</p>>
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>>
+     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
      */
     @NotNull
     @JsonProperty("groupName")
     public String getGroupName();
 
     /**
-     <*  <p>Custom Fields for the CustomerGroup.</p>>
+     *  <p>Custom Fields for the CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("custom")

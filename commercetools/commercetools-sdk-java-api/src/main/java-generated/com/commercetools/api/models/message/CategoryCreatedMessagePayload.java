@@ -34,7 +34,7 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
     String CATEGORY_CREATED = "CategoryCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

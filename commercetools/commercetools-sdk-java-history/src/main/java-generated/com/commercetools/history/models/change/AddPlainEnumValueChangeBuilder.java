@@ -31,7 +31,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
     /**
-     <*  <p>Update action for <code>addPlainEnumValue</code> on product types</p>>
+     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
      */
 
     public AddPlainEnumValueChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
@@ -49,7 +49,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     <>
+     *
      */
 
     public AddPlainEnumValueChangeBuilder nextValue(
@@ -59,7 +59,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     <>
+     *
      */
 
     public AddPlainEnumValueChangeBuilder nextValue(

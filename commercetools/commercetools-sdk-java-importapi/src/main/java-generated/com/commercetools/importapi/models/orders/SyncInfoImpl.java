@@ -39,7 +39,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>SyncInfo.channel</code></p>>
+     *  <p>Maps to <code>SyncInfo.channel</code></p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -47,7 +47,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>SyncInfo.externalId</code></p>>
+     *  <p>Maps to <code>SyncInfo.externalId</code></p>
      */
 
     public String getExternalId() {
@@ -55,7 +55,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>SyncInfo.syncedAt</code></p>>
+     *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
      */
 
     public java.time.ZonedDateTime getSyncedAt() {

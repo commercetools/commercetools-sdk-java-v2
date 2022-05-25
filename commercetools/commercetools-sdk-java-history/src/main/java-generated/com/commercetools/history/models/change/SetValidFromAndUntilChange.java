@@ -36,21 +36,21 @@ public interface SetValidFromAndUntilChange extends Change {
     String SET_VALID_FROM_AND_UNTIL_CHANGE = "SetValidFromAndUntilChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetValidFromAndUntilChange extends Change {
     public ValidFromAndUntilValue getPreviousValue();
 
     /**
-     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      */
     @NotNull
     @Valid

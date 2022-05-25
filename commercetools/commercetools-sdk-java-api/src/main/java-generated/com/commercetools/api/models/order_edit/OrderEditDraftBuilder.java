@@ -42,7 +42,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     private Boolean dryRun;
 
     /**
-     <*  <p>User-defined unique identifier for the OrderEdit.</p>>
+     *  <p>User-defined unique identifier for the OrderEdit.</p>
      */
 
     public OrderEditDraftBuilder key(@Nullable final String key) {
@@ -51,7 +51,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The order to be updated with this edit.</p>>
+     *  <p>The order to be updated with this edit.</p>
      */
 
     public OrderEditDraftBuilder resource(
@@ -61,7 +61,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The order to be updated with this edit.</p>>
+     *  <p>The order to be updated with this edit.</p>
      */
 
     public OrderEditDraftBuilder resource(final com.commercetools.api.models.order.OrderReference resource) {
@@ -70,7 +70,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The actions to apply to <code>resource</code>.</p>>
+     *  <p>The actions to apply to <code>resource</code>.</p>
      */
 
     public OrderEditDraftBuilder stagedActions(
@@ -80,7 +80,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The actions to apply to <code>resource</code>.</p>>
+     *  <p>The actions to apply to <code>resource</code>.</p>
      */
 
     public OrderEditDraftBuilder stagedActions(
@@ -90,7 +90,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The actions to apply to <code>resource</code>.</p>>
+     *  <p>The actions to apply to <code>resource</code>.</p>
      */
 
     public OrderEditDraftBuilder plusStagedActions(
@@ -103,7 +103,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The actions to apply to <code>resource</code>.</p>>
+     *  <p>The actions to apply to <code>resource</code>.</p>
      */
 
     public OrderEditDraftBuilder plusStagedActions(
@@ -117,7 +117,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The actions to apply to <code>resource</code>.</p>>
+     *  <p>The actions to apply to <code>resource</code>.</p>
      */
 
     public OrderEditDraftBuilder withStagedActions(
@@ -129,7 +129,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public OrderEditDraftBuilder custom(
@@ -139,7 +139,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public OrderEditDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -148,7 +148,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>This field can be used to add additional textual information regarding the edit.</p>>
+     *  <p>This field can be used to add additional textual information regarding the edit.</p>
      */
 
     public OrderEditDraftBuilder comment(@Nullable final String comment) {
@@ -157,7 +157,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     <*  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>>
+     *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
      */
 
     public OrderEditDraftBuilder dryRun(@Nullable final Boolean dryRun) {

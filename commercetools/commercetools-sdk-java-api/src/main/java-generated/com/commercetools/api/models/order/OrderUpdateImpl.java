@@ -35,7 +35,7 @@ public class OrderUpdateImpl implements OrderUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class OrderUpdateImpl implements OrderUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.OrderUpdateAction> getActions() {

@@ -27,7 +27,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     private String createdAt;
 
     /**
-     <>
+     *
      */
 
     public ParcelChangeValueBuilder id(final String id) {
@@ -36,7 +36,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelChangeValueBuilder createdAt(final String createdAt) {

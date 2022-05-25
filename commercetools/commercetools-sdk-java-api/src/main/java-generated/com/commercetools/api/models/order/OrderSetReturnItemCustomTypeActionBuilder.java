@@ -33,7 +33,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder returnItemId(final String returnItemId) {
@@ -42,7 +42,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     <*  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>>
+     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     <*  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>>
+     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ReturnItem.</p>>
+     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ReturnItem.</p>>
+     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
      */
 
     public OrderSetReturnItemCustomTypeActionBuilder fields(

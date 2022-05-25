@@ -36,21 +36,21 @@ public interface SetMetaKeywordsChange extends Change {
     String SET_META_KEYWORDS_CHANGE = "SetMetaKeywordsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setMetaKeywords</code></p>>
+     *  <p>Shape of the action for <code>setMetaKeywords</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetMetaKeywordsChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

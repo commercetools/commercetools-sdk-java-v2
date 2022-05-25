@@ -24,7 +24,7 @@ public class StringFieldBuilder implements Builder<StringField> {
     private String value;
 
     /**
-     <>
+     *
      */
 
     public StringFieldBuilder value(final String value) {

@@ -40,7 +40,7 @@ public class ProductSelectionReferenceImpl implements ProductSelectionReference,
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class ProductSelectionReferenceImpl implements ProductSelectionReference,
     }
 
     /**
-     <*  <p>Unique identifier of the referenced ProductSelection.</p>>
+     *  <p>Unique identifier of the referenced ProductSelection.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class ProductSelectionReferenceImpl implements ProductSelectionReference,
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelection getObj() {

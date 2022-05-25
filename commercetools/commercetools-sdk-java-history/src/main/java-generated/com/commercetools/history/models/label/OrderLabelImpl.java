@@ -39,7 +39,7 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerEmail() {
@@ -55,7 +55,7 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getOrderNumber() {

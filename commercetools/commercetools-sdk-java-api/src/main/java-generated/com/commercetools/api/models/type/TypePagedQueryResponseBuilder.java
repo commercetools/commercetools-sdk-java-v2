@@ -39,7 +39,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     private java.util.List<com.commercetools.api.models.type.Type> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public TypePagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public TypePagedQueryResponseBuilder offset(final Long offset) {
@@ -57,7 +57,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
-     <*  <p>Actual number of results returned.</p>>
+     *  <p>Actual number of results returned.</p>
      */
 
     public TypePagedQueryResponseBuilder count(final Long count) {
@@ -66,7 +66,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
-     <*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>>
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public TypePagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -75,7 +75,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
-     <*  <p>Types matching the query.</p>>
+     *  <p>Types matching the query.</p>
      */
 
     public TypePagedQueryResponseBuilder results(final com.commercetools.api.models.type.Type... results) {
@@ -84,7 +84,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
-     <*  <p>Types matching the query.</p>>
+     *  <p>Types matching the query.</p>
      */
 
     public TypePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.type.Type> results) {
@@ -93,7 +93,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
-     <*  <p>Types matching the query.</p>>
+     *  <p>Types matching the query.</p>
      */
 
     public TypePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.type.Type... results) {
@@ -105,7 +105,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
-     <*  <p>Types matching the query.</p>>
+     *  <p>Types matching the query.</p>
      */
 
     public TypePagedQueryResponseBuilder plusResults(
@@ -118,7 +118,7 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
-     <*  <p>Types matching the query.</p>>
+     *  <p>Types matching the query.</p>
      */
 
     public TypePagedQueryResponseBuilder withResults(

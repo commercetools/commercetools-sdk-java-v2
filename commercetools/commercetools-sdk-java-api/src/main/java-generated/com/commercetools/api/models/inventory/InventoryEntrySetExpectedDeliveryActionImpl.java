@@ -36,7 +36,7 @@ public class InventoryEntrySetExpectedDeliveryActionImpl implements InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class InventoryEntrySetExpectedDeliveryActionImpl implements InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getExpectedDelivery() {

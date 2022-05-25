@@ -43,7 +43,7 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>removeTaxRate</code> on tax categories</p>>
+     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {
@@ -67,7 +67,7 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getNextValue() {

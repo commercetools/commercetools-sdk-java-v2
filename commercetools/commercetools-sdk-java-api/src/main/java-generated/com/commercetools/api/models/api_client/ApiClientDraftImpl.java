@@ -46,7 +46,7 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-     <*  <p>Name of the APIClient.</p>>
+     *  <p>Name of the APIClient.</p>
      */
 
     public String getName() {
@@ -54,7 +54,7 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-     <*  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>>
+     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
      */
 
     public String getScope() {
@@ -62,7 +62,7 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-     <*  <p>If set, the Client will be deleted after the specified amount of days.</p>>
+     *  <p>If set, the Client will be deleted after the specified amount of days.</p>
      */
 
     public Long getDeleteDaysAfterCreation() {
@@ -70,7 +70,7 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-     <*  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
      */
 
     public Integer getAccessTokenValiditySeconds() {
@@ -78,7 +78,7 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-     <*  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>>
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
      */
 
     public Integer getRefreshTokenValiditySeconds() {

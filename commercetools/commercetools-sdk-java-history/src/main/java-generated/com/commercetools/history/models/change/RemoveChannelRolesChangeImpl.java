@@ -43,7 +43,7 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
@@ -67,7 +67,7 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {

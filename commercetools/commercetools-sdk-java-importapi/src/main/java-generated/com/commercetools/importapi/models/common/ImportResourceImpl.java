@@ -31,7 +31,7 @@ public class ImportResourceImpl implements ImportResource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {

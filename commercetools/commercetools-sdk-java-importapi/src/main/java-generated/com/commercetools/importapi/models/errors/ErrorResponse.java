@@ -32,35 +32,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ErrorResponse {
 
     /**
-     <*  <p>The http status code of the response.</p>>
+     *  <p>The http status code of the response.</p>
      */
     @NotNull
     @JsonProperty("statusCode")
     public Integer getStatusCode();
 
     /**
-     <*  <p>Describes the error.</p>>
+     *  <p>Describes the error.</p>
      */
     @NotNull
     @JsonProperty("message")
     public String getMessage();
 
     /**
-     <*  <p>This property is only used for OAuth2 errors. Contains the error code.</p>>
+     *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
      */
 
     @JsonProperty("error")
     public String getError();
 
     /**
-     <*  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>>
+     *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
      */
 
     @JsonProperty("error_description")
     public String getErrorDescription();
 
     /**
-     <*  <p>The errors that caused this error response.</p>>
+     *  <p>The errors that caused this error response.</p>
      */
     @Valid
     @JsonProperty("errors")

@@ -36,7 +36,7 @@ public interface CustomerLastNameSetMessage extends Message {
     String CUSTOMER_LAST_NAME_SET = "CustomerLastNameSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("lastName")

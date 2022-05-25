@@ -33,7 +33,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     private Boolean isMatching;
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder value(final String value) {
@@ -42,8 +42,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartClassificationTierBuilder price(
@@ -53,8 +53,8 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartClassificationTierBuilder price(final com.commercetools.api.models.common.Money price) {
@@ -63,7 +63,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     <>
+     *
      */
 
     public CartClassificationTierBuilder isMatching(@Nullable final Boolean isMatching) {

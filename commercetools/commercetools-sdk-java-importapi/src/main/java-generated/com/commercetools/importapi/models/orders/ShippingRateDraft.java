@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingRateDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -40,14 +40,14 @@ public interface ShippingRateDraft {
     public Money getPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("freeAbove")
     public Money getFreeAbove();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("tiers")

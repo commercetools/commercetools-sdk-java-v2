@@ -49,7 +49,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>Name of the TaxRate.</p>>
+     *  <p>Name of the TaxRate.</p>
      */
 
     public String getName() {
@@ -57,7 +57,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>>
+     *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
      */
 
     public Double getAmount() {
@@ -65,7 +65,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>>
+     *  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
      */
 
     public Boolean getIncludedInPrice() {
@@ -73,7 +73,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>>
+     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
      */
 
     public String getCountry() {
@@ -81,7 +81,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>State within the country, such as Texas in the United States.</p>>
+     *  <p>State within the country, such as Texas in the United States.</p>
      */
 
     public String getState() {
@@ -89,7 +89,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {

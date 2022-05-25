@@ -55,7 +55,7 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -63,7 +63,7 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemCustomField</code></p>>
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
      */
 
     public String getChange() {
@@ -71,7 +71,7 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -79,7 +79,7 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomTypeId() {
@@ -87,7 +87,7 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
@@ -95,7 +95,7 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {
@@ -103,7 +103,7 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

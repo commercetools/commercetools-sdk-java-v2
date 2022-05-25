@@ -32,7 +32,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     private String conflictingAttributeName;
 
     /**
-     <>
+     *
      */
 
     public EnumKeyAlreadyExistsErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     <>
+     *
      */
 
     public EnumKeyAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     <>
+     *
      */
 
     public EnumKeyAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     <>
+     *
      */
 
     public EnumKeyAlreadyExistsErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
@@ -71,7 +71,7 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
     }
 
     /**
-     <>
+     *
      */
 
     public EnumKeyAlreadyExistsErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {

@@ -35,21 +35,21 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     String PARCEL_TRACKING_DATA_UPDATED = "ParcelTrackingDataUpdated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("trackingData")

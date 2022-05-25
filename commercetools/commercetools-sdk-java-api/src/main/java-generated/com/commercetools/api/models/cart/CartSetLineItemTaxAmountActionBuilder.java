@@ -30,7 +30,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemTaxAmountActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +39,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemTaxAmountActionBuilder externalTaxAmount(
@@ -50,7 +50,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemTaxAmountActionBuilder externalTaxAmount(

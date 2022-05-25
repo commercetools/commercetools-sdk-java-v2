@@ -36,7 +36,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     private Integer offset;
 
     /**
-     <*  <p>The Order search query.</p>>
+     *  <p>The Order search query.</p>
      */
 
     public OrderSearchRequestBuilder query(
@@ -46,7 +46,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     <*  <p>The Order search query.</p>>
+     *  <p>The Order search query.</p>
      */
 
     public OrderSearchRequestBuilder query(final com.commercetools.api.models.order.OrderSearchQuery query) {
@@ -55,7 +55,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     <*  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>>
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      */
 
     public OrderSearchRequestBuilder sort(@Nullable final String sort) {
@@ -64,7 +64,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     <*  <p>The maximum number of search results to be returned.</p>>
+     *  <p>The maximum number of search results to be returned.</p>
      */
 
     public OrderSearchRequestBuilder limit(@Nullable final Integer limit) {
@@ -73,7 +73,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     <*  <p>The number of search results to be skipped in the response for pagination.</p>>
+     *  <p>The number of search results to be skipped in the response for pagination.</p>
      */
 
     public OrderSearchRequestBuilder offset(@Nullable final Integer offset) {

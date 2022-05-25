@@ -32,7 +32,7 @@ public interface MyCartSetBillingAddressAction extends MyCartUpdateAction {
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")

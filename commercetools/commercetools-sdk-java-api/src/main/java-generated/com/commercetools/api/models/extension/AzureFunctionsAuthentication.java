@@ -33,7 +33,7 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
     String AZURE_FUNCTIONS = "AzureFunctions";
 
     /**
-     <*  <p>Partially hidden on retrieval for security reasons.</p>>
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
     @NotNull
     @JsonProperty("key")

@@ -51,7 +51,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemTaxedPrice</code></p>>
+     *  <p>Update action for <code>setLineItemTaxedPrice</code></p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -75,7 +75,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -83,7 +83,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
@@ -91,7 +91,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {

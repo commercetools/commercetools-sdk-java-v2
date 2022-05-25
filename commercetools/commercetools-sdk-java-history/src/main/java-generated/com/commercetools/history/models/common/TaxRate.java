@@ -37,49 +37,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxRate {
 
     /**
-     <*  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>>
+     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>>
+     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
      */
     @NotNull
     @JsonProperty("amount")
     public Integer getAmount();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>The state in the country</p>>
+     *  <p>The state in the country</p>
      */
     @NotNull
     @JsonProperty("state")
     public String getState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -34,28 +34,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TextLineItemDraft extends com.commercetools.api.models.CustomizableDraft<TextLineItemDraft> {
 
     /**
-     <*  <p>Defaults to the current date and time.</p>>
+     *  <p>Defaults to the current date and time.</p>
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -63,7 +63,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getName();
 
     /**
-     <*  <p>Defaults to <code>1</code>.</p>>
+     *  <p>Defaults to <code>1</code>.</p>
      */
 
     @JsonProperty("quantity")

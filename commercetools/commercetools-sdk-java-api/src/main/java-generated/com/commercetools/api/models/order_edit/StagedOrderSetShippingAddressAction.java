@@ -33,7 +33,7 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
     String SET_SHIPPING_ADDRESS = "setShippingAddress";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")

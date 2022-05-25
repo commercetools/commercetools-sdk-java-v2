@@ -33,14 +33,14 @@ public interface CartSetCustomLineItemTaxAmountAction extends CartUpdateAction {
     String SET_CUSTOM_LINE_ITEM_TAX_AMOUNT = "setCustomLineItemTaxAmount";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxAmount")

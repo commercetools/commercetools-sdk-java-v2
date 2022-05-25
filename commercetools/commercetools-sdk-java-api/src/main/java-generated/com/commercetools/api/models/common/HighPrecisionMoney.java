@@ -35,14 +35,14 @@ public interface HighPrecisionMoney extends TypedMoney {
     String HIGH_PRECISION = "highPrecision";
 
     /**
-     <*  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>>
+     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
      */
     @NotNull
     @JsonProperty("preciseAmount")
     public Long getPreciseAmount();
 
     /**
-     <*  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>>
+     *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
      */
     @NotNull
     @JsonProperty("fractionDigits")

@@ -43,7 +43,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     private Integer quantity;
 
     /**
-     <*  <p>The unique ID of this CustomLineItem.</p>>
+     *  <p>The unique ID of this CustomLineItem.</p>
      */
 
     public CustomLineItemBuilder id(final String id) {
@@ -52,7 +52,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemBuilder name(
@@ -62,7 +62,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
@@ -71,7 +71,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemBuilder money(
@@ -81,7 +81,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemBuilder money(final com.commercetools.history.models.common.Money money) {
@@ -90,7 +90,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemBuilder taxedPrice(
@@ -100,7 +100,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemBuilder taxedPrice(final com.commercetools.history.models.common.TaxedItemPrice taxedPrice) {
@@ -109,7 +109,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemBuilder totalPrice(
@@ -119,7 +119,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemBuilder totalPrice(final com.commercetools.history.models.common.Money totalPrice) {
@@ -128,7 +128,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <*  <p>A unique String in the cart to identify this CustomLineItem.</p>>
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
      */
 
     public CustomLineItemBuilder slug(final String slug) {
@@ -137,7 +137,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
 
     public CustomLineItemBuilder quantity(final Integer quantity) {

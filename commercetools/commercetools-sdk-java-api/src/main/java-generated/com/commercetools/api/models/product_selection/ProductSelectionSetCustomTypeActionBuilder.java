@@ -30,7 +30,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>>
+     *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
      */
 
     public ProductSelectionSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>>
+     *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
      */
 
     public ProductSelectionSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ProductSelection.</p>>
+     *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
      */
 
     public ProductSelectionSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ProductSelection.</p>>
+     *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
      */
 
     public ProductSelectionSetCustomTypeActionBuilder fields(

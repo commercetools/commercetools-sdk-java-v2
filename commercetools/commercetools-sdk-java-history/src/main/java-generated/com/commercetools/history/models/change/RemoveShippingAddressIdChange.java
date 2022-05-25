@@ -37,35 +37,35 @@ public interface RemoveShippingAddressIdChange extends Change {
     String REMOVE_SHIPPING_ADDRESS_ID_CHANGE = "RemoveShippingAddressIdChange";
 
     /**
-     <*  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>>
+     *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public List<String> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

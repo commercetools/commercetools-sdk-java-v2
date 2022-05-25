@@ -37,7 +37,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     private com.commercetools.history.models.common.ProductVariantAvailability nextValue;
 
     /**
-     <*  <p>Update action for <code>setVariantAvailability</code></p>>
+     *  <p>Update action for <code>setVariantAvailability</code></p>
      */
 
     public SetVariantAvailabilityChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     <>
+     *
      */
 
     public SetVariantAvailabilityChangeBuilder catalogData(final String catalogData) {
@@ -55,7 +55,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     <>
+     *
      */
 
     public SetVariantAvailabilityChangeBuilder variant(final String variant) {
@@ -64,7 +64,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     <>
+     *
      */
 
     public SetVariantAvailabilityChangeBuilder previousValue(
@@ -76,7 +76,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     <>
+     *
      */
 
     public SetVariantAvailabilityChangeBuilder previousValue(
@@ -86,7 +86,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     <>
+     *
      */
 
     public SetVariantAvailabilityChangeBuilder nextValue(
@@ -97,7 +97,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     <>
+     *
      */
 
     public SetVariantAvailabilityChangeBuilder nextValue(

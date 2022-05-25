@@ -42,49 +42,49 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
     String MESSAGE = "Message";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("sequenceNumber")
     public Long getSequenceNumber();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

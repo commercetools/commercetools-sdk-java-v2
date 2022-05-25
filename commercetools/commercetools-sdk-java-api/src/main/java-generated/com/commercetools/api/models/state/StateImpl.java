@@ -81,7 +81,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the State.</p>>
+     *  <p>Unique identifier of the State.</p>
      */
 
     public String getId() {
@@ -89,7 +89,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the State.</p>>
+     *  <p>Current version of the State.</p>
      */
 
     public Long getVersion() {
@@ -97,7 +97,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the State was initially created.</p>>
+     *  <p>Date and time (UTC) the State was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -105,7 +105,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the State was last updated.</p>>
+     *  <p>Date and time (UTC) the State was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -113,7 +113,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -121,7 +121,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -129,7 +129,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the State.</p>>
+     *  <p>User-defined unique identifier of the State.</p>
      */
 
     public String getKey() {
@@ -137,7 +137,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Indicates to which resource or object types the State is assigned to.</p>>
+     *  <p>Indicates to which resource or object types the State is assigned to.</p>
      */
 
     public com.commercetools.api.models.state.StateTypeEnum getType() {
@@ -145,7 +145,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Name of the State.</p>>
+     *  <p>Name of the State.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -153,7 +153,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Description of the State.</p>>
+     *  <p>Description of the State.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -161,7 +161,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p><code>true</code> for an initial State, the first State in a workflow.</p>>
+     *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
      */
 
     public Boolean getInitial() {
@@ -169,7 +169,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>>
+     *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
      */
 
     public Boolean getBuiltIn() {
@@ -177,7 +177,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <p>Roles the State can fulfill for Reviews and Line Items.</p>>
+     *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
@@ -185,11 +185,11 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     <*  <ul>
-    *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
-    *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
-    *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>>
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateReference> getTransitions() {

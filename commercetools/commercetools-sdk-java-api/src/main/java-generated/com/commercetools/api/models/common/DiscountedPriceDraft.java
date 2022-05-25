@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedPriceDraft {
 
     /**
-     <*  <p>Sets the money value for the discounted price.</p>>
+     *  <p>Sets the money value for the discounted price.</p>
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface DiscountedPriceDraft {
     public Money getValue();
 
     /**
-     <*  <p>Relates the referenced ProductDiscount to the discounted price.</p>>
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
      */
     @NotNull
     @Valid

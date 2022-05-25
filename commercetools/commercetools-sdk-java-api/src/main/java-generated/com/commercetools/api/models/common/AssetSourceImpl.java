@@ -42,7 +42,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <*  <p>URI of the AssetSource.</p>>
+     *  <p>URI of the AssetSource.</p>
      */
 
     public String getUri() {
@@ -50,7 +50,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the AssetSource.</p>>
+     *  <p>User-defined unique identifier of the AssetSource.</p>
      */
 
     public String getKey() {
@@ -58,7 +58,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <*  <p>Width and height of the AssetSource.</p>>
+     *  <p>Width and height of the AssetSource.</p>
      */
 
     public com.commercetools.api.models.common.AssetDimensions getDimensions() {
@@ -66,7 +66,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <*  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>>
+     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
      */
 
     public String getContentType() {

@@ -39,28 +39,28 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     String CUSTOM_LINE_ITEM_STATE_TRANSITION = "CustomLineItemStateTransition";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     public StateReference getFromState();
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid

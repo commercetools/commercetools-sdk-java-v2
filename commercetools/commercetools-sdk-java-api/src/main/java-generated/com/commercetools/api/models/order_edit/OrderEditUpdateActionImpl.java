@@ -31,7 +31,7 @@ public class OrderEditUpdateActionImpl implements OrderEditUpdateAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

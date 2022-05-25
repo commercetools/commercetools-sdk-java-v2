@@ -31,7 +31,7 @@ public class OrderEditResultImpl implements OrderEditResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

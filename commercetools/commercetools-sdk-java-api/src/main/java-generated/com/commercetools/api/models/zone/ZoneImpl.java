@@ -65,7 +65,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the Zone.</p>>
+     *  <p>Unique identifier of the Zone.</p>
      */
 
     public String getId() {
@@ -73,7 +73,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the Zone.</p>>
+     *  <p>Current version of the Zone.</p>
      */
 
     public Long getVersion() {
@@ -81,7 +81,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Zone was initially created.</p>>
+     *  <p>Date and time (UTC) the Zone was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -89,7 +89,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Zone was last updated.</p>>
+     *  <p>Date and time (UTC) the Zone was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -97,7 +97,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -105,7 +105,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -113,7 +113,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Zone.</p>>
+     *  <p>User-defined unique identifier of the Zone.</p>
      */
 
     public String getKey() {
@@ -121,7 +121,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Zone.</p>>
+     *  <p>Name of the Zone.</p>
      */
 
     public String getName() {
@@ -129,7 +129,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     public String getDescription() {
@@ -137,7 +137,7 @@ public class ZoneImpl implements Zone, ModelBase {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {

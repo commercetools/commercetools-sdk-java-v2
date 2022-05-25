@@ -47,7 +47,7 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
     }
 
     /**
-     <*  <p>Update action for <code>setParcelItems</code></p>>
+     *  <p>Update action for <code>setParcelItems</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
@@ -71,7 +71,7 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getNextValue() {
@@ -79,7 +79,7 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getPreviousValue() {

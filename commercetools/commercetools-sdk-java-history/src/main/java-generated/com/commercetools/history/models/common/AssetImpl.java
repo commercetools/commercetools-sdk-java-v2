@@ -47,7 +47,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -55,7 +55,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
@@ -63,7 +63,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getDescription() {
@@ -71,7 +71,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {
@@ -79,7 +79,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {

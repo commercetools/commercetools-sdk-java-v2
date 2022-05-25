@@ -36,21 +36,21 @@ public interface ChangeAmountPlannedChange extends Change {
     String CHANGE_AMOUNT_PLANNED_CHANGE = "ChangeAmountPlannedChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeAmountPlannedChange extends Change {
     public Money getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

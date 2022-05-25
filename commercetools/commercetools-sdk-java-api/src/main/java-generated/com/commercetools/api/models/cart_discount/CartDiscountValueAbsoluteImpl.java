@@ -36,7 +36,7 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
     }
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {

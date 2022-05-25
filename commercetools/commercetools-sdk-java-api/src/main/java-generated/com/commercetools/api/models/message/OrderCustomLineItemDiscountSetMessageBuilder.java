@@ -63,7 +63,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder id(final String id) {
@@ -72,7 +72,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder version(final Long version) {
@@ -81,7 +81,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -90,7 +90,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -99,7 +99,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder lastModifiedBy(
@@ -109,7 +109,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder lastModifiedBy(
@@ -119,7 +119,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder createdBy(
@@ -129,7 +129,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder createdBy(
@@ -139,7 +139,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -148,7 +148,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder resource(
@@ -158,7 +158,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder resource(
@@ -168,7 +168,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -177,7 +177,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -189,7 +189,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -199,7 +199,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder customLineItemId(final String customLineItemId) {
@@ -208,7 +208,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
@@ -218,7 +218,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
@@ -228,7 +228,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
@@ -241,7 +241,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
@@ -255,7 +255,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder withDiscountedPricePerQuantity(
@@ -267,7 +267,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder taxedPrice(
@@ -277,7 +277,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCustomLineItemDiscountSetMessageBuilder taxedPrice(

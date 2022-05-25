@@ -43,7 +43,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getRemovedImageUrls() {
@@ -59,7 +59,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
@@ -67,7 +67,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {

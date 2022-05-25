@@ -40,7 +40,7 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
@@ -56,7 +56,7 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getOldShippingRateInput() {

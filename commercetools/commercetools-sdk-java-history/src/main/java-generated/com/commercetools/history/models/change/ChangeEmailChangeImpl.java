@@ -43,7 +43,7 @@ public class ChangeEmailChangeImpl implements ChangeEmailChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeEmailChangeImpl implements ChangeEmailChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeEmail</code></p>>
+     *  <p>Shape of the action for <code>changeEmail</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeEmailChangeImpl implements ChangeEmailChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeEmailChangeImpl implements ChangeEmailChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

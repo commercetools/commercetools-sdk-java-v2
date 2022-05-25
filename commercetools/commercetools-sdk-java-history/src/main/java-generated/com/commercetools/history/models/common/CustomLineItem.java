@@ -37,14 +37,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomLineItem {
 
     /**
-     <*  <p>The unique ID of this CustomLineItem.</p>>
+     *  <p>The unique ID of this CustomLineItem.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -52,7 +52,7 @@ public interface CustomLineItem {
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface CustomLineItem {
     public Money getMoney();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface CustomLineItem {
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -76,14 +76,14 @@ public interface CustomLineItem {
     public Money getTotalPrice();
 
     /**
-     <*  <p>A unique String in the cart to identify this CustomLineItem.</p>>
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
      */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
     /**
-     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
     @NotNull
     @JsonProperty("quantity")

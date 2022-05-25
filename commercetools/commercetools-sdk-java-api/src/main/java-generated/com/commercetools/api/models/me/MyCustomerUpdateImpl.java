@@ -35,7 +35,7 @@ public class MyCustomerUpdateImpl implements MyCustomerUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class MyCustomerUpdateImpl implements MyCustomerUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.me.MyCustomerUpdateAction> getActions() {

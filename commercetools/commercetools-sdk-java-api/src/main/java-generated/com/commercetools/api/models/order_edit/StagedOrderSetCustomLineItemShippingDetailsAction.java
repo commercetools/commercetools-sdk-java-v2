@@ -35,14 +35,14 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
     String SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS = "setCustomLineItemShippingDetails";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingDetails")

@@ -34,14 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Reservation {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -49,14 +49,14 @@ public interface Reservation {
     public Reference getOwner();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public String getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("checkoutStartedAt")

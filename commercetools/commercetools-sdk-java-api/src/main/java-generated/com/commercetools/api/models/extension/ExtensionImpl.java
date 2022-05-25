@@ -66,7 +66,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the Extension.</p>>
+     *  <p>Unique identifier of the Extension.</p>
      */
 
     public String getId() {
@@ -74,7 +74,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the Extension.</p>>
+     *  <p>Current version of the Extension.</p>
      */
 
     public Long getVersion() {
@@ -82,7 +82,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Extension was initially created.</p>>
+     *  <p>Date and time (UTC) the Extension was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -90,7 +90,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Extension was last updated.</p>>
+     *  <p>Date and time (UTC) the Extension was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -98,7 +98,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -106,7 +106,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -114,7 +114,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Extension.</p>>
+     *  <p>User-defined unique identifier of the Extension.</p>
      */
 
     public String getKey() {
@@ -122,7 +122,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>The configuration for the Extension, including its type, location and authentication details.</p>>
+     *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
      */
 
     public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
@@ -130,7 +130,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Describes what triggers the Extension.</p>>
+     *  <p>Describes what triggers the Extension.</p>
      */
 
     public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
@@ -138,7 +138,7 @@ public class ExtensionImpl implements Extension, ModelBase {
     }
 
     /**
-     <*  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>>
+     *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      */
 
     public Integer getTimeoutInMs() {

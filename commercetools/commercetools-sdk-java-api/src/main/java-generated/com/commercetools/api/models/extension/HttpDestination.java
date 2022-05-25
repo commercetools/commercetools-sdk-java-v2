@@ -33,14 +33,14 @@ public interface HttpDestination extends ExtensionDestination {
     String HTTP = "HTTP";
 
     /**
-     <*  <p>URL to the target destination.</p>>
+     *  <p>URL to the target destination.</p>
      */
     @NotNull
     @JsonProperty("url")
     public String getUrl();
 
     /**
-     <*  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>>
+     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
      */
     @Valid
     @JsonProperty("authentication")

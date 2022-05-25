@@ -46,7 +46,7 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -54,7 +54,7 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setProperty</code> on custom objects</p>>
+     *  <p>Update action for <code>setProperty</code> on custom objects</p>
      */
 
     public String getChange() {
@@ -62,7 +62,7 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     }
 
     /**
-     <*  <p>Value path to the property that was changed</p>>
+     *  <p>Value path to the property that was changed</p>
      */
 
     public String getPath() {
@@ -70,7 +70,7 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {
@@ -78,7 +78,7 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

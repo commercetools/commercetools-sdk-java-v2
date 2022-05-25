@@ -35,7 +35,7 @@ public class StoreSetNameActionImpl implements StoreSetNameAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StoreSetNameActionImpl implements StoreSetNameAction, ModelBase {
     }
 
     /**
-     <*  <p>The updated name of the store</p>>
+     *  <p>The updated name of the store</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

@@ -40,7 +40,7 @@ public class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -56,7 +56,7 @@ public class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction,
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

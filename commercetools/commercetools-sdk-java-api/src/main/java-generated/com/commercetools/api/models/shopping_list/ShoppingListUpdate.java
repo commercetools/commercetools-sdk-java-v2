@@ -33,14 +33,14 @@ public interface ShoppingListUpdate extends
         com.commercetools.api.models.ResourceUpdate<ShoppingListUpdate, ShoppingListUpdateAction, ShoppingListUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

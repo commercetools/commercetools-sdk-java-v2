@@ -34,7 +34,7 @@ public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
     String REMOVE_PRODUCT_SELECTION = "removeProductSelection";
 
     /**
-     <*  <p>A Product Selection to be removed from the current Product Selections of this Store.</p>>
+     *  <p>A Product Selection to be removed from the current Product Selections of this Store.</p>
      */
     @NotNull
     @Valid

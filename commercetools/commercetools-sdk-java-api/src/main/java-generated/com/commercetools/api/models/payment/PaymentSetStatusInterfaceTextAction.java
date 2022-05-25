@@ -32,7 +32,7 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
     String SET_STATUS_INTERFACE_TEXT = "setStatusInterfaceText";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("interfaceText")

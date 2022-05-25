@@ -39,7 +39,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     private java.util.List<com.commercetools.api.models.review.Review> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ReviewPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ReviewPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewPagedQueryResponseBuilder results(final com.commercetools.api.models.review.Review... results) {
@@ -84,7 +84,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.review.Review... results) {
@@ -106,7 +106,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewPagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewPagedQueryResponseBuilder withResults(

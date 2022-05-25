@@ -30,7 +30,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>>
+     *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      */
 
     public ShippingMethodSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
     }
 
     /**
-     <*  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>>
+     *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      */
 
     public ShippingMethodSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ShippingMethod.</p>>
+     *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
      */
 
     public ShippingMethodSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class ShippingMethodSetCustomTypeActionBuilder implements Builder<Shippin
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ShippingMethod.</p>>
+     *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
      */
 
     public ShippingMethodSetCustomTypeActionBuilder fields(

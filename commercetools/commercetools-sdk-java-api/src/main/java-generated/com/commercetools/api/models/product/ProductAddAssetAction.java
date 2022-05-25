@@ -34,28 +34,28 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
     String ADD_ASSET = "addAsset";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -63,7 +63,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
     public AssetDraft getAsset();
 
     /**
-     <*  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>>
+     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
      */
 
     @JsonProperty("position")

@@ -36,21 +36,21 @@ public interface AddDeliveryChange extends Change {
     String ADD_DELIVERY_CHANGE = "AddDeliveryChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addDelivery</code></p>>
+     *  <p>Update action for <code>addDelivery</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface AddDeliveryChange extends Change {
     public DeliveryChangeValue getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

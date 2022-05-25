@@ -27,7 +27,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     private String orderNumber;
 
     /**
-     <>
+     *
      */
 
     public OrderLabelBuilder customerEmail(final String customerEmail) {
@@ -36,7 +36,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLabelBuilder orderNumber(final String orderNumber) {

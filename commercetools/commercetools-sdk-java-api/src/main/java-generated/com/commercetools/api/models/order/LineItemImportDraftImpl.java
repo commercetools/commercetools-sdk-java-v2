@@ -71,7 +71,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>>
+     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
      */
 
     public String getProductId() {
@@ -79,7 +79,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>The product name.</p>>
+     *  <p>The product name.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -87,7 +87,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ProductVariantImportDraft getVariant() {
@@ -95,7 +95,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.PriceDraft getPrice() {
@@ -103,7 +103,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -111,7 +111,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
@@ -119,7 +119,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -127,7 +127,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -135,7 +135,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -143,7 +143,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -151,7 +151,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

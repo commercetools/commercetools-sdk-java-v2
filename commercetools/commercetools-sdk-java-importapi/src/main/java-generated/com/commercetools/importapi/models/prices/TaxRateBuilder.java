@@ -45,7 +45,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     private java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates;
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder id(@Nullable final String id) {
@@ -54,7 +54,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder name(final String name) {
@@ -63,7 +63,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder amount(final Double amount) {
@@ -72,7 +72,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder includedInPrice(final Boolean includedInPrice) {
@@ -81,7 +81,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public TaxRateBuilder country(final String country) {
@@ -90,7 +90,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder state(@Nullable final String state) {
@@ -99,7 +99,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder subRates(@Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
@@ -108,7 +108,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder subRates(
@@ -118,7 +118,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder plusSubRates(@Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
@@ -130,7 +130,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder plusSubRates(
@@ -143,7 +143,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder withSubRates(

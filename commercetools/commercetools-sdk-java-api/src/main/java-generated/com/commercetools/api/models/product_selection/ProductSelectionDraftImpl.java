@@ -39,7 +39,7 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ProductSelection.</p>>
+     *  <p>User-defined unique identifier for the ProductSelection.</p>
      */
 
     public String getKey() {
@@ -47,7 +47,7 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
     }
 
     /**
-     <*  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>>
+     *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -55,7 +55,7 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
     }
 
     /**
-     <*  <p>Custom Fields of this ProductSelection.</p>>
+     *  <p>Custom Fields of this ProductSelection.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

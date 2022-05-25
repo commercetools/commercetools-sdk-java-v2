@@ -34,7 +34,7 @@ public interface CustomerAddAddressAction extends CustomerUpdateAction {
     String ADD_ADDRESS = "addAddress";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

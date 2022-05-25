@@ -30,7 +30,7 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setAuthorName</code></p>>
+     *  <p>Shape of the action for <code>setAuthorName</code></p>
      */
 
     public SetAuthorNameChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetAuthorNameChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetAuthorNameChangeBuilder nextValue(final String nextValue) {

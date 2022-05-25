@@ -33,35 +33,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Parcel {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("items")

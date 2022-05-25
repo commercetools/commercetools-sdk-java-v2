@@ -48,28 +48,28 @@ public interface ProductProjection
         extends BaseResource, ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection> {
 
     /**
-     <*  <p>The unique ID of the Product.</p>>
+     *  <p>The unique ID of the Product.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>The current version of the Product.</p>>
+     *  <p>The current version of the Product.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>User-specific unique identifier of the Product.</p>>
+     *  <p>User-specific unique identifier of the Product.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -77,7 +77,7 @@ public interface ProductProjection
     public ProductTypeReference getProductType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -85,14 +85,14 @@ public interface ProductProjection
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -100,7 +100,7 @@ public interface ProductProjection
     public LocalizedString getSlug();
 
     /**
-     <*  <p>References to categories the product is in.</p>>
+     *  <p>References to categories the product is in.</p>
      */
     @NotNull
     @Valid
@@ -108,56 +108,56 @@ public interface ProductProjection
     public List<CategoryReference> getCategories();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("categoryOrderHints")
     public CategoryOrderHints getCategoryOrderHints();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("hasStagedChanges")
     public Boolean getHasStagedChanges();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("published")
     public Boolean getPublished();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -165,7 +165,7 @@ public interface ProductProjection
     public ProductVariant getMasterVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -173,21 +173,21 @@ public interface ProductProjection
     public List<ProductVariant> getVariants();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
      */
     @Valid
     @JsonProperty("reviewRatingStatistics")

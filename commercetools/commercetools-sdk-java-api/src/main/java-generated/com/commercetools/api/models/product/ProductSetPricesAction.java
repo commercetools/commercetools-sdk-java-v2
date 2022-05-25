@@ -34,21 +34,21 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     String SET_PRICES = "setPrices";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -56,7 +56,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     public List<PriceDraft> getPrices();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

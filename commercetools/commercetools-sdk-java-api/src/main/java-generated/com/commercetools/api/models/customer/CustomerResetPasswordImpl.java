@@ -38,7 +38,7 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getTokenValue() {
@@ -46,7 +46,7 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getNewPassword() {
@@ -54,7 +54,7 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {

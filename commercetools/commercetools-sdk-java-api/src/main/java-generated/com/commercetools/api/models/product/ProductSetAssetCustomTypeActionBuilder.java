@@ -45,7 +45,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetCustomTypeActionBuilder variantId(@Nullable final Long variantId) {
@@ -54,7 +54,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetCustomTypeActionBuilder sku(@Nullable final String sku) {
@@ -63,7 +63,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetCustomTypeActionBuilder staged(@Nullable final Boolean staged) {
@@ -72,7 +72,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
@@ -81,7 +81,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
@@ -90,7 +90,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder type(
@@ -100,7 +100,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder type(
@@ -110,7 +110,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder fields(
@@ -120,7 +120,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
      */
 
     public ProductSetAssetCustomTypeActionBuilder fields(

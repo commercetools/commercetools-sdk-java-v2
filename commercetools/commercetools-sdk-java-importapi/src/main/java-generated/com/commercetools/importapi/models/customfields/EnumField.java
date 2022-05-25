@@ -32,7 +32,7 @@ public interface EnumField extends CustomField {
     String ENUM = "Enum";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

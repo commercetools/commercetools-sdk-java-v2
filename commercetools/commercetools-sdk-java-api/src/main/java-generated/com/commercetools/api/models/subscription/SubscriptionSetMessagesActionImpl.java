@@ -36,7 +36,7 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {

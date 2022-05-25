@@ -25,7 +25,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
     private com.commercetools.api.models.subscription.Destination destination;
 
     /**
-     <>
+     *
      */
 
     public SubscriptionChangeDestinationActionBuilder destination(
@@ -35,7 +35,7 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionChangeDestinationActionBuilder destination(

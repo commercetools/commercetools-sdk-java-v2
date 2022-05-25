@@ -37,7 +37,7 @@ public class ProductImportRequestImpl implements ProductImportRequest, ModelBase
     }
 
     /**
-     <*  <p>The type of the import resource.</p>>
+     *  <p>The type of the import resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
@@ -45,7 +45,7 @@ public class ProductImportRequestImpl implements ProductImportRequest, ModelBase
     }
 
     /**
-     <*  <p>The product import resources of this request.</p>>
+     *  <p>The product import resources of this request.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.products.ProductImport> getResources() {

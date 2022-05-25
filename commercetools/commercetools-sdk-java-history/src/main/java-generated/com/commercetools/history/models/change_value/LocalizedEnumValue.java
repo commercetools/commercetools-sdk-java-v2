@@ -33,14 +33,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LocalizedEnumValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

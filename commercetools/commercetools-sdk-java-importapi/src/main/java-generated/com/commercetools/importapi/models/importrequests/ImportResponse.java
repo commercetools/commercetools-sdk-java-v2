@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportResponse {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

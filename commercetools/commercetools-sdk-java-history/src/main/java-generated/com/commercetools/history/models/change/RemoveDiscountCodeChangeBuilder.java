@@ -28,7 +28,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     private com.commercetools.history.models.common.DiscountCodeInfo previousValue;
 
     /**
-     <*  <p>Update action for <code>removeDiscountCode</code></p>>
+     *  <p>Update action for <code>removeDiscountCode</code></p>
      */
 
     public RemoveDiscountCodeChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveDiscountCodeChangeBuilder previousValue(
@@ -48,7 +48,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveDiscountCodeChangeBuilder previousValue(

@@ -48,7 +48,7 @@ public interface CartDiscountUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<CartDiscountUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

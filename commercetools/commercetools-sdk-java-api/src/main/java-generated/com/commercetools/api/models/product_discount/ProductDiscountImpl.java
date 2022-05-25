@@ -89,7 +89,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the ProductDiscount.</p>>
+     *  <p>Unique identifier of the ProductDiscount.</p>
      */
 
     public String getId() {
@@ -97,7 +97,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the ProductDiscount.</p>>
+     *  <p>Current version of the ProductDiscount.</p>
      */
 
     public Long getVersion() {
@@ -105,7 +105,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the ProductDiscount was initially created.</p>>
+     *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -113,7 +113,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the ProductDiscount was last updated.</p>>
+     *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -121,7 +121,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -129,7 +129,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -137,7 +137,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Name of the ProductDiscount.</p>>
+     *  <p>Name of the ProductDiscount.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -145,7 +145,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ProductDiscount.</p>>
+     *  <p>User-defined unique identifier of the ProductDiscount.</p>
      */
 
     public String getKey() {
@@ -153,7 +153,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Description of the ProductDiscount.</p>>
+     *  <p>Description of the ProductDiscount.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -161,7 +161,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Type of Discount and its corresponding value.</p>>
+     *  <p>Type of Discount and its corresponding value.</p>
      */
 
     public com.commercetools.api.models.product_discount.ProductDiscountValue getValue() {
@@ -169,7 +169,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Valid ProductDiscount predicate.</p>>
+     *  <p>Valid ProductDiscount predicate.</p>
      */
 
     public String getPredicate() {
@@ -177,7 +177,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>>
+     *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
      */
 
     public String getSortOrder() {
@@ -185,7 +185,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>>
+     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
      */
 
     public Boolean getIsActive() {
@@ -193,7 +193,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>>
+     *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
@@ -201,7 +201,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>>
+     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -209,7 +209,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>>
+     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {

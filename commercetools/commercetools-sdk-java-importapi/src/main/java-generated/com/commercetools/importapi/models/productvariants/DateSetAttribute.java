@@ -33,7 +33,7 @@ public interface DateSetAttribute extends Attribute {
     String DATE_SET = "date-set";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

@@ -47,7 +47,7 @@ public class ChangeAttributeConstraintChangeImpl implements ChangeAttributeConst
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeAttributeConstraintChangeImpl implements ChangeAttributeConst
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeAttributeConstraintChangeImpl implements ChangeAttributeConst
     }
 
     /**
-     <*  <p>name of the updated attribute</p>>
+     *  <p>name of the updated attribute</p>
      */
 
     public String getAttributeName() {
@@ -71,7 +71,7 @@ public class ChangeAttributeConstraintChangeImpl implements ChangeAttributeConst
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.AttributeConstraintEnum getPreviousValue() {
@@ -79,7 +79,7 @@ public class ChangeAttributeConstraintChangeImpl implements ChangeAttributeConst
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.AttributeConstraintEnum getNextValue() {

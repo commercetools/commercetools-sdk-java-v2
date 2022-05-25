@@ -36,7 +36,7 @@ public class OrderAddItemShippingAddressActionImpl implements OrderAddItemShippi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderAddItemShippingAddressActionImpl implements OrderAddItemShippi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

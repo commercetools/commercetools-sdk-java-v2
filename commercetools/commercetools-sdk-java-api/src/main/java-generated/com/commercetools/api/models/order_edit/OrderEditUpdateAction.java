@@ -39,7 +39,7 @@ public interface OrderEditUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<OrderEditUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

@@ -28,7 +28,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     private com.commercetools.history.models.common.DiscountCodeState state;
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -38,7 +38,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeInfoBuilder discountCode(final com.commercetools.history.models.common.Reference discountCode) {
@@ -47,7 +47,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeInfoBuilder state(final com.commercetools.history.models.common.DiscountCodeState state) {

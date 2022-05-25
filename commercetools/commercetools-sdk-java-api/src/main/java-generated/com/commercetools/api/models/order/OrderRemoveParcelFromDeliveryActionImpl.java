@@ -35,7 +35,7 @@ public class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemoveParce
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemoveParce
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {

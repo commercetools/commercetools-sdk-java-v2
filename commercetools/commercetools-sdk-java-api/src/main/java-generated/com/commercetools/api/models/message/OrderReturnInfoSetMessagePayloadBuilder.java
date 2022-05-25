@@ -27,7 +27,7 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoSetMessagePayloadBuilder returnInfo(
@@ -37,7 +37,7 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoSetMessagePayloadBuilder returnInfo(
@@ -47,7 +47,7 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(
@@ -60,7 +60,7 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(
@@ -73,7 +73,7 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoSetMessagePayloadBuilder withReturnInfo(

@@ -35,7 +35,7 @@ public class ShippingMethodSetDescriptionActionImpl implements ShippingMethodSet
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ShippingMethodSetDescriptionActionImpl implements ShippingMethodSet
     }
 
     /**
-     <>
+     *
      */
 
     public String getDescription() {

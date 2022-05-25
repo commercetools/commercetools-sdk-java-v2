@@ -46,7 +46,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.MoneyType getType() {
@@ -54,7 +54,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getFractionDigits() {
@@ -62,7 +62,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCentAmount() {
@@ -70,7 +70,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     <*  <p>The currency code compliant to ISO 4217.</p>>
+     *  <p>The currency code compliant to ISO 4217.</p>
      */
 
     public String getCurrencyCode() {
@@ -78,7 +78,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getPreciseAmount() {

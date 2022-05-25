@@ -33,14 +33,14 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     String SET_RETURN_PAYMENT_STATE = "setReturnPaymentState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("paymentState")

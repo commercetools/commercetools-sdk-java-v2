@@ -60,7 +60,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder resource(
@@ -155,7 +155,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder resource(
@@ -165,7 +165,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,7 +174,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,7 +186,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,7 +196,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder category(
@@ -206,7 +206,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
 
     public ProductRemovedFromCategoryMessageBuilder category(
@@ -216,7 +216,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessageBuilder staged(final Boolean staged) {

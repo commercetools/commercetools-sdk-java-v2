@@ -33,7 +33,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder transactionId(final String transactionId) {
@@ -42,7 +42,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     }
 
     /**
-     <*  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>>
+     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     }
 
     /**
-     <*  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>>
+     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Transaction.</p>>
+     *  <p>Sets the Custom Fields fields for the Transaction.</p>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Transaction.</p>>
+     *  <p>Sets the Custom Fields fields for the Transaction.</p>
      */
 
     public PaymentSetTransactionCustomTypeActionBuilder fields(

@@ -31,7 +31,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
     private com.commercetools.history.models.common.LineItem nextValue;
 
     /**
-     <>
+     *
      */
 
     public AddShoppingListLineItemChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
     }
 
     /**
-     <>
+     *
      */
 
     public AddShoppingListLineItemChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
     }
 
     /**
-     <>
+     *
      */
 
     public AddShoppingListLineItemChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
     }
 
     /**
-     <>
+     *
      */
 
     public AddShoppingListLineItemChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class AddShoppingListLineItemChangeBuilder implements Builder<AddShopping
     }
 
     /**
-     <>
+     *
      */
 
     public AddShoppingListLineItemChangeBuilder nextValue(

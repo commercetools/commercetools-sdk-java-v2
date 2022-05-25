@@ -28,7 +28,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     private com.commercetools.history.models.common.Reference state;
 
     /**
-     <>
+     *
      */
 
     public ItemStateBuilder quantity(final Integer quantity) {
@@ -37,7 +37,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     <>
+     *
      */
 
     public ItemStateBuilder state(
@@ -47,7 +47,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     <>
+     *
      */
 
     public ItemStateBuilder state(final com.commercetools.history.models.common.Reference state) {

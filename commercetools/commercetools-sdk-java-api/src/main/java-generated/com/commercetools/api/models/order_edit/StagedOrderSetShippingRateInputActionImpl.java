@@ -36,7 +36,7 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {

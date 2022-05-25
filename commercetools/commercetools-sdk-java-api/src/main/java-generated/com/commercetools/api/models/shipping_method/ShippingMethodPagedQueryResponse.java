@@ -33,35 +33,35 @@ public interface ShippingMethodPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ShippingMethod> {
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -26,7 +26,7 @@ public class CartDiscountSetValidFromActionBuilder implements Builder<CartDiscou
     private java.time.ZonedDateTime validFrom;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public CartDiscountSetValidFromActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {

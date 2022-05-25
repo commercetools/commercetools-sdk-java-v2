@@ -36,7 +36,7 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ItemShippingTarget> getTargets() {
@@ -44,7 +44,7 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
     }
 
     /**
-     <*  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>>
+     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
      */
 
     public Boolean getValid() {

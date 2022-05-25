@@ -30,7 +30,7 @@ public class HitBuilder implements Builder<Hit> {
     private Double relevance;
 
     /**
-     <*  <p>Unique identifier of the Order.</p>>
+     *  <p>Unique identifier of the Order.</p>
      */
 
     public HitBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class HitBuilder implements Builder<Hit> {
     }
 
     /**
-     <*  <p>Current version of the Order.</p>>
+     *  <p>Current version of the Order.</p>
      */
 
     public HitBuilder version(final Long version) {
@@ -48,7 +48,7 @@ public class HitBuilder implements Builder<Hit> {
     }
 
     /**
-     <*  <p>The higher the value is, the more relevant the hit is for the search request.</p>>
+     *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
      */
 
     public HitBuilder relevance(final Double relevance) {

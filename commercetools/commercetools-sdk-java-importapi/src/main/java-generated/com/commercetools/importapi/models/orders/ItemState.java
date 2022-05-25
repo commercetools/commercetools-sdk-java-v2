@@ -33,14 +33,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemState {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
 
     /**
-     <*  <p>Maps to <code>ItemState.state</code>.</p>>
+     *  <p>Maps to <code>ItemState.state</code>.</p>
      */
     @NotNull
     @Valid

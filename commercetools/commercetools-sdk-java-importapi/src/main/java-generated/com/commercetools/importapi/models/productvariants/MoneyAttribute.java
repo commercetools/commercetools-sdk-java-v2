@@ -34,7 +34,7 @@ public interface MoneyAttribute extends Attribute {
     String MONEY = "money";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

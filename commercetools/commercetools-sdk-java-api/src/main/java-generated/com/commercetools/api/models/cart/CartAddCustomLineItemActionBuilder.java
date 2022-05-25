@@ -45,8 +45,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartAddCustomLineItemActionBuilder money(
@@ -56,8 +56,8 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
@@ -66,7 +66,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public CartAddCustomLineItemActionBuilder name(
@@ -76,7 +76,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public CartAddCustomLineItemActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -85,7 +85,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddCustomLineItemActionBuilder quantity(final Long quantity) {
@@ -94,7 +94,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddCustomLineItemActionBuilder slug(final String slug) {
@@ -103,7 +103,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
@@ -115,7 +115,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
@@ -125,7 +125,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public CartAddCustomLineItemActionBuilder custom(
@@ -135,7 +135,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public CartAddCustomLineItemActionBuilder custom(
@@ -145,7 +145,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(
@@ -156,7 +156,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(

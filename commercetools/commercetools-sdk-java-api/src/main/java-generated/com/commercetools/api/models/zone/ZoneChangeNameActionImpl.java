@@ -35,7 +35,7 @@ public class ZoneChangeNameActionImpl implements ZoneChangeNameAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ZoneChangeNameActionImpl implements ZoneChangeNameAction, ModelBase
     }
 
     /**
-     <*  <p>New name of the Zone.</p>>
+     *  <p>New name of the Zone.</p>
      */
 
     public String getName() {

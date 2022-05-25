@@ -28,7 +28,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
     private java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions;
 
     /**
-     <*  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public StateUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the State.</p>>
+     *  <p>Update actions to be performed on the State.</p>
      */
 
     public StateUpdateBuilder actions(final com.commercetools.api.models.state.StateUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the State.</p>>
+     *  <p>Update actions to be performed on the State.</p>
      */
 
     public StateUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the State.</p>>
+     *  <p>Update actions to be performed on the State.</p>
      */
 
     public StateUpdateBuilder plusActions(final com.commercetools.api.models.state.StateUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the State.</p>>
+     *  <p>Update actions to be performed on the State.</p>
      */
 
     public StateUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the State.</p>>
+     *  <p>Update actions to be performed on the State.</p>
      */
 
     public StateUpdateBuilder withActions(

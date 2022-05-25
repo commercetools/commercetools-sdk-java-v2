@@ -40,7 +40,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     private Boolean force;
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
@@ -50,7 +50,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
@@ -60,7 +60,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
@@ -70,7 +70,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
@@ -80,7 +80,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics(final Boolean oldIncludedInStatistics) {
@@ -89,7 +89,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics(final Boolean newIncludedInStatistics) {
@@ -98,7 +98,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
@@ -108,7 +108,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
@@ -118,7 +118,7 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewStateTransitionMessagePayloadBuilder force(final Boolean force) {

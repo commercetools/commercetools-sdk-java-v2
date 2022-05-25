@@ -43,7 +43,7 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
     }
 
     /**
-     <*  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>>
+     *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getNextValue() {

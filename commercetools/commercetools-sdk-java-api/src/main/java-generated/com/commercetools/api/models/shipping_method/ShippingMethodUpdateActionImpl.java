@@ -31,7 +31,7 @@ public class ShippingMethodUpdateActionImpl implements ShippingMethodUpdateActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

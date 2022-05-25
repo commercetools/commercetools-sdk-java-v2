@@ -34,21 +34,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Delivery {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public String getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -56,7 +56,7 @@ public interface Delivery {
     public List<DeliveryItem> getItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -64,14 +64,14 @@ public interface Delivery {
     public List<Parcel> getParcels();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
     @Valid
     @JsonProperty("custom")

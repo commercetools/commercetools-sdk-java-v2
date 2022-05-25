@@ -42,7 +42,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getUri() {
@@ -50,7 +50,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -58,7 +58,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.AssetDimensions getDimensions() {
@@ -66,7 +66,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getContentType() {

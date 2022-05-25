@@ -29,7 +29,7 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
     private java.lang.Object resource;
 
     /**
-     <>
+     *
      */
 
     public ResourceDeletionErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceDeletionErrorBuilder resource(@Nullable final java.lang.Object resource) {

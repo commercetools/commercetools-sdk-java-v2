@@ -39,14 +39,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItemImportDraft {
 
     /**
-     <*  <p>Maps to <code>LineItem.productId</code>.</p>>
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
      */
     @Valid
     @JsonProperty("product")
     public ProductKeyReference getProduct();
 
     /**
-     <*  <p>Maps to <code>LineItem.name</code>.</p>>
+     *  <p>Maps to <code>LineItem.name</code>.</p>
      */
     @NotNull
     @Valid
@@ -54,7 +54,7 @@ public interface LineItemImportDraft {
     public LocalizedString getName();
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
      */
     @NotNull
     @Valid
@@ -62,7 +62,7 @@ public interface LineItemImportDraft {
     public LineItemProductVariantImportDraft getVariant();
 
     /**
-     <*  <p>Maps to <code>LineItem.price</code>.</p>>
+     *  <p>Maps to <code>LineItem.price</code>.</p>
      */
     @NotNull
     @Valid
@@ -70,42 +70,42 @@ public interface LineItemImportDraft {
     public LineItemPrice getPrice();
 
     /**
-     <*  <p>Maps to <code>LineItem.quantity</code>.</p>>
+     *  <p>Maps to <code>LineItem.quantity</code>.</p>
      */
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
 
     /**
-     <*  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>>
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelKeyReference getSupplyChannel();
 
     /**
-     <*  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>>
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
      */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelKeyReference getDistributionChannel();
 
     /**
-     <*  <p>Maps to <code>LineItem.taxRate</code>.</p>>
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
     /**
-     <*  <p>Maps to LineItem.shippingDetails.</p>>
+     *  <p>Maps to LineItem.shippingDetails.</p>
      */
     @Valid
     @JsonProperty("shippingDetails")

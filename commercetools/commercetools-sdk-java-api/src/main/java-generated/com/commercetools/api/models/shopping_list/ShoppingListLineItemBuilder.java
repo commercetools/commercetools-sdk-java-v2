@@ -57,7 +57,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     private Long variantId;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
@@ -66,7 +66,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public ShoppingListLineItemBuilder custom(
@@ -76,7 +76,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public ShoppingListLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -85,7 +85,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemBuilder deactivatedAt(@Nullable final java.time.ZonedDateTime deactivatedAt) {
@@ -94,7 +94,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>Unique identifier of the ShoppingListLineItem.</p>>
+     *  <p>Unique identifier of the ShoppingListLineItem.</p>
      */
 
     public ShoppingListLineItemBuilder id(final String id) {
@@ -103,7 +103,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ShoppingListLineItemBuilder name(
@@ -113,7 +113,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ShoppingListLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -122,7 +122,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemBuilder productId(final String productId) {
@@ -131,7 +131,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ShoppingListLineItemBuilder productSlug(
@@ -141,7 +141,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ShoppingListLineItemBuilder productSlug(
@@ -151,7 +151,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>Reference to a ProductType.</p>>
+     *  <p>Reference to a ProductType.</p>
      */
 
     public ShoppingListLineItemBuilder productType(
@@ -162,7 +162,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <*  <p>Reference to a ProductType.</p>>
+     *  <p>Reference to a ProductType.</p>
      */
 
     public ShoppingListLineItemBuilder productType(
@@ -172,7 +172,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemBuilder quantity(final Integer quantity) {
@@ -181,7 +181,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemBuilder variant(
@@ -191,7 +191,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemBuilder variant(
@@ -201,7 +201,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemBuilder variantId(@Nullable final Long variantId) {

@@ -35,14 +35,14 @@ public interface ProductDiscountReference
     String PRODUCT_DISCOUNT = "product-discount";
 
     /**
-     <*  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
      */
     @Valid
     @JsonProperty("obj")
     public ProductDiscount getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced ProductDiscount.</p>>
+     *  <p>Unique identifier of the referenced ProductDiscount.</p>
      */
     @NotNull
     @JsonProperty("id")

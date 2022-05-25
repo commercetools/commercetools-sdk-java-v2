@@ -66,7 +66,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder id(final String id) {
@@ -75,7 +75,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder version(final Long version) {
@@ -84,7 +84,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -93,7 +93,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -102,7 +102,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedBy(
@@ -112,7 +112,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder lastModifiedBy(
@@ -122,7 +122,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder createdBy(
@@ -132,7 +132,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder createdBy(
@@ -142,7 +142,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -151,7 +151,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -160,7 +160,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ParcelItemsUpdatedMessageBuilder resource(
@@ -170,7 +170,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -179,7 +179,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -191,7 +191,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -201,7 +201,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder parcelId(final String parcelId) {
@@ -210,7 +210,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder deliveryId(@Nullable final String deliveryId) {
@@ -219,7 +219,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -228,7 +228,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder items(
@@ -238,7 +238,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -250,7 +250,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder plusItems(
@@ -263,7 +263,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder withItems(
@@ -274,7 +274,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder oldItems(
@@ -284,7 +284,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder oldItems(
@@ -294,7 +294,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder plusOldItems(
@@ -307,7 +307,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder plusOldItems(
@@ -320,7 +320,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessageBuilder withOldItems(

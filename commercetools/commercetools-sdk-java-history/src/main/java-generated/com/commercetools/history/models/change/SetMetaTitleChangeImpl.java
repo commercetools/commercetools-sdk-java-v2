@@ -43,7 +43,7 @@ public class SetMetaTitleChangeImpl implements SetMetaTitleChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetMetaTitleChangeImpl implements SetMetaTitleChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>setMetaTitle</code></p>>
+     *  <p>Shape of the action for <code>setMetaTitle</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetMetaTitleChangeImpl implements SetMetaTitleChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetMetaTitleChangeImpl implements SetMetaTitleChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

@@ -30,7 +30,7 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setInterfaceId</code></p>>
+     *  <p>Shape of the action for <code>setInterfaceId</code></p>
      */
 
     public SetInterfaceIdChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetInterfaceIdChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetInterfaceIdChangeBuilder nextValue(final String nextValue) {

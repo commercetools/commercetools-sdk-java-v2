@@ -50,7 +50,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     <*  <p>Update action for <code>setVariantAvailability</code></p>>
+     *  <p>Update action for <code>setVariantAvailability</code></p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -74,7 +74,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -82,7 +82,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ProductVariantAvailability getPreviousValue() {
@@ -90,7 +90,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ProductVariantAvailability getNextValue() {

@@ -30,7 +30,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +39,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(
@@ -51,7 +51,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetLineItemTotalPriceActionBuilder externalTotalPrice(

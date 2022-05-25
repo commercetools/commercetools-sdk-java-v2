@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingImagesMeta {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface MissingImagesMeta {
     public MissingImagesProductLevel getProductLevel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface MissingImagesMeta {
     public MissingImagesVariantLevel getVariantLevel();
 
     /**
-     <*  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>>
+     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
      */
     @NotNull
     @JsonProperty("threshold")

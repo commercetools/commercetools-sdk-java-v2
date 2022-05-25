@@ -36,7 +36,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder items(
@@ -46,7 +46,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder items(
@@ -56,7 +56,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder plusItems(
@@ -69,7 +69,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder plusItems(
@@ -82,7 +82,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder withItems(
@@ -93,7 +93,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder address(
@@ -103,7 +103,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder address(
@@ -113,7 +113,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder parcels(
@@ -123,7 +123,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder parcels(
@@ -133,7 +133,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder plusParcels(
@@ -146,7 +146,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder plusParcels(
@@ -159,7 +159,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDeliveryActionBuilder withParcels(
@@ -170,7 +170,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public StagedOrderAddDeliveryActionBuilder custom(
@@ -180,7 +180,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public StagedOrderAddDeliveryActionBuilder custom(

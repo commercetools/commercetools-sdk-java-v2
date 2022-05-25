@@ -34,7 +34,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     private java.util.List<com.commercetools.history.models.common.AssetSource> previousValue;
 
     /**
-     <*  <p>Update action for <code>setAssetSources</code></p>>
+     *  <p>Update action for <code>setAssetSources</code></p>
      */
 
     public SetAssetSourcesChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder asset(
@@ -53,7 +53,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder asset(
@@ -63,7 +63,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder nextValue(
@@ -73,7 +73,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder nextValue(
@@ -83,7 +83,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder plusNextValue(
@@ -96,7 +96,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder plusNextValue(
@@ -109,7 +109,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder withNextValue(
@@ -120,7 +120,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder previousValue(
@@ -130,7 +130,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder previousValue(
@@ -140,7 +140,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder plusPreviousValue(
@@ -153,7 +153,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder plusPreviousValue(
@@ -166,7 +166,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetSourcesChangeBuilder withPreviousValue(

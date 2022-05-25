@@ -47,7 +47,7 @@ public class SetSearchKeywordsChangeImpl implements SetSearchKeywordsChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetSearchKeywordsChangeImpl implements SetSearchKeywordsChange, Mod
     }
 
     /**
-     <*  <p>Update action for <code>setSearchKeywords</code></p>>
+     *  <p>Update action for <code>setSearchKeywords</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetSearchKeywordsChangeImpl implements SetSearchKeywordsChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class SetSearchKeywordsChangeImpl implements SetSearchKeywordsChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.SearchKeywords getPreviousValue() {
@@ -79,7 +79,7 @@ public class SetSearchKeywordsChangeImpl implements SetSearchKeywordsChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.SearchKeywords getNextValue() {

@@ -36,21 +36,21 @@ public interface AddPaymentChange extends Change {
     String ADD_PAYMENT_CHANGE = "AddPaymentChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>>
+     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface AddPaymentChange extends Change {
     public PaymentInfo getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

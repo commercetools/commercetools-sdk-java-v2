@@ -24,7 +24,7 @@ public class StateChangeInitialActionBuilder implements Builder<StateChangeIniti
     private Boolean initial;
 
     /**
-     <*  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>>
+     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
      */
 
     public StateChangeInitialActionBuilder initial(final Boolean initial) {

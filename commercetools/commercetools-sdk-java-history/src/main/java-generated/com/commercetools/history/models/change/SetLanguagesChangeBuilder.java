@@ -30,7 +30,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     private java.util.List<String> nextValue;
 
     /**
-     <*  <p>Update action for <code>setLanguages</code> on stores</p>>
+     *  <p>Update action for <code>setLanguages</code> on stores</p>
      */
 
     public SetLanguagesChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetLanguagesChangeBuilder previousValue(final String... previousValue) {
@@ -48,7 +48,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetLanguagesChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -57,7 +57,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetLanguagesChangeBuilder plusPreviousValue(final String... previousValue) {
@@ -69,7 +69,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetLanguagesChangeBuilder nextValue(final String... nextValue) {
@@ -78,7 +78,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetLanguagesChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -87,7 +87,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetLanguagesChangeBuilder plusNextValue(final String... nextValue) {

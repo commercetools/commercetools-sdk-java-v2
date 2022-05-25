@@ -29,7 +29,7 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
     private String password;
 
     /**
-     <>
+     *
      */
 
     public CustomerSetAuthenticationModeActionBuilder authMode(
@@ -39,7 +39,7 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
     }
 
     /**
-     <*  <p>Required when <code>authMode</code> is <code>Password</code></p>>
+     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
      */
 
     public CustomerSetAuthenticationModeActionBuilder password(@Nullable final String password) {

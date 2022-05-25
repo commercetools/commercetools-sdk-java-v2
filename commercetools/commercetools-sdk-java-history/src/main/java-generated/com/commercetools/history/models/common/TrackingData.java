@@ -34,35 +34,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TrackingData {
 
     /**
-     <*  <p>The ID to track one parcel.</p>>
+     *  <p>The ID to track one parcel.</p>
      */
     @NotNull
     @JsonProperty("trackingId")
     public String getTrackingId();
 
     /**
-     <*  <p>The carrier that delivers the parcel.</p>>
+     *  <p>The carrier that delivers the parcel.</p>
      */
     @NotNull
     @JsonProperty("carrier")
     public String getCarrier();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("provider")
     public String getProvider();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("providerTransaction")
     public String getProviderTransaction();
 
     /**
-     <*  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>>
+     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
      */
     @NotNull
     @JsonProperty("isReturn")

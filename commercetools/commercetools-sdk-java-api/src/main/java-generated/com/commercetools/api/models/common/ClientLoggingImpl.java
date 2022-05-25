@@ -43,7 +43,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     <*  <p><code>id</code> of the APIClient which created the resource.</p>>
+     *  <p><code>id</code> of the APIClient which created the resource.</p>
      */
 
     public String getClientId() {
@@ -51,7 +51,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
      */
 
     public String getExternalUserId() {
@@ -59,7 +59,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -67,7 +67,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     <*  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>>
+     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
      */
 
     public String getAnonymousId() {

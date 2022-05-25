@@ -32,7 +32,7 @@ public interface LocalizedEnumField extends CustomField {
     String LOCALIZED_ENUM = "LocalizedEnum";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

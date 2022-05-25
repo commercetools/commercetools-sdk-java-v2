@@ -71,7 +71,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -79,7 +79,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
@@ -87,7 +87,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <*  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>>
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -95,7 +95,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -103,7 +103,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ShoppingList.</p>>
+     *  <p>User-defined unique identifier for the ShoppingList.</p>
      */
 
     public String getKey() {
@@ -111,7 +111,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems() {
@@ -119,7 +119,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -127,7 +127,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <*  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -135,7 +135,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems() {
@@ -143,7 +143,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <*  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     public String getAnonymousId() {
@@ -151,7 +151,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

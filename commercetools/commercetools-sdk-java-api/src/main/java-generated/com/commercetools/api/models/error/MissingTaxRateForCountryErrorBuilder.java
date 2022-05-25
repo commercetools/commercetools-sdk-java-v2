@@ -37,7 +37,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     private String state;
 
     /**
-     <>
+     *
      */
 
     public MissingTaxRateForCountryErrorBuilder message(final String message) {
@@ -46,7 +46,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public MissingTaxRateForCountryErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -55,7 +55,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public MissingTaxRateForCountryErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -67,7 +67,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public MissingTaxRateForCountryErrorBuilder taxCategoryId(final String taxCategoryId) {
@@ -76,7 +76,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public MissingTaxRateForCountryErrorBuilder country(@Nullable final String country) {
@@ -85,7 +85,7 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public MissingTaxRateForCountryErrorBuilder state(@Nullable final String state) {

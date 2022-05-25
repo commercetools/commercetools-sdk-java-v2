@@ -35,7 +35,7 @@ public class PublishChangeImpl implements PublishChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class PublishChangeImpl implements PublishChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {

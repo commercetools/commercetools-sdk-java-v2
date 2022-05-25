@@ -25,7 +25,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ExtensionChangeTriggersActionBuilder triggers(
@@ -35,7 +35,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ExtensionChangeTriggersActionBuilder triggers(
@@ -45,7 +45,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ExtensionChangeTriggersActionBuilder plusTriggers(
@@ -58,7 +58,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ExtensionChangeTriggersActionBuilder plusTriggers(
@@ -71,7 +71,7 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ExtensionChangeTriggersActionBuilder withTriggers(

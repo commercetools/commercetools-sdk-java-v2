@@ -39,7 +39,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder id(final String id) {
@@ -48,7 +48,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -57,7 +57,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder measurements(
@@ -68,7 +68,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder measurements(
@@ -78,7 +78,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder trackingData(
@@ -88,7 +88,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder trackingData(
@@ -98,7 +98,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder items(@Nullable final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -107,7 +107,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder items(
@@ -117,7 +117,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder plusItems(@Nullable final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -129,7 +129,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder plusItems(
@@ -142,7 +142,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelBuilder withItems(

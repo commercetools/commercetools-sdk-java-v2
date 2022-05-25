@@ -98,7 +98,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the Review.</p>>
+     *  <p>Unique identifier of the Review.</p>
      */
 
     public String getId() {
@@ -106,7 +106,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the review.</p>>
+     *  <p>The current version of the review.</p>
      */
 
     public Long getVersion() {
@@ -114,7 +114,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -122,7 +122,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -130,7 +130,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -138,7 +138,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -146,7 +146,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Review.</p>>
+     *  <p>User-defined unique identifier of the Review.</p>
      */
 
     public String getKey() {
@@ -154,7 +154,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getUniquenessValue() {
@@ -162,7 +162,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {
@@ -170,7 +170,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAuthorName() {
@@ -178,7 +178,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getTitle() {
@@ -186,7 +186,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getText() {
@@ -194,7 +194,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>Identifies the target of the review. Can be a Product or a Channel</p>>
+     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
      */
 
     public java.lang.Object getTarget() {
@@ -202,7 +202,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>>
+     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
      */
 
     public Boolean getIncludedInStatistics() {
@@ -210,7 +210,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>Number between -100 and 100 included.</p>>
+     *  <p>Number between -100 and 100 included.</p>
      */
 
     public Integer getRating() {
@@ -218,7 +218,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -226,7 +226,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <*  <p>The customer who created the review.</p>>
+     *  <p>The customer who created the review.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -234,7 +234,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

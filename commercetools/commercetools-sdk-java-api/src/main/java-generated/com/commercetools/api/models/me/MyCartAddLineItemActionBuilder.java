@@ -60,7 +60,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     private java.time.ZonedDateTime addedAt;
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public MyCartAddLineItemActionBuilder custom(
@@ -70,7 +70,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public MyCartAddLineItemActionBuilder custom(
@@ -80,7 +80,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartAddLineItemActionBuilder distributionChannel(
@@ -92,7 +92,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartAddLineItemActionBuilder distributionChannel(
@@ -102,7 +102,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder externalTaxRate(
@@ -113,7 +113,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder externalTaxRate(
@@ -123,7 +123,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -132,7 +132,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -141,7 +141,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -150,7 +150,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -159,7 +159,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartAddLineItemActionBuilder supplyChannel(
@@ -170,7 +170,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartAddLineItemActionBuilder supplyChannel(
@@ -180,8 +180,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public MyCartAddLineItemActionBuilder externalPrice(
@@ -191,8 +191,8 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public MyCartAddLineItemActionBuilder externalPrice(
@@ -202,7 +202,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder externalTotalPrice(
@@ -214,7 +214,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder externalTotalPrice(
@@ -224,7 +224,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder shippingDetails(
@@ -235,7 +235,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder shippingDetails(
@@ -245,7 +245,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {

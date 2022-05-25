@@ -34,14 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface KeyReference {
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
     /**
-     <*  <p>User-defined unique and immutable key of the referenced resource.</p>>
+     *  <p>User-defined unique and immutable key of the referenced resource.</p>
      */
     @NotNull
     @JsonProperty("key")

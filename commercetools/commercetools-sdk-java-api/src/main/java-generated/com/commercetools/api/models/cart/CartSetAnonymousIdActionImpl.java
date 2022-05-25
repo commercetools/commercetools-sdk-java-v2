@@ -35,7 +35,7 @@ public class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction, M
     }
 
     /**
-     <*  <p>If not set, any existing anonymous ID will be removed.</p>>
+     *  <p>If not set, any existing anonymous ID will be removed.</p>
      */
 
     public String getAnonymousId() {

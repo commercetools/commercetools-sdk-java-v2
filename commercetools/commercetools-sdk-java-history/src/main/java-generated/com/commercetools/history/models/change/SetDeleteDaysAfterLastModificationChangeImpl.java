@@ -44,7 +44,7 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -52,7 +52,7 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
     }
 
     /**
-     <*  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>>
+     *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
      */
 
     public String getChange() {
@@ -60,7 +60,7 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getPreviousValue() {
@@ -68,7 +68,7 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getNextValue() {

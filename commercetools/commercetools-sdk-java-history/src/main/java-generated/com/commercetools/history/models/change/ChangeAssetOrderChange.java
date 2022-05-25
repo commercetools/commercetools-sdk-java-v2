@@ -36,21 +36,21 @@ public interface ChangeAssetOrderChange extends Change {
     String CHANGE_ASSET_ORDER_CHANGE = "ChangeAssetOrderChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeAssetOrderChange extends Change {
     public List<LocalizedString> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

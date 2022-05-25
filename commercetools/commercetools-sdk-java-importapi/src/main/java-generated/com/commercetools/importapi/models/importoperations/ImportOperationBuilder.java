@@ -57,7 +57,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     private java.time.ZonedDateTime expiresAt;
 
     /**
-     <*  <p>The version of the ImportOperation.</p>>
+     *  <p>The version of the ImportOperation.</p>
      */
 
     public ImportOperationBuilder version(final Long version) {
@@ -66,7 +66,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>The key of the importContainer.</p>>
+     *  <p>The key of the importContainer.</p>
      */
 
     public ImportOperationBuilder importContainerKey(final String importContainerKey) {
@@ -75,7 +75,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>The key of the resource.</p>>
+     *  <p>The key of the resource.</p>
      */
 
     public ImportOperationBuilder resourceKey(final String resourceKey) {
@@ -84,7 +84,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>The ID of the ImportOperation.</p>>
+     *  <p>The ID of the ImportOperation.</p>
      */
 
     public ImportOperationBuilder id(final String id) {
@@ -93,7 +93,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>>
+     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
      */
 
     public ImportOperationBuilder state(final com.commercetools.importapi.models.common.ProcessingState state) {
@@ -102,7 +102,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>The version of the impmorted resource when the import was successful.</p>>
+     *  <p>The version of the impmorted resource when the import was successful.</p>
      */
 
     public ImportOperationBuilder resourceVersion(@Nullable final Long resourceVersion) {
@@ -111,7 +111,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>Contains an error if the import of the resource was not successful. See Errors.</p>>
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      */
 
     public ImportOperationBuilder errors(
@@ -121,7 +121,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>Contains an error if the import of the resource was not successful. See Errors.</p>>
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      */
 
     public ImportOperationBuilder errors(
@@ -131,7 +131,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>Contains an error if the import of the resource was not successful. See Errors.</p>>
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      */
 
     public ImportOperationBuilder plusErrors(
@@ -144,7 +144,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>Contains an error if the import of the resource was not successful. See Errors.</p>>
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      */
 
     public ImportOperationBuilder plusErrors(
@@ -157,7 +157,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>Contains an error if the import of the resource was not successful. See Errors.</p>>
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      */
 
     public ImportOperationBuilder withErrors(
@@ -168,7 +168,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>In case of unresolved status this array will show the unresolved references</p>>
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
      */
 
     public ImportOperationBuilder unresolvedReferences(
@@ -178,7 +178,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>In case of unresolved status this array will show the unresolved references</p>>
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
      */
 
     public ImportOperationBuilder unresolvedReferences(
@@ -188,7 +188,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>In case of unresolved status this array will show the unresolved references</p>>
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
      */
 
     public ImportOperationBuilder plusUnresolvedReferences(
@@ -201,7 +201,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>In case of unresolved status this array will show the unresolved references</p>>
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
      */
 
     public ImportOperationBuilder plusUnresolvedReferences(
@@ -215,7 +215,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>In case of unresolved status this array will show the unresolved references</p>>
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
      */
 
     public ImportOperationBuilder withUnresolvedReferences(
@@ -227,7 +227,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>The time when the ImportOperation was created.</p>>
+     *  <p>The time when the ImportOperation was created.</p>
      */
 
     public ImportOperationBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -236,7 +236,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>The last time When the ImportOperation was modified.</p>>
+     *  <p>The last time When the ImportOperation was modified.</p>
      */
 
     public ImportOperationBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -245,7 +245,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     <*  <p>The expiration time of the ImportOperation.</p>>
+     *  <p>The expiration time of the ImportOperation.</p>
      */
 
     public ImportOperationBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {

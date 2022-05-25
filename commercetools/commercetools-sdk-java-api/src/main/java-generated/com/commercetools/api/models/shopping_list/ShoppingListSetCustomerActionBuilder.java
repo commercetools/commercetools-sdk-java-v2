@@ -27,7 +27,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetCustomerActionBuilder customer(
@@ -38,7 +38,7 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetCustomerActionBuilder customer(

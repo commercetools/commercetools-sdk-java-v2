@@ -60,7 +60,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder resource(
@@ -164,7 +164,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDeletedMessageBuilder sku(final String sku) {
@@ -204,7 +204,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder supplyChannel(
@@ -214,7 +214,7 @@ public class InventoryEntryDeletedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public InventoryEntryDeletedMessageBuilder supplyChannel(

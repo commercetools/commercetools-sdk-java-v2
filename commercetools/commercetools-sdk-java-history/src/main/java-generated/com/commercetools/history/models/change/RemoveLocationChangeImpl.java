@@ -43,7 +43,7 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
     }
 
     /**
-     <*  <p>Update action for <code>removeLocation</code> on zones</p>>
+     *  <p>Update action for <code>removeLocation</code> on zones</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
     }
 
     /**
-     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
      */
 
     public com.commercetools.history.models.common.Location getPreviousValue() {
@@ -67,7 +67,7 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
     }
 
     /**
-     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
      */
 
     public com.commercetools.history.models.common.Location getNextValue() {

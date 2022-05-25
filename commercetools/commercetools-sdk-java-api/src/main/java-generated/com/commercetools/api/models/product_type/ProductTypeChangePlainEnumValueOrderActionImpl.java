@@ -40,7 +40,7 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -56,7 +56,7 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues() {

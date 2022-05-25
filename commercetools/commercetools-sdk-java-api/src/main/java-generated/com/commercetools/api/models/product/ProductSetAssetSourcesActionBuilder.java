@@ -42,7 +42,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder variantId(@Nullable final Long variantId) {
@@ -51,7 +51,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder sku(@Nullable final String sku) {
@@ -60,7 +60,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder staged(@Nullable final Boolean staged) {
@@ -69,7 +69,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
@@ -78,7 +78,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
@@ -87,7 +87,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder sources(
@@ -97,7 +97,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder sources(
@@ -107,7 +107,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder plusSources(
@@ -120,7 +120,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder plusSources(
@@ -133,7 +133,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetSourcesActionBuilder withSources(

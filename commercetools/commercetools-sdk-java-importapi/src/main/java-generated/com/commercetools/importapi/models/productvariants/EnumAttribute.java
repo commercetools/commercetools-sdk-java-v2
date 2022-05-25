@@ -32,7 +32,7 @@ public interface EnumAttribute extends Attribute {
     String ENUM = "enum";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

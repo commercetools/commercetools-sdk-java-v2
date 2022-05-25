@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Money {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("centAmount")
     public Long getCentAmount();
 
     /**
-     <*  <p>The currency code compliant to ISO 4217.</p>>
+     *  <p>The currency code compliant to ISO 4217.</p>
      */
     @NotNull
     @JsonProperty("currencyCode")

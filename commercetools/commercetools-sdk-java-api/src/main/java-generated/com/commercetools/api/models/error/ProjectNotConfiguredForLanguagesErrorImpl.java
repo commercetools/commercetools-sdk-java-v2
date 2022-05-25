@@ -43,7 +43,7 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getLanguages() {

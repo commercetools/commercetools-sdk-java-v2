@@ -38,21 +38,21 @@ public interface ChangeAssetNameChange extends Change {
     String CHANGE_ASSET_NAME_CHANGE = "ChangeAssetNameChange";
 
     /**
-     <*  <p>Update action for <code>changeAssetName</code></p>>
+     *  <p>Update action for <code>changeAssetName</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface ChangeAssetNameChange extends Change {
     public AssetChangeValue getAsset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface ChangeAssetNameChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

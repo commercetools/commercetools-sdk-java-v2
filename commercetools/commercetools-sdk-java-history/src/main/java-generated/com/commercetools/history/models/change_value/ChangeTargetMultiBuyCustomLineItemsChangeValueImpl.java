@@ -52,7 +52,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -60,7 +60,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getPredicate() {
@@ -68,7 +68,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
      */
 
     public Integer getTriggerQuantity() {
@@ -76,7 +76,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
      */
 
     public Integer getDiscountedQuantity() {
@@ -84,7 +84,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     <*  <p>Maximum number of applications of this discount.</p>>
+     *  <p>Maximum number of applications of this discount.</p>
      */
 
     public Integer getMaxOccurrence() {
@@ -92,7 +92,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.SelectionMode getSelectionMode() {

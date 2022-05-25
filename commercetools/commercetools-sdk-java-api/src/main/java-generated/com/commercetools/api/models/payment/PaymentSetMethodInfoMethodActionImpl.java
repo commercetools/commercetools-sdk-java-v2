@@ -35,7 +35,7 @@ public class PaymentSetMethodInfoMethodActionImpl implements PaymentSetMethodInf
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class PaymentSetMethodInfoMethodActionImpl implements PaymentSetMethodInf
     }
 
     /**
-     <*  <p>If not provided, the method is unset.</p>>
+     *  <p>If not provided, the method is unset.</p>
      */
 
     public String getMethod() {

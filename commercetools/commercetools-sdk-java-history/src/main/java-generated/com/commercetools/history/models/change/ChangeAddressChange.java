@@ -36,21 +36,21 @@ public interface ChangeAddressChange extends Change {
     String CHANGE_ADDRESS_CHANGE = "ChangeAddressChange";
 
     /**
-     <*  <p>Update action <code>changeAddress</code> action.</p>>
+     *  <p>Update action <code>changeAddress</code> action.</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeAddressChange extends Change {
     public Address getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

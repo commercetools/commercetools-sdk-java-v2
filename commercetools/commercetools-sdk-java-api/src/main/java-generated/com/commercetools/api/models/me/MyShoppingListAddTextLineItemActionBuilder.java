@@ -39,7 +39,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder name(
@@ -49,7 +49,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder name(
@@ -59,7 +59,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder description(
@@ -69,7 +69,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder description(
@@ -79,7 +79,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListAddTextLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -88,7 +88,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListAddTextLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -97,7 +97,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder custom(
@@ -107,7 +107,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public MyShoppingListAddTextLineItemActionBuilder custom(

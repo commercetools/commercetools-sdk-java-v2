@@ -35,7 +35,7 @@ public class MissingPricesProductCountImpl implements MissingPricesProductCount,
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -43,7 +43,7 @@ public class MissingPricesProductCountImpl implements MissingPricesProductCount,
     }
 
     /**
-     <>
+     *
      */
 
     public Long getMissingPrices() {

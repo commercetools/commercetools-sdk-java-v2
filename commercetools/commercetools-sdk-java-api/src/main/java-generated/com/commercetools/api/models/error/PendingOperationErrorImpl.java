@@ -39,7 +39,7 @@ public class PendingOperationErrorImpl implements PendingOperationError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class PendingOperationErrorImpl implements PendingOperationError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class PendingOperationErrorImpl implements PendingOperationError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

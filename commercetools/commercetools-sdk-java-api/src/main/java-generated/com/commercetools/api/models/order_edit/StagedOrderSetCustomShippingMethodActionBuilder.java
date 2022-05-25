@@ -37,7 +37,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder shippingMethodName(final String shippingMethodName) {
@@ -46,7 +46,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder shippingRate(
@@ -57,7 +57,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder shippingRate(
@@ -67,7 +67,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder taxCategory(
@@ -79,7 +79,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder taxCategory(
@@ -89,7 +89,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder externalTaxRate(
@@ -100,7 +100,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomShippingMethodActionBuilder externalTaxRate(

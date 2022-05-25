@@ -35,28 +35,28 @@ public interface SetReturnPaymentStateChange extends Change {
     String SET_RETURN_PAYMENT_STATE_CHANGE = "SetReturnPaymentStateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setReturnPaymentState</code></p>>
+     *  <p>Update action for <code>setReturnPaymentState</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public ReturnPaymentState getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

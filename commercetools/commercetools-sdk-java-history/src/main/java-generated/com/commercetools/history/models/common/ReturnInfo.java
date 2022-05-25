@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnInfo {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -41,14 +41,14 @@ public interface ReturnInfo {
     public List<ReturnItem> getItems();
 
     /**
-     <*  <p>Identifies, which return tracking ID is connected to this particular return.</p>>
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      */
     @NotNull
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("returnDate")

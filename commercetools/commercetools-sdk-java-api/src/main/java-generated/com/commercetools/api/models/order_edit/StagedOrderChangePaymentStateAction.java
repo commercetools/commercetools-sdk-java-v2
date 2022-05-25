@@ -31,7 +31,7 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
     String CHANGE_PAYMENT_STATE = "changePaymentState";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("paymentState")

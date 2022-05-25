@@ -30,14 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessageSubscription {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("resourceTypeId")
     public String getResourceTypeId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("types")

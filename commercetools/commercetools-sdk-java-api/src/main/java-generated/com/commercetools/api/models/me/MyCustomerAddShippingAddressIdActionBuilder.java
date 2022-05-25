@@ -29,7 +29,7 @@ public class MyCustomerAddShippingAddressIdActionBuilder implements Builder<MyCu
     private String addressKey;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerAddShippingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -38,7 +38,7 @@ public class MyCustomerAddShippingAddressIdActionBuilder implements Builder<MyCu
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerAddShippingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

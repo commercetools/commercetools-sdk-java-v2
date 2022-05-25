@@ -30,7 +30,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     private com.commercetools.importapi.models.common.Address address;
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressDraftBuilder deliveryId(final String deliveryId) {
@@ -39,7 +39,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressDraftBuilder address(
@@ -49,7 +49,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressDraftBuilder address(

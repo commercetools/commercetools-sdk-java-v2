@@ -51,7 +51,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>>
+     *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
      */
 
     public String getKey() {
@@ -59,7 +59,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.common.AssetSource> getSources() {
@@ -67,12 +67,12 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getName() {
@@ -80,12 +80,12 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
@@ -93,7 +93,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getTags() {
@@ -101,7 +101,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     <*  <p>The representation to be sent to the server when creating a resource with custom fields.</p>>
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

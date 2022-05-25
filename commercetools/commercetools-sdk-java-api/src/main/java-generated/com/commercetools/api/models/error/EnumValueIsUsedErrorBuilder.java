@@ -26,7 +26,7 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public EnumValueIsUsedErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
     }
 
     /**
-     <>
+     *
      */
 
     public EnumValueIsUsedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError
     }
 
     /**
-     <>
+     *
      */
 
     public EnumValueIsUsedErrorBuilder addValue(final String key, final java.lang.Object value) {

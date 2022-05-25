@@ -35,7 +35,7 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
     }
 
     /**
-     <*  <p><code>Create</code> or <code>Update</code> request.</p>>
+     *  <p><code>Create</code> or <code>Update</code> request.</p>
      */
 
     public com.commercetools.api.models.extension.ExtensionAction getAction() {
@@ -43,7 +43,7 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
     }
 
     /**
-     <*  <p>Expanded reference to the resource that triggered the Extension.</p>>
+     *  <p>Expanded reference to the resource that triggered the Extension.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {

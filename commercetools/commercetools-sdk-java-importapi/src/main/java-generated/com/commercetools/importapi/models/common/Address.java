@@ -30,175 +30,175 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Address {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("title")
     public String getTitle();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("salutation")
     public String getSalutation();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("firstName")
     public String getFirstName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("lastName")
     public String getLastName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("streetName")
     public String getStreetName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("streetNumber")
     public String getStreetNumber();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("additionalStreetInfo")
     public String getAdditionalStreetInfo();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("postalCode")
     public String getPostalCode();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("city")
     public String getCity();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("region")
     public String getRegion();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("state")
     public String getState();
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("company")
     public String getCompany();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("department")
     public String getDepartment();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("building")
     public String getBuilding();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("apartment")
     public String getApartment();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("pOBox")
     public String getPOBox();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("phone")
     public String getPhone();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("mobile")
     public String getMobile();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("fax")
     public String getFax();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("additionalAddressInfo")
     public String getAdditionalAddressInfo();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("externalId")

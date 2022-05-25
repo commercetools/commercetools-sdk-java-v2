@@ -29,7 +29,7 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
     private String key;
 
     /**
-     <*  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public CartResourceIdentifierBuilder id(@Nullable final String id) {
@@ -38,7 +38,7 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
     }
 
     /**
-     <*  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public CartResourceIdentifierBuilder key(@Nullable final String key) {

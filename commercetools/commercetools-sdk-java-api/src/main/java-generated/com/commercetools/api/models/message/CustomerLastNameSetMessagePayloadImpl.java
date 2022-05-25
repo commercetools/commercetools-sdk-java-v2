@@ -35,7 +35,7 @@ public class CustomerLastNameSetMessagePayloadImpl implements CustomerLastNameSe
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CustomerLastNameSetMessagePayloadImpl implements CustomerLastNameSe
     }
 
     /**
-     <>
+     *
      */
 
     public String getLastName() {

@@ -36,21 +36,21 @@ public interface TransitionStateChange extends Change {
     String TRANSITION_STATE_CHANGE = "TransitionStateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>transitionState</code></p>>
+     *  <p>Shape of the action for <code>transitionState</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface TransitionStateChange extends Change {
     public Reference getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

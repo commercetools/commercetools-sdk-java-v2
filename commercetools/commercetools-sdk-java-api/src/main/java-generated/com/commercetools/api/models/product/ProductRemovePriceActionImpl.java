@@ -39,7 +39,7 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
     }
 
     /**
-     <*  <p>ID of the EmbeddedPrice</p>>
+     *  <p>ID of the EmbeddedPrice</p>
      */
 
     public String getPriceId() {
@@ -55,7 +55,7 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

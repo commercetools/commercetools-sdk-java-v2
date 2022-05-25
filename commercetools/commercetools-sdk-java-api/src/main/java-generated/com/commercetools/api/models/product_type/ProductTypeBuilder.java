@@ -54,7 +54,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
 
     /**
-     <*  <p>Unique identifier for the ProductType.</p>>
+     *  <p>Unique identifier for the ProductType.</p>
      */
 
     public ProductTypeBuilder id(final String id) {
@@ -63,7 +63,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <*  <p>The current version of the product type.</p>>
+     *  <p>The current version of the product type.</p>
      */
 
     public ProductTypeBuilder version(final Long version) {
@@ -72,7 +72,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -81,7 +81,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -90,7 +90,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductTypeBuilder lastModifiedBy(
@@ -100,7 +100,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductTypeBuilder lastModifiedBy(
@@ -110,7 +110,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductTypeBuilder createdBy(
@@ -120,7 +120,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductTypeBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -129,7 +129,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ProductType.</p>>
+     *  <p>User-defined unique identifier of the ProductType.</p>
      */
 
     public ProductTypeBuilder key(@Nullable final String key) {
@@ -138,7 +138,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder name(final String name) {
@@ -147,7 +147,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder description(final String description) {
@@ -156,7 +156,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder attributes(
@@ -166,7 +166,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder attributes(
@@ -176,7 +176,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder plusAttributes(
@@ -189,7 +189,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder plusAttributes(
@@ -203,7 +203,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeBuilder withAttributes(

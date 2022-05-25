@@ -26,7 +26,7 @@ public class ReviewSetRatingActionBuilder implements Builder<ReviewSetRatingActi
     private Integer rating;
 
     /**
-     <*  <p>Number between -100 and 100 included. If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
+     *  <p>Number between -100 and 100 included. If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
 
     public ReviewSetRatingActionBuilder rating(@Nullable final Integer rating) {

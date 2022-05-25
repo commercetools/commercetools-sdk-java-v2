@@ -26,7 +26,7 @@ public class StagedOrderSetLocaleActionBuilder implements Builder<StagedOrderSet
     private String locale;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetLocaleActionBuilder locale(@Nullable final String locale) {

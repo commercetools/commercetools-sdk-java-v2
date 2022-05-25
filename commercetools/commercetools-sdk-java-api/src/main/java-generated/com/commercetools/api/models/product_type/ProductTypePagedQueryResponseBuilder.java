@@ -39,7 +39,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     private java.util.List<com.commercetools.api.models.product_type.ProductType> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ProductTypePagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypePagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypePagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ProductTypePagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypePagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypePagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypePagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypePagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypePagedQueryResponseBuilder withResults(

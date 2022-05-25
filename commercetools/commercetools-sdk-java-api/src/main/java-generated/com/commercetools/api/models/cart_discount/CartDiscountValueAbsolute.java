@@ -34,7 +34,7 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue {
     String ABSOLUTE = "absolute";
 
     /**
-     <*  <p>Cent precision money values in different currencies.</p>>
+     *  <p>Cent precision money values in different currencies.</p>
      */
     @NotNull
     @Valid

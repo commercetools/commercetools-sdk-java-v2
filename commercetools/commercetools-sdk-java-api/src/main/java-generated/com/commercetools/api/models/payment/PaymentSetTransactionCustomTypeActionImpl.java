@@ -43,7 +43,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     }
 
     /**
-     <>
+     *
      */
 
     public String getTransactionId() {
@@ -59,7 +59,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     }
 
     /**
-     <*  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>>
+     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -67,7 +67,7 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Transaction.</p>>
+     *  <p>Sets the Custom Fields fields for the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

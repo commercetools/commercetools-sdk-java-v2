@@ -28,7 +28,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     private String interfaceCode;
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentId(final String paymentId) {
@@ -37,7 +37,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder interfaceCode(final String interfaceCode) {

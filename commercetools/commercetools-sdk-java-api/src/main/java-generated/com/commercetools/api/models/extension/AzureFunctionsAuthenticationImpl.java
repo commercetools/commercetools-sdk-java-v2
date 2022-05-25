@@ -36,7 +36,7 @@ public class AzureFunctionsAuthenticationImpl implements AzureFunctionsAuthentic
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class AzureFunctionsAuthenticationImpl implements AzureFunctionsAuthentic
     }
 
     /**
-     <*  <p>Partially hidden on retrieval for security reasons.</p>>
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
 
     public String getKey() {

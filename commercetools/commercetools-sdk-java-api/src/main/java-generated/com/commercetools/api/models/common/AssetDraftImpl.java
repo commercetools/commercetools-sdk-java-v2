@@ -52,7 +52,7 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
@@ -60,7 +60,7 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Asset.</p>>
+     *  <p>Name of the Asset.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -68,7 +68,7 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
     }
 
     /**
-     <*  <p>Description of the Asset.</p>>
+     *  <p>Description of the Asset.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -76,7 +76,7 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
     }
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public java.util.List<String> getTags() {
@@ -84,7 +84,7 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields defined for the Asset.</p>>
+     *  <p>Custom Fields defined for the Asset.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -92,7 +92,7 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Asset.</p>>
+     *  <p>User-defined unique identifier for the Asset.</p>
      */
 
     public String getKey() {

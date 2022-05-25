@@ -31,7 +31,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     private java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> nextValue;
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder plusPreviousValue(
@@ -73,7 +73,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder plusPreviousValue(
@@ -87,7 +87,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder withPreviousValue(
@@ -99,7 +99,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder nextValue(
@@ -109,7 +109,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder nextValue(
@@ -119,7 +119,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder plusNextValue(
@@ -132,7 +132,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder plusNextValue(
@@ -146,7 +146,7 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeShoppingListLineItemsOrderChangeBuilder withNextValue(

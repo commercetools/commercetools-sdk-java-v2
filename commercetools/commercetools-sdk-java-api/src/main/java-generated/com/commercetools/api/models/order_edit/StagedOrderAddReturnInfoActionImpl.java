@@ -43,7 +43,7 @@ public class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddReturnI
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddReturnI
     }
 
     /**
-     <>
+     *
      */
 
     public String getReturnTrackingId() {
@@ -59,7 +59,7 @@ public class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddReturnI
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems() {
@@ -67,7 +67,7 @@ public class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddReturnI
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getReturnDate() {

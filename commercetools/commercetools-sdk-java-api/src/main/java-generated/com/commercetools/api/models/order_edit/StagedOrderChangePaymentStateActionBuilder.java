@@ -26,7 +26,7 @@ public class StagedOrderChangePaymentStateActionBuilder implements Builder<Stage
     private com.commercetools.api.models.order.PaymentState paymentState;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangePaymentStateActionBuilder paymentState(

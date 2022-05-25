@@ -25,7 +25,7 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public CartDiscountChangeTargetActionBuilder target(
@@ -35,7 +35,7 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
     }
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
 
     public CartDiscountChangeTargetActionBuilder target(

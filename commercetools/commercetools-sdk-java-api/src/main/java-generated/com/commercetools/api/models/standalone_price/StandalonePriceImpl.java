@@ -93,7 +93,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the StandalonePrice.</p>>
+     *  <p>Unique identifier of the StandalonePrice.</p>
      */
 
     public String getId() {
@@ -101,7 +101,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the StandalonePrice.</p>>
+     *  <p>Current version of the StandalonePrice.</p>
      */
 
     public Long getVersion() {
@@ -109,7 +109,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the StandalonePrice was initially created.</p>>
+     *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -117,7 +117,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the StandalonePrice was last updated.</p>>
+     *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -125,7 +125,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -133,7 +133,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -141,7 +141,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the StandalonePrice.</p>>
+     *  <p>User-defined unique identifier of the StandalonePrice.</p>
      */
 
     public String getKey() {
@@ -149,7 +149,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>SKU of the ProductVariant to which this Price is associated.</p>>
+     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
      */
 
     public String getSku() {
@@ -157,7 +157,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Money value of this Price.</p>>
+     *  <p>Money value of this Price.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getValue() {
@@ -165,7 +165,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Country for which this Price is valid.</p>>
+     *  <p>Country for which this Price is valid.</p>
      */
 
     public String getCountry() {
@@ -173,7 +173,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>CustomerGroup for which this Price is valid.</p>>
+     *  <p>CustomerGroup for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -181,7 +181,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Product distribution Channel for which this Price is valid.</p>>
+     *  <p>Product distribution Channel for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -189,7 +189,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Date from which the Price is valid.</p>>
+     *  <p>Date from which the Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -197,7 +197,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Date until the Price is valid.</p>>
+     *  <p>Date until the Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -205,7 +205,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Price tiers if any are defined.</p>>
+     *  <p>Price tiers if any are defined.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
@@ -213,7 +213,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>>
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -221,7 +221,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields for the StandalonePrice.</p>>
+     *  <p>Custom Fields for the StandalonePrice.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

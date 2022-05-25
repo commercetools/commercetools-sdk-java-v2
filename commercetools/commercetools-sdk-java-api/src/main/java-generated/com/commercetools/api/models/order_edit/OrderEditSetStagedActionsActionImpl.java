@@ -36,7 +36,7 @@ public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedAc
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedAc
     }
 
     /**
-     <*  <p>The actions to edit the <code>resource</code>.</p>>
+     *  <p>The actions to edit the <code>resource</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {

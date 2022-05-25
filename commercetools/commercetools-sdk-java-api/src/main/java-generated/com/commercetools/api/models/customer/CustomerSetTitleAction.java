@@ -29,7 +29,7 @@ public interface CustomerSetTitleAction extends CustomerUpdateAction {
     String SET_TITLE = "setTitle";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("title")

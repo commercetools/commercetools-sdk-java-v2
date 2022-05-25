@@ -31,28 +31,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomObjectDraft {
 
     /**
-     <*  <p>Namespace to group CustomObjects.</p>>
+     *  <p>Namespace to group CustomObjects.</p>
      */
     @NotNull
     @JsonProperty("container")
     public String getContainer();
 
     /**
-     <*  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>>
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>>
+     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
      */
     @NotNull
     @JsonProperty("value")
     public Object getValue();
 
     /**
-     <*  <p>Current version of the CustomObject.</p>>
+     *  <p>Current version of the CustomObject.</p>
      */
 
     @JsonProperty("version")

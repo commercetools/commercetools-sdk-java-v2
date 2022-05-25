@@ -32,42 +32,42 @@ public interface ShoppingListLineItemDraft
         extends com.commercetools.api.models.CustomizableDraft<ShoppingListLineItemDraft> {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("quantity")
     public Integer getQuantity();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")

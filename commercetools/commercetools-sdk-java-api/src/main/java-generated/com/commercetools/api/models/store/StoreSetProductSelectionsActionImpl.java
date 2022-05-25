@@ -36,7 +36,7 @@ public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelec
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelec
     }
 
     /**
-     <*  <p>The total of Product Selections to be set for this Store.</p>>
+     *  <p>The total of Product Selections to be set for this Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {

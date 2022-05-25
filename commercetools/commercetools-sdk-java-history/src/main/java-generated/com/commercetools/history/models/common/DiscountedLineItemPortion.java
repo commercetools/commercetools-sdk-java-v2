@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPortion {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface DiscountedLineItemPortion {
     public Reference getDiscount();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

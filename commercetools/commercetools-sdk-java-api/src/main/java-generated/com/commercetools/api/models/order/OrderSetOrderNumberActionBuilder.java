@@ -26,7 +26,7 @@ public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNu
     private String orderNumber;
 
     /**
-     <>
+     *
      */
 
     public OrderSetOrderNumberActionBuilder orderNumber(@Nullable final String orderNumber) {

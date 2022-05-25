@@ -29,14 +29,14 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

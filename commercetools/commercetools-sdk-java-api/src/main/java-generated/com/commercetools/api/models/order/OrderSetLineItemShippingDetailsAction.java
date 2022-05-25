@@ -34,14 +34,14 @@ public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction
     String SET_LINE_ITEM_SHIPPING_DETAILS = "setLineItemShippingDetails";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingDetails")

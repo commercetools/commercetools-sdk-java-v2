@@ -39,7 +39,7 @@ public class CustomerAddBillingAddressIdActionImpl implements CustomerAddBilling
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CustomerAddBillingAddressIdActionImpl implements CustomerAddBilling
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressId() {
@@ -55,7 +55,7 @@ public class CustomerAddBillingAddressIdActionImpl implements CustomerAddBilling
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {

@@ -34,7 +34,7 @@ public interface PriceImportRequest extends ImportRequest {
     String PRICE = "price";
 
     /**
-     <*  <p>The price import resources of this request.</p>>
+     *  <p>The price import resources of this request.</p>
      */
     @NotNull
     @Valid

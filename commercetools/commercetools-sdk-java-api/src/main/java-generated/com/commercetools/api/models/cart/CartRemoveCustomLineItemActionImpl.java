@@ -35,7 +35,7 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {

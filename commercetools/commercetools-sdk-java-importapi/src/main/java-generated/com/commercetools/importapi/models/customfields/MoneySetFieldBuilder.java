@@ -25,7 +25,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     private java.util.List<com.commercetools.importapi.models.common.Money> value;
 
     /**
-     <>
+     *
      */
 
     public MoneySetFieldBuilder value(final com.commercetools.importapi.models.common.Money... value) {
@@ -34,7 +34,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public MoneySetFieldBuilder value(final java.util.List<com.commercetools.importapi.models.common.Money> value) {
@@ -43,7 +43,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public MoneySetFieldBuilder plusValue(final com.commercetools.importapi.models.common.Money... value) {
@@ -55,7 +55,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public MoneySetFieldBuilder plusValue(
@@ -68,7 +68,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public MoneySetFieldBuilder withValue(

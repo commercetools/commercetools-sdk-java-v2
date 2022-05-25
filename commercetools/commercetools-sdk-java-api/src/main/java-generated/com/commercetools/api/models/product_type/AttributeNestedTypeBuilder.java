@@ -25,7 +25,7 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
     private com.commercetools.api.models.product_type.ProductTypeReference typeReference;
 
     /**
-     <*  <p>Reference to a ProductType.</p>>
+     *  <p>Reference to a ProductType.</p>
      */
 
     public AttributeNestedTypeBuilder typeReference(
@@ -36,7 +36,7 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
     }
 
     /**
-     <*  <p>Reference to a ProductType.</p>>
+     *  <p>Reference to a ProductType.</p>
      */
 
     public AttributeNestedTypeBuilder typeReference(

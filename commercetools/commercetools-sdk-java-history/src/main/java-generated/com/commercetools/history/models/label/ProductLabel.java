@@ -35,14 +35,14 @@ public interface ProductLabel extends Label {
     String PRODUCT_LABEL = "ProductLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface ProductLabel extends Label {
     public LocalizedString getSlug();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

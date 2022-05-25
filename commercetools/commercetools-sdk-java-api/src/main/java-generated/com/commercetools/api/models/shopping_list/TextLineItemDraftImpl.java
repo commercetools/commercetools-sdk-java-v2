@@ -47,7 +47,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Defaults to the current date and time.</p>>
+     *  <p>Defaults to the current date and time.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -55,7 +55,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -63,7 +63,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -71,7 +71,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -79,7 +79,7 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Defaults to <code>1</code>.</p>>
+     *  <p>Defaults to <code>1</code>.</p>
      */
 
     public Integer getQuantity() {

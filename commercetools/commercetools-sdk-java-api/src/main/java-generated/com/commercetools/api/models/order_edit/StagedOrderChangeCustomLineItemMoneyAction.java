@@ -36,15 +36,15 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     String CHANGE_CUSTOM_LINE_ITEM_MONEY = "changeCustomLineItemMoney";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
     @NotNull
     @Valid

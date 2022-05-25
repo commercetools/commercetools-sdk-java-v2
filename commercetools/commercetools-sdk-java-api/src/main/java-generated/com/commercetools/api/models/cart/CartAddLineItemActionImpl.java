@@ -73,7 +73,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -81,7 +81,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -89,7 +89,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -97,7 +97,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -105,7 +105,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getProductId() {
@@ -113,7 +113,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -121,7 +121,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -129,7 +129,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -137,7 +137,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -145,8 +145,8 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -154,7 +154,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -162,7 +162,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

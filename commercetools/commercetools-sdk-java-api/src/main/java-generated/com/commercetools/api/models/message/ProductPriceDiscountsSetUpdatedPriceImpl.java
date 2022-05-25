@@ -50,7 +50,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVariantId() {
@@ -58,7 +58,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariantKey() {
@@ -66,7 +66,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -74,7 +74,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     <>
+     *
      */
 
     public String getPriceId() {
@@ -82,7 +82,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -90,7 +90,7 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

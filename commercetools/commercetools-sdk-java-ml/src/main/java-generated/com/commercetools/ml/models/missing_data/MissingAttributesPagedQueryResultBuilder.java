@@ -37,7 +37,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     private com.commercetools.ml.models.missing_data.MissingAttributesMeta meta;
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder count(final Long count) {
@@ -46,7 +46,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder total(final Long total) {
@@ -55,7 +55,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public MissingAttributesPagedQueryResultBuilder offset(final Long offset) {
@@ -64,7 +64,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder results(
@@ -74,7 +74,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder results(
@@ -84,7 +84,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder plusResults(
@@ -97,7 +97,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder plusResults(
@@ -110,7 +110,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder withResults(
@@ -121,7 +121,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder meta(
@@ -131,7 +131,7 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesPagedQueryResultBuilder meta(

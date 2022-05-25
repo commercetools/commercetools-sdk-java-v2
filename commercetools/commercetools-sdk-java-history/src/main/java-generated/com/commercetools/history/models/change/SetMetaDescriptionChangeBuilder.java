@@ -31,7 +31,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setMetaDescription</code></p>>
+     *  <p>Shape of the action for <code>setMetaDescription</code></p>
      */
 
     public SetMetaDescriptionChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaDescriptionChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaDescriptionChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaDescriptionChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaDescriptionChangeBuilder nextValue(

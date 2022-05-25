@@ -59,7 +59,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -67,7 +67,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
      */
 
     public Long getQuantity() {
@@ -75,7 +75,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getMoney() {
@@ -83,7 +83,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSlug() {
@@ -91,7 +91,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>>
+     *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -99,7 +99,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>>
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -107,7 +107,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -115,7 +115,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Container for custom line item specific address(es).</p>>
+     *  <p>Container for custom line item specific address(es).</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

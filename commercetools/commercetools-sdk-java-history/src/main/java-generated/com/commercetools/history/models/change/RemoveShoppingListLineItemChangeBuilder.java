@@ -31,7 +31,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
     private com.commercetools.history.models.common.LineItem nextValue;
 
     /**
-     <>
+     *
      */
 
     public RemoveShoppingListLineItemChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShoppingListLineItemChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShoppingListLineItemChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShoppingListLineItemChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class RemoveShoppingListLineItemChangeBuilder implements Builder<RemoveSh
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShoppingListLineItemChangeBuilder nextValue(

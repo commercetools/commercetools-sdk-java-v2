@@ -24,7 +24,7 @@ public class PriceKeyReferenceBuilder implements Builder<PriceKeyReference> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public PriceKeyReferenceBuilder key(final String key) {

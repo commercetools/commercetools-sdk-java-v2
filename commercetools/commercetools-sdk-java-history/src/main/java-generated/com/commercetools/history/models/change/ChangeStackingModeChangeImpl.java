@@ -43,7 +43,7 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
     }
 
     /**
-     <*  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>>
+     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.StackingMode getNextValue() {
@@ -67,7 +67,7 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.StackingMode getPreviousValue() {

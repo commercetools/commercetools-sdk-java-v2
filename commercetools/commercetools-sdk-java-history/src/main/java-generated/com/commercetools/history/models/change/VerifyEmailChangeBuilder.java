@@ -24,7 +24,7 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
     private String change;
 
     /**
-     <>
+     *
      */
 
     public VerifyEmailChangeBuilder change(final String change) {

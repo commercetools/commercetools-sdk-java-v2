@@ -27,7 +27,7 @@ public class PlatformFormatImpl implements PlatformFormat, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

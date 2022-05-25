@@ -30,7 +30,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     private com.commercetools.api.models.customer_group.CustomerGroup obj;
 
     /**
-     <*  <p>Unique identifier of the referenced CustomerGroup.</p>>
+     *  <p>Unique identifier of the referenced CustomerGroup.</p>
      */
 
     public CustomerGroupReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-     <*  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
      */
 
     public CustomerGroupReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-     <*  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
      */
 
     public CustomerGroupReferenceBuilder obj(

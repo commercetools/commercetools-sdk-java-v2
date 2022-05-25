@@ -29,7 +29,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
     private com.commercetools.api.models.product_type.AttributePlainEnumValue newValue;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName(final String attributeName) {
@@ -38,7 +38,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(
@@ -49,7 +49,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(

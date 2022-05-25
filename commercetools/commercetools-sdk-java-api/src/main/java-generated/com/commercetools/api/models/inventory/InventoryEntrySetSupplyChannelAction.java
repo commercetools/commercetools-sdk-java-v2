@@ -32,7 +32,7 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
     String SET_SUPPLY_CHANNEL = "setSupplyChannel";
 
     /**
-     <*  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>>
+     *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")

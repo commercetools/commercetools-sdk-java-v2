@@ -31,7 +31,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
     private com.commercetools.history.models.common.Address previousValue;
 
     /**
-     <*  <p>Update action for <code>removeItemShippingAddress</code></p>>
+     *  <p>Update action for <code>removeItemShippingAddress</code></p>
      */
 
     public RemoveItemShippingAddressesChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveItemShippingAddressesChangeBuilder nextValue(
@@ -50,7 +50,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveItemShippingAddressesChangeBuilder nextValue(
@@ -60,7 +60,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveItemShippingAddressesChangeBuilder previousValue(
@@ -70,7 +70,7 @@ public class RemoveItemShippingAddressesChangeBuilder implements Builder<RemoveI
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveItemShippingAddressesChangeBuilder previousValue(

@@ -28,7 +28,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     private com.commercetools.importapi.models.errors.VariantValues variantValues;
 
     /**
-     <>
+     *
      */
 
     public DuplicateVariantValuesErrorBuilder message(final String message) {
@@ -37,7 +37,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     <*  <p>The offending variant values.</p>>
+     *  <p>The offending variant values.</p>
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
@@ -47,7 +47,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     <*  <p>The offending variant values.</p>>
+     *  <p>The offending variant values.</p>
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(

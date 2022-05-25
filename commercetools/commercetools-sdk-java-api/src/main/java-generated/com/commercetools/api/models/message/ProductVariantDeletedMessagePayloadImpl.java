@@ -40,7 +40,7 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -56,7 +56,7 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getRemovedImageUrls() {

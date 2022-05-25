@@ -54,7 +54,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <>
+     *
      */
 
     public ScopedPriceBuilder id(final String id) {
@@ -63,7 +63,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public ScopedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -72,7 +72,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public ScopedPriceBuilder value(
@@ -82,7 +82,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public ScopedPriceBuilder currentValue(final com.commercetools.api.models.common.TypedMoney currentValue) {
@@ -91,7 +91,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public ScopedPriceBuilder currentValue(
@@ -101,7 +101,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public ScopedPriceBuilder country(@Nullable final String country) {
@@ -110,7 +110,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public ScopedPriceBuilder customerGroup(
@@ -122,7 +122,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public ScopedPriceBuilder customerGroup(
@@ -132,7 +132,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public ScopedPriceBuilder channel(
@@ -142,7 +142,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public ScopedPriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
@@ -151,7 +151,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public ScopedPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -160,7 +160,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public ScopedPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -169,7 +169,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public ScopedPriceBuilder discounted(
@@ -179,7 +179,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public ScopedPriceBuilder discounted(
@@ -189,7 +189,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public ScopedPriceBuilder custom(
@@ -199,7 +199,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public ScopedPriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

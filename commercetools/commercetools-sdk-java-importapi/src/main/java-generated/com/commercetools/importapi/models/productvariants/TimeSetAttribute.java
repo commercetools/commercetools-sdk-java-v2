@@ -33,7 +33,7 @@ public interface TimeSetAttribute extends Attribute {
     String TIME_SET = "time-set";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

@@ -29,7 +29,7 @@ public class MyCustomerRemoveAddressActionBuilder implements Builder<MyCustomerR
     private String addressKey;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerRemoveAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -38,7 +38,7 @@ public class MyCustomerRemoveAddressActionBuilder implements Builder<MyCustomerR
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerRemoveAddressActionBuilder addressKey(@Nullable final String addressKey) {

@@ -43,7 +43,7 @@ public class SetStatusInterfaceCodeChangeImpl implements SetStatusInterfaceCodeC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetStatusInterfaceCodeChangeImpl implements SetStatusInterfaceCodeC
     }
 
     /**
-     <*  <p>Shape of the action for <code>setStatusInterfaceCode</code></p>>
+     *  <p>Shape of the action for <code>setStatusInterfaceCode</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetStatusInterfaceCodeChangeImpl implements SetStatusInterfaceCodeC
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetStatusInterfaceCodeChangeImpl implements SetStatusInterfaceCodeC
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

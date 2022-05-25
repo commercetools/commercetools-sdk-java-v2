@@ -43,42 +43,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderImportDraft extends com.commercetools.api.models.CustomizableDraft<OrderImportDraft> {
 
     /**
-     <*  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>>
+     *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
      */
 
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
     /**
-     <*  <p>If given the customer with that ID must exist in the project.</p>>
+     *  <p>If given the customer with that ID must exist in the project.</p>
      */
 
     @JsonProperty("customerId")
     public String getCustomerId();
 
     /**
-     <*  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>>
+     *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
      */
 
     @JsonProperty("customerEmail")
     public String getCustomerEmail();
 
     /**
-     <*  <p>If not given <code>customLineItems</code> must not be empty.</p>>
+     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
      */
     @Valid
     @JsonProperty("lineItems")
     public List<LineItemImportDraft> getLineItems();
 
     /**
-     <*  <p>If not given <code>lineItems</code> must not be empty.</p>>
+     *  <p>If not given <code>lineItems</code> must not be empty.</p>
      */
     @Valid
     @JsonProperty("customLineItems")
     public List<CustomLineItemImportDraft> getCustomLineItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -86,126 +86,126 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public Money getTotalPrice();
 
     /**
-     <*  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>>
+     *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
      */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedPriceDraft getTaxedPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingAddress")
     public BaseAddress getShippingAddress();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("billingAddress")
     public BaseAddress getBillingAddress();
 
     /**
-     <*  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>>
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>If not given the <code>Open</code> state will be assigned by default.</p>>
+     *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
      */
 
     @JsonProperty("orderState")
     public OrderState getOrderState();
 
     /**
-     <*  <p>This reference can point to a state in a custom workflow.</p>>
+     *  <p>This reference can point to a state in a custom workflow.</p>
      */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
 
     /**
-     <*  <p>Set if the ShippingMethod is set.</p>>
+     *  <p>Set if the ShippingMethod is set.</p>
      */
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfoImportDraft getShippingInfo();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("paymentInfo")
     public PaymentInfo getPaymentInfo();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("completedAt")
     public ZonedDateTime getCompletedAt();
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <*  <p>If not given the mode <code>None</code> will be assigned by default.</p>>
+     *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
      */
 
     @JsonProperty("inventoryMode")
     public InventoryMode getInventoryMode();
 
     /**
-     <*  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>>
+     *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
      */
 
     @JsonProperty("taxRoundingMode")
     public RoundingMode getTaxRoundingMode();
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
      */
     @Valid
     @JsonProperty("itemShippingAddresses")
     public List<BaseAddress> getItemShippingAddresses();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("store")
     public StoreResourceIdentifier getStore();
 
     /**
-     <*  <p>The default origin is <code>Customer</code>.</p>>
+     *  <p>The default origin is <code>Customer</code>.</p>
      */
 
     @JsonProperty("origin")

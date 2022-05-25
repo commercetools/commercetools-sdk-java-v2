@@ -35,7 +35,7 @@ public class MissingPricesProductLevelImpl implements MissingPricesProductLevel,
     }
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
 
     public Long getTotal() {
@@ -43,7 +43,7 @@ public class MissingPricesProductLevelImpl implements MissingPricesProductLevel,
     }
 
     /**
-     <*  <p>Number of products missing prices.</p>>
+     *  <p>Number of products missing prices.</p>
      */
 
     public Long getMissingPrices() {

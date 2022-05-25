@@ -35,7 +35,7 @@ public class MyCartRecalculateActionImpl implements MyCartRecalculateAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCartRecalculateActionImpl implements MyCartRecalculateAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getUpdateProductData() {

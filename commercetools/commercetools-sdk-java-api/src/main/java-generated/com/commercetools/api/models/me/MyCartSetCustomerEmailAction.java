@@ -29,7 +29,7 @@ public interface MyCartSetCustomerEmailAction extends MyCartUpdateAction {
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("email")

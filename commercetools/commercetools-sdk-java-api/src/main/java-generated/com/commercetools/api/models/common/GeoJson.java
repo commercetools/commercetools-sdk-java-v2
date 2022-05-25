@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GeoJson {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")

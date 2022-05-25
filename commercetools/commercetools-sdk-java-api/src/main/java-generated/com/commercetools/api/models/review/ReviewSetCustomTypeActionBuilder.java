@@ -30,7 +30,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>>
+     *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
      */
 
     public ReviewSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     <*  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>>
+     *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
      */
 
     public ReviewSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Review.</p>>
+     *  <p>Sets the Custom Fields fields for the Review.</p>
      */
 
     public ReviewSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Review.</p>>
+     *  <p>Sets the Custom Fields fields for the Review.</p>
      */
 
     public ReviewSetCustomTypeActionBuilder fields(

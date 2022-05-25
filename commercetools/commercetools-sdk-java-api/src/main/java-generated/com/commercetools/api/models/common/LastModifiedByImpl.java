@@ -43,7 +43,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     <*  <p><code>id</code> of the APIClient which modified the resource.</p>>
+     *  <p><code>id</code> of the APIClient which modified the resource.</p>
      */
 
     public String getClientId() {
@@ -51,7 +51,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
      */
 
     public String getExternalUserId() {
@@ -59,7 +59,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -67,7 +67,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     <*  <p>Indicates the anonymous session during which the resource was modified.</p>>
+     *  <p>Indicates the anonymous session during which the resource was modified.</p>
      */
 
     public String getAnonymousId() {

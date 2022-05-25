@@ -74,7 +74,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <*  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>>
+     *  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>
      */
 
     public Long getId() {
@@ -82,7 +82,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -90,7 +90,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>>
+     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
      */
 
     public String getKey() {
@@ -98,7 +98,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
@@ -106,7 +106,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -114,7 +114,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -122,7 +122,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -130,7 +130,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
@@ -138,7 +138,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductVariantAvailability getAvailability() {
@@ -146,7 +146,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsMatchingVariant() {
@@ -154,7 +154,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {
@@ -162,7 +162,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getScopedPriceDiscounted() {

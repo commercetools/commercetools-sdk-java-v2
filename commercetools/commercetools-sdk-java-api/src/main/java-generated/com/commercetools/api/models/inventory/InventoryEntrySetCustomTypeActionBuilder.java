@@ -30,7 +30,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>>
+     *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
      */
 
     public InventoryEntrySetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     }
 
     /**
-     <*  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>>
+     *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
      */
 
     public InventoryEntrySetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the InventoryEntry.</p>>
+     *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
      */
 
     public InventoryEntrySetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class InventoryEntrySetCustomTypeActionBuilder implements Builder<Invento
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the InventoryEntry.</p>>
+     *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
      */
 
     public InventoryEntrySetCustomTypeActionBuilder fields(

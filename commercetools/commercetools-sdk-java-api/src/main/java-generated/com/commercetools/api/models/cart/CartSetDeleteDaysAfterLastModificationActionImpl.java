@@ -37,7 +37,7 @@ public class CartSetDeleteDaysAfterLastModificationActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class CartSetDeleteDaysAfterLastModificationActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getDeleteDaysAfterLastModification() {

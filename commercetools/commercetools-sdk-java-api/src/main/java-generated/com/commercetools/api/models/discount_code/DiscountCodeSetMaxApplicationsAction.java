@@ -29,7 +29,7 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     String SET_MAX_APPLICATIONS = "setMaxApplications";
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("maxApplications")

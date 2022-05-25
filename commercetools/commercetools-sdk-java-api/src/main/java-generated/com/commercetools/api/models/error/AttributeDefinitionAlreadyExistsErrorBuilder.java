@@ -35,7 +35,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     private String conflictingAttributeName;
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder message(final String message) {
@@ -44,7 +44,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,7 +53,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +65,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingProductTypeId(
@@ -75,7 +75,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingProductTypeName(
@@ -85,7 +85,7 @@ public class AttributeDefinitionAlreadyExistsErrorBuilder implements Builder<Att
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionAlreadyExistsErrorBuilder conflictingAttributeName(

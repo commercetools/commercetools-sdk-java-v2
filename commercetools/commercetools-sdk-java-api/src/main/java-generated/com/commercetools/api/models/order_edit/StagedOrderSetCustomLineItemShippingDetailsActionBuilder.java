@@ -31,7 +31,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomLineItemShippingDetailsActionBuilder customLineItemId(final String customLineItemId) {
@@ -40,7 +40,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomLineItemShippingDetailsActionBuilder shippingDetails(
@@ -51,7 +51,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomLineItemShippingDetailsActionBuilder shippingDetails(

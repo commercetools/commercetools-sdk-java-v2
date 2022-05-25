@@ -35,7 +35,7 @@ public class InvalidInputImpl implements InvalidInput, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -43,7 +43,7 @@ public class InvalidInputImpl implements InvalidInput, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

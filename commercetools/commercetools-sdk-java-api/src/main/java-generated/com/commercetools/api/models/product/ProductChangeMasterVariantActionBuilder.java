@@ -32,7 +32,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductChangeMasterVariantActionBuilder variantId(@Nullable final Long variantId) {
@@ -41,7 +41,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeMasterVariantActionBuilder sku(@Nullable final String sku) {
@@ -50,7 +50,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeMasterVariantActionBuilder staged(@Nullable final Boolean staged) {

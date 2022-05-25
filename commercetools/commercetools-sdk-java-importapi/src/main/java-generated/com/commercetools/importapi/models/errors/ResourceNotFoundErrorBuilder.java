@@ -29,7 +29,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     private java.lang.Object resource;
 
     /**
-     <>
+     *
      */
 
     public ResourceNotFoundErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceNotFoundErrorBuilder resource(@Nullable final java.lang.Object resource) {

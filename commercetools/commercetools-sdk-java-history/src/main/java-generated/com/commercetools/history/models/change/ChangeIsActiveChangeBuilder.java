@@ -30,7 +30,7 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
     private Boolean nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changeIsActive</code></p>>
+     *  <p>Shape of the action for <code>changeIsActive</code></p>
      */
 
     public ChangeIsActiveChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeIsActiveChangeBuilder previousValue(final Boolean previousValue) {
@@ -48,7 +48,7 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeIsActiveChangeBuilder nextValue(final Boolean nextValue) {

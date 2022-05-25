@@ -30,7 +30,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     private com.commercetools.api.models.error.VariantValues variantValues;
 
     /**
-     <>
+     *
      */
 
     public DuplicateVariantValuesErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateVariantValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -48,7 +48,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateVariantValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -60,7 +60,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
@@ -70,7 +70,7 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateVariantValuesErrorBuilder variantValues(

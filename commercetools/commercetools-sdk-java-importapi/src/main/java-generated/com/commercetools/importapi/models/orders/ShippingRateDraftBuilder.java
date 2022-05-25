@@ -33,7 +33,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     private java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers;
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder price(
@@ -43,7 +43,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder price(final com.commercetools.importapi.models.common.Money price) {
@@ -52,7 +52,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder freeAbove(
@@ -62,7 +62,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder freeAbove(
@@ -72,7 +72,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder tiers(
@@ -82,7 +82,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder tiers(
@@ -92,7 +92,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder plusTiers(
@@ -105,7 +105,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder plusTiers(
@@ -119,7 +119,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateDraftBuilder withTiers(

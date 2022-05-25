@@ -32,14 +32,14 @@ public interface PublishChange extends Change {
     String PUBLISH_CHANGE = "PublishChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")

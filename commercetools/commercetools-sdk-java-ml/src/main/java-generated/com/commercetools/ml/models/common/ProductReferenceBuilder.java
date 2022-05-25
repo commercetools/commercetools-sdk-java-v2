@@ -24,7 +24,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     private String id;
 
     /**
-     <>
+     *
      */
 
     public ProductReferenceBuilder id(final String id) {

@@ -28,7 +28,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodUpdateBuilder withActions(

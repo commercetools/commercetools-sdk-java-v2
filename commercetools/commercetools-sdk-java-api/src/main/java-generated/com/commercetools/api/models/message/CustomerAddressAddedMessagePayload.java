@@ -34,7 +34,7 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
     String CUSTOMER_ADDRESS_ADDED = "CustomerAddressAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

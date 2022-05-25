@@ -32,7 +32,7 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values() {

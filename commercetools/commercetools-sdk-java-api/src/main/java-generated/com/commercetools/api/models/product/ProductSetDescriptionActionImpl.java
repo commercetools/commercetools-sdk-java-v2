@@ -40,7 +40,7 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -56,7 +56,7 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

@@ -39,7 +39,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -47,7 +47,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -55,7 +55,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVersion() {

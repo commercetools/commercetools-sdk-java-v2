@@ -34,7 +34,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
     private com.commercetools.history.models.common.Variant nextValue;
 
     /**
-     <*  <p>Update action for <code>addVariant</code></p>>
+     *  <p>Update action for <code>addVariant</code></p>
      */
 
     public AddVariantChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddVariantChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddVariantChangeBuilder previousValue(
@@ -62,7 +62,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddVariantChangeBuilder previousValue(final com.commercetools.history.models.common.Variant previousValue) {
@@ -71,7 +71,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddVariantChangeBuilder nextValue(
@@ -81,7 +81,7 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddVariantChangeBuilder nextValue(final com.commercetools.history.models.common.Variant nextValue) {

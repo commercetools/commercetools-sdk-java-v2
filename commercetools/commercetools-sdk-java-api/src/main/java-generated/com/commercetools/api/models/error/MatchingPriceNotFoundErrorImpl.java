@@ -61,7 +61,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -69,7 +69,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -77,7 +77,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -85,7 +85,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <>
+     *
      */
 
     public String getProductId() {
@@ -93,7 +93,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVariantId() {
@@ -101,7 +101,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <>
+     *
      */
 
     public String getCurrency() {
@@ -109,7 +109,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <>
+     *
      */
 
     public String getCountry() {
@@ -117,7 +117,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -125,7 +125,7 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {

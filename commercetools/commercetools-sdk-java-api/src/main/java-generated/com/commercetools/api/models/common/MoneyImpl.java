@@ -36,11 +36,11 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     <*  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
-    *  <ul>
-    *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
-    *  </ul>>
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
      */
 
     public Long getCentAmount() {
@@ -48,7 +48,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
 
     public String getCurrencyCode() {

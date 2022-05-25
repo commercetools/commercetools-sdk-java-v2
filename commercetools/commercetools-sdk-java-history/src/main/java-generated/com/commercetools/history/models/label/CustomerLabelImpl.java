@@ -43,7 +43,7 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFirstName() {
@@ -59,7 +59,7 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLastName() {
@@ -67,7 +67,7 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerNumber() {

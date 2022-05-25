@@ -29,7 +29,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
     String SET_STATUS_INTERFACE_CODE = "setStatusInterfaceCode";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("interfaceCode")

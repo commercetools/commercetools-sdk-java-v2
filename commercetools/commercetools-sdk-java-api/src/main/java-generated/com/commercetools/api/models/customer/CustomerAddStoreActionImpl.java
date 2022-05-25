@@ -36,7 +36,7 @@ public class CustomerAddStoreActionImpl implements CustomerAddStoreAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CustomerAddStoreActionImpl implements CustomerAddStoreAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

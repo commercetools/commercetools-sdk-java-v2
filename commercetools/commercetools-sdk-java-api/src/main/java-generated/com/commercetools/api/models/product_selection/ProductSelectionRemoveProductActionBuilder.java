@@ -25,7 +25,7 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
 
     /**
-     <*  <p>ResourceIdentifier to Product</p>>
+     *  <p>ResourceIdentifier to Product</p>
      */
 
     public ProductSelectionRemoveProductActionBuilder product(
@@ -36,7 +36,7 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>ResourceIdentifier to Product</p>>
+     *  <p>ResourceIdentifier to Product</p>
      */
 
     public ProductSelectionRemoveProductActionBuilder product(

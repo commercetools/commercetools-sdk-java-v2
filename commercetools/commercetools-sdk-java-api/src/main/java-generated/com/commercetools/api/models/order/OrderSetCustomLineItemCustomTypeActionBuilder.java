@@ -33,7 +33,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
@@ -42,7 +42,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
      */
 
     public OrderSetCustomLineItemCustomTypeActionBuilder fields(

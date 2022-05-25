@@ -37,21 +37,21 @@ public interface ChangeTransactionTimestampChange extends Change {
     String CHANGE_TRANSACTION_TIMESTAMP_CHANGE = "ChangeTransactionTimestampChange";
 
     /**
-     <*  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>>
+     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -59,14 +59,14 @@ public interface ChangeTransactionTimestampChange extends Change {
     public TransactionChangeValue getTransaction();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

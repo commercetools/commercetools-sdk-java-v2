@@ -30,7 +30,7 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +39,7 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(
@@ -51,7 +51,7 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemTotalPriceActionBuilder externalTotalPrice(

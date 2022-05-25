@@ -24,7 +24,7 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
     private String type;
 
     /**
-     <>
+     *
      */
 
     public SuggestTokenizerBuilder type(final String type) {

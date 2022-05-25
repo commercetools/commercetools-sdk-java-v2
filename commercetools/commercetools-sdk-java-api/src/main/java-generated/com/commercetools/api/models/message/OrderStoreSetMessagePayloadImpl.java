@@ -36,7 +36,7 @@ public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {

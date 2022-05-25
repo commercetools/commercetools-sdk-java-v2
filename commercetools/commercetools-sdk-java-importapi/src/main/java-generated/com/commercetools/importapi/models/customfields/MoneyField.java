@@ -34,7 +34,7 @@ public interface MoneyField extends CustomField {
     String MONEY = "Money";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

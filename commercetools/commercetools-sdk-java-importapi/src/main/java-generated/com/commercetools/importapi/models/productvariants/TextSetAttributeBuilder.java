@@ -29,7 +29,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     private java.util.List<String> value;
 
     /**
-     <*  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>>
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public TextSetAttributeBuilder name(@Nullable final String name) {
@@ -38,7 +38,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextSetAttributeBuilder value(final String... value) {
@@ -47,7 +47,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextSetAttributeBuilder value(final java.util.List<String> value) {
@@ -56,7 +56,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextSetAttributeBuilder plusValue(final String... value) {

@@ -33,14 +33,14 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     String SET_PARCEL_TRACKING_DATA = "setParcelTrackingData";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("trackingData")

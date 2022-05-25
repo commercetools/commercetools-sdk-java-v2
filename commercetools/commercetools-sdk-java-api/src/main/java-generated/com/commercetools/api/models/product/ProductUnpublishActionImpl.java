@@ -27,7 +27,7 @@ public class ProductUnpublishActionImpl implements ProductUnpublishAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

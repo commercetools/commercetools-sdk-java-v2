@@ -24,7 +24,7 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
     private String key;
 
     /**
-     <>
+     *
      */
 
     public CategoryKeyReferenceBuilder key(final String key) {

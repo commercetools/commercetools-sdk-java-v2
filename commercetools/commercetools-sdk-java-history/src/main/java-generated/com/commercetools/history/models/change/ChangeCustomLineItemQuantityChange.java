@@ -38,21 +38,21 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     String CHANGE_CUSTOM_LINE_ITEM_QUANTITY_CHANGE = "ChangeCustomLineItemQuantityChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeCustomLineItemQuantity</code></p>>
+     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,21 +60,21 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

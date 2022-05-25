@@ -42,7 +42,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder name(
@@ -52,7 +52,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder name(
@@ -62,7 +62,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder languages(final String... languages) {
@@ -71,7 +71,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder languages(final java.util.List<String> languages) {
@@ -80,7 +80,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder plusLanguages(final String... languages) {
@@ -92,7 +92,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder distributionChannels(
@@ -102,7 +102,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder distributionChannels(
@@ -112,7 +112,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder plusDistributionChannels(
@@ -125,7 +125,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder plusDistributionChannels(
@@ -139,7 +139,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder withDistributionChannels(
@@ -151,7 +151,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder supplyChannels(
@@ -161,7 +161,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder supplyChannels(
@@ -171,7 +171,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder plusSupplyChannels(
@@ -184,7 +184,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder plusSupplyChannels(
@@ -198,7 +198,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder withSupplyChannels(
@@ -210,7 +210,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder productSelections(
@@ -220,7 +220,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder productSelections(
@@ -230,7 +230,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder plusProductSelections(
@@ -243,7 +243,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder plusProductSelections(
@@ -257,7 +257,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public StoreCreatedMessagePayloadBuilder withProductSelections(
@@ -269,7 +269,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder custom(
@@ -279,7 +279,7 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public StoreCreatedMessagePayloadBuilder custom(

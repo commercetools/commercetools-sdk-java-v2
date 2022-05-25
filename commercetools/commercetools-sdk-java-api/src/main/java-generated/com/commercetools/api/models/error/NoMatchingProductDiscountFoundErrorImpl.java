@@ -39,7 +39,7 @@ public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProduc
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProduc
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProduc
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

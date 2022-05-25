@@ -32,7 +32,7 @@ public interface ClassificationShippingRateInputDraft extends ShippingRateInputD
     String CLASSIFICATION = "Classification";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")

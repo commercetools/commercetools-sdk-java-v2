@@ -58,7 +58,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -66,8 +66,8 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {
@@ -75,7 +75,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -83,7 +83,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -91,7 +91,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getSlug() {
@@ -99,7 +99,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -107,7 +107,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -115,7 +115,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

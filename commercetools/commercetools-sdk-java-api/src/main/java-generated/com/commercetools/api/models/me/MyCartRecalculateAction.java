@@ -29,7 +29,7 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
     String RECALCULATE = "recalculate";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("updateProductData")

@@ -33,14 +33,14 @@ public interface StoreUpdate
         extends com.commercetools.api.models.ResourceUpdate<StoreUpdate, StoreUpdateAction, StoreUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

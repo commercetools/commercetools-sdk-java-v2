@@ -39,7 +39,7 @@ public class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLo
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLo
     }
 
     /**
-     <*  <p><code>name</code> of the Field Definition to update.</p>>
+     *  <p><code>name</code> of the Field Definition to update.</p>
      */
 
     public String getFieldName() {
@@ -55,7 +55,7 @@ public class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLo
     }
 
     /**
-     <*  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>>
+     *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
      */
 
     public java.util.List<String> getKeys() {

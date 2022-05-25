@@ -30,7 +30,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     private com.commercetools.api.models.order_edit.OrderEdit obj;
 
     /**
-     <*  <p>Unique identifier of the referenced OrderEdit.</p>>
+     *  <p>Unique identifier of the referenced OrderEdit.</p>
      */
 
     public OrderEditReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>>
+     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
      */
 
     public OrderEditReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>>
+     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
      */
 
     public OrderEditReferenceBuilder obj(@Nullable final com.commercetools.api.models.order_edit.OrderEdit obj) {

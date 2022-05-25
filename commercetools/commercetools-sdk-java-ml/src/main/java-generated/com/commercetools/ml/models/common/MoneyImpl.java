@@ -35,7 +35,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCentAmount() {
@@ -43,7 +43,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     <*  <p>The currency code compliant to ISO 4217.</p>>
+     *  <p>The currency code compliant to ISO 4217.</p>
      */
 
     public String getCurrencyCode() {

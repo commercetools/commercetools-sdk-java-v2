@@ -25,7 +25,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
     private java.util.List<String> attributeNames;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(final String... attributeNames) {
@@ -34,7 +34,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(
@@ -44,7 +44,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder plusAttributeNames(final String... attributeNames) {

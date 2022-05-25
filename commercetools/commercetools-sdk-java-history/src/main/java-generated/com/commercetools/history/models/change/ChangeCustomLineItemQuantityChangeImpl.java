@@ -51,7 +51,7 @@ public class ChangeCustomLineItemQuantityChangeImpl implements ChangeCustomLineI
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class ChangeCustomLineItemQuantityChangeImpl implements ChangeCustomLineI
     }
 
     /**
-     <*  <p>Update action for <code>changeCustomLineItemQuantity</code></p>>
+     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class ChangeCustomLineItemQuantityChangeImpl implements ChangeCustomLineI
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
@@ -75,7 +75,7 @@ public class ChangeCustomLineItemQuantityChangeImpl implements ChangeCustomLineI
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -83,7 +83,7 @@ public class ChangeCustomLineItemQuantityChangeImpl implements ChangeCustomLineI
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getNextValue() {
@@ -91,7 +91,7 @@ public class ChangeCustomLineItemQuantityChangeImpl implements ChangeCustomLineI
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getPreviousValue() {

@@ -35,7 +35,7 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getType() {
@@ -43,7 +43,7 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-     <*  <p>A valid JSON object, based on FieldDefinition.</p>>
+     *  <p>A valid JSON object, based on FieldDefinition.</p>
      */
 
     public java.lang.Object getFields() {

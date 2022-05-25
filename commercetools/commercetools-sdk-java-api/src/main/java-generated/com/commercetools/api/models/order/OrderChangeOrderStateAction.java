@@ -32,7 +32,7 @@ public interface OrderChangeOrderStateAction extends OrderUpdateAction {
     String CHANGE_ORDER_STATE = "changeOrderState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("orderState")

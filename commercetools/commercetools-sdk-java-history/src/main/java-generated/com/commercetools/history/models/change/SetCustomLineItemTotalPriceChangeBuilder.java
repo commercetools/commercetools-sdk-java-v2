@@ -37,7 +37,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
     private com.commercetools.history.models.common.Money previousValue;
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder customLineItem(
@@ -57,7 +57,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder customLineItem(
@@ -67,7 +67,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder customLineItemId(final String customLineItemId) {
@@ -76,7 +76,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder nextValue(
@@ -86,7 +86,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder nextValue(
@@ -96,7 +96,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder previousValue(
@@ -106,7 +106,7 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTotalPriceChangeBuilder previousValue(

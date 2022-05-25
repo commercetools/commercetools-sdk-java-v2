@@ -25,7 +25,7 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
     private String addressKey;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {

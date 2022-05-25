@@ -35,7 +35,7 @@ public class TaxCategoryChangeNameActionImpl implements TaxCategoryChangeNameAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class TaxCategoryChangeNameActionImpl implements TaxCategoryChangeNameAct
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public String getName() {

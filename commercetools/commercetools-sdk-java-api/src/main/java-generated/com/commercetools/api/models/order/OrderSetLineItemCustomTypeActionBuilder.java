@@ -33,7 +33,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public OrderSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
@@ -42,7 +42,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <*  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>>
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      */
 
     public OrderSetLineItemCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <*  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>>
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      */
 
     public OrderSetLineItemCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the LineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the LineItem.</p>
      */
 
     public OrderSetLineItemCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the LineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the LineItem.</p>
      */
 
     public OrderSetLineItemCustomTypeActionBuilder fields(

@@ -43,7 +43,7 @@ public interface OrderEditAppliedMessage extends OrderMessage {
     String ORDER_EDIT_APPLIED = "OrderEditApplied";
 
     /**
-     <*  <p>Reference to a OrderEdit.</p>>
+     *  <p>Reference to a OrderEdit.</p>
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface OrderEditAppliedMessage extends OrderMessage {
     public OrderEditReference getEdit();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

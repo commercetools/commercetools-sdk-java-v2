@@ -46,7 +46,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     private java.time.ZonedDateTime validityCheckTime;
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder message(final String message) {
@@ -55,7 +55,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -64,7 +64,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -76,7 +76,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder discountCode(@Nullable final String discountCode) {
@@ -85,7 +85,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder reason(@Nullable final String reason) {
@@ -94,7 +94,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder dicountCodeId(@Nullable final String dicountCodeId) {
@@ -103,7 +103,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -112,7 +112,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -121,7 +121,7 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeNonApplicableErrorBuilder validityCheckTime(

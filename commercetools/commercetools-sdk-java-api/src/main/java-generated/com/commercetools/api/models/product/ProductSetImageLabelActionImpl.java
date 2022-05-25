@@ -49,7 +49,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -57,7 +57,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -65,7 +65,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -73,7 +73,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     <*  <p>The URL of the image.</p>>
+     *  <p>The URL of the image.</p>
      */
 
     public String getImageUrl() {
@@ -81,7 +81,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     <*  <p>The new image label. If left blank or set to null, the label is removed.</p>>
+     *  <p>The new image label. If left blank or set to null, the label is removed.</p>
      */
 
     public String getLabel() {
@@ -89,7 +89,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

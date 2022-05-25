@@ -43,7 +43,7 @@ public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeTaxMode</code></p>>
+     *  <p>Shape of the action for <code>changeTaxMode</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxMode getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxMode getNextValue() {

@@ -38,7 +38,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
     /**
-     <>
+     *
      */
 
     public ExtensionBadResponseErrorBuilder message(final String message) {
@@ -47,7 +47,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionBadResponseErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -56,7 +56,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionBadResponseErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -68,7 +68,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ExtensionBadResponseErrorBuilder localizedMessage(
@@ -78,7 +78,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ExtensionBadResponseErrorBuilder localizedMessage(
@@ -88,7 +88,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {
@@ -97,7 +97,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionBadResponseErrorBuilder errorByExtension(
@@ -107,7 +107,7 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionBadResponseErrorBuilder errorByExtension(

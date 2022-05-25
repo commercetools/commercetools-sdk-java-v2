@@ -33,42 +33,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalTaxRateDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("amount")
     public Double getAmount();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("state")
     public String getState();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("includedInPrice")

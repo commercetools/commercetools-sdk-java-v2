@@ -30,7 +30,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
     /**
-     <>
+     *
      */
 
     public OrderShipmentStateChangedMessagePayloadBuilder shipmentState(
@@ -40,7 +40,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShipmentStateChangedMessagePayloadBuilder oldShipmentState(

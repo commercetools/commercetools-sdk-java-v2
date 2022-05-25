@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxedPrice {
 
     /**
-     <*  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>>
+     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface TaxedPrice {
     public Money getTotalNet();
 
     /**
-     <*  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>>
+     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface TaxedPrice {
     public Money getTotalGross();
 
     /**
-     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface TaxedPrice {
     public List<TaxPortion> getTaxPortions();
 
     /**
-     <*  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>>
+     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
      */
     @Valid
     @JsonProperty("totalTax")

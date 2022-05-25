@@ -34,7 +34,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     private java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers;
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder price(
@@ -44,7 +44,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder price(final com.commercetools.history.models.common.Money price) {
@@ -53,7 +53,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder freeAbove(
@@ -63,7 +63,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder freeAbove(final com.commercetools.history.models.common.Money freeAbove) {
@@ -72,7 +72,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <*  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>>
+     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
      */
 
     public ShippingRateBuilder isMatching(final Boolean isMatching) {
@@ -81,7 +81,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder tiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {
@@ -90,7 +90,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder tiers(
@@ -100,7 +100,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder plusTiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {
@@ -112,7 +112,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder plusTiers(
@@ -126,7 +126,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingRateBuilder withTiers(

@@ -39,7 +39,7 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
     }
 
     /**
-     <*  <p>AWS region of the Subscriptions that receives the events.</p>>
+     *  <p>AWS region of the Subscriptions that receives the events.</p>
      */
 
     public String getRegion() {
@@ -55,7 +55,7 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
     }
 
     /**
-     <*  <p>ID of the AWS account that receives events.</p>>
+     *  <p>ID of the AWS account that receives events.</p>
      */
 
     public String getAccountId() {

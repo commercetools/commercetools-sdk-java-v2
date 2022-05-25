@@ -35,7 +35,7 @@ public class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction, M
     }
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     public String getDescription() {

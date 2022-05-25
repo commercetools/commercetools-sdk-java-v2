@@ -39,7 +39,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.Money getPrice() {
@@ -47,7 +47,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.Money getFreeAbove() {
@@ -55,7 +55,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {

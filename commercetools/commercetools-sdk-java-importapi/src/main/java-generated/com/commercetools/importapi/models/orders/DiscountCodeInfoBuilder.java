@@ -30,7 +30,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     private com.commercetools.importapi.models.orders.DiscountCodeState state;
 
     /**
-     <*  <p>References a discount code by key.</p>>
+     *  <p>References a discount code by key.</p>
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -42,7 +42,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     <*  <p>References a discount code by key.</p>>
+     *  <p>References a discount code by key.</p>
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -52,7 +52,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     <*  <p>Maps to <code>DiscountCodeInfo.state</code></p>>
+     *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
      */
 
     public DiscountCodeInfoBuilder state(

@@ -38,14 +38,14 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     String ORDER_LINE_ITEM_DISCOUNT_SET = "OrderLineItemDiscountSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -53,8 +53,8 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
     @NotNull
     @Valid
@@ -62,7 +62,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public Money getTotalPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxedPrice")

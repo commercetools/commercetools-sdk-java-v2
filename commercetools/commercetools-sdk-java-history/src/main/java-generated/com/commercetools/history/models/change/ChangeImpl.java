@@ -34,7 +34,7 @@ public class ChangeImpl implements Change, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -42,7 +42,7 @@ public class ChangeImpl implements Change, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {

@@ -30,8 +30,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTotalGross(
@@ -41,8 +41,8 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTotalGross(
@@ -52,7 +52,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(
@@ -62,7 +62,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(
@@ -72,7 +72,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder plusExternalTaxPortions(
@@ -85,7 +85,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder plusExternalTaxPortions(
@@ -99,7 +99,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetOrderTotalTaxActionBuilder withExternalTaxPortions(

@@ -26,7 +26,7 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public SyntaxErrorErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
     }
 
     /**
-     <>
+     *
      */
 
     public SyntaxErrorErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
     }
 
     /**
-     <>
+     *
      */
 
     public SyntaxErrorErrorBuilder addValue(final String key, final java.lang.Object value) {

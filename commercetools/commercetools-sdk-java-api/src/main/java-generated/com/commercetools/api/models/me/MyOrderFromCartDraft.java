@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyOrderFromCartDraft {
 
     /**
-     <*  <p>Unique identifier of the Cart that initiates an Order creation.</p>>
+     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")

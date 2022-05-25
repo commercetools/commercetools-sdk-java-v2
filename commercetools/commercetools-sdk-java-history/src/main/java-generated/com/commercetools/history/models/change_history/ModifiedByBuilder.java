@@ -42,7 +42,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     private Boolean isPlatformClient;
 
     /**
-     <*  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>>
+     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
      */
 
     public ModifiedByBuilder id(final String id) {
@@ -51,7 +51,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     <*  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>>
+     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
      */
 
     public ModifiedByBuilder type(final String type) {
@@ -60,7 +60,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     <*  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>>
+     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
      */
 
     public ModifiedByBuilder customer(
@@ -70,7 +70,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     <*  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>>
+     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
      */
 
     public ModifiedByBuilder customer(@Nullable final com.commercetools.history.models.common.Reference customer) {
@@ -79,7 +79,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     <*  <p>Present only if the change was made using a token from an Anonymous Session.</p>>
+     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
      */
 
     public ModifiedByBuilder anonymousId(@Nullable final String anonymousId) {
@@ -88,7 +88,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     <*  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>>
+     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
      */
 
     public ModifiedByBuilder clientId(@Nullable final String clientId) {
@@ -97,7 +97,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     <*  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>>
+     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
      */
 
     public ModifiedByBuilder isPlatformClient(final Boolean isPlatformClient) {

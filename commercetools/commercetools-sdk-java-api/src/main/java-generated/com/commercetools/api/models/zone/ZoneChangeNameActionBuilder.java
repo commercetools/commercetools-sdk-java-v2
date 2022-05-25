@@ -24,7 +24,7 @@ public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction
     private String name;
 
     /**
-     <*  <p>New name of the Zone.</p>>
+     *  <p>New name of the Zone.</p>
      */
 
     public ZoneChangeNameActionBuilder name(final String name) {

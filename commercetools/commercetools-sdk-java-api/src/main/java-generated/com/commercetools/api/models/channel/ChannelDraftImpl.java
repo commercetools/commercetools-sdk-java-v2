@@ -55,7 +55,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Channel.</p>>
+     *  <p>User-defined unique identifier for the Channel.</p>
      */
 
     public String getKey() {
@@ -63,7 +63,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     <*  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>>
+     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
@@ -71,7 +71,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Channel.</p>>
+     *  <p>Name of the Channel.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -79,7 +79,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     <*  <p>Description of the Channel.</p>>
+     *  <p>Description of the Channel.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -87,7 +87,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     <*  <p>Address where the Channel is located.</p>>
+     *  <p>Address where the Channel is located.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -95,7 +95,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     <*  <p>Custom fields defined for the Channel.</p>>
+     *  <p>Custom fields defined for the Channel.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -103,7 +103,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-     <*  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
      */
 
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {

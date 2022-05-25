@@ -44,7 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceImport extends ImportResource {
 
     /**
-     <*  <p>Maps to <code>Price.value</code>.</p>>
+     *  <p>Maps to <code>Price.value</code>.</p>
      */
     @NotNull
     @Valid
@@ -52,70 +52,70 @@ public interface PriceImport extends ImportResource {
     public TypedMoney getValue();
 
     /**
-     <*  <p>Maps to <code>Price.county</code>.</p>>
+     *  <p>Maps to <code>Price.county</code>.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>Maps to <code>Price.validFrom</code>.</p>>
+     *  <p>Maps to <code>Price.validFrom</code>.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <*  <p>Maps to <code>Price.validUntil</code>.</p>>
+     *  <p>Maps to <code>Price.validUntil</code>.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <*  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>>
+     *  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     <*  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>>
+     *  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelKeyReference getChannel();
 
     /**
-     <*  <p>Sets a discounted price from an external service.</p>>
+     *  <p>Sets a discounted price from an external service.</p>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     <*  <p>Only the EmbeddedPrice updates will be published to <code>staged</code> and <code>current</code> projection.</p>>
+     *  <p>Only the EmbeddedPrice updates will be published to <code>staged</code> and <code>current</code> projection.</p>
      */
 
     @JsonProperty("publish")
     public Boolean getPublish();
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
 
     /**
-     <*  <p>The custom fields for this price.</p>>
+     *  <p>The custom fields for this price.</p>
      */
     @Valid
     @JsonProperty("custom")
     public Custom getCustom();
 
     /**
-     <*  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>>
+     *  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      */
     @NotNull
     @Valid
@@ -123,7 +123,7 @@ public interface PriceImport extends ImportResource {
     public ProductVariantKeyReference getProductVariant();
 
     /**
-     <*  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>>
+     *  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
      */
     @NotNull
     @Valid

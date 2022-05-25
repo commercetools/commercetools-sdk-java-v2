@@ -34,21 +34,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SimilarProductsTaskStatus {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("state")
     public TaskStatusEnum getState();
 
     /**
-     <*  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>>
+     *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
      */
 
     @JsonProperty("expires")
     public ZonedDateTime getExpires();
 
     /**
-     <*  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>>
+     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      */
     @NotNull
     @Valid

@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderSearchRequest {
 
     /**
-     <*  <p>The Order search query.</p>>
+     *  <p>The Order search query.</p>
      */
     @NotNull
     @Valid
@@ -39,21 +39,21 @@ public interface OrderSearchRequest {
     public OrderSearchQuery getQuery();
 
     /**
-     <*  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>>
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
      */
 
     @JsonProperty("sort")
     public String getSort();
 
     /**
-     <*  <p>The maximum number of search results to be returned.</p>>
+     *  <p>The maximum number of search results to be returned.</p>
      */
 
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-     <*  <p>The number of search results to be skipped in the response for pagination.</p>>
+     *  <p>The number of search results to be skipped in the response for pagination.</p>
      */
 
     @JsonProperty("offset")

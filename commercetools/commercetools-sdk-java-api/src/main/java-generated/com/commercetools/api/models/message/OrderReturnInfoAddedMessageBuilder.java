@@ -57,7 +57,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     private com.commercetools.api.models.order.ReturnInfo returnInfo;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderReturnInfoAddedMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderReturnInfoAddedMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderReturnInfoAddedMessageBuilder lastModifiedBy(
@@ -113,7 +113,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderReturnInfoAddedMessageBuilder createdBy(
@@ -123,7 +123,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderReturnInfoAddedMessageBuilder createdBy(
@@ -133,7 +133,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderReturnInfoAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -151,7 +151,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderReturnInfoAddedMessageBuilder resource(
@@ -161,7 +161,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -170,7 +170,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder resourceUserProvidedIdentifiers(
@@ -182,7 +182,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,7 +192,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder returnInfo(
@@ -202,7 +202,7 @@ public class OrderReturnInfoAddedMessageBuilder implements Builder<OrderReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessageBuilder returnInfo(

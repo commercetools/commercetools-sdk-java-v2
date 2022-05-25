@@ -40,7 +40,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getTextLineItemId() {
@@ -56,7 +56,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {

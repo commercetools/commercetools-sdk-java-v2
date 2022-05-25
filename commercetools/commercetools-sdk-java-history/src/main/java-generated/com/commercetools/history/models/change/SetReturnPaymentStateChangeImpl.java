@@ -43,7 +43,7 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
     }
 
     /**
-     <*  <p>Update action for <code>setReturnPaymentState</code></p>>
+     *  <p>Update action for <code>setReturnPaymentState</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReturnPaymentState getNextValue() {
@@ -67,7 +67,7 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReturnPaymentState getPreviousValue() {

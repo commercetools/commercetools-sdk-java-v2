@@ -34,28 +34,28 @@ public interface OrderAddDeliveryAction
     String ADD_DELIVERY = "addDelivery";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("parcels")
     public List<ParcelDraft> getParcels();
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
     @Valid
     @JsonProperty("custom")

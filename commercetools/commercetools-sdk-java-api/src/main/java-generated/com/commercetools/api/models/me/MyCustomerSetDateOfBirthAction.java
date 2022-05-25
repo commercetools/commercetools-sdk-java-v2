@@ -30,7 +30,7 @@ public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
     String SET_DATE_OF_BIRTH = "setDateOfBirth";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("dateOfBirth")

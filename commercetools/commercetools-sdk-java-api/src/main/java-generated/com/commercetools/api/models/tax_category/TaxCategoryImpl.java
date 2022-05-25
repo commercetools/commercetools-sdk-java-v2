@@ -65,7 +65,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the TaxCategory.</p>>
+     *  <p>Unique identifier of the TaxCategory.</p>
      */
 
     public String getId() {
@@ -73,7 +73,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the TaxCategory.</p>>
+     *  <p>Current version of the TaxCategory.</p>
      */
 
     public Long getVersion() {
@@ -81,7 +81,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the TaxCategory was initially created.</p>>
+     *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -89,7 +89,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the TaxCategory was last updated.</p>>
+     *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -97,7 +97,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -105,7 +105,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -113,7 +113,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Name of the TaxCategory.</p>>
+     *  <p>Name of the TaxCategory.</p>
      */
 
     public String getName() {
@@ -121,7 +121,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Description of the TaxCategory.</p>>
+     *  <p>Description of the TaxCategory.</p>
      */
 
     public String getDescription() {
@@ -129,7 +129,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>>
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.TaxRate> getRates() {
@@ -137,7 +137,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the TaxCategory.</p>>
+     *  <p>User-defined unique identifier of the TaxCategory.</p>
      */
 
     public String getKey() {

@@ -25,7 +25,7 @@ public class StagedOrderRemovePaymentActionBuilder implements Builder<StagedOrde
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     <*  <p>ResourceIdentifier to a Payment.</p>>
+     *  <p>ResourceIdentifier to a Payment.</p>
      */
 
     public StagedOrderRemovePaymentActionBuilder payment(
@@ -36,7 +36,7 @@ public class StagedOrderRemovePaymentActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Payment.</p>>
+     *  <p>ResourceIdentifier to a Payment.</p>
      */
 
     public StagedOrderRemovePaymentActionBuilder payment(

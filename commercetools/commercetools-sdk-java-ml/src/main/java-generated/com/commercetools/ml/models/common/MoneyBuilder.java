@@ -27,7 +27,7 @@ public class MoneyBuilder implements Builder<Money> {
     private String currencyCode;
 
     /**
-     <>
+     *
      */
 
     public MoneyBuilder centAmount(final Long centAmount) {
@@ -36,7 +36,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     <*  <p>The currency code compliant to ISO 4217.</p>>
+     *  <p>The currency code compliant to ISO 4217.</p>
      */
 
     public MoneyBuilder currencyCode(final String currencyCode) {

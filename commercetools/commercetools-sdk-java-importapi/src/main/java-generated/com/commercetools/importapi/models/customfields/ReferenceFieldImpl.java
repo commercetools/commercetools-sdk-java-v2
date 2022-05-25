@@ -35,7 +35,7 @@ public class ReferenceFieldImpl implements ReferenceField, ModelBase {
     }
 
     /**
-     <*  <p>The type of this field.</p>>
+     *  <p>The type of this field.</p>
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class ReferenceFieldImpl implements ReferenceField, ModelBase {
     }
 
     /**
-     <*  <p>References a resource by key</p>>
+     *  <p>References a resource by key</p>
      */
 
     public com.commercetools.importapi.models.common.KeyReference getValue() {

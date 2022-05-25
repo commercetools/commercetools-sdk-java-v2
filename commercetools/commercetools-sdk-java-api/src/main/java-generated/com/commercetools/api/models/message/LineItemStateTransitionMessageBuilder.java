@@ -69,7 +69,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     private com.commercetools.api.models.state.StateReference toState;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public LineItemStateTransitionMessageBuilder id(final String id) {
@@ -78,7 +78,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder version(final Long version) {
@@ -87,7 +87,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -96,7 +96,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -105,7 +105,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public LineItemStateTransitionMessageBuilder lastModifiedBy(
@@ -115,7 +115,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public LineItemStateTransitionMessageBuilder lastModifiedBy(
@@ -125,7 +125,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public LineItemStateTransitionMessageBuilder createdBy(
@@ -135,7 +135,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public LineItemStateTransitionMessageBuilder createdBy(
@@ -145,7 +145,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -154,7 +154,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public LineItemStateTransitionMessageBuilder resource(
@@ -164,7 +164,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public LineItemStateTransitionMessageBuilder resource(
@@ -174,7 +174,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -183,7 +183,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -205,7 +205,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder lineItemId(final String lineItemId) {
@@ -214,7 +214,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder transitionDate(final java.time.ZonedDateTime transitionDate) {
@@ -223,7 +223,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessageBuilder quantity(final Long quantity) {
@@ -232,7 +232,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public LineItemStateTransitionMessageBuilder fromState(
@@ -242,7 +242,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public LineItemStateTransitionMessageBuilder fromState(
@@ -252,7 +252,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public LineItemStateTransitionMessageBuilder toState(
@@ -262,7 +262,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public LineItemStateTransitionMessageBuilder toState(

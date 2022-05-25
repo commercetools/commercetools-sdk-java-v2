@@ -39,21 +39,21 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     String SET_CUSTOM_LINE_ITEM_TOTAL_PRICE_CHANGE = "SetCustomLineItemTotalPriceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -61,14 +61,14 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -76,7 +76,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     public Money getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

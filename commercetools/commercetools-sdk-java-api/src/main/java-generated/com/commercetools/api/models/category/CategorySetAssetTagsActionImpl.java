@@ -42,7 +42,7 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -50,7 +50,7 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -58,7 +58,7 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -66,7 +66,7 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getTags() {

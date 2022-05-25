@@ -28,7 +28,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
     private com.commercetools.history.models.common.Transaction nextValue;
 
     /**
-     <*  <p>Update action for <code>addTransaction</code> on payments</p>>
+     *  <p>Update action for <code>addTransaction</code> on payments</p>
      */
 
     public AddTransactionChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
     }
 
     /**
-     <>
+     *
      */
 
     public AddTransactionChangeBuilder nextValue(
@@ -47,7 +47,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
     }
 
     /**
-     <>
+     *
      */
 
     public AddTransactionChangeBuilder nextValue(final com.commercetools.history.models.common.Transaction nextValue) {

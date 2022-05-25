@@ -34,42 +34,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantDraftImport {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("prices")
     public List<PriceDraftImport> getPrices();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("assets")

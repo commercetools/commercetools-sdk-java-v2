@@ -24,7 +24,7 @@ public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldRefer
     private com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId;
 
     /**
-     <*  <p>Resource type the Custom Field can reference.</p>>
+     *  <p>Resource type the Custom Field can reference.</p>
      */
 
     public CustomFieldReferenceTypeBuilder referenceTypeId(

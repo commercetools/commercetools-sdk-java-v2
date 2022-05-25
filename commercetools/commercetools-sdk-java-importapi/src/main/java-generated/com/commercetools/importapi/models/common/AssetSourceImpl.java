@@ -42,7 +42,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getUri() {
@@ -50,7 +50,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -58,7 +58,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <*  <p>The width and height of the Asset Source.</p>>
+     *  <p>The width and height of the Asset Source.</p>
      */
 
     public com.commercetools.importapi.models.common.AssetDimensions getDimensions() {
@@ -66,7 +66,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getContentType() {

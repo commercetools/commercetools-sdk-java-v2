@@ -24,7 +24,7 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public StoreKeyReferenceBuilder key(final String key) {

@@ -39,7 +39,7 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
     }
 
     /**
-     <>
+     *
      */
 
     public String getReturnItemId() {
@@ -55,7 +55,7 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {

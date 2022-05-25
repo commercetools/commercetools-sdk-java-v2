@@ -35,7 +35,7 @@ public class CustomerGroupChangeNameActionImpl implements CustomerGroupChangeNam
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerGroupChangeNameActionImpl implements CustomerGroupChangeNam
     }
 
     /**
-     <*  <p>New name of the CustomerGroup.</p>>
+     *  <p>New name of the CustomerGroup.</p>
      */
 
     public String getName() {

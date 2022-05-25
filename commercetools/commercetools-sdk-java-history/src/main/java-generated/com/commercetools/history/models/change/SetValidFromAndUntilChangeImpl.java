@@ -43,7 +43,7 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
     }
 
     /**
-     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      */
 
     public com.commercetools.history.models.change_value.ValidFromAndUntilValue getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
     }
 
     /**
-     <*  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>>
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      */
 
     public com.commercetools.history.models.change_value.ValidFromAndUntilValue getNextValue() {

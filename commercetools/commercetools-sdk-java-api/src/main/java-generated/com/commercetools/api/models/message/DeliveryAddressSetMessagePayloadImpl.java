@@ -43,7 +43,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -67,7 +67,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getOldAddress() {

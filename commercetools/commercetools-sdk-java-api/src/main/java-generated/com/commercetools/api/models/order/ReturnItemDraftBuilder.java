@@ -42,7 +42,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder quantity(final Long quantity) {
@@ -51,7 +51,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder lineItemId(@Nullable final String lineItemId) {
@@ -60,7 +60,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder customLineItemId(@Nullable final String customLineItemId) {
@@ -69,7 +69,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder comment(@Nullable final String comment) {
@@ -78,7 +78,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnItemDraftBuilder shipmentState(
@@ -88,7 +88,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
 
     public ReturnItemDraftBuilder custom(
@@ -98,7 +98,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
 
     public ReturnItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

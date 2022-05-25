@@ -37,28 +37,28 @@ public interface SetImageLabelChange extends Change {
     String SET_IMAGE_LABEL_CHANGE = "SetImageLabelChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setImageLabel</code></p>>
+     *  <p>Update action for <code>setImageLabel</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface SetImageLabelChange extends Change {
     public Image getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

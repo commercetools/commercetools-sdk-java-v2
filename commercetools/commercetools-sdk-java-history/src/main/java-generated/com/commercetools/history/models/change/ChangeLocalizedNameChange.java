@@ -36,21 +36,21 @@ public interface ChangeLocalizedNameChange extends Change {
     String CHANGE_LOCALIZED_NAME_CHANGE = "ChangeLocalizedNameChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeName</code></p>>
+     *  <p>Shape of the action for <code>changeName</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeLocalizedNameChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

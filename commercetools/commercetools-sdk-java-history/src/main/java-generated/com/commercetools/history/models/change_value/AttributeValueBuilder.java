@@ -26,7 +26,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     private java.lang.Object value;
 
     /**
-     <>
+     *
      */
 
     public AttributeValueBuilder name(final String name) {
@@ -35,7 +35,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeValueBuilder value(final java.lang.Object value) {

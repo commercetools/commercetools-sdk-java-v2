@@ -42,14 +42,14 @@ public interface ProductDeletedMessage extends Message {
     String PRODUCT_DELETED = "ProductDeleted";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

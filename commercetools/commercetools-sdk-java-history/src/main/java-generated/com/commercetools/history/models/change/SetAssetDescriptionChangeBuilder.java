@@ -34,7 +34,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     /**
-     <*  <p>Update action for <code>setAssetDescription</code></p>>
+     *  <p>Update action for <code>setAssetDescription</code></p>
      */
 
     public SetAssetDescriptionChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetDescriptionChangeBuilder asset(
@@ -53,7 +53,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetDescriptionChangeBuilder asset(
@@ -63,7 +63,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetDescriptionChangeBuilder nextValue(
@@ -73,7 +73,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetDescriptionChangeBuilder nextValue(
@@ -83,7 +83,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetDescriptionChangeBuilder previousValue(
@@ -93,7 +93,7 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetDescriptionChangeBuilder previousValue(

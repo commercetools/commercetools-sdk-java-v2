@@ -36,14 +36,14 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     String IMPORT_LINE_ITEM_STATE = "importLineItemState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

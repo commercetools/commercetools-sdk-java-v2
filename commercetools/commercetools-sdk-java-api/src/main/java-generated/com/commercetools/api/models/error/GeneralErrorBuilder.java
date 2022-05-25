@@ -26,7 +26,7 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public GeneralErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
     }
 
     /**
-     <>
+     *
      */
 
     public GeneralErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class GeneralErrorBuilder implements Builder<GeneralError> {
     }
 
     /**
-     <>
+     *
      */
 
     public GeneralErrorBuilder addValue(final String key, final java.lang.Object value) {

@@ -27,7 +27,7 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
     private java.time.ZonedDateTime lastModifiedAt;
 
     /**
-     <*  <p>The image search activation status.</p>>
+     *  <p>The image search activation status.</p>
      */
 
     public ImageSearchConfigResponseBuilder status(
@@ -37,7 +37,7 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
     }
 
     /**
-     <>
+     *
      */
 
     public ImageSearchConfigResponseBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {

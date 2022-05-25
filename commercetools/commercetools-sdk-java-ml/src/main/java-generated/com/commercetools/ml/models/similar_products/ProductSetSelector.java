@@ -30,42 +30,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSetSelector {
 
     /**
-     <*  <p>The project containing the project set.</p>>
+     *  <p>The project containing the project set.</p>
      */
     @NotNull
     @JsonProperty("projectKey")
     public String getProjectKey();
 
     /**
-     <*  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>>
+     *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
      */
 
     @JsonProperty("productIds")
     public List<String> getProductIds();
 
     /**
-     <*  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>>
+     *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
      */
 
     @JsonProperty("productTypeIds")
     public List<String> getProductTypeIds();
 
     /**
-     <*  <p>Specifies use of staged or current product data.</p>>
+     *  <p>Specifies use of staged or current product data.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <*  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>>
+     *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
      */
 
     @JsonProperty("includeVariants")
     public Boolean getIncludeVariants();
 
     /**
-     <*  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>>
+     *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
      */
 
     @JsonProperty("productSetLimit")

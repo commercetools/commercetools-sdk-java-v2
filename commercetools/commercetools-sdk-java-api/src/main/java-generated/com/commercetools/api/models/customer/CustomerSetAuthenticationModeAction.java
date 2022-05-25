@@ -32,14 +32,14 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
     String SET_AUTHENTICATION_MODE = "setAuthenticationMode";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("authMode")
     public AuthenticationMode getAuthMode();
 
     /**
-     <*  <p>Required when <code>authMode</code> is <code>Password</code></p>>
+     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
      */
 
     @JsonProperty("password")

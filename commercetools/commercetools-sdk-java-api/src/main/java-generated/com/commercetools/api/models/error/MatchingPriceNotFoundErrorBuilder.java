@@ -47,7 +47,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     private com.commercetools.api.models.channel.ChannelReference channel;
 
     /**
-     <>
+     *
      */
 
     public MatchingPriceNotFoundErrorBuilder message(final String message) {
@@ -56,7 +56,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <>
+     *
      */
 
     public MatchingPriceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -65,7 +65,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <>
+     *
      */
 
     public MatchingPriceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -77,7 +77,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <>
+     *
      */
 
     public MatchingPriceNotFoundErrorBuilder productId(final String productId) {
@@ -86,7 +86,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <>
+     *
      */
 
     public MatchingPriceNotFoundErrorBuilder variantId(final Integer variantId) {
@@ -95,7 +95,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <>
+     *
      */
 
     public MatchingPriceNotFoundErrorBuilder currency(@Nullable final String currency) {
@@ -104,7 +104,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <>
+     *
      */
 
     public MatchingPriceNotFoundErrorBuilder country(@Nullable final String country) {
@@ -113,7 +113,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
@@ -125,7 +125,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder customerGroup(
@@ -135,7 +135,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder channel(
@@ -145,7 +145,7 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public MatchingPriceNotFoundErrorBuilder channel(

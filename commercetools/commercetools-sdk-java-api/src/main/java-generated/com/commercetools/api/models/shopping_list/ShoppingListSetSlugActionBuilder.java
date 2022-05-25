@@ -27,7 +27,7 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
     private com.commercetools.api.models.common.LocalizedString slug;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetSlugActionBuilder slug(
@@ -37,7 +37,7 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetSlugActionBuilder slug(

@@ -40,7 +40,7 @@ public interface ProductPriceDiscountsSetMessage extends Message {
     String PRODUCT_PRICE_DISCOUNTS_SET = "ProductPriceDiscountsSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

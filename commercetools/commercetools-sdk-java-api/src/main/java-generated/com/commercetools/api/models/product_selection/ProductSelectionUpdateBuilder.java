@@ -28,7 +28,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
     private java.util.List<com.commercetools.api.models.product_selection.ProductSelectionUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionUpdateBuilder plusActions(
@@ -85,7 +85,7 @@ public class ProductSelectionUpdateBuilder implements Builder<ProductSelectionUp
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionUpdateBuilder withActions(

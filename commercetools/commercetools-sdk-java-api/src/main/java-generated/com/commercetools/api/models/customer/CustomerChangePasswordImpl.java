@@ -42,7 +42,7 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
     }
 
     /**
-     <*  <p>Unique identifier of the Customer.</p>>
+     *  <p>Unique identifier of the Customer.</p>
      */
 
     public String getId() {
@@ -50,7 +50,7 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -58,7 +58,7 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getCurrentPassword() {
@@ -66,7 +66,7 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getNewPassword() {

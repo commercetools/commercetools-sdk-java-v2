@@ -55,7 +55,7 @@ public class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineItemTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -63,7 +63,7 @@ public class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineItemTaxR
     }
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTaxRate</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTaxRate</code></p>
      */
 
     public String getChange() {
@@ -71,7 +71,7 @@ public class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineItemTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
@@ -79,7 +79,7 @@ public class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineItemTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -87,7 +87,7 @@ public class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineItemTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
@@ -95,7 +95,7 @@ public class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineItemTaxR
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getNextValue() {
@@ -103,7 +103,7 @@ public class SetCustomLineItemTaxRateChangeImpl implements SetCustomLineItemTaxR
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {

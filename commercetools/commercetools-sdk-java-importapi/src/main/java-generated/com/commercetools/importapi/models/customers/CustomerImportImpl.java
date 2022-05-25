@@ -114,7 +114,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -122,7 +122,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.customerNumber</code>.</p>>
+     *  <p>Maps to <code>Customer.customerNumber</code>.</p>
      */
 
     public String getCustomerNumber() {
@@ -130,7 +130,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.email</code>.</p>>
+     *  <p>Maps to <code>Customer.email</code>.</p>
      */
 
     public String getEmail() {
@@ -138,7 +138,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.password</code>.</p>>
+     *  <p>Maps to <code>Customer.password</code>.</p>
      */
 
     public String getPassword() {
@@ -146,7 +146,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>>
+     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> getStores() {
@@ -154,7 +154,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.firstName</code>.</p>>
+     *  <p>Maps to <code>Customer.firstName</code>.</p>
      */
 
     public String getFirstName() {
@@ -162,7 +162,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.lastName</code>.</p>>
+     *  <p>Maps to <code>Customer.lastName</code>.</p>
      */
 
     public String getLastName() {
@@ -170,7 +170,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.middleName</code>.</p>>
+     *  <p>Maps to <code>Customer.middleName</code>.</p>
      */
 
     public String getMiddleName() {
@@ -178,7 +178,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.title</code>.</p>>
+     *  <p>Maps to <code>Customer.title</code>.</p>
      */
 
     public String getTitle() {
@@ -186,7 +186,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.salutation</code>.</p>>
+     *  <p>Maps to <code>Customer.salutation</code>.</p>
      */
 
     public String getSalutation() {
@@ -194,7 +194,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.externalId</code>.</p>>
+     *  <p>Maps to <code>Customer.externalId</code>.</p>
      */
 
     public String getExternalId() {
@@ -202,7 +202,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.dateOfBirth</code>.</p>>
+     *  <p>Maps to <code>Customer.dateOfBirth</code>.</p>
      */
 
     public java.time.LocalDate getDateOfBirth() {
@@ -210,7 +210,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.companyName</code>.</p>>
+     *  <p>Maps to <code>Customer.companyName</code>.</p>
      */
 
     public String getCompanyName() {
@@ -218,7 +218,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.vatId</code>.</p>>
+     *  <p>Maps to <code>Customer.vatId</code>.</p>
      */
 
     public String getVatId() {
@@ -226,7 +226,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.isEmailVerified</code>.</p>>
+     *  <p>Maps to <code>Customer.isEmailVerified</code>.</p>
      */
 
     public Boolean getIsEmailVerified() {
@@ -234,7 +234,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>>
+     *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -242,7 +242,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.addresses</code>.</p>>
+     *  <p>Maps to <code>Customer.addresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> getAddresses() {
@@ -250,7 +250,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     public Integer getDefaultBillingAddress() {
@@ -258,7 +258,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
      */
 
     public java.util.List<Integer> getBillingAddresses() {
@@ -266,7 +266,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     public Integer getDefaultShippingAddress() {
@@ -274,7 +274,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>>
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
      */
 
     public java.util.List<Integer> getShippingAddresses() {
@@ -282,7 +282,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Customer.locale</code>.</p>>
+     *  <p>Maps to <code>Customer.locale</code>.</p>
      */
 
     public String getLocale() {
@@ -290,7 +290,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields for this Customer.</p>>
+     *  <p>The custom fields for this Customer.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

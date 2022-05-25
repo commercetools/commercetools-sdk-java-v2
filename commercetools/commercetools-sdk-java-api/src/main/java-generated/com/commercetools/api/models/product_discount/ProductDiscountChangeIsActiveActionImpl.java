@@ -35,7 +35,7 @@ public class ProductDiscountChangeIsActiveActionImpl implements ProductDiscountC
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ProductDiscountChangeIsActiveActionImpl implements ProductDiscountC
     }
 
     /**
-     <*  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>>
+     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
      */
 
     public Boolean getIsActive() {

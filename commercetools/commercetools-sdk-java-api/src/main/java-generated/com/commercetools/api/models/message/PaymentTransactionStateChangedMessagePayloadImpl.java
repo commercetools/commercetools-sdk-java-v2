@@ -40,7 +40,7 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getTransactionId() {
@@ -56,7 +56,7 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.TransactionState getState() {

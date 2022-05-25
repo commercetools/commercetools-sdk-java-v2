@@ -32,7 +32,7 @@ public interface BooleanSetAttribute extends Attribute {
     String BOOLEAN_SET = "boolean-set";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

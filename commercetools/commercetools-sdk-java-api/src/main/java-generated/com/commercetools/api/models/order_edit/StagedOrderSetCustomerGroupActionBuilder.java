@@ -27,7 +27,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public StagedOrderSetCustomerGroupActionBuilder customerGroup(
@@ -39,7 +39,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
     }
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public StagedOrderSetCustomerGroupActionBuilder customerGroup(

@@ -33,7 +33,7 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
     String CHANGE_SHOPPING_LISTS_CONFIGURATION = "changeShoppingListsConfiguration";
 
     /**
-     <*  <p>Configuration for the Shopping Lists feature.</p>>
+     *  <p>Configuration for the Shopping Lists feature.</p>
      */
     @NotNull
     @Valid

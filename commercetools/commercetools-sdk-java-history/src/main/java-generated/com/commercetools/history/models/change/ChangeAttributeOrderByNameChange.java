@@ -34,28 +34,28 @@ public interface ChangeAttributeOrderByNameChange extends Change {
     String CHANGE_ATTRIBUTE_ORDER_BY_NAME_CHANGE = "ChangeAttributeOrderByNameChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>>
+     *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

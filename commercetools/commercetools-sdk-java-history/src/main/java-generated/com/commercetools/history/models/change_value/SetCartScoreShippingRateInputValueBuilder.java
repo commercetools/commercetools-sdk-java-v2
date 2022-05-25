@@ -27,7 +27,7 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
     private Integer score;
 
     /**
-     <>
+     *
      */
 
     public SetCartScoreShippingRateInputValueBuilder type(final String type) {
@@ -36,7 +36,7 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
     }
 
     /**
-     <>
+     *
      */
 
     public SetCartScoreShippingRateInputValueBuilder score(final Integer score) {

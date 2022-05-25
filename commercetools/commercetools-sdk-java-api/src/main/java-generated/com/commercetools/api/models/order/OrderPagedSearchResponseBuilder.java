@@ -36,7 +36,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     private java.util.List<com.commercetools.api.models.order.Hit> hits;
 
     /**
-     <*  <p>Total number of results matching the query.</p>>
+     *  <p>Total number of results matching the query.</p>
      */
 
     public OrderPagedSearchResponseBuilder total(final Long total) {
@@ -45,7 +45,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public OrderPagedSearchResponseBuilder offset(@Nullable final Long offset) {
@@ -54,7 +54,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public OrderPagedSearchResponseBuilder limit(@Nullable final Long limit) {
@@ -63,7 +63,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-     <*  <p>Actual results.</p>>
+     *  <p>Actual results.</p>
      */
 
     public OrderPagedSearchResponseBuilder hits(final com.commercetools.api.models.order.Hit... hits) {
@@ -72,7 +72,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-     <*  <p>Actual results.</p>>
+     *  <p>Actual results.</p>
      */
 
     public OrderPagedSearchResponseBuilder hits(final java.util.List<com.commercetools.api.models.order.Hit> hits) {
@@ -81,7 +81,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-     <*  <p>Actual results.</p>>
+     *  <p>Actual results.</p>
      */
 
     public OrderPagedSearchResponseBuilder plusHits(final com.commercetools.api.models.order.Hit... hits) {
@@ -93,7 +93,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-     <*  <p>Actual results.</p>>
+     *  <p>Actual results.</p>
      */
 
     public OrderPagedSearchResponseBuilder plusHits(
@@ -106,7 +106,7 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
-     <*  <p>Actual results.</p>>
+     *  <p>Actual results.</p>
      */
 
     public OrderPagedSearchResponseBuilder withHits(

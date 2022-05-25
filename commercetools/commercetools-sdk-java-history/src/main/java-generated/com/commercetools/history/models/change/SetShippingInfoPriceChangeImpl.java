@@ -43,7 +43,7 @@ public class SetShippingInfoPriceChangeImpl implements SetShippingInfoPriceChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetShippingInfoPriceChangeImpl implements SetShippingInfoPriceChang
     }
 
     /**
-     <*  <p>Update action for <code>setShippingInfoPrice</code></p>>
+     *  <p>Update action for <code>setShippingInfoPrice</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetShippingInfoPriceChangeImpl implements SetShippingInfoPriceChang
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {
@@ -67,7 +67,7 @@ public class SetShippingInfoPriceChangeImpl implements SetShippingInfoPriceChang
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {

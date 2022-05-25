@@ -47,7 +47,7 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setImageLabel</code></p>>
+     *  <p>Update action for <code>setImageLabel</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Image getPreviousValue() {
@@ -79,7 +79,7 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Image getNextValue() {

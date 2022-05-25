@@ -36,7 +36,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     private com.commercetools.history.models.common.Reference distributionChannel;
 
     /**
-     <>
+     *
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder product(
@@ -46,7 +46,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder product(
@@ -56,7 +56,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder variantId(final Integer variantId) {
@@ -65,7 +65,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
@@ -75,7 +75,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder supplyChannel(
@@ -85,7 +85,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
@@ -95,7 +95,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(

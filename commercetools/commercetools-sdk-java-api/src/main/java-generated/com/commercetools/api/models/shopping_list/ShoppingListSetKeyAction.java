@@ -29,7 +29,7 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     <*  <p>User-specific unique identifier for the shopping list.</p>>
+     *  <p>User-specific unique identifier for the shopping list.</p>
      */
 
     @JsonProperty("key")

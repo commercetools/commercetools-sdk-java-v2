@@ -24,7 +24,7 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public StateAddRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -33,7 +33,7 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public StateAddRolesActionBuilder roles(
@@ -43,7 +43,7 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public StateAddRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {

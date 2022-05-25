@@ -40,7 +40,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <*  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>>
+     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder change(final String change) {
@@ -49,7 +49,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {
@@ -58,7 +58,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {
@@ -67,7 +67,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     <*  <p>Key of the values that was updated</p>>
+     *  <p>Key of the values that was updated</p>
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {
@@ -76,7 +76,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(
@@ -86,7 +86,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(
@@ -96,7 +96,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(
@@ -106,7 +106,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(

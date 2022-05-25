@@ -33,28 +33,28 @@ public interface RemovePropertyChange extends Change {
     String REMOVE_PROPERTY_CHANGE = "RemovePropertyChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeProperty</code> on custom objects</p>>
+     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Value path to the property that was removed</p>>
+     *  <p>Value path to the property that was removed</p>
      */
     @NotNull
     @JsonProperty("path")
     public String getPath();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

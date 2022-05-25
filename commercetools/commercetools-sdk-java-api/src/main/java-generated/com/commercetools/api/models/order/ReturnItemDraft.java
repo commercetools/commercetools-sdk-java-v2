@@ -33,42 +33,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnItemDraft extends com.commercetools.api.models.CustomizableDraft<ReturnItemDraft> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("comment")
     public String getComment();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
     @Valid
     @JsonProperty("custom")

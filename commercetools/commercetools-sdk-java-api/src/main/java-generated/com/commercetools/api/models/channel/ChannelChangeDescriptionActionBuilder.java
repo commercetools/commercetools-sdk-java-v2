@@ -25,7 +25,7 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ChannelChangeDescriptionActionBuilder description(
@@ -35,7 +35,7 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ChannelChangeDescriptionActionBuilder description(

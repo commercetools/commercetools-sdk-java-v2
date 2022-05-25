@@ -78,7 +78,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -86,7 +86,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -94,7 +94,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -102,7 +102,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -110,7 +110,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public String getProductId() {
@@ -118,7 +118,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -126,7 +126,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -134,7 +134,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -142,7 +142,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -150,7 +150,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -158,8 +158,8 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -167,7 +167,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -175,7 +175,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

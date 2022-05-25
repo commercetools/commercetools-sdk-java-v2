@@ -31,7 +31,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     private Integer variantId;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemValueBuilder id(final String id) {
@@ -40,7 +40,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemValueBuilder name(
@@ -50,7 +50,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemValueBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
@@ -59,7 +59,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemValueBuilder variantId(final Integer variantId) {

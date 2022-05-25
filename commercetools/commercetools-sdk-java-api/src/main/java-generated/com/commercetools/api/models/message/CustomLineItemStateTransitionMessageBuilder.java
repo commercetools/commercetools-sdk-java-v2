@@ -69,7 +69,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     private com.commercetools.api.models.state.StateReference toState;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder id(final String id) {
@@ -78,7 +78,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder version(final Long version) {
@@ -87,7 +87,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -96,7 +96,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -105,7 +105,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder lastModifiedBy(
@@ -115,7 +115,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder lastModifiedBy(
@@ -125,7 +125,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder createdBy(
@@ -135,7 +135,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder createdBy(
@@ -145,7 +145,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -154,7 +154,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder resource(
@@ -164,7 +164,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder resource(
@@ -174,7 +174,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -183,7 +183,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -205,7 +205,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder customLineItemId(final String customLineItemId) {
@@ -214,7 +214,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder transitionDate(final java.time.ZonedDateTime transitionDate) {
@@ -223,7 +223,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessageBuilder quantity(final Long quantity) {
@@ -232,7 +232,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder fromState(
@@ -242,7 +242,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder fromState(
@@ -252,7 +252,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder toState(
@@ -262,7 +262,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public CustomLineItemStateTransitionMessageBuilder toState(

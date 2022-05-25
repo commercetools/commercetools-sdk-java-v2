@@ -35,7 +35,7 @@ public class TextLineItemValueImpl implements TextLineItemValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -43,7 +43,7 @@ public class TextLineItemValueImpl implements TextLineItemValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {

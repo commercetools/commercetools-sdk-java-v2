@@ -24,7 +24,7 @@ public class CustomerPasswordUpdatedMessagePayloadBuilder implements Builder<Cus
     private Boolean reset;
 
     /**
-     <*  <p>true, if password has been updated during Customer's Password Reset workflow.</p>>
+     *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
      */
 
     public CustomerPasswordUpdatedMessagePayloadBuilder reset(final Boolean reset) {

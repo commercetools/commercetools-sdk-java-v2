@@ -34,7 +34,7 @@ public interface OrderCreatedMessagePayload extends OrderMessagePayload {
     String ORDER_CREATED = "OrderCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

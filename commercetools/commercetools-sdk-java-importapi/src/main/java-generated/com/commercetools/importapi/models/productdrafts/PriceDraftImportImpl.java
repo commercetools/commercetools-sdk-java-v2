@@ -67,7 +67,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
@@ -75,7 +75,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -83,7 +83,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <*  <p>References a customer group by key.</p>>
+     *  <p>References a customer group by key.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -91,7 +91,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <*  <p>References a channel by key.</p>>
+     *  <p>References a channel by key.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -99,7 +99,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -107,7 +107,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -115,7 +115,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields for this category.</p>>
+     *  <p>The custom fields for this category.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -123,7 +123,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <*  <p>Sets a discounted price from an external service.</p>>
+     *  <p>Sets a discounted price from an external service.</p>
      */
 
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
@@ -131,7 +131,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
@@ -139,7 +139,7 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {

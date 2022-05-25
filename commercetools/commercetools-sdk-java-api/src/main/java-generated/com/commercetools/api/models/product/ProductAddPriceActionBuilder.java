@@ -36,7 +36,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductAddPriceActionBuilder variantId(@Nullable final Long variantId) {
@@ -45,7 +45,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddPriceActionBuilder sku(@Nullable final String sku) {
@@ -54,7 +54,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddPriceActionBuilder price(
@@ -64,7 +64,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddPriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
@@ -73,7 +73,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddPriceActionBuilder staged(@Nullable final Boolean staged) {

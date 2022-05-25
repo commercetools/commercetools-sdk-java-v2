@@ -61,7 +61,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the ReturnItem.</p>>
+     *  <p>Unique identifier of the ReturnItem.</p>
      */
 
     public String getId() {
@@ -69,7 +69,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -77,7 +77,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -85,7 +85,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getComment() {
@@ -93,7 +93,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
@@ -101,7 +101,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
@@ -109,7 +109,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -117,7 +117,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -125,7 +125,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {

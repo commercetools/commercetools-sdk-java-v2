@@ -26,7 +26,7 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public ObjectNotFoundErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
     }
 
     /**
-     <>
+     *
      */
 
     public ObjectNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
     }
 
     /**
-     <>
+     *
      */
 
     public ObjectNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {

@@ -40,7 +40,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -56,7 +56,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {

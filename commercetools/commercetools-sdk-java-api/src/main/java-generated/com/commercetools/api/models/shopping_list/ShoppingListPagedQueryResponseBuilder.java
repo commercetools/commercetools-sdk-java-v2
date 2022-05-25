@@ -39,7 +39,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     private java.util.List<com.commercetools.api.models.shopping_list.ShoppingList> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ShoppingListPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListPagedQueryResponseBuilder withResults(

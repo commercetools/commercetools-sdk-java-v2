@@ -28,7 +28,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
     /**
-     <*  <p>ID of the TaxRate to replace.</p>>
+     *  <p>ID of the TaxRate to replace.</p>
      */
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRateId(final String taxRateId) {
@@ -37,7 +37,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     }
 
     /**
-     <*  <p>New TaxRate to replace with.</p>>
+     *  <p>New TaxRate to replace with.</p>
      */
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRate(
@@ -47,7 +47,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     }
 
     /**
-     <*  <p>New TaxRate to replace with.</p>>
+     *  <p>New TaxRate to replace with.</p>
      */
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRate(

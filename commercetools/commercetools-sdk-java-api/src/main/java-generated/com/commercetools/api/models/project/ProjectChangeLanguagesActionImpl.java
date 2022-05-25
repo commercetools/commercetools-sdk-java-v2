@@ -35,7 +35,7 @@ public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesA
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public java.util.List<String> getLanguages() {

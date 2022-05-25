@@ -29,7 +29,7 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
     String SET_METHOD_INFO_METHOD = "setMethodInfoMethod";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("method")

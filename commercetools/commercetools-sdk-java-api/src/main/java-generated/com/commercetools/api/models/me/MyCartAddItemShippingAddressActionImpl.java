@@ -36,7 +36,7 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

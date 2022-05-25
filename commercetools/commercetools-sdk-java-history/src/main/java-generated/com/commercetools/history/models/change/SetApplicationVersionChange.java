@@ -34,28 +34,28 @@ public interface SetApplicationVersionChange extends Change {
     String SET_APPLICATION_VERSION_CHANGE = "SetApplicationVersionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Internal Update action for <code>setApplicationVersion</code></p>>
+     *  <p>Internal Update action for <code>setApplicationVersion</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

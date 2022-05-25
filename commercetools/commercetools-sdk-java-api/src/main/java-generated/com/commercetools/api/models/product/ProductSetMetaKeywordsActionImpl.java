@@ -40,7 +40,7 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -56,7 +56,7 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

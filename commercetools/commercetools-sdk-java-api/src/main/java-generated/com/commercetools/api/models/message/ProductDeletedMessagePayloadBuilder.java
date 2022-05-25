@@ -28,7 +28,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -37,7 +37,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -46,7 +46,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -58,7 +58,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessagePayloadBuilder currentProjection(
@@ -69,7 +69,7 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessagePayloadBuilder currentProjection(

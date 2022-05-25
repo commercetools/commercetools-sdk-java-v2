@@ -35,7 +35,7 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -43,7 +43,7 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {

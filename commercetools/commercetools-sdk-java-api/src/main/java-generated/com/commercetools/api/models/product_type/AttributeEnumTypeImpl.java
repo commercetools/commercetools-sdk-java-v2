@@ -36,7 +36,7 @@ public class AttributeEnumTypeImpl implements AttributeEnumType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -44,7 +44,7 @@ public class AttributeEnumTypeImpl implements AttributeEnumType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues() {

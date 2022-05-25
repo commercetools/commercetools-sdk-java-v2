@@ -47,7 +47,7 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
     }
 
     /**
-     <*  <p>Update actions for adding an external image</p>>
+     *  <p>Update actions for adding an external image</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Image> getPreviousValue() {
@@ -79,7 +79,7 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Image> getNextValue() {

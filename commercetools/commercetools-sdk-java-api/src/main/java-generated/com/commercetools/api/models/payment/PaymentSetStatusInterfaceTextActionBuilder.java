@@ -24,7 +24,7 @@ public class PaymentSetStatusInterfaceTextActionBuilder implements Builder<Payme
     private String interfaceText;
 
     /**
-     <>
+     *
      */
 
     public PaymentSetStatusInterfaceTextActionBuilder interfaceText(final String interfaceText) {

@@ -74,12 +74,12 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getName() {
@@ -87,7 +87,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getMoney() {
@@ -95,7 +95,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.CustomLineItemTaxedPrice getTaxedPrice() {
@@ -103,7 +103,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getTotalPrice() {
@@ -111,7 +111,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSlug() {
@@ -119,7 +119,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getQuantity() {
@@ -127,7 +127,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ItemState> getState() {
@@ -135,7 +135,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>References a tax category by key.</p>>
+     *  <p>References a tax category by key.</p>
      */
 
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
@@ -143,7 +143,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
@@ -151,7 +151,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ExternalTaxRateDraft getExternalTaxRate() {
@@ -159,7 +159,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft> getDiscountedPricePerQuantity() {
@@ -167,7 +167,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ItemShippingDetailsDraft getShippingDetails() {

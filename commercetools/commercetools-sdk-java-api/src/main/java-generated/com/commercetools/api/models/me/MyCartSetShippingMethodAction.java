@@ -33,14 +33,14 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
     String SET_SHIPPING_METHOD = "setShippingMethod";
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")

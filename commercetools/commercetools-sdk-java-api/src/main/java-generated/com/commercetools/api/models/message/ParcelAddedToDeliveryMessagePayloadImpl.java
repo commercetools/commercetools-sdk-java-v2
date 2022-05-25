@@ -40,7 +40,7 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {
@@ -56,7 +56,7 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.Parcel getParcel() {

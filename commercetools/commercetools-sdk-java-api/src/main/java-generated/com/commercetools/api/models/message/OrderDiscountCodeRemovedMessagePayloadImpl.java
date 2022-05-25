@@ -36,7 +36,7 @@ public class OrderDiscountCodeRemovedMessagePayloadImpl implements OrderDiscount
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class OrderDiscountCodeRemovedMessagePayloadImpl implements OrderDiscount
     }
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {

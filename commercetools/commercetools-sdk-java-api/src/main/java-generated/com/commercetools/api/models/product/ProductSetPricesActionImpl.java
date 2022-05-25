@@ -46,7 +46,7 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -54,7 +54,7 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -62,7 +62,7 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -78,7 +78,7 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

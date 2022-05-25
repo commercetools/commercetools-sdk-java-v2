@@ -32,7 +32,7 @@ public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction 
     String REMOVE_TAX_RATE = "removeTaxRate";
 
     /**
-     <*  <p>ID of the TaxRate to remove.</p>>
+     *  <p>ID of the TaxRate to remove.</p>
      */
     @NotNull
     @JsonProperty("taxRateId")

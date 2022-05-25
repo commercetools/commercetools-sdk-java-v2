@@ -30,7 +30,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public StagedOrderSetShippingMethodActionBuilder shippingMethod(
@@ -42,7 +42,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public StagedOrderSetShippingMethodActionBuilder shippingMethod(
@@ -52,7 +52,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingMethodActionBuilder externalTaxRate(
@@ -63,7 +63,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingMethodActionBuilder externalTaxRate(

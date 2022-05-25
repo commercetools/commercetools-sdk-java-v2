@@ -43,7 +43,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -59,7 +59,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Image getImage() {
@@ -67,7 +67,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

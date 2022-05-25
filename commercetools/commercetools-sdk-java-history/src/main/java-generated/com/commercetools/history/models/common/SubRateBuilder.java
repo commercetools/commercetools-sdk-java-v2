@@ -27,7 +27,7 @@ public class SubRateBuilder implements Builder<SubRate> {
     private Integer amount;
 
     /**
-     <>
+     *
      */
 
     public SubRateBuilder name(final String name) {
@@ -36,7 +36,7 @@ public class SubRateBuilder implements Builder<SubRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubRateBuilder amount(final Integer amount) {

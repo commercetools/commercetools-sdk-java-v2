@@ -33,21 +33,21 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
     String MISSING_TAX_RATE_FOR_COUNTRY = "MissingTaxRateForCountry";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxCategoryId")
     public String getTaxCategoryId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("state")

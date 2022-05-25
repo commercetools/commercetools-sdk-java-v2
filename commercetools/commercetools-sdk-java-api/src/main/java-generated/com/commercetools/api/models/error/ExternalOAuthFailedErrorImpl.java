@@ -39,7 +39,7 @@ public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, M
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

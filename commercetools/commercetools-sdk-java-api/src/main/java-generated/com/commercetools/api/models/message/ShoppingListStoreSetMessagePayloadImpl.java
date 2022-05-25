@@ -36,7 +36,7 @@ public class ShoppingListStoreSetMessagePayloadImpl implements ShoppingListStore
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class ShoppingListStoreSetMessagePayloadImpl implements ShoppingListStore
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {

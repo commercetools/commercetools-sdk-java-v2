@@ -26,7 +26,7 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public AccessDeniedErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
     }
 
     /**
-     <>
+     *
      */
 
     public AccessDeniedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
     }
 
     /**
-     <>
+     *
      */
 
     public AccessDeniedErrorBuilder addValue(final String key, final java.lang.Object value) {

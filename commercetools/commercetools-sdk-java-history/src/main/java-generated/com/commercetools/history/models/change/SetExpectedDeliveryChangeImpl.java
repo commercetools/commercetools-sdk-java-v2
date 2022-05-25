@@ -43,7 +43,7 @@ public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange,
     }
 
     /**
-     <*  <p>Shape of the action for <code>setExpectedDelivery</code></p>>
+     *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

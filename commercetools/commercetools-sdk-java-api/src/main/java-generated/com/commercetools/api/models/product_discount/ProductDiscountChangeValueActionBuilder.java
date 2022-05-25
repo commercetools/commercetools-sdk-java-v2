@@ -25,7 +25,7 @@ public class ProductDiscountChangeValueActionBuilder implements Builder<ProductD
     private com.commercetools.api.models.product_discount.ProductDiscountValueDraft value;
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProductDiscountChangeValueActionBuilder value(
@@ -35,7 +35,7 @@ public class ProductDiscountChangeValueActionBuilder implements Builder<ProductD
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProductDiscountChangeValueActionBuilder value(

@@ -51,7 +51,7 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>changeLabel</code> on product types and types</p>>
+     *  <p>Update action for <code>changeLabel</code> on product types and types</p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     <*  <p>The name of the field definition to update (types).</p>>
+     *  <p>The name of the field definition to update (types).</p>
      */
 
     public String getFieldName() {
@@ -75,7 +75,7 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     <*  <p>The name of the attribute definition to update (product-type).</p>>
+     *  <p>The name of the attribute definition to update (product-type).</p>
      */
 
     public String getAttributeName() {
@@ -83,7 +83,7 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
@@ -91,7 +91,7 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {

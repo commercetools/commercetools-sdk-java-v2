@@ -35,7 +35,7 @@ public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getResourceTypeId() {
@@ -43,7 +43,7 @@ public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getTypes() {

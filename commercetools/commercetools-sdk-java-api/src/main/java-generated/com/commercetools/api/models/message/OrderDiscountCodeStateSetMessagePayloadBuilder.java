@@ -34,7 +34,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
@@ -45,7 +45,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
@@ -55,7 +55,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder state(
@@ -65,7 +65,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder oldState(

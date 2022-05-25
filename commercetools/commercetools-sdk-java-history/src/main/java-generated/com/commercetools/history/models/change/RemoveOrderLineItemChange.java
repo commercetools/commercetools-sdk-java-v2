@@ -36,21 +36,21 @@ public interface RemoveOrderLineItemChange extends Change {
     String REMOVE_ORDER_LINE_ITEM_CHANGE = "RemoveOrderLineItemChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface RemoveOrderLineItemChange extends Change {
     public LineItem getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

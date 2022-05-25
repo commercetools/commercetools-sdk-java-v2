@@ -39,7 +39,7 @@ public class CustomerRemoveAddressActionImpl implements CustomerRemoveAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CustomerRemoveAddressActionImpl implements CustomerRemoveAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressId() {
@@ -55,7 +55,7 @@ public class CustomerRemoveAddressActionImpl implements CustomerRemoveAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {

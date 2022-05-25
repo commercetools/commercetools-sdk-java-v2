@@ -38,35 +38,35 @@ public interface ChangeLabelChange extends Change {
     String CHANGE_LABEL_CHANGE = "ChangeLabelChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeLabel</code> on product types and types</p>>
+     *  <p>Update action for <code>changeLabel</code> on product types and types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the field definition to update (types).</p>>
+     *  <p>The name of the field definition to update (types).</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>The name of the attribute definition to update (product-type).</p>>
+     *  <p>The name of the attribute definition to update (product-type).</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface ChangeLabelChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

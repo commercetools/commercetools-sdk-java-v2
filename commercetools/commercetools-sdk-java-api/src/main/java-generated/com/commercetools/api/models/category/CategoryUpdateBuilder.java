@@ -28,7 +28,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public CategoryUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryUpdateBuilder actions(final com.commercetools.api.models.category.CategoryUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryUpdateBuilder plusActions(
@@ -69,7 +69,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryUpdateBuilder plusActions(
@@ -82,7 +82,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryUpdateBuilder withActions(

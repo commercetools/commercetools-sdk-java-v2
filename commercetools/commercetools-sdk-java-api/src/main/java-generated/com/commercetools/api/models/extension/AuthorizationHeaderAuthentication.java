@@ -33,7 +33,7 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
     String AUTHORIZATION_HEADER = "AuthorizationHeader";
 
     /**
-     <*  <p>Partially hidden on retrieval for security reasons.</p>>
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
     @NotNull
     @JsonProperty("headerValue")

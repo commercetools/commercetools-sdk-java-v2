@@ -36,14 +36,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Price extends com.commercetools.api.models.Customizable<Price> {
 
     /**
-     <*  <p>Unique identifier of this Price.</p>>
+     *  <p>Unique identifier of this Price.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Money value of this Price.</p>>
+     *  <p>Money value of this Price.</p>
      */
     @NotNull
     @Valid
@@ -51,56 +51,56 @@ public interface Price extends com.commercetools.api.models.Customizable<Price> 
     public TypedMoney getValue();
 
     /**
-     <*  <p>Country for which this Price is valid.</p>>
+     *  <p>Country for which this Price is valid.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>CustomerGroup for which this Price is valid.</p>>
+     *  <p>CustomerGroup for which this Price is valid.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     <*  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>>
+     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelReference getChannel();
 
     /**
-     <*  <p>Date and time from which this Price is valid.</p>>
+     *  <p>Date and time from which this Price is valid.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <*  <p>Date and time until this Price is valid.</p>>
+     *  <p>Date and time until this Price is valid.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <*  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>>
+     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     <*  <p>Present if different Prices for certain LineItem quantities have been specified.</p>>
+     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
      */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
 
     /**
-     <*  <p>Custom Fields defined for the Price.</p>>
+     *  <p>Custom Fields defined for the Price.</p>
      */
     @Valid
     @JsonProperty("custom")

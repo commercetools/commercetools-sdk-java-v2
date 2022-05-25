@@ -40,7 +40,7 @@ public class OrderShippingAddressSetMessagePayloadImpl implements OrderShippingA
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderShippingAddressSetMessagePayloadImpl implements OrderShippingA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -56,7 +56,7 @@ public class OrderShippingAddressSetMessagePayloadImpl implements OrderShippingA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getOldAddress() {

@@ -36,7 +36,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
@@ -45,7 +45,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder deliveryId(@Nullable final String deliveryId) {
@@ -54,7 +54,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder items(
@@ -64,7 +64,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder items(
@@ -74,7 +74,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusItems(
@@ -87,7 +87,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusItems(
@@ -100,7 +100,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder withItems(
@@ -111,7 +111,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder oldItems(
@@ -121,7 +121,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder oldItems(
@@ -131,7 +131,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -144,7 +144,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusOldItems(
@@ -157,7 +157,7 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsUpdatedMessagePayloadBuilder withOldItems(

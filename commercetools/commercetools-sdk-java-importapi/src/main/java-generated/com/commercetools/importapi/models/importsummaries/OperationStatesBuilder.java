@@ -39,7 +39,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     private Long rejected;
 
     /**
-     <*  <p>The number of resources in the <code>processing</code> state.</p>>
+     *  <p>The number of resources in the <code>processing</code> state.</p>
      */
 
     public OperationStatesBuilder processing(final Long processing) {
@@ -48,7 +48,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     <*  <p>The number of resources in the <code>validationFailed</code> state.</p>>
+     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
      */
 
     public OperationStatesBuilder validationFailed(final Long validationFailed) {
@@ -57,7 +57,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     <*  <p>The number of resources in the <code>unresolved</code> state.</p>>
+     *  <p>The number of resources in the <code>unresolved</code> state.</p>
      */
 
     public OperationStatesBuilder unresolved(final Long unresolved) {
@@ -66,7 +66,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     <*  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>>
+     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
      */
 
     public OperationStatesBuilder waitForMasterVariant(final Long waitForMasterVariant) {
@@ -75,7 +75,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     <*  <p>The number of resources in the <code>imported</code> state.</p>>
+     *  <p>The number of resources in the <code>imported</code> state.</p>
      */
 
     public OperationStatesBuilder imported(final Long imported) {
@@ -84,7 +84,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     <*  <p>The number of resources in the <code>rejected</code> state.</p>>
+     *  <p>The number of resources in the <code>rejected</code> state.</p>
      */
 
     public OperationStatesBuilder rejected(final Long rejected) {

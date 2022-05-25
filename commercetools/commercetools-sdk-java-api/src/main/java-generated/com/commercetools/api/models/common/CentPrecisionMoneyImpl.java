@@ -43,11 +43,11 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
     }
 
     /**
-     <*  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
-    *  <ul>
-    *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
-    *  </ul>>
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
      */
 
     public Long getCentAmount() {
@@ -55,7 +55,7 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
     }
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
 
     public String getCurrencyCode() {
@@ -63,7 +63,7 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
     }
 
     /**
-     <*  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>>
+     *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
      */
 
     public com.commercetools.api.models.common.MoneyType getType() {
@@ -71,7 +71,7 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
     }
 
     /**
-     <*  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>>
+     *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
      */
 
     public Integer getFractionDigits() {

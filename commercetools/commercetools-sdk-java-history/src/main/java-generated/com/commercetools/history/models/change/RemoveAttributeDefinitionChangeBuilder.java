@@ -28,7 +28,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
     private com.commercetools.history.models.common.AttributeDefinition previousValue;
 
     /**
-     <*  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>>
+     *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
      */
 
     public RemoveAttributeDefinitionChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveAttributeDefinitionChangeBuilder previousValue(
@@ -48,7 +48,7 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveAttributeDefinitionChangeBuilder previousValue(

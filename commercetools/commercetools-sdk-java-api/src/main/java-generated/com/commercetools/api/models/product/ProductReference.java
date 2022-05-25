@@ -34,14 +34,14 @@ public interface ProductReference extends Reference, com.commercetools.api.model
     String PRODUCT = "product";
 
     /**
-     <*  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>>
+     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
      */
     @Valid
     @JsonProperty("obj")
     public Product getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced Product.</p>>
+     *  <p>Unique identifier of the referenced Product.</p>
      */
     @NotNull
     @JsonProperty("id")

@@ -63,7 +63,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getShippingMethodName() {
@@ -71,7 +71,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getPrice() {
@@ -79,7 +79,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ShippingRateDraft getShippingRate() {
@@ -87,7 +87,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
@@ -95,7 +95,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <*  <p>References a tax category by key.</p>>
+     *  <p>References a tax category by key.</p>
      */
 
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
@@ -103,7 +103,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <*  <p>References a shipping method by key.</p>>
+     *  <p>References a shipping method by key.</p>
      */
 
     public com.commercetools.importapi.models.common.ShippingMethodKeyReference getShippingMethod() {
@@ -111,7 +111,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.Delivery> getDeliveries() {
@@ -119,7 +119,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft getDiscountedPrice() {
@@ -127,7 +127,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ShippingMethodState getShippingMethodState() {

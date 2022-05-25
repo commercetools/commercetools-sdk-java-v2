@@ -32,7 +32,7 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
     String CHANGE_ATTRIBUTE_ORDER_BY_NAME = "changeAttributeOrderByName";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeNames")

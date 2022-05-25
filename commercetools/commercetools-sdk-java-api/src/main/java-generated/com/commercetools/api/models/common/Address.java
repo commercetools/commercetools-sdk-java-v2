@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Address extends BaseAddress, com.commercetools.api.models.Customizable<Address> {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Custom Fields defined for the Address.</p>>
+     *  <p>Custom Fields defined for the Address.</p>
      */
     @Valid
     @JsonProperty("custom")

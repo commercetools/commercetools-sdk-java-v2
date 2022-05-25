@@ -48,7 +48,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -56,7 +56,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getShippingMethodName() {
@@ -64,7 +64,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
@@ -72,7 +72,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -80,7 +80,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

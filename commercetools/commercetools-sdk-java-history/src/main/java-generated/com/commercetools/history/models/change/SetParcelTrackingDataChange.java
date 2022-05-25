@@ -38,21 +38,21 @@ public interface SetParcelTrackingDataChange extends Change {
     String SET_PARCEL_TRACKING_DATA_CHANGE = "SetParcelTrackingDataChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setParcelTrackingData</code></p>>
+     *  <p>Update action for <code>setParcelTrackingData</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetParcelTrackingDataChange extends Change {
     public ParcelChangeValue getParcel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetParcelTrackingDataChange extends Change {
     public TrackingData getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

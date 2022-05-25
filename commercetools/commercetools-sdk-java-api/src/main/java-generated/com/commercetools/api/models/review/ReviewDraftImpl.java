@@ -71,7 +71,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Review.</p>>
+     *  <p>User-defined unique identifier for the Review.</p>
      */
 
     public String getKey() {
@@ -79,7 +79,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <*  <p>If set, this value must be unique among reviews. For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>>
+     *  <p>If set, this value must be unique among reviews. For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>
      */
 
     public String getUniquenessValue() {
@@ -87,7 +87,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {
@@ -95,7 +95,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAuthorName() {
@@ -103,7 +103,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getTitle() {
@@ -111,7 +111,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getText() {
@@ -119,7 +119,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <*  <p>Identifies the target of the review. Can be a Product or a Channel</p>>
+     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
      */
 
     public java.lang.Object getTarget() {
@@ -127,7 +127,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -135,7 +135,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <*  <p>Number between -100 and 100 included. Rating of the targeted object, like a product. This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1) A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>>
+     *  <p>Number between -100 and 100 included. Rating of the targeted object, like a product. This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1) A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
      */
 
     public Integer getRating() {
@@ -143,7 +143,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <*  <p>The customer who created the review.</p>>
+     *  <p>The customer who created the review.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
@@ -151,7 +151,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

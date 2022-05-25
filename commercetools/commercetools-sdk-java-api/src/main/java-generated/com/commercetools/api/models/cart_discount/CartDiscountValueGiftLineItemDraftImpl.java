@@ -48,7 +48,7 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -56,7 +56,7 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
     }
 
     /**
-     <*  <p>ResourceIdentifier of a Product.</p>>
+     *  <p>ResourceIdentifier of a Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
@@ -64,7 +64,7 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
     }
 
     /**
-     <*  <p>ProductVariant of the Product.</p>>
+     *  <p>ProductVariant of the Product.</p>
      */
 
     public Long getVariantId() {
@@ -72,7 +72,7 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
     }
 
     /**
-     <*  <p>Channel must have the role <code>InventorySupply</code>.</p>>
+     *  <p>Channel must have the role <code>InventorySupply</code>.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -80,7 +80,7 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
     }
 
     /**
-     <*  <p>Channel must have the role <code>ProductDistribution</code>.</p>>
+     *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {

@@ -30,7 +30,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     private Integer nextValue;
 
     /**
-     <*  <p>Internal Update action for <code>setApplicationVersion</code></p>>
+     *  <p>Internal Update action for <code>setApplicationVersion</code></p>
      */
 
     public SetApplicationVersionChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     }
 
     /**
-     <>
+     *
      */
 
     public SetApplicationVersionChangeBuilder previousValue(final Integer previousValue) {
@@ -48,7 +48,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     }
 
     /**
-     <>
+     *
      */
 
     public SetApplicationVersionChangeBuilder nextValue(final Integer nextValue) {

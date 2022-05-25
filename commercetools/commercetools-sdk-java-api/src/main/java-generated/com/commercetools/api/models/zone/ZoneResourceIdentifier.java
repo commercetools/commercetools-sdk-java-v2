@@ -30,14 +30,14 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
     String ZONE = "zone";
 
     /**
-     <*  <p>Unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>Unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     @JsonProperty("key")

@@ -43,7 +43,7 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getAppliedAt() {
@@ -59,7 +59,7 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptBeforeEdit() {
@@ -67,7 +67,7 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptAfterEdit() {

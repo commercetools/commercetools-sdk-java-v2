@@ -39,7 +39,7 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -47,7 +47,7 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
@@ -55,7 +55,7 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVariantId() {

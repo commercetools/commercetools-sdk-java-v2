@@ -24,7 +24,7 @@ public class NumberFieldBuilder implements Builder<NumberField> {
     private Double value;
 
     /**
-     <>
+     *
      */
 
     public NumberFieldBuilder value(final Double value) {

@@ -28,7 +28,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
     private java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class ProductTypeUpdateBuilder implements Builder<ProductTypeUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeUpdateBuilder withActions(

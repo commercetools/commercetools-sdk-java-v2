@@ -38,21 +38,21 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
     String SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_TYPE_CHANGE = "SetShoppingListLineItemCustomTypeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setLineItemCustomType</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
     public ShoppingListLineItemValue getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
     public CustomFields getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -36,21 +36,21 @@ public interface ChangeParentChange extends Change {
     String CHANGE_PARENT_CHANGE = "ChangeParentChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeParent</code></p>>
+     *  <p>Shape of the action for <code>changeParent</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeParentChange extends Change {
     public Reference getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

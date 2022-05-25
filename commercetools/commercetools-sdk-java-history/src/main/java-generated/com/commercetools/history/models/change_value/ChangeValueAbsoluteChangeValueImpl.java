@@ -36,7 +36,7 @@ public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteCh
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteCh
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Money> getMoney() {

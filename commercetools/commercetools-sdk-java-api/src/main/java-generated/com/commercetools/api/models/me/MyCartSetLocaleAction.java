@@ -29,7 +29,7 @@ public interface MyCartSetLocaleAction extends MyCartUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("locale")

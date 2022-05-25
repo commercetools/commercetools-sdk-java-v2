@@ -51,7 +51,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -67,7 +67,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getTransitionDate() {
@@ -75,7 +75,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -83,7 +83,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getFromState() {
@@ -91,7 +91,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getToState() {

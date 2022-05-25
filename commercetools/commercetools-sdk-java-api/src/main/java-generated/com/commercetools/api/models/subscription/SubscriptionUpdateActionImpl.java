@@ -31,7 +31,7 @@ public class SubscriptionUpdateActionImpl implements SubscriptionUpdateAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

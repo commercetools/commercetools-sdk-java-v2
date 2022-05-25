@@ -47,7 +47,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -55,7 +55,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -63,7 +63,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +71,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getLineItems() {
@@ -79,7 +79,7 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getSkus() {

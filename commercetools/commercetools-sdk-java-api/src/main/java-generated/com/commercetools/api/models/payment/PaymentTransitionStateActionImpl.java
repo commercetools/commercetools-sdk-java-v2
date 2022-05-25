@@ -40,7 +40,7 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -56,7 +56,7 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getForce() {

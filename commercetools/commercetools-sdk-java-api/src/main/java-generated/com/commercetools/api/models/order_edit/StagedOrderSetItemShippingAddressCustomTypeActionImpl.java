@@ -44,7 +44,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -52,7 +52,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {
@@ -60,7 +60,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionImpl
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -68,7 +68,7 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionImpl
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

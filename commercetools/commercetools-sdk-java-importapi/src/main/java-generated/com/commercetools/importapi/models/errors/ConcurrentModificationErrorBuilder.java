@@ -35,7 +35,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     private java.lang.Object conflictedResource;
 
     /**
-     <>
+     *
      */
 
     public ConcurrentModificationErrorBuilder message(final String message) {
@@ -44,7 +44,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     <*  <p>The version specified in the failed request.</p>>
+     *  <p>The version specified in the failed request.</p>
      */
 
     public ConcurrentModificationErrorBuilder specifiedVersion(@Nullable final Long specifiedVersion) {
@@ -53,7 +53,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     <*  <p>The current version of the resource.</p>>
+     *  <p>The current version of the resource.</p>
      */
 
     public ConcurrentModificationErrorBuilder currentVersion(final Long currentVersion) {
@@ -62,7 +62,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     <*  <p>The resource in conflict.</p>>
+     *  <p>The resource in conflict.</p>
      */
 
     public ConcurrentModificationErrorBuilder conflictedResource(@Nullable final java.lang.Object conflictedResource) {

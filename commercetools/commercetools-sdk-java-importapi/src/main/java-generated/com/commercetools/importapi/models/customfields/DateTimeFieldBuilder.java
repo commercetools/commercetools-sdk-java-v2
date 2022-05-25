@@ -24,7 +24,7 @@ public class DateTimeFieldBuilder implements Builder<DateTimeField> {
     private java.time.ZonedDateTime value;
 
     /**
-     <>
+     *
      */
 
     public DateTimeFieldBuilder value(final java.time.ZonedDateTime value) {

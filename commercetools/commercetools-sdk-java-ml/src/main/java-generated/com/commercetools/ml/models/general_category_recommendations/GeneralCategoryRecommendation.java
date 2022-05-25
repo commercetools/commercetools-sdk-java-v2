@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GeneralCategoryRecommendation {
 
     /**
-     <*  <p>An English category name that is recommended for a product.</p>>
+     *  <p>An English category name that is recommended for a product.</p>
      */
     @NotNull
     @JsonProperty("categoryName")
     public String getCategoryName();
 
     /**
-     <*  <p>Probability score for the category recommendation.</p>>
+     *  <p>Probability score for the category recommendation.</p>
      */
     @NotNull
     @JsonProperty("confidence")

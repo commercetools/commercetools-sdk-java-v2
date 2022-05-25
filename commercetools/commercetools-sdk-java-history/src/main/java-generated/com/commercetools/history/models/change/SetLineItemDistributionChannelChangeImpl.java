@@ -51,7 +51,7 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemDistributionChannel</code></p>>
+     *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -75,7 +75,7 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -83,7 +83,7 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
@@ -91,7 +91,7 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {

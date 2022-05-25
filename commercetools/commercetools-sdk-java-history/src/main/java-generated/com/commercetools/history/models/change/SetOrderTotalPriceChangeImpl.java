@@ -43,7 +43,7 @@ public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, M
     }
 
     /**
-     <*  <p>Update action for <code>setOrderTotalPrice</code></p>>
+     *  <p>Update action for <code>setOrderTotalPrice</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {
@@ -67,7 +67,7 @@ public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {

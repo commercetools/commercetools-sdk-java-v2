@@ -39,21 +39,21 @@ public interface StoreProductSelectionsChangedMessage extends Message {
     String STORE_PRODUCT_SELECTIONS_CHANGED = "StoreProductSelectionsChanged";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("addedProductSelections")
     public List<ProductSelectionSetting> getAddedProductSelections();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("removedProductSelections")
     public List<ProductSelectionSetting> getRemovedProductSelections();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("updatedProductSelections")

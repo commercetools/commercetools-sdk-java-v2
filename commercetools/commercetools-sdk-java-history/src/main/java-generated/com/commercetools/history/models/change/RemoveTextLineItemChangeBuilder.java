@@ -31,7 +31,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     private com.commercetools.history.models.common.TextLineItem nextValue;
 
     /**
-     <>
+     *
      */
 
     public RemoveTextLineItemChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveTextLineItemChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveTextLineItemChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveTextLineItemChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveTextLineItemChangeBuilder nextValue(

@@ -46,7 +46,7 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Long getLimit() {
@@ -54,7 +54,7 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -62,7 +62,7 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -70,7 +70,7 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -78,7 +78,7 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> getResults() {

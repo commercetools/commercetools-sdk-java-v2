@@ -36,7 +36,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
@@ -45,7 +45,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -54,7 +54,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
@@ -63,7 +63,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder channels(
@@ -75,7 +75,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantAvailabilityBuilder channels(

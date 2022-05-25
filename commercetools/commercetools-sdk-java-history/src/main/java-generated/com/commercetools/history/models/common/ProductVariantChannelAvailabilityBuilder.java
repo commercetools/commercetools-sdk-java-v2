@@ -30,7 +30,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     private Integer availableQuantity;
 
     /**
-     <>
+     *
      */
 
     public ProductVariantChannelAvailabilityBuilder isOnStock(final Boolean isOnStock) {
@@ -39,7 +39,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantChannelAvailabilityBuilder restockableInDays(final Integer restockableInDays) {
@@ -48,7 +48,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantChannelAvailabilityBuilder availableQuantity(final Integer availableQuantity) {

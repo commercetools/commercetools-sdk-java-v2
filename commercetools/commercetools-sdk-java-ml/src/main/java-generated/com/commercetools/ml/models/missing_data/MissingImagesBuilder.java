@@ -31,7 +31,7 @@ public class MissingImagesBuilder implements Builder<MissingImages> {
     private Long imageCount;
 
     /**
-     <>
+     *
      */
 
     public MissingImagesBuilder product(
@@ -41,7 +41,7 @@ public class MissingImagesBuilder implements Builder<MissingImages> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
@@ -50,7 +50,7 @@ public class MissingImagesBuilder implements Builder<MissingImages> {
     }
 
     /**
-     <*  <p>ID of the variant</p>>
+     *  <p>ID of the variant</p>
      */
 
     public MissingImagesBuilder variantId(final Long variantId) {
@@ -59,7 +59,7 @@ public class MissingImagesBuilder implements Builder<MissingImages> {
     }
 
     /**
-     <*  <p>Number of images the variant contains.</p>>
+     *  <p>Number of images the variant contains.</p>
      */
 
     public MissingImagesBuilder imageCount(final Long imageCount) {

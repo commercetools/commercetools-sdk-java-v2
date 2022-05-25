@@ -27,7 +27,7 @@ public class AttributeBooleanTypeImpl implements AttributeBooleanType, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

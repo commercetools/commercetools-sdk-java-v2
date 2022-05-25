@@ -32,14 +32,14 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("force")

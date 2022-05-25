@@ -29,7 +29,7 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
     String SET_METHOD_INFO_METHOD = "setMethodInfoMethod";
 
     /**
-     <*  <p>If not provided, the method is unset.</p>>
+     *  <p>If not provided, the method is unset.</p>
      */
 
     @JsonProperty("method")

@@ -34,14 +34,14 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     String REVIEW = "review";
 
     /**
-     <*  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      */
     @Valid
     @JsonProperty("obj")
     public Review getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced Review.</p>>
+     *  <p>Unique identifier of the referenced Review.</p>
      */
     @NotNull
     @JsonProperty("id")

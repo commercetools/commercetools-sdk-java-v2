@@ -39,7 +39,7 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,7 @@ public class MyCartSetLineItemSupplyChannelActionImpl implements MyCartSetLineIt
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {

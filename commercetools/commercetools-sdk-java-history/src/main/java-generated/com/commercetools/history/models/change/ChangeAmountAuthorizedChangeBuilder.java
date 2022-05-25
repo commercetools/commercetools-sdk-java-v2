@@ -31,7 +31,7 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
     private com.commercetools.history.models.common.Money nextValue;
 
     /**
-     <*  <p>Internal Update action for <code>changeAmountAuthorized</code></p>>
+     *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
      */
 
     public ChangeAmountAuthorizedChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountAuthorizedChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountAuthorizedChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountAuthorizedChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountAuthorizedChangeBuilder nextValue(

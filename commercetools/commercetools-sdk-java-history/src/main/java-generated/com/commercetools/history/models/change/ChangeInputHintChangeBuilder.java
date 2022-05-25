@@ -36,7 +36,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     private com.commercetools.history.models.common.TextInputHint previousValue;
 
     /**
-     <*  <p>Update action for <code>changeInputHint</code> on product types and types</p>>
+     *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
      */
 
     public ChangeInputHintChangeBuilder change(final String change) {
@@ -45,7 +45,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public ChangeInputHintChangeBuilder fieldName(final String fieldName) {
@@ -54,7 +54,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public ChangeInputHintChangeBuilder attributeName(final String attributeName) {
@@ -63,7 +63,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeInputHintChangeBuilder nextValue(
@@ -73,7 +73,7 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeInputHintChangeBuilder previousValue(

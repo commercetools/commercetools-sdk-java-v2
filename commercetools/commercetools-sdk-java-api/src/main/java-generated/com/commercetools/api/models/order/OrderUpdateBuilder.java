@@ -28,7 +28,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     private java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public OrderUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderUpdateBuilder actions(final com.commercetools.api.models.order.OrderUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderUpdateBuilder plusActions(final com.commercetools.api.models.order.OrderUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderUpdateBuilder withActions(

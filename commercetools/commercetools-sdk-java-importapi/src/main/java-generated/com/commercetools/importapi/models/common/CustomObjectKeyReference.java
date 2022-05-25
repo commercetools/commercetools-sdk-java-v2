@@ -33,7 +33,7 @@ public interface CustomObjectKeyReference extends KeyReference {
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("container")

@@ -29,14 +29,14 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
     String REMOVE_SHIPPING_ADDRESS_ID = "removeShippingAddressId";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

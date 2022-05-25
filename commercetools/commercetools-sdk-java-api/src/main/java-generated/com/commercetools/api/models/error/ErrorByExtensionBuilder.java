@@ -29,7 +29,7 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
     private String key;
 
     /**
-     <*  <p>Unique identifier of the Extension.</p>>
+     *  <p>Unique identifier of the Extension.</p>
      */
 
     public ErrorByExtensionBuilder id(final String id) {
@@ -38,7 +38,7 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Extension.</p>>
+     *  <p>User-defined unique identifier of the Extension.</p>
      */
 
     public ErrorByExtensionBuilder key(@Nullable final String key) {

@@ -31,7 +31,7 @@ public class FacetResultImpl implements FacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.FacetTypes getType() {

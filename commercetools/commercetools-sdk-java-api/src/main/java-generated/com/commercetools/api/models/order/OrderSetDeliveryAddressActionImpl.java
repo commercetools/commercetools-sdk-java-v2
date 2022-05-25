@@ -39,7 +39,7 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -55,7 +55,7 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

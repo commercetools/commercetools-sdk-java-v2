@@ -54,7 +54,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     <*  <p>The unique ID of this CustomLineItem.</p>>
+     *  <p>The unique ID of this CustomLineItem.</p>
      */
 
     public String getId() {
@@ -62,7 +62,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
@@ -70,7 +70,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getMoney() {
@@ -78,7 +78,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxedItemPrice getTaxedPrice() {
@@ -86,7 +86,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getTotalPrice() {
@@ -94,7 +94,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     <*  <p>A unique String in the cart to identify this CustomLineItem.</p>>
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
      */
 
     public String getSlug() {
@@ -102,7 +102,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
 
     public Integer getQuantity() {

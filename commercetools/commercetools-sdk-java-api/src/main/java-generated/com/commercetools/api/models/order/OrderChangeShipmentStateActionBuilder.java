@@ -26,7 +26,7 @@ public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChang
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
     /**
-     <>
+     *
      */
 
     public OrderChangeShipmentStateActionBuilder shipmentState(

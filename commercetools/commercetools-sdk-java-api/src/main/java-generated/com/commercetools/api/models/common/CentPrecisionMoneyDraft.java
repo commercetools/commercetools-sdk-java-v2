@@ -31,7 +31,7 @@ public interface CentPrecisionMoneyDraft extends TypedMoneyDraft {
     String CENT_PRECISION = "centPrecision";
 
     /**
-     <*  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>>
+     *  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>
      */
 
     @JsonProperty("fractionDigits")

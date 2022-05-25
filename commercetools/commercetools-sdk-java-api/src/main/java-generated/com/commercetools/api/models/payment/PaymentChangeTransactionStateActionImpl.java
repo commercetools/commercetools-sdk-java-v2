@@ -39,7 +39,7 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
     }
 
     /**
-     <>
+     *
      */
 
     public String getTransactionId() {
@@ -55,7 +55,7 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.TransactionState getState() {

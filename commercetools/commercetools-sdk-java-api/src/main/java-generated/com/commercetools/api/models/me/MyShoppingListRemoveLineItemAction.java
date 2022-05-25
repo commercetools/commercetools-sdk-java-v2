@@ -32,14 +32,14 @@ public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdate
     String REMOVE_LINE_ITEM = "removeLineItem";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("quantity")

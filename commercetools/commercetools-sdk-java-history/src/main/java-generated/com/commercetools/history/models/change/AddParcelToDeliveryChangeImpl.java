@@ -43,7 +43,7 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
     }
 
     /**
-     <*  <p>Update action for <code>addParcelToDelivery</code></p>>
+     *  <p>Update action for <code>addParcelToDelivery</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -67,7 +67,7 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Parcel getNextValue() {

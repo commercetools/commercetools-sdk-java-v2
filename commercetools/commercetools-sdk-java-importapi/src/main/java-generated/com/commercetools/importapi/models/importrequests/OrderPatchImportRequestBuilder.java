@@ -25,7 +25,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     private java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches;
 
     /**
-     <*  <p>The order patches of this request</p>>
+     *  <p>The order patches of this request</p>
      */
 
     public OrderPatchImportRequestBuilder patches(
@@ -35,7 +35,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     }
 
     /**
-     <*  <p>The order patches of this request</p>>
+     *  <p>The order patches of this request</p>
      */
 
     public OrderPatchImportRequestBuilder patches(
@@ -45,7 +45,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     }
 
     /**
-     <*  <p>The order patches of this request</p>>
+     *  <p>The order patches of this request</p>
      */
 
     public OrderPatchImportRequestBuilder plusPatches(
@@ -58,7 +58,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     }
 
     /**
-     <*  <p>The order patches of this request</p>>
+     *  <p>The order patches of this request</p>
      */
 
     public OrderPatchImportRequestBuilder plusPatches(
@@ -72,7 +72,7 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
     }
 
     /**
-     <*  <p>The order patches of this request</p>>
+     *  <p>The order patches of this request</p>
      */
 
     public OrderPatchImportRequestBuilder withPatches(

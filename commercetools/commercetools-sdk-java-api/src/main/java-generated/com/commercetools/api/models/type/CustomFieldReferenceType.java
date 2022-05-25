@@ -32,7 +32,7 @@ public interface CustomFieldReferenceType extends FieldType {
     String REFERENCE = "Reference";
 
     /**
-     <*  <p>Resource type the Custom Field can reference.</p>>
+     *  <p>Resource type the Custom Field can reference.</p>
      */
     @NotNull
     @JsonProperty("referenceTypeId")

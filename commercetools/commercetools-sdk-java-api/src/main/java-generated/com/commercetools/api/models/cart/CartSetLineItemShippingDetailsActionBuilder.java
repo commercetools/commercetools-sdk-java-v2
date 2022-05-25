@@ -30,7 +30,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemShippingDetailsActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +39,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemShippingDetailsActionBuilder shippingDetails(
@@ -50,7 +50,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemShippingDetailsActionBuilder shippingDetails(

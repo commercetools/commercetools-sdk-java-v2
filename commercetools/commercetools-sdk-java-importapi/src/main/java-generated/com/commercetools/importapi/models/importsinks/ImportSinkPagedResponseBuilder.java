@@ -37,7 +37,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     private java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ImportSinkPagedResponseBuilder limit(final Integer limit) {
@@ -46,7 +46,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ImportSinkPagedResponseBuilder offset(final Long offset) {
@@ -55,7 +55,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-     <*  <p>The actual number of results returned.</p>>
+     *  <p>The actual number of results returned.</p>
      */
 
     public ImportSinkPagedResponseBuilder count(final Long count) {
@@ -64,7 +64,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-     <*  <p>The total number of results matching the query.</p>>
+     *  <p>The total number of results matching the query.</p>
      */
 
     public ImportSinkPagedResponseBuilder total(final Long total) {
@@ -73,7 +73,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-     <*  <p>The array of Import Sinks matching the query.</p>>
+     *  <p>The array of Import Sinks matching the query.</p>
      */
 
     public ImportSinkPagedResponseBuilder results(
@@ -83,7 +83,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-     <*  <p>The array of Import Sinks matching the query.</p>>
+     *  <p>The array of Import Sinks matching the query.</p>
      */
 
     public ImportSinkPagedResponseBuilder results(
@@ -93,7 +93,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-     <*  <p>The array of Import Sinks matching the query.</p>>
+     *  <p>The array of Import Sinks matching the query.</p>
      */
 
     public ImportSinkPagedResponseBuilder plusResults(
@@ -106,7 +106,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-     <*  <p>The array of Import Sinks matching the query.</p>>
+     *  <p>The array of Import Sinks matching the query.</p>
      */
 
     public ImportSinkPagedResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
     }
 
     /**
-     <*  <p>The array of Import Sinks matching the query.</p>>
+     *  <p>The array of Import Sinks matching the query.</p>
      */
 
     public ImportSinkPagedResponseBuilder withResults(

@@ -40,7 +40,7 @@ public class SetCartClassificationShippingRateInputValueImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class SetCartClassificationShippingRateInputValueImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -56,7 +56,7 @@ public class SetCartClassificationShippingRateInputValueImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {

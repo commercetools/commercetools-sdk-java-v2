@@ -34,7 +34,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     String LTEXT_SET = "ltext-set";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

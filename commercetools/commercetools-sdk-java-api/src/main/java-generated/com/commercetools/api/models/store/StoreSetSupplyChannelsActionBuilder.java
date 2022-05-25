@@ -27,7 +27,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
     /**
-     <>
+     *
      */
 
     public StoreSetSupplyChannelsActionBuilder supplyChannels(
@@ -37,7 +37,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetSupplyChannelsActionBuilder supplyChannels(
@@ -47,7 +47,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
@@ -60,7 +60,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
@@ -74,7 +74,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetSupplyChannelsActionBuilder withSupplyChannels(

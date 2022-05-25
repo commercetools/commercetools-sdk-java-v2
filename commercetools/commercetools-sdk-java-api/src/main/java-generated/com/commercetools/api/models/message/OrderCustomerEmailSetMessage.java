@@ -36,14 +36,14 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("oldEmail")

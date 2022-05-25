@@ -30,7 +30,7 @@ public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMe
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setMethodInfoMethod</code></p>>
+     *  <p>Shape of the action for <code>setMethodInfoMethod</code></p>
      */
 
     public SetMethodInfoMethodChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMe
     }
 
     /**
-     <>
+     *
      */
 
     public SetMethodInfoMethodChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMe
     }
 
     /**
-     <>
+     *
      */
 
     public SetMethodInfoMethodChangeBuilder nextValue(final String nextValue) {

@@ -39,7 +39,7 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

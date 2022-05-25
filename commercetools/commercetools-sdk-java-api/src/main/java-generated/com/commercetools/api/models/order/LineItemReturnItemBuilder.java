@@ -51,7 +51,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     private String lineItemId;
 
     /**
-     <*  <p>Unique identifier of the ReturnItem.</p>>
+     *  <p>Unique identifier of the ReturnItem.</p>
      */
 
     public LineItemReturnItemBuilder id(final String id) {
@@ -60,7 +60,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemReturnItemBuilder quantity(final Long quantity) {
@@ -69,7 +69,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemReturnItemBuilder comment(@Nullable final String comment) {
@@ -78,7 +78,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemReturnItemBuilder shipmentState(
@@ -88,7 +88,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemReturnItemBuilder paymentState(
@@ -98,7 +98,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
 
     public LineItemReturnItemBuilder custom(
@@ -108,7 +108,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
 
     public LineItemReturnItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -117,7 +117,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemReturnItemBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -126,7 +126,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemReturnItemBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -135,7 +135,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemReturnItemBuilder lineItemId(final String lineItemId) {

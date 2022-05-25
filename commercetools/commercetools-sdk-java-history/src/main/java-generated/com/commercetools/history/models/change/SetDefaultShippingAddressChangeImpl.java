@@ -43,7 +43,7 @@ public class SetDefaultShippingAddressChangeImpl implements SetDefaultShippingAd
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetDefaultShippingAddressChangeImpl implements SetDefaultShippingAd
     }
 
     /**
-     <*  <p>Update action for <code>setDefaultShippingAddress</code> action.</p>>
+     *  <p>Update action for <code>setDefaultShippingAddress</code> action.</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetDefaultShippingAddressChangeImpl implements SetDefaultShippingAd
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getNextValue() {
@@ -67,7 +67,7 @@ public class SetDefaultShippingAddressChangeImpl implements SetDefaultShippingAd
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {

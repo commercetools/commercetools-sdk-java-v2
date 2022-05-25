@@ -43,7 +43,7 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
     }
 
     /**
-     <*  <p>Update action for <code>setReservations</code> on inventories</p>>
+     *  <p>Update action for <code>setReservations</code> on inventories</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reservation> getNextValue() {
@@ -67,7 +67,7 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reservation> getPreviousValue() {

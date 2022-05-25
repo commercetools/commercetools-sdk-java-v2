@@ -54,7 +54,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
     /**
-     <*  <p>Unique identifier of the given Price.</p>>
+     *  <p>Unique identifier of the given Price.</p>
      */
 
     public QueryPriceBuilder id(@Nullable final String id) {
@@ -63,7 +63,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Money value of the given Price.</p>>
+     *  <p>Money value of the given Price.</p>
      */
 
     public QueryPriceBuilder value(
@@ -73,7 +73,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Money value of the given Price.</p>>
+     *  <p>Money value of the given Price.</p>
      */
 
     public QueryPriceBuilder value(final com.commercetools.api.models.common.Money value) {
@@ -82,7 +82,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Country for which the given Price is valid.</p>>
+     *  <p>Country for which the given Price is valid.</p>
      */
 
     public QueryPriceBuilder country(@Nullable final String country) {
@@ -91,7 +91,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>CustomerGroup for which the given Price is valid.</p>>
+     *  <p>CustomerGroup for which the given Price is valid.</p>
      */
 
     public QueryPriceBuilder customerGroup(
@@ -103,7 +103,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>CustomerGroup for which the given Price is valid.</p>>
+     *  <p>CustomerGroup for which the given Price is valid.</p>
      */
 
     public QueryPriceBuilder customerGroup(
@@ -113,7 +113,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>>
+     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
      */
 
     public QueryPriceBuilder channel(
@@ -123,7 +123,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>>
+     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
      */
 
     public QueryPriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
@@ -132,7 +132,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Date from which the given Price is valid.</p>>
+     *  <p>Date from which the given Price is valid.</p>
      */
 
     public QueryPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -141,7 +141,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Date until which the given Price is valid.</p>>
+     *  <p>Date until which the given Price is valid.</p>
      */
 
     public QueryPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -150,7 +150,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>DiscountedPrice you specify for the given Price.</p>>
+     *  <p>DiscountedPrice you specify for the given Price.</p>
      */
 
     public QueryPriceBuilder discounted(
@@ -160,7 +160,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>DiscountedPrice you specify for the given Price.</p>>
+     *  <p>DiscountedPrice you specify for the given Price.</p>
      */
 
     public QueryPriceBuilder discounted(
@@ -170,7 +170,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Custom Fields for the Price.</p>>
+     *  <p>Custom Fields for the Price.</p>
      */
 
     public QueryPriceBuilder custom(
@@ -180,7 +180,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Custom Fields for the Price.</p>>
+     *  <p>Custom Fields for the Price.</p>
      */
 
     public QueryPriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -189,7 +189,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>>
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
      */
 
     public QueryPriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
@@ -198,7 +198,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>>
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
      */
 
     public QueryPriceBuilder tiers(
@@ -208,7 +208,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>>
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
      */
 
     public QueryPriceBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
@@ -220,7 +220,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>>
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
      */
 
     public QueryPriceBuilder plusTiers(
@@ -233,7 +233,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     /**
-     <*  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>>
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
      */
 
     public QueryPriceBuilder withTiers(

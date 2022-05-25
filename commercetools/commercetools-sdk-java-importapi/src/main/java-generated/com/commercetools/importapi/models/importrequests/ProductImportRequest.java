@@ -34,7 +34,7 @@ public interface ProductImportRequest extends ImportRequest {
     String PRODUCT = "product";
 
     /**
-     <*  <p>The product import resources of this request.</p>>
+     *  <p>The product import resources of this request.</p>
      */
     @NotNull
     @Valid

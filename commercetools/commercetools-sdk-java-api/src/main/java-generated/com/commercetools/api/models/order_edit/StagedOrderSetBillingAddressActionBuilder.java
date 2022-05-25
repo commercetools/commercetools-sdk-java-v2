@@ -27,7 +27,7 @@ public class StagedOrderSetBillingAddressActionBuilder implements Builder<Staged
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetBillingAddressActionBuilder address(
@@ -37,7 +37,7 @@ public class StagedOrderSetBillingAddressActionBuilder implements Builder<Staged
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetBillingAddressActionBuilder address(

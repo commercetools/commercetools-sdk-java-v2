@@ -29,21 +29,21 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     String REMOVE_VARIANT = "removeVariant";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("id")
     public Long getId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

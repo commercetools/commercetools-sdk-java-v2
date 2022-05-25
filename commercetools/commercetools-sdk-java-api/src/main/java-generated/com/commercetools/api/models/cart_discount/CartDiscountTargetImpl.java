@@ -31,7 +31,7 @@ public class CartDiscountTargetImpl implements CartDiscountTarget, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

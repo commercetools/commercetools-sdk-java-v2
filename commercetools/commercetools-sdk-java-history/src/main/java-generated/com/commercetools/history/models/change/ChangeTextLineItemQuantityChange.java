@@ -37,21 +37,21 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     String CHANGE_TEXT_LINE_ITEM_QUANTITY_CHANGE = "ChangeTextLineItemQuantityChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -59,14 +59,14 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     public TextLineItemValue getTextLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

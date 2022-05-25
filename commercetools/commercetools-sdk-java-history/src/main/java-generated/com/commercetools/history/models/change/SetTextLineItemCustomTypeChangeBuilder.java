@@ -34,7 +34,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     /**
-     <*  <p>Update action for <code>setTextLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setTextLineItemCustomType</code></p>
      */
 
     public SetTextLineItemCustomTypeChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemCustomTypeChangeBuilder textLineItem(
@@ -54,7 +54,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemCustomTypeChangeBuilder textLineItem(
@@ -64,7 +64,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemCustomTypeChangeBuilder nextValue(
@@ -74,7 +74,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemCustomTypeChangeBuilder nextValue(
@@ -84,7 +84,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemCustomTypeChangeBuilder previousValue(
@@ -94,7 +94,7 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextLineItemCustomTypeChangeBuilder previousValue(

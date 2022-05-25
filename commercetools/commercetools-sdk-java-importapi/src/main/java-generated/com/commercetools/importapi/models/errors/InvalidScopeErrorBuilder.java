@@ -24,7 +24,7 @@ public class InvalidScopeErrorBuilder implements Builder<InvalidScopeError> {
     private String message;
 
     /**
-     <>
+     *
      */
 
     public InvalidScopeErrorBuilder message(final String message) {

@@ -32,7 +32,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     <>
+     *
      */
 
     public SetCartClassificationShippingRateInputValueBuilder type(final String type) {
@@ -41,7 +41,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetCartClassificationShippingRateInputValueBuilder key(final String key) {
@@ -50,7 +50,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetCartClassificationShippingRateInputValueBuilder label(
@@ -60,7 +60,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetCartClassificationShippingRateInputValueBuilder label(

@@ -40,7 +40,7 @@ public interface DuplicateStandalonePriceScopeError extends ErrorObject {
     String DUPLICATE_STANDALONE_PRICE_SCOPE = "DuplicateStandalonePriceScope";
 
     /**
-     <*  <p>Reference to a StandalonePrice.</p>>
+     *  <p>Reference to a StandalonePrice.</p>
      */
     @NotNull
     @Valid
@@ -48,49 +48,49 @@ public interface DuplicateStandalonePriceScopeError extends ErrorObject {
     public StandalonePriceReference getConflictingStandalonePrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("currency")
     public String getCurrency();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validUntil")

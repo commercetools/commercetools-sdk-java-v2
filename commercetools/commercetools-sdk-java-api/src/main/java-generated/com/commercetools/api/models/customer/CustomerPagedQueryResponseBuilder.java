@@ -39,7 +39,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     private java.util.List<com.commercetools.api.models.customer.Customer> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public CustomerPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public CustomerPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerPagedQueryResponseBuilder results(final com.commercetools.api.models.customer.Customer... results) {
@@ -84,7 +84,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerPagedQueryResponseBuilder plusResults(
@@ -107,7 +107,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerPagedQueryResponseBuilder plusResults(
@@ -120,7 +120,7 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerPagedQueryResponseBuilder withResults(

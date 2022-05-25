@@ -31,7 +31,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     private Long threshold;
 
     /**
-     <>
+     *
      */
 
     public MissingImagesMetaBuilder productLevel(
@@ -43,7 +43,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesMetaBuilder productLevel(
@@ -53,7 +53,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesMetaBuilder variantLevel(
@@ -65,7 +65,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingImagesMetaBuilder variantLevel(
@@ -75,7 +75,7 @@ public class MissingImagesMetaBuilder implements Builder<MissingImagesMeta> {
     }
 
     /**
-     <*  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>>
+     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
      */
 
     public MissingImagesMetaBuilder threshold(final Long threshold) {

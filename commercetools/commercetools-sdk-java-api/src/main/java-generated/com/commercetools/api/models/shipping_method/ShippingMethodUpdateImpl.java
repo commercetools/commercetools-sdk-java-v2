@@ -35,7 +35,7 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> getActions() {

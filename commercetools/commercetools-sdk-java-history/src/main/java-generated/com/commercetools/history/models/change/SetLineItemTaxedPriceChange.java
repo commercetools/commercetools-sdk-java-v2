@@ -39,21 +39,21 @@ public interface SetLineItemTaxedPriceChange extends Change {
     String SET_LINE_ITEM_TAXED_PRICE_CHANGE = "SetLineItemTaxedPriceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLineItemTaxedPrice</code></p>>
+     *  <p>Update action for <code>setLineItemTaxedPrice</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -61,14 +61,14 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -76,7 +76,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public TaxedItemPrice getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

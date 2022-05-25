@@ -39,7 +39,7 @@ public class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -55,7 +55,7 @@ public class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction,
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVariantId() {

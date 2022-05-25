@@ -37,7 +37,7 @@ public class ProjectChangeShoppingListsConfigurationActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class ProjectChangeShoppingListsConfigurationActionImpl
     }
 
     /**
-     <*  <p>Configuration for the Shopping Lists feature.</p>>
+     *  <p>Configuration for the Shopping Lists feature.</p>
      */
 
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingListsConfiguration() {

@@ -33,7 +33,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder channel(
@@ -44,7 +44,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder channel(
@@ -54,7 +54,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
@@ -63,7 +63,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderUpdateSyncInfoActionBuilder syncedAt(@Nullable final java.time.ZonedDateTime syncedAt) {

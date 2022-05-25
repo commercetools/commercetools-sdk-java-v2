@@ -33,14 +33,14 @@ public interface MyPaymentUpdate extends
         com.commercetools.api.models.ResourceUpdate<MyPaymentUpdate, MyPaymentUpdateAction, MyPaymentUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

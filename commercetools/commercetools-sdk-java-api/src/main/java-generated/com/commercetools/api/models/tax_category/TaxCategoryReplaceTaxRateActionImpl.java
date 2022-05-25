@@ -39,7 +39,7 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
     }
 
     /**
-     <*  <p>ID of the TaxRate to replace.</p>>
+     *  <p>ID of the TaxRate to replace.</p>
      */
 
     public String getTaxRateId() {
@@ -55,7 +55,7 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
     }
 
     /**
-     <*  <p>New TaxRate to replace with.</p>>
+     *  <p>New TaxRate to replace with.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {

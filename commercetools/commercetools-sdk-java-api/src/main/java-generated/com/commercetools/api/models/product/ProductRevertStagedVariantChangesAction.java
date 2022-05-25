@@ -32,7 +32,7 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
     String REVERT_STAGED_VARIANT_CHANGES = "revertStagedVariantChanges";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")

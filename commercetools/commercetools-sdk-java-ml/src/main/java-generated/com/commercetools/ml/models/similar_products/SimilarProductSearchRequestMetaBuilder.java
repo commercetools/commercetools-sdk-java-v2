@@ -25,7 +25,7 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
 
     /**
-     <*  <p>The SimilarityMeasures used in this search.</p>>
+     *  <p>The SimilarityMeasures used in this search.</p>
      */
 
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(
@@ -37,7 +37,7 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
     }
 
     /**
-     <*  <p>The SimilarityMeasures used in this search.</p>>
+     *  <p>The SimilarityMeasures used in this search.</p>
      */
 
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(

@@ -85,7 +85,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public String getId() {
@@ -93,7 +93,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -101,7 +101,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -109,7 +109,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -117,7 +117,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -125,7 +125,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -133,7 +133,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getSequenceNumber() {
@@ -141,7 +141,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -149,7 +149,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getResourceVersion() {
@@ -157,7 +157,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -165,7 +165,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -173,7 +173,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Double getOldRating() {
@@ -181,7 +181,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Double getNewRating() {
@@ -189,7 +189,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIncludedInStatistics() {
@@ -197,7 +197,7 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getTarget() {

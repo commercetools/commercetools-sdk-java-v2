@@ -41,7 +41,7 @@ public interface CustomLineItemImportDraft
         extends com.commercetools.api.models.CustomizableDraft<CustomLineItemImportDraft> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -49,14 +49,14 @@ public interface CustomLineItemImportDraft
     public LocalizedString getName();
 
     /**
-     <*  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <*  <p>The cost to add to the cart. The amount can be negative.</p>>
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
      */
     @NotNull
     @Valid
@@ -64,42 +64,42 @@ public interface CustomLineItemImportDraft
     public Money getMoney();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingDetails")

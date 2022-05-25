@@ -35,21 +35,21 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
     String EXTENSION_UPDATE_ACTIONS_FAILED = "ExtensionUpdateActionsFailed";
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("localizedMessage")
     public LocalizedString getLocalizedMessage();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("extensionExtraInfo")
     public Object getExtensionExtraInfo();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

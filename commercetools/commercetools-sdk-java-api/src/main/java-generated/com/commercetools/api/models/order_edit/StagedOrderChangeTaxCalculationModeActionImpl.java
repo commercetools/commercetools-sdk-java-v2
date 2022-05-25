@@ -37,7 +37,7 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {

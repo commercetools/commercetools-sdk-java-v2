@@ -27,7 +27,7 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
 
     /**
-     <>
+     *
      */
 
     public CategorySetMetaKeywordsActionBuilder metaKeywords(
@@ -37,7 +37,7 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetMetaKeywordsActionBuilder metaKeywords(

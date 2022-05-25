@@ -35,7 +35,7 @@ public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public String getPredicate() {

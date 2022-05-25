@@ -26,7 +26,7 @@ public class MyCustomerSetCompanyNameActionBuilder implements Builder<MyCustomer
     private String companyName;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSetCompanyNameActionBuilder companyName(@Nullable final String companyName) {

@@ -47,7 +47,7 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setInputTip</code> on product types</p>>
+     *  <p>Update action for <code>setInputTip</code> on product types</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
     }
 
     /**
-     <*  <p>The name of the updated attribute.</p>>
+     *  <p>The name of the updated attribute.</p>
      */
 
     public String getAttributeName() {
@@ -71,7 +71,7 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
@@ -79,7 +79,7 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {

@@ -36,21 +36,21 @@ public interface ChangeAmountAuthorizedChange extends Change {
     String CHANGE_AMOUNT_AUTHORIZED_CHANGE = "ChangeAmountAuthorizedChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Internal Update action for <code>changeAmountAuthorized</code></p>>
+     *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeAmountAuthorizedChange extends Change {
     public Money getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

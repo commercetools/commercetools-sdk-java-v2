@@ -27,7 +27,7 @@ public class ProductUnpublishedMessagePayloadImpl implements ProductUnpublishedM
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

@@ -39,7 +39,7 @@ public class CustomerSetDefaultShippingAddressActionImpl implements CustomerSetD
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CustomerSetDefaultShippingAddressActionImpl implements CustomerSetD
     }
 
     /**
-     <*  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>>
+     *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
      */
 
     public String getAddressId() {
@@ -55,7 +55,7 @@ public class CustomerSetDefaultShippingAddressActionImpl implements CustomerSetD
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {

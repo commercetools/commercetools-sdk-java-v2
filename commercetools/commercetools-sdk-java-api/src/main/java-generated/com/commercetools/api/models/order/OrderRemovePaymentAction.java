@@ -34,7 +34,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     String REMOVE_PAYMENT = "removePayment";
 
     /**
-     <*  <p>ResourceIdentifier to a Payment.</p>>
+     *  <p>ResourceIdentifier to a Payment.</p>
      */
     @NotNull
     @Valid

@@ -35,7 +35,7 @@ public class PriceImpl implements Price, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -43,7 +43,7 @@ public class PriceImpl implements Price, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getValue() {

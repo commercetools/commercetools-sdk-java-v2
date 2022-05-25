@@ -29,7 +29,7 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("key")

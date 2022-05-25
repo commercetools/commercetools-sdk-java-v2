@@ -34,14 +34,14 @@ public interface OutOfStockError extends ErrorObject {
     String OUT_OF_STOCK = "OutOfStock";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("skus")

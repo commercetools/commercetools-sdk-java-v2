@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImageSearchConfigRequest {
 
     /**
-     <*  <p>The list of update actions to be performed on the project.</p>>
+     *  <p>The list of update actions to be performed on the project.</p>
      */
     @NotNull
     @Valid

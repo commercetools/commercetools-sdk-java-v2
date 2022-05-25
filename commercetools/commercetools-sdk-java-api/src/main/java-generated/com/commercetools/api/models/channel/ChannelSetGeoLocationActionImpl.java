@@ -36,7 +36,7 @@ public class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAct
     }
 
     /**
-     <*  <p>Value to set.</p>>
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {

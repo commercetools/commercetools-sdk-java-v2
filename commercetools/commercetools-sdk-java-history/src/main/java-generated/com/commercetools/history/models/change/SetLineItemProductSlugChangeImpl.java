@@ -51,7 +51,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemProductSlug</code></p>>
+     *  <p>Update action for <code>setLineItemProductSlug</code></p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -75,7 +75,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -83,7 +83,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
@@ -91,7 +91,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {

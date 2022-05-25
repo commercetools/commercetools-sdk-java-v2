@@ -39,7 +39,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     private java.lang.Object previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemCustomField</code></p>>
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
      */
 
     public SetShoppingListLineItemCustomFieldChangeBuilder change(final String change) {
@@ -48,7 +48,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomFieldChangeBuilder name(final String name) {
@@ -57,7 +57,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
@@ -66,7 +66,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomFieldChangeBuilder lineItem(
@@ -78,7 +78,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomFieldChangeBuilder lineItem(
@@ -88,7 +88,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -97,7 +97,7 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {

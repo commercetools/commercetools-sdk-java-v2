@@ -46,7 +46,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <*  <p>The http status code of the response.</p>>
+     *  <p>The http status code of the response.</p>
      */
 
     public Integer getStatusCode() {
@@ -54,7 +54,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <*  <p>Describes the error.</p>>
+     *  <p>Describes the error.</p>
      */
 
     public String getMessage() {
@@ -62,7 +62,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <*  <p>This property is only used for OAuth2 errors. Contains the error code.</p>>
+     *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
      */
 
     public String getError() {
@@ -70,7 +70,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <*  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>>
+     *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
      */
 
     public String getErrorDescription() {
@@ -78,7 +78,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     <*  <p>The errors that caused this error response.</p>>
+     *  <p>The errors that caused this error response.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {

@@ -35,7 +35,7 @@ public class IronMqDestinationImpl implements IronMqDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class IronMqDestinationImpl implements IronMqDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getUri() {

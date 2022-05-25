@@ -34,7 +34,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     /**
-     <*  <p>Update action for <code>changeTextLineItemName</code></p>>
+     *  <p>Update action for <code>changeTextLineItemName</code></p>
      */
 
     public ChangeTextLineItemNameChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemNameChangeBuilder textLineItem(
@@ -54,7 +54,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemNameChangeBuilder textLineItem(
@@ -64,7 +64,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemNameChangeBuilder nextValue(
@@ -74,7 +74,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemNameChangeBuilder nextValue(
@@ -84,7 +84,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemNameChangeBuilder previousValue(
@@ -94,7 +94,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTextLineItemNameChangeBuilder previousValue(

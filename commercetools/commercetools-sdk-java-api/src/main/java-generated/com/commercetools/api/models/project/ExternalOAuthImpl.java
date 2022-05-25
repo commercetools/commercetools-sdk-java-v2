@@ -36,7 +36,7 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
     }
 
     /**
-     <*  <p>URL with authorization header.</p>>
+     *  <p>URL with authorization header.</p>
      */
 
     public String getUrl() {
@@ -44,7 +44,7 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
     }
 
     /**
-     <*  <p>Partially hidden on retrieval.</p>>
+     *  <p>Partially hidden on retrieval.</p>
      */
 
     public String getAuthorizationHeader() {

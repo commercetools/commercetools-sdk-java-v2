@@ -39,7 +39,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder statusCode(final Integer statusCode) {
@@ -48,7 +48,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder message(final String message) {
@@ -57,7 +57,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder error(@Nullable final String error) {
@@ -66,7 +66,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder error_description(@Nullable final String error_description) {
@@ -75,7 +75,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder errors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -84,7 +84,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder errors(
@@ -94,7 +94,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder plusErrors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
@@ -106,7 +106,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder plusErrors(
@@ -119,7 +119,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorResponseBuilder withErrors(

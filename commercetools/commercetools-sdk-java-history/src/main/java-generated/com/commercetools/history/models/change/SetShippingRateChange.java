@@ -36,21 +36,21 @@ public interface SetShippingRateChange extends Change {
     String SET_SHIPPING_RATE_CHANGE = "SetShippingRateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setShippingRate</code></p>>
+     *  <p>Update action for <code>setShippingRate</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetShippingRateChange extends Change {
     public Money getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

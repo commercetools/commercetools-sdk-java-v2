@@ -29,14 +29,14 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
     String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("oldEmail")

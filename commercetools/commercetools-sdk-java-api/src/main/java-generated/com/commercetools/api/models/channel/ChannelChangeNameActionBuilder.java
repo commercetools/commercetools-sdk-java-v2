@@ -25,7 +25,7 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ChannelChangeNameActionBuilder name(
@@ -35,7 +35,7 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ChannelChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

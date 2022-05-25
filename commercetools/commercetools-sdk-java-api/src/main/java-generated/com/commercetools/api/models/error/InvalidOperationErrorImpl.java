@@ -39,7 +39,7 @@ public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

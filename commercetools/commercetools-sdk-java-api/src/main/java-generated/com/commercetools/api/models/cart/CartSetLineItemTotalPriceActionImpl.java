@@ -39,7 +39,7 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,7 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {

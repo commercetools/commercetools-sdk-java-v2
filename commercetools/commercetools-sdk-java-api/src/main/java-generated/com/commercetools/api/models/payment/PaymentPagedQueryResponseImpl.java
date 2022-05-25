@@ -45,7 +45,7 @@ public class PaymentPagedQueryResponseImpl implements PaymentPagedQueryResponse,
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Long getLimit() {
@@ -53,7 +53,7 @@ public class PaymentPagedQueryResponseImpl implements PaymentPagedQueryResponse,
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -61,7 +61,7 @@ public class PaymentPagedQueryResponseImpl implements PaymentPagedQueryResponse,
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -69,7 +69,7 @@ public class PaymentPagedQueryResponseImpl implements PaymentPagedQueryResponse,
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -77,7 +77,7 @@ public class PaymentPagedQueryResponseImpl implements PaymentPagedQueryResponse,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.payment.Payment> getResults() {

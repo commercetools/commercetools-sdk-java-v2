@@ -36,7 +36,7 @@ public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAct
     }
 
     /**
-     <*  <p>Value to append to the <code>rates</code> array.</p>>
+     *  <p>Value to append to the <code>rates</code> array.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {

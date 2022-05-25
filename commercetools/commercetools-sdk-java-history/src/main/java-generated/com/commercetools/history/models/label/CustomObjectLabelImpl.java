@@ -38,7 +38,7 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -46,7 +46,7 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -54,7 +54,7 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getContainer() {

@@ -39,7 +39,7 @@ public class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLo
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLo
     }
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
 
     public String getFieldName() {
@@ -55,7 +55,7 @@ public class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLo
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {

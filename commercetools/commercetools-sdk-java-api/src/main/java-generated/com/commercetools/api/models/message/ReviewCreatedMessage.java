@@ -41,7 +41,7 @@ public interface ReviewCreatedMessage extends Message {
     String REVIEW_CREATED = "ReviewCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

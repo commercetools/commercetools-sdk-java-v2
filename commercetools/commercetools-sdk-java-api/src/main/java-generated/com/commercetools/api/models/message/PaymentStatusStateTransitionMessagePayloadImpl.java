@@ -41,7 +41,7 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -49,7 +49,7 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -57,7 +57,7 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getForce() {

@@ -40,7 +40,7 @@ public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInter
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInter
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInter
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

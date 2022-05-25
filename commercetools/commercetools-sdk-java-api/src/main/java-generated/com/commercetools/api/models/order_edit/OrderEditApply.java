@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderEditApply {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("editVersion")
     public Integer getEditVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("resourceVersion")

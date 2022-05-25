@@ -53,7 +53,7 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -61,7 +61,7 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -69,7 +69,7 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -77,7 +77,7 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -85,7 +85,7 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -93,7 +93,7 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -101,7 +101,7 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

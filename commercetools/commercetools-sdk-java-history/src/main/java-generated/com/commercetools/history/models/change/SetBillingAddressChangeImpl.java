@@ -43,7 +43,7 @@ public class SetBillingAddressChangeImpl implements SetBillingAddressChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetBillingAddressChangeImpl implements SetBillingAddressChange, Mod
     }
 
     /**
-     <*  <p>Update action for <code>setBillingAddress</code></p>>
+     *  <p>Update action for <code>setBillingAddress</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetBillingAddressChangeImpl implements SetBillingAddressChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getNextValue() {
@@ -67,7 +67,7 @@ public class SetBillingAddressChangeImpl implements SetBillingAddressChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {

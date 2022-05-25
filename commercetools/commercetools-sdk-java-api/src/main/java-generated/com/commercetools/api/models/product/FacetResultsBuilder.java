@@ -24,7 +24,7 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
     private Map<String, com.commercetools.api.models.product.FacetResult> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public FacetResultsBuilder values(final Map<String, com.commercetools.api.models.product.FacetResult> values) {
@@ -33,7 +33,7 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
     }
 
     /**
-     <>
+     *
      */
 
     public FacetResultsBuilder addValue(final String key,

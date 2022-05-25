@@ -43,7 +43,7 @@ public interface ProductDiscountUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<ProductDiscountUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

@@ -24,7 +24,7 @@ public class ShippingRatePriceTierBuilder implements Builder<ShippingRatePriceTi
     private com.commercetools.history.models.common.ShippingRateTierType type;
 
     /**
-     <>
+     *
      */
 
     public ShippingRatePriceTierBuilder type(final com.commercetools.history.models.common.ShippingRateTierType type) {

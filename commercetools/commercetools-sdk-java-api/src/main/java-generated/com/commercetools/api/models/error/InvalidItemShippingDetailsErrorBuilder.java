@@ -32,7 +32,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     private String itemId;
 
     /**
-     <>
+     *
      */
 
     public InvalidItemShippingDetailsErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidItemShippingDetailsErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidItemShippingDetailsErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidItemShippingDetailsErrorBuilder subject(final String subject) {
@@ -71,7 +71,7 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidItemShippingDetailsErrorBuilder itemId(final String itemId) {

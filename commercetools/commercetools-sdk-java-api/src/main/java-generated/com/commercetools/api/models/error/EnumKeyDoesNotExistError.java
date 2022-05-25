@@ -34,14 +34,14 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
     String ENUM_KEY_DOES_NOT_EXIST = "EnumKeyDoesNotExist";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")

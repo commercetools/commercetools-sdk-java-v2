@@ -27,7 +27,7 @@ public class CustomFieldTimeTypeImpl implements CustomFieldTimeType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

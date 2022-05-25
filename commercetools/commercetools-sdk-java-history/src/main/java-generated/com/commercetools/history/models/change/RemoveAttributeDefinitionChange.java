@@ -35,21 +35,21 @@ public interface RemoveAttributeDefinitionChange extends Change {
     String REMOVE_ATTRIBUTE_DEFINITION_CHANGE = "RemoveAttributeDefinitionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>>
+     *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

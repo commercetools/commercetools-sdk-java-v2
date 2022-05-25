@@ -36,7 +36,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
     String PARCEL_ADDED_TO_DELIVERY = "ParcelAddedToDelivery";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -44,7 +44,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
     public Delivery getDelivery();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

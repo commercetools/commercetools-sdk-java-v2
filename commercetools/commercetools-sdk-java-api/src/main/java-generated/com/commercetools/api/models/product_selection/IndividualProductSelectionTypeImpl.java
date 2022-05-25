@@ -36,7 +36,7 @@ public class IndividualProductSelectionTypeImpl implements IndividualProductSele
     }
 
     /**
-     <*  <p>The following type of Product Selections is supported:</p>>
+     *  <p>The following type of Product Selections is supported:</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
@@ -44,7 +44,7 @@ public class IndividualProductSelectionTypeImpl implements IndividualProductSele
     }
 
     /**
-     <*  <p>The name of the ProductSelection which is recommended to be unique.</p>>
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

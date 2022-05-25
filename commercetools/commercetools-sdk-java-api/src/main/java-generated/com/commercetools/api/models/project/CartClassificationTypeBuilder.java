@@ -25,7 +25,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
     /**
-     <*  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>>
+     *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
      */
 
     public CartClassificationTypeBuilder values(
@@ -35,7 +35,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     <*  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>>
+     *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
      */
 
     public CartClassificationTypeBuilder values(
@@ -45,7 +45,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     <*  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>>
+     *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
      */
 
     public CartClassificationTypeBuilder plusValues(
@@ -58,7 +58,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     <*  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>>
+     *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
      */
 
     public CartClassificationTypeBuilder plusValues(
@@ -72,7 +72,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     <*  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>>
+     *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
      */
 
     public CartClassificationTypeBuilder withValues(

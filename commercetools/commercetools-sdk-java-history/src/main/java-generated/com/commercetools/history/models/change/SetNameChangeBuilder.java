@@ -31,7 +31,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setName</code></p>>
+     *  <p>Shape of the action for <code>setName</code></p>
      */
 
     public SetNameChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetNameChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetNameChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetNameChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetNameChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {

@@ -24,7 +24,7 @@ public class InvalidOperationBuilder implements Builder<InvalidOperation> {
     private String message;
 
     /**
-     <>
+     *
      */
 
     public InvalidOperationBuilder message(final String message) {

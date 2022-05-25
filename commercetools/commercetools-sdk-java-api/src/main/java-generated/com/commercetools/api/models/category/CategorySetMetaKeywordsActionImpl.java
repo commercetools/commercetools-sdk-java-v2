@@ -36,7 +36,7 @@ public class CategorySetMetaKeywordsActionImpl implements CategorySetMetaKeyword
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CategorySetMetaKeywordsActionImpl implements CategorySetMetaKeyword
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {

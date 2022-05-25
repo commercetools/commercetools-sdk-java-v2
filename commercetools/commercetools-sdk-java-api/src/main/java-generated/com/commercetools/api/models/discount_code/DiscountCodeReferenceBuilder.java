@@ -30,7 +30,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     private com.commercetools.api.models.discount_code.DiscountCode obj;
 
     /**
-     <*  <p>Unique identifier of the referenced DiscountCode.</p>>
+     *  <p>Unique identifier of the referenced DiscountCode.</p>
      */
 
     public DiscountCodeReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     <*  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>>
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
      */
 
     public DiscountCodeReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     }
 
     /**
-     <*  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>>
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
      */
 
     public DiscountCodeReferenceBuilder obj(

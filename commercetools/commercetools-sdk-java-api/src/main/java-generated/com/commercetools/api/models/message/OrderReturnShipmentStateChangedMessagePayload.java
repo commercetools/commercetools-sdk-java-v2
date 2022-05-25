@@ -34,14 +34,14 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
     String ORDER_RETURN_SHIPMENT_STATE_CHANGED = "OrderReturnShipmentStateChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("returnShipmentState")

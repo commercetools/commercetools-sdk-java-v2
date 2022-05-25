@@ -83,7 +83,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {
@@ -91,7 +91,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPassword() {
@@ -99,7 +99,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFirstName() {
@@ -107,7 +107,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLastName() {
@@ -115,7 +115,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMiddleName() {
@@ -123,7 +123,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getTitle() {
@@ -131,7 +131,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.LocalDate getDateOfBirth() {
@@ -139,7 +139,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCompanyName() {
@@ -147,7 +147,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getVatId() {
@@ -155,7 +155,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
@@ -163,7 +163,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     public Long getDefaultShippingAddress() {
@@ -171,7 +171,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     public Long getDefaultBillingAddress() {
@@ -179,7 +179,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -187,7 +187,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {
@@ -195,7 +195,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {

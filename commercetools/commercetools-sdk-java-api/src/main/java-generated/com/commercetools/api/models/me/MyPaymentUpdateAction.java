@@ -40,7 +40,7 @@ public interface MyPaymentUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<MyPaymentUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

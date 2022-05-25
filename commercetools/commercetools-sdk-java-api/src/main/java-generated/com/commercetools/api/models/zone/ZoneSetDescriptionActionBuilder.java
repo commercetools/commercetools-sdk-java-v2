@@ -26,7 +26,7 @@ public class ZoneSetDescriptionActionBuilder implements Builder<ZoneSetDescripti
     private String description;
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     public ZoneSetDescriptionActionBuilder description(@Nullable final String description) {

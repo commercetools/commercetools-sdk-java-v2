@@ -33,7 +33,7 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")

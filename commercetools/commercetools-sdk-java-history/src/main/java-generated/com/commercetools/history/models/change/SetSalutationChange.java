@@ -34,28 +34,28 @@ public interface SetSalutationChange extends Change {
     String SET_SALUTATION_CHANGE = "SetSalutationChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setSalutation</code></p>>
+     *  <p>Shape of the action for <code>setSalutation</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

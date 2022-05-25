@@ -41,7 +41,7 @@ public interface PaymentCreatedMessage extends Message {
     String PAYMENT_CREATED = "PaymentCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

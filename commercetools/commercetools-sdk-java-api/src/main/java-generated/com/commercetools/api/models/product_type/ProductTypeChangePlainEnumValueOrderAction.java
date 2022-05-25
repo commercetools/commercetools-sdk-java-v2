@@ -34,14 +34,14 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
     String CHANGE_PLAIN_ENUM_VALUE_ORDER = "changePlainEnumValueOrder";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

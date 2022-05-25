@@ -25,7 +25,7 @@ public class OrderReturnInfoAddedMessagePayloadBuilder implements Builder<OrderR
     private com.commercetools.api.models.order.ReturnInfo returnInfo;
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessagePayloadBuilder returnInfo(
@@ -35,7 +35,7 @@ public class OrderReturnInfoAddedMessagePayloadBuilder implements Builder<OrderR
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnInfoAddedMessagePayloadBuilder returnInfo(

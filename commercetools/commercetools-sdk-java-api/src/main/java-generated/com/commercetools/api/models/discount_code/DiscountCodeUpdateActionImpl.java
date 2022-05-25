@@ -31,7 +31,7 @@ public class DiscountCodeUpdateActionImpl implements DiscountCodeUpdateAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

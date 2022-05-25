@@ -70,7 +70,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the ProductSelection.</p>>
+     *  <p>Unique identifier of the ProductSelection.</p>
      */
 
     public String getId() {
@@ -78,7 +78,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the ProductSelection.</p>>
+     *  <p>Current version of the ProductSelection.</p>
      */
 
     public Long getVersion() {
@@ -86,7 +86,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the ProductSelection was initially created.</p>>
+     *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -94,7 +94,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the ProductSelection was last updated.</p>>
+     *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -102,7 +102,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -110,7 +110,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -118,7 +118,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ProductSelection.</p>>
+     *  <p>User-defined unique identifier of the ProductSelection.</p>
      */
 
     public String getKey() {
@@ -126,7 +126,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Name of the ProductSelection.</p>>
+     *  <p>Name of the ProductSelection.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -134,7 +134,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Number of Products that are currently assigned to this ProductSelection.</p>>
+     *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
      */
 
     public Integer getProductCount() {
@@ -142,7 +142,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>>
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
@@ -150,7 +150,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields of this ProductSelection.</p>>
+     *  <p>Custom Fields of this ProductSelection.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

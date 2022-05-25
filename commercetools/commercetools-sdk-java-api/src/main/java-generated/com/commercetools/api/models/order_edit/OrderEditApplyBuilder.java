@@ -27,7 +27,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     private Integer resourceVersion;
 
     /**
-     <>
+     *
      */
 
     public OrderEditApplyBuilder editVersion(final Integer editVersion) {
@@ -36,7 +36,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditApplyBuilder resourceVersion(final Integer resourceVersion) {

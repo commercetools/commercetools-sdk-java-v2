@@ -38,21 +38,21 @@ public interface ChangeLineItemQuantityChange extends Change {
     String CHANGE_LINE_ITEM_QUANTITY_CHANGE = "ChangeLineItemQuantityChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeLineItemQuantity</code></p>>
+     *  <p>Update action for <code>changeLineItemQuantity</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,21 +60,21 @@ public interface ChangeLineItemQuantityChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <*  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      */
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();
 
     /**
-     <*  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      */
     @NotNull
     @JsonProperty("previousValue")

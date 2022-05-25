@@ -36,7 +36,7 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getAddress() {

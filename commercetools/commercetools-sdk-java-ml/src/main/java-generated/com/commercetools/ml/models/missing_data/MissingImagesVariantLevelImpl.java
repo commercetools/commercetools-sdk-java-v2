@@ -35,7 +35,7 @@ public class MissingImagesVariantLevelImpl implements MissingImagesVariantLevel,
     }
 
     /**
-     <*  <p>Number of product variants missing images.</p>>
+     *  <p>Number of product variants missing images.</p>
      */
 
     public Long getMissingImages() {
@@ -43,7 +43,7 @@ public class MissingImagesVariantLevelImpl implements MissingImagesVariantLevel,
     }
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
 
     public Long getTotal() {

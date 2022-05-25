@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomLineItemTaxedPrice {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface CustomLineItemTaxedPrice {
     public TypedMoney getTotalNet();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

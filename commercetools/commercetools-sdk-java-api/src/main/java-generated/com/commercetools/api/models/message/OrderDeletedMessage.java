@@ -41,7 +41,7 @@ public interface OrderDeletedMessage extends OrderMessage {
     String ORDER_DELETED = "OrderDeleted";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

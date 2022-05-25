@@ -65,7 +65,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier for the ProductType.</p>>
+     *  <p>Unique identifier for the ProductType.</p>
      */
 
     public String getId() {
@@ -73,7 +73,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the product type.</p>>
+     *  <p>The current version of the product type.</p>
      */
 
     public Long getVersion() {
@@ -81,7 +81,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -89,7 +89,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -97,7 +97,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -105,7 +105,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -113,7 +113,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ProductType.</p>>
+     *  <p>User-defined unique identifier of the ProductType.</p>
      */
 
     public String getKey() {
@@ -121,7 +121,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -129,7 +129,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getDescription() {
@@ -137,7 +137,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> getAttributes() {

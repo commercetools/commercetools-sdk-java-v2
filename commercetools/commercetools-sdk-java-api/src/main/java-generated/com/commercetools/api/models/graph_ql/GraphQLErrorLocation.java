@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GraphQLErrorLocation {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("line")
     public Integer getLine();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("column")

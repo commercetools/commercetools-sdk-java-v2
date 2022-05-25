@@ -43,7 +43,7 @@ public class RemoveItemShippingAddressesChangeImpl implements RemoveItemShipping
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class RemoveItemShippingAddressesChangeImpl implements RemoveItemShipping
     }
 
     /**
-     <*  <p>Update action for <code>removeItemShippingAddress</code></p>>
+     *  <p>Update action for <code>removeItemShippingAddress</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class RemoveItemShippingAddressesChangeImpl implements RemoveItemShipping
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getNextValue() {
@@ -67,7 +67,7 @@ public class RemoveItemShippingAddressesChangeImpl implements RemoveItemShipping
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {

@@ -34,7 +34,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
     /**
-     <*  <p>Update actions for moving images</p>>
+     *  <p>Update actions for moving images</p>
      */
 
     public MoveImageToPositionChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder previousValue(
@@ -62,7 +62,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder plusPreviousValue(
@@ -85,7 +85,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder plusPreviousValue(
@@ -98,7 +98,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder withPreviousValue(
@@ -109,7 +109,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder nextValue(
@@ -119,7 +119,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder nextValue(
@@ -129,7 +129,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder plusNextValue(
@@ -142,7 +142,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder plusNextValue(
@@ -155,7 +155,7 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
-     <>
+     *
      */
 
     public MoveImageToPositionChangeBuilder withNextValue(

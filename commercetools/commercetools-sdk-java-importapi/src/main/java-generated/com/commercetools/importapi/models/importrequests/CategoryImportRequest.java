@@ -34,7 +34,7 @@ public interface CategoryImportRequest extends ImportRequest {
     String CATEGORY = "category";
 
     /**
-     <*  <p>The category import resources of this request.</p>>
+     *  <p>The category import resources of this request.</p>
      */
     @NotNull
     @Valid

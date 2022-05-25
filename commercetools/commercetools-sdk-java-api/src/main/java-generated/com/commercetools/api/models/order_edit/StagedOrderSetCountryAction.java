@@ -30,7 +30,7 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
     String SET_COUNTRY = "setCountry";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("country")

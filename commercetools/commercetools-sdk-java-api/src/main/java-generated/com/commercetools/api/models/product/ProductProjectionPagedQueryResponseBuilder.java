@@ -39,7 +39,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     private java.util.List<com.commercetools.api.models.product.ProductProjection> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ProductProjectionPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedQueryResponseBuilder withResults(

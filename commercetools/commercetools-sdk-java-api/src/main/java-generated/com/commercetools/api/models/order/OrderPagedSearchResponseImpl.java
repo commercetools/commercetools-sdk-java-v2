@@ -42,7 +42,7 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     }
 
     /**
-     <*  <p>Total number of results matching the query.</p>>
+     *  <p>Total number of results matching the query.</p>
      */
 
     public Long getTotal() {
@@ -50,7 +50,7 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -58,7 +58,7 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Long getLimit() {
@@ -66,7 +66,7 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     }
 
     /**
-     <*  <p>Actual results.</p>>
+     *  <p>Actual results.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.Hit> getHits() {

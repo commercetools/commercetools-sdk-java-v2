@@ -33,7 +33,7 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
     String CHANGE_PARENT = "changeParent";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

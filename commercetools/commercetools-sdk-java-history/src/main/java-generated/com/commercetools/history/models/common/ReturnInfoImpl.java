@@ -40,7 +40,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ReturnItem> getItems() {
@@ -48,7 +48,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     <*  <p>Identifies, which return tracking ID is connected to this particular return.</p>>
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      */
 
     public String getReturnTrackingId() {
@@ -56,7 +56,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getReturnDate() {

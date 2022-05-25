@@ -24,7 +24,7 @@ public class OrderRemoveItemShippingAddressActionBuilder implements Builder<Orde
     private String addressKey;
 
     /**
-     <>
+     *
      */
 
     public OrderRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {

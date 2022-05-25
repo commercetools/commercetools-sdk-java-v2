@@ -36,7 +36,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getDiscount() {
@@ -44,7 +44,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getDiscountedAmount() {

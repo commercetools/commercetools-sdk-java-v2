@@ -43,7 +43,7 @@ public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>setValidFrom</code></p>>
+     *  <p>Shape of the action for <code>setValidFrom</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

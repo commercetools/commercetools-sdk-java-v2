@@ -46,7 +46,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     <*  <p>The ID to track one parcel.</p>>
+     *  <p>The ID to track one parcel.</p>
      */
 
     public String getTrackingId() {
@@ -54,7 +54,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     <*  <p>The carrier that delivers the parcel.</p>>
+     *  <p>The carrier that delivers the parcel.</p>
      */
 
     public String getCarrier() {
@@ -62,7 +62,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getProvider() {
@@ -70,7 +70,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getProviderTransaction() {
@@ -78,7 +78,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     <*  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>>
+     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
      */
 
     public Boolean getIsReturn() {

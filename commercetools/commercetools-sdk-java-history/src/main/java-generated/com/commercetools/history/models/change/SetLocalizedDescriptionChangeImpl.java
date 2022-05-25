@@ -43,7 +43,7 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
     }
 
     /**
-     <*  <p>Shape of the action for <code>setDescription</code></p>>
+     *  <p>Shape of the action for <code>setDescription</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

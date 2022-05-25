@@ -70,7 +70,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getProjectKey() {
@@ -78,7 +78,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getNotificationType() {
@@ -86,7 +86,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -94,7 +94,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -102,7 +102,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -110,7 +110,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -118,7 +118,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -126,7 +126,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -134,7 +134,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getSequenceNumber() {
@@ -142,7 +142,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Long getResourceVersion() {
@@ -150,7 +150,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.subscription.PayloadNotIncluded getPayloadNotIncluded() {

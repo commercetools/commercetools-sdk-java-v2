@@ -38,21 +38,21 @@ public interface SetParcelMeasurementsChange extends Change {
     String SET_PARCEL_MEASUREMENTS_CHANGE = "SetParcelMeasurementsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setParcelMeasurements</code></p>>
+     *  <p>Update action for <code>setParcelMeasurements</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetParcelMeasurementsChange extends Change {
     public ParcelChangeValue getParcel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetParcelMeasurementsChange extends Change {
     public ParcelMeasurements getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

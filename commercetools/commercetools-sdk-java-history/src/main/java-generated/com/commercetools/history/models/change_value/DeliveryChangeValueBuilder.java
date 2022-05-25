@@ -31,7 +31,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     private java.util.List<com.commercetools.history.models.common.Parcel> parcels;
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder items(final com.commercetools.history.models.common.DeliveryItem... items) {
@@ -40,7 +40,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder items(
@@ -50,7 +50,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder plusItems(final com.commercetools.history.models.common.DeliveryItem... items) {
@@ -62,7 +62,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder plusItems(
@@ -75,7 +75,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder withItems(
@@ -86,7 +86,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder address(
@@ -96,7 +96,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder address(final com.commercetools.history.models.common.Address address) {
@@ -105,7 +105,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder parcels(final com.commercetools.history.models.common.Parcel... parcels) {
@@ -114,7 +114,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder parcels(
@@ -124,7 +124,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder plusParcels(final com.commercetools.history.models.common.Parcel... parcels) {
@@ -136,7 +136,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder plusParcels(
@@ -149,7 +149,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryChangeValueBuilder withParcels(

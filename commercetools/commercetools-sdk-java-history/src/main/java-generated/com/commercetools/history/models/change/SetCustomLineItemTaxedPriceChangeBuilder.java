@@ -37,7 +37,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     private com.commercetools.history.models.common.Money previousValue;
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTaxedPrice</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTaxedPrice</code></p>
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder customLineItem(
@@ -57,7 +57,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder customLineItem(
@@ -67,7 +67,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder customLineItemId(final String customLineItemId) {
@@ -76,7 +76,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder nextValue(
@@ -86,7 +86,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder nextValue(
@@ -96,7 +96,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder previousValue(
@@ -106,7 +106,7 @@ public class SetCustomLineItemTaxedPriceChangeBuilder implements Builder<SetCust
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxedPriceChangeBuilder previousValue(

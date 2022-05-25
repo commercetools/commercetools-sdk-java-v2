@@ -287,14 +287,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Change {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")

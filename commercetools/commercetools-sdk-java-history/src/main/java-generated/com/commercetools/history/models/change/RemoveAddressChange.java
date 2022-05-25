@@ -35,21 +35,21 @@ public interface RemoveAddressChange extends Change {
     String REMOVE_ADDRESS_CHANGE = "RemoveAddressChange";
 
     /**
-     <*  <p>Update action for <code>removeAddress</code> action.</p>>
+     *  <p>Update action for <code>removeAddress</code> action.</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

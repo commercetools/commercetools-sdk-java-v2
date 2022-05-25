@@ -36,7 +36,7 @@ public class ShoppingListSetCustomerActionImpl implements ShoppingListSetCustome
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShoppingListSetCustomerActionImpl implements ShoppingListSetCustome
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {

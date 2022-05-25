@@ -36,7 +36,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     private String nextValue;
 
     /**
-     <*  <p>Update action for <code>changeEnumValueLabel</code> on types</p>>
+     *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
      */
 
     public ChangeEnumValueLabelChangeBuilder change(final String change) {
@@ -45,7 +45,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public ChangeEnumValueLabelChangeBuilder fieldName(final String fieldName) {
@@ -54,7 +54,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     <*  <p>Key of the values that was updated</p>>
+     *  <p>Key of the values that was updated</p>
      */
 
     public ChangeEnumValueLabelChangeBuilder valueKey(final String valueKey) {
@@ -63,7 +63,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeEnumValueLabelChangeBuilder previousValue(final String previousValue) {
@@ -72,7 +72,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeEnumValueLabelChangeBuilder nextValue(final String nextValue) {

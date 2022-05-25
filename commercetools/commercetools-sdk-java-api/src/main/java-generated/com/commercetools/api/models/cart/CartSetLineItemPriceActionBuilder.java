@@ -30,7 +30,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
     private com.commercetools.api.models.common.Money externalPrice;
 
     /**
-     <>
+     *
      */
 
     public CartSetLineItemPriceActionBuilder lineItemId(final String lineItemId) {
@@ -39,8 +39,8 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartSetLineItemPriceActionBuilder externalPrice(
@@ -50,8 +50,8 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartSetLineItemPriceActionBuilder externalPrice(

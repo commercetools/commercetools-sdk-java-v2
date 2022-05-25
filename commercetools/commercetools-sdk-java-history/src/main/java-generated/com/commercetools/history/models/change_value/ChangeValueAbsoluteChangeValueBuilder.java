@@ -25,7 +25,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     private java.util.List<com.commercetools.history.models.common.Money> money;
 
     /**
-     <>
+     *
      */
 
     public ChangeValueAbsoluteChangeValueBuilder money(final com.commercetools.history.models.common.Money... money) {
@@ -34,7 +34,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueAbsoluteChangeValueBuilder money(
@@ -44,7 +44,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueAbsoluteChangeValueBuilder plusMoney(
@@ -57,7 +57,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueAbsoluteChangeValueBuilder plusMoney(
@@ -70,7 +70,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeValueAbsoluteChangeValueBuilder withMoney(

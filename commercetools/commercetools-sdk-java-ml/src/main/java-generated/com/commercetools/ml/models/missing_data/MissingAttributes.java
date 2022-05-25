@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingAttributes {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -44,7 +44,7 @@ public interface MissingAttributes {
     public ProductReference getProduct();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -52,35 +52,35 @@ public interface MissingAttributes {
     public ProductTypeReference getProductType();
 
     /**
-     <*  <p>ID of a ProductVariant.</p>>
+     *  <p>ID of a ProductVariant.</p>
      */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
     @NotNull
     @JsonProperty("missingAttributeValues")
     public List<String> getMissingAttributeValues();
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     @JsonProperty("missingAttributeNames")
     public List<String> getMissingAttributeNames();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("attributeCount")
     public AttributeCount getAttributeCount();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("attributeCoverage")

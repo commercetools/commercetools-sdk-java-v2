@@ -36,21 +36,21 @@ public interface SetTaxCategoryChange extends Change {
     String SET_TAX_CATEGORY_CHANGE = "SetTaxCategoryChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setTaxCategory</code></p>>
+     *  <p>Shape of the action for <code>setTaxCategory</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetTaxCategoryChange extends Change {
     public Reference getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

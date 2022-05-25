@@ -27,7 +27,7 @@ public class ProductDiscountSetDescriptionActionBuilder implements Builder<Produ
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductDiscountSetDescriptionActionBuilder description(
@@ -37,7 +37,7 @@ public class ProductDiscountSetDescriptionActionBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductDiscountSetDescriptionActionBuilder description(

@@ -27,7 +27,7 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
     private String label;
 
     /**
-     <>
+     *
      */
 
     public AttributePlainEnumValueBuilder key(final String key) {
@@ -36,7 +36,7 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
     }
 
     /**
-     <>
+     *
      */
 
     public AttributePlainEnumValueBuilder label(final String label) {

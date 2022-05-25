@@ -35,7 +35,7 @@ public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -43,7 +43,7 @@ public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
     }
 
     /**
-     <*  <p>Field type of the elements in the set.</p>>
+     *  <p>Field type of the elements in the set.</p>
      */
 
     public com.commercetools.api.models.type.FieldType getElementType() {

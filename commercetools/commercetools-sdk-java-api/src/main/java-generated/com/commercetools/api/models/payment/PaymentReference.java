@@ -34,14 +34,14 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     String PAYMENT = "payment";
 
     /**
-     <*  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
      */
     @Valid
     @JsonProperty("obj")
     public Payment getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced Payment.</p>>
+     *  <p>Unique identifier of the referenced Payment.</p>
      */
     @NotNull
     @JsonProperty("id")

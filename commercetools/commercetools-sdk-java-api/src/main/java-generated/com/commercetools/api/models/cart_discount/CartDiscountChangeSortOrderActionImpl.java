@@ -35,7 +35,7 @@ public class CartDiscountChangeSortOrderActionImpl implements CartDiscountChange
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartDiscountChangeSortOrderActionImpl implements CartDiscountChange
     }
 
     /**
-     <*  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>>
+     *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
      */
 
     public String getSortOrder() {

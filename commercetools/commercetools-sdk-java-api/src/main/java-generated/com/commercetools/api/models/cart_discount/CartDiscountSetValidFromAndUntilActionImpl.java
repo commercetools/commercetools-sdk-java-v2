@@ -39,7 +39,7 @@ public class CartDiscountSetValidFromAndUntilActionImpl implements CartDiscountS
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CartDiscountSetValidFromAndUntilActionImpl implements CartDiscountS
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -55,7 +55,7 @@ public class CartDiscountSetValidFromAndUntilActionImpl implements CartDiscountS
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {

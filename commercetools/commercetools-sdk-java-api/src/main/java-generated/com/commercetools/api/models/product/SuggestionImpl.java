@@ -31,7 +31,7 @@ public class SuggestionImpl implements Suggestion, ModelBase {
     }
 
     /**
-     <*  <p>The suggested text.</p>>
+     *  <p>The suggested text.</p>
      */
 
     public String getText() {

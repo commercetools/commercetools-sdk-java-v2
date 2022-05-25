@@ -26,7 +26,7 @@ public class ShippingMethodSetDescriptionActionBuilder implements Builder<Shippi
     private String description;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodSetDescriptionActionBuilder description(@Nullable final String description) {

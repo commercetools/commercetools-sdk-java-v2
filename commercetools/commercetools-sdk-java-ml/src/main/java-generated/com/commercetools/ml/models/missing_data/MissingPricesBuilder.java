@@ -28,7 +28,7 @@ public class MissingPricesBuilder implements Builder<MissingPrices> {
     private Long variantId;
 
     /**
-     <>
+     *
      */
 
     public MissingPricesBuilder product(
@@ -38,7 +38,7 @@ public class MissingPricesBuilder implements Builder<MissingPrices> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
@@ -47,7 +47,7 @@ public class MissingPricesBuilder implements Builder<MissingPrices> {
     }
 
     /**
-     <*  <p>Id of the <code>ProductVariant</code>.</p>>
+     *  <p>Id of the <code>ProductVariant</code>.</p>
      */
 
     public MissingPricesBuilder variantId(final Long variantId) {

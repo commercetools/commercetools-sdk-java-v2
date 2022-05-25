@@ -28,77 +28,77 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingPricesSearchRequest {
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     <*  <p>If true, searches data from staged products in addition to published products.</p>>
+     *  <p>If true, searches data from staged products in addition to published products.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <*  <p>Maximum number of products to scan.</p>>
+     *  <p>Maximum number of products to scan.</p>
      */
 
     @JsonProperty("productSetLimit")
     public Long getProductSetLimit();
 
     /**
-     <*  <p>If true, searches all product variants. If false, only searches master variants.</p>>
+     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
      */
 
     @JsonProperty("includeVariants")
     public Boolean getIncludeVariants();
 
     /**
-     <*  <p>If used, only checks if a product variant has a price in the provided currency code.</p>>
+     *  <p>If used, only checks if a product variant has a price in the provided currency code.</p>
      */
 
     @JsonProperty("currencyCode")
     public String getCurrencyCode();
 
     /**
-     <*  <p>If true, checks if there are prices for the specified date range and time.</p>>
+     *  <p>If true, checks if there are prices for the specified date range and time.</p>
      */
 
     @JsonProperty("checkDate")
     public Boolean getCheckDate();
 
     /**
-     <*  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>>
+     *  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <*  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>>
+     *  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>>
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
      */
 
     @JsonProperty("productIds")
     public List<String> getProductIds();
 
     /**
-     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>>
+     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
      */
 
     @JsonProperty("productTypeIds")

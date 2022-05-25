@@ -36,7 +36,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     private String contentType;
 
     /**
-     <*  <p>URI of the AssetSource.</p>>
+     *  <p>URI of the AssetSource.</p>
      */
 
     public AssetSourceBuilder uri(final String uri) {
@@ -45,7 +45,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the AssetSource.</p>>
+     *  <p>User-defined unique identifier of the AssetSource.</p>
      */
 
     public AssetSourceBuilder key(@Nullable final String key) {
@@ -54,7 +54,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     <*  <p>Width and height of the AssetSource.</p>>
+     *  <p>Width and height of the AssetSource.</p>
      */
 
     public AssetSourceBuilder dimensions(
@@ -64,7 +64,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     <*  <p>Width and height of the AssetSource.</p>>
+     *  <p>Width and height of the AssetSource.</p>
      */
 
     public AssetSourceBuilder dimensions(
@@ -74,7 +74,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     <*  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>>
+     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
      */
 
     public AssetSourceBuilder contentType(@Nullable final String contentType) {

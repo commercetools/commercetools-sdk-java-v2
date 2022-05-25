@@ -29,7 +29,7 @@ public interface CustomerFirstNameSetMessagePayload extends MessagePayload {
     String CUSTOMER_FIRST_NAME_SET = "CustomerFirstNameSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("firstName")

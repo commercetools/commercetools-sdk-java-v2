@@ -34,7 +34,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the DeliveryItem.</p>>
+     *  <p>Unique identifier of the DeliveryItem.</p>
      */
 
     public String getId() {
@@ -42,7 +42,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {

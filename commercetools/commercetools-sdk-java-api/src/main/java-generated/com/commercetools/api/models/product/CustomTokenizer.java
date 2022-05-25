@@ -32,7 +32,7 @@ public interface CustomTokenizer extends SuggestTokenizer {
     String CUSTOM = "custom";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("inputs")

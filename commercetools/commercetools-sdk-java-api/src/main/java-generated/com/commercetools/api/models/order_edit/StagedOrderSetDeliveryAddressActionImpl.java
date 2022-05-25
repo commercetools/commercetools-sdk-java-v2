@@ -39,7 +39,7 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -55,7 +55,7 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

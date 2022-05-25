@@ -30,7 +30,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     private String customerNumber;
 
     /**
-     <>
+     *
      */
 
     public CustomerLabelBuilder firstName(final String firstName) {
@@ -39,7 +39,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerLabelBuilder lastName(final String lastName) {
@@ -48,7 +48,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerLabelBuilder customerNumber(final String customerNumber) {

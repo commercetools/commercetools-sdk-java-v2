@@ -39,7 +39,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
     /**
-     <*  <p>Maps to <code>ProductVariant.product</code>.</p>>
+     *  <p>Maps to <code>ProductVariant.product</code>.</p>
      */
 
     public LineItemProductVariantImportDraftBuilder productVariant(
@@ -51,7 +51,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariant.product</code>.</p>>
+     *  <p>Maps to <code>ProductVariant.product</code>.</p>
      */
 
     public LineItemProductVariantImportDraftBuilder productVariant(
@@ -61,7 +61,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
      */
 
     public LineItemProductVariantImportDraftBuilder sku(@Nullable final String sku) {
@@ -70,7 +70,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder prices(
@@ -80,7 +80,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder prices(
@@ -90,7 +90,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder plusPrices(
@@ -103,7 +103,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder plusPrices(
@@ -116,7 +116,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder withPrices(
@@ -127,7 +127,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder attributes(
@@ -137,7 +137,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder attributes(
@@ -147,7 +147,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder plusAttributes(
@@ -160,7 +160,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder plusAttributes(
@@ -174,7 +174,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
      */
 
     public LineItemProductVariantImportDraftBuilder withAttributes(
@@ -186,7 +186,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
      */
 
     public LineItemProductVariantImportDraftBuilder images(
@@ -196,7 +196,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
      */
 
     public LineItemProductVariantImportDraftBuilder images(
@@ -206,7 +206,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
      */
 
     public LineItemProductVariantImportDraftBuilder plusImages(
@@ -219,7 +219,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
      */
 
     public LineItemProductVariantImportDraftBuilder plusImages(
@@ -232,7 +232,7 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
      */
 
     public LineItemProductVariantImportDraftBuilder withImages(

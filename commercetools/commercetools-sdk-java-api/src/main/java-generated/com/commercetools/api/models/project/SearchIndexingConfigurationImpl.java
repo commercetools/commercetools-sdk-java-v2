@@ -36,7 +36,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     <*  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>>
+     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {
@@ -44,7 +44,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     <*  <p>Configuration for the Order Search feature.</p>>
+     *  <p>Configuration for the Order Search feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getOrders() {

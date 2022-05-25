@@ -24,7 +24,7 @@ public class CartDiscountChangeIsActiveActionBuilder implements Builder<CartDisc
     private Boolean isActive;
 
     /**
-     <*  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>>
+     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
      */
 
     public CartDiscountChangeIsActiveActionBuilder isActive(final Boolean isActive) {

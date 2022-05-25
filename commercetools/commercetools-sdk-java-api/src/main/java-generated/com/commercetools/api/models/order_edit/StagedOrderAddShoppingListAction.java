@@ -36,7 +36,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     String ADD_SHOPPING_LIST = "addShoppingList";
 
     /**
-     <*  <p>ResourceIdentifier to a ShoppingList.</p>>
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
      */
     @NotNull
     @Valid
@@ -44,14 +44,14 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public ShoppingListResourceIdentifier getShoppingList();
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @Valid
     @JsonProperty("distributionChannel")

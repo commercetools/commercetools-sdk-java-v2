@@ -41,14 +41,14 @@ public interface OrderStateChangedMessage extends OrderMessage {
     String ORDER_STATE_CHANGED = "OrderStateChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("orderState")
     public OrderState getOrderState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("oldOrderState")

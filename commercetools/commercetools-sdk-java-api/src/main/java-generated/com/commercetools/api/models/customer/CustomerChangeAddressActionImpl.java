@@ -43,7 +43,7 @@ public class CustomerChangeAddressActionImpl implements CustomerChangeAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class CustomerChangeAddressActionImpl implements CustomerChangeAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressId() {
@@ -59,7 +59,7 @@ public class CustomerChangeAddressActionImpl implements CustomerChangeAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {
@@ -67,7 +67,7 @@ public class CustomerChangeAddressActionImpl implements CustomerChangeAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

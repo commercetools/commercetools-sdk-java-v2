@@ -28,7 +28,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
     /**
-     <*  <p>Sets the money value for the discounted price.</p>>
+     *  <p>Sets the money value for the discounted price.</p>
      */
 
     public DiscountedPriceDraftBuilder value(
@@ -38,7 +38,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     <*  <p>Sets the money value for the discounted price.</p>>
+     *  <p>Sets the money value for the discounted price.</p>
      */
 
     public DiscountedPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
@@ -47,7 +47,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     <*  <p>Relates the referenced ProductDiscount to the discounted price.</p>>
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
      */
 
     public DiscountedPriceDraftBuilder discount(
@@ -59,7 +59,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
     }
 
     /**
-     <*  <p>Relates the referenced ProductDiscount to the discounted price.</p>>
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
      */
 
     public DiscountedPriceDraftBuilder discount(

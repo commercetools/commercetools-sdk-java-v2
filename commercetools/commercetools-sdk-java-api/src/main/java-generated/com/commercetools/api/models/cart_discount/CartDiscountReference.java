@@ -34,14 +34,14 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
     String CART_DISCOUNT = "cart-discount";
 
     /**
-     <*  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>>
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
      */
     @Valid
     @JsonProperty("obj")
     public CartDiscount getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced CartDiscount.</p>>
+     *  <p>Unique identifier of the referenced CartDiscount.</p>
      */
     @NotNull
     @JsonProperty("id")

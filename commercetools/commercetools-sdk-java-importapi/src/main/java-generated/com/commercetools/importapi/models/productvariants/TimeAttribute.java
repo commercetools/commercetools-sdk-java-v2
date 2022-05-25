@@ -33,7 +33,7 @@ public interface TimeAttribute extends Attribute {
     String TIME = "time";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

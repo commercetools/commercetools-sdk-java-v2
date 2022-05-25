@@ -27,7 +27,7 @@ public class PriceFunctionBuilder implements Builder<PriceFunction> {
     private String function;
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
 
     public PriceFunctionBuilder currencyCode(final String currencyCode) {
@@ -36,7 +36,7 @@ public class PriceFunctionBuilder implements Builder<PriceFunction> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceFunctionBuilder function(final String function) {

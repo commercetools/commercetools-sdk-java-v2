@@ -34,14 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShoppingListLineItemValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface ShoppingListLineItemValue {
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")

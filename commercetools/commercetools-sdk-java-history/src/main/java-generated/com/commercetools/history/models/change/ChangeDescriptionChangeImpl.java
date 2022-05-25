@@ -43,7 +43,7 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeDescription</code></p>>
+     *  <p>Shape of the action for <code>changeDescription</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

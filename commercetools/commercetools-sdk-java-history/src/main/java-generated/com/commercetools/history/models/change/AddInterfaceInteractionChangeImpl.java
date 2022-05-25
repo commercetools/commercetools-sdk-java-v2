@@ -39,7 +39,7 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
     }
 
     /**
-     <*  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>>
+     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
     }
 
     /**
-     <*  <p>Only available if <code>expand</code> is set to true</p>>
+     *  <p>Only available if <code>expand</code> is set to true</p>
      */
 
     public com.commercetools.history.models.change_value.CustomFieldExpandedValue getNextValue() {

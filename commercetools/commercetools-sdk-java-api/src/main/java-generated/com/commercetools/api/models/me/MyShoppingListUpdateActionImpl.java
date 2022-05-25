@@ -31,7 +31,7 @@ public class MyShoppingListUpdateActionImpl implements MyShoppingListUpdateActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

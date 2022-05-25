@@ -54,7 +54,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     <>
+     *
      */
 
     public String getProjectKey() {
@@ -62,7 +62,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     <>
+     *
      */
 
     public String getNotificationType() {
@@ -70,7 +70,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -78,7 +78,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -86,7 +86,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -94,7 +94,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     <>
+     *
      */
 
     public Long getOldVersion() {
@@ -102,7 +102,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getModifiedAt() {

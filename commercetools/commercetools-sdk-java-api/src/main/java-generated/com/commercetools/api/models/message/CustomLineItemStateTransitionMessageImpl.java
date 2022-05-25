@@ -91,7 +91,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public String getId() {
@@ -99,7 +99,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -107,7 +107,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -115,7 +115,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -123,7 +123,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -131,7 +131,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -139,7 +139,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public Long getSequenceNumber() {
@@ -147,7 +147,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -155,7 +155,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public Long getResourceVersion() {
@@ -163,7 +163,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -171,7 +171,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -179,7 +179,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -187,7 +187,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getTransitionDate() {
@@ -195,7 +195,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -203,7 +203,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getFromState() {
@@ -211,7 +211,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getToState() {

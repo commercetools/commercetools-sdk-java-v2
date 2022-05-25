@@ -69,7 +69,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder email(final String email) {
@@ -78,7 +78,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder password(final String password) {
@@ -87,7 +87,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder firstName(@Nullable final String firstName) {
@@ -96,7 +96,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder lastName(@Nullable final String lastName) {
@@ -105,7 +105,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder middleName(@Nullable final String middleName) {
@@ -114,7 +114,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder title(@Nullable final String title) {
@@ -123,7 +123,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
@@ -132,7 +132,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder companyName(@Nullable final String companyName) {
@@ -141,7 +141,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder vatId(@Nullable final String vatId) {
@@ -150,7 +150,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public MyCustomerDraftBuilder addresses(
@@ -160,7 +160,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public MyCustomerDraftBuilder addresses(
@@ -170,7 +170,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public MyCustomerDraftBuilder plusAddresses(
@@ -183,7 +183,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public MyCustomerDraftBuilder plusAddresses(
@@ -196,7 +196,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
 
     public MyCustomerDraftBuilder withAddresses(
@@ -207,7 +207,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     public MyCustomerDraftBuilder defaultShippingAddress(@Nullable final Long defaultShippingAddress) {
@@ -216,7 +216,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     public MyCustomerDraftBuilder defaultBillingAddress(@Nullable final Long defaultBillingAddress) {
@@ -225,7 +225,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public MyCustomerDraftBuilder custom(
@@ -235,7 +235,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public MyCustomerDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -244,7 +244,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder locale(@Nullable final String locale) {
@@ -253,7 +253,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder stores(
@@ -263,7 +263,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder stores(
@@ -273,7 +273,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder plusStores(
@@ -286,7 +286,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder plusStores(
@@ -299,7 +299,7 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerDraftBuilder withStores(

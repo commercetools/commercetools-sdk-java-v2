@@ -47,7 +47,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -55,7 +55,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -63,7 +63,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -71,7 +71,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
     }
 
     /**
-     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -79,7 +79,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
      */
 
     public java.lang.Object getFields() {

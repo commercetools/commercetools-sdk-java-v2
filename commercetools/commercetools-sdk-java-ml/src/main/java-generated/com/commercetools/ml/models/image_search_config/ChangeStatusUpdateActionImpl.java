@@ -36,7 +36,7 @@ public class ChangeStatusUpdateActionImpl implements ChangeStatusUpdateAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ChangeStatusUpdateActionImpl implements ChangeStatusUpdateAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus() {

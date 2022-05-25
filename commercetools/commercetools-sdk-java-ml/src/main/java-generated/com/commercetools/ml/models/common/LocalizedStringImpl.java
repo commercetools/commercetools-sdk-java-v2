@@ -31,7 +31,7 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, String> values() {

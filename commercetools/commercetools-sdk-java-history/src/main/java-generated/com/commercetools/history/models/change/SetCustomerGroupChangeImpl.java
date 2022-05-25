@@ -43,7 +43,7 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
     }
 
     /**
-     <*  <p>Shape of the action for <code>setCustomerGroup</code></p>>
+     *  <p>Shape of the action for <code>setCustomerGroup</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {

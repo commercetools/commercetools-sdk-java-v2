@@ -35,14 +35,14 @@ public interface ProductSelectionReference
     String PRODUCT_SELECTION = "product-selection";
 
     /**
-     <*  <p>Unique identifier of the referenced ProductSelection.</p>>
+     *  <p>Unique identifier of the referenced ProductSelection.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
      */
     @Valid
     @JsonProperty("obj")

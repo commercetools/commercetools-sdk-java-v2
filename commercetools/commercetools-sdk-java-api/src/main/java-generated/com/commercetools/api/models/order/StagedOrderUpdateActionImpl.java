@@ -31,7 +31,7 @@ public class StagedOrderUpdateActionImpl implements StagedOrderUpdateAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

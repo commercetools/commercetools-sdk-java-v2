@@ -36,21 +36,21 @@ public interface SetCustomerGroupChange extends Change {
     String SET_CUSTOMER_GROUP_CHANGE = "SetCustomerGroupChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setCustomerGroup</code></p>>
+     *  <p>Shape of the action for <code>setCustomerGroup</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetCustomerGroupChange extends Change {
     public Reference getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

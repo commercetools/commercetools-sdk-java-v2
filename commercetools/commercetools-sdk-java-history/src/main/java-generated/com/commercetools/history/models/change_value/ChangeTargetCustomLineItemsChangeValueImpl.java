@@ -35,7 +35,7 @@ public class ChangeTargetCustomLineItemsChangeValueImpl implements ChangeTargetC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class ChangeTargetCustomLineItemsChangeValueImpl implements ChangeTargetC
     }
 
     /**
-     <>
+     *
      */
 
     public String getPredicate() {

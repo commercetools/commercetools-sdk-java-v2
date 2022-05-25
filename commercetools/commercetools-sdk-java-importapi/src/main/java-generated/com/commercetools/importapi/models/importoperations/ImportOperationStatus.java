@@ -32,21 +32,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportOperationStatus {
 
     /**
-     <*  <p>The ID of the ImportOperation.</p>>
+     *  <p>The ID of the ImportOperation.</p>
      */
 
     @JsonProperty("operationId")
     public String getOperationId();
 
     /**
-     <*  <p>The validation state of the ImportOperation.</p>>
+     *  <p>The validation state of the ImportOperation.</p>
      */
     @NotNull
     @JsonProperty("state")
     public ImportOperationState getState();
 
     /**
-     <*  <p>The validation errors for the ImportOperation. See Errors.</p>>
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
      */
     @Valid
     @JsonProperty("errors")

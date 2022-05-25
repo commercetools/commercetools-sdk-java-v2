@@ -39,7 +39,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     private java.util.List<com.commercetools.api.models.message.Message> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public MessagePagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public MessagePagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public MessagePagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public MessagePagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public MessagePagedQueryResponseBuilder results(final com.commercetools.api.models.message.Message... results) {
@@ -84,7 +84,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public MessagePagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public MessagePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.message.Message... results) {
@@ -106,7 +106,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public MessagePagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public MessagePagedQueryResponseBuilder withResults(

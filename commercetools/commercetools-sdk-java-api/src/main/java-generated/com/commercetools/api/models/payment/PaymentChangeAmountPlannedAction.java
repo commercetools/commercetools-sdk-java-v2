@@ -34,7 +34,7 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
     String CHANGE_AMOUNT_PLANNED = "changeAmountPlanned";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

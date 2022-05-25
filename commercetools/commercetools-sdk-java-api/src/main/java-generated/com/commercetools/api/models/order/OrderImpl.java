@@ -190,7 +190,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Unique identifier of the Order.</p>>
+     *  <p>Unique identifier of the Order.</p>
      */
 
     public String getId() {
@@ -198,7 +198,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the order.</p>>
+     *  <p>The current version of the order.</p>
      */
 
     public Long getVersion() {
@@ -206,7 +206,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -214,7 +214,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -222,7 +222,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -230,7 +230,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -238,7 +238,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>This field will only be present if it was set for Order Import</p>>
+     *  <p>This field will only be present if it was set for Order Import</p>
      */
 
     public java.time.ZonedDateTime getCompletedAt() {
@@ -246,7 +246,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>>
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
      */
 
     public String getOrderNumber() {
@@ -254,7 +254,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerId() {
@@ -262,7 +262,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerEmail() {
@@ -270,7 +270,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     public String getAnonymousId() {
@@ -278,7 +278,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
@@ -286,7 +286,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
@@ -294,7 +294,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
@@ -302,7 +302,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -310,7 +310,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>The taxes are calculated based on the shipping address.</p>>
+     *  <p>The taxes are calculated based on the shipping address.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -318,7 +318,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
@@ -326,7 +326,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getBillingAddress() {
@@ -334,7 +334,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -342,7 +342,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>>
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
@@ -350,7 +350,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>>
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -358,7 +358,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
      */
 
     public String getCountry() {
@@ -366,7 +366,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>One of the four predefined OrderStates.</p>>
+     *  <p>One of the four predefined OrderStates.</p>
      */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {
@@ -374,7 +374,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>This reference can point to a state in a custom workflow.</p>>
+     *  <p>This reference can point to a state in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -382,7 +382,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -390,7 +390,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -398,7 +398,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Set if the ShippingMethod is set.</p>>
+     *  <p>Set if the ShippingMethod is set.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -406,7 +406,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.SyncInfo> getSyncInfo() {
@@ -414,7 +414,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
@@ -422,7 +422,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
@@ -430,7 +430,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Internal-only field.</p>>
+     *  <p>Internal-only field.</p>
      */
     @Deprecated
     public Long getLastMessageSequenceNumber() {
@@ -438,7 +438,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>>
+     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -446,7 +446,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -454,7 +454,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
@@ -462,7 +462,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {
@@ -470,7 +470,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -478,7 +478,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
@@ -486,7 +486,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>>
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
@@ -494,7 +494,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>>
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
@@ -502,7 +502,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
@@ -510,7 +510,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>>
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {

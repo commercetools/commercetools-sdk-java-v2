@@ -45,7 +45,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Unique identifier of the Transaction.</p>>
+     *  <p>Unique identifier of the Transaction.</p>
      */
 
     public TransactionBuilder id(final String id) {
@@ -54,7 +54,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     <*  <p>The time at which the transaction took place.</p>>
+     *  <p>The time at which the transaction took place.</p>
      */
 
     public TransactionBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
@@ -63,7 +63,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     <*  <p>The type of this transaction.</p>>
+     *  <p>The type of this transaction.</p>
      */
 
     public TransactionBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
@@ -72,7 +72,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     <>
+     *
      */
 
     public TransactionBuilder amount(final com.commercetools.api.models.common.TypedMoney amount) {
@@ -81,7 +81,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     <>
+     *
      */
 
     public TransactionBuilder amount(
@@ -91,7 +91,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>>
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
      */
 
     public TransactionBuilder interactionId(@Nullable final String interactionId) {
@@ -100,7 +100,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     <*  <p>The state of this transaction.</p>>
+     *  <p>The state of this transaction.</p>
      */
 
     public TransactionBuilder state(@Nullable final com.commercetools.api.models.payment.TransactionState state) {
@@ -109,7 +109,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public TransactionBuilder custom(
@@ -119,7 +119,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public TransactionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

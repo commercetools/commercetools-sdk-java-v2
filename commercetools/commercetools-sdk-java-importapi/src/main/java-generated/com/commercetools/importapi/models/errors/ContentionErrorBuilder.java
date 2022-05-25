@@ -24,7 +24,7 @@ public class ContentionErrorBuilder implements Builder<ContentionError> {
     private String message;
 
     /**
-     <>
+     *
      */
 
     public ContentionErrorBuilder message(final String message) {

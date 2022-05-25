@@ -36,7 +36,7 @@ public class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionA
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public com.commercetools.api.models.type.FieldDefinition getFieldDefinition() {

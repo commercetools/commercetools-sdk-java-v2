@@ -31,21 +31,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerCreateEmailToken {
 
     /**
-     <*  <p>Unique identifier of the email token.</p>>
+     *  <p>Unique identifier of the email token.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("ttlMinutes")

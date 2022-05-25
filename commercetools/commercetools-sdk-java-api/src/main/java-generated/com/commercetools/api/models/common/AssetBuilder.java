@@ -45,7 +45,7 @@ public class AssetBuilder implements Builder<Asset> {
     private String key;
 
     /**
-     <*  <p>Unique identifier of the Asset.</p>>
+     *  <p>Unique identifier of the Asset.</p>
      */
 
     public AssetBuilder id(final String id) {
@@ -54,7 +54,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder sources(final com.commercetools.api.models.common.AssetSource... sources) {
@@ -63,7 +63,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder sources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
@@ -72,7 +72,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder plusSources(final com.commercetools.api.models.common.AssetSource... sources) {
@@ -84,7 +84,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder plusSources(
@@ -97,7 +97,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder withSources(
@@ -108,7 +108,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Name of the Asset.</p>>
+     *  <p>Name of the Asset.</p>
      */
 
     public AssetBuilder name(
@@ -118,7 +118,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Name of the Asset.</p>>
+     *  <p>Name of the Asset.</p>
      */
 
     public AssetBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -127,7 +127,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Description of the Asset.</p>>
+     *  <p>Description of the Asset.</p>
      */
 
     public AssetBuilder description(
@@ -137,7 +137,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Description of the Asset.</p>>
+     *  <p>Description of the Asset.</p>
      */
 
     public AssetBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -146,7 +146,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public AssetBuilder tags(@Nullable final String... tags) {
@@ -155,7 +155,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -164,7 +164,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public AssetBuilder plusTags(@Nullable final String... tags) {
@@ -176,7 +176,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Custom Fields defined for the Asset.</p>>
+     *  <p>Custom Fields defined for the Asset.</p>
      */
 
     public AssetBuilder custom(
@@ -186,7 +186,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>Custom Fields defined for the Asset.</p>>
+     *  <p>Custom Fields defined for the Asset.</p>
      */
 
     public AssetBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -195,7 +195,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Asset.</p>>
+     *  <p>User-defined unique identifier of the Asset.</p>
      */
 
     public AssetBuilder key(@Nullable final String key) {

@@ -34,14 +34,14 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     String CUSTOMER = "customer";
 
     /**
-     <*  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
      */
     @Valid
     @JsonProperty("obj")
     public Customer getObj();
 
     /**
-     <*  <p>Unique identifier of the referenced Customer.</p>>
+     *  <p>Unique identifier of the referenced Customer.</p>
      */
     @NotNull
     @JsonProperty("id")

@@ -31,7 +31,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     String SET_MESSAGES = "setMessages";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("messages")

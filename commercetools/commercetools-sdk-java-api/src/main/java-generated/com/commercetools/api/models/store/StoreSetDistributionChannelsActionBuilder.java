@@ -27,7 +27,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
 
     /**
-     <>
+     *
      */
 
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
@@ -37,7 +37,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
@@ -47,7 +47,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
@@ -60,7 +60,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
@@ -74,7 +74,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     }
 
     /**
-     <>
+     *
      */
 
     public StoreSetDistributionChannelsActionBuilder withDistributionChannels(

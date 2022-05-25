@@ -43,7 +43,7 @@ public class SetInterfaceIdChangeImpl implements SetInterfaceIdChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetInterfaceIdChangeImpl implements SetInterfaceIdChange, ModelBase
     }
 
     /**
-     <*  <p>Shape of the action for <code>setInterfaceId</code></p>>
+     *  <p>Shape of the action for <code>setInterfaceId</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetInterfaceIdChangeImpl implements SetInterfaceIdChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetInterfaceIdChangeImpl implements SetInterfaceIdChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

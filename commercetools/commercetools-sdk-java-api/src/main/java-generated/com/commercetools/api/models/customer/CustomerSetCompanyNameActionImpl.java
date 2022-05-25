@@ -35,7 +35,7 @@ public class CustomerSetCompanyNameActionImpl implements CustomerSetCompanyNameA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerSetCompanyNameActionImpl implements CustomerSetCompanyNameA
     }
 
     /**
-     <*  <p>If not defined, the company name is unset.</p>>
+     *  <p>If not defined, the company name is unset.</p>
      */
 
     public String getCompanyName() {

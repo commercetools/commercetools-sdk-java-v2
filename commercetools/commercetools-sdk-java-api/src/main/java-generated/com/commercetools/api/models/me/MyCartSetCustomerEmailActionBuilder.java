@@ -26,7 +26,7 @@ public class MyCartSetCustomerEmailActionBuilder implements Builder<MyCartSetCus
     private String email;
 
     /**
-     <>
+     *
      */
 
     public MyCartSetCustomerEmailActionBuilder email(@Nullable final String email) {

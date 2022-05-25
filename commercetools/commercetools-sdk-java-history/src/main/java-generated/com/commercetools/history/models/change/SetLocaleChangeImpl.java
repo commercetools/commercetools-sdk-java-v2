@@ -43,7 +43,7 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setLocale</code> on reviews</p>>
+     *  <p>Update action for <code>setLocale</code> on reviews</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
     }
 
     /**
-     <*  <p>A locale of IETF language tag.</p>>
+     *  <p>A locale of IETF language tag.</p>
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
     }
 
     /**
-     <*  <p>A locale of IETF language tag.</p>>
+     *  <p>A locale of IETF language tag.</p>
      */
 
     public String getNextValue() {

@@ -36,7 +36,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <>
+     *
      */
 
     public ParcelDraftBuilder measurements(
@@ -46,7 +46,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelDraftBuilder measurements(
@@ -56,7 +56,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelDraftBuilder trackingData(
@@ -66,7 +66,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelDraftBuilder trackingData(
@@ -76,7 +76,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <*  <p>The delivery items contained in this parcel.</p>>
+     *  <p>The delivery items contained in this parcel.</p>
      */
 
     public ParcelDraftBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -85,7 +85,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <*  <p>The delivery items contained in this parcel.</p>>
+     *  <p>The delivery items contained in this parcel.</p>
      */
 
     public ParcelDraftBuilder items(
@@ -95,7 +95,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <*  <p>The delivery items contained in this parcel.</p>>
+     *  <p>The delivery items contained in this parcel.</p>
      */
 
     public ParcelDraftBuilder plusItems(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -107,7 +107,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <*  <p>The delivery items contained in this parcel.</p>>
+     *  <p>The delivery items contained in this parcel.</p>
      */
 
     public ParcelDraftBuilder plusItems(
@@ -120,7 +120,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <*  <p>The delivery items contained in this parcel.</p>>
+     *  <p>The delivery items contained in this parcel.</p>
      */
 
     public ParcelDraftBuilder withItems(
@@ -131,7 +131,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <*  <p>Custom Fields of this parcel.</p>>
+     *  <p>Custom Fields of this parcel.</p>
      */
 
     public ParcelDraftBuilder custom(
@@ -141,7 +141,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     <*  <p>Custom Fields of this parcel.</p>>
+     *  <p>Custom Fields of this parcel.</p>
      */
 
     public ParcelDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

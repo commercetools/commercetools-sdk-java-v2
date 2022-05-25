@@ -32,21 +32,21 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
     String SET_SKU = "setSku";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <*  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>>
+     *  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

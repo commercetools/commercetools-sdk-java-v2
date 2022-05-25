@@ -42,7 +42,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -50,7 +50,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -58,7 +58,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <*  <p>The name of the field.</p>>
+     *  <p>The name of the field.</p>
      */
 
     public String getField() {
@@ -66,7 +66,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <*  <p>The offending duplicate value.</p>>
+     *  <p>The offending duplicate value.</p>
      */
 
     public java.lang.Object getDuplicateValue() {

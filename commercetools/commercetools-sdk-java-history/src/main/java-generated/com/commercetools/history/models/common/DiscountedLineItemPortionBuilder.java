@@ -28,7 +28,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     private com.commercetools.history.models.common.Money discountedAmount;
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPortionBuilder discount(
@@ -38,7 +38,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPortionBuilder discount(final com.commercetools.history.models.common.Reference discount) {
@@ -47,7 +47,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPortionBuilder discountedAmount(
@@ -57,7 +57,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPortionBuilder discountedAmount(

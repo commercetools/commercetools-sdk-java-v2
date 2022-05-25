@@ -25,7 +25,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder values(
@@ -35,7 +35,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder values(
@@ -45,7 +45,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder plusValues(
@@ -58,7 +58,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder plusValues(
@@ -72,7 +72,7 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldLocalizedEnumTypeBuilder withValues(

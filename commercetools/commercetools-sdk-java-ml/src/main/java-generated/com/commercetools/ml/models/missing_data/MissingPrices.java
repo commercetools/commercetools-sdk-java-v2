@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingPrices {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface MissingPrices {
     public ProductReference getProduct();
 
     /**
-     <*  <p>Id of the <code>ProductVariant</code>.</p>>
+     *  <p>Id of the <code>ProductVariant</code>.</p>
      */
     @NotNull
     @JsonProperty("variantId")

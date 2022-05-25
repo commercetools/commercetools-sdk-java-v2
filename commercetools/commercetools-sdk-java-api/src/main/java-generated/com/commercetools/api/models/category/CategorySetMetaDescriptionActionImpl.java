@@ -36,7 +36,7 @@ public class CategorySetMetaDescriptionActionImpl implements CategorySetMetaDesc
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CategorySetMetaDescriptionActionImpl implements CategorySetMetaDesc
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {

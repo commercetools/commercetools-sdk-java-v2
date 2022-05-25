@@ -27,7 +27,7 @@ public class CustomerDeletedMessagePayloadImpl implements CustomerDeletedMessage
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

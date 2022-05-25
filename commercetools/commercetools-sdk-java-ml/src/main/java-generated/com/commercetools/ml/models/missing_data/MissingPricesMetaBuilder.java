@@ -28,7 +28,7 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
     private com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel;
 
     /**
-     <>
+     *
      */
 
     public MissingPricesMetaBuilder productLevel(
@@ -40,7 +40,7 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesMetaBuilder productLevel(
@@ -50,7 +50,7 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesMetaBuilder variantLevel(
@@ -62,7 +62,7 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesMetaBuilder variantLevel(

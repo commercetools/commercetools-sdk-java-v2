@@ -66,7 +66,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     private com.commercetools.api.models.common.Reference target;
 
     /**
-     <*  <p>Unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ReviewRatingSetMessageBuilder id(final String id) {
@@ -75,7 +75,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder version(final Long version) {
@@ -84,7 +84,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -93,7 +93,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -102,7 +102,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewRatingSetMessageBuilder lastModifiedBy(
@@ -112,7 +112,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewRatingSetMessageBuilder lastModifiedBy(
@@ -122,7 +122,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewRatingSetMessageBuilder createdBy(
@@ -132,7 +132,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewRatingSetMessageBuilder createdBy(
@@ -142,7 +142,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -151,7 +151,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewRatingSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -160,7 +160,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewRatingSetMessageBuilder resource(
@@ -170,7 +170,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -179,7 +179,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -191,7 +191,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -201,7 +201,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder oldRating(@Nullable final Double oldRating) {
@@ -210,7 +210,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder newRating(@Nullable final Double newRating) {
@@ -219,7 +219,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewRatingSetMessageBuilder includedInStatistics(final Boolean includedInStatistics) {
@@ -228,7 +228,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewRatingSetMessageBuilder target(@Nullable final com.commercetools.api.models.common.Reference target) {
@@ -237,7 +237,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ReviewRatingSetMessageBuilder target(

@@ -36,7 +36,7 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {

@@ -34,7 +34,7 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
     String INVENTORY_ENTRY_CREATED = "InventoryEntryCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

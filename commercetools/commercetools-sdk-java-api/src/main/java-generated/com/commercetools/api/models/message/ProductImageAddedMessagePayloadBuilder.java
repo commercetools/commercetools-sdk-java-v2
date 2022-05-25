@@ -31,7 +31,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductImageAddedMessagePayloadBuilder variantId(final Long variantId) {
@@ -40,7 +40,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     <>
+     *
      */
 
     public ProductImageAddedMessagePayloadBuilder image(
@@ -50,7 +50,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     <>
+     *
      */
 
     public ProductImageAddedMessagePayloadBuilder image(final com.commercetools.api.models.common.Image image) {
@@ -59,7 +59,7 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
     }
 
     /**
-     <>
+     *
      */
 
     public ProductImageAddedMessagePayloadBuilder staged(final Boolean staged) {

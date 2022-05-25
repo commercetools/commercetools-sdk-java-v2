@@ -34,35 +34,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessagePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<Message> {
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

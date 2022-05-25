@@ -30,7 +30,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetLineItemTaxAmountActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +39,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetLineItemTaxAmountActionBuilder externalTaxAmount(
@@ -50,7 +50,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetLineItemTaxAmountActionBuilder externalTaxAmount(

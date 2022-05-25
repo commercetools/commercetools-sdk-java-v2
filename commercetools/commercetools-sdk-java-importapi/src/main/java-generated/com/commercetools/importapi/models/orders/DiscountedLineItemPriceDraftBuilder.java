@@ -28,7 +28,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     private java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> includedDiscounts;
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceDraftBuilder value(
@@ -38,7 +38,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.importapi.models.common.Money value) {
@@ -47,7 +47,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
@@ -57,7 +57,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
@@ -67,7 +67,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
@@ -80,7 +80,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
@@ -94,7 +94,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(
